@@ -1,6 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Interaction Prompt Library</title><link rel="stylesheet" href="assets-style.css"></head><body>
+<title>Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets-style.css"></head><body>
 <div class="wrap"><header class="top">
+<div class="eyebrow">Prompt Library &middot; 80 interactions &middot; inspora.design</div>
 <h1>Interaction Prompt Library</h1>
 <p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Source #1: <a href="https://www.inspora.design/">inspora.design</a>. Query it from your AI tool via the MCP server.</p>
 <div class="stats"><span><b>80</b> interactions</span><span><b>91</b> media teardowns</span><span><b>7</b> categories</span><span><b id="count">80</b> shown</span></div>
@@ -24,14 +25,15 @@ cats.forEach(c=>{
 function render(){
   const s=(q.value||'').toLowerCase();
   grid.innerHTML='';
-  let n=0;
+  let n=0, i=0;
   for(const r of R){
     if(cat&&r.category!==cat)continue;
     if(s&&!(r.title+' '+r.desc+' '+r.summary+' '+r.prompt).toLowerCase().includes(s))continue;
-    n++;
+    n++; i++;
     const thumb=r.media[0]?(r.media[0].poster||r.media[0].montage||r.media[0].src):'';
     const a=document.createElement('a');a.className='card';a.href='i/'+r.slug+'.html';
-    a.innerHTML=`<img loading="lazy" src="${thumb}" alt=""><div class="b"><div class="cat">${r.category}</div><h3></h3><div class="m"><span>${r.author||''}</span><span>${r.media.length} media</span></div></div>`;
+    a.style.animationDelay=Math.min(i*28,400)+'ms';
+    a.innerHTML=`<div class="imgwrap"><img loading="lazy" src="${thumb}" alt=""></div><div class="b"><div class="cat">${r.category}</div><h3></h3><div class="m"><span>${r.author||''}</span><span>${r.media.length} media</span></div></div>`;
     a.querySelector('h3').textContent=r.title;
     grid.appendChild(a);
   }
