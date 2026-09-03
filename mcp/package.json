@@ -1,0 +1,8 @@
+{
+  "name": "interaction-prompt-library-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing the interaction prompt library (frame-by-frame interaction teardowns with build prompts).",
+  "main": "server.js",
+  "bin": { "interaction-prompt-library": "server.js" },
+  "license": "MIT"
+}
