@@ -14,31 +14,26 @@
 <div class="rail">
 <section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this static comp 1:1: a 3x3 grid of app icon concepts - nine squircle explorations of one mascot/brand: blue ghost blob, gradient explosion star, purple blob on rainbow, neon green splat, sky scribble, gradient orb, purple smiley with earring, monochrome S-mark, orange owl-face.
 
-## Stack
-React + TypeScript + Tailwind (icons as inline SVG or layered CSS). Static grid - rendering exercise, no motion.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; recreate with your own components and assets.
 
-## Scene
-Nine app-icon renders, each a squircle centered on its own tinted backdrop tile (solid or soft gradient matched to the icon). Soft 3D blob variants (glossy gradients, inner glows, drop shadows) mixed with flat graphic variants (splat, scribble, S monogram). Even 3x3 grid with generous gutters.
+## Layout
+Even 3x3 grid with generous gutters. Each icon a squircle (iOS continuous-corner proportions) centered on its own tinted backdrop tile - tile tint derived from that icon&#x27;s palette.
 
-## Motion spec
+## Content &amp; materials
+Mix of two families: soft 3D blob mascots (glossy gradients, inner glows, drop shadows) and flat graphic marks (splat, scribble, S monogram). One shared light direction across all nine glossy icons; flat variants stay flat.
+
+## States
 None - static presentation grid.
 
-## Calibration
-- Each tile&#x27;s backdrop tint is derived from its icon&#x27;s palette; equal-tint tiles flatten the set.
-- Glossy icons get one light direction across all nine - shared lighting sells them as one family.
-- Squircle radius matches iOS proportions; consistent silhouette size across the grid.
-
-## Reduced motion
-N/A - static comp.
-
 ## Don&#x27;t miss
-- The mix of 3D-glossy and flat-graphic explorations is the point of a concept grid - keep both families crisp.
-- Soft shadows under the blob mascots; flat variants stay flat.
-- Tile gutters even; icons optically centered, not mathematically.</pre></div></section>
+- The 3D/flat mix is the point of a concept grid - keep both families crisp.
+- Consistent silhouette size across the grid; icons optically centered, not mathematically.
+- Soft shadows under blob mascots only.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">static comp</div></div><div><div class="k">elements</div><div class="v">9 squircle icons</div></div><div><div class="k">properties</div><div class="v">gradients, soft shadows, gloss highlights</div></div><div><div class="k">timing</div><div class="v">n/a</div></div><div><div class="k">easing</div><div class="v">n/a</div></div><div><div class="k">loop</div><div class="v">n/a</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-49">original interaction</a> by @dmiiiitrii. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild this static comp 1:1: a 3x3 grid of app icon concepts - nine squircle explorations of one mascot/brand: blue ghost blob, gradient explosion star, purple blob on rainbow, neon green splat, sky scribble, gradient orb, purple smiley with earring, monochrome S-mark, orange owl-face.\n\n## Stack\nReact + TypeScript + Tailwind (icons as inline SVG or layered CSS). Static grid - rendering exercise, no motion.\n\n## Scene\nNine app-icon renders, each a squircle centered on its own tinted backdrop tile (solid or soft gradient matched to the icon). Soft 3D blob variants (glossy gradients, inner glows, drop shadows) mixed with flat graphic variants (splat, scribble, S monogram). Even 3x3 grid with generous gutters.\n\n## Motion spec\nNone - static presentation grid.\n\n## Calibration\n- Each tile's backdrop tint is derived from its icon's palette; equal-tint tiles flatten the set.\n- Glossy icons get one light direction across all nine - shared lighting sells them as one family.\n- Squircle radius matches iOS proportions; consistent silhouette size across the grid.\n\n## Reduced motion\nN/A - static comp.\n\n## Don't miss\n- The mix of 3D-glossy and flat-graphic explorations is the point of a concept grid - keep both families crisp.\n- Soft shadows under the blob mascots; flat variants stay flat.\n- Tile gutters even; icons optically centered, not mathematically."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this static comp 1:1: a 3x3 grid of app icon concepts - nine squircle explorations of one mascot/brand: blue ghost blob, gradient explosion star, purple blob on rainbow, neon green splat, sky scribble, gradient orb, purple smiley with earring, monochrome S-mark, orange owl-face.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; recreate with your own components and assets.\n\n## Layout\nEven 3x3 grid with generous gutters. Each icon a squircle (iOS continuous-corner proportions) centered on its own tinted backdrop tile - tile tint derived from that icon's palette.\n\n## Content & materials\nMix of two families: soft 3D blob mascots (glossy gradients, inner glows, drop shadows) and flat graphic marks (splat, scribble, S monogram). One shared light direction across all nine glossy icons; flat variants stay flat.\n\n## States\nNone - static presentation grid.\n\n## Don't miss\n- The 3D/flat mix is the point of a concept grid - keep both families crisp.\n- Consistent silhouette size across the grid; icons optically centered, not mathematically.\n- Soft shadows under blob mascots only."</script>
 </body></html>

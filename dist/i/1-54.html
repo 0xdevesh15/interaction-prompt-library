@@ -12,39 +12,42 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-54__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-15%</div><div class="d">Row of label chips (Handoff, Motion) + &#x27;+ Label&#x27; button; dropdown opens below with search input &#x27;Add or find a label...&#x27; and checkbox list (Accessibility, Copy, Handoff, Motion, Research, Visual QA) - checked ones ticked.</div></div><div class="phase"><div class="p">15-30%</div><div class="d">Typing &#x27;design&#x27; filters the list empty and shows &#x27;+ Create new label: design&#x27;.</div></div><div class="phase"><div class="p">30-45%</div><div class="d">Create flow advances to a color submenu: &#x27;Pick a color&#x27; rows with dots (Coral, Amber, Mint, Azure, Lilac, Rose, Teal), hover highlight.</div></div><div class="phase"><div class="p">45-60%</div><div class="d">Color chosen: &#x27;design&#x27; chip materializes in the parent row (pop-in, others shift with layout animation); list now shows design checked.</div></div><div class="phase"><div class="p">60-85%</div><div class="d">Toggling more checkboxes: chips appear/disappear in the row in real time, unchecked chip exits with fade+shrink.</div></div><div class="phase"><div class="p">85-100%</div><div class="d">Final state: Accessibility + design checked; dropdown closes on outside click.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a label-picker dropdown - &quot;+ Label&quot; opens a menu with search, checkbox rows of labels with color dots, and a create flow: typing &quot;design&quot; offers &quot;Create new label&quot;, which opens a color-pick submenu; selected labels become chips that animate into the parent row.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this flow 1:1: a label-picker dropdown with a create flow - three states inside one panel: searchable list, color-pick submenu, and the parent chip row that live-syncs.
 
-## Stack
-React + TypeScript + Tailwind + Framer Motion (AnimatePresence for dropdown + chips, layout animations for the chip row). Animate transform and opacity only.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.
 
-## Scene
-Row of label chips (Handoff, Motion) + a &quot;+ Label&quot; button. Dropdown below: search input (&quot;Add or find a label...&quot;), checkbox list (Accessibility, Copy, Handoff, Motion, Research, Visual QA) each with color dot; checked rows ticked. Create flow: &quot;+ Create new label: design&quot; -&gt; &quot;Pick a color&quot; submenu (Coral, Amber, Mint, Azure, Lilac, Rose, Teal) with dot rows and hover highlight.
+## Screen 1 - Label list
+Dropdown below a &quot;+ Label&quot; button: search input (&quot;Add or find a label...&quot;, focused on open), checkbox rows (Accessibility, Copy, Handoff, Motion, Research, Visual QA) each with a color dot; checked rows ticked. Typing filters instantly; no-match reveals &quot;+ Create new label: design&quot;.
 
-## Motion spec
-Pattern: popover with submenu and live chip sync.
+## Screen 2 - Color submenu
+Same panel, content slides over: &quot;Pick a color&quot; rows with dots (Coral, Amber, Mint, Azure, Lilac, Rose, Teal), hover highlight.
+
+## Screen 3 - Parent row (always visible)
+Chip row above the dropdown: selected labels are chips (Handoff, Motion); created labels join them (&quot;design&quot;).
+
+## Transitions
 - Dropdown opens: opacity 0 -&gt; 1, scale 0.96 -&gt; 1 origin-top, 180ms ease-out.
-- Typing filters the list live; empty result reveals the create item.
-- Create -&gt; submenu slides over (x 8 -&gt; 0, 200ms), replacing the list in the same panel.
-- Color chosen: &quot;design&quot; chip materializes in the parent row (pop-in 150ms spring); sibling chips shift with layout animation; the list now shows design checked.
-- Checkbox toggles: chips appear/disappear in the row in real time - enter pop 150ms, exit fade+shrink 150ms.
-- Outside click closes the dropdown (150ms fade).
+- Create -&gt; submenu: slides over within the same panel bounds (x 8 -&gt; 0, 200ms).
+- Color chosen: &quot;design&quot; chip materializes in the parent row (pop-in 150ms spring); sibling chips shift with layout animation; list shows design checked.
+- Checkbox toggles: chips enter (pop 150ms) / exit (fade+shrink 150ms) in the row in real time.
+- Outside click closes (150ms fade).
 
 ## Calibration
-- Dropdown 180ms, submenu slide 200ms, chip pop 150ms - snappy micro-interaction band.
-- Chips animate with layout so the row reflows organically; never absolute-position chips in.
-- Submenu slides within the same panel bounds - no second popover floating offset.
+- 180/200/150ms micro band throughout - snappy, never bouncy except the chip pop.
+- Chips animate with layout so the row reflows organically.
 
 ## Reduced motion
-All transitions 150ms opacity only; chips appear without pop or reflow animation.
+All transitions 150ms opacity only; chips appear without pop.
 
 ## Don&#x27;t miss
-- Chip state and checkbox state are one source of truth, synced in real time both directions.
+- Chip state and checkbox state are one source of truth, synced both directions in real time.
 - The create item appears only when the filter has no match, labeled with the typed text.
-- Search field is focused on open - the flow is keyboard-first.</pre></div></section>
+- The submenu lives within the same panel bounds - no second floating popover.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">&#x27;+ Label&#x27; click; type to filter; create flow; checkbox toggles</div></div><div><div class="k">elements</div><div class="v">chip row, dropdown (search, checkbox list, create item, color submenu), label chips</div></div><div><div class="k">properties</div><div class="v">dropdown opacity/scale origin-top, list filter, submenu slide-over, checkbox tick draw, chip enter/exit</div></div><div><div class="k">timing</div><div class="v">dropdown 180ms ease-out; submenu slide 200ms; chip pop 150ms spring</div></div><div><div class="k">easing</div><div class="v">ease-out; spring pops</div></div><div><div class="k">loop</div><div class="v">demo cycles open-create-toggle-close</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-54">original interaction</a> by @dejvdesign. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a label-picker dropdown - \"+ Label\" opens a menu with search, checkbox rows of labels with color dots, and a create flow: typing \"design\" offers \"Create new label\", which opens a color-pick submenu; selected labels become chips that animate into the parent row.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion (AnimatePresence for dropdown + chips, layout animations for the chip row). Animate transform and opacity only.\n\n## Scene\nRow of label chips (Handoff, Motion) + a \"+ Label\" button. Dropdown below: search input (\"Add or find a label...\"), checkbox list (Accessibility, Copy, Handoff, Motion, Research, Visual QA) each with color dot; checked rows ticked. Create flow: \"+ Create new label: design\" -> \"Pick a color\" submenu (Coral, Amber, Mint, Azure, Lilac, Rose, Teal) with dot rows and hover highlight.\n\n## Motion spec\nPattern: popover with submenu and live chip sync.\n- Dropdown opens: opacity 0 -> 1, scale 0.96 -> 1 origin-top, 180ms ease-out.\n- Typing filters the list live; empty result reveals the create item.\n- Create -> submenu slides over (x 8 -> 0, 200ms), replacing the list in the same panel.\n- Color chosen: \"design\" chip materializes in the parent row (pop-in 150ms spring); sibling chips shift with layout animation; the list now shows design checked.\n- Checkbox toggles: chips appear/disappear in the row in real time - enter pop 150ms, exit fade+shrink 150ms.\n- Outside click closes the dropdown (150ms fade).\n\n## Calibration\n- Dropdown 180ms, submenu slide 200ms, chip pop 150ms - snappy micro-interaction band.\n- Chips animate with layout so the row reflows organically; never absolute-position chips in.\n- Submenu slides within the same panel bounds - no second popover floating offset.\n\n## Reduced motion\nAll transitions 150ms opacity only; chips appear without pop or reflow animation.\n\n## Don't miss\n- Chip state and checkbox state are one source of truth, synced in real time both directions.\n- The create item appears only when the filter has no match, labeled with the typed text.\n- Search field is focused on open - the flow is keyboard-first."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this flow 1:1: a label-picker dropdown with a create flow - three states inside one panel: searchable list, color-pick submenu, and the parent chip row that live-syncs.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.\n\n## Screen 1 - Label list\nDropdown below a \"+ Label\" button: search input (\"Add or find a label...\", focused on open), checkbox rows (Accessibility, Copy, Handoff, Motion, Research, Visual QA) each with a color dot; checked rows ticked. Typing filters instantly; no-match reveals \"+ Create new label: design\".\n\n## Screen 2 - Color submenu\nSame panel, content slides over: \"Pick a color\" rows with dots (Coral, Amber, Mint, Azure, Lilac, Rose, Teal), hover highlight.\n\n## Screen 3 - Parent row (always visible)\nChip row above the dropdown: selected labels are chips (Handoff, Motion); created labels join them (\"design\").\n\n## Transitions\n- Dropdown opens: opacity 0 -> 1, scale 0.96 -> 1 origin-top, 180ms ease-out.\n- Create -> submenu: slides over within the same panel bounds (x 8 -> 0, 200ms).\n- Color chosen: \"design\" chip materializes in the parent row (pop-in 150ms spring); sibling chips shift with layout animation; list shows design checked.\n- Checkbox toggles: chips enter (pop 150ms) / exit (fade+shrink 150ms) in the row in real time.\n- Outside click closes (150ms fade).\n\n## Calibration\n- 180/200/150ms micro band throughout - snappy, never bouncy except the chip pop.\n- Chips animate with layout so the row reflows organically.\n\n## Reduced motion\nAll transitions 150ms opacity only; chips appear without pop.\n\n## Don't miss\n- Chip state and checkbox state are one source of truth, synced both directions in real time.\n- The create item appears only when the filter has no match, labeled with the typed text.\n- The submenu lives within the same panel bounds - no second floating popover."</script>
 </body></html>

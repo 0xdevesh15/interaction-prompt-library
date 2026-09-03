@@ -12,33 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-37__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-25%</div><div class="d">Plan Overview card: icon + &#x27;Session auth migration&#x27;, 2-line description, To-dos group (3 visible rows + &#x27;3 more&#x27; expander, count badge 6), footer &#x27;Auto approve in 27s&#x27; ticking down + View Plan ghost + white Approve button.</div></div><div class="phase"><div class="p">25-40%</div><div class="d">Approve clicked: card crossfades/slides to Questions card - &#x27;Where should secrets live?&#x27; with 4 radio rows (env local, Vault/secrets manager, CI only, Something else...) - hovered row lifts with a border.</div></div><div class="phase"><div class="p">40-60%</div><div class="d">Q2: &#x27;Which auth approach should we use?&#x27; (Session cookies, JWT bearer, OAuth only...); pager &#x27;2/3&#x27;; a row checks with a filled radio.</div></div><div class="phase"><div class="p">60-80%</div><div class="d">Q3: &#x27;Ship behind a feature flag?&#x27; with rows; user types into the &#x27;Something else&#x27; free-text row which expands to an inline input.</div></div><div class="phase"><div class="p">80-100%</div><div class="d">Continue pressed on last question: card content fades out to a compact confirming state.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: AI agent approval cards - a dark two-card flow for approving an agent&#x27;s plan. A &quot;Plan Overview&quot; card (task summary, collapsible to-dos, &quot;Auto approve in 27s&quot; countdown, View Plan / Approve buttons) hands off to a &quot;Questions&quot; card (single-select radio rows, pager &quot;2/3&quot;, Skip / Continue) that walks 3 questions before confirming.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this flow 1:1: AI agent approval cards - a dark two-screen flow for approving an agent&#x27;s plan. A &quot;Plan Overview&quot; screen (task summary, collapsible to-dos, auto-approve countdown, View Plan / Approve) hands off to a &quot;Questions&quot; screen that walks 3 single-select questions before confirming.
 
-## Stack
-React + TypeScript + Tailwind + Framer Motion (AnimatePresence for card swaps). Animate transform and opacity only.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.
 
-## Scene
-Dark card. Plan Overview: icon + &quot;Session auth migration&quot;, 2-line description, To-dos group (3 visible rows with check circles + &quot;3 more&quot; expander, count badge 6), footer with &quot;Auto approve in 27s&quot; countdown, ghost View Plan, white Approve. Questions card: question title, 4 radio rows (e.g. &quot;Where should secrets live?&quot; - env local / Vault / CI only / Something else...), pager &quot;2/3&quot;, Skip / Continue footer. &quot;Something else&quot; expands to an inline free-text input.
+## Screen 1 - Plan Overview
+Dark card: icon + &quot;Session auth migration&quot;, 2-line description, To-dos group (3 visible rows with check circles + &quot;3 more&quot; expander, count badge 6), footer with &quot;Auto approve in 27s&quot; countdown (tabular-nums, ticks each second), ghost View Plan button, white Approve button.
 
-## Motion spec
-Pattern: stepped wizard flow.
-- Card swap (Approve click): crossfade+slide 300ms ease-out (old card exits slightly left, new enters from right).
-- Question advance (Continue): 250ms slide, same language; pager updates instantly.
-- Row hover: border lifts over 120ms; radio fills with a 150ms pop on select.
-- Free-text row: expands in place (height spring, 250ms) with an inline input.
-- Final Continue: content fades to a compact confirming state (250ms).
-- Countdown: ticks each second in the footer (tabular-nums).
+## Screen 2 - Questions (3 steps)
+Same card object, new content: question title, 4 single-select radio rows per question (&quot;Where should secrets live?&quot; - env local / Vault / CI only / Something else...; &quot;Which auth approach should we use?&quot; - Session cookies / JWT bearer / OAuth only...; &quot;Ship behind a feature flag?&quot;). Pager &quot;2/3&quot;. Skip / Continue footer. &quot;Something else&quot; rows expand in place into an inline free-text input. Radio rows are full-width hit areas with hover borders; selected row shows a filled radio.
+
+## Screen 3 - Confirming
+After the final Continue: content fades to a compact confirming state.
+
+## Transitions
+- Approve: card content crossfades+slides 300ms ease-out (old exits slightly left, new enters from right) - same card, new content.
+- Question advance: 250ms slide, same language; pager updates instantly.
+- Radio select: fill pops 150ms; row hover border 120ms.
+- Free-text row: expands in place, height spring 250ms.
+- Countdown: mono digits ticking each second in the footer.
 
 ## Calibration
-- Card swap 300ms, question advance 250ms - the wizard should feel like one object changing, not pages loading.
-- Radio rows are full-width hit areas with hover borders, not tiny circles.
-- The countdown is ambient but real: mono digits, never jumping.
+- 300ms card swap / 250ms question advance - the wizard should feel like one object changing, not pages loading.
+- The countdown is quiet (zinc-500) but real; it never jumps.
 
 ## Reduced motion
-Card and question swaps as 150ms opacity crossfades; expansions without height animation.
+All swaps as 150ms opacity crossfades; expansions without height animation.
 
 ## Don&#x27;t miss
-- The auto-approve countdown creates urgency - style it quiet (zinc-500) but keep it live.
+- The auto-approve countdown creates urgency; keep it live.
 - The to-do expander (&quot;3 more&quot;, badge 6) grows the list inline, not a modal.
 - &quot;Something else&quot; rows accept free text inline - a defining detail of this flow.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">Approve click; per-question Continue</div></div><div><div class="k">elements</div><div class="v">plan card, to-do list + expander, auto-approve countdown, questions card with radio rows, pager</div></div><div><div class="k">properties</div><div class="v">card content crossfade/slide, countdown text, radio fill, row hover border, free-text row expansion</div></div><div><div class="k">timing</div><div class="v">card swap 300ms; question advance 250ms slide; row hover 120ms</div></div><div><div class="k">easing</div><div class="v">ease-out swaps</div></div><div><div class="k">loop</div><div class="v">no</div></div></div></section>
@@ -46,5 +49,5 @@ Card and question swaps as 150ms opacity crossfades; expansions without height a
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-37">original interaction</a> by @kvnkld. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: AI agent approval cards - a dark two-card flow for approving an agent's plan. A \"Plan Overview\" card (task summary, collapsible to-dos, \"Auto approve in 27s\" countdown, View Plan / Approve buttons) hands off to a \"Questions\" card (single-select radio rows, pager \"2/3\", Skip / Continue) that walks 3 questions before confirming.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion (AnimatePresence for card swaps). Animate transform and opacity only.\n\n## Scene\nDark card. Plan Overview: icon + \"Session auth migration\", 2-line description, To-dos group (3 visible rows with check circles + \"3 more\" expander, count badge 6), footer with \"Auto approve in 27s\" countdown, ghost View Plan, white Approve. Questions card: question title, 4 radio rows (e.g. \"Where should secrets live?\" - env local / Vault / CI only / Something else...), pager \"2/3\", Skip / Continue footer. \"Something else\" expands to an inline free-text input.\n\n## Motion spec\nPattern: stepped wizard flow.\n- Card swap (Approve click): crossfade+slide 300ms ease-out (old card exits slightly left, new enters from right).\n- Question advance (Continue): 250ms slide, same language; pager updates instantly.\n- Row hover: border lifts over 120ms; radio fills with a 150ms pop on select.\n- Free-text row: expands in place (height spring, 250ms) with an inline input.\n- Final Continue: content fades to a compact confirming state (250ms).\n- Countdown: ticks each second in the footer (tabular-nums).\n\n## Calibration\n- Card swap 300ms, question advance 250ms - the wizard should feel like one object changing, not pages loading.\n- Radio rows are full-width hit areas with hover borders, not tiny circles.\n- The countdown is ambient but real: mono digits, never jumping.\n\n## Reduced motion\nCard and question swaps as 150ms opacity crossfades; expansions without height animation.\n\n## Don't miss\n- The auto-approve countdown creates urgency - style it quiet (zinc-500) but keep it live.\n- The to-do expander (\"3 more\", badge 6) grows the list inline, not a modal.\n- \"Something else\" rows accept free text inline - a defining detail of this flow."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this flow 1:1: AI agent approval cards - a dark two-screen flow for approving an agent's plan. A \"Plan Overview\" screen (task summary, collapsible to-dos, auto-approve countdown, View Plan / Approve) hands off to a \"Questions\" screen that walks 3 single-select questions before confirming.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.\n\n## Screen 1 - Plan Overview\nDark card: icon + \"Session auth migration\", 2-line description, To-dos group (3 visible rows with check circles + \"3 more\" expander, count badge 6), footer with \"Auto approve in 27s\" countdown (tabular-nums, ticks each second), ghost View Plan button, white Approve button.\n\n## Screen 2 - Questions (3 steps)\nSame card object, new content: question title, 4 single-select radio rows per question (\"Where should secrets live?\" - env local / Vault / CI only / Something else...; \"Which auth approach should we use?\" - Session cookies / JWT bearer / OAuth only...; \"Ship behind a feature flag?\"). Pager \"2/3\". Skip / Continue footer. \"Something else\" rows expand in place into an inline free-text input. Radio rows are full-width hit areas with hover borders; selected row shows a filled radio.\n\n## Screen 3 - Confirming\nAfter the final Continue: content fades to a compact confirming state.\n\n## Transitions\n- Approve: card content crossfades+slides 300ms ease-out (old exits slightly left, new enters from right) - same card, new content.\n- Question advance: 250ms slide, same language; pager updates instantly.\n- Radio select: fill pops 150ms; row hover border 120ms.\n- Free-text row: expands in place, height spring 250ms.\n- Countdown: mono digits ticking each second in the footer.\n\n## Calibration\n- 300ms card swap / 250ms question advance - the wizard should feel like one object changing, not pages loading.\n- The countdown is quiet (zinc-500) but real; it never jumps.\n\n## Reduced motion\nAll swaps as 150ms opacity crossfades; expansions without height animation.\n\n## Don't miss\n- The auto-approve countdown creates urgency; keep it live.\n- The to-do expander (\"3 more\", badge 6) grows the list inline, not a modal.\n- \"Something else\" rows accept free text inline - a defining detail of this flow."</script>
 </body></html>

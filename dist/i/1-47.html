@@ -12,37 +12,41 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-47__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-12%</div><div class="d">List view (recipe cards, checklist); action sheet slides up with 6 icon options (scan, photo, voice, etc.) - voice picked.</div></div><div class="phase"><div class="p">12-25%</div><div class="d">Dark recorder sheet rises over dimmed list: black card, single vertical blue line at rest, &#x27;00:00&#x27; timer, avatar chip.</div></div><div class="phase"><div class="p">25-60%</div><div class="d">Recording: timer counts 00:01-&gt;00:03; white waveform bars materialize behind the playhead leftward as audio accumulates; playhead line height pulses with input level.</div></div><div class="phase"><div class="p">60-85%</div><div class="d">Waveform grows denser; controls at bottom (stop square, skip-forward, trash) stay static; &#x27;New Audio from you&#x27; caption.</div></div><div class="phase"><div class="p">85-100%</div><div class="d">Sheet slides down, list view restored.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a mobile voice-note recorder inside a shared-list app (&quot;Sunday Brunch Prep&quot;). Tapping the mic opens a dark bottom-sheet recorder: a vertical blue playhead line bounces with input level, a timer counts up, and a live waveform crystallizes behind the playhead as recording continues. Stop / skip / delete controls; the sheet dismisses back to the list.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this flow 1:1: mobile voice-note recording in a shared-list app (&quot;Sunday Brunch Prep&quot;) - three states: the list, an action sheet, and a dark recorder sheet with a live waveform.
 
-## Stack
-React + TypeScript + Tailwind + Framer Motion (sheet spring; waveform bars appended on an interval or from mic input). Animate transform and opacity only.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.
 
-## Scene
-List view (recipe cards, checklist). Action sheet slides up with 6 icon options (scan, photo, voice...). Voice picked: dark recorder sheet - black card, single vertical blue line at rest, &quot;00:00&quot; mono timer, avatar chip, caption &quot;New Audio from you&quot;, bottom controls (stop square, skip-forward, trash).
+## Screen 1 - List
+Recipe cards + checklist. A mic option triggers the flow.
 
-## Motion spec
-Pattern: sheet presentation + live input-driven waveform.
-- Action sheet: rises 350ms spring (damping ~26) over a dimmed backdrop (black/40, 250ms).
+## Screen 2 - Action sheet
+Sheet slides up over a dimmed backdrop (black/40): 6 icon options (scan, photo, voice...). Voice picks the recorder.
+
+## Screen 3 - Recorder sheet
+Dark sheet over the dimmed list: black card, single vertical blue playhead line at rest, &quot;00:00&quot; mono timer (tabular-nums), avatar chip, caption &quot;New Audio from you&quot;, bottom controls (stop square, skip-forward, trash). While recording: timer counts up; playhead height pulses per audio frame with input level; white waveform bars materialize behind the playhead (~10 bars/s, each fading in 100ms).
+
+## Transitions
+- Action sheet: rises 350ms, spring damping ~26, over the dimming backdrop (250ms).
 - Recorder sheet: same spring up; list stays dimmed behind.
-- Recording: timer counts up (mono, tabular-nums, 1s cadence); playhead line height pulses per audio frame with input level; white waveform bars materialize behind the playhead (~10 bars/s), each fading in 100ms.
-- Controls static throughout. Stop or dismiss: sheet slides down 300ms, list restores.
+- Stop/dismiss: sheet slides down 300ms; list restores.
 
 ## Calibration
 - Sheet spring damping ~26: one soft settle, no bounce festival.
-- Playhead pulse must track the input frame-by-frame - a metronome pulse reads as fake.
+- Playhead pulse must track input frame-by-frame - a metronome pulse reads as fake.
 - Waveform bars append behind (leftward of) the playhead; the playhead is always the right edge.
 
 ## Reduced motion
-Sheet fades in/out (200ms); playhead shows a steady line; waveform bars appear without stagger.
+Sheets fade in/out (200ms); playhead steady; waveform bars appear without stagger.
 
 ## Don&#x27;t miss
 - Two distinct sheets (action sheet, then recorder) - do not merge them into one step.
 - The blue playhead is a single vertical line, not a moving bar graph.
-- Timer uses tabular-nums so it never jitters sideways while counting.</pre></div></section>
+- The list stays dimmed but visible behind both sheets - context is never lost.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">mic option tap; sheet present/dismiss</div></div><div><div class="k">elements</div><div class="v">action sheet, recorder sheet, playhead line, live waveform, timer, 3 control buttons</div></div><div><div class="k">properties</div><div class="v">sheet translateY + backdrop dim, playhead height (level-reactive), waveform bars appending, timer count</div></div><div><div class="k">timing</div><div class="v">sheet 350ms spring up/down; waveform bars ~10/s; playhead pulse per audio frame</div></div><div><div class="k">easing</div><div class="v">spring (damping ~26) for sheet; linear timer</div></div><div><div class="k">loop</div><div class="v">no</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-47">original interaction</a> by @proskuaaa. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a mobile voice-note recorder inside a shared-list app (\"Sunday Brunch Prep\"). Tapping the mic opens a dark bottom-sheet recorder: a vertical blue playhead line bounces with input level, a timer counts up, and a live waveform crystallizes behind the playhead as recording continues. Stop / skip / delete controls; the sheet dismisses back to the list.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion (sheet spring; waveform bars appended on an interval or from mic input). Animate transform and opacity only.\n\n## Scene\nList view (recipe cards, checklist). Action sheet slides up with 6 icon options (scan, photo, voice...). Voice picked: dark recorder sheet - black card, single vertical blue line at rest, \"00:00\" mono timer, avatar chip, caption \"New Audio from you\", bottom controls (stop square, skip-forward, trash).\n\n## Motion spec\nPattern: sheet presentation + live input-driven waveform.\n- Action sheet: rises 350ms spring (damping ~26) over a dimmed backdrop (black/40, 250ms).\n- Recorder sheet: same spring up; list stays dimmed behind.\n- Recording: timer counts up (mono, tabular-nums, 1s cadence); playhead line height pulses per audio frame with input level; white waveform bars materialize behind the playhead (~10 bars/s), each fading in 100ms.\n- Controls static throughout. Stop or dismiss: sheet slides down 300ms, list restores.\n\n## Calibration\n- Sheet spring damping ~26: one soft settle, no bounce festival.\n- Playhead pulse must track the input frame-by-frame - a metronome pulse reads as fake.\n- Waveform bars append behind (leftward of) the playhead; the playhead is always the right edge.\n\n## Reduced motion\nSheet fades in/out (200ms); playhead shows a steady line; waveform bars appear without stagger.\n\n## Don't miss\n- Two distinct sheets (action sheet, then recorder) - do not merge them into one step.\n- The blue playhead is a single vertical line, not a moving bar graph.\n- Timer uses tabular-nums so it never jitters sideways while counting."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this flow 1:1: mobile voice-note recording in a shared-list app (\"Sunday Brunch Prep\") - three states: the list, an action sheet, and a dark recorder sheet with a live waveform.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.\n\n## Screen 1 - List\nRecipe cards + checklist. A mic option triggers the flow.\n\n## Screen 2 - Action sheet\nSheet slides up over a dimmed backdrop (black/40): 6 icon options (scan, photo, voice...). Voice picks the recorder.\n\n## Screen 3 - Recorder sheet\nDark sheet over the dimmed list: black card, single vertical blue playhead line at rest, \"00:00\" mono timer (tabular-nums), avatar chip, caption \"New Audio from you\", bottom controls (stop square, skip-forward, trash). While recording: timer counts up; playhead height pulses per audio frame with input level; white waveform bars materialize behind the playhead (~10 bars/s, each fading in 100ms).\n\n## Transitions\n- Action sheet: rises 350ms, spring damping ~26, over the dimming backdrop (250ms).\n- Recorder sheet: same spring up; list stays dimmed behind.\n- Stop/dismiss: sheet slides down 300ms; list restores.\n\n## Calibration\n- Sheet spring damping ~26: one soft settle, no bounce festival.\n- Playhead pulse must track input frame-by-frame - a metronome pulse reads as fake.\n- Waveform bars append behind (leftward of) the playhead; the playhead is always the right edge.\n\n## Reduced motion\nSheets fade in/out (200ms); playhead steady; waveform bars appear without stagger.\n\n## Don't miss\n- Two distinct sheets (action sheet, then recorder) - do not merge them into one step.\n- The blue playhead is a single vertical line, not a moving bar graph.\n- The list stays dimmed but visible behind both sheets - context is never lost."</script>
 </body></html>

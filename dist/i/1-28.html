@@ -12,33 +12,28 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-28__0.jpg" alt=""><img class="montage" src="../frames/1-28__1.jpg" alt=""><img class="montage" src="../frames/1-28__2.jpg" alt=""><img class="montage" src="../frames/1-28__3.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">media 1</div><div class="d">Close crop of the pill: white frosted body (translucent, blurred backdrop), glass calendar charm with gradient header and two binder rings, soft grey label type.</div></div><div class="phase"><div class="p">media 2</div><div class="d">Circular button: radial blue glass (bright cyan core fading to white edge), white up-arrow glyph, thick specular rim light bottom-left, set into a frosted panel corner.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild these static renders 1:1, pixel-faithful: a glassmorphic calendar button set - a frosted-glass pill &quot;Add to My Calendar&quot; with a glossy translucent calendar icon (orange-to-blue gradient header, glass body, two binder rings), and a matching circular blue-glass button with an up arrow. Soft inner glows, edge highlights, and diffused shadows sell the glass.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild these static renders 1:1, pixel-faithful: a glassmorphic calendar button set - a frosted-glass pill &quot;Add to My Calendar&quot; with a glossy translucent calendar charm, and a matching circular blue-glass button with an up arrow.
 
-## Stack
-React + TypeScript + Tailwind. backdrop-filter blur for the frosted bodies; layered gradients + inner shadows for the glass charms. Static renders; one optional hover lift.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; recreate with your own components and assets.
 
-## Scene
-Render 1: close crop of the pill - white frosted translucent body (blurred backdrop shows through), the glass calendar charm (gradient header, glass body, binder rings), soft grey label type. Render 2: circular button - radial blue glass (bright cyan core fading to white edge), white up-arrow glyph, thick specular rim light bottom-left, set into a frosted panel corner.
+## Layout
+Render 1: close crop of the frosted pill with label and charm. Render 2: circular button set into a frosted panel corner.
 
-## Motion spec
-None required. Optional: hover lifts the glow slightly (shadow softens, 150ms). Default static.
+## Content &amp; materials
+Pill: white frosted translucent body (real backdrop blur shows through), soft grey label. Calendar charm: glass body, orange-to-blue gradient header, two binder rings. Circular button: radial blue glass (bright cyan core fading to white edge), white up-arrow glyph, thick specular rim light bottom-left. Every glass element: inner glow + one specular rim light with consistent direction + diffused cool-toned shadow.
 
-## Calibration
-- Real backdrop-filter blur on the frosted parts - a translucent white fill is not glass.
-- Each glass element gets exactly one specular rim light with a consistent light direction.
-- Shadows are diffused and cool-toned, not hard black.
-
-## Reduced motion
-N/A - static renders.
+## States
+Static renders. Optional: hover softens the shadow slightly, 150ms.
 
 ## Don&#x27;t miss
-- The calendar charm&#x27;s gradient header (orange -&gt; blue) and binder rings are the character details.
-- The blue button&#x27;s cyan core fades to a white edge - radial, not linear.
-- Inner glow + rim light + diffused shadow: all three layers, or it reads as flat plastic.</pre></div></section>
+- Real backdrop blur on frosted parts - translucent white fill is not glass.
+- The charm&#x27;s gradient header and binder rings are the character details.
+- All three layers (inner glow, rim light, diffused shadow) or it reads as flat plastic.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">static renders (hover: subtle glow lift)</div></div><div><div class="k">elements</div><div class="v">frosted pill, glass icon, glass circle button</div></div><div><div class="k">properties</div><div class="v">backdrop blur, inner glow, rim highlights</div></div><div><div class="k">timing</div><div class="v">n/a</div></div><div><div class="k">easing</div><div class="v">n/a</div></div><div><div class="k">loop</div><div class="v">n/a</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-28">original interaction</a> by @LynelDesign. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild these static renders 1:1, pixel-faithful: a glassmorphic calendar button set - a frosted-glass pill \"Add to My Calendar\" with a glossy translucent calendar icon (orange-to-blue gradient header, glass body, two binder rings), and a matching circular blue-glass button with an up arrow. Soft inner glows, edge highlights, and diffused shadows sell the glass.\n\n## Stack\nReact + TypeScript + Tailwind. backdrop-filter blur for the frosted bodies; layered gradients + inner shadows for the glass charms. Static renders; one optional hover lift.\n\n## Scene\nRender 1: close crop of the pill - white frosted translucent body (blurred backdrop shows through), the glass calendar charm (gradient header, glass body, binder rings), soft grey label type. Render 2: circular button - radial blue glass (bright cyan core fading to white edge), white up-arrow glyph, thick specular rim light bottom-left, set into a frosted panel corner.\n\n## Motion spec\nNone required. Optional: hover lifts the glow slightly (shadow softens, 150ms). Default static.\n\n## Calibration\n- Real backdrop-filter blur on the frosted parts - a translucent white fill is not glass.\n- Each glass element gets exactly one specular rim light with a consistent light direction.\n- Shadows are diffused and cool-toned, not hard black.\n\n## Reduced motion\nN/A - static renders.\n\n## Don't miss\n- The calendar charm's gradient header (orange -> blue) and binder rings are the character details.\n- The blue button's cyan core fades to a white edge - radial, not linear.\n- Inner glow + rim light + diffused shadow: all three layers, or it reads as flat plastic."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild these static renders 1:1, pixel-faithful: a glassmorphic calendar button set - a frosted-glass pill \"Add to My Calendar\" with a glossy translucent calendar charm, and a matching circular blue-glass button with an up arrow.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; recreate with your own components and assets.\n\n## Layout\nRender 1: close crop of the frosted pill with label and charm. Render 2: circular button set into a frosted panel corner.\n\n## Content & materials\nPill: white frosted translucent body (real backdrop blur shows through), soft grey label. Calendar charm: glass body, orange-to-blue gradient header, two binder rings. Circular button: radial blue glass (bright cyan core fading to white edge), white up-arrow glyph, thick specular rim light bottom-left. Every glass element: inner glow + one specular rim light with consistent direction + diffused cool-toned shadow.\n\n## States\nStatic renders. Optional: hover softens the shadow slightly, 150ms.\n\n## Don't miss\n- Real backdrop blur on frosted parts - translucent white fill is not glass.\n- The charm's gradient header and binder rings are the character details.\n- All three layers (inner glow, rim light, diffused shadow) or it reads as flat plastic."</script>
 </body></html>

@@ -12,37 +12,39 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-55__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-20%</div><div class="d">Gate screen: boarding pass (MIKE BARTON, MAN -&gt; SEA, seat/barcode) floating above a grey scanner device with a dot-matrix &#x27;READY&#x27; display and round LED; &#x27;Swipe boarding pass to enter&#x27;.</div></div><div class="phase"><div class="p">20-35%</div><div class="d">Pass drags/animates down through the scanner slot, tilting ~8deg as it feeds; display flickers.</div></div><div class="phase"><div class="p">35-50%</div><div class="d">Display switches to &#x27;READING&#x27; in amber with the LED lit yellow; scan progress implied; pass completes the swipe.</div></div><div class="phase"><div class="p">50-70%</div><div class="d">Success: gate elements part/fade; the portfolio&#x27;s identity block resolves (name, Manchester NH, coordinates) with an airplane-window photo.</div></div><div class="phase"><div class="p">70-100%</div><div class="d">Portfolio scrolls: bio, experience timeline entries (Studio, Fueled, Matter Neuroscience, Contact) with roles and descriptions, year markers along a vertical rail.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a portfolio entry gate - a boarding pass slides through a scanner slot (display flips READY -&gt; READING with an amber LED), the pass tilts during the swipe, and on success the gate dissolves into the portfolio itself.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this flow 1:1: a portfolio entry gate - screen 1 is a scanner ritual (boarding pass swipes through a slot, display flips READY -&gt; READING, amber LED), screen 2 is the portfolio itself, revealed on success.
 
-## Stack
-React + TypeScript + Tailwind + Framer Motion (drag or autoplay for the swipe; crossfade into content). Animate transform and opacity only.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.
 
-## Scene
-Gate screen: boarding pass (MIKE BARTON, MAN -&gt; SEA, seat, barcode) floating above a grey scanner device with a dot-matrix &quot;READY&quot; display and a round LED. Hint: &quot;Swipe boarding pass to enter&quot;. Behind the gate: the portfolio - identity block (name, Manchester NH, coordinates) with an airplane-window photo, then bio and an experience timeline (Studio, Fueled, Matter Neuroscience, Contact) along a vertical year rail.
+## Screen 1 - Gate
+Boarding pass (MIKE BARTON, MAN -&gt; SEA, seat, barcode) floating above a grey scanner device with a dot-matrix &quot;READY&quot; display and a round LED. Hint: &quot;Swipe boarding pass to enter&quot;.
 
-## Motion spec
-Pattern: gesture (or autoplay) swipe, then reveal.
-- Swipe (~800ms, ease-in): pass translates down through the scanner slot, tilting ~8deg as it feeds; display flickers during the pass.
-- Reading (~1s): display switches to &quot;READING&quot; in amber dot-matrix, LED lights yellow; scan implied by a brief progress flicker.
-- Reveal (~600ms, ease-out): gate elements part/fade; the portfolio&#x27;s identity block resolves (opacity + slight rise).
-- Then the page scrolls normally through bio and timeline; year markers sit on a vertical rail.
+## Screen 2 - Portfolio
+Identity block (name, Manchester NH, coordinates) with an airplane-window photo; bio; experience timeline (Studio, Fueled, Matter Neuroscience, Contact) with year markers along a vertical rail. Normal scroll page.
+
+## Transitions
+- Swipe (~800ms, ease-in): pass translates down through the slot, tilting ~8deg as it feeds; display flickers.
+- Reading (~1s): display switches to &quot;READING&quot; in amber dot-matrix, LED lights yellow; brief scan flicker.
+- Confirm -&gt; reveal (~600ms, ease-out): gate elements part/fade; the portfolio&#x27;s identity block resolves with opacity + slight rise.
+- Sequence is swipe -&gt; read -&gt; confirm -&gt; reveal, never overlapping.
 
 ## Calibration
-- The tilt (~8deg) mid-swipe is the physicality cue - a straight pass looks like a dropdown.
-- READING state holds ~1s: long enough to read, short enough not to stall.
-- Reveal 600ms ease-out after the LED confirms; sequence is swipe -&gt; read -&gt; confirm -&gt; reveal, never overlapping.
+- The ~8deg tilt mid-swipe is the physicality cue - a straight pass looks like a dropdown.
+- READING holds ~1s: long enough to read, short enough not to stall.
+- Dot-matrix styling for the display text - a plain sans label kills the scanner realism.
 
 ## Reduced motion
 Pass fades through the slot (300ms); gate crossfades to content (200ms); no tilt.
 
 ## Don&#x27;t miss
-- Dot-matrix display styling for READY/READING - a plain sans label kills the scanner realism.
 - The LED changes state (dark -&gt; amber) in sync with the display text.
-- The portfolio behind should be partially glimpsed/composed before the reveal so the dissolve lands on something solid.</pre></div></section>
+- The portfolio should be composed behind the gate before the reveal, so the dissolve lands on something solid.
+- The gate is one-shot; the portfolio is a normal scroll page after it.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">drag/swipe the pass through the slot (or autoplay)</div></div><div><div class="k">elements</div><div class="v">boarding pass card, scanner (display + LED), portfolio content behind</div></div><div><div class="k">properties</div><div class="v">pass translateY + rotate, display text/color, LED state, gate-to-content crossfade</div></div><div><div class="k">timing</div><div class="v">swipe ~800ms; reading state ~1s; reveal ~600ms</div></div><div><div class="k">easing</div><div class="v">swipe ease-in with slight overshoot tilt; reveal ease-out</div></div><div><div class="k">loop</div><div class="v">one-shot gate (demo loops)</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-55">original interaction</a> by @cameronmoll. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a portfolio entry gate - a boarding pass slides through a scanner slot (display flips READY -> READING with an amber LED), the pass tilts during the swipe, and on success the gate dissolves into the portfolio itself.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion (drag or autoplay for the swipe; crossfade into content). Animate transform and opacity only.\n\n## Scene\nGate screen: boarding pass (MIKE BARTON, MAN -> SEA, seat, barcode) floating above a grey scanner device with a dot-matrix \"READY\" display and a round LED. Hint: \"Swipe boarding pass to enter\". Behind the gate: the portfolio - identity block (name, Manchester NH, coordinates) with an airplane-window photo, then bio and an experience timeline (Studio, Fueled, Matter Neuroscience, Contact) along a vertical year rail.\n\n## Motion spec\nPattern: gesture (or autoplay) swipe, then reveal.\n- Swipe (~800ms, ease-in): pass translates down through the scanner slot, tilting ~8deg as it feeds; display flickers during the pass.\n- Reading (~1s): display switches to \"READING\" in amber dot-matrix, LED lights yellow; scan implied by a brief progress flicker.\n- Reveal (~600ms, ease-out): gate elements part/fade; the portfolio's identity block resolves (opacity + slight rise).\n- Then the page scrolls normally through bio and timeline; year markers sit on a vertical rail.\n\n## Calibration\n- The tilt (~8deg) mid-swipe is the physicality cue - a straight pass looks like a dropdown.\n- READING state holds ~1s: long enough to read, short enough not to stall.\n- Reveal 600ms ease-out after the LED confirms; sequence is swipe -> read -> confirm -> reveal, never overlapping.\n\n## Reduced motion\nPass fades through the slot (300ms); gate crossfades to content (200ms); no tilt.\n\n## Don't miss\n- Dot-matrix display styling for READY/READING - a plain sans label kills the scanner realism.\n- The LED changes state (dark -> amber) in sync with the display text.\n- The portfolio behind should be partially glimpsed/composed before the reveal so the dissolve lands on something solid."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this flow 1:1: a portfolio entry gate - screen 1 is a scanner ritual (boarding pass swipes through a slot, display flips READY -> READING, amber LED), screen 2 is the portfolio itself, revealed on success.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.\n\n## Screen 1 - Gate\nBoarding pass (MIKE BARTON, MAN -> SEA, seat, barcode) floating above a grey scanner device with a dot-matrix \"READY\" display and a round LED. Hint: \"Swipe boarding pass to enter\".\n\n## Screen 2 - Portfolio\nIdentity block (name, Manchester NH, coordinates) with an airplane-window photo; bio; experience timeline (Studio, Fueled, Matter Neuroscience, Contact) with year markers along a vertical rail. Normal scroll page.\n\n## Transitions\n- Swipe (~800ms, ease-in): pass translates down through the slot, tilting ~8deg as it feeds; display flickers.\n- Reading (~1s): display switches to \"READING\" in amber dot-matrix, LED lights yellow; brief scan flicker.\n- Confirm -> reveal (~600ms, ease-out): gate elements part/fade; the portfolio's identity block resolves with opacity + slight rise.\n- Sequence is swipe -> read -> confirm -> reveal, never overlapping.\n\n## Calibration\n- The ~8deg tilt mid-swipe is the physicality cue - a straight pass looks like a dropdown.\n- READING holds ~1s: long enough to read, short enough not to stall.\n- Dot-matrix styling for the display text - a plain sans label kills the scanner realism.\n\n## Reduced motion\nPass fades through the slot (300ms); gate crossfades to content (200ms); no tilt.\n\n## Don't miss\n- The LED changes state (dark -> amber) in sync with the display text.\n- The portfolio should be composed behind the gate before the reveal, so the dissolve lands on something solid.\n- The gate is one-shot; the portfolio is a normal scroll page after it."</script>
 </body></html>

@@ -12,36 +12,37 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/9-7__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-30%</div><div class="d">Sign in screen: doormat header (white paneled door, brown WELCOME mat), &#x27;Sign in&#x27; title, phone field with +1 flag picker, black Continue pill, &#x27;Don&#x27;t have an account? Sign up&#x27;.</div></div><div class="phase"><div class="p">30-50%</div><div class="d">A soft light sweep plays across the door image (moving highlight left to right) as the form validates.</div></div><div class="phase"><div class="p">50-100%</div><div class="d">Screen slides to &#x27;Confirm Your Number&#x27; - &#x27;Enter the code sent to +1 723 4567890&#x27;, 6 OTP boxes (first focused with rounded border), Confirm button; doormat header persists across the transition.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: an OTP sign-in flow topped by a &quot;WELCOME&quot; doormat illustration lying in a doorway with light spilling in. Sign in collects a phone number (+1 dropdown, Continue); a slow light sheen sweeps the doormat as the form validates; then the screen transitions to &quot;Confirm Your Number&quot; with the sent-to number and 6 OTP boxes.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this flow 1:1: an OTP sign-in - two screens under a persistent &quot;WELCOME&quot; doormat header illustration, with a light sheen sweep across the doorway while the form validates.
 
-## Stack
-React + TypeScript + Tailwind + Framer Motion (screen transition). Sheen as a translated gradient masked to the header image. Animate transform and opacity only.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.
 
-## Scene
-Header (persists across both screens): white paneled door, brown WELCOME doormat, light spilling in. Screen 1: &quot;Sign in&quot; title, phone field with +1 flag picker, black Continue pill, &quot;Don&#x27;t have an account? Sign up&quot;. Screen 2: &quot;Confirm Your Number&quot;, &quot;Enter the code sent to +1 723 4567890&quot;, 6 OTP boxes (first focused with rounded border), Confirm button.
+## Screen 1 - Sign in
+Header (persists across both screens): white paneled door, brown WELCOME doormat, light spilling in. Below: &quot;Sign in&quot; title, phone field with +1 flag picker, black Continue pill, &quot;Don&#x27;t have an account? Sign up&quot; link.
 
-## Motion spec
-Pattern: two-screen form flow with an ambient sheen.
-- Sheen: a soft light sweep plays left-to-right across the door image (1.2s ease-in-out) as the form validates.
-- Transition: screens slide/crossfade (400ms); the doormat header persists untouched across the swap.
-- OTP: boxes auto-advance focus on digit entry; focused box gets a rounded border emphasis (120ms).
+## Screen 2 - Confirm your number
+&quot;Confirm Your Number&quot; title, &quot;Enter the code sent to +1 723 4567890&quot; (the actual sent-to number inline), 6 OTP boxes (first focused with rounded border emphasis), Confirm button. The doormat header persists unchanged.
+
+## Transitions
+- Validation: a soft light sheen sweeps left-to-right across the door image, 1.2s ease-in-out, once - it reads as &quot;checking&quot;.
+- Screen 1 -&gt; 2: slide/crossfade 400ms; the header is the visual anchor and never moves.
+- OTP: focus auto-advances on digit entry; focused box border emphasizes 120ms.
 
 ## Calibration
-- Sheen 1.2s once per validation - it reads as &quot;checking&quot;, not decoration; don&#x27;t loop it.
-- Transition 400ms with the header as the visual anchor (continuity trick).
-- OTP boxes: mono digits, generous size, one focus ring color.
+- Sheen plays once per validation - it is a state signal, not decoration; don&#x27;t loop it.
+- OTP boxes: mono digits, generous size, one focus ring color; first box already focused on arrival.
 
 ## Reduced motion
 Sheen skipped; screens crossfade 150ms.
 
 ## Don&#x27;t miss
-- The doormat header is the brand moment and survives the transition unchanged.
-- The sent-to number renders inside the confirm copy (&quot;sent to +1 723 4567890&quot;).
-- First OTP box is already focused on arrival - zero taps to start typing.</pre></div></section>
+- The doormat header is the brand moment and survives the transition untouched.
+- The sent-to number renders inside the confirm copy.
+- Zero taps to start typing the code - focus lands in box 1.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">form submit / screen transition</div></div><div><div class="k">elements</div><div class="v">doormat header image, light sheen sweep, phone form, OTP boxes</div></div><div><div class="k">properties</div><div class="v">sheen x position, screen slide/crossfade, OTP box focus state</div></div><div><div class="k">timing</div><div class="v">sheen 1.2s; transition 400ms</div></div><div><div class="k">easing</div><div class="v">ease-in-out</div></div><div><div class="k">loop</div><div class="v">no</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/9-7">original interaction</a> by @bollmann0x. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: an OTP sign-in flow topped by a \"WELCOME\" doormat illustration lying in a doorway with light spilling in. Sign in collects a phone number (+1 dropdown, Continue); a slow light sheen sweeps the doormat as the form validates; then the screen transitions to \"Confirm Your Number\" with the sent-to number and 6 OTP boxes.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion (screen transition). Sheen as a translated gradient masked to the header image. Animate transform and opacity only.\n\n## Scene\nHeader (persists across both screens): white paneled door, brown WELCOME doormat, light spilling in. Screen 1: \"Sign in\" title, phone field with +1 flag picker, black Continue pill, \"Don't have an account? Sign up\". Screen 2: \"Confirm Your Number\", \"Enter the code sent to +1 723 4567890\", 6 OTP boxes (first focused with rounded border), Confirm button.\n\n## Motion spec\nPattern: two-screen form flow with an ambient sheen.\n- Sheen: a soft light sweep plays left-to-right across the door image (1.2s ease-in-out) as the form validates.\n- Transition: screens slide/crossfade (400ms); the doormat header persists untouched across the swap.\n- OTP: boxes auto-advance focus on digit entry; focused box gets a rounded border emphasis (120ms).\n\n## Calibration\n- Sheen 1.2s once per validation - it reads as \"checking\", not decoration; don't loop it.\n- Transition 400ms with the header as the visual anchor (continuity trick).\n- OTP boxes: mono digits, generous size, one focus ring color.\n\n## Reduced motion\nSheen skipped; screens crossfade 150ms.\n\n## Don't miss\n- The doormat header is the brand moment and survives the transition unchanged.\n- The sent-to number renders inside the confirm copy (\"sent to +1 723 4567890\").\n- First OTP box is already focused on arrival - zero taps to start typing."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this flow 1:1: an OTP sign-in - two screens under a persistent \"WELCOME\" doormat header illustration, with a light sheen sweep across the doorway while the form validates.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; any motion is described as duration + curve that maps to any animation library.\n\n## Screen 1 - Sign in\nHeader (persists across both screens): white paneled door, brown WELCOME doormat, light spilling in. Below: \"Sign in\" title, phone field with +1 flag picker, black Continue pill, \"Don't have an account? Sign up\" link.\n\n## Screen 2 - Confirm your number\n\"Confirm Your Number\" title, \"Enter the code sent to +1 723 4567890\" (the actual sent-to number inline), 6 OTP boxes (first focused with rounded border emphasis), Confirm button. The doormat header persists unchanged.\n\n## Transitions\n- Validation: a soft light sheen sweeps left-to-right across the door image, 1.2s ease-in-out, once - it reads as \"checking\".\n- Screen 1 -> 2: slide/crossfade 400ms; the header is the visual anchor and never moves.\n- OTP: focus auto-advances on digit entry; focused box border emphasizes 120ms.\n\n## Calibration\n- Sheen plays once per validation - it is a state signal, not decoration; don't loop it.\n- OTP boxes: mono digits, generous size, one focus ring color; first box already focused on arrival.\n\n## Reduced motion\nSheen skipped; screens crossfade 150ms.\n\n## Don't miss\n- The doormat header is the brand moment and survives the transition untouched.\n- The sent-to number renders inside the confirm copy.\n- Zero taps to start typing the code - focus lands in box 1."</script>
 </body></html>

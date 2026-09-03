@@ -12,33 +12,32 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/file-management-dashboard__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">image</div><div class="d">Full desktop comp: left sidebar (search, MY WORKSPACE: My File/Shared/Recent/Favorites/Trash; AI TOOLS: AI Insight/AI Categories; STORAGE: Storage Overview/Backup &amp; Restore/Storage Plans; user card + storage meter + Upgrade button). Main: breadcrumb, Upload/View/Sort by/Share controls, &#x27;Recent uploads&#x27; 5 preview cards with colorful thumbnails, &#x27;My Files&#x27; table (Name, AI Category, Last modified, Shared with avatar stack, Status &#x27;Synced&#x27; green dot pill, Size) with folder and file rows. Window floats over a pixel-dithered sky photo.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this static comp 1:1, pixel-faithful: a dark file-management dashboard (&quot;Filenns.&quot;) floating over a bright pixel-dithered sky photograph. Sidebar navigation, recent-uploads card row, and a full file table with avatar stacks and status pills. Fidelity is the deliverable, not motion.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this static comp 1:1, pixel-faithful: a dark file-management dashboard (&quot;Filenns.&quot;) floating over a bright pixel-dithered sky photograph. There is no motion - layout and typography are the deliverable.
 
-## Stack
-React + TypeScript + Tailwind. Dark UI (near-black surfaces) over the photo backdrop; no animation required.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; recreate with your own components and assets.
 
-## Scene
-Desktop window floating centered over the sky photo. Left sidebar: search field; MY WORKSPACE (My File, Shared, Recent, Favorites, Trash); AI TOOLS (AI Insight, AI Categories); STORAGE (Storage Overview, Backup &amp; Restore, Storage Plans); bottom user card with storage meter and Upgrade button. Main column: breadcrumb; control row (Upload, View, Sort by, Share); &quot;Recent uploads&quot; - 5 preview cards with colorful thumbnails; &quot;My Files&quot; table - columns Name, AI Category, Last modified, Shared (avatar stack), Status (green-dot &quot;Synced&quot; pill), Size; folder rows and file rows.
+## Layout
+Desktop window floating centered over the sky photo, soft shadow, 12px radius, sky visible at the edges. Two columns inside: sidebar + main pane.
 
-## Motion spec
-None. At most a 120ms hover background (white/5) on table rows and sidebar items.
+## Content
+- Sidebar: search field; MY WORKSPACE (My File, Shared, Recent, Favorites, Trash); AI TOOLS (AI Insight, AI Categories); STORAGE (Storage Overview, Backup &amp; Restore, Storage Plans); bottom user card with storage meter and Upgrade button.
+- Main: breadcrumb; control row (Upload, View, Sort by, Share); &quot;Recent uploads&quot; - 5 preview cards with colorful thumbnails; &quot;My Files&quot; table - columns Name, AI Category, Last modified, Shared (avatar stack), Status (green-dot &quot;Synced&quot; pill), Size; folder rows and file rows.
 
-## Calibration
-- Hierarchy is typographic: section labels in 10-11px mono/uppercase zinc-500, row text 13-14px, semibold only for the product name and table emphasis.
-- Surfaces: sidebar slightly darker than the main pane; 1px white/8 dividers, no card-in-card boxing.
-- The window floats with a soft shadow and 12px radius so the sky shows at the edges.
+## Typography &amp; color
+Near-black surfaces; sidebar slightly darker than the main pane; 1px white/8 dividers; section labels 10-11px uppercase zinc-500; row text 13-14px; semibold only for product name and table emphasis. No card-in-card boxing - separation by whitespace and hairlines.
 
-## Reduced motion
-N/A - static comp.
+## States
+Static comp. At most a 120ms hover background (white/5) on table rows and sidebar items.
 
 ## Don&#x27;t miss
 - Avatar stacks overlap with 2px rings matching the surface color.
-- Status pills are quiet: green dot + text, no filled badge shouting.
+- Status pills are quiet: green dot + text, no filled badge.
 - The dithered sky backdrop is part of the comp - flat color behind the window kills it.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">static comp</div></div><div><div class="k">elements</div><div class="v">sidebar, upload cards, data table, avatar stacks, status pills, storage meter</div></div><div><div class="k">properties</div><div class="v">layout, typography, iconography</div></div><div><div class="k">timing</div><div class="v">n/a</div></div><div><div class="k">easing</div><div class="v">n/a</div></div><div><div class="k">loop</div><div class="v">n/a</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/file-management-dashboard">original interaction</a> by @UI_Farhan. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild this static comp 1:1, pixel-faithful: a dark file-management dashboard (\"Filenns.\") floating over a bright pixel-dithered sky photograph. Sidebar navigation, recent-uploads card row, and a full file table with avatar stacks and status pills. Fidelity is the deliverable, not motion.\n\n## Stack\nReact + TypeScript + Tailwind. Dark UI (near-black surfaces) over the photo backdrop; no animation required.\n\n## Scene\nDesktop window floating centered over the sky photo. Left sidebar: search field; MY WORKSPACE (My File, Shared, Recent, Favorites, Trash); AI TOOLS (AI Insight, AI Categories); STORAGE (Storage Overview, Backup & Restore, Storage Plans); bottom user card with storage meter and Upgrade button. Main column: breadcrumb; control row (Upload, View, Sort by, Share); \"Recent uploads\" - 5 preview cards with colorful thumbnails; \"My Files\" table - columns Name, AI Category, Last modified, Shared (avatar stack), Status (green-dot \"Synced\" pill), Size; folder rows and file rows.\n\n## Motion spec\nNone. At most a 120ms hover background (white/5) on table rows and sidebar items.\n\n## Calibration\n- Hierarchy is typographic: section labels in 10-11px mono/uppercase zinc-500, row text 13-14px, semibold only for the product name and table emphasis.\n- Surfaces: sidebar slightly darker than the main pane; 1px white/8 dividers, no card-in-card boxing.\n- The window floats with a soft shadow and 12px radius so the sky shows at the edges.\n\n## Reduced motion\nN/A - static comp.\n\n## Don't miss\n- Avatar stacks overlap with 2px rings matching the surface color.\n- Status pills are quiet: green dot + text, no filled badge shouting.\n- The dithered sky backdrop is part of the comp - flat color behind the window kills it."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this static comp 1:1, pixel-faithful: a dark file-management dashboard (\"Filenns.\") floating over a bright pixel-dithered sky photograph. There is no motion - layout and typography are the deliverable.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; recreate with your own components and assets.\n\n## Layout\nDesktop window floating centered over the sky photo, soft shadow, 12px radius, sky visible at the edges. Two columns inside: sidebar + main pane.\n\n## Content\n- Sidebar: search field; MY WORKSPACE (My File, Shared, Recent, Favorites, Trash); AI TOOLS (AI Insight, AI Categories); STORAGE (Storage Overview, Backup & Restore, Storage Plans); bottom user card with storage meter and Upgrade button.\n- Main: breadcrumb; control row (Upload, View, Sort by, Share); \"Recent uploads\" - 5 preview cards with colorful thumbnails; \"My Files\" table - columns Name, AI Category, Last modified, Shared (avatar stack), Status (green-dot \"Synced\" pill), Size; folder rows and file rows.\n\n## Typography & color\nNear-black surfaces; sidebar slightly darker than the main pane; 1px white/8 dividers; section labels 10-11px uppercase zinc-500; row text 13-14px; semibold only for product name and table emphasis. No card-in-card boxing - separation by whitespace and hairlines.\n\n## States\nStatic comp. At most a 120ms hover background (white/5) on table rows and sidebar items.\n\n## Don't miss\n- Avatar stacks overlap with 2px rings matching the surface color.\n- Status pills are quiet: green dot + text, no filled badge.\n- The dithered sky backdrop is part of the comp - flat color behind the window kills it."</script>
 </body></html>

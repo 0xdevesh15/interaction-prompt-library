@@ -12,38 +12,46 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/wafer-page__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-12%</div><div class="d">Browser chrome framing; login card over a heavily dithered classical seascape painting; email input + GitHub/Google SSO buttons; &#x27;Create an account&#x27; primary button.</div></div><div class="phase"><div class="p">12-20%</div><div class="d">Email typed, password dots, button hover; transition into app.</div></div><div class="phase"><div class="p">20-35%</div><div class="d">App shell fades in: left icon rail (wafer logo, Home, API keys, Billing, Usage, Docs, Team), centered welcome &#x27;Welcome to Wafer. Let&#x27;s set up your serverless LLM.&#x27; with step content below.</div></div><div class="phase"><div class="p">35-55%</div><div class="d">Onboarding steps stack: choose a model (dark card with radio + sparkle), then plan rows showing prices ($3.00/$15.00/$0.30...); rows appear with subtle rise+fade as the page scrolls.</div></div><div class="phase"><div class="p">55-75%</div><div class="d">API key creation step: dark code block with syntax-highlighted curl/JS snippet, &#x27;Create key&#x27; toggle switches on with a green flip.</div></div><div class="phase"><div class="p">75-90%</div><div class="d">More plan tiers scroll past (prices per 1M tokens); a modal &#x27;Unlimited?...&#x27; briefly appears top.</div></div><div class="phase"><div class="p">90-100%</div><div class="d">Transition back out to the pure dithered seascape; loop.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this walkthrough 1:1: a marketing-to-product scroll journey for &quot;Wafer&quot; (serverless LLM hosting). A heavily dithered classical seascape painting backs a centered dark auth card; the flow continues into onboarding (&quot;Let&#x27;s set up your serverless LLM&quot;) with model/plan pricing rows, an API-key step with a code block, then scrolls into the dashboard - and loops back out to the artwork.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this flow 1:1: a marketing-to-product journey for &quot;Wafer&quot; (serverless LLM hosting). Four screens: a cinematic auth screen over a dithered classical seascape, an app shell with icon rail, an onboarding flow (model picker, plan pricing rows, API-key step), and a dashboard glimpse - then it loops back out to the artwork.
 
-## Stack
-React + TypeScript + Tailwind + Framer Motion (whileInView reveals; scroll-driven fades). The dithered painting is a static prepared asset - do not dither at runtime.
+## Integration
+Integration: stack-agnostic spec - every value is plain CSS/layout/typography; reveals are described as durations + cubic-bezier curves that map to any animation library or CSS transitions.
 
-## Scene
-Browser-chrome framing. Backdrop: classical seascape painting converted to heavy 1-bit dither. Act 1: centered dark auth card - email input, GitHub and Google SSO buttons, &quot;Create an account&quot; primary. Act 2: app shell - left icon rail (wafer logo, Home, API keys, Billing, Usage, Docs, Team), centered welcome &quot;Welcome to Wafer. Let&#x27;s set up your serverless LLM.&quot; Act 3: onboarding steps - model picker (dark card, radio + sparkle icon), plan rows with prices per 1M tokens ($3.00 / $15.00 / $0.30...), API-key step with syntax-highlighted dark code block (curl/JS) and a &quot;Create key&quot; toggle that flips green. Act 4: dashboard glimpse, brief &quot;Unlimited?...&quot; modal, then back out to the pure artwork.
+## Screen 1 - Auth
+Backdrop: classical seascape painting converted to heavy 1-bit dither, full-bleed. Center: dark auth card - email input, GitHub and Google SSO buttons, &quot;Create an account&quot; primary button. Browser-chrome framing around the scene.
 
-## Motion spec
-Pattern: scroll-linked reveals in a scripted ~39s walkthrough.
-- Section reveals: opacity 0 -&gt; 1, y 16 -&gt; 0, ~500ms ease-out cubic-bezier(0.22, 1, 0.36, 1), as each section enters view.
-- Auth-to-app transition: card crossfades into the shell, 400ms.
-- Pricing rows: rise+fade one after another as the page scrolls, ~80ms stagger.
-- Toggle: flips on with a green fill, 200ms.
-- End: crossfade back to the dithered seascape alone; restart.
+## Screen 2 - App shell
+Left icon rail (wafer logo, Home, API keys, Billing, Usage, Docs, Team) over a dark app surface; centered welcome: &quot;Welcome to Wafer. Let&#x27;s set up your serverless LLM.&quot;
+
+## Screen 3 - Onboarding
+Stacked steps: model picker (dark card, radio + sparkle icon); plan rows with prices per 1M tokens ($3.00 / $15.00 / $0.30...) in mono tabular figures; API-key step - dark code block with syntax-highlighted curl/JS snippet and a &quot;Create key&quot; toggle that flips green when on.
+
+## Screen 4 - Dashboard + exit
+More plan tiers scroll past; a brief &quot;Unlimited?...&quot; modal appears at the top; then the journey reverses out to the pure dithered seascape and restarts.
+
+## Transitions
+- Auth -&gt; app shell: card crossfades into the shell, 400ms.
+- Section reveals within onboarding: opacity 0 -&gt; 1, y 16 -&gt; 0, 500ms cubic-bezier(0.22, 1, 0.36, 1), fired as each section enters view.
+- Pricing rows stagger ~80ms, laid down by the scroll.
+- Toggle flip: green fill, 200ms.
+- Exit: crossfade to the artwork alone, 400ms.
 
 ## Calibration
-- Reveals 500ms with 16px of rise - generous but restrained; no scale, no bounce.
-- The dither texture is static throughout; the art is the constant, the UI moves.
-- Stagger on pricing rows ~80ms; they should feel laid down by the scroll, not popped.
+- Reveals are generous but restrained: 500ms, 16px of rise, no scale, no bounce.
+- The dither texture is static throughout - the art is the constant, the UI moves.
+- The full walkthrough runs ~39s at demo pace.
 
 ## Reduced motion
-All reveals become opacity-only, 150ms, no rise. Sections render immediately if scripting allows.
+All reveals become opacity-only, 150ms, no rise; sections render immediately.
 
 ## Don&#x27;t miss
-- The dithered painting is the brand - it frames both ends of the journey; never cover it edge-to-edge with UI.
-- The icon rail appears with the app shell and stays; it anchors every product scene.
-- Prices in mono with tabular-nums; plan rows are quiet lists, not cards-in-cards.</pre></div></section>
+- The dithered painting frames both ends of the journey; never cover it edge-to-edge with UI.
+- The icon rail appears with the app shell and stays - it anchors every product screen.
+- Plan rows are quiet lists in mono, not cards-in-cards; the toggle&#x27;s green flip is the only saturated moment in onboarding.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">scroll + scripted walkthrough</div></div><div><div class="k">elements</div><div class="v">dithered painting background, auth card, app shell with icon rail, onboarding stepper, pricing rows, code block, toggle</div></div><div><div class="k">properties</div><div class="v">scroll-driven fade/rise of sections, background dither texture (static), card crossfade</div></div><div><div class="k">timing</div><div class="v">39s walkthrough; section reveals ~500ms ease-out</div></div><div><div class="k">easing</div><div class="v">ease-out reveals</div></div><div><div class="k">loop</div><div class="v">ends on the artwork and restarts</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/wafer-page">original interaction</a> by @kazarov_d. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild this walkthrough 1:1: a marketing-to-product scroll journey for \"Wafer\" (serverless LLM hosting). A heavily dithered classical seascape painting backs a centered dark auth card; the flow continues into onboarding (\"Let's set up your serverless LLM\") with model/plan pricing rows, an API-key step with a code block, then scrolls into the dashboard - and loops back out to the artwork.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion (whileInView reveals; scroll-driven fades). The dithered painting is a static prepared asset - do not dither at runtime.\n\n## Scene\nBrowser-chrome framing. Backdrop: classical seascape painting converted to heavy 1-bit dither. Act 1: centered dark auth card - email input, GitHub and Google SSO buttons, \"Create an account\" primary. Act 2: app shell - left icon rail (wafer logo, Home, API keys, Billing, Usage, Docs, Team), centered welcome \"Welcome to Wafer. Let's set up your serverless LLM.\" Act 3: onboarding steps - model picker (dark card, radio + sparkle icon), plan rows with prices per 1M tokens ($3.00 / $15.00 / $0.30...), API-key step with syntax-highlighted dark code block (curl/JS) and a \"Create key\" toggle that flips green. Act 4: dashboard glimpse, brief \"Unlimited?...\" modal, then back out to the pure artwork.\n\n## Motion spec\nPattern: scroll-linked reveals in a scripted ~39s walkthrough.\n- Section reveals: opacity 0 -> 1, y 16 -> 0, ~500ms ease-out cubic-bezier(0.22, 1, 0.36, 1), as each section enters view.\n- Auth-to-app transition: card crossfades into the shell, 400ms.\n- Pricing rows: rise+fade one after another as the page scrolls, ~80ms stagger.\n- Toggle: flips on with a green fill, 200ms.\n- End: crossfade back to the dithered seascape alone; restart.\n\n## Calibration\n- Reveals 500ms with 16px of rise - generous but restrained; no scale, no bounce.\n- The dither texture is static throughout; the art is the constant, the UI moves.\n- Stagger on pricing rows ~80ms; they should feel laid down by the scroll, not popped.\n\n## Reduced motion\nAll reveals become opacity-only, 150ms, no rise. Sections render immediately if scripting allows.\n\n## Don't miss\n- The dithered painting is the brand - it frames both ends of the journey; never cover it edge-to-edge with UI.\n- The icon rail appears with the app shell and stays; it anchors every product scene.\n- Prices in mono with tabular-nums; plan rows are quiet lists, not cards-in-cards."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this flow 1:1: a marketing-to-product journey for \"Wafer\" (serverless LLM hosting). Four screens: a cinematic auth screen over a dithered classical seascape, an app shell with icon rail, an onboarding flow (model picker, plan pricing rows, API-key step), and a dashboard glimpse - then it loops back out to the artwork.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain CSS/layout/typography; reveals are described as durations + cubic-bezier curves that map to any animation library or CSS transitions.\n\n## Screen 1 - Auth\nBackdrop: classical seascape painting converted to heavy 1-bit dither, full-bleed. Center: dark auth card - email input, GitHub and Google SSO buttons, \"Create an account\" primary button. Browser-chrome framing around the scene.\n\n## Screen 2 - App shell\nLeft icon rail (wafer logo, Home, API keys, Billing, Usage, Docs, Team) over a dark app surface; centered welcome: \"Welcome to Wafer. Let's set up your serverless LLM.\"\n\n## Screen 3 - Onboarding\nStacked steps: model picker (dark card, radio + sparkle icon); plan rows with prices per 1M tokens ($3.00 / $15.00 / $0.30...) in mono tabular figures; API-key step - dark code block with syntax-highlighted curl/JS snippet and a \"Create key\" toggle that flips green when on.\n\n## Screen 4 - Dashboard + exit\nMore plan tiers scroll past; a brief \"Unlimited?...\" modal appears at the top; then the journey reverses out to the pure dithered seascape and restarts.\n\n## Transitions\n- Auth -> app shell: card crossfades into the shell, 400ms.\n- Section reveals within onboarding: opacity 0 -> 1, y 16 -> 0, 500ms cubic-bezier(0.22, 1, 0.36, 1), fired as each section enters view.\n- Pricing rows stagger ~80ms, laid down by the scroll.\n- Toggle flip: green fill, 200ms.\n- Exit: crossfade to the artwork alone, 400ms.\n\n## Calibration\n- Reveals are generous but restrained: 500ms, 16px of rise, no scale, no bounce.\n- The dither texture is static throughout - the art is the constant, the UI moves.\n- The full walkthrough runs ~39s at demo pace.\n\n## Reduced motion\nAll reveals become opacity-only, 150ms, no rise; sections render immediately.\n\n## Don't miss\n- The dithered painting frames both ends of the journey; never cover it edge-to-edge with UI.\n- The icon rail appears with the app shell and stays - it anchors every product screen.\n- Plan rows are quiet lists in mono, not cards-in-cards; the toggle's green flip is the only saturated moment in onboarding."</script>
 </body></html>

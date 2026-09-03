@@ -12,33 +12,28 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-32__0.jpg" alt=""><img class="montage" src="../frames/1-32__1.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">media 1</div><div class="d">Full keyboard render on pale backdrop: 3 key rows + modifiers, prediction bar above, emoji and mic glyphs in the bottom tray; keycaps are chunky with 8px radius, top-lit with soft AO in the gaps; blue return key glows slightly.</div></div><div class="phase"><div class="p">media 2</div><div class="d">Macro shot of the bottom-left corner: chrome-grey device bezel curve, emoji key, ABC/shift keys - highlighting the glossy material, seam lines, and cap legends.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild these static renders 1:1, pixel-faithful: a mechanical keyboard for iPhone (illustration) - a 3D-rendered iOS-style soft keyboard with prediction bar (&quot;The&quot;, the, to), white sculpted keycaps with deep rounding and soft shadows, a blue return key, emoji/mic row, and a macro close-up of the glossy bezel curvature.
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild these static renders 1:1, pixel-faithful: a mechanical keyboard for iPhone (illustration) - a 3D-rendered iOS-style soft keyboard plus a macro close-up of the glossy bezel curvature.
 
-## Stack
-React + TypeScript + Tailwind (or SVG). This is a material-rendering exercise: layered shadows, top-light, ambient occlusion in the gaps. Static, with one optional micro-interaction.
+## Integration
+Integration: stack-agnostic spec - every value is plain layout/typography/CSS; recreate with your own components and assets.
 
-## Scene
-Render 1: full keyboard on a pale backdrop - 3 key rows + modifiers, prediction bar above, emoji and mic glyphs in the bottom tray; keycaps chunky with 8px radius, top-lit, soft AO in the gaps; blue return key glows slightly. Render 2: macro shot of the bottom-left corner - chrome-grey device bezel curve, emoji key, ABC/shift keys; glossy material, seam lines, cap legends.
+## Layout
+Render 1: full keyboard on a pale backdrop - prediction bar (&quot;The&quot;, the, to) above, 3 key rows + modifiers, emoji/mic in the bottom tray. Render 2: macro shot of the bottom-left corner - chrome-grey bezel curve, emoji key, ABC/shift keys.
 
-## Motion spec
-Optional key press only: keycap translateY 2px + inner shadow tightening, 80ms ease-in down, 120ms spring release. Nothing else moves.
+## Content &amp; materials
+White sculpted keycaps, chunky with 8px radius, top-lit with soft shadows under each cap and ambient occlusion in the gaps; one consistent light source. Blue return key (only color accent) with a slight glow. Glossy materials, seam lines, and cap legends visible in the macro. Prediction bar flat and quiet.
 
-## Calibration
-- The 3D read comes from soft shadows under each cap + AO in the gaps, not from gradients on the cap faces.
-- Top-light is consistent across every key; one light source.
-- Prediction bar is flat and quiet - it must not compete with the sculpted keys.
-
-## Reduced motion
-N/A - static renders.
+## States
+Static renders. Optional micro-interaction if built live: keycap presses translateY 2px + shadow tighten, 80ms down / 120ms spring release.
 
 ## Don&#x27;t miss
-- 8px cap radius and chunky proportions are the iOS-mechanical hybrid look; standard keyboard radius reads as neither.
-- The blue return key is the only color accent and it glows slightly.
+- The 3D read comes from under-cap shadows + AO in the gaps, not gradients on cap faces.
+- 8px radius and chunky proportions are the iOS-mechanical hybrid look.
 - Macro shot must show the bezel&#x27;s glossy curvature and seam lines - the materials are the subject.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">static renders (key press: translateY 2px + shadow tighten on tap)</div></div><div><div class="k">elements</div><div class="v">keyboard tray, keycaps, prediction bar</div></div><div><div class="k">properties</div><div class="v">key translateY + inner shadow on press</div></div><div><div class="k">timing</div><div class="v">press 80ms down, 120ms release</div></div><div><div class="k">easing</div><div class="v">ease-in down, spring release</div></div><div><div class="k">loop</div><div class="v">n/a</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-32">original interaction</a> by @LynelDesign. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Rebuild these static renders 1:1, pixel-faithful: a mechanical keyboard for iPhone (illustration) - a 3D-rendered iOS-style soft keyboard with prediction bar (\"The\", the, to), white sculpted keycaps with deep rounding and soft shadows, a blue return key, emoji/mic row, and a macro close-up of the glossy bezel curvature.\n\n## Stack\nReact + TypeScript + Tailwind (or SVG). This is a material-rendering exercise: layered shadows, top-light, ambient occlusion in the gaps. Static, with one optional micro-interaction.\n\n## Scene\nRender 1: full keyboard on a pale backdrop - 3 key rows + modifiers, prediction bar above, emoji and mic glyphs in the bottom tray; keycaps chunky with 8px radius, top-lit, soft AO in the gaps; blue return key glows slightly. Render 2: macro shot of the bottom-left corner - chrome-grey device bezel curve, emoji key, ABC/shift keys; glossy material, seam lines, cap legends.\n\n## Motion spec\nOptional key press only: keycap translateY 2px + inner shadow tightening, 80ms ease-in down, 120ms spring release. Nothing else moves.\n\n## Calibration\n- The 3D read comes from soft shadows under each cap + AO in the gaps, not from gradients on the cap faces.\n- Top-light is consistent across every key; one light source.\n- Prediction bar is flat and quiet - it must not compete with the sculpted keys.\n\n## Reduced motion\nN/A - static renders.\n\n## Don't miss\n- 8px cap radius and chunky proportions are the iOS-mechanical hybrid look; standard keyboard radius reads as neither.\n- The blue return key is the only color accent and it glows slightly.\n- Macro shot must show the bezel's glossy curvature and seam lines - the materials are the subject."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild these static renders 1:1, pixel-faithful: a mechanical keyboard for iPhone (illustration) - a 3D-rendered iOS-style soft keyboard plus a macro close-up of the glossy bezel curvature.\n\n## Integration\nIntegration: stack-agnostic spec - every value is plain layout/typography/CSS; recreate with your own components and assets.\n\n## Layout\nRender 1: full keyboard on a pale backdrop - prediction bar (\"The\", the, to) above, 3 key rows + modifiers, emoji/mic in the bottom tray. Render 2: macro shot of the bottom-left corner - chrome-grey bezel curve, emoji key, ABC/shift keys.\n\n## Content & materials\nWhite sculpted keycaps, chunky with 8px radius, top-lit with soft shadows under each cap and ambient occlusion in the gaps; one consistent light source. Blue return key (only color accent) with a slight glow. Glossy materials, seam lines, and cap legends visible in the macro. Prediction bar flat and quiet.\n\n## States\nStatic renders. Optional micro-interaction if built live: keycap presses translateY 2px + shadow tighten, 80ms down / 120ms spring release.\n\n## Don't miss\n- The 3D read comes from under-cap shadows + AO in the gaps, not gradients on cap faces.\n- 8px radius and chunky proportions are the iOS-mechanical hybrid look.\n- Macro shot must show the bezel's glossy curvature and seam lines - the materials are the subject."</script>
 </body></html>
