@@ -12,11 +12,33 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-49__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">image</div><div class="d">Nine app-icon renders on tinted backdrop tiles: soft 3D blob mascot variants (glossy gradients, inner glows, drop shadows) and flat graphic variants (splat, scribble, S monogram). Each squircle centered on a solid or gradient tile.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Recreate a 3x3 app-icon exploration board. Each cell: a tinted backdrop tile (solid or soft gradient) with a centered 180px squircle icon (iOS continuous corners, floor shadow). Icon recipes: (1) sky-blue gradient squircle, white soft blob rising from bottom edge with two oval eyes, heavy blur edges; (2) black squircle, jagged starburst with pink-orange-yellow vertical gradient + two eyes; (3) rainbow soft-gradient squircle, dark violet blob mascot with two eyes; (4) neon green squircle, white splat with thick black outline + face; (5) sky photo squircle with white outlined scribble ghost; (6) deep purple squircle, iridescent gradient orb with two eyes; (7) lavender squircle, purple glossy blob with smile + green stud earring; (8) off-white squircle, black abstract S of two comma shapes; (9) white squircle, orange glossy sphere owl-face. Eyes everywhere are pairs of vertical ovals, slightly tilted.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this static comp 1:1: a 3x3 grid of app icon concepts - nine squircle explorations of one mascot/brand: blue ghost blob, gradient explosion star, purple blob on rainbow, neon green splat, sky scribble, gradient orb, purple smiley with earring, monochrome S-mark, orange owl-face.
+
+## Stack
+React + TypeScript + Tailwind (icons as inline SVG or layered CSS). Static grid - rendering exercise, no motion.
+
+## Scene
+Nine app-icon renders, each a squircle centered on its own tinted backdrop tile (solid or soft gradient matched to the icon). Soft 3D blob variants (glossy gradients, inner glows, drop shadows) mixed with flat graphic variants (splat, scribble, S monogram). Even 3x3 grid with generous gutters.
+
+## Motion spec
+None - static presentation grid.
+
+## Calibration
+- Each tile&#x27;s backdrop tint is derived from its icon&#x27;s palette; equal-tint tiles flatten the set.
+- Glossy icons get one light direction across all nine - shared lighting sells them as one family.
+- Squircle radius matches iOS proportions; consistent silhouette size across the grid.
+
+## Reduced motion
+N/A - static comp.
+
+## Don&#x27;t miss
+- The mix of 3D-glossy and flat-graphic explorations is the point of a concept grid - keep both families crisp.
+- Soft shadows under the blob mascots; flat variants stay flat.
+- Tile gutters even; icons optically centered, not mathematically.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">static comp</div></div><div><div class="k">elements</div><div class="v">9 squircle icons</div></div><div><div class="k">properties</div><div class="v">gradients, soft shadows, gloss highlights</div></div><div><div class="k">timing</div><div class="v">n/a</div></div><div><div class="k">easing</div><div class="v">n/a</div></div><div><div class="k">loop</div><div class="v">n/a</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-49">original interaction</a> by @dmiiiitrii. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Recreate a 3x3 app-icon exploration board. Each cell: a tinted backdrop tile (solid or soft gradient) with a centered 180px squircle icon (iOS continuous corners, floor shadow). Icon recipes: (1) sky-blue gradient squircle, white soft blob rising from bottom edge with two oval eyes, heavy blur edges; (2) black squircle, jagged starburst with pink-orange-yellow vertical gradient + two eyes; (3) rainbow soft-gradient squircle, dark violet blob mascot with two eyes; (4) neon green squircle, white splat with thick black outline + face; (5) sky photo squircle with white outlined scribble ghost; (6) deep purple squircle, iridescent gradient orb with two eyes; (7) lavender squircle, purple glossy blob with smile + green stud earring; (8) off-white squircle, black abstract S of two comma shapes; (9) white squircle, orange glossy sphere owl-face. Eyes everywhere are pairs of vertical ovals, slightly tilted."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this static comp 1:1: a 3x3 grid of app icon concepts - nine squircle explorations of one mascot/brand: blue ghost blob, gradient explosion star, purple blob on rainbow, neon green splat, sky scribble, gradient orb, purple smiley with earring, monochrome S-mark, orange owl-face.\n\n## Stack\nReact + TypeScript + Tailwind (icons as inline SVG or layered CSS). Static grid - rendering exercise, no motion.\n\n## Scene\nNine app-icon renders, each a squircle centered on its own tinted backdrop tile (solid or soft gradient matched to the icon). Soft 3D blob variants (glossy gradients, inner glows, drop shadows) mixed with flat graphic variants (splat, scribble, S monogram). Even 3x3 grid with generous gutters.\n\n## Motion spec\nNone - static presentation grid.\n\n## Calibration\n- Each tile's backdrop tint is derived from its icon's palette; equal-tint tiles flatten the set.\n- Glossy icons get one light direction across all nine - shared lighting sells them as one family.\n- Squircle radius matches iOS proportions; consistent silhouette size across the grid.\n\n## Reduced motion\nN/A - static comp.\n\n## Don't miss\n- The mix of 3D-glossy and flat-graphic explorations is the point of a concept grid - keep both families crisp.\n- Soft shadows under the blob mascots; flat variants stay flat.\n- Tile gutters even; icons optically centered, not mathematically."</script>
 </body></html>

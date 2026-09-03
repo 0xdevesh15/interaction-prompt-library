@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-40__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Black canvas; world map in white dots of varying radius (halftone); centered dark card with 1px white/10 border containing a dot-matrix ring (two swirling arcs of dots) that rotates/morphs - dots cycle size with a traveling sine so the ring looks alive; caption &#x27;Closed-Loop Consensus&#x27;, title &#x27;Every block reinforces the next, enabling safer, faster cross-chain transfers.&#x27;</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a halftone dot bento card. Background: black; render a world map as a dot grid - sample a landmask on a 24px lattice, draw white circles whose radius breathes with a traveling sine field (r = base * (0.6 + 0.4*sin(x*0.02 + y*0.015 - t))), so continents shimmer. Card 340px, #0A0A0A, 1px white/10 border, 12px radius: artwork zone 180px tall with a ring of dots - 2 concentric arcs of ~120 dots each; animate by rotating the arc angles (~10s/rev opposite directions) and modulating each dot&#x27;s radius/opacity by its angle (a bright &#x27;comet&#x27; segment travels the ring). Below: 11px uppercase muted caption, then 18px title with the key phrase in white and the rest at 60%. All dots on one canvas for perf; keep DPR-aware.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a halftone dot bento card - dark crypto bento card whose artwork is a ring rendered entirely in white halftone dots that churns and swirls; behind the card, a giant world map drawn in the same dot language, continents shimmering as dot sizes modulate.
+
+## Stack
+React + TypeScript + Tailwind. One canvas: map dot-field + card ring dot-field; per-dot radius driven by sine fields + time. Animate transform and opacity only for UI.
+
+## Scene
+Black canvas: world map in white dots of varying radius (halftone). Centered dark card (1px white/10 border) containing a dot-matrix ring - two swirling arcs of dots - plus caption &quot;Closed-Loop Consensus&quot; and title &quot;Every block reinforces the next, enabling safer, faster cross-chain transfers.&quot;
+
+## Motion spec
+Pattern: ambient dot-field animation.
+- Ring: dots cycle radius with a traveling sine so the two arcs look alive; the ring slowly rotates/morphs (~10s/rev).
+- Map: a shimmer wave (~4s period) travels across continents, modulating dot sizes.
+- Text and card chrome: perfectly still.
+
+## Calibration
+- Ring rotation ~10s/rev, shimmer ~4s - two slow rhythms that never sync.
+- All texture is dot radius modulation; no opacity flicker, no color change.
+- The ring is two arcs, not a closed circle - the gap is the logo.
+
+## Reduced motion
+Ring and map render as static halftone frames.
+
+## Don&#x27;t miss
+- Map and ring share one dot language - same grid logic, different fields; that&#x27;s the coherence.
+- Dots never fully vanish at sine troughs (floor at ~15% radius); disappearing dots read as flicker.
+- Card text is the only non-dot element and it is absolutely still.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay ambient</div></div><div><div class="k">elements</div><div class="v">halftone world map background, dot-ring artwork, card text block</div></div><div><div class="k">properties</div><div class="v">per-dot radius (sine field + time), ring rotation, map shimmer</div></div><div><div class="k">timing</div><div class="v">ring ~10s/rev; shimmer wave ~4s</div></div><div><div class="k">easing</div><div class="v">continuous sine</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-40">original interaction</a> by @disarto_max. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a halftone dot bento card. Background: black; render a world map as a dot grid - sample a landmask on a 24px lattice, draw white circles whose radius breathes with a traveling sine field (r = base * (0.6 + 0.4*sin(x*0.02 + y*0.015 - t))), so continents shimmer. Card 340px, #0A0A0A, 1px white/10 border, 12px radius: artwork zone 180px tall with a ring of dots - 2 concentric arcs of ~120 dots each; animate by rotating the arc angles (~10s/rev opposite directions) and modulating each dot's radius/opacity by its angle (a bright 'comet' segment travels the ring). Below: 11px uppercase muted caption, then 18px title with the key phrase in white and the rest at 60%. All dots on one canvas for perf; keep DPR-aware."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a halftone dot bento card - dark crypto bento card whose artwork is a ring rendered entirely in white halftone dots that churns and swirls; behind the card, a giant world map drawn in the same dot language, continents shimmering as dot sizes modulate.\n\n## Stack\nReact + TypeScript + Tailwind. One canvas: map dot-field + card ring dot-field; per-dot radius driven by sine fields + time. Animate transform and opacity only for UI.\n\n## Scene\nBlack canvas: world map in white dots of varying radius (halftone). Centered dark card (1px white/10 border) containing a dot-matrix ring - two swirling arcs of dots - plus caption \"Closed-Loop Consensus\" and title \"Every block reinforces the next, enabling safer, faster cross-chain transfers.\"\n\n## Motion spec\nPattern: ambient dot-field animation.\n- Ring: dots cycle radius with a traveling sine so the two arcs look alive; the ring slowly rotates/morphs (~10s/rev).\n- Map: a shimmer wave (~4s period) travels across continents, modulating dot sizes.\n- Text and card chrome: perfectly still.\n\n## Calibration\n- Ring rotation ~10s/rev, shimmer ~4s - two slow rhythms that never sync.\n- All texture is dot radius modulation; no opacity flicker, no color change.\n- The ring is two arcs, not a closed circle - the gap is the logo.\n\n## Reduced motion\nRing and map render as static halftone frames.\n\n## Don't miss\n- Map and ring share one dot language - same grid logic, different fields; that's the coherence.\n- Dots never fully vanish at sine troughs (floor at ~15% radius); disappearing dots read as flicker.\n- Card text is the only non-dot element and it is absolutely still."</script>
 </body></html>

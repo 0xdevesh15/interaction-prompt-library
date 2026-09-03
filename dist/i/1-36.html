@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-36__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Light grey scene; pill button with near-white face and 1px chrome rim; across frames the rim&#x27;s specular highlight + faint RGB fringing travels along the border (bottom edge -&gt; right side -&gt; top), suggesting a rotating light source / flowing metal; subtle inner shadow shifts with it; track and PORTFOLIO label static.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a liquid-metal capsule button. Button: 200x64px full-round pill, face = vertical gradient #F7F7F8 -&gt; #E9E9EC with a 1px inner top highlight and a soft drop shadow. The rim is the trick: wrap the pill in a 2px ring painted with a conic gradient - mostly neutral grey, but with a bright white specular segment (~40deg arc) flanked by thin rainbow dispersion bands (red/cyan fringes, 60% opacity); rotate the conic angle 360deg over 4s linear infinite so the highlight orbits the rim like flowing chrome. Add a matching inner shadow whose offset drifts with the highlight angle (fake lighting consistency). Hover: highlight speed doubles and the face gradient lifts 4% brighter (200ms). Set it in a machined track: a grey (#D8D8DA) rounded channel with a debossed &#x27;PORTFOLIO&#x27; caption beneath, letterspaced 2px, 50% opacity.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a liquid metal button - a capsule labeled &quot;Elements&quot; whose rim is a living chrome edge: a bright specular highlight with rainbow dispersion streaks travels continuously around the pill&#x27;s border like liquid metal. It sits in a machined grey track with a &quot;PORTFOLIO&quot; slot below.
+
+## Stack
+React + TypeScript + Tailwind. Rim as a rotating conic-gradient masked to the border ring (mask: border-only), plus a soft inner shadow layer. Animate transform only for the rotating highlight.
+
+## Scene
+Light grey scene: pill button with near-white face and 1px chrome rim, centered in a machined grey track (inset slot styling), small &quot;PORTFOLIO&quot; caption below.
+
+## Motion spec
+Pattern: ambient rim circuit.
+- The rim&#x27;s specular highlight (bright core + faint RGB fringing at its edges) travels along the border - bottom edge -&gt; right side -&gt; top - a full circuit every ~4s, strictly linear.
+- The button&#x27;s subtle inner shadow shifts direction with the highlight, as if a light source orbits.
+- Face, label, track, caption: perfectly still.
+
+## Calibration
+- Circuit ~4s linear: constant speed sells &quot;rotating light&quot;; easing reads as mechanical stutter.
+- The RGB dispersion is a faint fringe at the highlight&#x27;s edges - if the rim reads as a rainbow, dial it back 70%.
+- Highlight intensity peaks on edges, dims slightly on corners (corners eat light).
+
+## Reduced motion
+Rim renders a static polished chrome gradient.
+
+## Don&#x27;t miss
+- The highlight travels the BORDER only - a conic sweep across the face is a different (wrong) effect.
+- Inner shadow direction tracks the highlight; static shadow + moving light breaks the physics.
+- The machined track (inset slot, fine edge lines) is half the realism - don&#x27;t ship the pill alone on flat grey.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay ambient</div></div><div><div class="k">elements</div><div class="v">capsule button, animated rim (conic gradient), track</div></div><div><div class="k">properties</div><div class="v">rim gradient angle, specular position, chromatic fringe</div></div><div><div class="k">timing</div><div class="v">rim circuit ~4s linear</div></div><div><div class="k">easing</div><div class="v">linear</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-36">original interaction</a> by @BrettFromDJ. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a liquid-metal capsule button. Button: 200x64px full-round pill, face = vertical gradient #F7F7F8 -> #E9E9EC with a 1px inner top highlight and a soft drop shadow. The rim is the trick: wrap the pill in a 2px ring painted with a conic gradient - mostly neutral grey, but with a bright white specular segment (~40deg arc) flanked by thin rainbow dispersion bands (red/cyan fringes, 60% opacity); rotate the conic angle 360deg over 4s linear infinite so the highlight orbits the rim like flowing chrome. Add a matching inner shadow whose offset drifts with the highlight angle (fake lighting consistency). Hover: highlight speed doubles and the face gradient lifts 4% brighter (200ms). Set it in a machined track: a grey (#D8D8DA) rounded channel with a debossed 'PORTFOLIO' caption beneath, letterspaced 2px, 50% opacity."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a liquid metal button - a capsule labeled \"Elements\" whose rim is a living chrome edge: a bright specular highlight with rainbow dispersion streaks travels continuously around the pill's border like liquid metal. It sits in a machined grey track with a \"PORTFOLIO\" slot below.\n\n## Stack\nReact + TypeScript + Tailwind. Rim as a rotating conic-gradient masked to the border ring (mask: border-only), plus a soft inner shadow layer. Animate transform only for the rotating highlight.\n\n## Scene\nLight grey scene: pill button with near-white face and 1px chrome rim, centered in a machined grey track (inset slot styling), small \"PORTFOLIO\" caption below.\n\n## Motion spec\nPattern: ambient rim circuit.\n- The rim's specular highlight (bright core + faint RGB fringing at its edges) travels along the border - bottom edge -> right side -> top - a full circuit every ~4s, strictly linear.\n- The button's subtle inner shadow shifts direction with the highlight, as if a light source orbits.\n- Face, label, track, caption: perfectly still.\n\n## Calibration\n- Circuit ~4s linear: constant speed sells \"rotating light\"; easing reads as mechanical stutter.\n- The RGB dispersion is a faint fringe at the highlight's edges - if the rim reads as a rainbow, dial it back 70%.\n- Highlight intensity peaks on edges, dims slightly on corners (corners eat light).\n\n## Reduced motion\nRim renders a static polished chrome gradient.\n\n## Don't miss\n- The highlight travels the BORDER only - a conic sweep across the face is a different (wrong) effect.\n- Inner shadow direction tracks the highlight; static shadow + moving light breaks the physics.\n- The machined track (inset slot, fine edge lines) is half the realism - don't ship the pill alone on flat grey."</script>
 </body></html>

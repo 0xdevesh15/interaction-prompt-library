@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-26__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Near-white scene; 16 isometric cubes (outline + top face shading) at varying heights per frame - a wave ripples across the grid (corner-to-corner), some cubes tall, some flush; caption under the loader swaps between the three status strings with a soft fade.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build an isometric voxel loader. Canvas (or SVG) 160x120: a 4x4 grid of isometric cubes (top face #FFF, left #EEE, right #E4E4E4, 1px #DDD strokes) drawn painter&#x27;s-order back-to-front. Animate each cube&#x27;s height h(i,j,t) = base + amp * sin((i+j)*0.7 - t*2.6) so a diagonal wave ripples through; h ranges 4..28px. Redraw every frame (or animate with CSS custom properties on 16 divs using clip-path isometric faces). Caption beneath: 13px grey-500 text that cycles &#x27;Recalling previous context...&#x27; / &#x27;Processing...&#x27; / &#x27;Searching memories...&#x27; every 2s with a 200ms opacity crossfade. Whole scene on #FAFAFA.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: an isometric voxel thinking loader - a 4x4 grid of white isometric cubes that rise and fall in a traveling wave (like a tiny city breathing), while a status caption beneath cycles through &quot;Recalling previous context...&quot;, &quot;Processing...&quot;, &quot;Searching memories...&quot;.
+
+## Stack
+React + TypeScript + Tailwind. 16 cubes as CSS isometric blocks (3 faces each: top, left, right); per-cube height from a wave function of position + time. Animate transform only (scaleY/translateY on faces).
+
+## Scene
+Near-white scene. 16 isometric cubes (outline + top face shading) in a 4x4 diamond-oriented grid; caption in mono 12px zinc-500 beneath.
+
+## Motion spec
+Pattern: ambient loader loop.
+- Wave: a sine ripple travels corner-to-corner across the grid (~2.4s period); each cube&#x27;s height = wave(x, y, t); some cubes tall, some flush at any moment.
+- Caption: swaps between the three status strings every ~2s with a 200ms crossfade.
+- Continuous, infinite, no state change.
+
+## Calibration
+- Wave period ~2.4s corner-to-corner diagonal; axis-aligned waves read as rows blinking.
+- Cube motion is smooth sine - no popping between heights.
+- The three faces must stay consistent as heights change (top moves, sides stretch) - this is what keeps them reading as cubes.
+
+## Reduced motion
+Cubes hold a static mid-wave arrangement; caption still cycles (it carries information).
+
+## Don&#x27;t miss
+- The wave travels diagonally corner-to-corner - this is what makes it feel organic.
+- Near-white on near-white: cubes are defined by thin outlines and top-face shading only; no fills shouting.
+- Caption swaps are the only text; no spinner, no percentage.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay (async thinking state)</div></div><div><div class="k">elements</div><div class="v">4x4 isometric cube grid, status caption</div></div><div><div class="k">properties</div><div class="v">per-cube height (wave function), caption text fade</div></div><div><div class="k">timing</div><div class="v">wave ~2.4s period; caption swap every ~2s</div></div><div><div class="k">easing</div><div class="v">sine wave; 200ms caption crossfade</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-26">original interaction</a> by @AdityaSur11. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build an isometric voxel loader. Canvas (or SVG) 160x120: a 4x4 grid of isometric cubes (top face #FFF, left #EEE, right #E4E4E4, 1px #DDD strokes) drawn painter's-order back-to-front. Animate each cube's height h(i,j,t) = base + amp * sin((i+j)*0.7 - t*2.6) so a diagonal wave ripples through; h ranges 4..28px. Redraw every frame (or animate with CSS custom properties on 16 divs using clip-path isometric faces). Caption beneath: 13px grey-500 text that cycles 'Recalling previous context...' / 'Processing...' / 'Searching memories...' every 2s with a 200ms opacity crossfade. Whole scene on #FAFAFA."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: an isometric voxel thinking loader - a 4x4 grid of white isometric cubes that rise and fall in a traveling wave (like a tiny city breathing), while a status caption beneath cycles through \"Recalling previous context...\", \"Processing...\", \"Searching memories...\".\n\n## Stack\nReact + TypeScript + Tailwind. 16 cubes as CSS isometric blocks (3 faces each: top, left, right); per-cube height from a wave function of position + time. Animate transform only (scaleY/translateY on faces).\n\n## Scene\nNear-white scene. 16 isometric cubes (outline + top face shading) in a 4x4 diamond-oriented grid; caption in mono 12px zinc-500 beneath.\n\n## Motion spec\nPattern: ambient loader loop.\n- Wave: a sine ripple travels corner-to-corner across the grid (~2.4s period); each cube's height = wave(x, y, t); some cubes tall, some flush at any moment.\n- Caption: swaps between the three status strings every ~2s with a 200ms crossfade.\n- Continuous, infinite, no state change.\n\n## Calibration\n- Wave period ~2.4s corner-to-corner diagonal; axis-aligned waves read as rows blinking.\n- Cube motion is smooth sine - no popping between heights.\n- The three faces must stay consistent as heights change (top moves, sides stretch) - this is what keeps them reading as cubes.\n\n## Reduced motion\nCubes hold a static mid-wave arrangement; caption still cycles (it carries information).\n\n## Don't miss\n- The wave travels diagonally corner-to-corner - this is what makes it feel organic.\n- Near-white on near-white: cubes are defined by thin outlines and top-face shading only; no fills shouting.\n- Caption swaps are the only text; no spinner, no percentage."</script>
 </body></html>

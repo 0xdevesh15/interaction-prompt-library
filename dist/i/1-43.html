@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-43__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Static grid composition; inside each orb the gradient swirl drifts and breathes (internal blobs rotate a few degrees and swell); hue stays per-emotion (ice blue, mint, gold, ember orange, crimson, blood red, wine, violet, slate).</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build an emotion-orb grid. Each cell: 120px circle with overflow hidden, containing 2-3 absolutely positioned radial-gradient blobs (60-80% size, blur 20px) in the emotion&#x27;s palette. Animate per orb: blobs orbit the center slowly (rotate container 12-20s linear) and pulse scale 0.9-1.1 on a sine offset by index so no two orbs sync. Palette map: Calm #BFD9E8/#7FA8C9, Wonder #BFE3D8/#8FC7B8, Joy #F2C94C/#E8963C, Desire #E8834C/#C9532E, Passion #D43D5E/#9E1B32, Fury #C1121F/#6E0B14, Obsession #8E1E3F/#4A0E21, Longing #9B8EC4/#5E4E8C, Heavy #5A5E66/#2B2E33. Beside each orb: emotion name (14px medium) and 2-3 muted micro-labels (11px, 40% opacity). Whole grid on an off-white #F5F4F2 canvas.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: &quot;Emotion Shader&quot; - a 3x3 grid of soft gradient orbs, one per emotion (Calm, Wonder, Joy, Desire, Passion, Fury, Obsession, Longing, Heavy/Void). Each orb is a blurry multi-stop radial swirl slowly churning inside a circular mask; label + muted sub-tags beside each.
+
+## Stack
+React + TypeScript + Tailwind. Each orb: layered radial gradients inside an overflow-hidden circle, animated with slow rotate/scale on the gradient layers (or a tiny shader). Animate transform and opacity only.
+
+## Scene
+Static 3x3 grid composition. Each cell: circular orb + label (emotion name, semibold) + muted sub-tags (zinc-500). Per-emotion hues: ice blue (Calm), mint (Wonder), gold (Joy), ember orange (Desire), crimson (Passion), blood red (Fury), wine (Obsession), violet (Longing), slate (Heavy/Void).
+
+## Motion spec
+Pattern: ambient per-orb churn.
+- Inside each orb: internal blobs rotate a few degrees and swell on a 12-20s cycle, sine in-out drift; each orb on an offset phase so the grid never syncs.
+- Blur stays constant; hue stays per-emotion - no hue cycling.
+- Labels and grid: perfectly still.
+
+## Calibration
+- 12-20s cycles with offset phases: the grid should feel like nine separate weather systems.
+- Rotation amplitude a few degrees only - churn, not spin.
+- Heavy/Void (slate) moves slowest; Fury (blood red) fastest - tempo is part of the emotion mapping.
+
+## Reduced motion
+Each orb renders a static swirl frame.
+
+## Don&#x27;t miss
+- The circular mask is hard-edged; softness lives inside the orb, not at its boundary.
+- Gradients are multi-stop radials, never linear sweeps.
+- Sub-tags are quiet (12px, zinc-500) - the orb speaks, the label names.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay ambient</div></div><div><div class="k">elements</div><div class="v">9 masked orb canvases/divs, labels</div></div><div><div class="k">properties</div><div class="v">internal gradient rotation, blob scale pulse, blur stays constant</div></div><div><div class="k">timing</div><div class="v">each orb ~12-20s cycle, offset phases</div></div><div><div class="k">easing</div><div class="v">sine in-out drift</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-43">original interaction</a> by @raul_dronca. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build an emotion-orb grid. Each cell: 120px circle with overflow hidden, containing 2-3 absolutely positioned radial-gradient blobs (60-80% size, blur 20px) in the emotion's palette. Animate per orb: blobs orbit the center slowly (rotate container 12-20s linear) and pulse scale 0.9-1.1 on a sine offset by index so no two orbs sync. Palette map: Calm #BFD9E8/#7FA8C9, Wonder #BFE3D8/#8FC7B8, Joy #F2C94C/#E8963C, Desire #E8834C/#C9532E, Passion #D43D5E/#9E1B32, Fury #C1121F/#6E0B14, Obsession #8E1E3F/#4A0E21, Longing #9B8EC4/#5E4E8C, Heavy #5A5E66/#2B2E33. Beside each orb: emotion name (14px medium) and 2-3 muted micro-labels (11px, 40% opacity). Whole grid on an off-white #F5F4F2 canvas."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: \"Emotion Shader\" - a 3x3 grid of soft gradient orbs, one per emotion (Calm, Wonder, Joy, Desire, Passion, Fury, Obsession, Longing, Heavy/Void). Each orb is a blurry multi-stop radial swirl slowly churning inside a circular mask; label + muted sub-tags beside each.\n\n## Stack\nReact + TypeScript + Tailwind. Each orb: layered radial gradients inside an overflow-hidden circle, animated with slow rotate/scale on the gradient layers (or a tiny shader). Animate transform and opacity only.\n\n## Scene\nStatic 3x3 grid composition. Each cell: circular orb + label (emotion name, semibold) + muted sub-tags (zinc-500). Per-emotion hues: ice blue (Calm), mint (Wonder), gold (Joy), ember orange (Desire), crimson (Passion), blood red (Fury), wine (Obsession), violet (Longing), slate (Heavy/Void).\n\n## Motion spec\nPattern: ambient per-orb churn.\n- Inside each orb: internal blobs rotate a few degrees and swell on a 12-20s cycle, sine in-out drift; each orb on an offset phase so the grid never syncs.\n- Blur stays constant; hue stays per-emotion - no hue cycling.\n- Labels and grid: perfectly still.\n\n## Calibration\n- 12-20s cycles with offset phases: the grid should feel like nine separate weather systems.\n- Rotation amplitude a few degrees only - churn, not spin.\n- Heavy/Void (slate) moves slowest; Fury (blood red) fastest - tempo is part of the emotion mapping.\n\n## Reduced motion\nEach orb renders a static swirl frame.\n\n## Don't miss\n- The circular mask is hard-edged; softness lives inside the orb, not at its boundary.\n- Gradients are multi-stop radials, never linear sweeps.\n- Sub-tags are quiet (12px, zinc-500) - the orb speaks, the label names."</script>
 </body></html>

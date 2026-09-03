@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/maple-research-cards__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-20%</div><div class="d">Two vertical cards; black card shows white dotted blob shapes mid-morph; blue card shows the same field in darker blue dots; text locked up top-left and bottom-left.</div></div><div class="phase"><div class="p">20-50%</div><div class="d">The dotted blobs drift and merge - metaball-like unions and separations; dot radius encodes the field value (bigger dot = inside the shape).</div></div><div class="phase"><div class="p">50-80%</div><div class="d">Blobs keep morphing with smooth noise-driven motion; no hard edges anywhere - everything resolves through dot size.</div></div><div class="phase"><div class="p">80-100%</div><div class="d">Field continues cycling; text and card chrome never move; infinite ambient loop.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build halftone metaball cards. Each card: solid fill (near-black / electric blue #1D4ED8-ish) with a canvas of dots on a fixed grid (~10-14px pitch). Per frame compute a scalar field at each grid point: sum of 2-3 radial metaballs whose centers drift on simplex-noise paths (slow, period 8-12s), plus a little high-frequency noise. Map field value to dot radius (0 below threshold, up to ~55% of pitch at field max) with a smoothstep knee so shapes read as soft blobs. Dot color: white on the black card, darker shade of the card color on the blue card. Lock typography top-left (wordmark + 2-line headline) and bottom-left (small descriptor + logo). Cap DPR at 2, batch arc() calls, ~60fps. Reduced motion: freeze one frame.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a pair of brand cards (one black &quot;Maple Research&quot; card, one blue org card) whose faces carry a live halftone dot-field - grids of dots whose radii swell and shrink to render slowly morphing organic blobs, like fluid seen through a dot screen.
+
+## Stack
+React + TypeScript + Tailwind. One canvas per card rendering a dot grid; field = sum of 2-3 moving radial metaballs + simplex noise; per-dot radius encodes the field value. requestAnimationFrame loop.
+
+## Scene
+Two vertical cards side by side. Black card: white dots. Blue card: darker blue dots. Text locked top-left and bottom-left on each (wordmark / tagline) - the chrome never moves. Dots are small (2-6px radius range) on a regular grid with generous spacing.
+
+## Motion spec
+Pattern: ambient generative loop.
+- Field morph cycle ~8-12s, continuous: metaball centers drift on smooth noise paths; blobs merge and separate (metaball union), never hard-edged - everything resolves through dot size.
+- Per-dot: radius = base + field value * max; dots below threshold shrink to near-invisible rather than popping out.
+- No camera motion, no card motion, no text motion.
+
+## Calibration
+- Morph ~8-12s per cycle: slow enough that you notice the shape changed, not that it is changing.
+- Simplex-driven drift, not random wander - the blobs should feel like one continuous fluid body.
+- Dot radius mapping is the entire render: no fills, no strokes, no blur.
+
+## Reduced motion
+Render one representative field frame statically per card.
+
+## Don&#x27;t miss
+- The two cards run the same field logic in different colorways - they are a pair, not two demos.
+- Blobs merge and separate smoothly; threshold-crossing dots must grow/shrink, never blink.
+- Text stays perfectly still over the living field - that tension is the design.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay ambient</div></div><div><div class="k">elements</div><div class="v">2 cards, dot-grid canvas per card</div></div><div><div class="k">properties</div><div class="v">per-dot radius (field value), field = sum of 2-3 moving radial metaballs + noise</div></div><div><div class="k">timing</div><div class="v">morph cycle ~8-12s, continuous</div></div><div><div class="k">easing</div><div class="v">smooth noise (simplex) drift</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/maple-research-cards">original interaction</a> by @ayushsoni_io. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build halftone metaball cards. Each card: solid fill (near-black / electric blue #1D4ED8-ish) with a canvas of dots on a fixed grid (~10-14px pitch). Per frame compute a scalar field at each grid point: sum of 2-3 radial metaballs whose centers drift on simplex-noise paths (slow, period 8-12s), plus a little high-frequency noise. Map field value to dot radius (0 below threshold, up to ~55% of pitch at field max) with a smoothstep knee so shapes read as soft blobs. Dot color: white on the black card, darker shade of the card color on the blue card. Lock typography top-left (wordmark + 2-line headline) and bottom-left (small descriptor + logo). Cap DPR at 2, batch arc() calls, ~60fps. Reduced motion: freeze one frame."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a pair of brand cards (one black \"Maple Research\" card, one blue org card) whose faces carry a live halftone dot-field - grids of dots whose radii swell and shrink to render slowly morphing organic blobs, like fluid seen through a dot screen.\n\n## Stack\nReact + TypeScript + Tailwind. One canvas per card rendering a dot grid; field = sum of 2-3 moving radial metaballs + simplex noise; per-dot radius encodes the field value. requestAnimationFrame loop.\n\n## Scene\nTwo vertical cards side by side. Black card: white dots. Blue card: darker blue dots. Text locked top-left and bottom-left on each (wordmark / tagline) - the chrome never moves. Dots are small (2-6px radius range) on a regular grid with generous spacing.\n\n## Motion spec\nPattern: ambient generative loop.\n- Field morph cycle ~8-12s, continuous: metaball centers drift on smooth noise paths; blobs merge and separate (metaball union), never hard-edged - everything resolves through dot size.\n- Per-dot: radius = base + field value * max; dots below threshold shrink to near-invisible rather than popping out.\n- No camera motion, no card motion, no text motion.\n\n## Calibration\n- Morph ~8-12s per cycle: slow enough that you notice the shape changed, not that it is changing.\n- Simplex-driven drift, not random wander - the blobs should feel like one continuous fluid body.\n- Dot radius mapping is the entire render: no fills, no strokes, no blur.\n\n## Reduced motion\nRender one representative field frame statically per card.\n\n## Don't miss\n- The two cards run the same field logic in different colorways - they are a pair, not two demos.\n- Blobs merge and separate smoothly; threshold-crossing dots must grow/shrink, never blink.\n- Text stays perfectly still over the living field - that tension is the design."</script>
 </body></html>

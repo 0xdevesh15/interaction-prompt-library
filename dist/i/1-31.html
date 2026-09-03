@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-31__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Black scene; pill with home glyph; the icon ring&#x27;s specular arc (white core with red/cyan fringe edges) travels around the ring across frames - bottom-left -&gt; top -&gt; right - with soft bloom; label &#x27;Home&#x27; static.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build an iridescent-ring icon button. Pill: 160x56px, #111 face, full-round, &#x27;Home&#x27; label 15px white next to a 36px glass circle containing a home glyph (white, 90%). The circle&#x27;s rim is a 2.5px conic-gradient ring: transparent for ~280deg, then a bright white 30deg arc flanked by thin red-fringe and cyan-fringe bands (camera-lens dispersion look), all with a 6px blur duplicate behind it for bloom. Rotate the conic angle 360deg over 5s linear infinite; the bloom layer rotates in sync with 10% lag for depth. Dark scene (#050505) so the flare reads. Optional hover: orbit speed 2x and ring brightness +30%.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: liquid metal button (circular variant) - a dark &quot;Home&quot; pill whose circular icon is ringed by an iridescent conic-gradient halo: a lens-flare ring with RGB fringing that slowly rotates, its bright arc orbiting the circle while the dark glass body stays still.
+
+## Stack
+React + TypeScript + Tailwind. Ring as a conic-gradient (white core arc with red/cyan fringe edges) masked to a ring shape, rotating via CSS custom property or transform. Animate transform only.
+
+## Scene
+Black scene: dark glass pill with a home glyph icon inside a circle; the icon circle carries the iridescent ring; label &quot;Home&quot; beside it.
+
+## Motion spec
+Pattern: ambient orbit.
+- The ring&#x27;s bright arc (specular core + red/cyan fringe) orbits the circle - bottom-left -&gt; top -&gt; right - one revolution every ~5s, strictly linear.
+- Soft bloom around the bright arc (blur duplicate at low opacity); bloom intensity constant.
+- Pill body, icon glyph, label: perfectly still; the glass face shows only a faint static reflection.
+
+## Calibration
+- Orbit ~5s linear, constant angular speed - any easing reads as a wobble.
+- The fringe is subtle chromatic edging on the arc, not a rainbow ring.
+- Bloom stays soft and low (white/20); a hot glow turns it into a loading spinner.
+
+## Reduced motion
+Ring renders as a static iridescent gradient.
+
+## Don&#x27;t miss
+- Only the ring moves - the dark glass body and glyph are frozen; that contrast is the luxury read.
+- Arc length ~20-30% of the circumference; a full-ring gradient kills the orbiting-light illusion.
+- Fringes sit at the arc&#x27;s leading/trailing edges (red one side, cyan the other), like real dispersion.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay ambient</div></div><div><div class="k">elements</div><div class="v">pill, icon circle, iridescent ring (conic gradient)</div></div><div><div class="k">properties</div><div class="v">ring gradient angle, bloom intensity</div></div><div><div class="k">timing</div><div class="v">orbit ~5s linear</div></div><div><div class="k">easing</div><div class="v">linear</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-31">original interaction</a> by @tojawuzik. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build an iridescent-ring icon button. Pill: 160x56px, #111 face, full-round, 'Home' label 15px white next to a 36px glass circle containing a home glyph (white, 90%). The circle's rim is a 2.5px conic-gradient ring: transparent for ~280deg, then a bright white 30deg arc flanked by thin red-fringe and cyan-fringe bands (camera-lens dispersion look), all with a 6px blur duplicate behind it for bloom. Rotate the conic angle 360deg over 5s linear infinite; the bloom layer rotates in sync with 10% lag for depth. Dark scene (#050505) so the flare reads. Optional hover: orbit speed 2x and ring brightness +30%."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: liquid metal button (circular variant) - a dark \"Home\" pill whose circular icon is ringed by an iridescent conic-gradient halo: a lens-flare ring with RGB fringing that slowly rotates, its bright arc orbiting the circle while the dark glass body stays still.\n\n## Stack\nReact + TypeScript + Tailwind. Ring as a conic-gradient (white core arc with red/cyan fringe edges) masked to a ring shape, rotating via CSS custom property or transform. Animate transform only.\n\n## Scene\nBlack scene: dark glass pill with a home glyph icon inside a circle; the icon circle carries the iridescent ring; label \"Home\" beside it.\n\n## Motion spec\nPattern: ambient orbit.\n- The ring's bright arc (specular core + red/cyan fringe) orbits the circle - bottom-left -> top -> right - one revolution every ~5s, strictly linear.\n- Soft bloom around the bright arc (blur duplicate at low opacity); bloom intensity constant.\n- Pill body, icon glyph, label: perfectly still; the glass face shows only a faint static reflection.\n\n## Calibration\n- Orbit ~5s linear, constant angular speed - any easing reads as a wobble.\n- The fringe is subtle chromatic edging on the arc, not a rainbow ring.\n- Bloom stays soft and low (white/20); a hot glow turns it into a loading spinner.\n\n## Reduced motion\nRing renders as a static iridescent gradient.\n\n## Don't miss\n- Only the ring moves - the dark glass body and glyph are frozen; that contrast is the luxury read.\n- Arc length ~20-30% of the circumference; a full-ring gradient kills the orbiting-light illusion.\n- Fringes sit at the arc's leading/trailing edges (red one side, cyan the other), like real dispersion."</script>
 </body></html>

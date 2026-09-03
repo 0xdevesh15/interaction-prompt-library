@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/8-0__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-25%</div><div class="d">Idle: &#x27;Today&#x27; group (pink dot) expanded, entries grey dots; one row hovered with grey wash + hand cursor.</div></div><div class="phase"><div class="p">25-50%</div><div class="d">Hover moves down entries (&#x27;Brainstormed side projects&#x27;, &#x27;Asked about improving sleep quality&#x27;); rail line continuous; dots turn pink on hover.</div></div><div class="phase"><div class="p">50-75%</div><div class="d">Focus state: &#x27;Worked on the b402 dashboard UX&#x27; and &#x27;Drafted a polite client email&#x27; get a white 1px outline ring (keyboard nav).</div></div><div class="phase"><div class="p">75-100%</div><div class="d">Segmented control knob slides Day -&gt; Week; list content stays (same entries); hover wash continues.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a dark activity timeline. Panel 380px (#131315, 16px radius) with a slim icon rail on the left (5 muted icons, active = white/10 pill). Header: &#x27;Timeline&#x27; 15px + segmented control (Day/Week/Month, 11px, knob = white/10 pill sliding 250ms ease-out). List: group headers (&#x27;Today&#x27;, &#x27;Yesterday&#x27;, &#x27;Feb 8, 2026&#x27;) 12px white/50 with a 6px dot on a 1px vertical rail (white/12) running through the list; &#x27;Today&#x27; dot pink #EC4899, others grey. Rows: 13px white/85 entries, 8px indent from rail; hover -&gt; row bg white/6 (8px radius, 120ms) + its dot turns pink; keyboard focus -&gt; 1px white/70 outline ring around the row. Row height 28px, group spacing 12px. Content example: &#x27;Asked for a high-protein meal plan&#x27;, &#x27;Worked on the b402 dashboard UX&#x27;, &#x27;Brainstormed side projects&#x27;.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: an activity timeline concept - dark timeline (&quot;Timeline&quot; header, Day/Week/Month segmented control) listing AI-assistant activity grouped Today / Yesterday / Feb 8, 2026: dot markers on a vertical rail (&quot;Asked for a high-protein meal plan&quot;, &quot;Worked on the b402 dashboard UX&quot;...); hover fills the row with a grey wash and turns the dot pink; keyboard focus shows a white outline ring; the segmented control slides its knob Day -&gt; Week.
+
+## Stack
+React + TypeScript + Tailwind + Framer Motion (layout animation for the segment knob). Animate transform and opacity only.
+
+## Scene
+Dark card: &quot;Timeline&quot; header; Day/Week/Month segmented control; groups (Today with a pink marker, Yesterday, Feb 8 2026); entries with grey dots on a continuous vertical rail.
+
+## Motion spec
+Pattern: list micro-interactions.
+- Row hover: grey wash fills the row (120ms ease-out); the row&#x27;s dot turns pink; hand cursor.
+- Keyboard focus: white 1px outline ring around the focused entry (instant).
+- Segment switch: knob slides Day -&gt; Week (250ms ease-out, layout animation); list content stays.
+
+## Calibration
+- Hover wash 120ms - immediate, no lag; this is a dense utility list.
+- The pink dot appears on hover AND marks the Today group header - two meanings, one color system.
+- Knob slide 250ms with the knob resizing to the label width.
+
+## Reduced motion
+All states apply instantly without transitions.
+
+## Don&#x27;t miss
+- The rail is one continuous vertical line; dots sit ON it, not beside it.
+- Hover wash spans the full row width, edge to edge.
+- Focus ring is a crisp 1px white outline (keyboard only) - visually distinct from hover.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">row hover, keyboard focus, segment switch</div></div><div><div class="k">elements</div><div class="v">timeline rail + dots, entry rows, segmented control, group headers</div></div><div><div class="k">properties</div><div class="v">row bg wash, dot color (grey-&gt;pink), focus ring, segment knob slide</div></div><div><div class="k">timing</div><div class="v">hover 120ms; knob 250ms</div></div><div><div class="k">easing</div><div class="v">ease-out</div></div><div><div class="k">loop</div><div class="v">no</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/8-0">original interaction</a> by @guerriero_se. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a dark activity timeline. Panel 380px (#131315, 16px radius) with a slim icon rail on the left (5 muted icons, active = white/10 pill). Header: 'Timeline' 15px + segmented control (Day/Week/Month, 11px, knob = white/10 pill sliding 250ms ease-out). List: group headers ('Today', 'Yesterday', 'Feb 8, 2026') 12px white/50 with a 6px dot on a 1px vertical rail (white/12) running through the list; 'Today' dot pink #EC4899, others grey. Rows: 13px white/85 entries, 8px indent from rail; hover -> row bg white/6 (8px radius, 120ms) + its dot turns pink; keyboard focus -> 1px white/70 outline ring around the row. Row height 28px, group spacing 12px. Content example: 'Asked for a high-protein meal plan', 'Worked on the b402 dashboard UX', 'Brainstormed side projects'."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: an activity timeline concept - dark timeline (\"Timeline\" header, Day/Week/Month segmented control) listing AI-assistant activity grouped Today / Yesterday / Feb 8, 2026: dot markers on a vertical rail (\"Asked for a high-protein meal plan\", \"Worked on the b402 dashboard UX\"...); hover fills the row with a grey wash and turns the dot pink; keyboard focus shows a white outline ring; the segmented control slides its knob Day -> Week.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion (layout animation for the segment knob). Animate transform and opacity only.\n\n## Scene\nDark card: \"Timeline\" header; Day/Week/Month segmented control; groups (Today with a pink marker, Yesterday, Feb 8 2026); entries with grey dots on a continuous vertical rail.\n\n## Motion spec\nPattern: list micro-interactions.\n- Row hover: grey wash fills the row (120ms ease-out); the row's dot turns pink; hand cursor.\n- Keyboard focus: white 1px outline ring around the focused entry (instant).\n- Segment switch: knob slides Day -> Week (250ms ease-out, layout animation); list content stays.\n\n## Calibration\n- Hover wash 120ms - immediate, no lag; this is a dense utility list.\n- The pink dot appears on hover AND marks the Today group header - two meanings, one color system.\n- Knob slide 250ms with the knob resizing to the label width.\n\n## Reduced motion\nAll states apply instantly without transitions.\n\n## Don't miss\n- The rail is one continuous vertical line; dots sit ON it, not beside it.\n- Hover wash spans the full row width, edge to edge.\n- Focus ring is a crisp 1px white outline (keyboard only) - visually distinct from hover."</script>
 </body></html>

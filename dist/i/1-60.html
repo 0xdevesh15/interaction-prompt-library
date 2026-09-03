@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-60__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Dense concentric text rings around a center point; characters set along circular paths, size and tracking vary per ring; rings rotate continuously at different angular velocities (inner faster, outer slower), creating a moire of moving type. A small white cursor dash sits at one ring. Ambient infinite loop, occasional density pulses as rings phase-align.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a ringwriter kinetic-type piece. Canvas or SVG on near-black (#0D0D0D). Choose a phrase (&#x27;THE CONTENT ARCHITECTURE &#x27;) and repeat it along concentric circles: ring i has radius r_i = r0 + i*pitch (pitch ~14px), font size ~9-11px monospace, fill white at 55-80% opacity varying per ring. Lay characters along the circle (per-character rotate + translate, or SVG textPath). Rotate each ring continuously: angular velocity omega_i = base/(i+1) so inner rings spin faster; alternate direction every 3rd ring for interference. Keep a small white rectangular cursor tick parked on one ring, blinking 1Hz. Density pulse: every ~8s briefly ease all opacities +20% as the rings phase-align. Reduced motion: static rings. Performance: pre-render each ring to an offscreen canvas and only rotate composites.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: &quot;Ringwriter&quot; - a black canvas filled with concentric rings of tiny monospace text (&quot;THE CONTENT ARCHITECTURE...&quot; repeated), each ring rotating at its own speed like vinyl grooves. Kinetic typographic artwork.
+
+## Stack
+React + TypeScript + Tailwind. Render on one canvas (or SVG textPath per ring); per-ring rotation angle advanced on requestAnimationFrame. Characters placed along circular paths.
+
+## Scene
+Black square canvas. Dense concentric rings of mono type around a shared center; ring radius steps outward evenly; character size and tracking vary per ring (outer rings slightly larger). All type white, opacity varying subtly per ring. A small white cursor dash sits on one ring.
+
+## Motion spec
+Pattern: ambient infinite rotation.
+- Each ring rotates continuously at its own angular velocity: inner rings faster (~20s/rev), outer rings slower (~60s/rev), linear easing - constant speed, never accelerating.
+- Rings phase-align occasionally, producing brief density pulses (moire of moving type) - emergent, not scripted.
+- The cursor dash rides its ring, or holds angle while its ring turns beneath it (pick one and keep it consistent).
+
+## Calibration
+- Speeds in the 20-60s/rev band: this is a contemplative piece - visible motion only if you stare.
+- Linear rotation everywhere; any easing reads as a wobble in the grooves.
+- Per-ring font size/opacity variation is what creates depth; uniform rings look like a target.
+
+## Reduced motion
+All rings freeze in a pleasing phase offset; static artwork.
+
+## Don&#x27;t miss
+- Text follows circular paths glyph by glyph (or textPath) - never straight text rotated as a block.
+- Inner-faster / outer-slower differential is the vinyl feel.
+- Monospace type is load-bearing; proportional fonts break the groove rhythm.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay ambient</div></div><div><div class="k">elements</div><div class="v">N concentric text rings, per-ring rotation</div></div><div><div class="k">properties</div><div class="v">ring rotation angle, character placement along circle, font size/opacity per ring</div></div><div><div class="k">timing</div><div class="v">continuous rotation 20-60s/rev per ring (inner faster)</div></div><div><div class="k">easing</div><div class="v">linear rotation</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-60">original interaction</a> by @edo_lunardi. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a ringwriter kinetic-type piece. Canvas or SVG on near-black (#0D0D0D). Choose a phrase ('THE CONTENT ARCHITECTURE ') and repeat it along concentric circles: ring i has radius r_i = r0 + i*pitch (pitch ~14px), font size ~9-11px monospace, fill white at 55-80% opacity varying per ring. Lay characters along the circle (per-character rotate + translate, or SVG textPath). Rotate each ring continuously: angular velocity omega_i = base/(i+1) so inner rings spin faster; alternate direction every 3rd ring for interference. Keep a small white rectangular cursor tick parked on one ring, blinking 1Hz. Density pulse: every ~8s briefly ease all opacities +20% as the rings phase-align. Reduced motion: static rings. Performance: pre-render each ring to an offscreen canvas and only rotate composites."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: \"Ringwriter\" - a black canvas filled with concentric rings of tiny monospace text (\"THE CONTENT ARCHITECTURE...\" repeated), each ring rotating at its own speed like vinyl grooves. Kinetic typographic artwork.\n\n## Stack\nReact + TypeScript + Tailwind. Render on one canvas (or SVG textPath per ring); per-ring rotation angle advanced on requestAnimationFrame. Characters placed along circular paths.\n\n## Scene\nBlack square canvas. Dense concentric rings of mono type around a shared center; ring radius steps outward evenly; character size and tracking vary per ring (outer rings slightly larger). All type white, opacity varying subtly per ring. A small white cursor dash sits on one ring.\n\n## Motion spec\nPattern: ambient infinite rotation.\n- Each ring rotates continuously at its own angular velocity: inner rings faster (~20s/rev), outer rings slower (~60s/rev), linear easing - constant speed, never accelerating.\n- Rings phase-align occasionally, producing brief density pulses (moire of moving type) - emergent, not scripted.\n- The cursor dash rides its ring, or holds angle while its ring turns beneath it (pick one and keep it consistent).\n\n## Calibration\n- Speeds in the 20-60s/rev band: this is a contemplative piece - visible motion only if you stare.\n- Linear rotation everywhere; any easing reads as a wobble in the grooves.\n- Per-ring font size/opacity variation is what creates depth; uniform rings look like a target.\n\n## Reduced motion\nAll rings freeze in a pleasing phase offset; static artwork.\n\n## Don't miss\n- Text follows circular paths glyph by glyph (or textPath) - never straight text rotated as a block.\n- Inner-faster / outer-slower differential is the vinyl feel.\n- Monospace type is load-bearing; proportional fonts break the groove rhythm."</script>
 </body></html>

@@ -12,11 +12,35 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/9-6__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-25%</div><div class="d">&#x27;Emails&#x27; active: white text + 2px underline, glow blooming beneath the tab against the black wall; &#x27;Attachments&#x27; dim grey.</div></div><div class="phase"><div class="p">25-50%</div><div class="d">Mid-switch: underline + glow travel from Emails to Attachments; glow smears during transit (motion blur feel).</div></div><div class="phase"><div class="p">50-100%</div><div class="d">&#x27;Attachments&#x27; active with its own light pool; states alternate; inactive tab sits in darkness (white/35).</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build lit-stage tabs. Near-black background (#0A0A0A). Two tabs centered (&#x27;Emails&#x27; inbox icon, &#x27;Attachments&#x27; paperclip icon, 14px). Inactive: white/35, no underline. Active: white text, 2px white underline (inset 10px each side), and light: a 140px radial gradient pool (white/12, blur 20) under the tab plus a faint vertical light cone (linear-gradient white/6 -&gt; transparent, 40px tall) rising above the underline, like an uplight. On switch: underline slides to the new tab with 8% overshoot (450ms cubic-bezier(0.2,0.8,0.2,1)); the glow detaches, stretches horizontally (scaleX 1.6, opacity dipping to 6%) during transit, then re-pools under the new tab (spring settle 300ms). Icons swap fill weight with the text color.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a tabs animation - minimal dark tab bar (&quot;Emails&quot; / &quot;Attachments&quot; with icons) where the active tab becomes a little stage light: it lights up from below - a soft radial glow pools under the tab, a subtle cone of light rises beneath the text, and a crisp white underline; switching tabs sweeps the light across.
+
+## Stack
+React + TypeScript + Tailwind + Framer Motion (shared underline element; glow as radial-gradient layers). Animate transform and opacity only.
+
+## Scene
+Black canvas. Tab bar: &quot;Emails&quot; and &quot;Attachments&quot;, each icon + label. Active: white text, 2px white underline, glow pooling beneath. Inactive: white/35, sitting in darkness.
+
+## Motion spec
+Pattern: shared-indicator tab switch with light physics.
+- Switch: the underline travels to the new tab (translateX + width morph, 450ms, spring-ish ease-out with a slight overshoot); the glow pool travels WITH it, smearing during transit (scaleX stretch + opacity dip, motion-blur feel); the light cone re-forms under the new tab.
+- Inactive tab dims to white/35 (150ms).
+
+## Calibration
+- 450ms with a small overshoot on the underline - the light should feel swung, not teleported.
+- The smear during transit is the signature: glow stretches horizontally mid-flight, then re-pools.
+- The glow is soft and low (white/15 radial) - it pools on an invisible floor, never a spotlight beam.
+
+## Reduced motion
+Underline jumps with a 150ms fade; glow crossfades without smear.
+
+## Don&#x27;t miss
+- One shared underline + one shared glow element traveling - not per-tab fades.
+- Inactive tabs sit in real darkness (35%); mid-grey ruins the stage-light read.
+- Icon and label brighten together with the glow&#x27;s arrival, slightly after the underline lands (30ms lag).</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">tab click</div></div><div><div class="k">elements</div><div class="v">tab labels + icons, underline indicator, glow pool / light cone</div></div><div><div class="k">properties</div><div class="v">underline translateX+width, glow x, intensity, smear</div></div><div><div class="k">timing</div><div class="v">switch 450ms</div></div><div><div class="k">easing</div><div class="v">spring-ish ease-out (slight overshoot on underline)</div></div><div><div class="k">loop</div><div class="v">demo alternates</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/9-6">original interaction</a> by @marcelkargul. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build lit-stage tabs. Near-black background (#0A0A0A). Two tabs centered ('Emails' inbox icon, 'Attachments' paperclip icon, 14px). Inactive: white/35, no underline. Active: white text, 2px white underline (inset 10px each side), and light: a 140px radial gradient pool (white/12, blur 20) under the tab plus a faint vertical light cone (linear-gradient white/6 -> transparent, 40px tall) rising above the underline, like an uplight. On switch: underline slides to the new tab with 8% overshoot (450ms cubic-bezier(0.2,0.8,0.2,1)); the glow detaches, stretches horizontally (scaleX 1.6, opacity dipping to 6%) during transit, then re-pools under the new tab (spring settle 300ms). Icons swap fill weight with the text color."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a tabs animation - minimal dark tab bar (\"Emails\" / \"Attachments\" with icons) where the active tab becomes a little stage light: it lights up from below - a soft radial glow pools under the tab, a subtle cone of light rises beneath the text, and a crisp white underline; switching tabs sweeps the light across.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion (shared underline element; glow as radial-gradient layers). Animate transform and opacity only.\n\n## Scene\nBlack canvas. Tab bar: \"Emails\" and \"Attachments\", each icon + label. Active: white text, 2px white underline, glow pooling beneath. Inactive: white/35, sitting in darkness.\n\n## Motion spec\nPattern: shared-indicator tab switch with light physics.\n- Switch: the underline travels to the new tab (translateX + width morph, 450ms, spring-ish ease-out with a slight overshoot); the glow pool travels WITH it, smearing during transit (scaleX stretch + opacity dip, motion-blur feel); the light cone re-forms under the new tab.\n- Inactive tab dims to white/35 (150ms).\n\n## Calibration\n- 450ms with a small overshoot on the underline - the light should feel swung, not teleported.\n- The smear during transit is the signature: glow stretches horizontally mid-flight, then re-pools.\n- The glow is soft and low (white/15 radial) - it pools on an invisible floor, never a spotlight beam.\n\n## Reduced motion\nUnderline jumps with a 150ms fade; glow crossfades without smear.\n\n## Don't miss\n- One shared underline + one shared glow element traveling - not per-tab fades.\n- Inactive tabs sit in real darkness (35%); mid-grey ruins the stage-light read.\n- Icon and label brighten together with the glow's arrival, slightly after the underline lands (30ms lag)."</script>
 </body></html>

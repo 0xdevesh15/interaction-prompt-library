@@ -12,11 +12,36 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-27__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Continuous scroll: 5-6 computer tiles visible; center item (e.g. BBC Micro, Olivetti P101, Apple II) flat and crisp on its pastel square with &#x27;MODEL&#x27; + name caption; items entering from top/bottom are perspective-tilted onto horizontal planes (scaleX compressed, skewed), fading into a white haze at the tunnel ends; tiles slide smoothly, each landing flat as it crosses center.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a 3D tunnel carousel of retro computers. Container: 160px-wide vertical strip, perspective 800px on the parent. ~8 items (computer render on a 96px pastel tile - mint, peach, lavender, sky, sand - plus a two-line caption &#x27;MODEL&#x27; 8px uppercase + name 12px). Each item&#x27;s transform is a pure function of its y-distance d from viewport center: |d| &lt; 80px -&gt; flat (rotateX 0, opacity 1); beyond -&gt; rotateX = sign(d) * min(65, (|d|-80)*0.5)deg so items fold onto ceiling/floor planes, plus opacity fade to 0 by |d| = 320px and a white haze (overlay gradient). Auto-scroll the track at constant speed, wrapping items (mod total height); dragging adds velocity with momentum decay. Captions fade in only while |d| &lt; 60px.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a retro computer museum carousel - a vertical infinite-scroll strip of vintage computer renders (BBC Micro, Apple II, Olivetti P101...) traveling through a 3D perspective tunnel: the center item sits flat with its pastel tile and name label, while items above/below warp onto receding trapezoid planes (floor/ceiling) with haze, like a cylindrical gallery.
+
+## Stack
+React + TypeScript + Tailwind. Item transforms derived from scroll position: rotateX, scale, opacity as functions of distance from center (CSS perspective on the container, per-item transforms recomputed on scroll/rAF).
+
+## Scene
+Vertical strip of tiles: each item a pastel square tile holding a computer render, with &quot;MODEL&quot; + name caption. Center item flat and crisp; items toward the ends tilt onto horizontal planes (scaleX compressed, skewed) and fade into white haze at the tunnel ends.
+
+## Motion spec
+Pattern: scroll-linked perspective (also autoplays).
+- Continuous scroll ~20s per loop, linear; items wrap infinitely.
+- Per item, by distance from center: rotateX increases toward the ends (flat at center), scale compresses, opacity fades into haze; labels fade in only near center.
+- Each tile lands perfectly flat as it crosses center - the flat position is a snap point of the math, not of the scroll.
+
+## Calibration
+- The warp must be a continuous function of position - no thresholds, no popping between &quot;flat&quot; and &quot;tilted&quot;.
+- Haze (opacity + slight blur or white overlay) at both tunnel ends hides the wrap.
+- ~20s loop: museum-pace. Faster turns it into a slot machine.
+
+## Reduced motion
+Strip scrolls as a plain flat vertical list, no perspective; items still wrap.
+
+## Don&#x27;t miss
+- Perspective on the container + per-item rotateX; faking with 2D skew per item will not read as a tunnel.
+- Center item is the only one with a fully opaque label.
+- Pastel tile + render + caption anatomy is identical for every item - only the transform changes.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">scroll / autoplay</div></div><div><div class="k">elements</div><div class="v">vertical item track, perspective tunnel (top/bottom planes), tile + label per item</div></div><div><div class="k">properties</div><div class="v">item rotateX by distance from center, scale + opacity haze by distance, label fade near center</div></div><div><div class="k">timing</div><div class="v">continuous scroll ~20s per loop</div></div><div><div class="k">easing</div><div class="v">linear scroll; transform linked to scroll position</div></div><div><div class="k">loop</div><div class="v">infinite (items wrap)</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-27">original interaction</a> by @colton__tollett. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a 3D tunnel carousel of retro computers. Container: 160px-wide vertical strip, perspective 800px on the parent. ~8 items (computer render on a 96px pastel tile - mint, peach, lavender, sky, sand - plus a two-line caption 'MODEL' 8px uppercase + name 12px). Each item's transform is a pure function of its y-distance d from viewport center: |d| < 80px -> flat (rotateX 0, opacity 1); beyond -> rotateX = sign(d) * min(65, (|d|-80)*0.5)deg so items fold onto ceiling/floor planes, plus opacity fade to 0 by |d| = 320px and a white haze (overlay gradient). Auto-scroll the track at constant speed, wrapping items (mod total height); dragging adds velocity with momentum decay. Captions fade in only while |d| < 60px."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a retro computer museum carousel - a vertical infinite-scroll strip of vintage computer renders (BBC Micro, Apple II, Olivetti P101...) traveling through a 3D perspective tunnel: the center item sits flat with its pastel tile and name label, while items above/below warp onto receding trapezoid planes (floor/ceiling) with haze, like a cylindrical gallery.\n\n## Stack\nReact + TypeScript + Tailwind. Item transforms derived from scroll position: rotateX, scale, opacity as functions of distance from center (CSS perspective on the container, per-item transforms recomputed on scroll/rAF).\n\n## Scene\nVertical strip of tiles: each item a pastel square tile holding a computer render, with \"MODEL\" + name caption. Center item flat and crisp; items toward the ends tilt onto horizontal planes (scaleX compressed, skewed) and fade into white haze at the tunnel ends.\n\n## Motion spec\nPattern: scroll-linked perspective (also autoplays).\n- Continuous scroll ~20s per loop, linear; items wrap infinitely.\n- Per item, by distance from center: rotateX increases toward the ends (flat at center), scale compresses, opacity fades into haze; labels fade in only near center.\n- Each tile lands perfectly flat as it crosses center - the flat position is a snap point of the math, not of the scroll.\n\n## Calibration\n- The warp must be a continuous function of position - no thresholds, no popping between \"flat\" and \"tilted\".\n- Haze (opacity + slight blur or white overlay) at both tunnel ends hides the wrap.\n- ~20s loop: museum-pace. Faster turns it into a slot machine.\n\n## Reduced motion\nStrip scrolls as a plain flat vertical list, no perspective; items still wrap.\n\n## Don't miss\n- Perspective on the container + per-item rotateX; faking with 2D skew per item will not read as a tunnel.\n- Center item is the only one with a fully opaque label.\n- Pastel tile + render + caption anatomy is identical for every item - only the transform changes."</script>
 </body></html>

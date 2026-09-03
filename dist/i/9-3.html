@@ -12,11 +12,37 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/9-3__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-25%</div><div class="d">CRT screen shows a blinking caret / prompt line; keyboard&#x27;s left key cluster lit amber; rest of scene deep shadow.</div></div><div class="phase"><div class="p">25-50%</div><div class="d">Screen renders text lines (boot output); a horizontal scanline/loading bar sweeps the screen; key lights shift clusters.</div></div><div class="phase"><div class="p">50-75%</div><div class="d">Screen shows a filled loading bar (progress); keyboard center cluster glowing; faint screen glow spills onto the desk.</div></div><div class="phase"><div class="p">75-100%</div><div class="d">Screen cycles back to a single diagonal line/prompt; keys dim; loop restarts.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a retro CRT feature card. Dark card 340px (#0B0B0C, 16px radius, white/6 border): top an isometric CRT monitor + keyboard illustration kept at 20% brightness; animate two light layers. Screen layer: cycle three states on a 4s loop - (a) terminal prompt with block caret blinking steps(2) 1s, (b) boot text lines appearing 80ms/line, (c) a loading bar sweeping across (green-white gradient bar, 1.5s linear) - all under a scanline overlay (repeating-linear-gradient 2px lines, 8% black) and a soft green glow spilling onto the desk (radial gradient keyed to screen brightness). Keyboard layer: 3 clusters of 6 keys; light each cluster amber (#F59E0B glow, opacity 0-&gt;90%) in sequence 400ms apart, wave repeating. Below: &#x27;06 / 08&#x27; 10px white/40, &#x27;Empowering Developers&#x27; 18px white, 2-line muted caption.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a retro CRT feature card - a dark card (&quot;06/08 Empowering Developers - AO Starter gives developers tools to build innovative, secure apps.&quot;) carrying a dim isometric illustration of a retro CRT computer that comes alive in loops: the screen types terminal prompts, shows a loading bar sweeping, and the chunky keyboard keys glow amber one cluster at a time while the bezel stays in shadow.
+
+## Stack
+React + TypeScript + Tailwind. CRT as a layered illustration (base image + screen content layer + key-light overlays). Typing with steps() cadence. Animate transform and opacity only.
+
+## Scene
+Dark card with copy block. The CRT: dim isometric render, deep shadows; screen area and keyboard clusters are separate layers that light up. Faint screen glow spills onto the desk.
+
+## Motion spec
+Pattern: ambient ~4s loop.
+- Screen: blinking caret/prompt (steps blink), then boot text lines typing on, then a horizontal scanline/loading bar sweeping the screen (1.5s linear), then a filled progress bar; cycles back to a single prompt line.
+- Keyboard: key clusters (left, then center) glow amber one at a time, shifting as the screen content changes; keys dim between clusters.
+- Glow: the screen&#x27;s light spills faintly onto the desk while content is bright.
+- Card copy: static.
+
+## Calibration
+- Typing in steps() at terminal cadence (~12 chars/s); smooth typing reads as a subtitle.
+- Bar sweep 1.5s linear; the loop total ~4s with a beat of darkness between cycles.
+- Amber is the only light color; screen content stays monochrome green/white.
+
+## Reduced motion
+CRT holds the boot-text frame with one key cluster lit.
+
+## Don&#x27;t miss
+- The bezel and casing stay in shadow at all times - only screen and keys emit light.
+- Key clusters light in sequence (left -&gt; center), never all at once.
+- The desk glow spill is tied to screen brightness - it fades when the screen dims.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay (ambient loop)</div></div><div><div class="k">elements</div><div class="v">isometric CRT illustration, screen content layer, keyboard key lights, card copy</div></div><div><div class="k">properties</div><div class="v">screen content swap (prompt/log/bar), key backlight per cluster, screen glow spill</div></div><div><div class="k">timing</div><div class="v">~4s loop; bar sweep 1.5s</div></div><div><div class="k">easing</div><div class="v">steps for typing; linear sweep</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/9-3">original interaction</a> by @bartuiux. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a retro CRT feature card. Dark card 340px (#0B0B0C, 16px radius, white/6 border): top an isometric CRT monitor + keyboard illustration kept at 20% brightness; animate two light layers. Screen layer: cycle three states on a 4s loop - (a) terminal prompt with block caret blinking steps(2) 1s, (b) boot text lines appearing 80ms/line, (c) a loading bar sweeping across (green-white gradient bar, 1.5s linear) - all under a scanline overlay (repeating-linear-gradient 2px lines, 8% black) and a soft green glow spilling onto the desk (radial gradient keyed to screen brightness). Keyboard layer: 3 clusters of 6 keys; light each cluster amber (#F59E0B glow, opacity 0->90%) in sequence 400ms apart, wave repeating. Below: '06 / 08' 10px white/40, 'Empowering Developers' 18px white, 2-line muted caption."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a retro CRT feature card - a dark card (\"06/08 Empowering Developers - AO Starter gives developers tools to build innovative, secure apps.\") carrying a dim isometric illustration of a retro CRT computer that comes alive in loops: the screen types terminal prompts, shows a loading bar sweeping, and the chunky keyboard keys glow amber one cluster at a time while the bezel stays in shadow.\n\n## Stack\nReact + TypeScript + Tailwind. CRT as a layered illustration (base image + screen content layer + key-light overlays). Typing with steps() cadence. Animate transform and opacity only.\n\n## Scene\nDark card with copy block. The CRT: dim isometric render, deep shadows; screen area and keyboard clusters are separate layers that light up. Faint screen glow spills onto the desk.\n\n## Motion spec\nPattern: ambient ~4s loop.\n- Screen: blinking caret/prompt (steps blink), then boot text lines typing on, then a horizontal scanline/loading bar sweeping the screen (1.5s linear), then a filled progress bar; cycles back to a single prompt line.\n- Keyboard: key clusters (left, then center) glow amber one at a time, shifting as the screen content changes; keys dim between clusters.\n- Glow: the screen's light spills faintly onto the desk while content is bright.\n- Card copy: static.\n\n## Calibration\n- Typing in steps() at terminal cadence (~12 chars/s); smooth typing reads as a subtitle.\n- Bar sweep 1.5s linear; the loop total ~4s with a beat of darkness between cycles.\n- Amber is the only light color; screen content stays monochrome green/white.\n\n## Reduced motion\nCRT holds the boot-text frame with one key cluster lit.\n\n## Don't miss\n- The bezel and casing stay in shadow at all times - only screen and keys emit light.\n- Key clusters light in sequence (left -> center), never all at once.\n- The desk glow spill is tied to screen brightness - it fades when the screen dims."</script>
 </body></html>

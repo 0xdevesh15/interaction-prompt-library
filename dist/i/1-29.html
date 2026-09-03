@@ -12,11 +12,38 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-29__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-20%</div><div class="d">Mid/low values: blue fill from left, tooltip &#x27;17&#x27; / &#x27;42&#x27; above the thumb; walker icon (left) sits in an active tinted circle.</div></div><div class="phase"><div class="p">20-45%</div><div class="d">Drag right to 92: fill extends, tooltip tracks the thumb; right runner icon activates (tinted halo) while walker dims to outline.</div></div><div class="phase"><div class="p">45-70%</div><div class="d">Back down through 46/25: fill retracts, tooltip number counts down live; endpoint emphasis flips back to the walker.</div></div><div class="phase"><div class="p">70-100%</div><div class="d">Values 49-59: thumb icon switches pose (walk -&gt; run) around the midpoint; tooltip always centered above thumb with a little stem.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a speed slider. Row 320px: left walker glyph, track (3px grey-200, rounded), right runner glyph. Fill: 3px blue (#2563EB) from left to thumb. Thumb: 16px white circle with border + shadow, carrying a tiny person glyph that swaps between walk and run poses at value 50 (120ms crossfade + slight pose tilt). While dragging: a tooltip springs in above the thumb (scale 0.8-&gt;1, 150ms), a 24px dark pill with the integer value in tabular numerals + a 4px stem, tracking thumb x every frame; on release it fades down and out (150ms). Endpoint icons: 28px circles; the icon on the side the value leans toward gets a tinted halo (blue-50 fill, blue glyph) while the other goes grey outline - crossfade 200ms. Value maps walk 0-49, run 50-100.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a speed slider flanked by walking and running figure icons - dragging the thumb fills the track blue, pops a value tooltip above the thumb, and activates the matching endpoint icon: walker lights at low values, runner at high values, and the thumb&#x27;s own glyph morphs between walk and run poses around the midpoint.
+
+## Stack
+React + TypeScript + Tailwind + Framer Motion. Custom slider (div-based, not input range); tooltip follows thumb x. Animate transform and opacity only.
+
+## Scene
+Track with blue fill from the left; round thumb; above the thumb a tooltip with a little stem showing the current value; left endpoint: walking figure icon; right endpoint: running figure icon - each sits in a circle that tints when active.
+
+## Motion spec
+Pattern: gesture scrub with threshold state changes.
+- Drag start: tooltip pops in (scale 0.8 -&gt; 1, 150ms spring), tracks the thumb x exactly; fill extends 1:1 with the thumb.
+- Endpoint emphasis: below ~50 the walker is active (tinted circle, filled icon) and the runner dims to outline; above ~50 they flip - crossfade 120ms.
+- Thumb glyph: swaps pose (walk -&gt; run) at the same midpoint threshold, 120ms crossfade.
+- Value in the tooltip counts live while dragging (tabular-nums).
+- Drag end: tooltip fades (150ms).
+
+## Calibration
+- Fill and tooltip track 1:1 with zero smoothing - sliders die by lag.
+- Threshold flips (endpoints + thumb glyph) share one 120ms crossfade at the same value.
+- Tooltip spring pop (0.8 -&gt; 1) on grab is the only flair; the rest is directness.
+
+## Reduced motion
+Tooltip appears without pop; glyph swap is instant; fill still tracks 1:1.
+
+## Don&#x27;t miss
+- The thumb glyph morphing pose is the signature detail - don&#x27;t skip it.
+- Endpoint icons are states (outline vs tinted+filled), not just two static icons.
+- The tooltip stem stays centered on the thumb even at the track&#x27;s ends (clamp the bubble, bend the stem if needed).</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">thumb drag</div></div><div><div class="k">elements</div><div class="v">track + fill, thumb with tooltip, endpoint icons (walk/run), thumb pose icon</div></div><div><div class="k">properties</div><div class="v">fill width, tooltip text + x, endpoint icon active state, thumb glyph swap at threshold</div></div><div><div class="k">timing</div><div class="v">tooltip pop 150ms on drag start; glyph swap crossfade 120ms at ~50</div></div><div><div class="k">easing</div><div class="v">spring tooltip (scale 0.8-&gt;1); instant fill tracking</div></div><div><div class="k">loop</div><div class="v">no</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-29">original interaction</a> by @raul_dronca. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a speed slider. Row 320px: left walker glyph, track (3px grey-200, rounded), right runner glyph. Fill: 3px blue (#2563EB) from left to thumb. Thumb: 16px white circle with border + shadow, carrying a tiny person glyph that swaps between walk and run poses at value 50 (120ms crossfade + slight pose tilt). While dragging: a tooltip springs in above the thumb (scale 0.8->1, 150ms), a 24px dark pill with the integer value in tabular numerals + a 4px stem, tracking thumb x every frame; on release it fades down and out (150ms). Endpoint icons: 28px circles; the icon on the side the value leans toward gets a tinted halo (blue-50 fill, blue glyph) while the other goes grey outline - crossfade 200ms. Value maps walk 0-49, run 50-100."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a speed slider flanked by walking and running figure icons - dragging the thumb fills the track blue, pops a value tooltip above the thumb, and activates the matching endpoint icon: walker lights at low values, runner at high values, and the thumb's own glyph morphs between walk and run poses around the midpoint.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion. Custom slider (div-based, not input range); tooltip follows thumb x. Animate transform and opacity only.\n\n## Scene\nTrack with blue fill from the left; round thumb; above the thumb a tooltip with a little stem showing the current value; left endpoint: walking figure icon; right endpoint: running figure icon - each sits in a circle that tints when active.\n\n## Motion spec\nPattern: gesture scrub with threshold state changes.\n- Drag start: tooltip pops in (scale 0.8 -> 1, 150ms spring), tracks the thumb x exactly; fill extends 1:1 with the thumb.\n- Endpoint emphasis: below ~50 the walker is active (tinted circle, filled icon) and the runner dims to outline; above ~50 they flip - crossfade 120ms.\n- Thumb glyph: swaps pose (walk -> run) at the same midpoint threshold, 120ms crossfade.\n- Value in the tooltip counts live while dragging (tabular-nums).\n- Drag end: tooltip fades (150ms).\n\n## Calibration\n- Fill and tooltip track 1:1 with zero smoothing - sliders die by lag.\n- Threshold flips (endpoints + thumb glyph) share one 120ms crossfade at the same value.\n- Tooltip spring pop (0.8 -> 1) on grab is the only flair; the rest is directness.\n\n## Reduced motion\nTooltip appears without pop; glyph swap is instant; fill still tracks 1:1.\n\n## Don't miss\n- The thumb glyph morphing pose is the signature detail - don't skip it.\n- Endpoint icons are states (outline vs tinted+filled), not just two static icons.\n- The tooltip stem stays centered on the thumb even at the track's ends (clamp the bubble, bend the stem if needed)."</script>
 </body></html>

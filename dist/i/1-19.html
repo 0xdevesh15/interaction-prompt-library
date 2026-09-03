@@ -12,11 +12,35 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-19__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Layout fixed: orb panel left (rounded 20px, inset 16px), form right. Across frames the orb&#x27;s plasma rotates - bright core stays center-upper, orange flame wisps curl around the sphere&#x27;s lower limb, light rays sweep faintly across the hand; form static.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a dark split signup. Page #050505, centered 960px panel split 55/45, 20px radius, 16px gap. Left: artwork of a cupped hand under a floating plasma orb - CSS/shader version: black canvas, a 200px sphere = layered radial gradients (white-hot core top-left, steel blue mid, transparent rim) + 2 rotating ember wisps (orange blurred crescents, rotate 8s opposite directions) + faint god-rays (conic-gradient streaks at 4% opacity, slow sweep); hand silhouette dark with rim light from the orb (top-down gradient). Right: &#x27;Sign up for free&#x27; eyebrow, &#x27;Join SoundCore AI&#x27; 22px semibold, white &#x27;Sign up with Google&#x27; button, divider, 3 dark inputs (#111, 1px white/10, focus ring white/30), white &#x27;Start Building&#x27; pill, muted legal line. All motion confined to the orb panel.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a dark split sign-up page - left panel is a cinematic image of a hand reaching toward a glowing plasma orb (blue core, ember-orange wisps) whose light churns and rays shift; right panel &quot;Join SoundCore AI&quot; with Google button, email/password fields, and a Start Building CTA.
+
+## Stack
+React + TypeScript + Tailwind. Orb artwork as a video loop or layered-gradient shader (plasma rotation + ray sweep). Form is standard. Animate transform and opacity only.
+
+## Scene
+Fixed split layout: orb panel left (rounded 20px, inset 16px from the screen edge); form right - &quot;Join SoundCore AI&quot; heading, Google SSO button, email + password fields, Start Building primary CTA, dark theme throughout.
+
+## Motion spec
+Pattern: ambient artwork loop, form static.
+- Orb: plasma rotates slowly (~8s loop, linear); bright core stays center-upper; orange flame wisps curl around the sphere&#x27;s lower limb; faint light rays sweep across the hand.
+- Form: perfectly still - inputs, buttons, and copy never animate (beyond standard 150ms focus rings).
+
+## Calibration
+- Orb loop ~8s and seamless - you should not be able to find the loop point.
+- The hand stays sharp; only the orb&#x27;s light moves (rays + wisps). If the hand swims, the composite is wrong.
+- Form contrast: white CTA, zinc-500 helper text, inputs at white/5 with white/10 borders.
+
+## Reduced motion
+Orb artwork holds a static frame.
+
+## Don&#x27;t miss
+- The orb panel is inset (16px) with 20px radius - it reads as an artwork mounted in the page, not a full-bleed background.
+- Blue core with ember-orange wisps is the specific palette; generic purple plasma changes the brand.
+- The form is the quiet half of the composition - resist adding motion to it.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay ambient</div></div><div><div class="k">elements</div><div class="v">orb artwork (video or shader), auth form</div></div><div><div class="k">properties</div><div class="v">plasma swirl rotation, ray sweep, ember drift</div></div><div><div class="k">timing</div><div class="v">orb loop ~8s</div></div><div><div class="k">easing</div><div class="v">linear</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-19">original interaction</a> by @coleHardik. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a dark split signup. Page #050505, centered 960px panel split 55/45, 20px radius, 16px gap. Left: artwork of a cupped hand under a floating plasma orb - CSS/shader version: black canvas, a 200px sphere = layered radial gradients (white-hot core top-left, steel blue mid, transparent rim) + 2 rotating ember wisps (orange blurred crescents, rotate 8s opposite directions) + faint god-rays (conic-gradient streaks at 4% opacity, slow sweep); hand silhouette dark with rim light from the orb (top-down gradient). Right: 'Sign up for free' eyebrow, 'Join SoundCore AI' 22px semibold, white 'Sign up with Google' button, divider, 3 dark inputs (#111, 1px white/10, focus ring white/30), white 'Start Building' pill, muted legal line. All motion confined to the orb panel."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a dark split sign-up page - left panel is a cinematic image of a hand reaching toward a glowing plasma orb (blue core, ember-orange wisps) whose light churns and rays shift; right panel \"Join SoundCore AI\" with Google button, email/password fields, and a Start Building CTA.\n\n## Stack\nReact + TypeScript + Tailwind. Orb artwork as a video loop or layered-gradient shader (plasma rotation + ray sweep). Form is standard. Animate transform and opacity only.\n\n## Scene\nFixed split layout: orb panel left (rounded 20px, inset 16px from the screen edge); form right - \"Join SoundCore AI\" heading, Google SSO button, email + password fields, Start Building primary CTA, dark theme throughout.\n\n## Motion spec\nPattern: ambient artwork loop, form static.\n- Orb: plasma rotates slowly (~8s loop, linear); bright core stays center-upper; orange flame wisps curl around the sphere's lower limb; faint light rays sweep across the hand.\n- Form: perfectly still - inputs, buttons, and copy never animate (beyond standard 150ms focus rings).\n\n## Calibration\n- Orb loop ~8s and seamless - you should not be able to find the loop point.\n- The hand stays sharp; only the orb's light moves (rays + wisps). If the hand swims, the composite is wrong.\n- Form contrast: white CTA, zinc-500 helper text, inputs at white/5 with white/10 borders.\n\n## Reduced motion\nOrb artwork holds a static frame.\n\n## Don't miss\n- The orb panel is inset (16px) with 20px radius - it reads as an artwork mounted in the page, not a full-bleed background.\n- Blue core with ember-orange wisps is the specific palette; generic purple plasma changes the brand.\n- The form is the quiet half of the composition - resist adding motion to it."</script>
 </body></html>

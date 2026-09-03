@@ -12,11 +12,38 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/components-n3xt__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-15%</div><div class="d">White card, 24%: top rows of the dot grid lit orange, rest grey; small caption text right of the number.</div></div><div class="phase"><div class="p">15-30%</div><div class="d">Transition: a fill wave sweeps the dot grid top-down; the card bg wipes white-&gt;black following the same wave front; number rolls 24-&gt;61%.</div></div><div class="phase"><div class="p">30-45%</div><div class="d">Black card, 61%: orange dots over black; settled.</div></div><div class="phase"><div class="p">45-65%</div><div class="d">Second wave: dots flip to white holes as bg wipes to saturated orange; number rolls to 87%.</div></div><div class="phase"><div class="p">65-80%</div><div class="d">Orange card, 87%: white dots; settled; subtle scale-up of the card during the transition.</div></div><div class="phase"><div class="p">80-100%</div><div class="d">Third wave back to white/24%; loop.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a theme-cycling stat card. Card 1:1, radius 16px, containing a 10x10 dot grid (dots 10px, 22px pitch) in the upper two-thirds, a huge percentage bottom-left and a 2-line caption right. Three states: (white bg, orange dots, &#x27;24%&#x27;), (black bg, orange dots, &#x27;61%&#x27;), (orange bg, white dots, &#x27;87%&#x27;). Transition: run a wave front down the grid - row by row (8ms stagger, each dot pops color over 120ms with a 1.2x scale pulse) - and simultaneously wipe the card background using a clip-path inset animated top-&gt;bottom synced to the same front, so the recolor feels physical. The percentage rolls odometer-style over 600ms mid-transition; card scales to 1.03 then settles. Hold each state ~1.2s, cycle forever.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a single stat card cycling through three theme states (white/24% -&gt; black/61% -&gt; orange/87%). A 10x10 dot grid fills top-down in the accent color while the card background wipes to the new theme color behind the same wave front, and the big percentage rolls to its new value.
+
+## Stack
+React + TypeScript + Tailwind + Framer Motion. Odometer-style digit strips for the percentage; per-dot color state driven by a scripted wave (row index * stagger). Animate transform and opacity only.
+
+## Scene
+One stat card: 10x10 grid of dots left, big percentage numeral with a small caption to its right. State 1: white card, orange top rows lit, rest grey. State 2: black card, orange dots. State 3: saturated orange card, white dots.
+
+## Motion spec
+Pattern: autoplay 3-state cycle with wave transitions.
+- Hold each state ~1.2s.
+- Transition ~900ms: a fill wave sweeps the dot grid top-down; each dot flips color in a 120ms pop, 8ms stagger per row; the card background wipes to the new theme color following the same wave front.
+- Number rolls (odometer translateY) synced with the wave, landing as the wave completes.
+- Card scales 1 -&gt; 1.03 during the transition, settling back on hold.
+- Third wave returns to white/24%; infinite loop.
+
+## Calibration
+- The wave is the whole idea: dots, background, and number share one top-down front - they must stay in lockstep.
+- Per-dot pop 120ms with 8ms row stagger; the wave should read as liquid, not rows snapping.
+- Scale bump to 1.03 is the only emphasis - no shadow change, no border flash.
+
+## Reduced motion
+States crossfade (opacity, 200ms); number swaps without rolling; no wave, no scale.
+
+## Don&#x27;t miss
+- The background wipe follows the wave front spatially - not a full-card fade.
+- Dots on the orange state are white &quot;holes&quot;, inverting the figure/ground.
+- Numbers roll with tabular-nums digit strips; never a text swap.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay cycle (3 states)</div></div><div><div class="k">elements</div><div class="v">stat card, 10x10 dot grid, big percentage, caption</div></div><div><div class="k">properties</div><div class="v">dot fill color per row (wave front), card background (wipes with wave), odometer number, card scale 1-&gt;1.03 during transition</div></div><div><div class="k">timing</div><div class="v">hold ~1.2s per state, wave transition ~900ms, number roll synced</div></div><div><div class="k">easing</div><div class="v">wave front ease-in-out; per-dot 120ms color pop with 8ms row stagger</div></div><div><div class="k">loop</div><div class="v">infinite 3-state cycle</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/components-n3xt">original interaction</a> by @adriankuleszo. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a theme-cycling stat card. Card 1:1, radius 16px, containing a 10x10 dot grid (dots 10px, 22px pitch) in the upper two-thirds, a huge percentage bottom-left and a 2-line caption right. Three states: (white bg, orange dots, '24%'), (black bg, orange dots, '61%'), (orange bg, white dots, '87%'). Transition: run a wave front down the grid - row by row (8ms stagger, each dot pops color over 120ms with a 1.2x scale pulse) - and simultaneously wipe the card background using a clip-path inset animated top->bottom synced to the same front, so the recolor feels physical. The percentage rolls odometer-style over 600ms mid-transition; card scales to 1.03 then settles. Hold each state ~1.2s, cycle forever."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a single stat card cycling through three theme states (white/24% -> black/61% -> orange/87%). A 10x10 dot grid fills top-down in the accent color while the card background wipes to the new theme color behind the same wave front, and the big percentage rolls to its new value.\n\n## Stack\nReact + TypeScript + Tailwind + Framer Motion. Odometer-style digit strips for the percentage; per-dot color state driven by a scripted wave (row index * stagger). Animate transform and opacity only.\n\n## Scene\nOne stat card: 10x10 grid of dots left, big percentage numeral with a small caption to its right. State 1: white card, orange top rows lit, rest grey. State 2: black card, orange dots. State 3: saturated orange card, white dots.\n\n## Motion spec\nPattern: autoplay 3-state cycle with wave transitions.\n- Hold each state ~1.2s.\n- Transition ~900ms: a fill wave sweeps the dot grid top-down; each dot flips color in a 120ms pop, 8ms stagger per row; the card background wipes to the new theme color following the same wave front.\n- Number rolls (odometer translateY) synced with the wave, landing as the wave completes.\n- Card scales 1 -> 1.03 during the transition, settling back on hold.\n- Third wave returns to white/24%; infinite loop.\n\n## Calibration\n- The wave is the whole idea: dots, background, and number share one top-down front - they must stay in lockstep.\n- Per-dot pop 120ms with 8ms row stagger; the wave should read as liquid, not rows snapping.\n- Scale bump to 1.03 is the only emphasis - no shadow change, no border flash.\n\n## Reduced motion\nStates crossfade (opacity, 200ms); number swaps without rolling; no wave, no scale.\n\n## Don't miss\n- The background wipe follows the wave front spatially - not a full-card fade.\n- Dots on the orange state are white \"holes\", inverting the figure/ground.\n- Numbers roll with tabular-nums digit strips; never a text swap."</script>
 </body></html>

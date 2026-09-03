@@ -12,11 +12,33 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-56__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">image</div><div class="d">Centered squircle app icon: red base with fine diagonal ribbing and white web lines radiating; the mask eye sits center as a raised black gloss shape with a white/silver lens (soft top-light gradient, specular streak); surrounding greyed placeholder icons fade out of focus. Big soft drop shadow under the eye element.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Recreate this Spider-Man app icon as a layered CSS/SVG render. Squircle 512px (iOS continuous corner mask). Base: red gradient (#E23636 -&gt; #B31B1B) with a diagonal rib texture (repeating-linear-gradient 45deg, 4px pitch, black/6). Web: white/silver 2px lines - concentric arcs centered off-canvas top-left plus radial spokes, 60% opacity. Eye emblem center: outer shape a sharp-angled lens silhouette (SVG path, pointed outer corner, curved inner edge), fill near-black with a top gloss (linear white/25 -&gt; transparent 40%), 4px inner bevel via inner shadow, and a hard drop shadow (0 18px 30px black/45). Lens: silver-white radial gradient (bright top-left), one blurred specular streak, faint reflection of the web lines at 10%. Compose on a light page with the icon floating over a 3x3 grid of blurred grey placeholder squircles.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this static comp 1:1, pixel-faithful: a Spider-Man iOS app icon - glossy black eye frame with a reflective white lens over a red webbed, diagonally-ribbed squircle, presented in a grid of grey placeholder icons.
+
+## Stack
+React + TypeScript + Tailwind (or pure SVG). Layered gradients, inner/outer shadows, specular highlights - this is a rendering exercise, no motion.
+
+## Scene
+Centered squircle app icon: red base with fine diagonal ribbing and white web lines radiating from behind the mask. Center: the eye emblem as a raised black gloss shape holding a white/silver lens (soft top-light gradient, specular streak). A big soft drop shadow under the eye element. Surrounding: greyed placeholder app icons, slightly out of focus, forming the grid.
+
+## Motion spec
+None - static render.
+
+## Calibration
+- Gloss comes from layered gradients + one tight specular streak, not blur.
+- Ribbing is fine and diagonal, low contrast - it should reward zooming, not shout.
+- The eye element casts the only strong shadow; the squircle itself sits flatter.
+
+## Reduced motion
+N/A - static comp.
+
+## Don&#x27;t miss
+- The lens reads as glass (silver-white with a light direction), not flat white.
+- Web lines radiate consistently from one point behind the mask.
+- Placeholder icons are defocused/neutral so the hero icon pops by contrast.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">static comp</div></div><div><div class="k">elements</div><div class="v">squircle icon, web line pattern, ribbed texture, glossy eye emblem</div></div><div><div class="k">properties</div><div class="v">layered gradients, inner/outer shadows, specular highlights</div></div><div><div class="k">timing</div><div class="v">n/a</div></div><div><div class="k">easing</div><div class="v">n/a</div></div><div><div class="k">loop</div><div class="v">n/a</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-56">original interaction</a> by @exteedesign. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Recreate this Spider-Man app icon as a layered CSS/SVG render. Squircle 512px (iOS continuous corner mask). Base: red gradient (#E23636 -> #B31B1B) with a diagonal rib texture (repeating-linear-gradient 45deg, 4px pitch, black/6). Web: white/silver 2px lines - concentric arcs centered off-canvas top-left plus radial spokes, 60% opacity. Eye emblem center: outer shape a sharp-angled lens silhouette (SVG path, pointed outer corner, curved inner edge), fill near-black with a top gloss (linear white/25 -> transparent 40%), 4px inner bevel via inner shadow, and a hard drop shadow (0 18px 30px black/45). Lens: silver-white radial gradient (bright top-left), one blurred specular streak, faint reflection of the web lines at 10%. Compose on a light page with the icon floating over a 3x3 grid of blurred grey placeholder squircles."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this static comp 1:1, pixel-faithful: a Spider-Man iOS app icon - glossy black eye frame with a reflective white lens over a red webbed, diagonally-ribbed squircle, presented in a grid of grey placeholder icons.\n\n## Stack\nReact + TypeScript + Tailwind (or pure SVG). Layered gradients, inner/outer shadows, specular highlights - this is a rendering exercise, no motion.\n\n## Scene\nCentered squircle app icon: red base with fine diagonal ribbing and white web lines radiating from behind the mask. Center: the eye emblem as a raised black gloss shape holding a white/silver lens (soft top-light gradient, specular streak). A big soft drop shadow under the eye element. Surrounding: greyed placeholder app icons, slightly out of focus, forming the grid.\n\n## Motion spec\nNone - static render.\n\n## Calibration\n- Gloss comes from layered gradients + one tight specular streak, not blur.\n- Ribbing is fine and diagonal, low contrast - it should reward zooming, not shout.\n- The eye element casts the only strong shadow; the squircle itself sits flatter.\n\n## Reduced motion\nN/A - static comp.\n\n## Don't miss\n- The lens reads as glass (silver-white with a light direction), not flat white.\n- Web lines radiate consistently from one point behind the mask.\n- Placeholder icons are defocused/neutral so the hero icon pops by contrast."</script>
 </body></html>

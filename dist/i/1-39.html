@@ -12,11 +12,37 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-39__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Light grey dial, small tick marks + 4 numerals; hands at various positions across frames - red seconds hand sweeps continuously (visible at 9, 6, 3 positions), minute hand advances subtly; panel on left: MODE toggle (Analog), STYLE pills (Minimal...), color dots row (black, cream, yellow, white), &#x27;SUNRISE/SUNSET&#x27;?, support link, &#x27;CO&#x27;WATCH&#x27; footer. Numerals and ticks stay perfectly still - only hands move.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a minimal analog watch. Dial 400px on #ECECEA: 60 hairline ticks (major at quarters), only 12/3/6/9 numerals in a light grotesk, small date pill (&#x27;Sun, 23 Aug&#x27;) bottom-right of the dial. Hands: 1.5px black hour/minute with rounded caps, red 1px seconds with a counterweight tail; rotate from real time - seconds hand angle = (s + ms/1000)*6deg for a smooth quartz sweep. Style variants switchable from a left panel: MODE pills (Analog/Digital), STYLE segmented control (Minimal/Classic/Watch?), an accent color dot row (black, sand, yellow, white) that recolors the seconds hand and ticks, &#x27;Buy me a coffee&#x27; support link, tiny &#x27;CO&#x27;WATCH&#x27; wordmark. Mechanical variant: seconds hand ticks per second with a 120ms overshoot spring (6deg + 1deg settle).</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a minimal analog watch face (&quot;the most useless watch face&quot;) - sparse dial with only 12/3/6/9 numerals and tick dots, thin black hour/minute hands and a red seconds hand that sweeps smoothly (no ticking). Side panel offers mode, style, color accents, and a &quot;Buy me a coffee&quot; link.
+
+## Stack
+React + TypeScript + Tailwind. Hands as rotated divs/SVG with transform-origin at the dial center; angles from real clock time via requestAnimationFrame. Animate transform only.
+
+## Scene
+Light grey dial: small tick dots + numerals at 12/3/6/9 only. Thin black hour and minute hands; red seconds hand. Left panel: MODE toggle (Analog), STYLE pills (Minimal...), color dot row (black, cream, yellow, white), support link, footer.
+
+## Motion spec
+Pattern: real-time clock.
+- Seconds hand: smooth continuous sweep, 60s/rev, linear - derived from milliseconds, not stepped per second.
+- Minute/hour hands: advance continuously at true rate.
+- Optional &quot;mechanical&quot; style: seconds hand steps per second with a slight overshoot spring.
+- Dial, numerals, panel: perfectly still.
+
+## Calibration
+- The smooth sweep is the entire aesthetic - a ticking seconds hand breaks it (unless the mechanical style is explicitly chosen).
+- Hand lengths: seconds longest and thinnest; hour short and slightly thicker; classic proportions.
+- Red seconds hand is the only color accent on the dial.
+
+## Reduced motion
+Hands show real time but update once per second without continuous sweep.
+
+## Don&#x27;t miss
+- Angles come from actual time including milliseconds - no setInterval(1000) stepping.
+- transform-origin exactly at the dial center; a 1px offset wobbles visibly at the tip.
+- Sparse dial (4 numerals, dot ticks) - do not fill in 1-11.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">autoplay (real clock time)</div></div><div><div class="k">elements</div><div class="v">dial, hour/minute/seconds hands, style panel</div></div><div><div class="k">properties</div><div class="v">hand rotation angles from time, seconds hand smooth sweep</div></div><div><div class="k">timing</div><div class="v">seconds 60s/rev continuous</div></div><div><div class="k">easing</div><div class="v">linear sweep (or slight overshoot spring per second in &#x27;mechanical&#x27; style)</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-39">original interaction</a> by @itshassco. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a minimal analog watch. Dial 400px on #ECECEA: 60 hairline ticks (major at quarters), only 12/3/6/9 numerals in a light grotesk, small date pill ('Sun, 23 Aug') bottom-right of the dial. Hands: 1.5px black hour/minute with rounded caps, red 1px seconds with a counterweight tail; rotate from real time - seconds hand angle = (s + ms/1000)*6deg for a smooth quartz sweep. Style variants switchable from a left panel: MODE pills (Analog/Digital), STYLE segmented control (Minimal/Classic/Watch?), an accent color dot row (black, sand, yellow, white) that recolors the seconds hand and ticks, 'Buy me a coffee' support link, tiny 'CO'WATCH' wordmark. Mechanical variant: seconds hand ticks per second with a 120ms overshoot spring (6deg + 1deg settle)."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a minimal analog watch face (\"the most useless watch face\") - sparse dial with only 12/3/6/9 numerals and tick dots, thin black hour/minute hands and a red seconds hand that sweeps smoothly (no ticking). Side panel offers mode, style, color accents, and a \"Buy me a coffee\" link.\n\n## Stack\nReact + TypeScript + Tailwind. Hands as rotated divs/SVG with transform-origin at the dial center; angles from real clock time via requestAnimationFrame. Animate transform only.\n\n## Scene\nLight grey dial: small tick dots + numerals at 12/3/6/9 only. Thin black hour and minute hands; red seconds hand. Left panel: MODE toggle (Analog), STYLE pills (Minimal...), color dot row (black, cream, yellow, white), support link, footer.\n\n## Motion spec\nPattern: real-time clock.\n- Seconds hand: smooth continuous sweep, 60s/rev, linear - derived from milliseconds, not stepped per second.\n- Minute/hour hands: advance continuously at true rate.\n- Optional \"mechanical\" style: seconds hand steps per second with a slight overshoot spring.\n- Dial, numerals, panel: perfectly still.\n\n## Calibration\n- The smooth sweep is the entire aesthetic - a ticking seconds hand breaks it (unless the mechanical style is explicitly chosen).\n- Hand lengths: seconds longest and thinnest; hour short and slightly thicker; classic proportions.\n- Red seconds hand is the only color accent on the dial.\n\n## Reduced motion\nHands show real time but update once per second without continuous sweep.\n\n## Don't miss\n- Angles come from actual time including milliseconds - no setInterval(1000) stepping.\n- transform-origin exactly at the dial center; a 1px offset wobbles visibly at the tip.\n- Sparse dial (4 numerals, dot ticks) - do not fill in 1-11."</script>
 </body></html>

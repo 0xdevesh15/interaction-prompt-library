@@ -12,11 +12,33 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/9-1__0.jpg" alt=""><img class="montage" src="../frames/9-1__1.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-100%</div><div class="d">Static render (plus a second close-up/variant): 180px squircle, vertical blue gradient (#38BDF8 top -&gt; #2563EB bottom), translucent cloud shapes at the corners, ghost outline centered with 6px stroke, gentle top light.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Design a weather-ghost app icon. 1024px squircle (iOS continuous-corner mask). Base: vertical gradient #38BDF8 -&gt; #2563EB. Atmosphere: 3-4 soft cloud wisps (white, blur 40, 25-45% opacity) drifting at bottom-left and top-right, one wisp crossing the midline; faint radial light from top. Mascot: a round ghost in outline only - 6px stroke in white with a soft blue glow (shadow 0 0 24px #93C5FD), two vertical oval eyes and a small curved smile filled white/blue, wavy three-hump bottom edge; ghost fill = white/85 with inner blue shadow for depth. Center the ghost at 55% of icon height; keep clearspace = 1/6 icon width. Export variants: with and without clouds.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this static render 1:1, pixel-faithful: an iOS app icon - a sky-blue gradient squircle with soft cloud wisps drifting inside, and a friendly ghost mascot drawn as a white/blue outline (two oval eyes, small smile, wavy bottom edge) with a subtle inner glow; presented on white, plus a second close-up variant.
+
+## Stack
+React + TypeScript + Tailwind (or pure SVG). Layered gradients + blurred shapes. Static brand asset.
+
+## Scene
+180px squircle: vertical blue gradient (#38BDF8 top -&gt; #2563EB bottom); translucent cloud shapes at the corners (soft, blurred, white/40); ghost outline centered - 6px stroke, two oval eyes, small smile, wavy bottom edge, subtle inner glow; gentle top light across the squircle. Presented on a clean white field.
+
+## Motion spec
+None - static render.
+
+## Calibration
+- The ghost is an outline drawing (6px stroke), not a filled shape - that restraint is the friendliness.
+- Cloud wisps live at the corners and stay translucent; they must never touch the ghost.
+- Top light is a soft vertical gradient overlay, consistent with the base gradient direction.
+
+## Reduced motion
+N/A - static render.
+
+## Don&#x27;t miss
+- iOS squircle geometry, not a rounded rect - use the continuous-corner mask.
+- The wavy bottom edge is the ghost&#x27;s character; a flat bottom reads as a blob.
+- Inner glow on the ghost stroke is subtle (white/30 blur) - a halo, not a neon sign.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">none (static brand asset)</div></div><div><div class="k">elements</div><div class="v">squircle base, cloud wisps, ghost outline mascot</div></div><div><div class="k">properties</div><div class="v">gradient, cloud blur/opacity, stroke glow</div></div><div><div class="k">timing</div><div class="v">n/a</div></div><div><div class="k">easing</div><div class="v">n/a</div></div><div><div class="k">loop</div><div class="v">n/a</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/9-1">original interaction</a> by @dmiiiitrii. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Design a weather-ghost app icon. 1024px squircle (iOS continuous-corner mask). Base: vertical gradient #38BDF8 -> #2563EB. Atmosphere: 3-4 soft cloud wisps (white, blur 40, 25-45% opacity) drifting at bottom-left and top-right, one wisp crossing the midline; faint radial light from top. Mascot: a round ghost in outline only - 6px stroke in white with a soft blue glow (shadow 0 0 24px #93C5FD), two vertical oval eyes and a small curved smile filled white/blue, wavy three-hump bottom edge; ghost fill = white/85 with inner blue shadow for depth. Center the ghost at 55% of icon height; keep clearspace = 1/6 icon width. Export variants: with and without clouds."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this static render 1:1, pixel-faithful: an iOS app icon - a sky-blue gradient squircle with soft cloud wisps drifting inside, and a friendly ghost mascot drawn as a white/blue outline (two oval eyes, small smile, wavy bottom edge) with a subtle inner glow; presented on white, plus a second close-up variant.\n\n## Stack\nReact + TypeScript + Tailwind (or pure SVG). Layered gradients + blurred shapes. Static brand asset.\n\n## Scene\n180px squircle: vertical blue gradient (#38BDF8 top -> #2563EB bottom); translucent cloud shapes at the corners (soft, blurred, white/40); ghost outline centered - 6px stroke, two oval eyes, small smile, wavy bottom edge, subtle inner glow; gentle top light across the squircle. Presented on a clean white field.\n\n## Motion spec\nNone - static render.\n\n## Calibration\n- The ghost is an outline drawing (6px stroke), not a filled shape - that restraint is the friendliness.\n- Cloud wisps live at the corners and stay translucent; they must never touch the ghost.\n- Top light is a soft vertical gradient overlay, consistent with the base gradient direction.\n\n## Reduced motion\nN/A - static render.\n\n## Don't miss\n- iOS squircle geometry, not a rounded rect - use the continuous-corner mask.\n- The wavy bottom edge is the ghost's character; a flat bottom reads as a blob.\n- Inner glow on the ghost stroke is subtle (white/30 blur) - a halo, not a neon sign."</script>
 </body></html>

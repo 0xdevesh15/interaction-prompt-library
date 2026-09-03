@@ -12,11 +12,37 @@
 <section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/1-53__0.jpg" alt=""></div><div class="phases"><div class="phase"><div class="p">0-30%</div><div class="d">Three-column layout: text card, large orb hero card (pink/red glossy sphere with liquid-metal reflections over a teal gradient), spec card with a small orb; orb hue pink-magenta.</div></div><div class="phase"><div class="p">30-65%</div><div class="d">Orb&#x27;s internal swirls crawl and its hue rotates toward red/crimson; small orb in spec card mirrors the shift; chrome pill image stays static.</div></div><div class="phase"><div class="p">65-100%</div><div class="d">Hue continues cycling (pink-&gt;red-&gt;violet); layout fixed - all motion inside the orb imagery; loop.</div></div></div></section>
 </div>
 <div class="rail">
-<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Build a glossy-orb product hero. Center card: a liquid-metal orb - CSS-only version: layered radial gradients (hot pink core, crimson mid, near-black rim) plus 2 specular streaks (blurred white ellipses at 20-30%), masked to a circle, over a dark teal vertical gradient. Animate: hue-rotate filter 0-&gt;360deg over 10s linear infinite on the orb layer only, plus a slow background-position drift of the swirl layer (20s) so reflections crawl. Pro version: port to a fragment shader - fbm noise domain-warped, mapped through a pearlescent ramp (pink/violet/chrome), time uniform drives swirl. Surround with quiet bento cards (spec text, a small synced orb, a chrome pill render) so the hero owns the motion.</pre></div></section>
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a product page for &quot;KOODOR&quot; built around a glossy iridescent orb - the hero orb&#x27;s hue and internal swirls shift (pink -&gt; red -&gt; chrome) as the page scrolls and on an ambient loop; bento spec cards show the orb at small scale mirroring the same shift.
+
+## Stack
+React + TypeScript + Tailwind. Orb as prepared image frames crossfaded, or a WebGL shader with hue-rotate + swirl offset uniforms; scroll-linked where noted. Animate transform and opacity only for layout.
+
+## Scene
+Three-column bento layout: text card; large orb hero card (pink/red glossy sphere with liquid-metal reflections over a teal gradient); spec card with a small orb; a chrome pill image (static). Layout fixed - all motion lives inside the orb imagery.
+
+## Motion spec
+Pattern: ambient loop + scroll-linked hue.
+- Ambient: hue cycle ~10s linear through pink-magenta -&gt; red/crimson -&gt; violet; internal swirls crawl (slow offset of the reflection texture); subtle scale breathing +-1%.
+- Scroll: orb hue/angle shifts with page position - pink at top, red mid, chrome toward the bento section.
+- The small orb in the spec card mirrors the hero orb&#x27;s shift on the same clock.
+- Chrome pill image stays static. Cards, text, grid: no motion.
+
+## Calibration
+- Hue cycle ~10s linear; easing on hue reads as a strobe - keep it constant.
+- Swirl crawl barely perceptible; if the reflections visibly &quot;move&quot;, halve the speed.
+- Both orbs share one clock - drift between them breaks the illusion of one material.
+
+## Reduced motion
+Orbs hold a single hue frame; no scroll-linked shifting.
+
+## Don&#x27;t miss
+- Motion is inside the imagery only - the layout is a fixed grid, and that restraint is the design.
+- Liquid-metal reflections need real texture (image/shader); a flat gradient sphere reads as a ball pit toy.
+- The teal gradient backdrop under the pink orb is part of the color story - keep the pairing.</pre></div></section>
 <section><h2>Mechanics</h2><div class="mech"><div><div class="k">trigger</div><div class="v">scroll + ambient loop</div></div><div><div class="k">elements</div><div class="v">orb hero image (or WebGL shader), spec bento cards</div></div><div><div class="k">properties</div><div class="v">hue-rotate, internal swirl offset, subtle scale</div></div><div><div class="k">timing</div><div class="v">hue cycle ~10s linear</div></div><div><div class="k">easing</div><div class="v">linear ambient</div></div><div><div class="k">loop</div><div class="v">infinite</div></div></div></section>
 </div>
 </div>
 <footer>Source: inspora.design - <a href="https://www.inspora.design/posts/1-53">original interaction</a> by @basit_designs. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p="Build a glossy-orb product hero. Center card: a liquid-metal orb - CSS-only version: layered radial gradients (hot pink core, crimson mid, near-black rim) plus 2 specular streaks (blurred white ellipses at 20-30%), masked to a circle, over a dark teal vertical gradient. Animate: hue-rotate filter 0->360deg over 10s linear infinite on the orb layer only, plus a slow background-position drift of the swirl layer (20s) so reflections crawl. Pro version: port to a fragment shader - fbm noise domain-warped, mapped through a pearlescent ramp (pink/violet/chrome), time uniform drives swirl. Surround with quiet bento cards (spec text, a small synced orb, a chrome pill render) so the hero owns the motion."</script>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a product page for \"KOODOR\" built around a glossy iridescent orb - the hero orb's hue and internal swirls shift (pink -> red -> chrome) as the page scrolls and on an ambient loop; bento spec cards show the orb at small scale mirroring the same shift.\n\n## Stack\nReact + TypeScript + Tailwind. Orb as prepared image frames crossfaded, or a WebGL shader with hue-rotate + swirl offset uniforms; scroll-linked where noted. Animate transform and opacity only for layout.\n\n## Scene\nThree-column bento layout: text card; large orb hero card (pink/red glossy sphere with liquid-metal reflections over a teal gradient); spec card with a small orb; a chrome pill image (static). Layout fixed - all motion lives inside the orb imagery.\n\n## Motion spec\nPattern: ambient loop + scroll-linked hue.\n- Ambient: hue cycle ~10s linear through pink-magenta -> red/crimson -> violet; internal swirls crawl (slow offset of the reflection texture); subtle scale breathing +-1%.\n- Scroll: orb hue/angle shifts with page position - pink at top, red mid, chrome toward the bento section.\n- The small orb in the spec card mirrors the hero orb's shift on the same clock.\n- Chrome pill image stays static. Cards, text, grid: no motion.\n\n## Calibration\n- Hue cycle ~10s linear; easing on hue reads as a strobe - keep it constant.\n- Swirl crawl barely perceptible; if the reflections visibly \"move\", halve the speed.\n- Both orbs share one clock - drift between them breaks the illusion of one material.\n\n## Reduced motion\nOrbs hold a single hue frame; no scroll-linked shifting.\n\n## Don't miss\n- Motion is inside the imagery only - the layout is a fixed grid, and that restraint is the design.\n- Liquid-metal reflections need real texture (image/shader); a flat gradient sphere reads as a ball pit toy.\n- The teal gradient backdrop under the pink orb is part of the color story - keep the pairing."</script>
 </body></html>
