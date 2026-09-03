@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ultrahuman Nap Detected Pulse Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Ultrahuman Nap Detected Pulse Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ultrahuman-nap-detected-pulse-animation"><b>Ultrahuman</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ultrahuman-nap-detected-pulse-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ultrahuman-nap-detected-pulse-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Ultrahuman&#x27;s &quot;Nap detected&quot; event card - a dark detected-event card where the &quot;Add it&quot; CTA button carries a continuous soft glow pulse, gently demanding action while the rest of the ring-metrics screen stays still.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e7fbc82041cdc380d041/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e7fbc82041cdc380d041/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ultrahuman-nap-detected-pulse-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Ultrahuman&#x27;s &quot;Nap detected&quot; event card - a dark detected-event card where the &quot;Add it&quot; CTA button carries a continuous soft glow pulse, gently demanding action while the rest of the ring-metrics screen stays still.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark health app: a slim event card pinned near the top (&quot;32 Nap detected&quot; with a small ring icon, close X, and a blue &quot;Add it&quot; button), above a large faint recovery gauge and metrics list. Tab bar at bottom.
+
+## Motion spec
+Pattern: looping CTA pulse.
+- The &quot;Add it&quot; button breathes: a blue glow (box-shadow / radial halo) swells and fades around it (1.8s ease-in-out, peak opacity ~0.6).
+- The button itself holds a subtle scale on the same cycle (1 -&gt; 1.04 -&gt; 1).
+- Card entrance (first appearance): card slides down from the screen top with a soft spring (~280/24, 400ms) - after that, only the button pulses.
+- Nothing else on screen animates.
+
+## Calibration
+- The glow is the pulse; scale is barely perceptible.
+- 1.8s is calm - faster reads as an alarm, slower goes unnoticed.
+
+## Reduced motion
+Button holds a static 40% glow; card appears without motion.
+
+## Don&#x27;t miss
+- The card floats over content with a real shadow; it is dismissible via the X (reverse slide-up, 250ms).
+- Blue is the app&#x27;s accent - the glow uses it at reduced saturation, not pure neon.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping CTA pulse.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ultrahuman-nap-detected-pulse-animation">original interaction</a> by Ultrahuman. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Ultrahuman's \"Nap detected\" event card - a dark detected-event card where the \"Add it\" CTA button carries a continuous soft glow pulse, gently demanding action while the rest of the ring-metrics screen stays still.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark health app: a slim event card pinned near the top (\"32 Nap detected\" with a small ring icon, close X, and a blue \"Add it\" button), above a large faint recovery gauge and metrics list. Tab bar at bottom.\n\n## Motion spec\nPattern: looping CTA pulse.\n- The \"Add it\" button breathes: a blue glow (box-shadow / radial halo) swells and fades around it (1.8s ease-in-out, peak opacity ~0.6).\n- The button itself holds a subtle scale on the same cycle (1 -> 1.04 -> 1).\n- Card entrance (first appearance): card slides down from the screen top with a soft spring (~280/24, 400ms) - after that, only the button pulses.\n- Nothing else on screen animates.\n\n## Calibration\n- The glow is the pulse; scale is barely perceptible.\n- 1.8s is calm - faster reads as an alarm, slower goes unnoticed.\n\n## Reduced motion\nButton holds a static 40% glow; card appears without motion.\n\n## Don't miss\n- The card floats over content with a real shadow; it is dismissible via the X (reverse slide-up, 250ms).\n- Blue is the app's accent - the glow uses it at reduced saturation, not pure neon."</script>
+</body></html>

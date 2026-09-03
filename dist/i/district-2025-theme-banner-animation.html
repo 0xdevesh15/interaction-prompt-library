@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>District 2025 Theme Banner Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>District 2025 Theme Banner Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/district-2025-theme-banner-animation"><b>District</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/district-2025-theme-banner-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/district-2025-theme-banner-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: a New Year&#x27;s Eve theme banner on a dark events app - &quot;2025&quot; in huge chrome numerals over a spinning prize-wheel illustration, with wiggling text, floating speech-bubble chips, and a marquee strip (&quot;DISCOVER NYE BASHES&quot;) along the banner&#x27;s bottom edge.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab99aa18a0c275c3d8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab99aa18a0c275c3d8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-district-2025-theme-banner-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: a New Year&#x27;s Eve theme banner on a dark events app - &quot;2025&quot; in huge chrome numerals over a spinning prize-wheel illustration, with wiggling text, floating speech-bubble chips, and a marquee strip (&quot;DISCOVER NYE BASHES&quot;) along the banner&#x27;s bottom edge.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark home feed. The hero banner: neon-purple gradient stage, chrome 3D &quot;2025&quot; numerals with a small chip (&quot;Cheers, sparkle, and party!&quot;), a colorful segmented wheel beneath, floating circular accent chips, and a diagonal ribbon marquee at the banner&#x27;s base.
+
+## Motion spec
+Pattern: looping idle composition, all layers independent.
+- Wheel: slow continuous rotation (~12s per revolution, linear).
+- &quot;2025&quot; numerals: gentle wiggle (rotate +-1.5deg, scale 1 -&gt; 1.02, 2.4s ease-in-out).
+- Speech-bubble chip: floats (translateY +-5px, 2.8s, phase offset from the numerals).
+- Marquee ribbon: text scrolls horizontally at ~40px/s, seamless loop.
+- Small sparkle accents twinkle (opacity 0.2 -&gt; 1, 1.2s, random delays).
+- Loop is seamless and indefinite; no interaction.
+
+## Calibration
+- Every layer has its own period - nothing shares a cycle, which keeps it alive instead of mechanical.
+- The wheel is slow enough to read the segments.
+
+## Reduced motion
+All loops stop; banner renders as a still.
+
+## Don&#x27;t miss
+- Chrome numerals need an animated highlight sweep (a light band crossing every ~4s) to read as metal.
+- The marquee ribbon is slightly rotated (-4deg) and extends past both banner edges.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping idle composition, all layers independent.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/district-2025-theme-banner-animation">original interaction</a> by District. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: a New Year's Eve theme banner on a dark events app - \"2025\" in huge chrome numerals over a spinning prize-wheel illustration, with wiggling text, floating speech-bubble chips, and a marquee strip (\"DISCOVER NYE BASHES\") along the banner's bottom edge.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark home feed. The hero banner: neon-purple gradient stage, chrome 3D \"2025\" numerals with a small chip (\"Cheers, sparkle, and party!\"), a colorful segmented wheel beneath, floating circular accent chips, and a diagonal ribbon marquee at the banner's base.\n\n## Motion spec\nPattern: looping idle composition, all layers independent.\n- Wheel: slow continuous rotation (~12s per revolution, linear).\n- \"2025\" numerals: gentle wiggle (rotate +-1.5deg, scale 1 -> 1.02, 2.4s ease-in-out).\n- Speech-bubble chip: floats (translateY +-5px, 2.8s, phase offset from the numerals).\n- Marquee ribbon: text scrolls horizontally at ~40px/s, seamless loop.\n- Small sparkle accents twinkle (opacity 0.2 -> 1, 1.2s, random delays).\n- Loop is seamless and indefinite; no interaction.\n\n## Calibration\n- Every layer has its own period - nothing shares a cycle, which keeps it alive instead of mechanical.\n- The wheel is slow enough to read the segments.\n\n## Reduced motion\nAll loops stop; banner renders as a still.\n\n## Don't miss\n- Chrome numerals need an animated highlight sweep (a light band crossing every ~4s) to read as metal.\n- The marquee ribbon is slightly rotated (-4deg) and extends past both banner edges."</script>
+</body></html>

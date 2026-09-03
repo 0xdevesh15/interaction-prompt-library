@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Mega Chest Unlock Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Mega Chest Unlock Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-mega-chest-unlock-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-mega-chest-unlock-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-mega-chest-unlock-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s Mega chest unlock - a striped treasure chest waits on an orange stage (&quot;Tap to open!&quot;), shakes with anticipation on tap, bursts open with sparkles and light, then reveals the reward card (bonus XP) on a color-matched stage with a CONTINUE button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c14708/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c14708/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-mega-chest-unlock-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s Mega chest unlock - a striped treasure chest waits on an orange stage (&quot;Tap to open!&quot;), shakes with anticipation on tap, bursts open with sparkles and light, then reveals the reward card (bonus XP) on a color-matched stage with a CONTINUE button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen orange stage: &quot;MEGA&quot; label top, big striped chest center, &quot;Tap to open!&quot; prompt. After the reveal: stage switches to the reward&#x27;s color (blue for bonus XP, purple for XP boosts), reward card center, description, CONTINUE button.
+
+## Motion spec
+Pattern: tap-triggered reward sequence, ~2.5s.
+- Idle: chest breathes (scale 1 -&gt; 1.03, 2s); tiny sparkles twinkle around it (random 1-2s twinkles).
+- On tap: chest shakes with growing intensity (rotate +-4deg at ~10Hz, ramping over 500ms), prompt text fades out (150ms).
+- Burst: lid flings open (rotateX -70deg, 300ms, spring overshoot), a light column shoots from the chest (scaleY 0 -&gt; 1, 250ms, fades), and 6-8 sparkle particles arc out (gravity-affected, 500ms).
+- Reveal: stage crossfades to the reward color (300ms); the reward card flips in (rotateY 90 -&gt; 0, spring ~300/20) with a shine sweep (highlight band across the card, 400ms).
+- Copy + CONTINUE slide up (250ms, ease-out).
+
+## Calibration
+- The anticipation shake is mandatory - bursting without the wind-up feels cheap.
+- One big burst, then calm: particles settle, stage holds.
+
+## Reduced motion
+Tap crossfades to the revealed reward (300ms), no shake, no particles.
+
+## Don&#x27;t miss
+- Stage color always matches the reward type.
+- The chest&#x27;s lid stays open behind the reward card, dimmed.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-triggered reward sequence, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-mega-chest-unlock-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's Mega chest unlock - a striped treasure chest waits on an orange stage (\"Tap to open!\"), shakes with anticipation on tap, bursts open with sparkles and light, then reveals the reward card (bonus XP) on a color-matched stage with a CONTINUE button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen orange stage: \"MEGA\" label top, big striped chest center, \"Tap to open!\" prompt. After the reveal: stage switches to the reward's color (blue for bonus XP, purple for XP boosts), reward card center, description, CONTINUE button.\n\n## Motion spec\nPattern: tap-triggered reward sequence, ~2.5s.\n- Idle: chest breathes (scale 1 -> 1.03, 2s); tiny sparkles twinkle around it (random 1-2s twinkles).\n- On tap: chest shakes with growing intensity (rotate +-4deg at ~10Hz, ramping over 500ms), prompt text fades out (150ms).\n- Burst: lid flings open (rotateX -70deg, 300ms, spring overshoot), a light column shoots from the chest (scaleY 0 -> 1, 250ms, fades), and 6-8 sparkle particles arc out (gravity-affected, 500ms).\n- Reveal: stage crossfades to the reward color (300ms); the reward card flips in (rotateY 90 -> 0, spring ~300/20) with a shine sweep (highlight band across the card, 400ms).\n- Copy + CONTINUE slide up (250ms, ease-out).\n\n## Calibration\n- The anticipation shake is mandatory - bursting without the wind-up feels cheap.\n- One big burst, then calm: particles settle, stage holds.\n\n## Reduced motion\nTap crossfades to the revealed reward (300ms), no shake, no particles.\n\n## Don't miss\n- Stage color always matches the reward type.\n- The chest's lid stays open behind the reward card, dimmed."</script>
+</body></html>

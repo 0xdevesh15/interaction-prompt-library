@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Instant Feature Coachmark Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Instant Feature Coachmark Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-instant-feature-coachmark-interaction"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-instant-feature-coachmark-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-instant-feature-coachmark-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Instagram&#x27;s &quot;Introducing Instants&quot; coachmark flow - an intro sheet walks through the feature, then a guided demo: a shared photo collage fills the screen with a &quot;Tap to go to the next photo&quot; hint, an emoji reaction rail sits at the bottom, tapping the heart sends hearts bursting upward, and a final card explains screenshots are blocked.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a977329e2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a977329e2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-instant-feature-coachmark-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Instagram&#x27;s &quot;Introducing Instants&quot; coachmark flow - an intro sheet walks through the feature, then a guided demo: a shared photo collage fills the screen with a &quot;Tap to go to the next photo&quot; hint, an emoji reaction rail sits at the bottom, tapping the heart sends hearts bursting upward, and a final card explains screenshots are blocked.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark full-screen flow: (1) intro sheet with collage preview, &quot;Introducing Instants&quot;, three feature bullets, blue &quot;How it works&quot; button; (2) demo screen with the collage (rounded blob mask), hint text &quot;Tap to go to the next photo&quot;, reaction rail (heart, fire, laughing emoji + plus); (3) hearts particle burst over the collage; (4) &quot;You can&#x27;t screenshot or record this&quot; info card.
+
+## Motion spec
+Pattern: stepped walkthrough with one live interaction.
+- Screen transitions: content slides up + fades (300ms, ease-out); the collage photo morphs between screens (shared element - it scales from preview size to full-bleed, 350ms).
+- Demo hint: a small up-chevron bounces above the caption (translateY 0 -&gt; -6px loop, 1s).
+- Reaction tap: the tapped emoji pops (scale 1 -&gt; 1.4 -&gt; 1, spring ~400/18) and emits 5-8 hearts that float up with drift (translateY -120px, translateX +-20px random, fade out, 800ms, 40ms stagger).
+- Counter under the rail ticks up with a flip (200ms).
+- Final card: phone-shield icon draws in (stroke 400ms), copy fades after (150ms delay).
+
+## Calibration
+- The heart burst is physics-lite: gravity pulls hearts slightly as they rise, giving an arc, not a straight line.
+- Each beat waits for the user; nothing auto-advances except the hint bounce loop.
+
+## Reduced motion
+Screens crossfade; one heart floats up slowly; no burst.
+
+## Don&#x27;t miss
+- The collage photo is a shared element across the first two screens - it never reloads or jumps.
+- &quot;Only you and the author can see your reactions&quot; sits under the rail throughout the demo.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stepped walkthrough with one live interaction.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-instant-feature-coachmark-interaction">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Instagram's \"Introducing Instants\" coachmark flow - an intro sheet walks through the feature, then a guided demo: a shared photo collage fills the screen with a \"Tap to go to the next photo\" hint, an emoji reaction rail sits at the bottom, tapping the heart sends hearts bursting upward, and a final card explains screenshots are blocked.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark full-screen flow: (1) intro sheet with collage preview, \"Introducing Instants\", three feature bullets, blue \"How it works\" button; (2) demo screen with the collage (rounded blob mask), hint text \"Tap to go to the next photo\", reaction rail (heart, fire, laughing emoji + plus); (3) hearts particle burst over the collage; (4) \"You can't screenshot or record this\" info card.\n\n## Motion spec\nPattern: stepped walkthrough with one live interaction.\n- Screen transitions: content slides up + fades (300ms, ease-out); the collage photo morphs between screens (shared element - it scales from preview size to full-bleed, 350ms).\n- Demo hint: a small up-chevron bounces above the caption (translateY 0 -> -6px loop, 1s).\n- Reaction tap: the tapped emoji pops (scale 1 -> 1.4 -> 1, spring ~400/18) and emits 5-8 hearts that float up with drift (translateY -120px, translateX +-20px random, fade out, 800ms, 40ms stagger).\n- Counter under the rail ticks up with a flip (200ms).\n- Final card: phone-shield icon draws in (stroke 400ms), copy fades after (150ms delay).\n\n## Calibration\n- The heart burst is physics-lite: gravity pulls hearts slightly as they rise, giving an arc, not a straight line.\n- Each beat waits for the user; nothing auto-advances except the hint bounce loop.\n\n## Reduced motion\nScreens crossfade; one heart floats up slowly; no burst.\n\n## Don't miss\n- The collage photo is a shared element across the first two screens - it never reloads or jumps.\n- \"Only you and the author can see your reactions\" sits under the rail throughout the demo."</script>
+</body></html>

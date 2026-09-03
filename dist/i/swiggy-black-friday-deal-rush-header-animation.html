@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Black Friday Deal Rush Header Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Black Friday Deal Rush Header Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-black-friday-deal-rush-header-animation"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-black-friday-deal-rush-header-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-black-friday-deal-rush-header-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Swiggy&#x27;s Black Friday &quot;DEAL RUSH&quot; header - food items orbit a circular dotted track behind the bold deal typography, each carrying a springy price badge, while a live countdown ticks below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/693438547d19d070282a5260/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/693438547d19d070282a5260/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-black-friday-deal-rush-header-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Swiggy&#x27;s Black Friday &quot;DEAL RUSH&quot; header - food items orbit a circular dotted track behind the bold deal typography, each carrying a springy price badge, while a live countdown ticks below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark purple header card: &quot;Black Friday&quot; eyebrow, huge &quot;DEAL RUSH&quot; type, &quot;New deals, every hour!&quot; subline. Behind/right of the type: a dotted elliptical orbit with 3-4 food photos (in circular masks) traveling it, each with a small price chip (&quot;₹69&quot;, &quot;₹29&quot;). Below the card: &quot;LIVE DEALS end in 00:11:46&quot; countdown and the deal grid.
+
+## Motion spec
+Pattern: ambient orbit loop.
+- Food items travel the dotted ellipse continuously (~10s per revolution, linear), scaling slightly at the front of the orbit (1.0) vs the back (0.7) with matching opacity for depth.
+- Price badges ride with their items but counter-rotate to stay upright; when an item passes the front-center, its badge does a small spring pop (scale 1 -&gt; 1.15 -&gt; 1, 300ms).
+- The dotted track is static; items swap z-order as they pass behind the typography.
+- Countdown digits tick each second (last two digits roll down 200ms).
+
+## Calibration
+- Depth scaling (front big / back small) is what makes it an orbit instead of a flat carousel.
+- The badge pop is the only spring in the system - one beat per orbit per item.
+
+## Reduced motion
+Items parked at fixed orbit positions; countdown still ticks.
+
+## Don&#x27;t miss
+- Items pass BEHIND the &quot;DEAL RUSH&quot; type at the orbit&#x27;s back half.
+- Circular image masks with thin white borders.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient orbit loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-black-friday-deal-rush-header-animation">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Swiggy's Black Friday \"DEAL RUSH\" header - food items orbit a circular dotted track behind the bold deal typography, each carrying a springy price badge, while a live countdown ticks below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark purple header card: \"Black Friday\" eyebrow, huge \"DEAL RUSH\" type, \"New deals, every hour!\" subline. Behind/right of the type: a dotted elliptical orbit with 3-4 food photos (in circular masks) traveling it, each with a small price chip (\"\u20b969\", \"\u20b929\"). Below the card: \"LIVE DEALS end in 00:11:46\" countdown and the deal grid.\n\n## Motion spec\nPattern: ambient orbit loop.\n- Food items travel the dotted ellipse continuously (~10s per revolution, linear), scaling slightly at the front of the orbit (1.0) vs the back (0.7) with matching opacity for depth.\n- Price badges ride with their items but counter-rotate to stay upright; when an item passes the front-center, its badge does a small spring pop (scale 1 -> 1.15 -> 1, 300ms).\n- The dotted track is static; items swap z-order as they pass behind the typography.\n- Countdown digits tick each second (last two digits roll down 200ms).\n\n## Calibration\n- Depth scaling (front big / back small) is what makes it an orbit instead of a flat carousel.\n- The badge pop is the only spring in the system - one beat per orbit per item.\n\n## Reduced motion\nItems parked at fixed orbit positions; countdown still ticks.\n\n## Don't miss\n- Items pass BEHIND the \"DEAL RUSH\" type at the orbit's back half.\n- Circular image masks with thin white borders."</script>
+</body></html>

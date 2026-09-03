@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opal Hold to Commit Button Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Opal Hold to Commit Button Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opal-hold-to-commit-button-interaction"><b>Opal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-hold-to-commit-button-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-hold-to-commit-button-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Opal&#x27;s hold-to-commit button - the schedule screen&#x27;s bottom button reads &quot;Hold to Commit&quot; with a slow shimmer; pressing and holding switches the label to &quot;Keep Holding...&quot; while a light fill sweeps across the button, and releasing early snaps the fill back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1de81b019c9729fd1f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1de81b019c9729fd1f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opal-hold-to-commit-button-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Opal&#x27;s hold-to-commit button - the schedule screen&#x27;s bottom button reads &quot;Hold to Commit&quot; with a slow shimmer; pressing and holding switches the label to &quot;Keep Holding...&quot; while a light fill sweeps across the button, and releasing early snaps the fill back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark &quot;Wind Down&quot; schedule screen: time range pickers, day-of-week circles, blocked-apps row, Hard Mode toggle. Bottom: full-width commit button (dark pill with a light edge shimmer).
+
+## Motion spec
+Pattern: press-and-hold confirmation, ~1.2s hold.
+- Idle: a shimmer band sweeps the button every 3s (translateX -100% -&gt; 100%, 1.2s, ease-in-out) - an invitation, not a spinner.
+- Touch-down: label crossfades to &quot;Keep Holding...&quot; (150ms); the fill (light, slightly translucent) sweeps left to right across the button over ~1.2s, linear-ish with a slight ease.
+- Haptic-style micro tick at 50% (2px button scale dip).
+- Release before full: fill snaps back to 0 (200ms, ease-in) and the label returns.
+- Complete: fill flashes to solid (100ms), the button does a success pulse (scale 1 -&gt; 1.03 -&gt; 1, 250ms), label swaps to the committed state.
+
+## Calibration
+- 1-1.5s hold: long enough to be deliberate, short enough to not annoy.
+- The snap-back on early release must feel instant - hesitation reads as lag.
+
+## Reduced motion
+Hold works identically; shimmer removed, fill sweeps without gradient effects.
+
+## Don&#x27;t miss
+- The label change is the instruction - it must switch on touch-down, not at 50%.
+- The button never navigates on a plain tap; the hold IS the interaction.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">press-and-hold confirmation, ~1.2s hold.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opal-hold-to-commit-button-interaction">original interaction</a> by Opal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Opal's hold-to-commit button - the schedule screen's bottom button reads \"Hold to Commit\" with a slow shimmer; pressing and holding switches the label to \"Keep Holding...\" while a light fill sweeps across the button, and releasing early snaps the fill back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark \"Wind Down\" schedule screen: time range pickers, day-of-week circles, blocked-apps row, Hard Mode toggle. Bottom: full-width commit button (dark pill with a light edge shimmer).\n\n## Motion spec\nPattern: press-and-hold confirmation, ~1.2s hold.\n- Idle: a shimmer band sweeps the button every 3s (translateX -100% -> 100%, 1.2s, ease-in-out) - an invitation, not a spinner.\n- Touch-down: label crossfades to \"Keep Holding...\" (150ms); the fill (light, slightly translucent) sweeps left to right across the button over ~1.2s, linear-ish with a slight ease.\n- Haptic-style micro tick at 50% (2px button scale dip).\n- Release before full: fill snaps back to 0 (200ms, ease-in) and the label returns.\n- Complete: fill flashes to solid (100ms), the button does a success pulse (scale 1 -> 1.03 -> 1, 250ms), label swaps to the committed state.\n\n## Calibration\n- 1-1.5s hold: long enough to be deliberate, short enough to not annoy.\n- The snap-back on early release must feel instant - hesitation reads as lag.\n\n## Reduced motion\nHold works identically; shimmer removed, fill sweeps without gradient effects.\n\n## Don't miss\n- The label change is the instruction - it must switch on touch-down, not at 50%.\n- The button never navigates on a plain tap; the hold IS the interaction."</script>
+</body></html>

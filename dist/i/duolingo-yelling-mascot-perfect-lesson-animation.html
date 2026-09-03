@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Yelling Mascot Perfect Lesson Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Yelling Mascot Perfect Lesson Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-yelling-mascot-perfect-lesson-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-yelling-mascot-perfect-lesson-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-yelling-mascot-perfect-lesson-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s hyped perfect-lesson celebration - the owl yells with joy, beak wide open on a green burst, &quot;Perfect lesson!&quot; and &quot;Take a bow!&quot; land, and reward chips (+40 XP, 100% accuracy, time) pop in one by one above the CLAIM XP button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1ce81b019c9729fd06/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1ce81b019c9729fd06/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-yelling-mascot-perfect-lesson-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s hyped perfect-lesson celebration - the owl yells with joy, beak wide open on a green burst, &quot;Perfect lesson!&quot; and &quot;Take a bow!&quot; land, and reward chips (+40 XP, 100% accuracy, time) pop in one by one above the CLAIM XP button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light screen: yelling owl (beak open, eyes squeezed shut, arms up) center on a green burst backdrop, &quot;Perfect lesson!&quot; headline, &quot;Take a bow!&quot; subline, three reward chips, blue CLAIM XP button.
+
+## Motion spec
+Pattern: explosive entrance + reward cascade, ~2.5s.
+- Entrance: burst scales in fast (250ms, slight overshoot) as the owl springs in (scale 0.7 -&gt; 1.05 -&gt; 1, spring ~300/15) with tiny orange feathers/confetti popping at its sides (6 pieces, 400ms arcs).
+- Yell loop: the owl&#x27;s whole body shakes with excitement (translateX +-2px at 8Hz for 400ms, then rests 2s) and its beak opens wider on each shake.
+- Chips: pop in left to right (spring ~400/16, 130ms stagger), accuracy chip last with a glow pulse.
+- Copy and button rise in below (250ms each, ease-out).
+
+## Calibration
+- This is the loudest celebration in the set - fast entrance, visible shake, confetti. Don&#x27;t tame it.
+- The shake is a burst, not a loop; continuous shaking reads as a glitch.
+
+## Reduced motion
+Owl fades in; chips fade in together (200ms).
+
+## Don&#x27;t miss
+- Eyes squeezed + beak open is the specific expression - not a smile.
+- Same chip cascade rhythm as the other celebration screens.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">explosive entrance + reward cascade, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-yelling-mascot-perfect-lesson-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's hyped perfect-lesson celebration - the owl yells with joy, beak wide open on a green burst, \"Perfect lesson!\" and \"Take a bow!\" land, and reward chips (+40 XP, 100% accuracy, time) pop in one by one above the CLAIM XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen: yelling owl (beak open, eyes squeezed shut, arms up) center on a green burst backdrop, \"Perfect lesson!\" headline, \"Take a bow!\" subline, three reward chips, blue CLAIM XP button.\n\n## Motion spec\nPattern: explosive entrance + reward cascade, ~2.5s.\n- Entrance: burst scales in fast (250ms, slight overshoot) as the owl springs in (scale 0.7 -> 1.05 -> 1, spring ~300/15) with tiny orange feathers/confetti popping at its sides (6 pieces, 400ms arcs).\n- Yell loop: the owl's whole body shakes with excitement (translateX +-2px at 8Hz for 400ms, then rests 2s) and its beak opens wider on each shake.\n- Chips: pop in left to right (spring ~400/16, 130ms stagger), accuracy chip last with a glow pulse.\n- Copy and button rise in below (250ms each, ease-out).\n\n## Calibration\n- This is the loudest celebration in the set - fast entrance, visible shake, confetti. Don't tame it.\n- The shake is a burst, not a loop; continuous shaking reads as a glitch.\n\n## Reduced motion\nOwl fades in; chips fade in together (200ms).\n\n## Don't miss\n- Eyes squeezed + beak open is the specific expression - not a smile.\n- Same chip cascade rhythm as the other celebration screens."</script>
+</body></html>

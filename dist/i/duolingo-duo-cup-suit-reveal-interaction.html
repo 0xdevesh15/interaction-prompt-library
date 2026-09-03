@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Duo Cup Suit Reveal Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Duo Cup Suit Reveal Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-duo-cup-suit-reveal-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-duo-cup-suit-reveal-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-duo-cup-suit-reveal-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s Duo Cup suit reveal - a blue silhouette with a question mark stands center; the reward bursts out of it to reveal your character wearing the earned suit (&quot;You earned the Haiti suit for doing a lesson today!&quot;), with WEAR NOW / SAVE IN PROFILE actions and a teaser silhouette of the next unlock beside it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a3638e683334b304cd0aa63/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a3638e683334b304cd0aa63/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-duo-cup-suit-reveal-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s Duo Cup suit reveal - a blue silhouette with a question mark stands center; the reward bursts out of it to reveal your character wearing the earned suit (&quot;You earned the Haiti suit for doing a lesson today!&quot;), with WEAR NOW / SAVE IN PROFILE actions and a teaser silhouette of the next unlock beside it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light sky-gradient stage: locked silhouette (blue, &quot;?&quot; on the chest) -&gt; revealed character in the earned soccer suit with glasses, floating on a soft shadow. Below: reward label, headline copy, blue WEAR NOW button, SAVE IN PROFILE text action.
+
+## Motion spec
+Pattern: mystery-to-reveal, ~2s.
+- Idle: the silhouette bobs gently (translateY +-4px, 2s) with small &quot;?&quot; sparkle twinkles.
+- Reveal: silhouette flashes white (150ms), bursts into 6-8 confetti shards (gravity arcs, 500ms), and the suited character springs in (scale 0.5 -&gt; 1, rotate -8deg -&gt; 0, spring ~300/15) with a radial light burst behind it (scale 0 -&gt; 1 -&gt; fade, 400ms).
+- Copy: label + headline slide up (250ms, ease-out), buttons follow (150ms later).
+- WEAR NOW tap: button presses (scale 0.95, 100ms), character does a happy hop (translateY -16px, spring back).
+- The next-unlock silhouette slides in from the right edge as a teaser (300ms, after reveal settles).
+
+## Calibration
+- The white flash + confetti burst must hit on the same frame - split them and the reveal loses its snap.
+- The character&#x27;s shadow grows with its scale so it reads as landing, not fading.
+
+## Reduced motion
+Silhouette crossfades to the revealed character (300ms); no burst.
+
+## Don&#x27;t miss
+- The next-locked teaser keeps the loop going - it&#x27;s part of the retention design.
+- &quot;SAVE IN PROFILE&quot; is a quiet secondary action; never style it like a second button.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">mystery-to-reveal, ~2s.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-duo-cup-suit-reveal-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's Duo Cup suit reveal - a blue silhouette with a question mark stands center; the reward bursts out of it to reveal your character wearing the earned suit (\"You earned the Haiti suit for doing a lesson today!\"), with WEAR NOW / SAVE IN PROFILE actions and a teaser silhouette of the next unlock beside it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight sky-gradient stage: locked silhouette (blue, \"?\" on the chest) -> revealed character in the earned soccer suit with glasses, floating on a soft shadow. Below: reward label, headline copy, blue WEAR NOW button, SAVE IN PROFILE text action.\n\n## Motion spec\nPattern: mystery-to-reveal, ~2s.\n- Idle: the silhouette bobs gently (translateY +-4px, 2s) with small \"?\" sparkle twinkles.\n- Reveal: silhouette flashes white (150ms), bursts into 6-8 confetti shards (gravity arcs, 500ms), and the suited character springs in (scale 0.5 -> 1, rotate -8deg -> 0, spring ~300/15) with a radial light burst behind it (scale 0 -> 1 -> fade, 400ms).\n- Copy: label + headline slide up (250ms, ease-out), buttons follow (150ms later).\n- WEAR NOW tap: button presses (scale 0.95, 100ms), character does a happy hop (translateY -16px, spring back).\n- The next-unlock silhouette slides in from the right edge as a teaser (300ms, after reveal settles).\n\n## Calibration\n- The white flash + confetti burst must hit on the same frame - split them and the reveal loses its snap.\n- The character's shadow grows with its scale so it reads as landing, not fading.\n\n## Reduced motion\nSilhouette crossfades to the revealed character (300ms); no burst.\n\n## Don't miss\n- The next-locked teaser keeps the loop going - it's part of the retention design.\n- \"SAVE IN PROFILE\" is a quiet secondary action; never style it like a second button."</script>
+</body></html>

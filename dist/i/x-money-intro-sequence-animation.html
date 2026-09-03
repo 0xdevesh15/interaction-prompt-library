@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X Money Intro Sequence Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>X Money Intro Sequence Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/x-money-intro-sequence-animation"><b>X</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-money-intro-sequence-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-money-intro-sequence-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: X Money&#x27;s intro sequence - a dark, cinematic onboarding where each feature beat lands on black: a 3D metal card tilts in, a payment row assembles, a growth chart draws with a ticker counting up, a passkey glyph glows green, and big balance numerals tick rapidly.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa0518d11bffd50a46a5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa0518d11bffd50a46a5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-x-money-intro-sequence-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: X Money&#x27;s intro sequence - a dark, cinematic onboarding where each feature beat lands on black: a 3D metal card tilts in, a payment row assembles, a growth chart draws with a ticker counting up, a passkey glyph glows green, and big balance numerals tick rapidly.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Near-black full screen, one centered feature moment at a time with a short headline + subline: &quot;Welcome to X Money&quot;, &quot;Tap into everything&quot; (3D card), &quot;Pay anyone, any way&quot; (payment row), &quot;Earn while you sleep&quot; (counter 8,869+), &quot;Secured with passkeys&quot; (green glyph), &quot;Access up to 0M of FDIC insurance&quot;.
+
+## Motion spec
+Pattern: auto-advancing beat sequence, ~2.5s per beat, ~15s total.
+- Transitions: current beat&#x27;s elements scale down + fade (250ms), next beat&#x27;s elements rise 16px + fade in (300ms, ease-out). Headline swaps with a 40ms word stagger.
+- 3D card: tilts slowly (rotateY -15deg -&gt; +10deg, looping 5s) with a moving specular highlight.
+- Payment row: avatar + brand icon slide in from opposite edges and meet (spring ~300/22).
+- Counters: numerals tick from 0 to the target (1.2s, ease-out) with tabular-nums; large balances group with commas as they grow.
+- Passkey glyph: soft green glow pulses twice (1.5s each) then holds at 40%.
+
+## Calibration
+- One idea per beat, lots of black space - the emptiness is the luxury.
+- Tickers use tabular figures so digits never jiggle.
+
+## Reduced motion
+Beats crossfade (250ms); counters set instantly.
+
+## Don&#x27;t miss
+- The metal card&#x27;s highlight sweeps as it tilts - flat shading kills it.
+- Auto-advance pauses if the user touches the screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-advancing beat sequence, ~2.5s per beat, ~15s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/x-money-intro-sequence-animation">original interaction</a> by X. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: X Money's intro sequence - a dark, cinematic onboarding where each feature beat lands on black: a 3D metal card tilts in, a payment row assembles, a growth chart draws with a ticker counting up, a passkey glyph glows green, and big balance numerals tick rapidly.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNear-black full screen, one centered feature moment at a time with a short headline + subline: \"Welcome to X Money\", \"Tap into everything\" (3D card), \"Pay anyone, any way\" (payment row), \"Earn while you sleep\" (counter 8,869+), \"Secured with passkeys\" (green glyph), \"Access up to 0M of FDIC insurance\".\n\n## Motion spec\nPattern: auto-advancing beat sequence, ~2.5s per beat, ~15s total.\n- Transitions: current beat's elements scale down + fade (250ms), next beat's elements rise 16px + fade in (300ms, ease-out). Headline swaps with a 40ms word stagger.\n- 3D card: tilts slowly (rotateY -15deg -> +10deg, looping 5s) with a moving specular highlight.\n- Payment row: avatar + brand icon slide in from opposite edges and meet (spring ~300/22).\n- Counters: numerals tick from 0 to the target (1.2s, ease-out) with tabular-nums; large balances group with commas as they grow.\n- Passkey glyph: soft green glow pulses twice (1.5s each) then holds at 40%.\n\n## Calibration\n- One idea per beat, lots of black space - the emptiness is the luxury.\n- Tickers use tabular figures so digits never jiggle.\n\n## Reduced motion\nBeats crossfade (250ms); counters set instantly.\n\n## Don't miss\n- The metal card's highlight sweeps as it tilts - flat shading kills it.\n- Auto-advance pauses if the user touches the screen."</script>
+</body></html>

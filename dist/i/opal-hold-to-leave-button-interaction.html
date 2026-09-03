@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opal Hold to Leave Button Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Opal Hold to Leave Button Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opal-hold-to-leave-button-interaction"><b>Opal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-hold-to-leave-button-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-hold-to-leave-button-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Opal&#x27;s &quot;Leave Early?&quot; friction screen - a big segmented countdown timer runs above a red-gradient card begging you to stay (&quot;Don&#x27;t give up, there&#x27;s a reason you started this.&quot;), and the only way out is holding &quot;Hold to Leave&quot; as a pink fill sweeps the button - while the timer digits keep flipping down.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1de4e7cc890ee8fd58/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1de4e7cc890ee8fd58/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opal-hold-to-leave-button-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Opal&#x27;s &quot;Leave Early?&quot; friction screen - a big segmented countdown timer runs above a red-gradient card begging you to stay (&quot;Don&#x27;t give up, there&#x27;s a reason you started this.&quot;), and the only way out is holding &quot;Hold to Leave&quot; as a pink fill sweeps the button - while the timer digits keep flipping down.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark focus screen: large segmented-display countdown (29:31) in a rounded LCD-style window. Below: maroon gradient card with a running-figure icon, &quot;Leave Early?&quot; headline, guilt-trippy subline, &quot;Hold to Leave&quot; button, &quot;Never Mind&quot; text action.
+
+## Motion spec
+Pattern: live countdown + hold-to-confirm.
+- Timer: digits flip down every second (split-flap style: top half folds down, 200ms) with the seconds digits always animating.
+- Hold to Leave: touch-down switches the label to &quot;Keep Holding...&quot; (150ms); a pink fill sweeps left to right (~1.5s); releasing early snaps the fill back (200ms).
+- Complete: button flashes white and swaps to &quot;Done&quot; with a check (150ms), holds 400ms, then the card slides down to dismiss (300ms).
+- The card breathes very subtly (background gradient luminance +-5%, 4s) so the screen never feels frozen during the countdown.
+
+## Calibration
+- The countdown keeps running through the hold - the time pressure is the design.
+- Pink/red fill (consequence color), not the app&#x27;s primary - leaving should feel costly.
+
+## Reduced motion
+Digits set without the flap animation; hold fill sweeps plainly.
+
+## Don&#x27;t miss
+- Split-flap digit animation is the hero detail - plain text swaps lose the LCD feel.
+- &quot;Never Mind&quot; is the quiet exit that keeps you in the session; style it as a tertiary action.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">live countdown + hold-to-confirm.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opal-hold-to-leave-button-interaction">original interaction</a> by Opal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Opal's \"Leave Early?\" friction screen - a big segmented countdown timer runs above a red-gradient card begging you to stay (\"Don't give up, there's a reason you started this.\"), and the only way out is holding \"Hold to Leave\" as a pink fill sweeps the button - while the timer digits keep flipping down.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark focus screen: large segmented-display countdown (29:31) in a rounded LCD-style window. Below: maroon gradient card with a running-figure icon, \"Leave Early?\" headline, guilt-trippy subline, \"Hold to Leave\" button, \"Never Mind\" text action.\n\n## Motion spec\nPattern: live countdown + hold-to-confirm.\n- Timer: digits flip down every second (split-flap style: top half folds down, 200ms) with the seconds digits always animating.\n- Hold to Leave: touch-down switches the label to \"Keep Holding...\" (150ms); a pink fill sweeps left to right (~1.5s); releasing early snaps the fill back (200ms).\n- Complete: button flashes white and swaps to \"Done\" with a check (150ms), holds 400ms, then the card slides down to dismiss (300ms).\n- The card breathes very subtly (background gradient luminance +-5%, 4s) so the screen never feels frozen during the countdown.\n\n## Calibration\n- The countdown keeps running through the hold - the time pressure is the design.\n- Pink/red fill (consequence color), not the app's primary - leaving should feel costly.\n\n## Reduced motion\nDigits set without the flap animation; hold fill sweeps plainly.\n\n## Don't miss\n- Split-flap digit animation is the hero detail - plain text swaps lose the LCD feel.\n- \"Never Mind\" is the quiet exit that keeps you in the session; style it as a tertiary action."</script>
+</body></html>

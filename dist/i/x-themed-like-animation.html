@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X Themed Like Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>X Themed Like Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/x-themed-like-animation"><b>X</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-themed-like-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-themed-like-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: X&#x27;s themed like - tapping the heart on a themed post fires a custom burst: the heart fills red, the like count ticks up, and a spray of tiny themed particles erupts from the icon and drifts before dissolving.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220a5c94624b77548fb7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220a5c94624b77548fb7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-x-themed-like-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: X&#x27;s themed like - tapping the heart on a themed post fires a custom burst: the heart fills red, the like count ticks up, and a spray of tiny themed particles erupts from the icon and drifts before dissolving.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark post detail: author header, post text (&quot;Tap like for a little SpaceX themed surprise...&quot;), engagement row (reply, repost, heart + count, views, bookmark), replies below.
+
+## Motion spec
+Pattern: tap-triggered icon celebration, ~1s.
+- Touch-down: the heart scales to 0.8 (80ms), then springs to filled red (scale 1 -&gt; 1.3 -&gt; 1, spring ~450/18, 250ms) - the classic pop.
+- Burst: a ring of ~10 small particles (mix of dots and themed shapes) erupts radially from the heart (travel 24-40px, 400ms, ease-out) with a quick concentric ring flash (scale 0 -&gt; 1.6, fade, 300ms).
+- Particles drift upward slightly as they fade (translateY -8px over the last 200ms).
+- The count ticks up with a small flip (rotateX 90 -&gt; 0, 200ms) in tabular-nums.
+- Unlike: heart springs back to outline (200ms), no particles.
+
+## Calibration
+- The whole show is under a second - like animations must survive being triggered 20 times in a session.
+- Particle shapes carry the theme (rockets/stars for SpaceX); the motion system is identical to the default like.
+
+## Reduced motion
+Heart fills with a 150ms fade; count sets instantly.
+
+## Don&#x27;t miss
+- The ring flash sits behind the heart; particles in front.
+- The icon returns to its exact resting size - no lingering scale drift.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-triggered icon celebration, ~1s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/x-themed-like-animation">original interaction</a> by X. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: X's themed like - tapping the heart on a themed post fires a custom burst: the heart fills red, the like count ticks up, and a spray of tiny themed particles erupts from the icon and drifts before dissolving.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark post detail: author header, post text (\"Tap like for a little SpaceX themed surprise...\"), engagement row (reply, repost, heart + count, views, bookmark), replies below.\n\n## Motion spec\nPattern: tap-triggered icon celebration, ~1s.\n- Touch-down: the heart scales to 0.8 (80ms), then springs to filled red (scale 1 -> 1.3 -> 1, spring ~450/18, 250ms) - the classic pop.\n- Burst: a ring of ~10 small particles (mix of dots and themed shapes) erupts radially from the heart (travel 24-40px, 400ms, ease-out) with a quick concentric ring flash (scale 0 -> 1.6, fade, 300ms).\n- Particles drift upward slightly as they fade (translateY -8px over the last 200ms).\n- The count ticks up with a small flip (rotateX 90 -> 0, 200ms) in tabular-nums.\n- Unlike: heart springs back to outline (200ms), no particles.\n\n## Calibration\n- The whole show is under a second - like animations must survive being triggered 20 times in a session.\n- Particle shapes carry the theme (rockets/stars for SpaceX); the motion system is identical to the default like.\n\n## Reduced motion\nHeart fills with a 150ms fade; count sets instantly.\n\n## Don't miss\n- The ring flash sits behind the heart; particles in front.\n- The icon returns to its exact resting size - no lingering scale drift."</script>
+</body></html>

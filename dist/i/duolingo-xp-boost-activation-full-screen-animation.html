@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo XP Boost Activation Full Screen Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo XP Boost Activation Full Screen Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-xp-boost-activation-full-screen-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-xp-boost-activation-full-screen-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-xp-boost-activation-full-screen-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s XP Boost activation screen - a full-screen purple takeover where the x2 potion illustration springs up from below with overshoot, soft bokeh particles drift upward behind it, and the activation copy + CONTINUE button settle in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868e986fc386bd77fde1b4a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868e986fc386bd77fde1b4a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-xp-boost-activation-full-screen-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s XP Boost activation screen - a full-screen purple takeover where the x2 potion illustration springs up from below with overshoot, soft bokeh particles drift upward behind it, and the activation copy + CONTINUE button settle in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen purple (Duolingo&#x27;s brand purple, subtle radial vignette). Center: x2 potion flask illustration. Below: &quot;XP Boost activated! Earn double XP for the next 15 minutes.&quot; with the time span highlighted. CONTINUE button pinned to the bottom safe area.
+
+## Motion spec
+Pattern: reward entrance + ambient loop.
+- Background fades from black to purple (300ms).
+- Potion springs in from below center (translateY 80 -&gt; 0, scale 0.6 -&gt; 1, spring ~260/16, visible overshoot, ~600ms).
+- Copy block fades up 150ms after the potion starts; the &quot;15 minutes&quot; highlight colors in with a short wipe (200ms).
+- CONTINUE slides up (300ms, ease-out) last.
+- Ambient loop: translucent bokeh circles (6-10, sizes 20-60px, white/pink, low opacity) drift slowly upward across the screen (10-16s per pass, staggered, wrap-around); the potion breathes (scale +-2%, 3s).
+
+## Calibration
+- The potion&#x27;s overshoot is the reward moment - let it visibly bounce once.
+- Bokeh is background texture: never sharper than 60% opacity, never fast.
+
+## Reduced motion
+Elements fade into place (300ms); bokeh frozen.
+
+## Don&#x27;t miss
+- The vignette darkens the edges - the potion sits in a pool of light.
+- Highlight wipe on the time span, not the whole sentence.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">reward entrance + ambient loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-xp-boost-activation-full-screen-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's XP Boost activation screen - a full-screen purple takeover where the x2 potion illustration springs up from below with overshoot, soft bokeh particles drift upward behind it, and the activation copy + CONTINUE button settle in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen purple (Duolingo's brand purple, subtle radial vignette). Center: x2 potion flask illustration. Below: \"XP Boost activated! Earn double XP for the next 15 minutes.\" with the time span highlighted. CONTINUE button pinned to the bottom safe area.\n\n## Motion spec\nPattern: reward entrance + ambient loop.\n- Background fades from black to purple (300ms).\n- Potion springs in from below center (translateY 80 -> 0, scale 0.6 -> 1, spring ~260/16, visible overshoot, ~600ms).\n- Copy block fades up 150ms after the potion starts; the \"15 minutes\" highlight colors in with a short wipe (200ms).\n- CONTINUE slides up (300ms, ease-out) last.\n- Ambient loop: translucent bokeh circles (6-10, sizes 20-60px, white/pink, low opacity) drift slowly upward across the screen (10-16s per pass, staggered, wrap-around); the potion breathes (scale +-2%, 3s).\n\n## Calibration\n- The potion's overshoot is the reward moment - let it visibly bounce once.\n- Bokeh is background texture: never sharper than 60% opacity, never fast.\n\n## Reduced motion\nElements fade into place (300ms); bokeh frozen.\n\n## Don't miss\n- The vignette darkens the edges - the potion sits in a pool of light.\n- Highlight wipe on the time span, not the whole sentence."</script>
+</body></html>

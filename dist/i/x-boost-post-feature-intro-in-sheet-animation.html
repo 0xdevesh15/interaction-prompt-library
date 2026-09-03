@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X Boost Post Feature Intro in Sheet Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>X Boost Post Feature Intro in Sheet Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/x-boost-post-feature-intro-in-sheet-animation"><b>X</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-boost-post-feature-intro-in-sheet-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-boost-post-feature-intro-in-sheet-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: X&#x27;s &quot;Boost Post&quot; sheet - the white bottom sheet auto-cycles through boost tiers (views range + price: &quot;8K - 15K views / 0&quot;, &quot;15K - 30K views / 00&quot;...), each tier pill highlighting in turn, then a live preview of your post materializes inside the sheet with a &quot;Boosted&quot; label and its engagement counts ticking upward.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a265e92fc14746995bfcc57/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a265e92fc14746995bfcc57/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-x-boost-post-feature-intro-in-sheet-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: X&#x27;s &quot;Boost Post&quot; sheet - the white bottom sheet auto-cycles through boost tiers (views range + price: &quot;8K - 15K views / 0&quot;, &quot;15K - 30K views / 00&quot;...), each tier pill highlighting in turn, then a live preview of your post materializes inside the sheet with a &quot;Boosted&quot; label and its engagement counts ticking upward.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White rounded bottom sheet over a dimmed timeline: &quot;Boost Post&quot; title + close X, a stack of tier rows (views range left, price right), explainer copy (&quot;Select your boost tier and watch your post go viral. Boosted posts will be labelled as boosted.&quot;), black Continue button.
+
+## Motion spec
+Pattern: auto-cycling showcase + live preview, ~8s loop.
+- Tier cycle: each tier row slides into focus (the stack translates vertically, 300ms, ease-out), the active row gets a filled pill treatment and its price stays pinned right; ~1.2s per tier.
+- Preview reveal: after the cycle, the tier stack collapses upward (250ms) and the user&#x27;s actual post card rises into the sheet (translateY 24px -&gt; 0, fade, 350ms, ease-out).
+- On the preview: a &quot;Boosted&quot; chip fades in above the post (200ms), then the engagement counts tick up (likes, views - 600ms ease-out, tabular-nums) with the heart filling red.
+- Then the loop resets: preview slides out, tier stack returns.
+
+## Calibration
+- The preview uses the user&#x27;s real post content - a generic mock kills the pitch.
+- Count tick-ups are modest and plausible (hundreds, not millions).
+
+## Reduced motion
+Tiers crossfade; preview fades in; counts set instantly.
+
+## Don&#x27;t miss
+- The sheet never grows past its detent - content swaps inside a fixed frame.
+- Explainer copy + Continue stay pinned at the bottom through every state.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-cycling showcase + live preview, ~8s loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/x-boost-post-feature-intro-in-sheet-animation">original interaction</a> by X. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: X's \"Boost Post\" sheet - the white bottom sheet auto-cycles through boost tiers (views range + price: \"8K - 15K views / 0\", \"15K - 30K views / 00\"...), each tier pill highlighting in turn, then a live preview of your post materializes inside the sheet with a \"Boosted\" label and its engagement counts ticking upward.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite rounded bottom sheet over a dimmed timeline: \"Boost Post\" title + close X, a stack of tier rows (views range left, price right), explainer copy (\"Select your boost tier and watch your post go viral. Boosted posts will be labelled as boosted.\"), black Continue button.\n\n## Motion spec\nPattern: auto-cycling showcase + live preview, ~8s loop.\n- Tier cycle: each tier row slides into focus (the stack translates vertically, 300ms, ease-out), the active row gets a filled pill treatment and its price stays pinned right; ~1.2s per tier.\n- Preview reveal: after the cycle, the tier stack collapses upward (250ms) and the user's actual post card rises into the sheet (translateY 24px -> 0, fade, 350ms, ease-out).\n- On the preview: a \"Boosted\" chip fades in above the post (200ms), then the engagement counts tick up (likes, views - 600ms ease-out, tabular-nums) with the heart filling red.\n- Then the loop resets: preview slides out, tier stack returns.\n\n## Calibration\n- The preview uses the user's real post content - a generic mock kills the pitch.\n- Count tick-ups are modest and plausible (hundreds, not millions).\n\n## Reduced motion\nTiers crossfade; preview fades in; counts set instantly.\n\n## Don't miss\n- The sheet never grows past its detent - content swaps inside a fixed frame.\n- Explainer copy + Continue stay pinned at the bottom through every state."</script>
+</body></html>

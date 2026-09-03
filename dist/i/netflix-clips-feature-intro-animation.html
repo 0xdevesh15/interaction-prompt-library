@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Netflix Clips Feature Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Netflix Clips Feature Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/netflix-clips-feature-intro-animation"><b>Netflix</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/netflix-clips-feature-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/netflix-clips-feature-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Netflix&#x27;s Clips intro card - a dark promo card with bold stacked copy (&quot;Scroll. Watch. Obsess. Repeat.&quot;) beside a 3D phone render whose screen cycles neon gradient glows (magenta, amber, violet) with a subtle tilt, on an endless ambient loop.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69ee166280df8787f2df3fde/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69ee166280df8787f2df3fde/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-netflix-clips-feature-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Netflix&#x27;s Clips intro card - a dark promo card with bold stacked copy (&quot;Scroll. Watch. Obsess. Repeat.&quot;) beside a 3D phone render whose screen cycles neon gradient glows (magenta, amber, violet) with a subtle tilt, on an endless ambient loop.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark streaming home: &quot;NEW&quot; eyebrow, 4-line stacked headline left, &quot;Watch Clips&quot; button, and a 3D phone render right showing a glowing vertical screen. The card background is near-black with a faint neon wash matching the phone&#x27;s current glow color.
+
+## Motion spec
+Pattern: ambient loop.
+- Phone glow: the screen&#x27;s neon gradient cycles colors (magenta -&gt; amber -&gt; violet -&gt; magenta, ~8s full cycle, smooth interpolation).
+- Phone tilt: slow rocking (rotateY +-6deg, rotateX +-2deg, 6s ease-in-out) so the glow catches different angles.
+- Background wash: the card&#x27;s ambient tint follows the glow color at low saturation (synced, ~30% intensity).
+- A small light dot occasionally drifts across the phone screen (like a scroll indicator, 2s transit, every ~5s).
+- No interaction; loop is seamless.
+
+## Calibration
+- Color cycle is the motion - the tilt is secondary texture.
+- The glow spills onto the card around the phone (bloom), which is what makes it read neon.
+
+## Reduced motion
+Static phone with one glow color; no cycle, no tilt.
+
+## Don&#x27;t miss
+- Headline and button never animate - contrast between still type and living render.
+- The phone&#x27;s glow reflects on its own bezel edges.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/netflix-clips-feature-intro-animation">original interaction</a> by Netflix. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Netflix's Clips intro card - a dark promo card with bold stacked copy (\"Scroll. Watch. Obsess. Repeat.\") beside a 3D phone render whose screen cycles neon gradient glows (magenta, amber, violet) with a subtle tilt, on an endless ambient loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark streaming home: \"NEW\" eyebrow, 4-line stacked headline left, \"Watch Clips\" button, and a 3D phone render right showing a glowing vertical screen. The card background is near-black with a faint neon wash matching the phone's current glow color.\n\n## Motion spec\nPattern: ambient loop.\n- Phone glow: the screen's neon gradient cycles colors (magenta -> amber -> violet -> magenta, ~8s full cycle, smooth interpolation).\n- Phone tilt: slow rocking (rotateY +-6deg, rotateX +-2deg, 6s ease-in-out) so the glow catches different angles.\n- Background wash: the card's ambient tint follows the glow color at low saturation (synced, ~30% intensity).\n- A small light dot occasionally drifts across the phone screen (like a scroll indicator, 2s transit, every ~5s).\n- No interaction; loop is seamless.\n\n## Calibration\n- Color cycle is the motion - the tilt is secondary texture.\n- The glow spills onto the card around the phone (bloom), which is what makes it read neon.\n\n## Reduced motion\nStatic phone with one glow color; no cycle, no tilt.\n\n## Don't miss\n- Headline and button never animate - contrast between still type and living render.\n- The phone's glow reflects on its own bezel edges."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cobot Get Started Value Props Carousel Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Cobot Get Started Value Props Carousel Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cobot-get-started-value-props-carousel-swipe-interaction"><b>Cobot</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cobot-get-started-value-props-carousel-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cobot-get-started-value-props-carousel-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: an onboarding value-prop carousel - each slide pairs a floating 3D icon + mini app screenshot with a title, and swiping between slides crossfades the full background tint (blue, pink, amber) while cards snap with spring physics.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686412cb6ff282d894a83978/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686412cb6ff282d894a83978/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cobot-get-started-value-props-carousel-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: an onboarding value-prop carousel - each slide pairs a floating 3D icon + mini app screenshot with a title, and swiping between slides crossfades the full background tint (blue, pink, amber) while cards snap with spring physics.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light onboarding screen: circular 3D icon (glossy, floating with soft shadow) top center, slide title + subline, a mini phone screenshot of the feature mid-frame, page dots, primary CTA pinned bottom. Background is a near-white tint of the slide&#x27;s accent color.
+
+## Motion spec
+Pattern: gesture carousel with color sync + icon float.
+- Icon idles with a slow float (translateY +-6px, 3s ease-in-out) and a barely-there rotation (+-2deg).
+- Swipe: slide content tracks 1:1; on release snaps to the nearest slide (spring ~280/24).
+- Background tint interpolates between slide accent colors by drag progress (live, not post-snap); the 3D icon also swaps: outgoing scales 1 -&gt; 0.6 + fades (200ms), incoming scales 0.6 -&gt; 1 with spring overshoot (300/18) starting at 50% crossing.
+- Mini screenshot parallaxes at 0.85x drag speed; title/subline crossfade with a 6px vertical shift (200ms).
+- Page dots: active dot is a pill; progress-driven width.
+
+## Calibration
+- Two motion layers must stay in sync: color (continuous) and icon swap (discrete at 50%).
+- The idle float pauses during drags, resumes after settle.
+
+## Reduced motion
+Slides swap with a 200ms crossfade; icons static; background switches after settle.
+
+## Don&#x27;t miss
+- Icon shadow floats with the icon - shadow blur grows as the icon rises.
+- Accent color appears in exactly three places: background tint, icon, active dot.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gesture carousel with color sync + icon float.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cobot-get-started-value-props-carousel-swipe-interaction">original interaction</a> by Cobot. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: an onboarding value-prop carousel - each slide pairs a floating 3D icon + mini app screenshot with a title, and swiping between slides crossfades the full background tint (blue, pink, amber) while cards snap with spring physics.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight onboarding screen: circular 3D icon (glossy, floating with soft shadow) top center, slide title + subline, a mini phone screenshot of the feature mid-frame, page dots, primary CTA pinned bottom. Background is a near-white tint of the slide's accent color.\n\n## Motion spec\nPattern: gesture carousel with color sync + icon float.\n- Icon idles with a slow float (translateY +-6px, 3s ease-in-out) and a barely-there rotation (+-2deg).\n- Swipe: slide content tracks 1:1; on release snaps to the nearest slide (spring ~280/24).\n- Background tint interpolates between slide accent colors by drag progress (live, not post-snap); the 3D icon also swaps: outgoing scales 1 -> 0.6 + fades (200ms), incoming scales 0.6 -> 1 with spring overshoot (300/18) starting at 50% crossing.\n- Mini screenshot parallaxes at 0.85x drag speed; title/subline crossfade with a 6px vertical shift (200ms).\n- Page dots: active dot is a pill; progress-driven width.\n\n## Calibration\n- Two motion layers must stay in sync: color (continuous) and icon swap (discrete at 50%).\n- The idle float pauses during drags, resumes after settle.\n\n## Reduced motion\nSlides swap with a 200ms crossfade; icons static; background switches after settle.\n\n## Don't miss\n- Icon shadow floats with the icon - shadow blur grows as the icon rises.\n- Accent color appears in exactly three places: background tint, icon, active dot."</script>
+</body></html>

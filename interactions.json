@@ -5080,5 +5080,2035 @@
    "loop": "no"
   },
   "prompt": "Rebuild this interaction 1:1: \"A calendar of your life\" - a Life in Weeks card: a grid of 4,680 tiny week-cells (90 years) that fills as you drag an age slider. Cells color by life stage (Childhood blue, School cyan, Career purple, Retirement orange), with stats (Weeks lived / Weeks remaining / Life elapsed %) and a stage legend; dragging scrubs the fill in a wave and the numbers count up (0 -> 83.6% elapsed).\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve, canvas/shader notes are perf guidance only; map every value to your framework and animation library of choice.\n\n## Scene\nCard: age slider; the week grid (rows of years, 52 cells per row); stats row (Weeks lived / Weeks remaining / Life elapsed %); stage legend (Childhood blue, School cyan, Career purple, Retirement orange); a cursor dot marks the current week on the grid edge.\n\n## Motion spec\nPattern: scrub-driven fill.\n- Drag: grid fills row-by-row 1:1 with the slider - cells flip from bare dots to their stage color in a wave; counters tween (300ms, tabular-nums) to e.g. 1,456 lived / 3,224 remaining / 31.1%.\n- Stages color by age ranges: blue childhood block, cyan school, purple career dominating mid-life, orange retirement column at high ages.\n- Current-week marker dot sits at the fill frontier.\n- Scrubbing back and forth re-paints cells cell-by-cell in both directions.\n\n## Calibration\n- Fill is 1:1 with the drag - the wave re-paints as fast as the finger moves; no tweening behind.\n- Counters tween 300ms and round cleanly; they lag the grid slightly (numbers settle after cells).\n- Cells are tiny dots with even gaps; the stage color blocks must read as eras, not noise.\n\n## Reduced motion\nGrid fills in row chunks (opacity steps) as the slider moves; counters update directly.\n\n## Don't miss\n- 4,680 cells means canvas or optimized rendering - 4,680 DOM nodes will not scrub smoothly.\n- The wave re-paint works in BOTH directions (scrubbing down unpaints cell-by-cell).\n- The current-week marker rides the fill frontier - the \"you are here\" of the piece."
+ },
+ {
+  "id": "60fps:airbnb-guest-favorite-icon-animation",
+  "source": "60fps",
+  "slug": "airbnb-guest-favorite-icon-animation",
+  "title": "Airbnb Guest Favorite Icon Animation",
+  "category": "Animation",
+  "desc": "An elegant entry animation for Airbnb's 'Guest favorite' badge, featuring staggered scaling laurels and fading text.",
+  "author": "Airbnb",
+  "authorUrl": "https://60fps.design/shots/airbnb-guest-favorite-icon-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/airbnb-guest-favorite-icon-animation",
+  "pageUrl": "https://60fps.design/shots/airbnb-guest-favorite-icon-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23cd7ce6c42e74b4947/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23cd7ce6c42e74b4947/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-airbnb-guest-favorite-icon-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Airbnb's \"Guest favorite\" badge entry on a listing page - after the title block loads, the rating row assembles piece by piece: stars fade in, two laurel branches scale up in a stagger, and the \"Guest favorite\" label fades in between them.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "choreographed entrance on content load."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Airbnb's \"Guest favorite\" badge entry on a listing page - after the title block loads, the rating row assembles piece by piece: stars fade in, two laurel branches scale up in a stagger, and the \"Guest favorite\" label fades in between them.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMobile listing page: hero photo, listing title, then a stats row with three groups - \"4.99\" + 5 stars, a laurel badge with \"Guest favorite\", \"83 Reviews\". Initially the title sits over three pulsing placeholder dots.\n\n## Motion spec\nPattern: choreographed entrance on content load.\n- Placeholder: three dots pulse in sequence (~800ms loop) while content loads.\n- Stats row fades up as a block (opacity 0 -> 1, translateY 8px -> 0, 300ms, ease-out).\n- Laurels: left branch scales 0 -> 1 from its inner anchor (spring ~260/18, ~350ms), right branch follows 90ms later, mirrored.\n- \"Guest favorite\" label fades in between the laurels (150ms, after both branches land).\n- Rating number + stars and review count fade in with the same timing as the block, no extra fanfare.\n\n## Calibration\n- The laurels are the moment - their stagger (90ms) and spring softness carry the \"award\" feeling.\n- Everything else is a quiet fade; the badge gets the only spring.\n\n## Reduced motion\nRow fades in complete (200ms), no laurel scale, no stagger.\n\n## Don't miss\n- Laurels scale from their inner tips (near the label), not their centers.\n- The loading dots are vertically centered where the stats row will land - no layout jump on arrival."
+ },
+ {
+  "id": "60fps:airbnb-listing-onboarding-amenities-home-animation",
+  "source": "60fps",
+  "slug": "airbnb-listing-onboarding-amenities-home-animation",
+  "title": "Airbnb Listing Onboarding Amenities Home Animation",
+  "category": "Animation",
+  "desc": "A looping, isometric 3D illustration on an onboarding screen featuring subtle animations like a spinning ceiling fan and swaying plants.",
+  "author": "Airbnb",
+  "authorUrl": "https://60fps.design/shots/airbnb-listing-onboarding-amenities-home-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/airbnb-listing-onboarding-amenities-home-animation",
+  "pageUrl": "https://60fps.design/shots/airbnb-listing-onboarding-amenities-home-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5b0f164c141d9e46c/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5b0f164c141d9e46c/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-airbnb-listing-onboarding-amenities-home-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Airbnb host onboarding step 2 (\"Make your place stand out\") - a looping isometric 3D cutaway of a furnished home where small idle motions run continuously: the ceiling fan spins, plants sway, sunlight patches drift.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "looping idle micro-motions inside a still illustration."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Airbnb host onboarding step 2 (\"Make your place stand out\") - a looping isometric 3D cutaway of a furnished home where small idle motions run continuously: the ceiling fan spins, plants sway, sunlight patches drift.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOnboarding screen: isometric dollhouse cutaway (two floors, stairs, furniture, plants, ceiling fan) rendered soft and warm, floating over white. Step label \"Step 2\", headline, body copy, Back / Next footer with a progress bar.\n\n## Motion spec\nPattern: looping idle micro-motions inside a still illustration.\n- Ceiling fan: continuous rotation (~2s per revolution, linear, no easing).\n- Plants: gentle sway (rotate +-2deg, ~3s ease-in-out, alternating phase per plant).\n- Ambient: a soft light/shadow drift across the floor (~6s cycle, opacity 0.1 -> 0.2).\n- Illustration holds position - no parallax, no camera move. Loop is seamless and indefinite.\n\n## Calibration\n- Motions are ambient, not attention-seeking: small amplitudes, slow periods, nothing syncs with anything else.\n- The cutaway stays perfectly still; only interior elements move.\n\n## Reduced motion\nStatic illustration; all loops stop.\n\n## Don't miss\n- The fan blur reads at any speed - fake it with opacity layers if rotation is expensive.\n- Stagger plant phases so the room never moves in unison."
+ },
+ {
+  "id": "60fps:airbnb-listing-onboarding-finish-home-animation",
+  "source": "60fps",
+  "slug": "airbnb-listing-onboarding-finish-home-animation",
+  "title": "Airbnb Listing Onboarding Finish Home Animation",
+  "category": "Animation",
+  "desc": "A delightful 3D isometric illustration of a house closing up its roof and walls to represent finishing and publishing a listing.",
+  "author": "Airbnb",
+  "authorUrl": "https://60fps.design/shots/airbnb-listing-onboarding-finish-home-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/airbnb-listing-onboarding-finish-home-animation",
+  "pageUrl": "https://60fps.design/shots/airbnb-listing-onboarding-finish-home-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5b0f164c141d9e464/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5b0f164c141d9e464/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-airbnb-listing-onboarding-finish-home-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Airbnb host onboarding step 3 (\"Finish up and publish\") - an isometric 3D house that starts as an open cutaway and closes itself up: the roof sections lower and lock, the walls seal, and trees pop in around the finished home.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "one-shot build sequence, ~2.5s total."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Airbnb host onboarding step 3 (\"Finish up and publish\") - an isometric 3D house that starts as an open cutaway and closes itself up: the roof sections lower and lock, the walls seal, and trees pop in around the finished home.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSame onboarding layout as the other steps: illustration top, \"Step 3\" + headline + copy, Back / Next footer. The illustration begins as the open two-story cutaway and ends as a closed house with dark gabled roofs, solar panels, and greenery.\n\n## Motion spec\nPattern: one-shot build sequence, ~2.5s total.\n- Phase 1 (0-600ms): upper walls pivot up from the floor plate and seal (rotateX -90deg -> 0, ease-out).\n- Phase 2 (500-1200ms): roof sections lower from above with a soft settle (translateY -60 -> 0 with a small 4px overshoot, spring ~200/20); skylights/solar panels fade in on the roof.\n- Phase 3 (1100-1800ms): trees and shrubs pop in around the house (scale 0 -> 1, spring ~300/16, 60ms stagger, random order).\n- Settle: house sits still; a faint shadow grows under the structure as it completes (300ms).\n\n## Calibration\n- The roof landing needs the small overshoot - a plain slide reads as UI, a settle reads as weight.\n- Trees popping last is the reward beat; keep the 60ms stagger tight.\n\n## Reduced motion\nCut to the finished house with a 300ms crossfade.\n\n## Don't miss\n- Pivots use the floor edge as the hinge, not element centers.\n- Shadow appears only after the structure closes - it grounds the final state."
+ },
+ {
+  "id": "60fps:airbnb-listing-onboarding-setup-home-animation",
+  "source": "60fps",
+  "slug": "airbnb-listing-onboarding-setup-home-animation",
+  "title": "Airbnb Listing Onboarding Setup Home Animation",
+  "category": "Animation",
+  "desc": "A staggered 3D isometric house assembly animation during the Airbnb host onboarding flow.",
+  "author": "Airbnb",
+  "authorUrl": "https://60fps.design/shots/airbnb-listing-onboarding-setup-home-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/airbnb-listing-onboarding-setup-home-animation",
+  "pageUrl": "https://60fps.design/shots/airbnb-listing-onboarding-setup-home-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5350c08ef72ea68e5/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5350c08ef72ea68e5/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-airbnb-listing-onboarding-setup-home-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Airbnb host onboarding step 1 (\"Tell us about your place\") - an isometric 3D house assembles from nothing: floor slab slides in, walls rise, the staircase and upper floor stack on, roof rails and furniture pop into place, staggered like a model building itself.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "one-shot assembly sequence, ~3s total."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Airbnb host onboarding step 1 (\"Tell us about your place\") - an isometric 3D house assembles from nothing: floor slab slides in, walls rise, the staircase and upper floor stack on, roof rails and furniture pop into place, staggered like a model building itself.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOnboarding layout (illustration top, Step 1 + headline + copy, Back / Next footer). The illustration stage starts empty and ends as the full open cutaway: two floors, staircase, railings, furniture, plants.\n\n## Motion spec\nPattern: one-shot assembly sequence, ~3s total.\n- Floor slab: slides in from the left and drops flat (translateX -120 -> 0 with rotate, 500ms, ease-out).\n- Ground-floor walls: rise from the slab edges (scaleY 0 -> 1 from floor anchor, 400ms, 100ms stagger).\n- Upper floor + staircase: stack down from above (translateY -40 -> 0, 350ms, ease-out, overlapping the wall finish by 100ms).\n- Railings + furniture: pop in room by room (scale 0.6 -> 1 with spring ~280/20, 70ms stagger, back rooms first).\n- Plants last: small scale-pop with the same spring, offset so they land as the final beat.\n- Loop: after assembly completes, hold ~2s, then the sequence can restart for an ambient loop (or hold static if the screen exits on tap).\n\n## Calibration\n- Every element enters along the axis it would physically assemble on - walls rise, floors drop, furniture pops.\n- The 70ms stagger cadence is metronomic; randomize order, not interval.\n\n## Reduced motion\nCut to the assembled house, 300ms fade.\n\n## Don't miss\n- Nothing floats: every piece ends in contact with the structure.\n- Stairs arrive with the upper floor as one unit."
+ },
+ {
+  "id": "60fps:airbnb-rare-find-pop-animation",
+  "source": "60fps",
+  "slug": "airbnb-rare-find-pop-animation",
+  "title": "Airbnb Rare Find Pop Animation",
+  "category": "Animation",
+  "desc": "A playful spring-loaded badge expansion accompanied by a subtle burst of sparkle particles to highlight a rare find.",
+  "author": "Airbnb",
+  "authorUrl": "https://60fps.design/shots/airbnb-rare-find-pop-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/airbnb-rare-find-pop-animation",
+  "pageUrl": "https://60fps.design/shots/airbnb-rare-find-pop-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6767ff93a080a6ad1602a429/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6767ff93a080a6ad1602a429/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-airbnb-rare-find-pop-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Airbnb's \"Rare find\" badge - a small pill (\"Rare find! This place is usually booked\") that expands out of a perk row with a springy pop and a subtle sparkle burst, drawing the eye without breaking the page's calm.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "one-shot attention pop, triggers when the perk scrolls into view."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Airbnb's \"Rare find\" badge - a small pill (\"Rare find! This place is usually booked\") that expands out of a perk row with a springy pop and a subtle sparkle burst, drawing the eye without breaking the page's calm.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nListing page mid-section: perks list (\"Enjoy the pool and hot tub\", \"Beautiful and walkable\"). The badge appears attached to the second perk row, overlapping the row's right side with a quote-mark ornament.\n\n## Motion spec\nPattern: one-shot attention pop, triggers when the perk scrolls into view.\n- Badge scales 0 -> 1 from its left anchor (spring ~340/17, ~450ms) with a visible overshoot to ~1.08.\n- At peak scale (~250ms in), a sparkle burst: 4-6 four-point star particles emit from the badge's edges (translate 12-28px outward, scale 0 -> 1 -> 0, 400ms, staggered 40ms, opacity out at the end).\n- Badge settles to rest size; text inside stays static throughout.\n- No loop - it fires once per page view.\n\n## Calibration\n- The overshoot is the whole personality: firm spring, one bounce, no wobble tail.\n- Sparkles are a garnish (small, quick, gone in under half a second).\n\n## Reduced motion\nBadge fades in at final size (200ms), no sparkles.\n\n## Don't miss\n- Scale origin is the badge's left edge near the perk icon, so it grows out of the row.\n- The pill overlaps the row boundary slightly - it's a sticker, not an inline chip."
+ },
+ {
+  "id": "60fps:apple-app-store-awards-2025-video-animation",
+  "source": "60fps",
+  "slug": "apple-app-store-awards-2025-video-animation",
+  "title": "Apple App Store Awards 2025 Video Animation",
+  "category": "Animation",
+  "desc": "An embedded video player inside an App Store editorial card playing a dynamic, fast-paced 3D showcase of award-winning apps.",
+  "author": "Apple",
+  "authorUrl": "https://60fps.design/shots/apple-app-store-awards-2025-video-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/apple-app-store-awards-2025-video-animation",
+  "pageUrl": "https://60fps.design/shots/apple-app-store-awards-2025-video-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6933fc5e7d19d0702825d98d/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6933fc5e7d19d0702825d98d/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-apple-app-store-awards-2025-video-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this component 1:1: an App Store editorial card (\"App Store Awards 2025\") whose header is an autoplaying inline video - a fast-paced 3D showcase cycling through award-winning app artwork - with mute and close controls floating on the video's top corner.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "ambient inline media."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this component 1:1: an App Store editorial card (\"App Store Awards 2025\") whose header is an autoplaying inline video - a fast-paced 3D showcase cycling through award-winning app artwork - with mute and close controls floating on the video's top corner.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nEditorial card: video header (16:9-ish, fills card width), white title block overlapping the video's bottom edge with the Apple logo + \"App Store Awards 2025\", then article body text below. Video controls (speaker mute toggle, X close) sit top-right on the video in frosted circular buttons.\n\n## Motion spec\nPattern: ambient inline media.\n- Video autoplays muted on scroll into view (threshold ~50%), pauses when scrolled out.\n- Controls fade in on card tap (150ms) and auto-hide after 3s of no interaction.\n- The card itself is still; all motion lives inside the video - the showcase edit inside uses quick 400-600ms cuts between 3D app icon vignettes on a deep blue gradient stage.\n- Close (X): card collapses to a compact non-video state, 300ms height animation, ease-in-out.\n\n## Calibration\n- The video is content, not chrome - never add parallax or hover motion to the card around it.\n- Control buttons: 36px circles, frosted (backdrop blur), icon 14px, opacity 90%.\n\n## Reduced motion\nVideo shows its poster frame; play only on explicit tap.\n\n## Don't miss\n- Title block overlaps the video by ~20% of its height - that overlap is the editorial look.\n- Mute state persists across cards."
+ },
+ {
+  "id": "60fps:apple-games-header-carousel-swipe-interaction",
+  "source": "60fps",
+  "slug": "apple-games-header-carousel-swipe-interaction",
+  "title": "Apple Games Header Carousel Swipe Interaction",
+  "category": "Interaction",
+  "desc": "A smooth, springy horizontal carousel swipe interaction with dynamic background color crossfades matching each featured card.",
+  "author": "Apple",
+  "authorUrl": "https://60fps.design/shots/apple-games-header-carousel-swipe-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/apple-games-header-carousel-swipe-interaction",
+  "pageUrl": "https://60fps.design/shots/apple-games-header-carousel-swipe-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d71fe76d5c62e604913a/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d71fe76d5c62e604913a/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-apple-games-header-carousel-swipe-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Apple Games home header - a full-width feature carousel where swiping between cards crossfades the ENTIRE screen background to a color pulled from each card's artwork, with springy snap physics and a page indicator.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "gesture-driven carousel with ambient color sync."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Apple Games home header - a full-width feature carousel where swiping between cards crossfades the ENTIRE screen background to a color pulled from each card's artwork, with springy snap physics and a page indicator.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark \"Home\" screen: large feature card (game artwork, category label, title, CTA button) filling the upper 2/3, \"Continue Playing\" row + \"Friends Are Playing\" below, tab bar. The screen's background tint is a blurred extension of the current card's art.\n\n## Motion spec\nPattern: gesture-driven carousel with ambient color sync.\n- Swipe: card tracks the finger 1:1 with slight rubber-band at edges (0.6x past bounds).\n- Release: snap to nearest card (spring ~280/24, ~350ms settle); adjacent cards peek ~8% from screen edges during the drag.\n- Background: as the card position crosses 50% between pages, the backdrop color crossfades (400ms, linear) to the incoming card's dominant color, sampled live during the drag (interpolate between both colors by drag progress).\n- Page indicator dots: active dot stretches into a pill (width animates with drag progress, not after).\n- Card content (art, title) parallaxes slightly: art moves at 0.9x card speed.\n\n## Calibration\n- The color crossfade is the star - it must track the drag continuously, not trigger after the snap.\n- Snap is firm and quiet; one settle, no bounce.\n\n## Reduced motion\nCards snap on release without tracking; background swaps with a 200ms fade after settle.\n\n## Don't miss\n- Background tint reaches the tab bar - the whole screen commits to the color.\n- The active dot's stretch is progress-driven, not a post-snap animation."
+ },
+ {
+  "id": "60fps:capwords-feature-sheet-card-pop-animation",
+  "source": "60fps",
+  "slug": "capwords-feature-sheet-card-pop-animation",
+  "title": "CapWords Feature Sheet Card Pop Animation",
+  "category": "Animation",
+  "desc": "A staggered spring-loaded card pop animation inside an onboarding bottom sheet.",
+  "author": "Capwords",
+  "authorUrl": "https://60fps.design/shots/capwords-feature-sheet-card-pop-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/capwords-feature-sheet-card-pop-animation",
+  "pageUrl": "https://60fps.design/shots/capwords-feature-sheet-card-pop-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe895fcb2a6516988e7350/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe895fcb2a6516988e7350/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-capwords-feature-sheet-card-pop-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: a feature bottom sheet (\"Scenario Memory Cards\") where illustrated memory cards pop in one by one with spring physics and assemble into a loose, rotated cluster above the sheet's title.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "staggered spring entrance, fires when the sheet opens."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: a feature bottom sheet (\"Scenario Memory Cards\") where illustrated memory cards pop in one by one with spring physics and assemble into a loose, rotated cluster above the sheet's title.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBottom sheet over a dimmed screen: illustration stage top (empty at first), sheet title, short description, primary CTA (\"Try a Demo\"), small skip link. The stage ends with 4-5 cards in a casual cluster: each rotated a few degrees, overlapping like cards on a table.\n\n## Motion spec\nPattern: staggered spring entrance, fires when the sheet opens.\n- Sheet slides up (spring ~300/26, ~400ms) and dims the background to 40%.\n- Cards enter one at a time (120ms stagger): each scales 0.5 -> 1 with spring ~320/16 (visible overshoot), while rotating from 0deg to its final rest angle (-8deg..+10deg, fixed per card).\n- Each card also drifts from the stage center outward to its cluster position during the same spring - so cards feel dealt, not placed.\n- Title + description fade up (translateY 10 -> 0, 250ms) after the second card lands; CTA fades last (+120ms).\n\n## Calibration\n- Overshoot per card is generous (spring 320/16) - playful, not snappy.\n- Rest rotations are fixed constants per card index; the looseness is designed, not random per run.\n\n## Reduced motion\nSheet fades in with all cards in final positions (250ms).\n\n## Don't miss\n- Cards cast soft shadows on each other where they overlap - the stack has depth order.\n- The first card reads alone for a beat before the rest arrive."
+ },
+ {
+  "id": "60fps:capwords-intro-dots-animation",
+  "source": "60fps",
+  "slug": "capwords-intro-dots-animation",
+  "title": "CapWords Intro Dots Animation",
+  "category": "Animation",
+  "desc": "An elegant onboarding intro animation featuring a staggered grid-dot ripple that transitions into a springy card reveal and staggered text entry.",
+  "author": "Capwords",
+  "authorUrl": "https://60fps.design/shots/capwords-intro-dots-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/capwords-intro-dots-animation",
+  "pageUrl": "https://60fps.design/shots/capwords-intro-dots-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe895fcb2a6516988e733e/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe895fcb2a6516988e733e/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-capwords-intro-dots-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: an onboarding intro where a grid of faint dots ripples across the empty screen, then converges into a single memory card that springs into center stage, followed by staggered title text and a CTA.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "multi-stage intro sequence, ~2.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: an onboarding intro where a grid of faint dots ripples across the empty screen, then converges into a single memory card that springs into center stage, followed by staggered title text and a CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlank light screen. Phase 1: a regular dot grid (tiny circles, very low contrast) appears across the whole canvas. Phase 2: dots ripple and fade as one illustrated card (ice-cream photo, rounded corners) lands center. Phase 3: headline (\"We've prepared an example for you!\"), subline, and dark CTA button arrive.\n\n## Motion spec\nPattern: multi-stage intro sequence, ~2.5s.\n- Dots fade in with a radial ripple from screen center (each dot's delay = distance from center x 0.4ms, opacity 0 -> 0.35, 300ms).\n- Ripple collapses: dots scale down and fade in a reverse radial wave (400ms) as the card scales 0.3 -> 1 at center (spring ~280/18, slight overshoot, 10deg -> 0deg rotation settle).\n- Headline fades up (translateY 12 -> 0, 300ms) 150ms after the card lands; subline +100ms; CTA +120ms.\n- Sequence runs once on first open.\n\n## Calibration\n- The dot ripple is nearly subliminal - keep opacity under 0.4.\n- The card's rotation settle (a few degrees unwinding) gives it physicality; a straight scale feels corporate.\n\n## Reduced motion\nCard and text fade in together (300ms), no ripple.\n\n## Don't miss\n- Ripple timing is distance-based - center first, edges last.\n- The CTA is dark on light and arrives last; nothing competes with it."
+ },
+ {
+  "id": "60fps:cobot-get-started-value-props-carousel-swipe-interaction",
+  "source": "60fps",
+  "slug": "cobot-get-started-value-props-carousel-swipe-interaction",
+  "title": "Cobot Get Started Value Props Carousel Swipe Interaction",
+  "category": "Interaction",
+  "desc": "A smooth onboarding carousel featuring 3D animated icons, dynamic background color transitions, and springy card swipes.",
+  "author": "Cobot",
+  "authorUrl": "https://60fps.design/shots/cobot-get-started-value-props-carousel-swipe-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/cobot-get-started-value-props-carousel-swipe-interaction",
+  "pageUrl": "https://60fps.design/shots/cobot-get-started-value-props-carousel-swipe-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/686412cb6ff282d894a83978/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/686412cb6ff282d894a83978/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-cobot-get-started-value-props-carousel-swipe-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: an onboarding value-prop carousel - each slide pairs a floating 3D icon + mini app screenshot with a title, and swiping between slides crossfades the full background tint (blue, pink, amber) while cards snap with spring physics.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "gesture carousel with color sync + icon float."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: an onboarding value-prop carousel - each slide pairs a floating 3D icon + mini app screenshot with a title, and swiping between slides crossfades the full background tint (blue, pink, amber) while cards snap with spring physics.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight onboarding screen: circular 3D icon (glossy, floating with soft shadow) top center, slide title + subline, a mini phone screenshot of the feature mid-frame, page dots, primary CTA pinned bottom. Background is a near-white tint of the slide's accent color.\n\n## Motion spec\nPattern: gesture carousel with color sync + icon float.\n- Icon idles with a slow float (translateY +-6px, 3s ease-in-out) and a barely-there rotation (+-2deg).\n- Swipe: slide content tracks 1:1; on release snaps to the nearest slide (spring ~280/24).\n- Background tint interpolates between slide accent colors by drag progress (live, not post-snap); the 3D icon also swaps: outgoing scales 1 -> 0.6 + fades (200ms), incoming scales 0.6 -> 1 with spring overshoot (300/18) starting at 50% crossing.\n- Mini screenshot parallaxes at 0.85x drag speed; title/subline crossfade with a 6px vertical shift (200ms).\n- Page dots: active dot is a pill; progress-driven width.\n\n## Calibration\n- Two motion layers must stay in sync: color (continuous) and icon swap (discrete at 50%).\n- The idle float pauses during drags, resumes after settle.\n\n## Reduced motion\nSlides swap with a 200ms crossfade; icons static; background switches after settle.\n\n## Don't miss\n- Icon shadow floats with the icon - shadow blur grows as the icon rises.\n- Accent color appears in exactly three places: background tint, icon, active dot."
+ },
+ {
+  "id": "60fps:cred-feature-highlight-blurb-animation",
+  "source": "60fps",
+  "slug": "cred-feature-highlight-blurb-animation",
+  "title": "CRED Feature Highlight Blurb Animation",
+  "category": "Animation",
+  "desc": "A subtle looping pulse animation on a feature highlight badge to draw user attention.",
+  "author": "CRED",
+  "authorUrl": "https://60fps.design/shots/cred-feature-highlight-blurb-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/cred-feature-highlight-blurb-animation",
+  "pageUrl": "https://60fps.design/shots/cred-feature-highlight-blurb-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9b10a8c57042d46ce94/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9b10a8c57042d46ce94/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-cred-feature-highlight-blurb-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: a feature highlight pulse on CRED's home screen - one icon in a quiet grid of services gets a repeating soft glow + scale pulse to draw attention, while everything else stays perfectly still.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "looping attention pulse."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: a feature highlight pulse on CRED's home screen - one icon in a quiet grid of services gets a repeating soft glow + scale pulse to draw attention, while everything else stays perfectly still.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight fintech home: header (logo, avatar), \"PAYMENTS\" icon grid (4 columns of line icons + labels), a promo banner near the bottom, tab bar. One grid item (the highlighted feature) pulses.\n\n## Motion spec\nPattern: looping attention pulse.\n- The highlighted icon breathes: scale 1 -> 1.08 -> 1 over 1.6s, ease-in-out.\n- A soft accent-tinted glow (radial, behind the icon) fades in and out on the same 1.6s cycle, peak opacity ~0.5 at max scale.\n- Cycle repeats indefinitely with a 1s rest between pulses.\n- Nothing else on screen moves.\n\n## Calibration\n- Amplitude stays subtle (8% scale) - this is a nudge, not a notification badge.\n- The glow is what carries it; the scale is backup.\n\n## Reduced motion\nStatic icon with the glow held at 30% opacity, no pulsing.\n\n## Don't miss\n- Pulse timing never syncs with any other UI event - it idles independently.\n- The icon's label does not move; only the glyph + glow animate."
+ },
+ {
+  "id": "60fps:district-2025-theme-banner-animation",
+  "source": "60fps",
+  "slug": "district-2025-theme-banner-animation",
+  "title": "District 2025 Theme Banner Animation",
+  "category": "Animation",
+  "desc": "An energetic idle animation for a New Year's Eve theme banner featuring a spinning wheel, wiggling text, and a floating speech bubble.",
+  "author": "District",
+  "authorUrl": "https://60fps.design/shots/district-2025-theme-banner-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/district-2025-theme-banner-animation",
+  "pageUrl": "https://60fps.design/shots/district-2025-theme-banner-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab99aa18a0c275c3d8/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab99aa18a0c275c3d8/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-district-2025-theme-banner-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: a New Year's Eve theme banner on a dark events app - \"2025\" in huge chrome numerals over a spinning prize-wheel illustration, with wiggling text, floating speech-bubble chips, and a marquee strip (\"DISCOVER NYE BASHES\") along the banner's bottom edge.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "looping idle composition, all layers independent."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: a New Year's Eve theme banner on a dark events app - \"2025\" in huge chrome numerals over a spinning prize-wheel illustration, with wiggling text, floating speech-bubble chips, and a marquee strip (\"DISCOVER NYE BASHES\") along the banner's bottom edge.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark home feed. The hero banner: neon-purple gradient stage, chrome 3D \"2025\" numerals with a small chip (\"Cheers, sparkle, and party!\"), a colorful segmented wheel beneath, floating circular accent chips, and a diagonal ribbon marquee at the banner's base.\n\n## Motion spec\nPattern: looping idle composition, all layers independent.\n- Wheel: slow continuous rotation (~12s per revolution, linear).\n- \"2025\" numerals: gentle wiggle (rotate +-1.5deg, scale 1 -> 1.02, 2.4s ease-in-out).\n- Speech-bubble chip: floats (translateY +-5px, 2.8s, phase offset from the numerals).\n- Marquee ribbon: text scrolls horizontally at ~40px/s, seamless loop.\n- Small sparkle accents twinkle (opacity 0.2 -> 1, 1.2s, random delays).\n- Loop is seamless and indefinite; no interaction.\n\n## Calibration\n- Every layer has its own period - nothing shares a cycle, which keeps it alive instead of mechanical.\n- The wheel is slow enough to read the segments.\n\n## Reduced motion\nAll loops stop; banner renders as a still.\n\n## Don't miss\n- Chrome numerals need an animated highlight sweep (a light band crossing every ~4s) to read as metal.\n- The marquee ribbon is slightly rotated (-4deg) and extends past both banner edges."
+ },
+ {
+  "id": "60fps:duolingo-welcome-to-super-animation",
+  "source": "60fps",
+  "slug": "duolingo-welcome-to-super-animation",
+  "title": "Duolingo Welcome to Super Animation",
+  "category": "Animation",
+  "desc": "An iridescent, multi-stage welcome animation transitioning the standard Duolingo mascot into its cosmic 'Super' version.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-welcome-to-super-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-welcome-to-super-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-welcome-to-super-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/687498c80e3615485c49b31f/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/687498c80e3615485c49b31f/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-welcome-to-super-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's \"Welcome to Super\" transformation - the standard green owl on a dark gradient stage gets struck by radiating light beams, flashes, and re-emerges as the iridescent cosmic \"Super\" mascot with sparkles, ending on the Super Duolingo lockup + CTA.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "multi-stage transformation sequence, ~3.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's \"Welcome to Super\" transformation - the standard green owl on a dark gradient stage gets struck by radiating light beams, flashes, and re-emerges as the iridescent cosmic \"Super\" mascot with sparkles, ending on the Super Duolingo lockup + CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen dark blue-purple gradient. Center stage: the mascot inside a soft blob. Header text \"Welcome to Super Duolingo!\" top-left. Final state adds the SUPER DUOLINGO wordmark top, a light-ray burst behind the transformed mascot, and a \"LET'S GO\" button.\n\n## Motion spec\nPattern: multi-stage transformation sequence, ~3.5s.\n- Idle intro: green owl breathes (scale 1 -> 1.03, 2s) for one beat.\n- Beam strike: 3-5 white light rays erupt from behind the mascot (scale from center, 300ms, staggered 60ms) and the screen flashes toward white at the center.\n- Transformation: the owl's silhouette flips to black, then color sweeps across it (iridescent green-violet gradient wipe, 500ms, top-down) - the mascot emerges with shimmer.\n- Sparkles orbit and twinkle around the new mascot (4-6 four-point stars, 1.5s, staggered).\n- Wordmark fades in top (200ms), light burst settles behind the mascot at low opacity, CTA slides up from the bottom (spring ~300/24, 350ms).\n\n## Calibration\n- The flash + silhouette beat is the transformation's punch - do not skip the dark frame between old and new.\n- Iridescence keeps shimmering after the reveal (slow gradient shift, 4s loop).\n\n## Reduced motion\nCrossfade from green mascot to Super mascot (400ms), no beams or flash.\n\n## Don't miss\n- Rays emanate from behind the mascot's center, clipped by the stage.\n- The CTA only exists after the transformation completes."
+ },
+ {
+  "id": "60fps:duolingo-xp-boost-activation-full-screen-animation",
+  "source": "60fps",
+  "slug": "duolingo-xp-boost-activation-full-screen-animation",
+  "title": "Duolingo XP Boost Activation Full Screen Animation",
+  "category": "Animation",
+  "desc": "A full-screen reward activation screen featuring a springy illustration scale-up and floating background particle elements.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-xp-boost-activation-full-screen-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-xp-boost-activation-full-screen-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-xp-boost-activation-full-screen-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868e986fc386bd77fde1b4a/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868e986fc386bd77fde1b4a/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-xp-boost-activation-full-screen-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's XP Boost activation screen - a full-screen purple takeover where the x2 potion illustration springs up from below with overshoot, soft bokeh particles drift upward behind it, and the activation copy + CONTINUE button settle in.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "reward entrance + ambient loop."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's XP Boost activation screen - a full-screen purple takeover where the x2 potion illustration springs up from below with overshoot, soft bokeh particles drift upward behind it, and the activation copy + CONTINUE button settle in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen purple (Duolingo's brand purple, subtle radial vignette). Center: x2 potion flask illustration. Below: \"XP Boost activated! Earn double XP for the next 15 minutes.\" with the time span highlighted. CONTINUE button pinned to the bottom safe area.\n\n## Motion spec\nPattern: reward entrance + ambient loop.\n- Background fades from black to purple (300ms).\n- Potion springs in from below center (translateY 80 -> 0, scale 0.6 -> 1, spring ~260/16, visible overshoot, ~600ms).\n- Copy block fades up 150ms after the potion starts; the \"15 minutes\" highlight colors in with a short wipe (200ms).\n- CONTINUE slides up (300ms, ease-out) last.\n- Ambient loop: translucent bokeh circles (6-10, sizes 20-60px, white/pink, low opacity) drift slowly upward across the screen (10-16s per pass, staggered, wrap-around); the potion breathes (scale +-2%, 3s).\n\n## Calibration\n- The potion's overshoot is the reward moment - let it visibly bounce once.\n- Bokeh is background texture: never sharper than 60% opacity, never fast.\n\n## Reduced motion\nElements fade into place (300ms); bokeh frozen.\n\n## Don't miss\n- The vignette darkens the edges - the potion sits in a pool of light.\n- Highlight wipe on the time span, not the whole sentence."
+ },
+ {
+  "id": "60fps:goat-top-tabs-swipe-interaction",
+  "source": "60fps",
+  "slug": "goat-top-tabs-swipe-interaction",
+  "title": "GOAT Top Tabs Swipe Interaction",
+  "category": "Interaction",
+  "desc": "A curved, rotating tab bar that orbits along a circular path as the user swipes horizontally between pages.",
+  "author": "GOAT",
+  "authorUrl": "https://60fps.design/shots/goat-top-tabs-swipe-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/goat-top-tabs-swipe-interaction",
+  "pageUrl": "https://60fps.design/shots/goat-top-tabs-swipe-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e71523e76d5c62e6f6b1f1/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e71523e76d5c62e6f6b1f1/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-goat-top-tabs-swipe-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: GOAT's curved top tab bar - tabs sit on an invisible circular arc, and swiping between pages rotates the bar along that arc: the active tab rises to the arc's peak while the others sink to the sides, labels staying upright.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "gesture-driven arc rotation."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: GOAT's curved top tab bar - tabs sit on an invisible circular arc, and swiping between pages rotates the bar along that arc: the active tab rises to the arc's peak while the others sink to the sides, labels staying upright.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSneaker marketplace page: top tab strip (3-5 text tabs) curved along a shallow arc, content pages below (editorial imagery), bottom tab bar. The arc reads like the tabs are placed on a huge circle centered far below the screen.\n\n## Motion spec\nPattern: gesture-driven arc rotation.\n- Swipe horizontally: the whole tab strip rotates around the arc's center, tracking the drag (rotation proportional to x displacement, ~0.05deg per px).\n- The active tab (at the arc's peak) is emphasized: slightly larger, full opacity; side tabs shrink and fade (~70% opacity) with distance from the peak.\n- Labels stay horizontal while their positions follow the arc - position rotates, glyphs don't.\n- Release: springs to the nearest tab's alignment (spring ~240/22, ~400ms), content page crossfades at the 50% point.\n- Edge resistance past the first/last tab (rubber-band 0.4x).\n\n## Calibration\n- The arc curvature is shallow (radius several times the screen width) - enough to feel orbital, not circular.\n- Emphasis interpolation (size/opacity vs arc position) must be continuous, not per-tab states.\n\n## Reduced motion\nTabs swap emphasis instantly on snap; no rotation tracking.\n\n## Don't miss\n- Position follows the arc, rotation does not apply to the labels.\n- The peak tab aligns with screen center after every settle."
+ },
+ {
+  "id": "60fps:h-m-header-swipe-interaction",
+  "source": "60fps",
+  "slug": "h-m-header-swipe-interaction",
+  "title": "\u200eH&M Header Swipe Interaction",
+  "category": "Interaction",
+  "desc": "A fluid horizontal swipe gesture to navigate through featured category cards with synchronized text transitions.",
+  "author": "H&M",
+  "authorUrl": "https://60fps.design/shots/h-m-header-swipe-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/h-m-header-swipe-interaction",
+  "pageUrl": "https://60fps.design/shots/h-m-header-swipe-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980ce2d5ff8d4ab5d5a4683/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980ce2d5ff8d4ab5d5a4683/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-h-m-header-swipe-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: H&M's full-bleed campaign header - edge-to-edge fashion imagery you swipe through horizontally, with the campaign title + arrow chip crossfading in sync and the next image sliding over the current one like stacked prints.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "gesture-driven cover swipe."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: H&M's full-bleed campaign header - edge-to-edge fashion imagery you swipe through horizontally, with the campaign title + arrow chip crossfading in sync and the next image sliding over the current one like stacked prints.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFashion app home: full-bleed hero image filling the upper ~80% of the screen, category label + campaign name (\"BRIGHTER DAYS AHEAD\", \"SPRING COLLECTION 2026\") bottom-left with a small arrow button, tab bar below. Each campaign is a different full-bleed photo or video still.\n\n## Motion spec\nPattern: gesture-driven cover swipe.\n- Horizontal drag: the incoming image slides in from the drag direction, covering the current one (1:1 tracking); the outgoing image stays put, dimming ~15% as it's covered.\n- Title block: current title slides down + fades (150ms), incoming title slides up + fades (150ms) at the swipe's 50% crossing - not after settle.\n- Release: snap to nearest image (spring ~300/25); velocity flings skip one image max.\n- A subtle parallax: the covering image's content shifts at 0.95x its container speed.\n\n## Calibration\n- The cover metaphor (new slides over old) is the identity - no side-by-side carousel gap.\n- Title swap is progress-driven, mid-swipe.\n\n## Reduced motion\nCrossfade between images (250ms) on release.\n\n## Don't miss\n- Outgoing image dims as it's covered - depth cue.\n- The arrow chip stays fixed while titles swap under it."
+ },
+ {
+  "id": "60fps:jiohotstar-top-carousel-cards-scroll-interaction",
+  "source": "60fps",
+  "slug": "jiohotstar-top-carousel-cards-scroll-interaction",
+  "title": "JioHotstar Top Carousel Cards Scroll Interaction",
+  "category": "Interaction",
+  "desc": "A horizontal carousel scroll interaction featuring smooth card scaling, fading, and snapping transitions.",
+  "author": "Jiohotstar",
+  "authorUrl": "https://60fps.design/shots/jiohotstar-top-carousel-cards-scroll-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/jiohotstar-top-carousel-cards-scroll-interaction",
+  "pageUrl": "https://60fps.design/shots/jiohotstar-top-carousel-cards-scroll-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5269d1908c2926dcf4e/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5269d1908c2926dcf4e/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-jiohotstar-top-carousel-cards-scroll-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: JioHotstar's hero title carousel - large poster cards that scroll horizontally with scaling, fading, and snap: the centered card is full size and opaque, neighbors shrink and dim toward the edges, and the title logo swaps with each card.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "scroll-linked scaling carousel."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: JioHotstar's hero title carousel - large poster cards that scroll horizontally with scaling, fading, and snap: the centered card is full size and opaque, neighbors shrink and dim toward the edges, and the title logo swaps with each card.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark streaming home: hero carousel occupying the top ~60% (big poster art, title logo bottom-left, genre/quality chips), \"Popular in Kids\" rail + tab bar below. Cards are wide posters with rounded corners (~16px).\n\n## Motion spec\nPattern: scroll-linked scaling carousel.\n- Drag/scroll: cards translate continuously; the card nearest center scales toward 1.0, off-center cards fall to ~0.88 with opacity to ~0.6 (both interpolate by distance from center).\n- Snap on release: nearest card centers (spring ~260/22, ~350ms).\n- Title logo + metadata crossfade at center crossing (180ms); logos are artwork images, swap with a slight scale (0.9 -> 1).\n- The focused card's art has a subtle zoom-drift (Ken Burns, scale 1 -> 1.05 over 6s) while centered.\n- Edge cards peek ~12% into the viewport.\n\n## Calibration\n- Scale/opacity vs distance is the core curve - keep it smooth (no stepped states).\n- Ken Burns drift pauses during interaction, resumes 1s after settle.\n\n## Reduced motion\nSimple snap with crossfade; no Ken Burns, no scaling.\n\n## Don't miss\n- The dimming gradient at the card bottom (for logo legibility) is part of the art treatment.\n- Cards keep constant spacing while scaling (scale around center, not layout)."
+ },
+ {
+  "id": "60fps:lake-journal-card-revel-animation",
+  "source": "60fps",
+  "slug": "lake-journal-card-revel-animation",
+  "title": "Lake Journal Card Revel Animation",
+  "category": "Animation",
+  "desc": "A playful card illustration transition that morphs floating mood faces into a coloring journal book",
+  "author": "Lake",
+  "authorUrl": "https://60fps.design/shots/lake-journal-card-revel-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/lake-journal-card-revel-animation",
+  "pageUrl": "https://60fps.design/shots/lake-journal-card-revel-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e65d11d5a0fec069fc/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e65d11d5a0fec069fc/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-lake-journal-card-revel-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: a feature card reveal where a cloud of floating hand-drawn mood faces (smileys, scribbles) drifts apart and morphs into a 3D coloring journal book that rotates into place at the card's center.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "ambient intro morph, ~3s, fires when the card scrolls into view."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: a feature card reveal where a cloud of floating hand-drawn mood faces (smileys, scribbles) drifts apart and morphs into a 3D coloring journal book that rotates into place at the card's center.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight app screen: \"COLOR YOUR MOOD\" section header, a large feature card (\"Coloring Journal\" + description), a \"POPULAR IN CUTE\" rail below. The card's illustration stage starts filled with ~15 floating doodle faces and ends with a peach-gradient journal book standing center.\n\n## Motion spec\nPattern: ambient intro morph, ~3s, fires when the card scrolls into view.\n- Doodle faces float gently (each translateY +-4px, individual 2-3s periods, slight rotations).\n- Convergence: faces drift toward the card's center while scaling down and fading (600ms, ease-in, each with a randomized 0-200ms delay).\n- The book materializes: scales 0.3 -> 1 with a soft spring (~280/20) while rotating from -12deg to 0 (like a page being placed).\n- A warm gradient wash sweeps across the card background as the book lands (400ms).\n- Settle: book idles with a tiny float (+-3px, 3.5s); a few faces remain faintly at the edges.\n\n## Calibration\n- The convergence timing sells the morph - faces must clearly become the book, not vanish before it appears (overlap the two phases by ~200ms).\n\n## Reduced motion\nCrossfade from face cloud to book (300ms).\n\n## Don't miss\n- Faces are hand-drawn line style; the book is soft 3D - the style contrast is the charm.\n- The book's cover gradient (peach-to-amber) matches the background wash."
+ },
+ {
+  "id": "60fps:netflix-clips-feature-intro-animation",
+  "source": "60fps",
+  "slug": "netflix-clips-feature-intro-animation",
+  "title": "Netflix Clips Feature Intro Animation",
+  "category": "Animation",
+  "desc": "An ambient looping 3D phone illustration with shifting neon gradients and subtle tilt rotation for a feature introduction card.",
+  "author": "Netflix",
+  "authorUrl": "https://60fps.design/shots/netflix-clips-feature-intro-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/netflix-clips-feature-intro-animation",
+  "pageUrl": "https://60fps.design/shots/netflix-clips-feature-intro-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/69ee166280df8787f2df3fde/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/69ee166280df8787f2df3fde/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-netflix-clips-feature-intro-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Netflix's Clips intro card - a dark promo card with bold stacked copy (\"Scroll. Watch. Obsess. Repeat.\") beside a 3D phone render whose screen cycles neon gradient glows (magenta, amber, violet) with a subtle tilt, on an endless ambient loop.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "ambient loop."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Netflix's Clips intro card - a dark promo card with bold stacked copy (\"Scroll. Watch. Obsess. Repeat.\") beside a 3D phone render whose screen cycles neon gradient glows (magenta, amber, violet) with a subtle tilt, on an endless ambient loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark streaming home: \"NEW\" eyebrow, 4-line stacked headline left, \"Watch Clips\" button, and a 3D phone render right showing a glowing vertical screen. The card background is near-black with a faint neon wash matching the phone's current glow color.\n\n## Motion spec\nPattern: ambient loop.\n- Phone glow: the screen's neon gradient cycles colors (magenta -> amber -> violet -> magenta, ~8s full cycle, smooth interpolation).\n- Phone tilt: slow rocking (rotateY +-6deg, rotateX +-2deg, 6s ease-in-out) so the glow catches different angles.\n- Background wash: the card's ambient tint follows the glow color at low saturation (synced, ~30% intensity).\n- A small light dot occasionally drifts across the phone screen (like a scroll indicator, 2s transit, every ~5s).\n- No interaction; loop is seamless.\n\n## Calibration\n- Color cycle is the motion - the tilt is secondary texture.\n- The glow spills onto the card around the phone (bloom), which is what makes it read neon.\n\n## Reduced motion\nStatic phone with one glow color; no cycle, no tilt.\n\n## Don't miss\n- Headline and button never animate - contrast between still type and living render.\n- The phone's glow reflects on its own bezel edges."
+ },
+ {
+  "id": "60fps:play-editor-welcome-gesture-animation",
+  "source": "60fps",
+  "slug": "play-editor-welcome-gesture-animation",
+  "title": "Play Editor Welcome Gesture Animation",
+  "category": "Animation",
+  "desc": "An animated gesture tutorial demonstrating swipe interactions on a phone mockup during onboarding.",
+  "author": "Play",
+  "authorUrl": "https://60fps.design/shots/play-editor-welcome-gesture-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/play-editor-welcome-gesture-animation",
+  "pageUrl": "https://60fps.design/shots/play-editor-welcome-gesture-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a2aa14b70eb1b2c7d9/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a2aa14b70eb1b2c7d9/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-play-editor-welcome-gesture-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: an editor welcome screen teaching gestures - a dark screen with a blueprint-style phone outline where an animated touch dot demonstrates swipe gestures (drag up, drag down), with ghosted UI blocks inside the outline reacting to each pass.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "looping gesture tutorial."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: an editor welcome screen teaching gestures - a dark screen with a blueprint-style phone outline where an animated touch dot demonstrates swipe gestures (drag up, drag down), with ghosted UI blocks inside the outline reacting to each pass.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark editor welcome: \"Welcome To The Editor\" title top, a neon-blue wireframe phone center (blueprint aesthetic: thin strokes, dashed guides, small blocks representing UI), a blue CTA button bottom. Inside the wireframe, faint UI blocks stack vertically.\n\n## Motion spec\nPattern: looping gesture tutorial.\n- A touch dot (small white circle with a soft halo) appears at the phone's lower third (fade in, 200ms).\n- The dot drags upward along the phone's center (600ms, ease-in-out); the ghosted UI blocks scroll with it 1:1, rubber-banding slightly at the end.\n- Dot fades out (150ms); blocks settle back with a spring (~260/20).\n- Variant loop: the dot demonstrates a downward drag on the next cycle (same timings, reversed).\n- Caption text under the phone crossfades with each gesture variant (200ms).\n- Full cycle ~3s, loops seamlessly.\n\n## Calibration\n- The dot's halo (soft glow, ~2x dot radius) is what makes it readable over the blueprint lines.\n- Blocks respond 1:1 during the drag - no lag; the physics show only on release.\n\n## Reduced motion\nStatic diagram with an arrow annotation; no loop.\n\n## Don't miss\n- Blueprint rendering: 1px strokes, one accent blue, dashed construction guides.\n- The wireframe phone never moves - only the dot and inner blocks."
+ },
+ {
+  "id": "60fps:revolut-coin-roll-animation",
+  "source": "60fps",
+  "slug": "revolut-coin-roll-animation",
+  "title": "Revolut Coin Roll Animation",
+  "category": "Animation",
+  "desc": "A 3D metallic coin rolls smoothly along a curved neon path in a promotional banner.",
+  "author": "Revolut",
+  "authorUrl": "https://60fps.design/shots/revolut-coin-roll-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/revolut-coin-roll-animation",
+  "pageUrl": "https://60fps.design/shots/revolut-coin-roll-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a2aa14b70eb1b2c7f1/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a2aa14b70eb1b2c7f1/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-revolut-coin-roll-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: a Revolut promo banner where a 3D metallic coin rolls along a curved neon path across a dark stage - the coin spins as it travels the wire-road, catching light, enters from the right and exits left on a seamless loop.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "ambient loop, ~6s per pass."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: a Revolut promo banner where a 3D metallic coin rolls along a curved neon path across a dark stage - the coin spins as it travels the wire-road, catching light, enters from the right and exits left on a seamless loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPromo detail screen: dark card under the headline (\"TOP UP AND SPEND TO EARN \u00a310\"), fine-print body, dark CTA. Inside the card: a dark stage with a thin glowing wire curve (neon blue-violet) sweeping across it like a road, and a silver 3D coin that rolls along the curve.\n\n## Motion spec\nPattern: ambient loop, ~6s per pass.\n- The coin enters from the right edge already rolling (rotation locked to travel: ~360deg per coin-circumference of path).\n- It follows the wire curve's ups and downs (position on path + slight squash on the dips), rotation speed matching path velocity exactly.\n- The wire glows brighter under the coin (a light pool that travels with it).\n- Coin exits left; 1s pause; loop restarts.\n- The card and copy never move.\n\n## Calibration\n- Rolling contact is everything: rotation must equal travel distance / circumference, or the coin slides and the illusion dies.\n- The neon wire's traveling light pool sells the contact point.\n\n## Reduced motion\nStatic coin resting on the wire's low point.\n\n## Don't miss\n- The coin is brushed metal - anisotropic highlights that shift as it rolls.\n- Path easing: the coin slows slightly on rises, speeds on dips (physics feel, not constant speed)."
+ },
+ {
+  "id": "60fps:swiggy-2025-countdown-dance-animation",
+  "source": "60fps",
+  "slug": "swiggy-2025-countdown-dance-animation",
+  "title": "Swiggy 2025 Countdown Dance Animation",
+  "category": "Animation",
+  "desc": "An energetic New Year countdown banner featuring looping dancing illustrations paired with a vertical sliding search placeholder ticker.",
+  "author": "Swiggy",
+  "authorUrl": "https://60fps.design/shots/swiggy-2025-countdown-dance-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/swiggy-2025-countdown-dance-animation",
+  "pageUrl": "https://60fps.design/shots/swiggy-2025-countdown-dance-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/677573624ee6c592aaedf20c/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/677573624ee6c592aaedf20c/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-swiggy-2025-countdown-dance-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Swiggy's New Year banner - \"Countdown to 2025\" between two dancing 3D characters on a purple festival stage, while the search bar above cycles placeholder suggestions with a vertical slide ticker.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "two independent ambient loops."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Swiggy's New Year banner - \"Countdown to 2025\" between two dancing 3D characters on a purple festival stage, while the search bar above cycles placeholder suggestions with a vertical slide ticker.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSwiggy home (purple NYE theme): location header, search bar, category chips, then the banner: \"Countdown to 2025\" with a clock icon, flanked by two grooving characters, sponsor strip below (\"Powered by Coca-Cola...\"), category grid beneath.\n\n## Motion spec\nPattern: two independent ambient loops.\n- Dancers: each character loops a dance cycle (~1.2s bounce: translateY 0 -> -10px -> 0 with a 2-3deg torso tilt alternating sides); the two characters run the same cycle 180deg out of phase.\n- \"2025\" numerals: subtle scale pulse with the dancers' beat (1 -> 1.03, 1.2s).\n- Search placeholder ticker: suggestion text slides up out of the field and the next slides in from below (300ms, ease-out), rotating every ~2.5s (\"Biryani\" -> \"Shower Gel\" -> \"Smartwatch\"...).\n- Confetti dots twinkle sparsely in the banner background (1.5s, random delays).\n\n## Calibration\n- The dancers' bounce is metronomic - they carry the beat; the numeral pulse and confetti are decorations.\n- Ticker stays inside the search field; the search icon and mic don't move.\n\n## Reduced motion\nStatic dancers; placeholder rotates with a 200ms crossfade.\n\n## Don't miss\n- Characters mirror each other (left dancer leans right, right dancer leans left).\n- Sponsor strip stays static - readability."
+ },
+ {
+  "id": "60fps:swiggy-black-friday-deal-rush-header-animation",
+  "source": "60fps",
+  "slug": "swiggy-black-friday-deal-rush-header-animation",
+  "title": "Swiggy Black Friday Deal Rush Header Animation",
+  "category": "Animation",
+  "desc": "An auto-playing promotional header animation featuring food items orbiting in a circle with springy price badges.",
+  "author": "Swiggy",
+  "authorUrl": "https://60fps.design/shots/swiggy-black-friday-deal-rush-header-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/swiggy-black-friday-deal-rush-header-animation",
+  "pageUrl": "https://60fps.design/shots/swiggy-black-friday-deal-rush-header-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/693438547d19d070282a5260/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/693438547d19d070282a5260/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-swiggy-black-friday-deal-rush-header-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Swiggy's Black Friday \"DEAL RUSH\" header - food items orbit a circular dotted track behind the bold deal typography, each carrying a springy price badge, while a live countdown ticks below.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "ambient orbit loop."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Swiggy's Black Friday \"DEAL RUSH\" header - food items orbit a circular dotted track behind the bold deal typography, each carrying a springy price badge, while a live countdown ticks below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark purple header card: \"Black Friday\" eyebrow, huge \"DEAL RUSH\" type, \"New deals, every hour!\" subline. Behind/right of the type: a dotted elliptical orbit with 3-4 food photos (in circular masks) traveling it, each with a small price chip (\"\u20b969\", \"\u20b929\"). Below the card: \"LIVE DEALS end in 00:11:46\" countdown and the deal grid.\n\n## Motion spec\nPattern: ambient orbit loop.\n- Food items travel the dotted ellipse continuously (~10s per revolution, linear), scaling slightly at the front of the orbit (1.0) vs the back (0.7) with matching opacity for depth.\n- Price badges ride with their items but counter-rotate to stay upright; when an item passes the front-center, its badge does a small spring pop (scale 1 -> 1.15 -> 1, 300ms).\n- The dotted track is static; items swap z-order as they pass behind the typography.\n- Countdown digits tick each second (last two digits roll down 200ms).\n\n## Calibration\n- Depth scaling (front big / back small) is what makes it an orbit instead of a flat carousel.\n- The badge pop is the only spring in the system - one beat per orbit per item.\n\n## Reduced motion\nItems parked at fixed orbit positions; countdown still ticks.\n\n## Don't miss\n- Items pass BEHIND the \"DEAL RUSH\" type at the orbit's back half.\n- Circular image masks with thin white borders."
+ },
+ {
+  "id": "60fps:ultrahuman-nap-detected-pulse-animation",
+  "source": "60fps",
+  "slug": "ultrahuman-nap-detected-pulse-animation",
+  "title": "Ultrahuman Nap Detected Pulse Animation",
+  "category": "Animation",
+  "desc": "A continuous pulsing glow animation on a call-to-action button within a detected event card.",
+  "author": "Ultrahuman",
+  "authorUrl": "https://60fps.design/shots/ultrahuman-nap-detected-pulse-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/ultrahuman-nap-detected-pulse-animation",
+  "pageUrl": "https://60fps.design/shots/ultrahuman-nap-detected-pulse-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e7fbc82041cdc380d041/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e7fbc82041cdc380d041/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-ultrahuman-nap-detected-pulse-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Ultrahuman's \"Nap detected\" event card - a dark detected-event card where the \"Add it\" CTA button carries a continuous soft glow pulse, gently demanding action while the rest of the ring-metrics screen stays still.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "looping CTA pulse."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Ultrahuman's \"Nap detected\" event card - a dark detected-event card where the \"Add it\" CTA button carries a continuous soft glow pulse, gently demanding action while the rest of the ring-metrics screen stays still.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark health app: a slim event card pinned near the top (\"32 Nap detected\" with a small ring icon, close X, and a blue \"Add it\" button), above a large faint recovery gauge and metrics list. Tab bar at bottom.\n\n## Motion spec\nPattern: looping CTA pulse.\n- The \"Add it\" button breathes: a blue glow (box-shadow / radial halo) swells and fades around it (1.8s ease-in-out, peak opacity ~0.6).\n- The button itself holds a subtle scale on the same cycle (1 -> 1.04 -> 1).\n- Card entrance (first appearance): card slides down from the screen top with a soft spring (~280/24, 400ms) - after that, only the button pulses.\n- Nothing else on screen animates.\n\n## Calibration\n- The glow is the pulse; scale is barely perceptible.\n- 1.8s is calm - faster reads as an alarm, slower goes unnoticed.\n\n## Reduced motion\nButton holds a static 40% glow; card appears without motion.\n\n## Don't miss\n- The card floats over content with a real shadow; it is dismissible via the X (reverse slide-up, 250ms).\n- Blue is the app's accent - the glow uses it at reduced saturation, not pure neon."
+ },
+ {
+  "id": "60fps:whatsapp-welcome-logo-illustration-morph-animation",
+  "source": "60fps",
+  "slug": "whatsapp-welcome-logo-illustration-morph-animation",
+  "title": "WhatsApp Welcome Logo Illustration Morph Animation",
+  "category": "Animation",
+  "desc": "An elegant looping morph animation on WhatsApp's onboarding screen that transitions between the brand logo and a detailed line-art illustration.",
+  "author": "Whatsapp",
+  "authorUrl": "https://60fps.design/shots/whatsapp-welcome-logo-illustration-morph-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/whatsapp-welcome-logo-illustration-morph-animation",
+  "pageUrl": "https://60fps.design/shots/whatsapp-welcome-logo-illustration-morph-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f33d24befe20b134e73ae2/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f33d24befe20b134e73ae2/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-whatsapp-welcome-logo-illustration-morph-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: WhatsApp's welcome screen - the brand glyph (phone-in-speech-bubble) elegantly morphs into a detailed line-art illustration of a chat scene (bubbles, globe, hearts, phone), then back, on a slow seamless loop above the \"Welcome to WhatsApp\" copy.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "looping morph, ~8s full cycle."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: WhatsApp's welcome screen - the brand glyph (phone-in-speech-bubble) elegantly morphs into a detailed line-art illustration of a chat scene (bubbles, globe, hearts, phone), then back, on a slow seamless loop above the \"Welcome to WhatsApp\" copy.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite welcome screen: illustration stage upper-middle, \"Welcome to WhatsApp\" headline, privacy subline, green \"Agree & continue\" button. The stage alternates between two states: the simple green WhatsApp glyph, and a light-green doodle scene (speech bubbles, globe, hearts, handset) drawn in the same line weight.\n\n## Motion spec\nPattern: looping morph, ~8s full cycle.\n- Hold the glyph ~2s. Then the glyph's strokes extend and branch: the bubble outline grows sub-elements, the handset arcs out, and doodle details draw on (stroke-dash draw-on effect, ~2s, ease-in-out).\n- Hold the full illustration ~2.5s with a barely-there float (translateY +-2px, 3s).\n- Reverse morph back to the glyph (~1.5s) - strokes retract in reverse order.\n- Stroke color stays WhatsApp green throughout; line weight constant (the two states must share a stroke vocabulary).\n- Copy and button are static.\n\n## Calibration\n- The morph is a stroke journey, not a crossfade: lines visibly grow into the illustration.\n- Draw-on order: container shapes first, interior details last.\n\n## Reduced motion\nSlow crossfade between the two states (500ms), holds unchanged.\n\n## Don't miss\n- Same line weight in both states - that's what makes the morph believable.\n- The illustration is tinted (light green fills at ~20% opacity), the glyph is solid."
+ },
+ {
+  "id": "60fps:opal-code-copied-text-pop-interaction",
+  "source": "60fps",
+  "slug": "opal-code-copied-text-pop-interaction",
+  "title": "Opal Code Copied Text Pop Interaction",
+  "category": "Interaction",
+  "desc": "Referral code characters dynamically pop, tilt, and spring into a playful 'COPIED' confirmation state upon tapping.",
+  "author": "Opal",
+  "authorUrl": "https://60fps.design/shots/opal-code-copied-text-pop-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/opal-code-copied-text-pop-interaction",
+  "pageUrl": "https://60fps.design/shots/opal-code-copied-text-pop-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a6639212a11e67b17323e93/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a6639212a11e67b17323e93/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-opal-code-copied-text-pop-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Opal's referral code copy - tapping the code (\"8TAZ5\", shown as individual character tiles) makes each character pop, tilt, and spring into a \"COPIED\" confirmation, tile by tile in a fast stagger.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "tap-triggered character cascade, ~700ms total."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Opal's referral code copy - tapping the code (\"8TAZ5\", shown as individual character tiles) makes each character pop, tilt, and spring into a \"COPIED\" confirmation, tile by tile in a fast stagger.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark rewards screen: Opal card top, referral copy, then \"Your Referral Code\" - five bordered character tiles (mono glyphs, rounded squares), \"Share Invite\" button below.\n\n## Motion spec\nPattern: tap-triggered character cascade, ~700ms total.\n- On tap: the tiles' characters swap from the code to \"COPIED\", one tile at a time left to right (60ms stagger).\n- Each tile: current glyph scales down + tilts (scale 1 -> 0.7, rotate -15deg, 120ms), new glyph springs in from below (translateY 12 -> 0, scale 0.8 -> 1 with overshoot, spring ~380/18, rotate 8deg -> 0).\n- A soft haptic-style screen tick: the whole tile row does a 1px dip at the start.\n- After ~2s, tiles cascade back to the code with the same animation (reversed content).\n- Tiles get a brief accent border flash as each new glyph lands (200ms fade).\n\n## Calibration\n- Per-tile overshoot + tilt is the playfulness - uniform scale without rotation reads flat.\n- 60ms stagger: fast enough to read as one gesture, slow enough to see the wave.\n\n## Reduced motion\nAll tiles crossfade text together (200ms), no tilt.\n\n## Don't miss\n- Tiles are individual bordered squares - the animation respects tile boundaries, not a single text morph.\n- The return-to-code cascade is identical in structure; do not leave it on \"COPIED\" forever."
+ },
+ {
+  "id": "60fps:duolingo-xp-gained-fab-pop-animation",
+  "source": "60fps",
+  "slug": "duolingo-xp-gained-fab-pop-animation",
+  "title": "Duolingo XP Gained Fab Pop Animation",
+  "category": "Animation",
+  "desc": "A floating reward button scales and pops into the bottom corner with a bouncy spring physics entrance.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-xp-gained-fab-pop-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-xp-gained-fab-pop-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-xp-gained-fab-pop-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa2ce4e7cc890ee8ff0f/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa2ce4e7cc890ee8ff0f/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-xp-gained-fab-pop-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's XP gain on the leaderboard - a gem flies in from the bottom nav and a purple \"+128 XP\" pill pops onto the leaderboard's floating button with a springy bounce, while the header's XP total ticks up to its new value.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "projectile + counter update, ~1.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's XP gain on the leaderboard - a gem flies in from the bottom nav and a purple \"+128 XP\" pill pops onto the leaderboard's floating button with a springy bounce, while the header's XP total ticks up to its new value.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark leaderboard: ranked rows (avatar, name, XP), \"PROMOTION ZONE\" divider, bottom tab bar with the league tab active. Header shows the user's XP total.\n\n## Motion spec\nPattern: projectile + counter update, ~1.5s.\n- A small gem springs off the league tab icon (scale 0.5 -> 1, 200ms) and arcs up to the header (bezier path, 450ms, ease-in).\n- On arrival: the header's XP numeral ticks up to the new total (500ms, ease-out, tabular-nums) with a highlight flash (accent background fade, 300ms).\n- Simultaneously the floating \"+128 XP\" pill pops in over the tab bar (scale 0.6 -> 1 with overshoot, spring ~380/16), holds ~2s, then collapses back (scale 1 -> 0.6, fade, 250ms).\n- The leaderboard rows never move.\n\n## Calibration\n- The arc path sells \"the XP came from the league\" - a straight fly-up reads as a toast.\n- The pill is chunky and purple; don't render it as a subtle caption.\n\n## Reduced motion\nNumeral sets instantly; pill fades in and out (200ms).\n\n## Don't miss\n- Gem launch and pill pop are offset by ~150ms - cause, then effect.\n- The pill floats above the tab bar; it never pushes layout."
+ },
+ {
+  "id": "60fps:x-tabs-text-morph-swipe-interaction",
+  "source": "60fps",
+  "slug": "x-tabs-text-morph-swipe-interaction",
+  "title": "X Tabs Text Morph Swipe Interaction",
+  "category": "Interaction",
+  "desc": "Horizontal profile tab bar with animated pill width and text label expansion on swipe.",
+  "author": "X",
+  "authorUrl": "https://60fps.design/shots/x-tabs-text-morph-swipe-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/x-tabs-text-morph-swipe-interaction",
+  "pageUrl": "https://60fps.design/shots/x-tabs-text-morph-swipe-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980a151fd52183e4029/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980a151fd52183e4029/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-x-tabs-text-morph-swipe-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: X's profile tab bar - swiping between content tabs morphs the active pill: the pill's width animates to hug the new tab's label, and labels expand from icon-only to icon + text as they become active.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "swipe-synced tab morph."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: X's profile tab bar - swiping between content tabs morphs the active pill: the pill's width animates to hug the new tab's label, and labels expand from icon-only to icon + text as they become active.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark profile page: avatar, bio, action buttons, then a horizontal tab strip (Posts, Replies, Reposts, Videos, Articles - icons + labels), content below. The active tab shows a filled pill background with its full label; inactive tabs show icon-only (or dimmed short labels).\n\n## Motion spec\nPattern: swipe-synced tab morph.\n- Swipe on content: the pill slides horizontally tracking the gesture (1:1), stretching mid-transit (width interpolates between the old label's width and the new one, scaleX up to ~1.15 at max velocity).\n- Labels: the incoming tab's text expands (max-width 0 -> auto, characters fade with a 40ms-per-char stagger, 200ms) while the outgoing collapses to icon-only (150ms).\n- Release: pill settles over the new tab (spring ~320/26, ~300ms).\n- Content below crossfades with a slight slide (translateX 20px, 200ms).\n- Tap on a tab runs the same morph without gesture tracking.\n\n## Calibration\n- Pill stretch is velocity-driven - a slow drag barely stretches it.\n- Text expansion is the delight; keep it under 250ms so the bar never feels busy.\n\n## Reduced motion\nPill jumps with a 150ms fade; labels swap instantly.\n\n## Don't miss\n- The pill hugs label width + fixed padding - width is content-derived, not per-tab constants.\n- Icon and label are one morph unit; the icon never moves within its slot."
+ },
+ {
+  "id": "60fps:duolingo-voice-speak-button-interaction",
+  "source": "60fps",
+  "slug": "duolingo-voice-speak-button-interaction",
+  "title": "Duolingo Voice Speak Button Interaction",
+  "category": "Interaction",
+  "desc": "Voice recording button with dynamic audio waveform feedback advancing flashcards into a completed summary list.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-voice-speak-button-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-voice-speak-button-interaction",
+  "pageUrl": "https://60fps.design/shots/duolingo-voice-speak-button-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980eda64ba0289ec707/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980eda64ba0289ec707/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-voice-speak-button-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Duolingo's speaking exercise button - tapping the blue mic button morphs the mic glyph into a live audio waveform: a row of vertical bars inside the button that bounce with your voice amplitude while you speak the translation.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "state-morphing button with live meter."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Duolingo's speaking exercise button - tapping the blue mic button morphs the mic glyph into a live audio waveform: a row of vertical bars inside the button that bounce with your voice amplitude while you speak the translation.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark lesson screen: \"Translate the words\" header with progress bar, a large word card center (single word like \"and\", \"Ken\", \"Hana\"), and a wide blue pill button below with a mic icon, plus a small circular replay icon beside it.\n\n## Motion spec\nPattern: state-morphing button with live meter.\n- Tap: mic glyph scales down and out (100ms) as 7 vertical bars fade in across the button's center (150ms, 30ms stagger).\n- Listening: bars animate with input amplitude - heights spring toward the live level (fast attack ~60ms, release ~250ms), each bar phase-offset so the group reads as a wave, not a VU clone. Bars keep a small idle jitter (+-15% height, 400ms) at silence so the button feels alive.\n- The button pulses its blue fill subtly with the loudest bar (background brightness +8%).\n- Stop/timeout: bars collapse back to the mic glyph (150ms reverse).\n- The replay icon spins 180deg when tapped (200ms).\n\n## Calibration\n- Amplitude mapping is logarithmic - whispers still move the bars.\n- Bar count 7-9: fewer looks like an equalizer toy, more muddies the shape.\n\n## Reduced motion\nBars show a steady average height; no idle jitter.\n\n## Don't miss\n- The morph is mic -> waveform in the same pill, not a separate recording UI.\n- Bars are centered vertically and mirror around the midline."
+ },
+ {
+  "id": "60fps:x-money-intro-sequence-animation",
+  "source": "60fps",
+  "slug": "x-money-intro-sequence-animation",
+  "title": "X Money Intro Sequence Animation",
+  "category": "Animation",
+  "desc": "A dynamic onboarding sequence highlighting fintech features through 3D card tilts, animated growth charts, icon morphs, and rapid number tickers.",
+  "author": "X",
+  "authorUrl": "https://60fps.design/shots/x-money-intro-sequence-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/x-money-intro-sequence-animation",
+  "pageUrl": "https://60fps.design/shots/x-money-intro-sequence-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa0518d11bffd50a46a5/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa0518d11bffd50a46a5/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-x-money-intro-sequence-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: X Money's intro sequence - a dark, cinematic onboarding where each feature beat lands on black: a 3D metal card tilts in, a payment row assembles, a growth chart draws with a ticker counting up, a passkey glyph glows green, and big balance numerals tick rapidly.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "auto-advancing beat sequence, ~2.5s per beat, ~15s total."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: X Money's intro sequence - a dark, cinematic onboarding where each feature beat lands on black: a 3D metal card tilts in, a payment row assembles, a growth chart draws with a ticker counting up, a passkey glyph glows green, and big balance numerals tick rapidly.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNear-black full screen, one centered feature moment at a time with a short headline + subline: \"Welcome to X Money\", \"Tap into everything\" (3D card), \"Pay anyone, any way\" (payment row), \"Earn while you sleep\" (counter 8,869+), \"Secured with passkeys\" (green glyph), \"Access up to 0M of FDIC insurance\".\n\n## Motion spec\nPattern: auto-advancing beat sequence, ~2.5s per beat, ~15s total.\n- Transitions: current beat's elements scale down + fade (250ms), next beat's elements rise 16px + fade in (300ms, ease-out). Headline swaps with a 40ms word stagger.\n- 3D card: tilts slowly (rotateY -15deg -> +10deg, looping 5s) with a moving specular highlight.\n- Payment row: avatar + brand icon slide in from opposite edges and meet (spring ~300/22).\n- Counters: numerals tick from 0 to the target (1.2s, ease-out) with tabular-nums; large balances group with commas as they grow.\n- Passkey glyph: soft green glow pulses twice (1.5s each) then holds at 40%.\n\n## Calibration\n- One idea per beat, lots of black space - the emptiness is the luxury.\n- Tickers use tabular figures so digits never jiggle.\n\n## Reduced motion\nBeats crossfade (250ms); counters set instantly.\n\n## Don't miss\n- The metal card's highlight sweeps as it tilts - flat shading kills it.\n- Auto-advance pauses if the user touches the screen."
+ },
+ {
+  "id": "60fps:opal-hold-to-commit-button-interaction",
+  "source": "60fps",
+  "slug": "opal-hold-to-commit-button-interaction",
+  "title": "Opal Hold to Commit Button Interaction",
+  "category": "Interaction",
+  "desc": "A hold-to-confirm button that fills with a luminous gradient progress effect before transitioning into a committed success state.",
+  "author": "Opal",
+  "authorUrl": "https://60fps.design/shots/opal-hold-to-commit-button-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/opal-hold-to-commit-button-interaction",
+  "pageUrl": "https://60fps.design/shots/opal-hold-to-commit-button-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1de81b019c9729fd1f/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1de81b019c9729fd1f/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-opal-hold-to-commit-button-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Opal's hold-to-commit button - the schedule screen's bottom button reads \"Hold to Commit\" with a slow shimmer; pressing and holding switches the label to \"Keep Holding...\" while a light fill sweeps across the button, and releasing early snaps the fill back.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "press-and-hold confirmation, ~1.2s hold."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Opal's hold-to-commit button - the schedule screen's bottom button reads \"Hold to Commit\" with a slow shimmer; pressing and holding switches the label to \"Keep Holding...\" while a light fill sweeps across the button, and releasing early snaps the fill back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark \"Wind Down\" schedule screen: time range pickers, day-of-week circles, blocked-apps row, Hard Mode toggle. Bottom: full-width commit button (dark pill with a light edge shimmer).\n\n## Motion spec\nPattern: press-and-hold confirmation, ~1.2s hold.\n- Idle: a shimmer band sweeps the button every 3s (translateX -100% -> 100%, 1.2s, ease-in-out) - an invitation, not a spinner.\n- Touch-down: label crossfades to \"Keep Holding...\" (150ms); the fill (light, slightly translucent) sweeps left to right across the button over ~1.2s, linear-ish with a slight ease.\n- Haptic-style micro tick at 50% (2px button scale dip).\n- Release before full: fill snaps back to 0 (200ms, ease-in) and the label returns.\n- Complete: fill flashes to solid (100ms), the button does a success pulse (scale 1 -> 1.03 -> 1, 250ms), label swaps to the committed state.\n\n## Calibration\n- 1-1.5s hold: long enough to be deliberate, short enough to not annoy.\n- The snap-back on early release must feel instant - hesitation reads as lag.\n\n## Reduced motion\nHold works identically; shimmer removed, fill sweeps without gradient effects.\n\n## Don't miss\n- The label change is the instruction - it must switch on touch-down, not at 50%.\n- The button never navigates on a plain tap; the hold IS the interaction."
+ },
+ {
+  "id": "60fps:opal-hold-to-leave-button-interaction",
+  "source": "60fps",
+  "slug": "opal-hold-to-leave-button-interaction",
+  "title": "Opal Hold to Leave Button Interaction",
+  "category": "Interaction",
+  "desc": "A hold-to-confirm button interaction featuring a luminous progressive fill and state change to prevent accidental exit.",
+  "author": "Opal",
+  "authorUrl": "https://60fps.design/shots/opal-hold-to-leave-button-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/opal-hold-to-leave-button-interaction",
+  "pageUrl": "https://60fps.design/shots/opal-hold-to-leave-button-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1de4e7cc890ee8fd58/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1de4e7cc890ee8fd58/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-opal-hold-to-leave-button-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Opal's \"Leave Early?\" friction screen - a big segmented countdown timer runs above a red-gradient card begging you to stay (\"Don't give up, there's a reason you started this.\"), and the only way out is holding \"Hold to Leave\" as a pink fill sweeps the button - while the timer digits keep flipping down.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "live countdown + hold-to-confirm."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Opal's \"Leave Early?\" friction screen - a big segmented countdown timer runs above a red-gradient card begging you to stay (\"Don't give up, there's a reason you started this.\"), and the only way out is holding \"Hold to Leave\" as a pink fill sweeps the button - while the timer digits keep flipping down.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark focus screen: large segmented-display countdown (29:31) in a rounded LCD-style window. Below: maroon gradient card with a running-figure icon, \"Leave Early?\" headline, guilt-trippy subline, \"Hold to Leave\" button, \"Never Mind\" text action.\n\n## Motion spec\nPattern: live countdown + hold-to-confirm.\n- Timer: digits flip down every second (split-flap style: top half folds down, 200ms) with the seconds digits always animating.\n- Hold to Leave: touch-down switches the label to \"Keep Holding...\" (150ms); a pink fill sweeps left to right (~1.5s); releasing early snaps the fill back (200ms).\n- Complete: button flashes white and swaps to \"Done\" with a check (150ms), holds 400ms, then the card slides down to dismiss (300ms).\n- The card breathes very subtly (background gradient luminance +-5%, 4s) so the screen never feels frozen during the countdown.\n\n## Calibration\n- The countdown keeps running through the hold - the time pressure is the design.\n- Pink/red fill (consequence color), not the app's primary - leaving should feel costly.\n\n## Reduced motion\nDigits set without the flap animation; hold fill sweeps plainly.\n\n## Don't miss\n- Split-flap digit animation is the hero detail - plain text swaps lose the LCD feel.\n- \"Never Mind\" is the quiet exit that keeps you in the session; style it as a tertiary action."
+ },
+ {
+  "id": "60fps:duolingo-cards-spin-mascot-word-wizard-animation",
+  "source": "60fps",
+  "slug": "duolingo-cards-spin-mascot-word-wizard-animation",
+  "title": "Duolingo Cards Spin Mascot Word Wizard Animation",
+  "category": "Animation",
+  "desc": "A lesson recap screen featuring an orbiting card mascot animation followed by staggered stat badges.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-cards-spin-mascot-word-wizard-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-cards-spin-mascot-word-wizard-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-cards-spin-mascot-word-wizard-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa15e4e7cc890ee8fbe5/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa15e4e7cc890ee8fbe5/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-cards-spin-mascot-word-wizard-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's \"Word wizard\" lesson-complete beat - the owl floats center on a dark stage while purple word cards orbit and spin around it, then stat chips (XP, streak, accuracy, time) pop in one by one above the CLAIM XP button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "character tableau + staggered stat cascade, ~2s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's \"Word wizard\" lesson-complete beat - the owl floats center on a dark stage while purple word cards orbit and spin around it, then stat chips (XP, streak, accuracy, time) pop in one by one above the CLAIM XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark celebration screen: owl mascot center with a ring of purple star-cards circling it, \"Word wizard!\" headline, \"You learned 3 new words in this lesson\" subline, a row of stat chips, blue CLAIM XP button.\n\n## Motion spec\nPattern: character tableau + staggered stat cascade, ~2s.\n- Entrance: the owl + card ring scale in from 0.8 with a spring (320/18, 350ms); headline rises 16px + fades (250ms, ease-out).\n- The card ring: 4-6 purple cards orbit the owl slowly (one revolution ~8s), each card also spinning on its own axis (rotateY loop ~4s), with tiny sparkles twinkling at random points.\n- Stat chips: pop in left to right (scale 0.6 -> 1 with overshoot, spring ~400/16, 120ms stagger), each with a brief highlight sweep.\n- Button slides up last (250ms).\n\n## Calibration\n- The orbit is the magic - flat cards arranged in an arc read as a layout, not a moment.\n- Chips land with a punchy spring; soft fades would feel corporate.\n\n## Reduced motion\nOwl fades in with cards static; chips fade in together (200ms).\n\n## Don't miss\n- Cards tilt as they orbit (perspective: smaller + dimmer behind the owl).\n- The headline uses the app's heavy display type in its accent yellow."
+ },
+ {
+  "id": "60fps:duolingo-lighting-mascot-score-increase-animation",
+  "source": "60fps",
+  "slug": "duolingo-lighting-mascot-score-increase-animation",
+  "title": "Duolingo Lighting Mascot Score Increase Animation",
+  "category": "Animation",
+  "desc": "Duolingo mascot lightning burst celebration followed by an animated score progress bar fill and action sheet reveal.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-lighting-mascot-score-increase-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-lighting-mascot-score-increase-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-lighting-mascot-score-increase-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e4e7cc890ee8f906/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e4e7cc890ee8f906/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-lighting-mascot-score-increase-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's score-progress screen - the owl crackles with electric energy on a light stage while the score bar fills: a green fill sweeps across the track with a glowing head, the score numeral holds, and \"You're a step closer to increasing your Japanese Score!\" settles in with a continue button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "energy burst + meter fill, ~2s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's score-progress screen - the owl crackles with electric energy on a light stage while the score bar fills: a green fill sweeps across the track with a glowing head, the score numeral holds, and \"You're a step closer to increasing your Japanese Score!\" settles in with a continue button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: owl mascot with yellow lightning/electric aura at top, score numeral (\"5\") with a small red flag dot, a long progress track, encouragement copy, blue continue button.\n\n## Motion spec\nPattern: energy burst + meter fill, ~2s.\n- Entrance: owl pops in with electric bolts flashing around it (3-4 bolt shapes, 150ms each, fading) - one crackle burst, then the aura calms to a soft glow (gentle 2s pulse).\n- Bar: the green fill sweeps from its old value to the new one (700ms, ease-out) with a bright glowing head and a faint trailing shimmer; the track flashes once as the fill completes (150ms).\n- Score numeral pulses (scale 1 -> 1.15 -> 1, 250ms) synced with the fill completing.\n- Copy fades in (200ms), continue button slides up (250ms).\n\n## Calibration\n- The fill's glowing head is the focus - a flat fill reads as a loading bar.\n- One electric burst only; continuous lightning turns celebration into noise.\n\n## Reduced motion\nOwl fades in; bar fills without glow; no bolt flash.\n\n## Don't miss\n- The aura glow persists after the burst at low intensity - the owl stays \"charged\".\n- The red flag dot next to the numeral is part of the score readout - keep the pairing."
+ },
+ {
+  "id": "60fps:duolingo-chef-kiss-mascot-zero-mistakes-animation",
+  "source": "60fps",
+  "slug": "duolingo-chef-kiss-mascot-zero-mistakes-animation",
+  "title": "Duolingo Chef Kiss Mascot Zero Mistakes Animation",
+  "category": "Animation",
+  "desc": "Celebratory lesson completion screen featuring an animated chef mascot and staggered stat badges.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-chef-kiss-mascot-zero-mistakes-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-chef-kiss-mascot-zero-mistakes-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-chef-kiss-mascot-zero-mistakes-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1be4e7cc890ee8fcfd/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1be4e7cc890ee8fcfd/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-chef-kiss-mascot-zero-mistakes-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's perfect-lesson celebration - the owl in a chef's hat does a chef's kiss with little hearts floating off its fingers, then reward chips (+10 XP, 100% accuracy, timer) pop in one by one above the CLAIM XP button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "character gag + reward cascade, ~2.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's perfect-lesson celebration - the owl in a chef's hat does a chef's kiss with little hearts floating off its fingers, then reward chips (+10 XP, 100% accuracy, timer) pop in one by one above the CLAIM XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen: owl wearing a chef hat, hand at beak in the chef's-kiss pose with pink hearts drifting up, \"Perfect lesson!\" headline, \"0 mistakes! Who gave you permission to be flawless?\" subline, three reward chips, blue CLAIM XP button.\n\n## Motion spec\nPattern: character gag + reward cascade, ~2.5s.\n- Entrance: owl bounces in (scale 0.7 -> 1, spring ~300/16) on a soft green burst backdrop that scales in behind it (300ms) and then fades to white (500ms), leaving the clean light stage.\n- Chef's kiss loop: the hand opens and hearts emit (3 hearts, 60ms apart, float up 40px with sway, fade over 900ms); the loop repeats every ~2.5s.\n- Chips: pop in left to right (spring ~400/16, 130ms stagger), the middle one (100% accuracy) slightly delayed for emphasis.\n- Copy and button fade/slide in under the mascot (250ms each, ease-out).\n\n## Calibration\n- Hearts are small and quick - a slow drift turns the gag into a romance scene.\n- The green burst is a one-shot flourish; don't loop it.\n\n## Reduced motion\nOwl and chips fade in (250ms); no hearts.\n\n## Don't miss\n- The subline's sassy copy is part of the design - keep the exact tone.\n- Chip order is XP, accuracy, time, and only the earned chips appear."
+ },
+ {
+  "id": "60fps:duolingo-shocked-mascot-zero-mistakes-animation",
+  "source": "60fps",
+  "slug": "duolingo-shocked-mascot-zero-mistakes-animation",
+  "title": "Duolingo Shocked Mascot Zero Mistakes Animation",
+  "category": "Animation",
+  "desc": "Celebratory lesson completion screen featuring a comical shocked mascot animation followed by staggered stat card reveals and XP counters.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-shocked-mascot-zero-mistakes-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-shocked-mascot-zero-mistakes-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-shocked-mascot-zero-mistakes-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1ce81b019c9729fcee/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1ce81b019c9729fcee/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-shocked-mascot-zero-mistakes-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's flawless-lesson celebration - a shocked, wide-eyed owl stares out from a blue burst, \"Perfect lesson!\" lands, then \"0 mistakes! Who gave you permission to be flawless?\" with reward chips (+XP, multiplier, time) popping in one by one above the CLAIM XP button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "comedic freeze + reward cascade, ~2.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's flawless-lesson celebration - a shocked, wide-eyed owl stares out from a blue burst, \"Perfect lesson!\" lands, then \"0 mistakes! Who gave you permission to be flawless?\" with reward chips (+XP, multiplier, time) popping in one by one above the CLAIM XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen: shocked owl (huge eyes, open beak) center on a cyan burst backdrop, \"Perfect lesson!\" headline, sassy subline, three reward chips, blue CLAIM XP button.\n\n## Motion spec\nPattern: comedic freeze + reward cascade, ~2.5s.\n- Entrance: burst scales in (300ms) behind the owl, which drops in with a bounce (translateY -24px -> 0, spring ~300/16) and holds its shocked pose.\n- The owl's eyes dart once left-right (200ms) and its beak opens/closes in a silent gasp loop (1.5s).\n- The burst backdrop slowly rotates its rays (20s per revolution, subtle).\n- Chips: pop in left to right (spring ~400/16, 130ms stagger), the multiplier chip last with a small glow flash.\n- Copy and button rise in below (250ms each, ease-out).\n\n## Calibration\n- The comedy is in the hold - the owl stays shocked while everything else settles.\n- Burst rotation must be nearly imperceptible; visible spinning is carnival, not celebration.\n\n## Reduced motion\nStatic owl + burst; chips fade in together.\n\n## Don't miss\n- The shocked expression is the joke - do not substitute a happy pose.\n- The sassy subline (\"Who gave you permission to be flawless?\") is part of the design."
+ },
+ {
+  "id": "60fps:duolingo-yelling-mascot-perfect-lesson-animation",
+  "source": "60fps",
+  "slug": "duolingo-yelling-mascot-perfect-lesson-animation",
+  "title": "Duolingo Yelling Mascot Perfect Lesson Animation",
+  "category": "Animation",
+  "desc": "High-energy mascot celebration transitioning into sequentially revealed lesson stat cards.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-yelling-mascot-perfect-lesson-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-yelling-mascot-perfect-lesson-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-yelling-mascot-perfect-lesson-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1ce81b019c9729fd06/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1ce81b019c9729fd06/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-yelling-mascot-perfect-lesson-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's hyped perfect-lesson celebration - the owl yells with joy, beak wide open on a green burst, \"Perfect lesson!\" and \"Take a bow!\" land, and reward chips (+40 XP, 100% accuracy, time) pop in one by one above the CLAIM XP button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "explosive entrance + reward cascade, ~2.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's hyped perfect-lesson celebration - the owl yells with joy, beak wide open on a green burst, \"Perfect lesson!\" and \"Take a bow!\" land, and reward chips (+40 XP, 100% accuracy, time) pop in one by one above the CLAIM XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen: yelling owl (beak open, eyes squeezed shut, arms up) center on a green burst backdrop, \"Perfect lesson!\" headline, \"Take a bow!\" subline, three reward chips, blue CLAIM XP button.\n\n## Motion spec\nPattern: explosive entrance + reward cascade, ~2.5s.\n- Entrance: burst scales in fast (250ms, slight overshoot) as the owl springs in (scale 0.7 -> 1.05 -> 1, spring ~300/15) with tiny orange feathers/confetti popping at its sides (6 pieces, 400ms arcs).\n- Yell loop: the owl's whole body shakes with excitement (translateX +-2px at 8Hz for 400ms, then rests 2s) and its beak opens wider on each shake.\n- Chips: pop in left to right (spring ~400/16, 130ms stagger), accuracy chip last with a glow pulse.\n- Copy and button rise in below (250ms each, ease-out).\n\n## Calibration\n- This is the loudest celebration in the set - fast entrance, visible shake, confetti. Don't tame it.\n- The shake is a burst, not a loop; continuous shaking reads as a glitch.\n\n## Reduced motion\nOwl fades in; chips fade in together (200ms).\n\n## Don't miss\n- Eyes squeezed + beak open is the specific expression - not a smile.\n- Same chip cascade rhythm as the other celebration screens."
+ },
+ {
+  "id": "60fps:duolingo-foam-finger-mascot-combo-animation",
+  "source": "60fps",
+  "slug": "duolingo-foam-finger-mascot-combo-animation",
+  "title": "Duolingo Foam Finger Mascot Combo Animation",
+  "category": "Animation",
+  "desc": "Animated mascot celebration with twinkling sparkles transitioning to sequentially revealed lesson reward stat cards.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-foam-finger-mascot-combo-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-foam-finger-mascot-combo-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-foam-finger-mascot-combo-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa0518d11bffd50a469c/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa0518d11bffd50a469c/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-foam-finger-mascot-combo-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's combo celebration - the owl waves a giant foam finger on a dark stage while \"You're on a combo!\" lands, then reward chips (XP, combo multiplier, time) pop in one by one above the CLAIM XP button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "character entrance + staggered chip cascade, ~2s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's combo celebration - the owl waves a giant foam finger on a dark stage while \"You're on a combo!\" lands, then reward chips (XP, combo multiplier, time) pop in one by one above the CLAIM XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark celebration screen: owl holding up a foam #1 finger, headline \"You're on a combo!\", subline \"12 right answers in a row? Keep it up!\", a row of stat chips, blue CLAIM XP button.\n\n## Motion spec\nPattern: character entrance + staggered chip cascade, ~2s.\n- Entrance: a blue burst card scales in behind the owl (300ms) and fades to the dark stage; the owl springs in (scale 0.75 -> 1, spring ~320/17) with the foam finger leading (slight overshoot rotation, +-6deg settle).\n- Foam finger wiggle: gentle wave loop (rotate +-5deg at the wrist, 1.2s) with two sparkle twinkles per cycle.\n- Chips: pop in left to right (scale 0.6 -> 1, spring ~400/16, 130ms stagger); the combo-multiplier chip gets an extra glow pulse on landing (300ms).\n- Copy fades in under the mascot; button slides up last (250ms).\n\n## Calibration\n- The foam finger is the hero prop - it moves; the owl's body barely does.\n- Chips always land with the same spring; the stagger, not variety, creates rhythm.\n\n## Reduced motion\nOwl fades in; chips fade in together (200ms).\n\n## Don't miss\n- The blue burst is one-shot; the dark stage is the resting state.\n- The multiplier chip (x12) is visually distinct - it carries the combo story."
+ },
+ {
+  "id": "60fps:duolingo-strong-lighting-mascot-combo-animation",
+  "source": "60fps",
+  "slug": "duolingo-strong-lighting-mascot-combo-animation",
+  "title": "Duolingo Strong Lighting Mascot Combo Animation",
+  "category": "Animation",
+  "desc": "Duolingo mascot powers up with glowing aura and flexes upon reaching a high combo milestone.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-strong-lighting-mascot-combo-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-strong-lighting-mascot-combo-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-strong-lighting-mascot-combo-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa06e81b019c9729fa3f/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa06e81b019c9729fa3f/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-strong-lighting-mascot-combo-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's in-lesson combo moment - mid-exercise, a lightning flash wipes the screen and a muscle-bound owl flexes full-screen under a \"COMBO x15\" headline with an electric aura, then the whole tableau shrinks away to the bottom as the next exercise slides in.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "full-screen takeover interrupt, ~2.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's in-lesson combo moment - mid-exercise, a lightning flash wipes the screen and a muscle-bound owl flexes full-screen under a \"COMBO x15\" headline with an electric aura, then the whole tableau shrinks away to the bottom as the next exercise slides in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark lesson screen (\"Repeat after Lily\" speaking exercise). On combo: full-screen takeover with the muscular flexing owl, electric aura, green \"COMBO x15\" headline. Then it exits downward and the next exercise (\"Repeat after Bea\") enters.\n\n## Motion spec\nPattern: full-screen takeover interrupt, ~2.5s.\n- Trigger: a lightning bolt flash sweeps the screen (2 bolt frames, 120ms) as the exercise content blurs out (200ms).\n- The buff owl rises from the bottom (translateY 40% -> 0, spring ~280/18) with an electric aura pulsing behind it (scale 1 -> 1.08, 700ms loop) and small bolt flickers at its shoulders (every ~900ms).\n- \"COMBO x15\" scales in above (spring ~380/16, 250ms).\n- Hold ~1.2s, then the whole tableau slides down and off (350ms, ease-in) as the next exercise slides up from below (300ms, ease-out), progress bar advancing.\n\n## Calibration\n- This is an interrupt, not a screen: fast in, short hold, decisive exit.\n- The owl is comically muscular - the contrast with the normal mascot is the joke.\n\n## Reduced motion\nCombo banner fades in and out (250ms) without takeover.\n\n## Don't miss\n- The exit is part of the choreography - the lesson resumes immediately, no dead time.\n- The aura keeps pulsing for the whole hold; freezing it makes the takeover feel like a modal."
+ },
+ {
+  "id": "60fps:duolingo-day-3-notepad-in-fire-mascot-animation",
+  "source": "60fps",
+  "slug": "duolingo-day-3-notepad-in-fire-mascot-animation",
+  "title": "Duolingo Day 3 Notepad in Fire Mascot Animation",
+  "category": "Animation",
+  "desc": "Celebratory streak counter animation featuring character storytelling and habit tracking updates.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-day-3-notepad-in-fire-mascot-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-day-3-notepad-in-fire-mascot-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-day-3-notepad-in-fire-mascot-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e81b019c9729fa38/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e81b019c9729fa38/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-day-3-notepad-in-fire-mascot-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's streak-milestone screen - the gray flame icon over the old count ignites: the numeral flips 2 -> 3 as the flame turns orange with sparks, the owl appears hugging the flaming streak with a sassy speech bubble, and the week dots fill in for the completed days.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "ignition sequence, ~2s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's streak-milestone screen - the gray flame icon over the old count ignites: the numeral flips 2 -> 3 as the flame turns orange with sparks, the owl appears hugging the flaming streak with a sassy speech bubble, and the week dots fill in for the completed days.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: flame glyph above a huge numeral, then \"day streak\" label, a row of weekday dots (M-S), owl hugging the flame with a speech bubble (\"You'd practice if I wasn't watching, right?\").\n\n## Motion spec\nPattern: ignition sequence, ~2s.\n- Start: gray flame + gray numeral (the un-earned state).\n- Ignition: flame flashes and fills orange with 4-6 spark particles (300ms); the numeral flips to the new value (rotateX 90 -> 0, 300ms) and turns orange.\n- The owl pops in hugging the flame from behind (scale 0.6 -> 1, spring ~350/16, 300ms) while the speech bubble types/pops in (200ms).\n- Week dots: completed days fill orange left to right (80ms stagger, scale 0.5 -> 1 pops), remaining days stay gray outlines.\n- The flame keeps a gentle flicker (scaleY 1 -> 1.06 -> 1, 600ms loop).\n\n## Calibration\n- Ignition is a flash, not a fade - the color snap is the dopamine.\n- The owl hug overlaps the flame; it holds the streak, not floats near it.\n\n## Reduced motion\nFlame and numeral set instantly; dots fill without pops.\n\n## Don't miss\n- The bubble's teasing copy is the personality - keep it.\n- The numeral and flame turn orange together; a staggered color change reads as two events."
+ },
+ {
+  "id": "60fps:duolingo-strong-mascot-perfect-lesson-animation",
+  "source": "60fps",
+  "slug": "duolingo-strong-mascot-perfect-lesson-animation",
+  "title": "Duolingo Strong Mascot Perfect Lesson Animation",
+  "category": "Animation",
+  "desc": "Lesson completion celebration featuring an animated muscular mascot and staggered stat card reveals.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-strong-mascot-perfect-lesson-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-strong-mascot-perfect-lesson-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-strong-mascot-perfect-lesson-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e81b019c9729fa12/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e81b019c9729fa12/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-strong-mascot-perfect-lesson-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's combo-starter celebration - a muscle-bound owl flexes on a light blue burst with a medal on its chest, \"You started a combo!\" lands with its subline, and reward chips (XP, multiplier, time) pop in one by one above the CLAIM XP button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "character flex + reward cascade, ~2.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's combo-starter celebration - a muscle-bound owl flexes on a light blue burst with a medal on its chest, \"You started a combo!\" lands with its subline, and reward chips (XP, multiplier, time) pop in one by one above the CLAIM XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen: buff owl flexing both arms with a gold medal, cyan burst backdrop, \"You started a combo!\" headline, \"8 right answers in a row? Keep it up!\" subline, three reward chips, blue CLAIM XP button.\n\n## Motion spec\nPattern: character flex + reward cascade, ~2.5s.\n- Entrance: burst scales in behind the owl (300ms); the owl springs in (scale 0.75 -> 1, spring ~300/16) with its arms snapping into the flex (50ms delay after body lands).\n- Flex loop: subtle alternate arm pulse (bicep scale 1 -> 1.05, 900ms, alternating) + medal sway (rotate +-4deg, 1.4s) with a shine sweep across the medal every 3s.\n- Chips: pop in left to right (spring ~400/16, 130ms stagger), multiplier chip last with a glow pulse.\n- Copy and button rise in below (250ms each, ease-out).\n\n## Calibration\n- The flex is a loop but a quiet one - the pose does the boasting, not the motion.\n- Medal shine is periodic, not constant.\n\n## Reduced motion\nStatic owl; chips fade in together (200ms).\n\n## Don't miss\n- Same cascade rhythm as other celebration screens - the system consistency is intentional.\n- The combo subline names the streak count exactly; keep copy dynamic, not generic."
+ },
+ {
+  "id": "60fps:duolingo-tap-chest-open-card-spin-interaction",
+  "source": "60fps",
+  "slug": "duolingo-tap-chest-open-card-spin-interaction",
+  "title": "Duolingo Tap Chest Open Card Spin Interaction",
+  "category": "Interaction",
+  "desc": "Opening a reward chest to upgrade rarity and reveal bonus cards with bouncy spring and spin animations.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-tap-chest-open-card-spin-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-tap-chest-open-card-spin-interaction",
+  "pageUrl": "https://60fps.design/shots/duolingo-tap-chest-open-card-spin-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a97732a0d/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a97732a0d/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-tap-chest-open-card-spin-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Duolingo's chest upgrade flow - tap a COMMON chest for a chance to upgrade: the chest shakes, the stage flashes blue as it becomes RARE, chance pips deplete, then the lid bursts open and reward cards spin in one by one (gems, avatar gear, bonus XP) with CONTINUE.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "tap-driven multi-stage gacha sequence."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Duolingo's chest upgrade flow - tap a COMMON chest for a chance to upgrade: the chest shakes, the stage flashes blue as it becomes RARE, chance pips deplete, then the lid bursts open and reward cards spin in one by one (gems, avatar gear, bonus XP) with CONTINUE.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nStage 1 (dark): COMMON wooden chest, three chance pips below, \"Tap for a chance to upgrade!\". Stage 2 (bright blue): RARE golden-blue chest, \"Tap to open!\". Stage 3 (dark): reward cards reveal one at a time (\"You earned 12 gems!\", avatar item, \"+5 bonus XP\"), each with CONTINUE.\n\n## Motion spec\nPattern: tap-driven multi-stage gacha sequence.\n- Upgrade attempt: chest shakes (rotate +-5deg, 400ms ramping), a white arc sweeps over it (300ms), stage flashes and crossfades to blue as the chest transforms (400ms - wood morphs to gold/blue via color wipe); one pip empties (200ms fade).\n- Open: chest shakes again, lid bursts (rotateX -70deg, spring overshoot), light column + sparkles (300ms).\n- Reward cards: each spins in (rotateY 90 -> 0, spring ~320/18) centered on the dark stage, holds while the user reads, flips out on CONTINUE as the next card spins in (150ms gap).\n- Final: sequence ends on the app's path screen where earned items rain onto the lesson path (small icons falling with soft bounces, 60ms stagger).\n\n## Calibration\n- The rarity transformation (color wipe + stage flash) must read as an upgrade - bigger energy than the opening itself.\n- Card spin uses the same spring every time; rhythm over novelty.\n\n## Reduced motion\nStages crossfade; cards fade in (200ms each).\n\n## Don't miss\n- Chance pips are part of the tension - show them depleting.\n- The final items landing on the lesson path ties the reward back into the app."
+ },
+ {
+  "id": "60fps:x-boost-post-feature-intro-in-sheet-animation",
+  "source": "60fps",
+  "slug": "x-boost-post-feature-intro-in-sheet-animation",
+  "title": "X Boost Post Feature Intro in Sheet Animation",
+  "category": "Animation",
+  "desc": "An interactive preview sequence in a bottom sheet demonstrating the visual impact of boosting a post.",
+  "author": "X",
+  "authorUrl": "https://60fps.design/shots/x-boost-post-feature-intro-in-sheet-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/x-boost-post-feature-intro-in-sheet-animation",
+  "pageUrl": "https://60fps.design/shots/x-boost-post-feature-intro-in-sheet-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a265e92fc14746995bfcc57/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a265e92fc14746995bfcc57/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-x-boost-post-feature-intro-in-sheet-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: X's \"Boost Post\" sheet - the white bottom sheet auto-cycles through boost tiers (views range + price: \"8K - 15K views / 0\", \"15K - 30K views / 00\"...), each tier pill highlighting in turn, then a live preview of your post materializes inside the sheet with a \"Boosted\" label and its engagement counts ticking upward.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "auto-cycling showcase + live preview, ~8s loop."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: X's \"Boost Post\" sheet - the white bottom sheet auto-cycles through boost tiers (views range + price: \"8K - 15K views / 0\", \"15K - 30K views / 00\"...), each tier pill highlighting in turn, then a live preview of your post materializes inside the sheet with a \"Boosted\" label and its engagement counts ticking upward.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite rounded bottom sheet over a dimmed timeline: \"Boost Post\" title + close X, a stack of tier rows (views range left, price right), explainer copy (\"Select your boost tier and watch your post go viral. Boosted posts will be labelled as boosted.\"), black Continue button.\n\n## Motion spec\nPattern: auto-cycling showcase + live preview, ~8s loop.\n- Tier cycle: each tier row slides into focus (the stack translates vertically, 300ms, ease-out), the active row gets a filled pill treatment and its price stays pinned right; ~1.2s per tier.\n- Preview reveal: after the cycle, the tier stack collapses upward (250ms) and the user's actual post card rises into the sheet (translateY 24px -> 0, fade, 350ms, ease-out).\n- On the preview: a \"Boosted\" chip fades in above the post (200ms), then the engagement counts tick up (likes, views - 600ms ease-out, tabular-nums) with the heart filling red.\n- Then the loop resets: preview slides out, tier stack returns.\n\n## Calibration\n- The preview uses the user's real post content - a generic mock kills the pitch.\n- Count tick-ups are modest and plausible (hundreds, not millions).\n\n## Reduced motion\nTiers crossfade; preview fades in; counts set instantly.\n\n## Don't miss\n- The sheet never grows past its detent - content swaps inside a fixed frame.\n- Explainer copy + Continue stay pinned at the bottom through every state."
+ },
+ {
+  "id": "60fps:duolingo-score-increased-mascot-animation",
+  "source": "60fps",
+  "slug": "duolingo-score-increased-mascot-animation",
+  "title": "Duolingo Score Increased Mascot Animation",
+  "category": "Animation",
+  "desc": "An energetic, multi-stage mascot animation celebrating a score increase with playful physics and bright visual rewards.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-score-increased-mascot-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-score-increased-mascot-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-score-increased-mascot-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1c18d11bffd50a49cc/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa1c18d11bffd50a49cc/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-score-increased-mascot-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's score increase celebration - the owl parachutes down through a cloudy sky, lands, a golden ring bursts above it, the score counter ticks up (5 -> 6), a progress bar fills, and \"You increased your Japanese Score!\" settles in with a continue button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "multi-stage reward sequence, ~3s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's score increase celebration - the owl parachutes down through a cloudy sky, lands, a golden ring bursts above it, the score counter ticks up (5 -> 6), a progress bar fills, and \"You increased your Japanese Score!\" settles in with a continue button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen sky gradient (deep blue to light) with drifting clouds. The owl descends from the top holding nothing, lands center, celebrates with sparkles. Below: flag icon + score numeral, a progress bar, confirmation copy, continue button.\n\n## Motion spec\nPattern: multi-stage reward sequence, ~3s.\n- Descent: owl falls from above screen with a soft sway (translateY -100vh -> center, 800ms, ease-out, rotate +-5deg pendulum), clouds drift past at different speeds (parallax layers, 3 depths).\n- Landing: small squash-and-stretch bounce (scaleY 0.85 -> 1, 250ms) + golden ring flash above its head (scale 0 -> 1 -> fade, 400ms) + sparkles.\n- Score: numeral ticks up with a flip (rotateX 90 -> 0, 300ms) as the progress bar fills to the new value (500ms, ease-out).\n- Copy fades in (200ms), continue button slides up (250ms).\n\n## Calibration\n- The pendulum sway during descent gives it weightlessness; a straight drop feels like a system dialog.\n- The numeral flip and bar fill are simultaneous - one \"score changed\" beat.\n\n## Reduced motion\nOwl fades in at center; score and bar set instantly; no parallax.\n\n## Don't miss\n- Clouds move at 3 parallax speeds during descent, then hold.\n- Squash on landing is vertical only - the owl never deforms horizontally."
+ },
+ {
+  "id": "60fps:apple-wallet-card-gyro-pattern-color-change-interaction",
+  "source": "60fps",
+  "slug": "apple-wallet-card-gyro-pattern-color-change-interaction",
+  "title": "Apple Wallet Card Gyro Pattern Color Change Interaction",
+  "category": "Interaction",
+  "desc": "A holographic card pattern that dynamically shifts colors and brightness based on the device's physical tilt.",
+  "author": "Apple",
+  "authorUrl": "https://60fps.design/shots/apple-wallet-card-gyro-pattern-color-change-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/apple-wallet-card-gyro-pattern-color-change-interaction",
+  "pageUrl": "https://60fps.design/shots/apple-wallet-card-gyro-pattern-color-change-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e4e7cc890ee8f903/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e4e7cc890ee8f903/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-apple-wallet-card-gyro-pattern-color-change-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Apple Cash's card art - the card's holographic dot-dome pattern shifts color with device tilt, flowing through gray, amber, teal, violet, and magenta like a foil hologram, while the setup sheet around it stays still.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "gyroscope-driven holographic foil."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Apple Cash's card art - the card's holographic dot-dome pattern shifts color with device tilt, flowing through gray, amber, teal, violet, and magenta like a foil hologram, while the setup sheet around it stays still.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWallet setup sheet: \"Cash\" card at top (black face with a dome of small dots), \"Set Up Apple Cash\" copy and Set Up Now button below, legal fine print at the bottom.\n\n## Motion spec\nPattern: gyroscope-driven holographic foil.\n- The dot dome is a normal-mapped surface: tilting the device changes the \"light angle\", sweeping hue across the dots (hue rotation up to ~180deg for a full tilt range).\n- Response is 1:1 with tilt, smoothed (low-pass filter, ~150ms lag) so it feels like material, not a sensor readout.\n- Dots near the dome's rim shift color before the center - the gradient always radiates from the light direction.\n- At rest, a slow idle drift keeps the foil alive (hue +-10deg over 6s).\n- Brightness also responds: tilting toward the \"light\" adds up to +20% luminance on the lit side.\n\n## Calibration\n- The illusion depends on spatial coherence: hue must vary continuously across the dome, never uniform.\n- Clamp total hue travel; a full rainbow reads as a sticker, not foil.\n\n## Reduced motion\nStatic violet dome (the canonical brand color); no gyro response.\n\n## Don't miss\n- The dot grid has subtle size falloff (smaller at the rim) - it's a dome, not a flat halftone.\n- Only the card reacts to tilt; the sheet's text and buttons are fixed."
+ },
+ {
+  "id": "60fps:x-themed-like-animation",
+  "source": "60fps",
+  "slug": "x-themed-like-animation",
+  "title": "X Themed Like Animation",
+  "category": "Animation",
+  "desc": "A custom SpaceX-themed like button animation featuring a rocket launch with particle effects.",
+  "author": "X",
+  "authorUrl": "https://60fps.design/shots/x-themed-like-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/x-themed-like-animation",
+  "pageUrl": "https://60fps.design/shots/x-themed-like-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220a5c94624b77548fb7/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220a5c94624b77548fb7/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-x-themed-like-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: X's themed like - tapping the heart on a themed post fires a custom burst: the heart fills red, the like count ticks up, and a spray of tiny themed particles erupts from the icon and drifts before dissolving.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "tap-triggered icon celebration, ~1s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: X's themed like - tapping the heart on a themed post fires a custom burst: the heart fills red, the like count ticks up, and a spray of tiny themed particles erupts from the icon and drifts before dissolving.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark post detail: author header, post text (\"Tap like for a little SpaceX themed surprise...\"), engagement row (reply, repost, heart + count, views, bookmark), replies below.\n\n## Motion spec\nPattern: tap-triggered icon celebration, ~1s.\n- Touch-down: the heart scales to 0.8 (80ms), then springs to filled red (scale 1 -> 1.3 -> 1, spring ~450/18, 250ms) - the classic pop.\n- Burst: a ring of ~10 small particles (mix of dots and themed shapes) erupts radially from the heart (travel 24-40px, 400ms, ease-out) with a quick concentric ring flash (scale 0 -> 1.6, fade, 300ms).\n- Particles drift upward slightly as they fade (translateY -8px over the last 200ms).\n- The count ticks up with a small flip (rotateX 90 -> 0, 200ms) in tabular-nums.\n- Unlike: heart springs back to outline (200ms), no particles.\n\n## Calibration\n- The whole show is under a second - like animations must survive being triggered 20 times in a session.\n- Particle shapes carry the theme (rockets/stars for SpaceX); the motion system is identical to the default like.\n\n## Reduced motion\nHeart fills with a 150ms fade; count sets instantly.\n\n## Don't miss\n- The ring flash sits behind the heart; particles in front.\n- The icon returns to its exact resting size - no lingering scale drift."
+ },
+ {
+  "id": "60fps:duolingo-duo-cup-suit-reveal-interaction",
+  "source": "60fps",
+  "slug": "duolingo-duo-cup-suit-reveal-interaction",
+  "title": "Duolingo Duo Cup Suit Reveal Interaction",
+  "category": "Interaction",
+  "desc": "A gamified character suit reveal featuring energetic spins, springy staggered text entries, and a horizontal slide transition to the next state.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-duo-cup-suit-reveal-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-duo-cup-suit-reveal-interaction",
+  "pageUrl": "https://60fps.design/shots/duolingo-duo-cup-suit-reveal-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a3638e683334b304cd0aa63/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a3638e683334b304cd0aa63/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-duo-cup-suit-reveal-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Duolingo's Duo Cup suit reveal - a blue silhouette with a question mark stands center; the reward bursts out of it to reveal your character wearing the earned suit (\"You earned the Haiti suit for doing a lesson today!\"), with WEAR NOW / SAVE IN PROFILE actions and a teaser silhouette of the next unlock beside it.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "mystery-to-reveal, ~2s."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Duolingo's Duo Cup suit reveal - a blue silhouette with a question mark stands center; the reward bursts out of it to reveal your character wearing the earned suit (\"You earned the Haiti suit for doing a lesson today!\"), with WEAR NOW / SAVE IN PROFILE actions and a teaser silhouette of the next unlock beside it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight sky-gradient stage: locked silhouette (blue, \"?\" on the chest) -> revealed character in the earned soccer suit with glasses, floating on a soft shadow. Below: reward label, headline copy, blue WEAR NOW button, SAVE IN PROFILE text action.\n\n## Motion spec\nPattern: mystery-to-reveal, ~2s.\n- Idle: the silhouette bobs gently (translateY +-4px, 2s) with small \"?\" sparkle twinkles.\n- Reveal: silhouette flashes white (150ms), bursts into 6-8 confetti shards (gravity arcs, 500ms), and the suited character springs in (scale 0.5 -> 1, rotate -8deg -> 0, spring ~300/15) with a radial light burst behind it (scale 0 -> 1 -> fade, 400ms).\n- Copy: label + headline slide up (250ms, ease-out), buttons follow (150ms later).\n- WEAR NOW tap: button presses (scale 0.95, 100ms), character does a happy hop (translateY -16px, spring back).\n- The next-unlock silhouette slides in from the right edge as a teaser (300ms, after reveal settles).\n\n## Calibration\n- The white flash + confetti burst must hit on the same frame - split them and the reveal loses its snap.\n- The character's shadow grows with its scale so it reads as landing, not fading.\n\n## Reduced motion\nSilhouette crossfades to the revealed character (300ms); no burst.\n\n## Don't miss\n- The next-locked teaser keeps the loop going - it's part of the retention design.\n- \"SAVE IN PROFILE\" is a quiet secondary action; never style it like a second button."
+ },
+ {
+  "id": "60fps:apple-sports-fifa-group-stage-timeline-interaction",
+  "source": "60fps",
+  "slug": "apple-sports-fifa-group-stage-timeline-interaction",
+  "title": "Apple Sports Fifa Group Stage Timeline Interaction",
+  "category": "Interaction",
+  "desc": "A fluid tab and layout transition in Apple Sports switching between group standings and bracket views",
+  "author": "Apple",
+  "authorUrl": "https://60fps.design/shots/apple-sports-fifa-group-stage-timeline-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/apple-sports-fifa-group-stage-timeline-interaction",
+  "pageUrl": "https://60fps.design/shots/apple-sports-fifa-group-stage-timeline-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36221783334b304cced628/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36221783334b304cced628/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-apple-sports-fifa-group-stage-timeline-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Apple Sports' FIFA World Cup group-stage browser - a horizontally scrolling strip of group chips under the header; swiping the strip (or the standings below) moves a sliding active pill between groups while the standings table crossfades to the selected group, keeping chip bar and content perfectly synced.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "synced pager - chip strip drives a paged table."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Apple Sports' FIFA World Cup group-stage browser - a horizontally scrolling strip of group chips under the header; swiping the strip (or the standings below) moves a sliding active pill between groups while the standings table crossfades to the selected group, keeping chip bar and content perfectly synced.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark navy screen: \"FIFA World Cup 2026\" header, a horizontal chip strip of group codes (scrollable, arrows at edges), and the group standings table below (flag, team, W/D/L, points columns).\n\n## Motion spec\nPattern: synced pager - chip strip drives a paged table.\n- Drag on the table: content pages horizontally 1:1 with the finger; the chip strip scrolls proportionally and the active pill slides/stretches between chips tracking the same progress.\n- Release: nearest page settles (spring ~330/28, 300ms); the pill lands centered on its chip with a small overshoot.\n- Table content: outgoing page slides and fades (opacity 1 -> 0 over the last 30% of the swipe), incoming fades in (first 30%).\n- Tap a chip: strip scrolls the chip to center (250ms) and the table jumps pages with a fast slide (300ms).\n- Pill: rounded rect behind the active chip, width hugging the label + 12px padding.\n\n## Calibration\n- The pill stretches mid-transit (up to 1.2x width at fast swipes) - a rigid pill breaks the physical link.\n- Strip and table are one gesture system; any lag between them reads as a bug.\n\n## Reduced motion\nTable crossfades between groups (200ms); pill slides without stretch.\n\n## Don't miss\n- Edge arrows on the strip appear only when more chips exist in that direction.\n- The pill is always visible - auto-scroll keeps the active chip on screen."
+ },
+ {
+  "id": "60fps:apple-music-album-art-illustration-pattern-animation",
+  "source": "60fps",
+  "slug": "apple-music-album-art-illustration-pattern-animation",
+  "title": "Apple Music Album Art Illustration Pattern Animation",
+  "category": "Animation",
+  "desc": "An ambient, looping pattern animation masked inside a stylized running figure illustration on an Apple Music playlist screen.",
+  "author": "Apple",
+  "authorUrl": "https://60fps.design/shots/apple-music-album-art-illustration-pattern-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/apple-music-album-art-illustration-pattern-animation",
+  "pageUrl": "https://60fps.design/shots/apple-music-album-art-illustration-pattern-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220a5c94624b77548fa2/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220a5c94624b77548fa2/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-apple-music-album-art-illustration-pattern-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Apple Music's animated playlist cover - a flat running-figure silhouette filled with a living illustrated pattern (paisley-like swirls in pink/blue/green) that slowly flows and shimmers inside the silhouette, over a deep maroon background on the playlist screen.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "contained texture flow, continuous loop."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Apple Music's animated playlist cover - a flat running-figure silhouette filled with a living illustrated pattern (paisley-like swirls in pink/blue/green) that slowly flows and shimmers inside the silhouette, over a deep maroon background on the playlist screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPlaylist detail screen: large square cover art (dark maroon field, running man silhouette center) above title \"Tamil Workout\", curator line, Play button and description. Standard Apple Music chrome around it.\n\n## Motion spec\nPattern: contained texture flow, continuous loop.\n- The silhouette is a mask: inside it, an illustrated pattern field drifts slowly (translate ~40px over 12s, looping) with layered swirls moving at two speeds (parallax: back layer 12s, front swirls 8s).\n- Subtle hue shimmer on the pattern (+-8deg hue rotation over 10s) and occasional brighter swirls pulsing (opacity +0.15, 3s).\n- The silhouette shape itself never animates; the maroon field and all UI are static.\n- Cover is square with a soft shadow; slight 3D tilt on scroll (rotateX up to 4deg) is the only interactive motion.\n\n## Calibration\n- Movement must be slow enough to feel like the art is breathing - fast flow reads as a loading spinner.\n- Mask edges are crisp: the pattern never bleeds outside the figure.\n\n## Reduced motion\nStatic pattern fill.\n\n## Don't miss\n- Two parallax speeds inside the mask are what make it feel illustrated, not a video loop.\n- Pattern colors stay in the playlist's palette (pink/blue/green on maroon) - don't add new hues."
+ },
+ {
+  "id": "60fps:duolingo-send-gift-gem-drop-animation",
+  "source": "60fps",
+  "slug": "duolingo-send-gift-gem-drop-animation",
+  "title": "Duolingo Send Gift Gem Drop Animation",
+  "category": "Animation",
+  "desc": "A playful gem drop and confetti animation triggered by sending a gift in Duolingo.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-send-gift-gem-drop-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-send-gift-gem-drop-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-send-gift-gem-drop-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5aa2314e1a9997ccec/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5aa2314e1a9997ccec/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-send-gift-gem-drop-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's send-a-gift moment on the social feed - tapping \"SEND 1 GIFT\" drops a blue gem from the top of the screen onto the friend's avatar, which then celebrates, while the button switches to a disabled cooldown state (\"SEND GIFTS AGAIN IN 49H\").",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "tap-triggered projectile + state change, ~1.5s."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's send-a-gift moment on the social feed - tapping \"SEND 1 GIFT\" drops a blue gem from the top of the screen onto the friend's avatar, which then celebrates, while the button switches to a disabled cooldown state (\"SEND GIFTS AGAIN IN 49H\").\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark social feed: friend avatars row top, a \"SEND 1 GIFT\" button under them, feed cards below (sentence shares with reactions). After gifting, the button dims to its cooldown state.\n\n## Motion spec\nPattern: tap-triggered projectile + state change, ~1.5s.\n- On tap: a small blue gem spawns at the top edge and falls in a shallow arc onto the target avatar (400ms, ease-in - accelerating gravity feel).\n- Impact: avatar does a happy bounce (scale 1 -> 1.2 -> 1, spring ~350/15) and the gem bursts into 3-4 tiny sparkles (200ms).\n- Button transitions: label crossfades to the cooldown text, background dims to disabled gray (250ms), no jiggle.\n- Feed content never moves.\n\n## Calibration\n- The gem's arc is the charm: slight horizontal drift + gravity acceleration, not a straight drop.\n- The avatar bounce is bigger than UI-standard (20% overshoot) - it's a character reaction, not a button press.\n\n## Reduced motion\nGem fades onto the avatar; button state swaps without animation.\n\n## Don't miss\n- The gem originates off-screen top, not from the button.\n- Cooldown state shows immediately after the burst - no gap where the button looks tappable."
+ },
+ {
+  "id": "60fps:google-gemini-input-gradient-pulse-animation",
+  "source": "60fps",
+  "slug": "google-gemini-input-gradient-pulse-animation",
+  "title": "Google Gemini Input Gradient Pulse Animation",
+  "category": "Animation",
+  "desc": "An ambient gradient glow pulses behind the input bar and keyboard when the text field is focused.",
+  "author": "Google",
+  "authorUrl": "https://60fps.design/shots/google-gemini-input-gradient-pulse-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/google-gemini-input-gradient-pulse-animation",
+  "pageUrl": "https://60fps.design/shots/google-gemini-input-gradient-pulse-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a977329e0/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a977329e0/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-google-gemini-input-gradient-pulse-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Gemini's home screen idle - a personalized greeting (\"Hi Prithvi, what's the move?\") with the four-point sparkle, and the \"Ask Gemini\" input pill wrapped in a slowly breathing purple-pink gradient glow that pulses from the edges of the field.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "ambient gradient breathing loop."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Gemini's home screen idle - a personalized greeting (\"Hi Prithvi, what's the move?\") with the four-point sparkle, and the \"Ask Gemini\" input pill wrapped in a slowly breathing purple-pink gradient glow that pulses from the edges of the field.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen: small header, centered greeting text with the Gemini sparkle glyph above it, and the rounded input pill at the bottom (plus mic and plus icons), keyboard raised in later beats.\n\n## Motion spec\nPattern: ambient gradient breathing loop.\n- The gradient glow lives behind the input pill: purple-magenta at the pill's edge, dissolving into black within ~40px.\n- It breathes: intensity and spread oscillate on a ~4s cycle (opacity 0.5 -> 0.9, spread 20px -> 44px, ease-in-out both ways).\n- Hue drift: the gradient slowly rotates through purple -> blue -> magenta over ~12s.\n- The sparkle glyph above the greeting twinkles (scale 1 -> 1.15 -> 1, opacity 0.7 -> 1, 2s).\n- Greeting text and pill chrome never move.\n\n## Calibration\n- The glow reads as light spilling from the field, not a border - soft falloff, no hard edge.\n- Slow cycles only; anything under 2s per breath feels like a notification, not ambience.\n\n## Reduced motion\nStatic 70%-intensity glow; no breathing or hue drift.\n\n## Don't miss\n- The glow is strongest at the pill and fades asymmetrically (wider on the long sides).\n- Keyboard raising does not interrupt the loop - the gradient stays attached to the pill."
+ },
+ {
+  "id": "60fps:duolingo-mega-chest-unlock-interaction",
+  "source": "60fps",
+  "slug": "duolingo-mega-chest-unlock-interaction",
+  "title": "Duolingo Mega Chest Unlock Interaction",
+  "category": "Interaction",
+  "desc": "A gamified reward sequence featuring an animated chest opening, card flips, and liquid transitions.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-mega-chest-unlock-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-mega-chest-unlock-interaction",
+  "pageUrl": "https://60fps.design/shots/duolingo-mega-chest-unlock-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c14708/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c14708/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-mega-chest-unlock-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Duolingo's Mega chest unlock - a striped treasure chest waits on an orange stage (\"Tap to open!\"), shakes with anticipation on tap, bursts open with sparkles and light, then reveals the reward card (bonus XP) on a color-matched stage with a CONTINUE button.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "tap-triggered reward sequence, ~2.5s."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Duolingo's Mega chest unlock - a striped treasure chest waits on an orange stage (\"Tap to open!\"), shakes with anticipation on tap, bursts open with sparkles and light, then reveals the reward card (bonus XP) on a color-matched stage with a CONTINUE button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen orange stage: \"MEGA\" label top, big striped chest center, \"Tap to open!\" prompt. After the reveal: stage switches to the reward's color (blue for bonus XP, purple for XP boosts), reward card center, description, CONTINUE button.\n\n## Motion spec\nPattern: tap-triggered reward sequence, ~2.5s.\n- Idle: chest breathes (scale 1 -> 1.03, 2s); tiny sparkles twinkle around it (random 1-2s twinkles).\n- On tap: chest shakes with growing intensity (rotate +-4deg at ~10Hz, ramping over 500ms), prompt text fades out (150ms).\n- Burst: lid flings open (rotateX -70deg, 300ms, spring overshoot), a light column shoots from the chest (scaleY 0 -> 1, 250ms, fades), and 6-8 sparkle particles arc out (gravity-affected, 500ms).\n- Reveal: stage crossfades to the reward color (300ms); the reward card flips in (rotateY 90 -> 0, spring ~300/20) with a shine sweep (highlight band across the card, 400ms).\n- Copy + CONTINUE slide up (250ms, ease-out).\n\n## Calibration\n- The anticipation shake is mandatory - bursting without the wind-up feels cheap.\n- One big burst, then calm: particles settle, stage holds.\n\n## Reduced motion\nTap crossfades to the revealed reward (300ms), no shake, no particles.\n\n## Don't miss\n- Stage color always matches the reward type.\n- The chest's lid stays open behind the reward card, dimmed."
+ },
+ {
+  "id": "60fps:instagram-instant-feature-coachmark-interaction",
+  "source": "60fps",
+  "slug": "instagram-instant-feature-coachmark-interaction",
+  "title": "Instagram Instant Feature Coachmark Interaction",
+  "category": "Interaction",
+  "desc": "An interactive onboarding flow for Instagram's 'Instants' feature, demonstrating navigation, reactions, and privacy rules with guided tooltips and playful animations.",
+  "author": "Instagram",
+  "authorUrl": "https://60fps.design/shots/instagram-instant-feature-coachmark-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/instagram-instant-feature-coachmark-interaction",
+  "pageUrl": "https://60fps.design/shots/instagram-instant-feature-coachmark-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a977329e2/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a977329e2/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-instagram-instant-feature-coachmark-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Instagram's \"Introducing Instants\" coachmark flow - an intro sheet walks through the feature, then a guided demo: a shared photo collage fills the screen with a \"Tap to go to the next photo\" hint, an emoji reaction rail sits at the bottom, tapping the heart sends hearts bursting upward, and a final card explains screenshots are blocked.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "stepped walkthrough with one live interaction."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Instagram's \"Introducing Instants\" coachmark flow - an intro sheet walks through the feature, then a guided demo: a shared photo collage fills the screen with a \"Tap to go to the next photo\" hint, an emoji reaction rail sits at the bottom, tapping the heart sends hearts bursting upward, and a final card explains screenshots are blocked.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark full-screen flow: (1) intro sheet with collage preview, \"Introducing Instants\", three feature bullets, blue \"How it works\" button; (2) demo screen with the collage (rounded blob mask), hint text \"Tap to go to the next photo\", reaction rail (heart, fire, laughing emoji + plus); (3) hearts particle burst over the collage; (4) \"You can't screenshot or record this\" info card.\n\n## Motion spec\nPattern: stepped walkthrough with one live interaction.\n- Screen transitions: content slides up + fades (300ms, ease-out); the collage photo morphs between screens (shared element - it scales from preview size to full-bleed, 350ms).\n- Demo hint: a small up-chevron bounces above the caption (translateY 0 -> -6px loop, 1s).\n- Reaction tap: the tapped emoji pops (scale 1 -> 1.4 -> 1, spring ~400/18) and emits 5-8 hearts that float up with drift (translateY -120px, translateX +-20px random, fade out, 800ms, 40ms stagger).\n- Counter under the rail ticks up with a flip (200ms).\n- Final card: phone-shield icon draws in (stroke 400ms), copy fades after (150ms delay).\n\n## Calibration\n- The heart burst is physics-lite: gravity pulls hearts slightly as they rise, giving an arc, not a straight line.\n- Each beat waits for the user; nothing auto-advances except the hint bounce loop.\n\n## Reduced motion\nScreens crossfade; one heart floats up slowly; no burst.\n\n## Don't miss\n- The collage photo is a shared element across the first two screens - it never reloads or jumps.\n- \"Only you and the author can see your reactions\" sits under the rail throughout the demo."
+ },
+ {
+  "id": "60fps:google-chrome-ipl-live-score-illustration-animation",
+  "source": "60fps",
+  "slug": "google-chrome-ipl-live-score-illustration-animation",
+  "title": "Google Chrome IPL Live Score Illustration Animation",
+  "category": "Animation",
+  "desc": "An energetic, celebratory vector illustration bursts out from behind a Google Search live score card.",
+  "author": "Google",
+  "authorUrl": "https://60fps.design/shots/google-chrome-ipl-live-score-illustration-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/google-chrome-ipl-live-score-illustration-animation",
+  "pageUrl": "https://60fps.design/shots/google-chrome-ipl-live-score-illustration-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/69ee166251e0355695e8aff3/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/69ee166251e0355695e8aff3/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-google-chrome-ipl-live-score-illustration-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Chrome's live cricket score easter egg - on a match results card, a red cricket ball bounces in from the edge and settles over the score area with a soft spring, sitting on the card like a sticker while live scores update.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "entrance + idle."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Chrome's live cricket score easter egg - on a match results card, a red cricket ball bounces in from the edge and settles over the score area with a soft spring, sitting on the card like a sticker while live scores update.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nGoogle search results for a cricket team: match card (pink-tinted) with team rows, scores, \"Live\" badge. A red cricket ball (stitched, glossy) arrives and parks on the card near the score.\n\n## Motion spec\nPattern: entrance + idle.\n- The ball enters from the right edge with an arc (translate + slight rotate, 500ms, ease-out) and bounces twice on landing (translateY: -20px -> 0 -> -8px -> 0, 400ms total, decreasing).\n- It settles with a final springy rotate (~10deg unwind, 250ms).\n- Idle: the ball does a slow subtle rock (rotate +-3deg, 4s) and its glossy highlight shifts with the rock.\n- Score text updates tick with a small highlight flash (300ms) independent of the ball.\n\n## Calibration\n- Two bounces, decreasing height - one bounce reads as a drop, three reads as a toy.\n- The ball is a rendered object (stitching, specular), not a flat emoji.\n\n## Reduced motion\nBall fades into its final position (200ms); no idle rock.\n\n## Don't miss\n- The ball overlaps the card edge slightly - a sticker, not an inline icon.\n- Its shadow is painted on the card, moving with the bounces."
+ },
+ {
+  "id": "60fps:x-explore-interests-empty-state-icon-animation",
+  "source": "60fps",
+  "slug": "x-explore-interests-empty-state-icon-animation",
+  "title": "X Explore Interests Empty State Icon Animation",
+  "category": "Animation",
+  "desc": "An idle empty-state icon animation that continuously morphs through different interest-related symbols.",
+  "author": "X",
+  "authorUrl": "https://60fps.design/shots/x-explore-interests-empty-state-icon-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/x-explore-interests-empty-state-icon-animation",
+  "pageUrl": "https://60fps.design/shots/x-explore-interests-empty-state-icon-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff38835595b0e9e2d30/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff38835595b0e9e2d30/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-x-explore-interests-empty-state-icon-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: X's \"Explore your interests\" empty state - a centered icon slowly cycles through topic glyphs (camera, baseball, globe, sparkles, hexagon) with soft crossfades above the empty-state copy and \"Add Timelines\" button, under a scrollable topic chip row.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "ambient icon carousel, ~2s per glyph."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: X's \"Explore your interests\" empty state - a centered icon slowly cycles through topic glyphs (camera, baseball, globe, sparkles, hexagon) with soft crossfades above the empty-state copy and \"Add Timelines\" button, under a scrollable topic chip row.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen: horizontal chip row top (design, AI, Tech, Software, Design Twitter, \"Add +\"), centered empty state: cycling icon, \"Explore your interests\" headline, \"See topics that interest you\" subline, black \"Add Timelines\" button.\n\n## Motion spec\nPattern: ambient icon carousel, ~2s per glyph.\n- The icon crossfades between topic glyphs (400ms crossfade, 1.6s hold): camera -> baseball -> globe -> sparkles -> hexagon -> repeat.\n- Each glyph enters with a tiny rise (translateY 6px -> 0) during its fade-in.\n- Everything else is perfectly still - headline, subline, button never move.\n\n## Calibration\n- Crossfade only - no slide, spin, or bounce. The restraint is what makes it feel like X.\n- Monochrome outline glyphs, consistent stroke weight across the set.\n\n## Reduced motion\nStatic globe glyph.\n\n## Don't miss\n- The cycle order implies breadth (creative -> sports -> world -> magic) - keep variety, not one category.\n- The chip row is real and scrollable; the animation lives only in the empty state."
+ },
+ {
+  "id": "60fps:duolingo-chess-matches-mascot-animation",
+  "source": "60fps",
+  "slug": "duolingo-chess-matches-mascot-animation",
+  "title": "Duolingo Chess Matches Mascot Animation",
+  "category": "Animation",
+  "desc": "A subtle, looping idle animation of a Duolingo mascot character inside a game selection card.",
+  "author": "Duolingo",
+  "authorUrl": "https://60fps.design/shots/duolingo-chess-matches-mascot-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/duolingo-chess-matches-mascot-animation",
+  "pageUrl": "https://60fps.design/shots/duolingo-chess-matches-mascot-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5aa2314e1a9997cd04/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5aa2314e1a9997cd04/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-duolingo-chess-matches-mascot-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Duolingo's Chess Matches screen - the mascot opponent (Oscar) idles on his player card with a lively loop: blinking, subtle bobbing, and an occasional smug eyebrow raise, while the green header glows softly behind the match cards.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "looping character idle."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Duolingo's Chess Matches screen - the mascot opponent (Oscar) idles on his player card with a lively loop: blinking, subtle bobbing, and an occasional smug eyebrow raise, while the green header glows softly behind the match cards.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nGreen-header screen: \"Chess Matches\" title + ELO, INVITE button, two player cards (\"Play Oscar 60 XP\" with the mustached mascot, \"Play a Person 50 XP\" with a generic avatar), match history list below.\n\n## Motion spec\nPattern: looping character idle.\n- Oscar's idle cycle (~4s): gentle bob (translateY +-3px, 2s), a double blink every ~3s (eyelids close 80ms), and an occasional eyebrow raise + smirk (every ~7s, 400ms).\n- The generic person avatar has a lesser idle: bob only, no face animation.\n- Header: a soft radial glow behind the cards shifts slowly (6s drift).\n- Card press (interactive): pressed card scales to 0.97 (100ms), releases with a spring back (300/20).\n\n## Calibration\n- The idle must feel alive but not hyper: long quiet stretches, short expressions.\n- Oscar's mustache and sunglasses get a subtle secondary wobble on the bob.\n\n## Reduced motion\nStatic mascots; press states remain.\n\n## Don't miss\n- The two avatars animate at different richness levels - character vs placeholder.\n- Idle loops are phase-offset between cards so they never sync."
+ },
+ {
+  "id": "60fps:google-gemini-response-gradient-animation",
+  "source": "60fps",
+  "slug": "google-gemini-response-gradient-animation",
+  "title": "Google Gemini Response Gradient Animation",
+  "category": "Animation",
+  "desc": "An organic, shifting background gradient that morphs colors to signal AI response states.",
+  "author": "Google",
+  "authorUrl": "https://60fps.design/shots/google-gemini-response-gradient-animation",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/google-gemini-response-gradient-animation",
+  "pageUrl": "https://60fps.design/shots/google-gemini-response-gradient-animation",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c1470a/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c1470a/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-google-gemini-response-gradient-animation.jpg"
+   }
+  ],
+  "summary": "Rebuild this animation 1:1: Gemini's response background - while Gemini composes a response, a slow aurora gradient washes across the chat's dark background, drifting through blue, teal, green, and amber, then recedes back to black as the answer settles.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "full-screen ambient aurora, ~10s per full hue journey."
+   ],
+   "Content type": [
+    "passive animation"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this animation 1:1: Gemini's response background - while Gemini composes a response, a slow aurora gradient washes across the chat's dark background, drifting through blue, teal, green, and amber, then recedes back to black as the answer settles.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark chat thread: user bubble top-right, assistant reply below with feedback icons. The entire background behind the thread carries the aurora.\n\n## Motion spec\nPattern: full-screen ambient aurora, ~10s per full hue journey.\n- The gradient is a large soft mesh (2-3 color blobs, radius ~60% of screen, heavily blurred) that drifts slowly (translate +-8% of screen over 8s) while its hue rotates: blue -> teal -> green -> amber -> back.\n- Intensity ramps in over 800ms when a response starts generating, holds at ~35% while streaming, and fades to black over 1.2s when the response completes.\n- Chat content scrolls over the aurora without affecting it (fixed background layer).\n\n## Calibration\n- Saturation stays muted - a vivid rainbow looks like a wallpaper app, not Gemini.\n- The fade-out is slower than the fade-in; the calm-down should feel like settling.\n\n## Reduced motion\nStatic faint gradient tint (10% opacity) during generation; no drift or hue rotation.\n\n## Don't miss\n- The aurora is behind everything including the header, not a per-bubble effect.\n- Hue changes are continuous interpolation - never discrete color steps."
+ },
+ {
+  "id": "60fps:google-chrome-customize-homepage-background-interaction",
+  "source": "60fps",
+  "slug": "google-chrome-customize-homepage-background-interaction",
+  "title": "Google Chrome Customize Homepage Background Interaction",
+  "category": "Interaction",
+  "desc": "A smooth background crossfade transition triggered by selecting theme cards in a bottom sheet picker.",
+  "author": "Google",
+  "authorUrl": "https://60fps.design/shots/google-chrome-customize-homepage-background-interaction",
+  "published": "2026-09-04T00:00:00.000Z",
+  "originalUrl": "https://60fps.design/shots/google-chrome-customize-homepage-background-interaction",
+  "pageUrl": "https://60fps.design/shots/google-chrome-customize-homepage-background-interaction",
+  "media": [
+   {
+    "poster": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb73a2314e1a9997cf16/thumbnail-1-0.png",
+    "src": "https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb73a2314e1a9997cf16/main.mp4",
+    "type": "video",
+    "montage": "frames/60fps-google-chrome-customize-homepage-background-interaction.jpg"
+   }
+  ],
+  "summary": "Rebuild this interaction 1:1: Chrome mobile's \"Customize homepage\" - a bottom sheet with a horizontal rail of background themes (photos, gradients, illustrations); tapping a theme instantly applies it to the Google homepage behind the sheet with a smooth crossfade, and the rail's selection ring slides to the tapped thumbnail.",
+  "frames": [],
+  "mechanics": {
+   "Pattern": [
+    "direct-manipulation theme picker."
+   ],
+   "Content type": [
+    "interactive"
+   ],
+   "Source": [
+    "60fps.design"
+   ]
+  },
+  "prompt": "Rebuild this interaction 1:1: Chrome mobile's \"Customize homepage\" - a bottom sheet with a horizontal rail of background themes (photos, gradients, illustrations); tapping a theme instantly applies it to the Google homepage behind the sheet with a smooth crossfade, and the rail's selection ring slides to the tapped thumbnail.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nGoogle homepage (search bar, AI Mode / Incognito chips) over a full-bleed background image. Bottom sheet: \"Customize homepage\" title, close X, a scrolling rail of ~6 theme thumbnails (portrait previews), \"Your top sites\" toggle + Cards toggle below.\n\n## Motion spec\nPattern: direct-manipulation theme picker.\n- Tap a thumbnail: homepage background crossfades to the new theme (350ms, ease-in-out) behind the sheet - live preview without closing the sheet.\n- Selection ring: a 2px accent border slides from the old thumbnail to the new one (spring ~350/25, 250ms) - the ring MOVES, it doesn't disappear and reappear.\n- The tapped thumbnail does a quick press scale (0.95, 100ms) on touch-down.\n- Sheet drag: dismisses with velocity-aware fling (spring back if under threshold, ~300/25).\n\n## Calibration\n- Instant preview is the whole point - no apply button, no confirmation.\n- The moving ring sells continuity; a re-rendered ring feels like a page reload.\n\n## Reduced motion\nBackground swaps instantly; ring jumps without sliding.\n\n## Don't miss\n- The sheet is partially translucent - you see the theme change behind it.\n- The search bar + chips adapt contrast to the new background (light/dark aware)."
  }
 ]

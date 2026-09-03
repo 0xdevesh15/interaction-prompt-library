@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WhatsApp Welcome Logo Illustration Morph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>WhatsApp Welcome Logo Illustration Morph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/whatsapp-welcome-logo-illustration-morph-animation"><b>Whatsapp</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/whatsapp-welcome-logo-illustration-morph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/whatsapp-welcome-logo-illustration-morph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: WhatsApp&#x27;s welcome screen - the brand glyph (phone-in-speech-bubble) elegantly morphs into a detailed line-art illustration of a chat scene (bubbles, globe, hearts, phone), then back, on a slow seamless loop above the &quot;Welcome to WhatsApp&quot; copy.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f33d24befe20b134e73ae2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f33d24befe20b134e73ae2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-whatsapp-welcome-logo-illustration-morph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: WhatsApp&#x27;s welcome screen - the brand glyph (phone-in-speech-bubble) elegantly morphs into a detailed line-art illustration of a chat scene (bubbles, globe, hearts, phone), then back, on a slow seamless loop above the &quot;Welcome to WhatsApp&quot; copy.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White welcome screen: illustration stage upper-middle, &quot;Welcome to WhatsApp&quot; headline, privacy subline, green &quot;Agree &amp; continue&quot; button. The stage alternates between two states: the simple green WhatsApp glyph, and a light-green doodle scene (speech bubbles, globe, hearts, handset) drawn in the same line weight.
+
+## Motion spec
+Pattern: looping morph, ~8s full cycle.
+- Hold the glyph ~2s. Then the glyph&#x27;s strokes extend and branch: the bubble outline grows sub-elements, the handset arcs out, and doodle details draw on (stroke-dash draw-on effect, ~2s, ease-in-out).
+- Hold the full illustration ~2.5s with a barely-there float (translateY +-2px, 3s).
+- Reverse morph back to the glyph (~1.5s) - strokes retract in reverse order.
+- Stroke color stays WhatsApp green throughout; line weight constant (the two states must share a stroke vocabulary).
+- Copy and button are static.
+
+## Calibration
+- The morph is a stroke journey, not a crossfade: lines visibly grow into the illustration.
+- Draw-on order: container shapes first, interior details last.
+
+## Reduced motion
+Slow crossfade between the two states (500ms), holds unchanged.
+
+## Don&#x27;t miss
+- Same line weight in both states - that&#x27;s what makes the morph believable.
+- The illustration is tinted (light green fills at ~20% opacity), the glyph is solid.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping morph, ~8s full cycle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/whatsapp-welcome-logo-illustration-morph-animation">original interaction</a> by Whatsapp. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: WhatsApp's welcome screen - the brand glyph (phone-in-speech-bubble) elegantly morphs into a detailed line-art illustration of a chat scene (bubbles, globe, hearts, phone), then back, on a slow seamless loop above the \"Welcome to WhatsApp\" copy.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite welcome screen: illustration stage upper-middle, \"Welcome to WhatsApp\" headline, privacy subline, green \"Agree & continue\" button. The stage alternates between two states: the simple green WhatsApp glyph, and a light-green doodle scene (speech bubbles, globe, hearts, handset) drawn in the same line weight.\n\n## Motion spec\nPattern: looping morph, ~8s full cycle.\n- Hold the glyph ~2s. Then the glyph's strokes extend and branch: the bubble outline grows sub-elements, the handset arcs out, and doodle details draw on (stroke-dash draw-on effect, ~2s, ease-in-out).\n- Hold the full illustration ~2.5s with a barely-there float (translateY +-2px, 3s).\n- Reverse morph back to the glyph (~1.5s) - strokes retract in reverse order.\n- Stroke color stays WhatsApp green throughout; line weight constant (the two states must share a stroke vocabulary).\n- Copy and button are static.\n\n## Calibration\n- The morph is a stroke journey, not a crossfade: lines visibly grow into the illustration.\n- Draw-on order: container shapes first, interior details last.\n\n## Reduced motion\nSlow crossfade between the two states (500ms), holds unchanged.\n\n## Don't miss\n- Same line weight in both states - that's what makes the morph believable.\n- The illustration is tinted (light green fills at ~20% opacity), the glyph is solid."</script>
+</body></html>

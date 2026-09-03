@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revolut Coin Roll Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Revolut Coin Roll Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/revolut-coin-roll-animation"><b>Revolut</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-coin-roll-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-coin-roll-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: a Revolut promo banner where a 3D metallic coin rolls along a curved neon path across a dark stage - the coin spins as it travels the wire-road, catching light, enters from the right and exits left on a seamless loop.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a2aa14b70eb1b2c7f1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a2aa14b70eb1b2c7f1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-revolut-coin-roll-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: a Revolut promo banner where a 3D metallic coin rolls along a curved neon path across a dark stage - the coin spins as it travels the wire-road, catching light, enters from the right and exits left on a seamless loop.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Promo detail screen: dark card under the headline (&quot;TOP UP AND SPEND TO EARN £10&quot;), fine-print body, dark CTA. Inside the card: a dark stage with a thin glowing wire curve (neon blue-violet) sweeping across it like a road, and a silver 3D coin that rolls along the curve.
+
+## Motion spec
+Pattern: ambient loop, ~6s per pass.
+- The coin enters from the right edge already rolling (rotation locked to travel: ~360deg per coin-circumference of path).
+- It follows the wire curve&#x27;s ups and downs (position on path + slight squash on the dips), rotation speed matching path velocity exactly.
+- The wire glows brighter under the coin (a light pool that travels with it).
+- Coin exits left; 1s pause; loop restarts.
+- The card and copy never move.
+
+## Calibration
+- Rolling contact is everything: rotation must equal travel distance / circumference, or the coin slides and the illusion dies.
+- The neon wire&#x27;s traveling light pool sells the contact point.
+
+## Reduced motion
+Static coin resting on the wire&#x27;s low point.
+
+## Don&#x27;t miss
+- The coin is brushed metal - anisotropic highlights that shift as it rolls.
+- Path easing: the coin slows slightly on rises, speeds on dips (physics feel, not constant speed).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient loop, ~6s per pass.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/revolut-coin-roll-animation">original interaction</a> by Revolut. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: a Revolut promo banner where a 3D metallic coin rolls along a curved neon path across a dark stage - the coin spins as it travels the wire-road, catching light, enters from the right and exits left on a seamless loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPromo detail screen: dark card under the headline (\"TOP UP AND SPEND TO EARN \u00a310\"), fine-print body, dark CTA. Inside the card: a dark stage with a thin glowing wire curve (neon blue-violet) sweeping across it like a road, and a silver 3D coin that rolls along the curve.\n\n## Motion spec\nPattern: ambient loop, ~6s per pass.\n- The coin enters from the right edge already rolling (rotation locked to travel: ~360deg per coin-circumference of path).\n- It follows the wire curve's ups and downs (position on path + slight squash on the dips), rotation speed matching path velocity exactly.\n- The wire glows brighter under the coin (a light pool that travels with it).\n- Coin exits left; 1s pause; loop restarts.\n- The card and copy never move.\n\n## Calibration\n- Rolling contact is everything: rotation must equal travel distance / circumference, or the coin slides and the illusion dies.\n- The neon wire's traveling light pool sells the contact point.\n\n## Reduced motion\nStatic coin resting on the wire's low point.\n\n## Don't miss\n- The coin is brushed metal - anisotropic highlights that shift as it rolls.\n- Path easing: the coin slows slightly on rises, speeds on dips (physics feel, not constant speed)."</script>
+</body></html>

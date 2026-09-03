@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Lighting Mascot Score Increase Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Lighting Mascot Score Increase Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-lighting-mascot-score-increase-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-lighting-mascot-score-increase-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-lighting-mascot-score-increase-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s score-progress screen - the owl crackles with electric energy on a light stage while the score bar fills: a green fill sweeps across the track with a glowing head, the score numeral holds, and &quot;You&#x27;re a step closer to increasing your Japanese Score!&quot; settles in with a continue button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e4e7cc890ee8f906/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e4e7cc890ee8f906/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-lighting-mascot-score-increase-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s score-progress screen - the owl crackles with electric energy on a light stage while the score bar fills: a green fill sweeps across the track with a glowing head, the score numeral holds, and &quot;You&#x27;re a step closer to increasing your Japanese Score!&quot; settles in with a continue button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: owl mascot with yellow lightning/electric aura at top, score numeral (&quot;5&quot;) with a small red flag dot, a long progress track, encouragement copy, blue continue button.
+
+## Motion spec
+Pattern: energy burst + meter fill, ~2s.
+- Entrance: owl pops in with electric bolts flashing around it (3-4 bolt shapes, 150ms each, fading) - one crackle burst, then the aura calms to a soft glow (gentle 2s pulse).
+- Bar: the green fill sweeps from its old value to the new one (700ms, ease-out) with a bright glowing head and a faint trailing shimmer; the track flashes once as the fill completes (150ms).
+- Score numeral pulses (scale 1 -&gt; 1.15 -&gt; 1, 250ms) synced with the fill completing.
+- Copy fades in (200ms), continue button slides up (250ms).
+
+## Calibration
+- The fill&#x27;s glowing head is the focus - a flat fill reads as a loading bar.
+- One electric burst only; continuous lightning turns celebration into noise.
+
+## Reduced motion
+Owl fades in; bar fills without glow; no bolt flash.
+
+## Don&#x27;t miss
+- The aura glow persists after the burst at low intensity - the owl stays &quot;charged&quot;.
+- The red flag dot next to the numeral is part of the score readout - keep the pairing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">energy burst + meter fill, ~2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-lighting-mascot-score-increase-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's score-progress screen - the owl crackles with electric energy on a light stage while the score bar fills: a green fill sweeps across the track with a glowing head, the score numeral holds, and \"You're a step closer to increasing your Japanese Score!\" settles in with a continue button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: owl mascot with yellow lightning/electric aura at top, score numeral (\"5\") with a small red flag dot, a long progress track, encouragement copy, blue continue button.\n\n## Motion spec\nPattern: energy burst + meter fill, ~2s.\n- Entrance: owl pops in with electric bolts flashing around it (3-4 bolt shapes, 150ms each, fading) - one crackle burst, then the aura calms to a soft glow (gentle 2s pulse).\n- Bar: the green fill sweeps from its old value to the new one (700ms, ease-out) with a bright glowing head and a faint trailing shimmer; the track flashes once as the fill completes (150ms).\n- Score numeral pulses (scale 1 -> 1.15 -> 1, 250ms) synced with the fill completing.\n- Copy fades in (200ms), continue button slides up (250ms).\n\n## Calibration\n- The fill's glowing head is the focus - a flat fill reads as a loading bar.\n- One electric burst only; continuous lightning turns celebration into noise.\n\n## Reduced motion\nOwl fades in; bar fills without glow; no bolt flash.\n\n## Don't miss\n- The aura glow persists after the burst at low intensity - the owl stays \"charged\".\n- The red flag dot next to the numeral is part of the score readout - keep the pairing."</script>
+</body></html>

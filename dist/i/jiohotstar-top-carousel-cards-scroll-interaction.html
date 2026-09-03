@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JioHotstar Top Carousel Cards Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>JioHotstar Top Carousel Cards Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/jiohotstar-top-carousel-cards-scroll-interaction"><b>Jiohotstar</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jiohotstar-top-carousel-cards-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jiohotstar-top-carousel-cards-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: JioHotstar&#x27;s hero title carousel - large poster cards that scroll horizontally with scaling, fading, and snap: the centered card is full size and opaque, neighbors shrink and dim toward the edges, and the title logo swaps with each card.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5269d1908c2926dcf4e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5269d1908c2926dcf4e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-jiohotstar-top-carousel-cards-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: JioHotstar&#x27;s hero title carousel - large poster cards that scroll horizontally with scaling, fading, and snap: the centered card is full size and opaque, neighbors shrink and dim toward the edges, and the title logo swaps with each card.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark streaming home: hero carousel occupying the top ~60% (big poster art, title logo bottom-left, genre/quality chips), &quot;Popular in Kids&quot; rail + tab bar below. Cards are wide posters with rounded corners (~16px).
+
+## Motion spec
+Pattern: scroll-linked scaling carousel.
+- Drag/scroll: cards translate continuously; the card nearest center scales toward 1.0, off-center cards fall to ~0.88 with opacity to ~0.6 (both interpolate by distance from center).
+- Snap on release: nearest card centers (spring ~260/22, ~350ms).
+- Title logo + metadata crossfade at center crossing (180ms); logos are artwork images, swap with a slight scale (0.9 -&gt; 1).
+- The focused card&#x27;s art has a subtle zoom-drift (Ken Burns, scale 1 -&gt; 1.05 over 6s) while centered.
+- Edge cards peek ~12% into the viewport.
+
+## Calibration
+- Scale/opacity vs distance is the core curve - keep it smooth (no stepped states).
+- Ken Burns drift pauses during interaction, resumes 1s after settle.
+
+## Reduced motion
+Simple snap with crossfade; no Ken Burns, no scaling.
+
+## Don&#x27;t miss
+- The dimming gradient at the card bottom (for logo legibility) is part of the art treatment.
+- Cards keep constant spacing while scaling (scale around center, not layout).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-linked scaling carousel.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/jiohotstar-top-carousel-cards-scroll-interaction">original interaction</a> by Jiohotstar. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: JioHotstar's hero title carousel - large poster cards that scroll horizontally with scaling, fading, and snap: the centered card is full size and opaque, neighbors shrink and dim toward the edges, and the title logo swaps with each card.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark streaming home: hero carousel occupying the top ~60% (big poster art, title logo bottom-left, genre/quality chips), \"Popular in Kids\" rail + tab bar below. Cards are wide posters with rounded corners (~16px).\n\n## Motion spec\nPattern: scroll-linked scaling carousel.\n- Drag/scroll: cards translate continuously; the card nearest center scales toward 1.0, off-center cards fall to ~0.88 with opacity to ~0.6 (both interpolate by distance from center).\n- Snap on release: nearest card centers (spring ~260/22, ~350ms).\n- Title logo + metadata crossfade at center crossing (180ms); logos are artwork images, swap with a slight scale (0.9 -> 1).\n- The focused card's art has a subtle zoom-drift (Ken Burns, scale 1 -> 1.05 over 6s) while centered.\n- Edge cards peek ~12% into the viewport.\n\n## Calibration\n- Scale/opacity vs distance is the core curve - keep it smooth (no stepped states).\n- Ken Burns drift pauses during interaction, resumes 1s after settle.\n\n## Reduced motion\nSimple snap with crossfade; no Ken Burns, no scaling.\n\n## Don't miss\n- The dimming gradient at the card bottom (for logo legibility) is part of the art treatment.\n- Cards keep constant spacing while scaling (scale around center, not layout)."</script>
+</body></html>

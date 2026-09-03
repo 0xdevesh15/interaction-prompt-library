@@ -92,6 +92,14 @@ const q = document.getElementById('q');
 let cat = null;
 const cats = [...new Set(R.map(r=>r.category))];
 const cwrap = document.getElementById('cats');
+let src_filter=null;
+const swrap=document.getElementById('srcs');
+const sources=[...new Set(R.map(r=>r.source))];
+sources.forEach(c=>{
+  const el=document.createElement('span');el.className='chip';el.textContent=c;
+  el.onclick=()=>{src_filter=(src_filter===c?null:c);document.querySelectorAll('#srcs .chip').forEach(x=>x.classList.toggle('on',x.textContent===src_filter));render();};
+  swrap.appendChild(el);
+});
 cats.forEach(c=>{
   const el=document.createElement('span');el.className='chip';el.textContent=c;
   el.onclick=()=>{cat=(cat===c?null:c);document.querySelectorAll('#cats .chip').forEach(x=>x.classList.toggle('on',x.textContent===cat));render();};
@@ -103,6 +111,7 @@ function render(){
   let n=0, i=0;
   for(const r of R){
     if(cat&&r.category!==cat)continue;
+    if(src_filter&&r.source!==src_filter)continue;
     if(s&&!(r.title+' '+r.desc+' '+r.summary+' '+r.prompt).toLowerCase().includes(s))continue;
     n++; i++;
     const thumb=r.media[0]?(r.media[0].poster||r.media[0].montage||r.media[0].src):'';
@@ -119,18 +128,18 @@ q.addEventListener('input',render);render();
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">'
 
-lite = [{k:r[k] for k in ('slug','title','category','desc','author','summary','prompt')} | {'media':[{'poster':m.get('poster'),'src':m.get('src'),'montage':m.get('montage')} for m in r['media']]} for r in recs]
+lite = [{k:r[k] for k in ('slug','title','category','desc','author','summary','prompt','source')} | {'media':[{'poster':m.get('poster'),'src':m.get('src'),'montage':m.get('montage')} for m in r['media']]} for r in recs]
 index_html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Interaction Prompt Library</title>{FONTS}<link rel="stylesheet" href="assets-style.css"></head><body>
 <div class="wrap"><header class="top">
-<div class="eyebrow">Prompt Library &middot; 80 interactions &middot; inspora.design</div>
+<div class="eyebrow">Prompt Library &middot; {len(recs)} interactions &middot; inspora.design + 60fps.design</div>
 <h1>Interaction Prompt Library</h1>
-<p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Source #1: <a href="https://www.inspora.design/">inspora.design</a>. Query it from your AI tool via the MCP server.</p>
-<div class="stats"><span><b>{len(recs)}</b> interactions</span><span><b>{sum(len(r['media']) for r in recs)}</b> media teardowns</span><span><b>{len(set(r['category'] for r in recs))}</b> categories</span><span><b id="count">{len(recs)}</b> shown</span></div>
+<p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Sources: <a href="https://www.inspora.design/">inspora.design</a> (80) and <a href="https://60fps.design/">60fps.design</a> (batch 1: 58, more coming). Query it from your AI tool via the MCP server.</p>
+<div class="stats"><span><b>{len(recs)}</b> interactions</span><span><b>{sum(len(r['media']) for r in recs)}</b> media teardowns</span><span><b>{len(set(r['category'] for r in recs))}</b> categories</span><span><b>{len(set(r['source'] for r in recs))}</b> sources</span><span><b id="count">{len(recs)}</b> shown</span></div>
 </header>
-<div class="controls"><input id="q" placeholder="Search interactions, mechanics, prompts..." ><div id="cats" style="display:flex;gap:8px;flex-wrap:wrap"></div></div>
+<div class="controls"><input id="q" placeholder="Search interactions, mechanics, prompts..." ><div id="srcs" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"></div><div id="cats" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"></div></div>
 <div class="grid" id="grid"></div>
-<footer>Built from a full teardown of inspora.design (80 posts, Sep 2026 snapshot). 60fps.design teardown coming as source #2. Every record: summary, frame-by-frame phases, mechanics, and a build prompt.</footer>
+<footer>Built from full teardowns of inspora.design (80 posts, Sep 2026 snapshot) and 60fps.design (batch 1: 58 shots, featured + top apps; full 2,034-shot teardown in progress). Every record: summary, montage, mechanics, and a build prompt.</footer>
 </div>
 <script>window.__DATA__={json.dumps(lite)}</script><script>{APPJS}</script>
 </body></html>"""
@@ -154,7 +163,7 @@ for r in recs:
 <div class="wrap">
 <div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
 <h1>{E(r['title'])}</h1>
-<div class="meta"><span class="cat">{E(r['category'] or '')}</span><span class="sep">&middot;</span><span>by <a href="{E(r.get('authorUrl') or '#')}"><b>{E(r.get('author') or 'unknown')}</b></a></span><span class="sep">&middot;</span><span>{pub}</span><span class="sep">&middot;</span><span><a href="{E(r['pageUrl'])}">inspora page</a></span><span class="sep">&middot;</span><span><a href="{E(r.get('originalUrl') or '#')}">original post</a></span></div>
+<div class="meta"><span class="cat">{E(r['category'] or '')}</span><span class="sep">&middot;</span><span>by <a href="{E(r.get('authorUrl') or '#')}"><b>{E(r.get('author') or 'unknown')}</b></a></span><span class="sep">&middot;</span><span>{pub}</span><span class="sep">&middot;</span><span><a href="{E(r['pageUrl'])}">{E(r['source'])} page</a></span><span class="sep">&middot;</span><span><a href="{E(r.get('originalUrl') or '#')}">original post</a></span></div>
 </div>
 <section><h2>What it is</h2><p class="lede">{E(r.get('summary') or '')}</p></section>
 <div class="duo">
@@ -167,7 +176,7 @@ for r in recs:
 <section><h2>Mechanics</h2><div class="mech">{mech_html}</div></section>
 </div>
 </div>
-<footer>Source: inspora.design - <a href="{E(r['pageUrl'])}">original interaction</a> by {E(r.get('author') or '')}. Teardown snapshot Sep 2026.</footer>
+<footer>Source: {E(r['source'])}.design - <a href="{E(r['pageUrl'])}">original interaction</a> by {E(r.get('author') or '')}. Teardown snapshot Sep 2026.</footer>
 </div>
 <script>document.querySelector('.prompt').dataset.p={json.dumps(r.get('prompt') or '')}</script>
 </body></html>"""

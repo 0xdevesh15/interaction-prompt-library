@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Gemini Input Gradient Pulse Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Google Gemini Input Gradient Pulse Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/google-gemini-input-gradient-pulse-animation"><b>Google</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-gemini-input-gradient-pulse-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-gemini-input-gradient-pulse-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Gemini&#x27;s home screen idle - a personalized greeting (&quot;Hi Prithvi, what&#x27;s the move?&quot;) with the four-point sparkle, and the &quot;Ask Gemini&quot; input pill wrapped in a slowly breathing purple-pink gradient glow that pulses from the edges of the field.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a977329e0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a6d3b523a977329e0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-google-gemini-input-gradient-pulse-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Gemini&#x27;s home screen idle - a personalized greeting (&quot;Hi Prithvi, what&#x27;s the move?&quot;) with the four-point sparkle, and the &quot;Ask Gemini&quot; input pill wrapped in a slowly breathing purple-pink gradient glow that pulses from the edges of the field.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen: small header, centered greeting text with the Gemini sparkle glyph above it, and the rounded input pill at the bottom (plus mic and plus icons), keyboard raised in later beats.
+
+## Motion spec
+Pattern: ambient gradient breathing loop.
+- The gradient glow lives behind the input pill: purple-magenta at the pill&#x27;s edge, dissolving into black within ~40px.
+- It breathes: intensity and spread oscillate on a ~4s cycle (opacity 0.5 -&gt; 0.9, spread 20px -&gt; 44px, ease-in-out both ways).
+- Hue drift: the gradient slowly rotates through purple -&gt; blue -&gt; magenta over ~12s.
+- The sparkle glyph above the greeting twinkles (scale 1 -&gt; 1.15 -&gt; 1, opacity 0.7 -&gt; 1, 2s).
+- Greeting text and pill chrome never move.
+
+## Calibration
+- The glow reads as light spilling from the field, not a border - soft falloff, no hard edge.
+- Slow cycles only; anything under 2s per breath feels like a notification, not ambience.
+
+## Reduced motion
+Static 70%-intensity glow; no breathing or hue drift.
+
+## Don&#x27;t miss
+- The glow is strongest at the pill and fades asymmetrically (wider on the long sides).
+- Keyboard raising does not interrupt the loop - the gradient stays attached to the pill.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient gradient breathing loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/google-gemini-input-gradient-pulse-animation">original interaction</a> by Google. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Gemini's home screen idle - a personalized greeting (\"Hi Prithvi, what's the move?\") with the four-point sparkle, and the \"Ask Gemini\" input pill wrapped in a slowly breathing purple-pink gradient glow that pulses from the edges of the field.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen: small header, centered greeting text with the Gemini sparkle glyph above it, and the rounded input pill at the bottom (plus mic and plus icons), keyboard raised in later beats.\n\n## Motion spec\nPattern: ambient gradient breathing loop.\n- The gradient glow lives behind the input pill: purple-magenta at the pill's edge, dissolving into black within ~40px.\n- It breathes: intensity and spread oscillate on a ~4s cycle (opacity 0.5 -> 0.9, spread 20px -> 44px, ease-in-out both ways).\n- Hue drift: the gradient slowly rotates through purple -> blue -> magenta over ~12s.\n- The sparkle glyph above the greeting twinkles (scale 1 -> 1.15 -> 1, opacity 0.7 -> 1, 2s).\n- Greeting text and pill chrome never move.\n\n## Calibration\n- The glow reads as light spilling from the field, not a border - soft falloff, no hard edge.\n- Slow cycles only; anything under 2s per breath feels like a notification, not ambience.\n\n## Reduced motion\nStatic 70%-intensity glow; no breathing or hue drift.\n\n## Don't miss\n- The glow is strongest at the pill and fades asymmetrically (wider on the long sides).\n- Keyboard raising does not interrupt the loop - the gradient stays attached to the pill."</script>
+</body></html>
