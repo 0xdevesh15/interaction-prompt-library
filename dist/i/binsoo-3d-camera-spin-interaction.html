@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Binsoo 3D Camera Spin Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Binsoo 3D Camera Spin Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/binsoo-3d-camera-spin-interaction"><b>Binsoo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/binsoo-3d-camera-spin-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/binsoo-3d-camera-spin-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Binsoo&#x27;s camera showcase - selecting a film preset from the bottom row spins the central 3D camera model while polaroid photo cards orbit around it in 3D space.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb6a6d3b523a97732b3f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb6a6d3b523a97732b3f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-binsoo-3d-camera-spin-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Binsoo&#x27;s camera showcase - selecting a film preset from the bottom row spins the central 3D camera model while polaroid photo cards orbit around it in 3D space.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark showcase screen: a rendered 3D camera (brown leather body, silver lens) center-stage, a ring of small polaroid photos floating around it, the preset name (&quot;ACH&quot;) with film format below, a bottom row of preset thumbnails with the active one highlighted, and a shutter button.
+
+## Motion spec
+Pattern: preset selection drives a 3D turntable spin with orbiting photo cards.
+- On preset tap: the camera rotates around its Y axis (~180 degrees, 700ms, ease-in-out) to a new hero angle, with slight X tilt settling (spring ~200/16).
+- The polaroids orbit the camera continuously (slow, one revolution ~12s) and bank/tilt with their orbit position (rotateZ +/- 10 degrees, perspective scale 0.7-1.1 by depth).
+- On selection the orbit ring gets a small impulse (rotation velocity bump that eases back over 1s).
+- Preset label and format crossfade (200ms); the bottom-row highlight slides to the tapped thumbnail (spring ~300/20).
+
+## Calibration
+- Perspective must be real: far polaroids shrink and dim, near ones grow and sharpen.
+- The camera&#x27;s materials catch light as it turns - reflections travel with the spin.
+
+## Reduced motion
+Camera crossfades between angles; polaroids hold a static arrangement.
+
+## Don&#x27;t miss
+- Polaroids never intersect the camera - the orbit radius clears the lens at every angle.
+- The spin direction follows the shortest arc to the new preset&#x27;s angle.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">preset selection drives a 3D turntable spin with orbiting photo cards.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/binsoo-3d-camera-spin-interaction">original interaction</a> by Binsoo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Binsoo's camera showcase - selecting a film preset from the bottom row spins the central 3D camera model while polaroid photo cards orbit around it in 3D space.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark showcase screen: a rendered 3D camera (brown leather body, silver lens) center-stage, a ring of small polaroid photos floating around it, the preset name (\"ACH\") with film format below, a bottom row of preset thumbnails with the active one highlighted, and a shutter button.\n\n## Motion spec\nPattern: preset selection drives a 3D turntable spin with orbiting photo cards.\n- On preset tap: the camera rotates around its Y axis (~180 degrees, 700ms, ease-in-out) to a new hero angle, with slight X tilt settling (spring ~200/16).\n- The polaroids orbit the camera continuously (slow, one revolution ~12s) and bank/tilt with their orbit position (rotateZ +/- 10 degrees, perspective scale 0.7-1.1 by depth).\n- On selection the orbit ring gets a small impulse (rotation velocity bump that eases back over 1s).\n- Preset label and format crossfade (200ms); the bottom-row highlight slides to the tapped thumbnail (spring ~300/20).\n\n## Calibration\n- Perspective must be real: far polaroids shrink and dim, near ones grow and sharpen.\n- The camera's materials catch light as it turns - reflections travel with the spin.\n\n## Reduced motion\nCamera crossfades between angles; polaroids hold a static arrangement.\n\n## Don't miss\n- Polaroids never intersect the camera - the orbit radius clears the lens at every angle.\n- The spin direction follows the shortest arc to the new preset's angle."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speechify Speed Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Speechify Speed Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/speechify-speed-slider"><b>Speechify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/speechify-speed-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/speechify-speed-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Speechify&#x27;s speed picker - a &quot;Select Speed&quot; bottom sheet with a big vertical blue slider; dragging it scrubs playback speed (0.7x Slow to 4.5x Speed Reader) with the multiplier and words-per-minute updating live.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f0147fd6a13510db2dfd3d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f0147fd6a13510db2dfd3d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-speechify-speed-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Speechify&#x27;s speed picker - a &quot;Select Speed&quot; bottom sheet with a big vertical blue slider; dragging it scrubs playback speed (0.7x Slow to 4.5x Speed Reader) with the multiplier and words-per-minute updating live.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dimmed reader screen with a &quot;Pick a speed&quot; coach bubble; bottom sheet &quot;Select Speed&quot; with Done: a speed label (&quot;Slow&quot;, &quot;Normal&quot;, &quot;Fast&quot;, &quot;Speed Reader&quot;), big multiplier (&quot;1.4x&quot;), &quot;210 words per minute&quot; subtext, a green-highlighted sample line, and a tall vertical blue slider on the right with a thumb.
+
+## Motion spec
+Pattern: vertical scrub slider with live value readout.
+- Drag the slider thumb: value tracks finger 1:1; the multiplier text updates in real time (0.1x steps), the label flips between Slow/Normal/Fast/Speed Reader at thresholds, and wpm recalculates.
+- Slider fill: blue level follows the thumb with a tiny spring lag (~500/30) for fluidity; the label/multiplier subtly scale (1 -&gt; 1.06) while scrubbing.
+- Crossing a named threshold fires a light haptic tick.
+- Release: thumb eases to the exact 0.1x step (spring ~350/26, ~200ms); audio preview plays a beat at the new speed.
+- Done: sheet slides down (~250ms); the reader&#x27;s coach bubble updates to the chosen speed (&quot;2x&quot;).
+
+## Calibration
+- The value readout is the focus - it must never lag behind the thumb visually.
+- Named zones (Slow/Normal/Fast/Speed Reader) are ranges, not detents; the slider is continuous within them.
+
+## Reduced motion
+Slider and text update without spring lag or scale.
+
+## Don&#x27;t miss
+- The slider is VERTICAL (up = faster) and oversized - it&#x27;s the whole right side of the sheet.
+- wpm text changes with the multiplier - &quot;210 words per minute&quot; at 1.4x.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vertical scrub slider with live value readout.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/speechify-speed-slider">original interaction</a> by Speechify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Speechify's speed picker - a \"Select Speed\" bottom sheet with a big vertical blue slider; dragging it scrubs playback speed (0.7x Slow to 4.5x Speed Reader) with the multiplier and words-per-minute updating live.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDimmed reader screen with a \"Pick a speed\" coach bubble; bottom sheet \"Select Speed\" with Done: a speed label (\"Slow\", \"Normal\", \"Fast\", \"Speed Reader\"), big multiplier (\"1.4x\"), \"210 words per minute\" subtext, a green-highlighted sample line, and a tall vertical blue slider on the right with a thumb.\n\n## Motion spec\nPattern: vertical scrub slider with live value readout.\n- Drag the slider thumb: value tracks finger 1:1; the multiplier text updates in real time (0.1x steps), the label flips between Slow/Normal/Fast/Speed Reader at thresholds, and wpm recalculates.\n- Slider fill: blue level follows the thumb with a tiny spring lag (~500/30) for fluidity; the label/multiplier subtly scale (1 -> 1.06) while scrubbing.\n- Crossing a named threshold fires a light haptic tick.\n- Release: thumb eases to the exact 0.1x step (spring ~350/26, ~200ms); audio preview plays a beat at the new speed.\n- Done: sheet slides down (~250ms); the reader's coach bubble updates to the chosen speed (\"2x\").\n\n## Calibration\n- The value readout is the focus - it must never lag behind the thumb visually.\n- Named zones (Slow/Normal/Fast/Speed Reader) are ranges, not detents; the slider is continuous within them.\n\n## Reduced motion\nSlider and text update without spring lag or scale.\n\n## Don't miss\n- The slider is VERTICAL (up = faster) and oversized - it's the whole right side of the sheet.\n- wpm text changes with the multiplier - \"210 words per minute\" at 1.4x."</script>
+</body></html>

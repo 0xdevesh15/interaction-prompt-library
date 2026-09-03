@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spark Streak Flame Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spark Streak Flame Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spark-streak-flame-animation"><b>Spark</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spark-streak-flame-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spark-streak-flame-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Spark&#x27;s streak celebration - a big orange flame badge with the streak count springs up from nothing, sheds tiny flame particles, and settles into a gentle idle bob above the &quot;Day Streak&quot; title, copy, and green CTA.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538ea79cd218090c8ce7d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538ea79cd218090c8ce7d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spark-streak-flame-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Spark&#x27;s streak celebration - a big orange flame badge with the streak count springs up from nothing, sheds tiny flame particles, and settles into a gentle idle bob above the &quot;Day Streak&quot; title, copy, and green CTA.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Celebration screen on cream, entered from a &quot;Knowledge added&quot; toast state. Center: a large rounded flame icon carrying the white streak number. Below: &quot;Day Streak&quot; title, a line of copy, a small flame mini-badge, a filled green &quot;Play Rise or Rest&quot; button, and a Close text button.
+
+## Motion spec
+Pattern: bouncy badge spring entrance with particle accents and an idle loop.
+- The flame scales up from 0 (spring ~240/12, ~700ms) with 2-3 visible overshoot bounces before resting.
+- At the first overshoot peak, 3-4 tiny flame/spark particles pop from the badge&#x27;s edges (translate 20-40px outward, fade, 400ms, staggered 60ms).
+- The number inside pops a beat after the flame (scale 0.5 -&gt; 1, spring ~320/18, 250ms).
+- Title, copy, mini-badge, and buttons fade up in sequence (200ms each, 80ms stagger) after the badge lands.
+- Idle: the flame bobs gently (+/- 6px, 2.5s, ease-in-out) with a subtle inner-flicker (scaleY +/- 4%).
+
+## Calibration
+- Big and bouncy is the brief - the badge should feel like it burst onto the screen.
+- Particles are a single burst, not a loop; the bob is the only continuous motion.
+
+## Reduced motion
+Badge fades in at final size (250ms); no particles, no bob.
+
+## Don&#x27;t miss
+- The flame is chunky and rounded - friendly, not realistic fire.
+- The streak number is pure white and centered; it never wobbles with the flame.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bouncy badge spring entrance with particle accents and an idle loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spark-streak-flame-animation">original interaction</a> by Spark. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Spark's streak celebration - a big orange flame badge with the streak count springs up from nothing, sheds tiny flame particles, and settles into a gentle idle bob above the \"Day Streak\" title, copy, and green CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCelebration screen on cream, entered from a \"Knowledge added\" toast state. Center: a large rounded flame icon carrying the white streak number. Below: \"Day Streak\" title, a line of copy, a small flame mini-badge, a filled green \"Play Rise or Rest\" button, and a Close text button.\n\n## Motion spec\nPattern: bouncy badge spring entrance with particle accents and an idle loop.\n- The flame scales up from 0 (spring ~240/12, ~700ms) with 2-3 visible overshoot bounces before resting.\n- At the first overshoot peak, 3-4 tiny flame/spark particles pop from the badge's edges (translate 20-40px outward, fade, 400ms, staggered 60ms).\n- The number inside pops a beat after the flame (scale 0.5 -> 1, spring ~320/18, 250ms).\n- Title, copy, mini-badge, and buttons fade up in sequence (200ms each, 80ms stagger) after the badge lands.\n- Idle: the flame bobs gently (+/- 6px, 2.5s, ease-in-out) with a subtle inner-flicker (scaleY +/- 4%).\n\n## Calibration\n- Big and bouncy is the brief - the badge should feel like it burst onto the screen.\n- Particles are a single burst, not a loop; the bob is the only continuous motion.\n\n## Reduced motion\nBadge fades in at final size (250ms); no particles, no bob.\n\n## Don't miss\n- The flame is chunky and rounded - friendly, not realistic fire.\n- The streak number is pure white and centered; it never wobbles with the flame."</script>
+</body></html>

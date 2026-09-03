@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Safari Hide Items Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Safari Hide Items Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/safari-hide-items-animation"><b>Safari</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/safari-hide-items-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/safari-hide-items-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Safari&#x27;s Hide Distracting Items - in selection mode, tapping a page element disintegrates it into a cloud of particles that scatter and fade, and the toolbar counts &quot;1 item hidden&quot; until you tap Done.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f40346228eb0236547b380/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f40346228eb0236547b380/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-safari-hide-items-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Safari&#x27;s Hide Distracting Items - in selection mode, tapping a page element disintegrates it into a cloud of particles that scatter and fade, and the toolbar counts &quot;1 item hidden&quot; until you tap Done.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Safari showing a webpage, page menu sheet (Hide Distracting Items, Report Distraction Control Issue, ...), then selection mode: a bottom bar with Cancel / &quot;Select an item&quot; / Done, tappable elements outlined. Tapping an element shows a blue highlight with a &quot;Hide&quot; button.
+
+## Motion spec
+Pattern: selection mode + particle disintegration.
+- Enter selection mode: page dims slightly, bottom bar slides up (200ms).
+- Element pick: blue outline + &quot;Hide&quot; pill appears on the tapped element (150ms, ease-out).
+- On Hide: the element explodes into ~200-400 tiny particles sampling its own colors, bursting outward with drift and rotation, fading over ~700ms; the element&#x27;s layout space collapses (content reflows, 250ms ease-out).
+- Bottom bar updates to &quot;1 item hidden&quot; and Done turns blue (150ms).
+- Done exits selection mode (bar slides down, dim lifts).
+
+## Calibration
+- Particles inherit the element&#x27;s colors (a blue ad bursts blue-white) - that sampling sells the disintegration.
+- Reflow waits for the burst&#x27;s first ~200ms so the two motions overlap.
+
+## Reduced motion
+Element fades out (200ms), no particles; reflow unchanged.
+
+## Don&#x27;t miss
+- The burst originates across the element&#x27;s whole area, not a single point.
+- The count in the toolbar increments per hidden item and persists until Done.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">selection mode + particle disintegration.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/safari-hide-items-animation">original interaction</a> by Safari. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Safari's Hide Distracting Items - in selection mode, tapping a page element disintegrates it into a cloud of particles that scatter and fade, and the toolbar counts \"1 item hidden\" until you tap Done.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSafari showing a webpage, page menu sheet (Hide Distracting Items, Report Distraction Control Issue, ...), then selection mode: a bottom bar with Cancel / \"Select an item\" / Done, tappable elements outlined. Tapping an element shows a blue highlight with a \"Hide\" button.\n\n## Motion spec\nPattern: selection mode + particle disintegration.\n- Enter selection mode: page dims slightly, bottom bar slides up (200ms).\n- Element pick: blue outline + \"Hide\" pill appears on the tapped element (150ms, ease-out).\n- On Hide: the element explodes into ~200-400 tiny particles sampling its own colors, bursting outward with drift and rotation, fading over ~700ms; the element's layout space collapses (content reflows, 250ms ease-out).\n- Bottom bar updates to \"1 item hidden\" and Done turns blue (150ms).\n- Done exits selection mode (bar slides down, dim lifts).\n\n## Calibration\n- Particles inherit the element's colors (a blue ad bursts blue-white) - that sampling sells the disintegration.\n- Reflow waits for the burst's first ~200ms so the two motions overlap.\n\n## Reduced motion\nElement fades out (200ms), no particles; reflow unchanged.\n\n## Don't miss\n- The burst originates across the element's whole area, not a single point.\n- The count in the toolbar increments per hidden item and persists until Done."</script>
+</body></html>

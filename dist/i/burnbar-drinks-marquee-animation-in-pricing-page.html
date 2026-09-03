@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnBar Drinks Marquee Animation in Pricing Page - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BurnBar Drinks Marquee Animation in Pricing Page</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/burnbar-drinks-marquee-animation-in-pricing-page"><b>Burnbar</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/burnbar-drinks-marquee-animation-in-pricing-page">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/burnbar-drinks-marquee-animation-in-pricing-page">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BurnBar&#x27;s pricing marquee - an endless horizontal strip of drink icons scrolls across the top of the paywall while plan cards (1 Week, 1 Year, Lifetime) swipe through a springy carousel beneath the &quot;Keep my tab open&quot; headline.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff3c3d879bf57303c5d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff3c3d879bf57303c5d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-burnbar-drinks-marquee-animation-in-pricing-page.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BurnBar&#x27;s pricing marquee - an endless horizontal strip of drink icons scrolls across the top of the paywall while plan cards (1 Week, 1 Year, Lifetime) swipe through a springy carousel beneath the &quot;Keep my tab open&quot; headline.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Paywall on electric blue: marquee strip of drink icons across the very top, &quot;Keep my tab open&quot; headline and feature list below, then the plan card carousel (cream cards with a tag pill like &quot;Popular&quot; or &quot;Best Value&quot;, price, and cadence line), page dots, and a filled &quot;Continue&quot; button.
+
+## Motion spec
+Pattern: seamless icon marquee plus a spring-loaded card carousel.
+- The marquee scrolls continuously left at ~40px/s, wrapping seamlessly (icons duplicated so there is no gap); slight vertical wobble per icon (+/- 3px, sine, phase-offset).
+- Plan cards snap-swipe horizontally: drag beyond ~25% width triggers the snap; the card springs to center (spring ~300/20) with neighbors peeking in from both edges at ~80% scale.
+- On snap, the incoming card&#x27;s tag pill pops (scale 0.8 -&gt; 1, spring ~320/18) and page dots slide to the active position.
+- Continue button stays fixed; its label may update with the selected plan.
+
+## Calibration
+- Marquee is ambient background texture - lower contrast than the content, never distracting from the cards.
+- Card carousel is the hero interaction - the snap must feel magnetic.
+
+## Reduced motion
+Marquee is static; cards crossfade on selection with no peek motion.
+
+## Don&#x27;t miss
+- Marquee loops seamlessly - no visible restart point.
+- Cards tilt a degree or two while being dragged and settle straight on snap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">seamless icon marquee plus a spring-loaded card carousel.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/burnbar-drinks-marquee-animation-in-pricing-page">original interaction</a> by Burnbar. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BurnBar's pricing marquee - an endless horizontal strip of drink icons scrolls across the top of the paywall while plan cards (1 Week, 1 Year, Lifetime) swipe through a springy carousel beneath the \"Keep my tab open\" headline.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPaywall on electric blue: marquee strip of drink icons across the very top, \"Keep my tab open\" headline and feature list below, then the plan card carousel (cream cards with a tag pill like \"Popular\" or \"Best Value\", price, and cadence line), page dots, and a filled \"Continue\" button.\n\n## Motion spec\nPattern: seamless icon marquee plus a spring-loaded card carousel.\n- The marquee scrolls continuously left at ~40px/s, wrapping seamlessly (icons duplicated so there is no gap); slight vertical wobble per icon (+/- 3px, sine, phase-offset).\n- Plan cards snap-swipe horizontally: drag beyond ~25% width triggers the snap; the card springs to center (spring ~300/20) with neighbors peeking in from both edges at ~80% scale.\n- On snap, the incoming card's tag pill pops (scale 0.8 -> 1, spring ~320/18) and page dots slide to the active position.\n- Continue button stays fixed; its label may update with the selected plan.\n\n## Calibration\n- Marquee is ambient background texture - lower contrast than the content, never distracting from the cards.\n- Card carousel is the hero interaction - the snap must feel magnetic.\n\n## Reduced motion\nMarquee is static; cards crossfade on selection with no peek motion.\n\n## Don't miss\n- Marquee loops seamlessly - no visible restart point.\n- Cards tilt a degree or two while being dragged and settle straight on snap."</script>
+</body></html>

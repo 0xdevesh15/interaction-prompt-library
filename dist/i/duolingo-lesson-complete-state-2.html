@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Lesson Complete State - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Lesson Complete State</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-lesson-complete-state-2"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-lesson-complete-state-2">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-lesson-complete-state-2">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s lesson-complete celebration - Duo and a second mascot burst onto a white screen under a yellow &quot;Lesson complete!&quot; headline while stat cards pop in one by one along the bottom and confetti sparks fly around the pair.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad35210ca5ef7c875e85/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad35210ca5ef7c875e85/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-lesson-complete-state-2.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s lesson-complete celebration - Duo and a second mascot burst onto a white screen under a yellow &quot;Lesson complete!&quot; headline while stat cards pop in one by one along the bottom and confetti sparks fly around the pair.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White full-screen success state. Center stage: Duo owl plus a human mascot (Lily) side by side, yellow &quot;Lesson complete!&quot; headline below them. Bottom: full-width blue CLAIM XP button, always present. Between headline and button, a row of stat cards appears: yellow XP card (+12), purple lightning card, blue timer card, green accuracy card - each a rounded tile with icon and value.
+
+## Motion spec
+Pattern: staggered celebration entrance with popping stat cards.
+- Mascots enter from below center with a jump: translateY +40px to 0, spring stiffness ~260, damping ~18, ~450ms, arms raised at the peak.
+- Headline fades and rises with the mascots (opacity 0 to 1, translateY 10px to 0, 250ms, ease-out).
+- Stat cards enter one at a time, left to right, ~120ms apart: each scales 0.5 to 1.0 with a bounce (spring stiffness ~320, damping ~20) and slides up ~20px.
+- With each card landing, a small confetti/spark burst pops near the mascots (4-point star shapes, scale 0 to 1 to 0, ~350ms each).
+- Finale: a radial ray burst behind the mascots (short dashed rays scaling outward, ~400ms) while both mascots do one more hop.
+
+## Calibration
+- Total sequence lands in about 2 seconds; the card stagger is the rhythm - do not let cards overlap each other&#x27;s springs.
+- Confetti accents are sparse 4-point stars, not particle rain.
+
+## Reduced motion
+All elements fade in together over 200ms, fully laid out; no jumps, bursts, or stagger.
+
+## Don&#x27;t miss
+- The CLAIM XP button never animates - it is the stable anchor the celebration plays above.
+- Card colors map to their stat (yellow = XP, purple = streak/lightning, blue = time, green = accuracy); keep the mapping.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered celebration entrance with popping stat cards.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-lesson-complete-state-2">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's lesson-complete celebration - Duo and a second mascot burst onto a white screen under a yellow \"Lesson complete!\" headline while stat cards pop in one by one along the bottom and confetti sparks fly around the pair.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite full-screen success state. Center stage: Duo owl plus a human mascot (Lily) side by side, yellow \"Lesson complete!\" headline below them. Bottom: full-width blue CLAIM XP button, always present. Between headline and button, a row of stat cards appears: yellow XP card (+12), purple lightning card, blue timer card, green accuracy card - each a rounded tile with icon and value.\n\n## Motion spec\nPattern: staggered celebration entrance with popping stat cards.\n- Mascots enter from below center with a jump: translateY +40px to 0, spring stiffness ~260, damping ~18, ~450ms, arms raised at the peak.\n- Headline fades and rises with the mascots (opacity 0 to 1, translateY 10px to 0, 250ms, ease-out).\n- Stat cards enter one at a time, left to right, ~120ms apart: each scales 0.5 to 1.0 with a bounce (spring stiffness ~320, damping ~20) and slides up ~20px.\n- With each card landing, a small confetti/spark burst pops near the mascots (4-point star shapes, scale 0 to 1 to 0, ~350ms each).\n- Finale: a radial ray burst behind the mascots (short dashed rays scaling outward, ~400ms) while both mascots do one more hop.\n\n## Calibration\n- Total sequence lands in about 2 seconds; the card stagger is the rhythm - do not let cards overlap each other's springs.\n- Confetti accents are sparse 4-point stars, not particle rain.\n\n## Reduced motion\nAll elements fade in together over 200ms, fully laid out; no jumps, bursts, or stagger.\n\n## Don't miss\n- The CLAIM XP button never animates - it is the stable anchor the celebration plays above.\n- Card colors map to their stat (yellow = XP, purple = streak/lightning, blue = time, green = accuracy); keep the mapping."</script>
+</body></html>

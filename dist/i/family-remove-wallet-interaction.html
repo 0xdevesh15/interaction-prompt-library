@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Remove Wallet Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Remove Wallet Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-remove-wallet-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-remove-wallet-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-remove-wallet-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s wallet removal flow - a danger-zone sequence: options sheet with &quot;Remove Wallet&quot;, a confirmation screen showing the wallet card, a four-item acknowledgment checklist with springy checkboxes that gate the Continue button, a biometric prompt, and a final morphing deletion of the card.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67037029b875f411d73910b2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67037029b875f411d73910b2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-remove-wallet-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s wallet removal flow - a danger-zone sequence: options sheet with &quot;Remove Wallet&quot;, a confirmation screen showing the wallet card, a four-item acknowledgment checklist with springy checkboxes that gate the Continue button, a biometric prompt, and a final morphing deletion of the card.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Wallet detail with options sheet (View Private Key, View Recovery Phrase, Remove Wallet in red). Then &quot;Remove Wallet&quot; screen: red wallet card preview, red Continue button. Then &quot;Before you continue...&quot; checklist screen: four checkbox statements, disabled pink button that becomes solid red &quot;Continue to Remove&quot; when all are checked. Biometric (Face ID-style) sheet follows, then deletion.
+
+## Motion spec
+Pattern: multi-step destructive confirmation with gated progress.
+- Checkboxes: tap toggles with a springy scale (0.85 -&gt; 1.1 -&gt; 1, spring ~400/18, ~250ms), red fill draws in.
+- With each check, the bottom button&#x27;s opacity/saturation rises; at 4/4 it snaps to full red with a label swap to &quot;Continue to Remove&quot; (150ms).
+- Biometric prompt slides up as a native-style sheet (~300ms).
+- On success: the wallet card morphs away - it collapses vertically to a thin line at its center (~350ms, ease-in) and disappears; the screen transitions to the emptied state.
+
+## Calibration
+- The checklist gating is the safety core: button visibly inert until all four are checked.
+- Deletion morph should feel like the card was erased, not dismissed.
+
+## Reduced motion
+Checkboxes fill without scale; card fades out (200ms) instead of collapsing.
+
+## Don&#x27;t miss
+- Red is reserved for the destructive path only (remove row, final button, card).
+- The collapse-to-line happens at the card&#x27;s own position before the screen changes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">multi-step destructive confirmation with gated progress.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-remove-wallet-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's wallet removal flow - a danger-zone sequence: options sheet with \"Remove Wallet\", a confirmation screen showing the wallet card, a four-item acknowledgment checklist with springy checkboxes that gate the Continue button, a biometric prompt, and a final morphing deletion of the card.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWallet detail with options sheet (View Private Key, View Recovery Phrase, Remove Wallet in red). Then \"Remove Wallet\" screen: red wallet card preview, red Continue button. Then \"Before you continue...\" checklist screen: four checkbox statements, disabled pink button that becomes solid red \"Continue to Remove\" when all are checked. Biometric (Face ID-style) sheet follows, then deletion.\n\n## Motion spec\nPattern: multi-step destructive confirmation with gated progress.\n- Checkboxes: tap toggles with a springy scale (0.85 -> 1.1 -> 1, spring ~400/18, ~250ms), red fill draws in.\n- With each check, the bottom button's opacity/saturation rises; at 4/4 it snaps to full red with a label swap to \"Continue to Remove\" (150ms).\n- Biometric prompt slides up as a native-style sheet (~300ms).\n- On success: the wallet card morphs away - it collapses vertically to a thin line at its center (~350ms, ease-in) and disappears; the screen transitions to the emptied state.\n\n## Calibration\n- The checklist gating is the safety core: button visibly inert until all four are checked.\n- Deletion morph should feel like the card was erased, not dismissed.\n\n## Reduced motion\nCheckboxes fill without scale; card fades out (200ms) instead of collapsing.\n\n## Don't miss\n- Red is reserved for the destructive path only (remove row, final button, card).\n- The collapse-to-line happens at the card's own position before the screen changes."</script>
+</body></html>

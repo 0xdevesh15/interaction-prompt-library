@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pinterest Align Markers Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Pinterest Align Markers Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/pinterest-align-markers-interaction"><b>Pinterest</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pinterest-align-markers-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pinterest-align-markers-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Pinterest&#x27;s collage canvas - dragging a card reveals red alignment guide lines when its center or edges line up with other cards, with magnetic snapping, while the bottom toolbar transitions between edit states.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66fa27e295881abdae3cb2d7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66fa27e295881abdae3cb2d7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-pinterest-align-markers-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Pinterest&#x27;s collage canvas - dragging a card reveals red alignment guide lines when its center or edges line up with other cards, with magnetic snapping, while the bottom toolbar transitions between edit states.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Infinite-canvas collage editor: several cards (a green card, a white card, two black photo cards) on a white canvas, bottom toolbar with edit icons (close/rotate, text, add, image, camera) and a centered trash/delete icon that appears during drag.
+
+## Motion spec
+Pattern: drag with live alignment guides and snapping.
+- Drag: card tracks the finger 1:1, lifts with a subtle scale (1 -&gt; 1.03) and shadow.
+- Alignment: when the dragged card&#x27;s horizontal or vertical center (or edge) comes within ~8px of another card&#x27;s, a thin red guide line draws across the canvas at that axis (fades in ~100ms) and the card snaps to it (spring ~500/30, ~120ms, small haptic).
+- Multiple guides can show at once (vertical + horizontal center cross).
+- Bottom toolbar: on drag start, edit icons fade/slide out and the trash icon appears at center (200ms); dragging over trash highlights it; release elsewhere restores the toolbar.
+- Guides vanish (~100ms) when alignment breaks or on drop.
+
+## Calibration
+- Snap threshold tight (~8px) so casual drags stay free-form.
+- Guide lines span the full canvas dimension, not just the aligned cards.
+
+## Reduced motion
+Guides appear without fade; snapping without spring.
+
+## Don&#x27;t miss
+- The toolbar swap (edit icons -&gt; trash) is part of the drag lifecycle, not a separate mode.
+- Guides trigger on center AND edge alignment of any other card on canvas.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">drag with live alignment guides and snapping.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/pinterest-align-markers-interaction">original interaction</a> by Pinterest. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Pinterest's collage canvas - dragging a card reveals red alignment guide lines when its center or edges line up with other cards, with magnetic snapping, while the bottom toolbar transitions between edit states.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nInfinite-canvas collage editor: several cards (a green card, a white card, two black photo cards) on a white canvas, bottom toolbar with edit icons (close/rotate, text, add, image, camera) and a centered trash/delete icon that appears during drag.\n\n## Motion spec\nPattern: drag with live alignment guides and snapping.\n- Drag: card tracks the finger 1:1, lifts with a subtle scale (1 -> 1.03) and shadow.\n- Alignment: when the dragged card's horizontal or vertical center (or edge) comes within ~8px of another card's, a thin red guide line draws across the canvas at that axis (fades in ~100ms) and the card snaps to it (spring ~500/30, ~120ms, small haptic).\n- Multiple guides can show at once (vertical + horizontal center cross).\n- Bottom toolbar: on drag start, edit icons fade/slide out and the trash icon appears at center (200ms); dragging over trash highlights it; release elsewhere restores the toolbar.\n- Guides vanish (~100ms) when alignment breaks or on drop.\n\n## Calibration\n- Snap threshold tight (~8px) so casual drags stay free-form.\n- Guide lines span the full canvas dimension, not just the aligned cards.\n\n## Reduced motion\nGuides appear without fade; snapping without spring.\n\n## Don't miss\n- The toolbar swap (edit icons -> trash) is part of the drag lifecycle, not a separate mode.\n- Guides trigger on center AND edge alignment of any other card on canvas."</script>
+</body></html>

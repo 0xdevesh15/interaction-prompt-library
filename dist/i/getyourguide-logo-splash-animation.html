@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>‎GetYourGuide Logo Splash Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>‎GetYourGuide Logo Splash Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/getyourguide-logo-splash-animation"><b>Getyourguide</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/getyourguide-logo-splash-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/getyourguide-logo-splash-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: GetYourGuide&#x27;s splash - the white G mark on brand red morphs into the GET YOUR GUIDE wordmark, collapses into a dot, then expands from the top of the screen as a circular wipe that reveals the home feed.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c14740/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c14740/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-getyourguide-logo-splash-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: GetYourGuide&#x27;s splash - the white G mark on brand red morphs into the GET YOUR GUIDE wordmark, collapses into a dot, then expands from the top of the screen as a circular wipe that reveals the home feed.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-bleed brand-red splash. Sequence stages: the white &quot;G&quot; glyph centered, the &quot;GET YOUR GUIDE&quot; wordmark centered, a lone white dot center-screen, then the circular reveal from the top notch area into the home screen (search bar, hero photo, &quot;Discover &amp; book things to do&quot;, Top destinations cards, tab bar).
+
+## Motion spec
+Pattern: logo-to-wordmark morph, collapse to dot, circular reveal into the app.
+- The G glyph swells slightly (scale 1 -&gt; 1.12, 300ms) then morphs into the full wordmark (letterforms slide apart, 350ms, ease-out).
+- The wordmark holds (~500ms), then contracts into a single white dot at center (300ms, ease-in).
+- The dot travels up to the notch area (200ms) and expands as a white circular mask that wipes in the home screen (500ms, ease-out) - red field replaced by content.
+- Home content is static during the wipe; the tab bar and cards are already laid out.
+
+## Calibration
+- The morph is typographic: the G&#x27;s counter opens and letters extend from it, not a crossfade between two images.
+- The circle reveal originates exactly at the notch, matching where the dot landed.
+
+## Reduced motion
+Logo crossfades to the wordmark, then a simple fade to the home screen (250ms).
+
+## Don&#x27;t miss
+- The red is the brand&#x27;s saturated warm red - it owns the whole sequence until the wipe.
+- The dot pause before the wipe is a held beat, not a slow tween.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo-to-wordmark morph, collapse to dot, circular reveal into the app.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/getyourguide-logo-splash-animation">original interaction</a> by Getyourguide. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: GetYourGuide's splash - the white G mark on brand red morphs into the GET YOUR GUIDE wordmark, collapses into a dot, then expands from the top of the screen as a circular wipe that reveals the home feed.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-bleed brand-red splash. Sequence stages: the white \"G\" glyph centered, the \"GET YOUR GUIDE\" wordmark centered, a lone white dot center-screen, then the circular reveal from the top notch area into the home screen (search bar, hero photo, \"Discover & book things to do\", Top destinations cards, tab bar).\n\n## Motion spec\nPattern: logo-to-wordmark morph, collapse to dot, circular reveal into the app.\n- The G glyph swells slightly (scale 1 -> 1.12, 300ms) then morphs into the full wordmark (letterforms slide apart, 350ms, ease-out).\n- The wordmark holds (~500ms), then contracts into a single white dot at center (300ms, ease-in).\n- The dot travels up to the notch area (200ms) and expands as a white circular mask that wipes in the home screen (500ms, ease-out) - red field replaced by content.\n- Home content is static during the wipe; the tab bar and cards are already laid out.\n\n## Calibration\n- The morph is typographic: the G's counter opens and letters extend from it, not a crossfade between two images.\n- The circle reveal originates exactly at the notch, matching where the dot landed.\n\n## Reduced motion\nLogo crossfades to the wordmark, then a simple fade to the home screen (250ms).\n\n## Don't miss\n- The red is the brand's saturated warm red - it owns the whole sequence until the wipe.\n- The dot pause before the wipe is a held beat, not a slow tween."</script>
+</body></html>

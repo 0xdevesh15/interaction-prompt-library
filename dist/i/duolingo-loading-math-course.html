@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Loading Math Course - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Loading Math Course</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-loading-math-course"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-loading-math-course">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-loading-math-course">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s math-course loading screen - after tapping the Math tile in New Courses, a dark interstitial shows Duo peeking from behind a tall white ruler, blinking and bobbing over a &quot;LOADING MATH...&quot; caption and mission copy.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad27210ca5ef7c875deb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad27210ca5ef7c875deb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-loading-math-course.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s math-course loading screen - after tapping the Math tile in New Courses, a dark interstitial shows Duo peeking from behind a tall white ruler, blinking and bobbing over a &quot;LOADING MATH...&quot; caption and mission copy.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark background (near-black navy). Entry point: course-select screen with language tiles (Spanish, Music, French) and a New Courses section holding the Math tile. Loading screen: center stage, a vertical white ruler/book edge with Duo peeking from behind its right side. Below: letterspaced gray caption &quot;LOADING MATH...&quot;, then two lines of small mission copy (&quot;Our mission is to develop the best education in the world and make it universally available.&quot;).
+
+## Motion spec
+Pattern: peek-a-boo mascot loading loop.
+- Transition in: the loading screen fades over the course screen (200ms) while Duo and the ruler scale 0.9 to 1.0 (250ms, ease-out).
+- Duo peeks: his body slides from behind the ruler&#x27;s edge (translateX ~16px out and back, 800ms, ease-in-out) on a ~2s loop.
+- His eyes blink every ~2.5s (lids close for 120ms), and he bobs gently (translateY +-6px sine, 2s).
+- The caption pulses: opacity 0.4 to 1.0, 1s sine loop.
+
+## Calibration
+- The loop is ambient - nothing should snap or restart visibly; every cycle eases through its turnaround.
+- Copy stays static and readable; only the caption pulses.
+
+## Reduced motion
+Static composition: Duo mid-peek, caption at full opacity, no loops.
+
+## Don&#x27;t miss
+- The ruler is the occluder - Duo slides from behind it, never in front of it.
+- The dark palette carries over from the course screen; no white flash between screens.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">peek-a-boo mascot loading loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-loading-math-course">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's math-course loading screen - after tapping the Math tile in New Courses, a dark interstitial shows Duo peeking from behind a tall white ruler, blinking and bobbing over a \"LOADING MATH...\" caption and mission copy.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark background (near-black navy). Entry point: course-select screen with language tiles (Spanish, Music, French) and a New Courses section holding the Math tile. Loading screen: center stage, a vertical white ruler/book edge with Duo peeking from behind its right side. Below: letterspaced gray caption \"LOADING MATH...\", then two lines of small mission copy (\"Our mission is to develop the best education in the world and make it universally available.\").\n\n## Motion spec\nPattern: peek-a-boo mascot loading loop.\n- Transition in: the loading screen fades over the course screen (200ms) while Duo and the ruler scale 0.9 to 1.0 (250ms, ease-out).\n- Duo peeks: his body slides from behind the ruler's edge (translateX ~16px out and back, 800ms, ease-in-out) on a ~2s loop.\n- His eyes blink every ~2.5s (lids close for 120ms), and he bobs gently (translateY +-6px sine, 2s).\n- The caption pulses: opacity 0.4 to 1.0, 1s sine loop.\n\n## Calibration\n- The loop is ambient - nothing should snap or restart visibly; every cycle eases through its turnaround.\n- Copy stays static and readable; only the caption pulses.\n\n## Reduced motion\nStatic composition: Duo mid-peek, caption at full opacity, no loops.\n\n## Don't miss\n- The ruler is the occluder - Duo slides from behind it, never in front of it.\n- The dark palette carries over from the course screen; no white flash between screens."</script>
+</body></html>

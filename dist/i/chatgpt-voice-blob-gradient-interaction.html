@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChatGPT Voice Blob Gradient Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ChatGPT Voice Blob Gradient Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/chatgpt-voice-blob-gradient-interaction"><b>Chatgpt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/chatgpt-voice-blob-gradient-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/chatgpt-voice-blob-gradient-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: ChatGPT&#x27;s voice orb - entering voice mode raises an animated blue-gradient blob to screen center where it breathes and ripples, and exiting collapses it back down into the bottom-bar voice button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2981eda64ba0289ec72f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2981eda64ba0289ec72f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-chatgpt-voice-blob-gradient-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: ChatGPT&#x27;s voice orb - entering voice mode raises an animated blue-gradient blob to screen center where it breathes and ripples, and exiting collapses it back down into the bottom-bar voice button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+ChatGPT chat home: mostly empty white conversation area, &quot;ChatGPT&quot; title top-left, bottom input bar (&quot;Ask ChatGPT&quot;) with mic and a dark circular voice button on the right. Voice state replaces the conversation with a single sphere.
+
+## Motion spec
+Pattern: voice mode entry/exit - orb rises, breathes with gradient ripples, then shrinks back into its button.
+- Entry: the dark voice button morphs into the gradient sphere, scaling up and traveling to screen center (scale 0.2 -&gt; 1, translate ~240px up, 450ms, spring ~240/24).
+- Active: the sphere idles with slow internal gradient drift (blue-violet waves rotate through the ball, ~6s cycle) and gentle scale breathing (+/- 4%, 2s); it swells ~10% on detected speech.
+- Exit: the sphere shrinks and sinks back to the bottom-right button slot (400ms, ease-in-out), fading into the solid dark circle; the input bar fades back in (200ms).
+
+## Calibration
+- The gradient lives inside the sphere - soft vertical bands of blue and violet sliding, never a hard pattern.
+- Entry/exit share one flight path so the orb clearly belongs to the button.
+
+## Reduced motion
+Orb crossfades in/out at final size (200ms); gradient drift pauses on a static wash.
+
+## Don&#x27;t miss
+- The sphere is the only element on screen in voice mode - input bar fully fades out.
+- Exit lands exactly on the voice button, restoring the bar in the same beat.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">voice mode entry/exit - orb rises, breathes with gradient ripples, then shrinks back into its button.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/chatgpt-voice-blob-gradient-interaction">original interaction</a> by Chatgpt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: ChatGPT's voice orb - entering voice mode raises an animated blue-gradient blob to screen center where it breathes and ripples, and exiting collapses it back down into the bottom-bar voice button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nChatGPT chat home: mostly empty white conversation area, \"ChatGPT\" title top-left, bottom input bar (\"Ask ChatGPT\") with mic and a dark circular voice button on the right. Voice state replaces the conversation with a single sphere.\n\n## Motion spec\nPattern: voice mode entry/exit - orb rises, breathes with gradient ripples, then shrinks back into its button.\n- Entry: the dark voice button morphs into the gradient sphere, scaling up and traveling to screen center (scale 0.2 -> 1, translate ~240px up, 450ms, spring ~240/24).\n- Active: the sphere idles with slow internal gradient drift (blue-violet waves rotate through the ball, ~6s cycle) and gentle scale breathing (+/- 4%, 2s); it swells ~10% on detected speech.\n- Exit: the sphere shrinks and sinks back to the bottom-right button slot (400ms, ease-in-out), fading into the solid dark circle; the input bar fades back in (200ms).\n\n## Calibration\n- The gradient lives inside the sphere - soft vertical bands of blue and violet sliding, never a hard pattern.\n- Entry/exit share one flight path so the orb clearly belongs to the button.\n\n## Reduced motion\nOrb crossfades in/out at final size (200ms); gradient drift pauses on a static wash.\n\n## Don't miss\n- The sphere is the only element on screen in voice mode - input bar fully fades out.\n- Exit lands exactly on the voice button, restoring the bar in the same beat."</script>
+</body></html>

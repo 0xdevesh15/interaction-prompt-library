@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZEE5 Splash FIFA Logo Morph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ZEE5 Splash FIFA Logo Morph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zee5-splash-fifa-logo-morph-animation"><b>Zee5</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zee5-splash-fifa-logo-morph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zee5-splash-fifa-logo-morph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: ZEE5&#x27;s splash screen - a glitch-assembled FIFA World Cup trophy badge spins on a white rounded square, then flips in 3D and morphs into the Z5 wordmark settling under a soft spotlight.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e81b019c9729fa15/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a45fa05e81b019c9729fa15/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zee5-splash-fifa-logo-morph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: ZEE5&#x27;s splash screen - a glitch-assembled FIFA World Cup trophy badge spins on a white rounded square, then flips in 3D and morphs into the Z5 wordmark settling under a soft spotlight.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen black splash. Center stage holds a small emblem (~25% of screen width) that cycles through three identities: RGB-split glitch fragments, the FIFA World Cup trophy mark on a white rounded-square card, and the final &quot;Z5&quot; serif wordmark.
+
+## Motion spec
+Pattern: one-shot logo morph - glitch assemble, 3D card flip, wordmark resolve.
+- Glitch phase: logo fragments snap in with RGB channel splits (red/green/blue offsets of 4-8px), 3-4 hard cuts at 80-120ms intervals, no easing.
+- Badge phase: the white rounded-square card with the trophy mark appears (scale 0.8 -&gt; 1, 250ms, ease-out) and begins a slow Y-axis spin.
+- Flip: the card rotates 90deg on Y (400ms, ease-in), edge-on at the midpoint, and the Z5 wordmark rotates in from -90deg on the same axis (400ms, ease-out) - a single continuous 3D flip.
+- Resolve: Z5 holds center as a radial spotlight fades in behind it (opacity 0 -&gt; 1, 600ms) and a faint glow pulses once.
+
+## Calibration
+- The glitch cuts must feel digital and abrupt; do not ease them.
+- The flip reads as one object turning, not two logos crossfading - keep the shared rotation axis.
+
+## Reduced motion
+Skip the glitch and flip: crossfade FIFA badge to Z5 wordmark (250ms), spotlight fade stays.
+
+## Don&#x27;t miss
+- The background stays pure black throughout; all light comes from the emblem and its spotlight.
+- The white FIFA card is the only non-black surface - it carries the flip&#x27;s midpoint.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">one-shot logo morph - glitch assemble, 3D card flip, wordmark resolve.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zee5-splash-fifa-logo-morph-animation">original interaction</a> by Zee5. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: ZEE5's splash screen - a glitch-assembled FIFA World Cup trophy badge spins on a white rounded square, then flips in 3D and morphs into the Z5 wordmark settling under a soft spotlight.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen black splash. Center stage holds a small emblem (~25% of screen width) that cycles through three identities: RGB-split glitch fragments, the FIFA World Cup trophy mark on a white rounded-square card, and the final \"Z5\" serif wordmark.\n\n## Motion spec\nPattern: one-shot logo morph - glitch assemble, 3D card flip, wordmark resolve.\n- Glitch phase: logo fragments snap in with RGB channel splits (red/green/blue offsets of 4-8px), 3-4 hard cuts at 80-120ms intervals, no easing.\n- Badge phase: the white rounded-square card with the trophy mark appears (scale 0.8 -> 1, 250ms, ease-out) and begins a slow Y-axis spin.\n- Flip: the card rotates 90deg on Y (400ms, ease-in), edge-on at the midpoint, and the Z5 wordmark rotates in from -90deg on the same axis (400ms, ease-out) - a single continuous 3D flip.\n- Resolve: Z5 holds center as a radial spotlight fades in behind it (opacity 0 -> 1, 600ms) and a faint glow pulses once.\n\n## Calibration\n- The glitch cuts must feel digital and abrupt; do not ease them.\n- The flip reads as one object turning, not two logos crossfading - keep the shared rotation axis.\n\n## Reduced motion\nSkip the glitch and flip: crossfade FIFA badge to Z5 wordmark (250ms), spotlight fade stays.\n\n## Don't miss\n- The background stays pure black throughout; all light comes from the emblem and its spotlight.\n- The white FIFA card is the only non-black surface - it carries the flip's midpoint."</script>
+</body></html>

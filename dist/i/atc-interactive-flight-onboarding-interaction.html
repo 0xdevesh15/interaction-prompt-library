@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATC Interactive Flight Onboarding Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ATC Interactive Flight Onboarding Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/atc-interactive-flight-onboarding-interaction"><b>Atc</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/atc-interactive-flight-onboarding-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/atc-interactive-flight-onboarding-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: ATC&#x27;s flight onboarding - on a black screen an air traffic control command plays, each word highlighting in blue in sync with the audio while a plane graphic descends, then a recap line and Replay/Continue buttons land.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c14743/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5a89ec653eb3c14743/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-atc-interactive-flight-onboarding-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: ATC&#x27;s flight onboarding - on a black screen an air traffic control command plays, each word highlighting in blue in sync with the audio while a plane graphic descends, then a recap line and Replay/Continue buttons land.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-bleed black onboarding step. Center stage: a small airplane graphic and the quoted radio call &quot;Skywest 6282 descend and maintain 8,000&quot; in white type. A tiny audio waveform icon sits above the plane while the call plays. End state adds a caption (&quot;ATC told Skywest to descend to 8,000 feet. Easy, right?&quot;) and Replay / Continue buttons at the bottom.
+
+## Motion spec
+Pattern: audio-synced word highlighting with a synced descent graphic, then a CTA reveal.
+- The plane enters from the top edge and begins a slow descent (translate down ~200px over the full clip, linear).
+- Each spoken word highlights blue for its audio window (Skywest -&gt; 6282 -&gt; descend -&gt; and maintain -&gt; 8,000), ~300-500ms per word, hard on/off with no fade.
+- The plane&#x27;s descent rate tracks the words &quot;descend and maintain&quot;: it visibly pitches and drops faster during that window, then levels out.
+- The waveform icon animates (bar heights cycle, ~400ms loop) only while audio plays.
+- After the last word, the caption fades up from 12px below (300ms) and the two buttons pop in (scale 0.9 -&gt; 1, 250ms, 80ms stagger, Continue in yellow).
+
+## Calibration
+- Word timing must lock to the audio; the highlight is a transcript follow-along, not decoration.
+- The plane levels off exactly when the call ends.
+
+## Reduced motion
+Plane holds mid-screen static; words highlight without plane movement; caption and buttons fade in (200ms).
+
+## Don&#x27;t miss
+- The blue highlight hits exactly one word group at a time.
+- Continue is the only colored (yellow) element; Replay stays a ghost button.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">audio-synced word highlighting with a synced descent graphic, then a CTA reveal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/atc-interactive-flight-onboarding-interaction">original interaction</a> by Atc. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: ATC's flight onboarding - on a black screen an air traffic control command plays, each word highlighting in blue in sync with the audio while a plane graphic descends, then a recap line and Replay/Continue buttons land.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-bleed black onboarding step. Center stage: a small airplane graphic and the quoted radio call \"Skywest 6282 descend and maintain 8,000\" in white type. A tiny audio waveform icon sits above the plane while the call plays. End state adds a caption (\"ATC told Skywest to descend to 8,000 feet. Easy, right?\") and Replay / Continue buttons at the bottom.\n\n## Motion spec\nPattern: audio-synced word highlighting with a synced descent graphic, then a CTA reveal.\n- The plane enters from the top edge and begins a slow descent (translate down ~200px over the full clip, linear).\n- Each spoken word highlights blue for its audio window (Skywest -> 6282 -> descend -> and maintain -> 8,000), ~300-500ms per word, hard on/off with no fade.\n- The plane's descent rate tracks the words \"descend and maintain\": it visibly pitches and drops faster during that window, then levels out.\n- The waveform icon animates (bar heights cycle, ~400ms loop) only while audio plays.\n- After the last word, the caption fades up from 12px below (300ms) and the two buttons pop in (scale 0.9 -> 1, 250ms, 80ms stagger, Continue in yellow).\n\n## Calibration\n- Word timing must lock to the audio; the highlight is a transcript follow-along, not decoration.\n- The plane levels off exactly when the call ends.\n\n## Reduced motion\nPlane holds mid-screen static; words highlight without plane movement; caption and buttons fade in (200ms).\n\n## Don't miss\n- The blue highlight hits exactly one word group at a time.\n- Continue is the only colored (yellow) element; Replay stays a ghost button."</script>
+</body></html>

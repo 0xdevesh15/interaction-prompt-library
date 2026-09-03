@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bevel New Features Story Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bevel New Features Story Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bevel-new-features-story-interaction"><b>Bevel</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bevel-new-features-story-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bevel-new-features-story-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Bevel&#x27;s what&#x27;s-new story card - a fullscreen story player with segmented progress, autoplaying video per step, a bottom info card with the feature title, and Next/Done buttons to step through the showcase.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220aba0085952b3e905f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220aba0085952b3e905f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bevel-new-features-story-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Bevel&#x27;s what&#x27;s-new story card - a fullscreen story player with segmented progress, autoplaying video per step, a bottom info card with the feature title, and Next/Done buttons to step through the showcase.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Story viewer over a dimmed app: segmented progress bar pinned top, fullscreen video canvas behind, and a bottom sheet card holding a source tag, the step title (&quot;Bevel 3.0 Announcement&quot;, &quot;All-New Bevel Intelligence&quot;, &quot;Biological Age &amp; Health Records&quot;), a one-line description, and Back / Next buttons.
+
+## Motion spec
+Pattern: story stepper - auto-advancing segmented progress with tap-to-next.
+- Each step&#x27;s progress segment fills linearly over the step duration (~5s); completed segments fill solid, upcoming stay at 20% opacity.
+- Tapping Next (or right edge) cuts to the next step: video crossfades (250ms), bottom card content slides up and swaps (title exits up 12px while the new title enters from 12px below, 250ms, ease-out).
+- Tapping Back restarts the current segment, then the previous one.
+- Video for each step autoplays muted and loops.
+- Final step swaps Next for a Done button with a check icon; tapping it dismisses the story (sheet slides down 300ms, video fades out 200ms).
+
+## Calibration
+- The bottom card never leaves; only its text cycles.
+- Segment fill must match actual video progress, not a fake timer.
+
+## Reduced motion
+Steps crossfade without text slide (200ms); videos show poster frames with a play affordance instead of autoplay.
+
+## Don&#x27;t miss
+- First frame carries the glitchy &quot;BEVEL&quot; logo ident - it belongs to step 1&#x27;s video, not the UI chrome.
+- Done appears only on the last step.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">story stepper - auto-advancing segmented progress with tap-to-next.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bevel-new-features-story-interaction">original interaction</a> by Bevel. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Bevel's what's-new story card - a fullscreen story player with segmented progress, autoplaying video per step, a bottom info card with the feature title, and Next/Done buttons to step through the showcase.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nStory viewer over a dimmed app: segmented progress bar pinned top, fullscreen video canvas behind, and a bottom sheet card holding a source tag, the step title (\"Bevel 3.0 Announcement\", \"All-New Bevel Intelligence\", \"Biological Age & Health Records\"), a one-line description, and Back / Next buttons.\n\n## Motion spec\nPattern: story stepper - auto-advancing segmented progress with tap-to-next.\n- Each step's progress segment fills linearly over the step duration (~5s); completed segments fill solid, upcoming stay at 20% opacity.\n- Tapping Next (or right edge) cuts to the next step: video crossfades (250ms), bottom card content slides up and swaps (title exits up 12px while the new title enters from 12px below, 250ms, ease-out).\n- Tapping Back restarts the current segment, then the previous one.\n- Video for each step autoplays muted and loops.\n- Final step swaps Next for a Done button with a check icon; tapping it dismisses the story (sheet slides down 300ms, video fades out 200ms).\n\n## Calibration\n- The bottom card never leaves; only its text cycles.\n- Segment fill must match actual video progress, not a fake timer.\n\n## Reduced motion\nSteps crossfade without text slide (200ms); videos show poster frames with a play affordance instead of autoplay.\n\n## Don't miss\n- First frame carries the glitchy \"BEVEL\" logo ident - it belongs to step 1's video, not the UI chrome.\n- Done appears only on the last step."</script>
+</body></html>

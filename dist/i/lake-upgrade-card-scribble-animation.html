@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lake Upgrade Card Scribble Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lake Upgrade Card Scribble Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lake-upgrade-card-scribble-animation"><b>Lake</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lake-upgrade-card-scribble-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lake-upgrade-card-scribble-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Lake&#x27;s subscription upsell card - hand-drawn highlight scribbles gradually accumulate around the &quot;Experience Lake in full&quot; card, and tapping the blue &quot;START FREE TRIAL&quot; button morphs it into a compact loading pill with the brand&#x27;s wave squiggle.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e6fb4e898864303346/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e6fb4e898864303346/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lake-upgrade-card-scribble-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Lake&#x27;s subscription upsell card - hand-drawn highlight scribbles gradually accumulate around the &quot;Experience Lake in full&quot; card, and tapping the blue &quot;START FREE TRIAL&quot; button morphs it into a compact loading pill with the brand&#x27;s wave squiggle.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Scrollable coloring-app home: illustration thumbnails up top, then a white rounded upsell card (headline &quot;Experience Lake in full&quot;, subcopy, blue filled CTA pill &quot;START FREE TRIAL&quot; with price line), and a &quot;Color your mood&quot; gradient section below.
+
+## Motion spec
+Pattern: ambient decoration build-up, then tap-triggered button morph.
+- Over ~4s, orange/peach crayon scribble strokes draw on around the card one by one (~600ms apart): a corner highlight, an underline, a circle near the headline - each stroke draws along its path (~300ms, ease-out).
+- On CTA tap: the label and price fade out (120ms), the blue pill shrinks horizontally to a compact pill (~120px wide, spring ~320/28, ~300ms), and a small white wave squiggle appears inside, undulating as the loading indicator (phase loop ~1.6s, linear, infinite).
+- Rest of the screen holds still during the morph.
+
+## Calibration
+- Scribbles should feel doodled on top of the layout, slightly overshooting card edges.
+- The pill shrink is smooth and centered - width collapses symmetrically.
+
+## Reduced motion
+Scribbles fade in statically; button swaps to a plain spinner without morphing.
+
+## Don&#x27;t miss
+- The loader inside the collapsed pill is the same hand-drawn wave as the app&#x27;s loading screen, not a spinner.
+- Scribble accumulation continues regardless of the tap - it is ambient, not tap-triggered.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient decoration build-up, then tap-triggered button morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lake-upgrade-card-scribble-animation">original interaction</a> by Lake. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Lake's subscription upsell card - hand-drawn highlight scribbles gradually accumulate around the \"Experience Lake in full\" card, and tapping the blue \"START FREE TRIAL\" button morphs it into a compact loading pill with the brand's wave squiggle.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nScrollable coloring-app home: illustration thumbnails up top, then a white rounded upsell card (headline \"Experience Lake in full\", subcopy, blue filled CTA pill \"START FREE TRIAL\" with price line), and a \"Color your mood\" gradient section below.\n\n## Motion spec\nPattern: ambient decoration build-up, then tap-triggered button morph.\n- Over ~4s, orange/peach crayon scribble strokes draw on around the card one by one (~600ms apart): a corner highlight, an underline, a circle near the headline - each stroke draws along its path (~300ms, ease-out).\n- On CTA tap: the label and price fade out (120ms), the blue pill shrinks horizontally to a compact pill (~120px wide, spring ~320/28, ~300ms), and a small white wave squiggle appears inside, undulating as the loading indicator (phase loop ~1.6s, linear, infinite).\n- Rest of the screen holds still during the morph.\n\n## Calibration\n- Scribbles should feel doodled on top of the layout, slightly overshooting card edges.\n- The pill shrink is smooth and centered - width collapses symmetrically.\n\n## Reduced motion\nScribbles fade in statically; button swaps to a plain spinner without morphing.\n\n## Don't miss\n- The loader inside the collapsed pill is the same hand-drawn wave as the app's loading screen, not a spinner.\n- Scribble accumulation continues regardless of the tap - it is ambient, not tap-triggered."</script>
+</body></html>

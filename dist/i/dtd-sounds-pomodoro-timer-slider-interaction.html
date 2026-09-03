@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dtd Sounds Pomodoro Timer Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Dtd Sounds Pomodoro Timer Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/dtd-sounds-pomodoro-timer-slider-interaction"><b>DTD</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dtd-sounds-pomodoro-timer-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dtd-sounds-pomodoro-timer-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: a pomodoro timer card over the flip-clock home screen - scrub a tick-mark slider to set minutes (numbers update with a blurred crossfade), tap Start, and the home screen shows a countdown card with a hold-to-stop pill whose ring fills as you press.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66eac3e25cf71582ac5603a5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66eac3e25cf71582ac5603a5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-dtd-sounds-pomodoro-timer-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a pomodoro timer card over the flip-clock home screen - scrub a tick-mark slider to set minutes (numbers update with a blurred crossfade), tap Start, and the home screen shows a countdown card with a hold-to-stop pill whose ring fills as you press.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream line-art home screen with flip clock (13 12) and window. A white card slides up: &quot;Pomodoro Timer / Set the timer for your focus session. We&#x27;ll remind you when it&#x27;s time&quot;, a value readout (OFF, then 15, 35:00, 5), a horizontal slider of fine vertical ticks with a round thumb, and a clay-colored Start button. After Start the home screen shows a countdown card (04:59) with a red-accented &quot;Hold to Stop Focus&quot; pill.
+
+## Motion spec
+Pattern: scrub-set timer slider + hold-to-stop ring.
+- Card enters from the bottom (spring ~300/26, ~350ms) over the dimmed clock.
+- Drag the thumb: ticks pass under it with a soft tick haptic per 5 minutes; the value readout swaps with a blurred crossfade (outgoing number blurs 4px + fades 120ms, incoming unblurs 180ms).
+- Readout format switches contextually - under 10 shows minutes (&quot;5&quot;), larger values show mm:ss (&quot;35:00&quot;).
+- Release snaps to the nearest 5-minute tick (spring ~380/26, ~180ms); Start fills to full opacity when a value is set.
+- Start: card slides down (300ms), home countdown card fades in with digits already running (flip-style per second, 300ms per flip).
+- Hold the Stop pill: a circular ring around it fills clockwise (~1.2s linear); release early snaps the ring back (150ms); complete and the card fades out (250ms).
+
+## Calibration
+- Slider range ~5 to 120 minutes, 5-minute steps.
+- The blurred crossfade sells the value changing mid-scrub - a hard swap reads laggy.
+
+## Reduced motion
+Value swaps without blur; countdown digits fade per second.
+
+## Don&#x27;t miss
+- OFF state: thumb parked left, Start disabled until a value is set.
+- The stop interaction is hold-to-confirm, not a tap - the ring must fill fully.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scrub-set timer slider + hold-to-stop ring.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/dtd-sounds-pomodoro-timer-slider-interaction">original interaction</a> by DTD. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a pomodoro timer card over the flip-clock home screen - scrub a tick-mark slider to set minutes (numbers update with a blurred crossfade), tap Start, and the home screen shows a countdown card with a hold-to-stop pill whose ring fills as you press.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream line-art home screen with flip clock (13 12) and window. A white card slides up: \"Pomodoro Timer / Set the timer for your focus session. We'll remind you when it's time\", a value readout (OFF, then 15, 35:00, 5), a horizontal slider of fine vertical ticks with a round thumb, and a clay-colored Start button. After Start the home screen shows a countdown card (04:59) with a red-accented \"Hold to Stop Focus\" pill.\n\n## Motion spec\nPattern: scrub-set timer slider + hold-to-stop ring.\n- Card enters from the bottom (spring ~300/26, ~350ms) over the dimmed clock.\n- Drag the thumb: ticks pass under it with a soft tick haptic per 5 minutes; the value readout swaps with a blurred crossfade (outgoing number blurs 4px + fades 120ms, incoming unblurs 180ms).\n- Readout format switches contextually - under 10 shows minutes (\"5\"), larger values show mm:ss (\"35:00\").\n- Release snaps to the nearest 5-minute tick (spring ~380/26, ~180ms); Start fills to full opacity when a value is set.\n- Start: card slides down (300ms), home countdown card fades in with digits already running (flip-style per second, 300ms per flip).\n- Hold the Stop pill: a circular ring around it fills clockwise (~1.2s linear); release early snaps the ring back (150ms); complete and the card fades out (250ms).\n\n## Calibration\n- Slider range ~5 to 120 minutes, 5-minute steps.\n- The blurred crossfade sells the value changing mid-scrub - a hard swap reads laggy.\n\n## Reduced motion\nValue swaps without blur; countdown digits fade per second.\n\n## Don't miss\n- OFF state: thumb parked left, Start disabled until a value is set.\n- The stop interaction is hold-to-confirm, not a tap - the ring must fill fully."</script>
+</body></html>

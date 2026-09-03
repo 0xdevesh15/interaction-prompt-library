@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[untitled] Player Disk Peak Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>[untitled] Player Disk Peak Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/untitled-player-disk-peak-interaction"><b>Untitled</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-player-disk-peak-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-player-disk-peak-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: a vinyl-disc playback affordance - pressing play slides a spinning disc out from behind the square album artwork&#x27;s right edge; pausing slides it back behind the artwork.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f4003239eb587d9eca86bf/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f4003239eb587d9eca86bf/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-untitled-player-disk-peak-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a vinyl-disc playback affordance - pressing play slides a spinning disc out from behind the square album artwork&#x27;s right edge; pausing slides it back behind the artwork.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light track screen: big pink rounded-square artwork top, title &quot;First&quot;, an &quot;Add tracks&quot; row, an &quot;amber recording&quot; row, and a dark mini player bar at the bottom. The vinyl disc is a same-pink circle with a center label, hidden behind the artwork.
+
+## Motion spec
+Pattern: slide-out peek + continuous rotation.
+- Play: the disc slides out from behind the artwork&#x27;s right edge, exposing ~60% of its diameter (translateX ~80px, spring ~300/24, ~350ms), and begins rotating at ~33rpm-equivalent (linear, infinite).
+- Pause: rotation eases to a stop over ~400ms (not instant) while the disc slides back fully behind the artwork (250ms).
+- Mini player bar play/pause icon swaps with a 150ms crossfade, synced to the disc motion.
+- The artwork card stays perfectly still - only the disc moves.
+
+## Calibration
+- The disc tucks behind the artwork (z-order), never overlapping its face.
+- Rotation continues while visible; it is the &quot;playing&quot; truth, not decoration that freezes mid-slide.
+
+## Reduced motion
+Disc slides without rotation; state change still slides.
+
+## Don&#x27;t miss
+- The slide direction is horizontal only - no vertical drift.
+- The disc&#x27;s center label aligns with the artwork&#x27;s vertical center at full peek.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slide-out peek + continuous rotation.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/untitled-player-disk-peak-interaction">original interaction</a> by Untitled. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a vinyl-disc playback affordance - pressing play slides a spinning disc out from behind the square album artwork's right edge; pausing slides it back behind the artwork.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight track screen: big pink rounded-square artwork top, title \"First\", an \"Add tracks\" row, an \"amber recording\" row, and a dark mini player bar at the bottom. The vinyl disc is a same-pink circle with a center label, hidden behind the artwork.\n\n## Motion spec\nPattern: slide-out peek + continuous rotation.\n- Play: the disc slides out from behind the artwork's right edge, exposing ~60% of its diameter (translateX ~80px, spring ~300/24, ~350ms), and begins rotating at ~33rpm-equivalent (linear, infinite).\n- Pause: rotation eases to a stop over ~400ms (not instant) while the disc slides back fully behind the artwork (250ms).\n- Mini player bar play/pause icon swaps with a 150ms crossfade, synced to the disc motion.\n- The artwork card stays perfectly still - only the disc moves.\n\n## Calibration\n- The disc tucks behind the artwork (z-order), never overlapping its face.\n- Rotation continues while visible; it is the \"playing\" truth, not decoration that freezes mid-slide.\n\n## Reduced motion\nDisc slides without rotation; state change still slides.\n\n## Don't miss\n- The slide direction is horizontal only - no vertical drift.\n- The disc's center label aligns with the artwork's vertical center at full peek."</script>
+</body></html>

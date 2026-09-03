@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monogram Keyboard Icon Morph to Chat Input Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monogram Keyboard Icon Morph to Chat Input Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monogram-keyboard-icon-morph-to-chat-input-interaction"><b>Monogram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monogram-keyboard-icon-morph-to-chat-input-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monogram-keyboard-icon-morph-to-chat-input-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monogram&#x27;s input-to-bar morph - dismissing the expanded chat input and keyboard collapses the accessory icon row into the floating bottom voice-first action bar in one continuous downward morph.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980e4e7b5ab4676f61c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980e4e7b5ab4676f61c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monogram-keyboard-icon-morph-to-chat-input-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monogram&#x27;s input-to-bar morph - dismissing the expanded chat input and keyboard collapses the accessory icon row into the floating bottom voice-first action bar in one continuous downward morph.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Chat screen with a &quot;Connect your Google Calendar&quot; card in the conversation. Expanded state: a text input row sits above the system keyboard with an accessory row of icons (image, @ mention, mic) and a send button. Collapsed state: floating bottom bar with + button, dark mic pill, and grid button.
+
+## Motion spec
+Pattern: keyboard dismissal where the input cluster morphs into the floating action bar.
+- The keyboard slides down at the system rate (~250ms).
+- The input field shrinks in height and width (300ms, ease-in-out) while its text and cursor fade out (150ms).
+- The accessory icons migrate downward and re-deal into the bar layout: image/+ lands left, mic expands into the central dark pill (width 44 -&gt; 120px, 300ms), grid appears right - 40ms stagger between the three.
+- The whole cluster drops ~60px into its floating dock position with a soft spring (~260/26), no overshoot beyond 4%.
+- The calendar card above stays pinned; only the bottom cluster moves.
+
+## Calibration
+- Read as one object re-organizing, not one bar closing and another opening - shared element continuity for the mic icon into the pill.
+- Keep motion synced with the keyboard so nothing floats mid-air after the keyboard is gone.
+
+## Reduced motion
+Keyboard hides; input row crossfades to the bottom bar at final position (200ms).
+
+## Don&#x27;t miss
+- The mic icon is the anchor: it visibly grows into the dark pill.
+- The bar floats with a hairline shadow over the content, not a solid footer.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">keyboard dismissal where the input cluster morphs into the floating action bar.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monogram-keyboard-icon-morph-to-chat-input-interaction">original interaction</a> by Monogram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monogram's input-to-bar morph - dismissing the expanded chat input and keyboard collapses the accessory icon row into the floating bottom voice-first action bar in one continuous downward morph.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nChat screen with a \"Connect your Google Calendar\" card in the conversation. Expanded state: a text input row sits above the system keyboard with an accessory row of icons (image, @ mention, mic) and a send button. Collapsed state: floating bottom bar with + button, dark mic pill, and grid button.\n\n## Motion spec\nPattern: keyboard dismissal where the input cluster morphs into the floating action bar.\n- The keyboard slides down at the system rate (~250ms).\n- The input field shrinks in height and width (300ms, ease-in-out) while its text and cursor fade out (150ms).\n- The accessory icons migrate downward and re-deal into the bar layout: image/+ lands left, mic expands into the central dark pill (width 44 -> 120px, 300ms), grid appears right - 40ms stagger between the three.\n- The whole cluster drops ~60px into its floating dock position with a soft spring (~260/26), no overshoot beyond 4%.\n- The calendar card above stays pinned; only the bottom cluster moves.\n\n## Calibration\n- Read as one object re-organizing, not one bar closing and another opening - shared element continuity for the mic icon into the pill.\n- Keep motion synced with the keyboard so nothing floats mid-air after the keyboard is gone.\n\n## Reduced motion\nKeyboard hides; input row crossfades to the bottom bar at final position (200ms).\n\n## Don't miss\n- The mic icon is the anchor: it visibly grows into the dark pill.\n- The bar floats with a hairline shadow over the content, not a solid footer."</script>
+</body></html>

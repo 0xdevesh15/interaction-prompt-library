@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Math Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Math Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-math-slider-2"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-math-slider-2">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-math-slider-2">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo Math&#x27;s &quot;Answer on the line&quot; quiz - the learner drags a teardrop handle along a horizontal number line to place the answer to a multiplication problem, and the CHECK button flips from disabled gray to bright green the moment a value is selected.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad357d61b8c6503108ce/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad357d61b8c6503108ce/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-math-slider-2.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo Math&#x27;s &quot;Answer on the line&quot; quiz - the learner drags a teardrop handle along a horizontal number line to place the answer to a multiplication problem, and the CHECK button flips from disabled gray to bright green the moment a value is selected.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Quiz screen, white background. Top bar: X close button, green segmented progress bar, heart counter. Title &quot;Answer on the line&quot;. Center: equation built from dotted unit blocks (stacked dot columns) with a rounded-square answer slot. Lower third: horizontal number line from 6 to 36 in steps of 6, small tick labels. Blue teardrop handle (map-pin shape, point down) rests on the line. Bottom: full-width CHECK button, disabled gray.
+
+## Motion spec
+Pattern: drag-to-answer number line slider.
+- The handle tracks the finger 1:1 horizontally, clamped to the line&#x27;s extents.
+- On release the handle snaps to the nearest tick: spring stiffness ~300, damping ~22, settling in ~300ms with one small overshoot.
+- While dragging, the handle lifts slightly (scale 1.0 to 1.15 over 100ms) and casts a soft shadow; it settles back on release.
+- The first snap to any value enables CHECK: gray to Duolingo green (#58CC02) over 150ms, no other change.
+- The answer slot in the equation fills with the selected value on snap, fading in over 150ms.
+
+## Calibration
+- Snap spring must overshoot noticeably - this is a playful kids&#x27; surface, not a utility slider.
+- Keep tick hit targets wide: snap radius of half a step so the line always resolves to a labeled value.
+
+## Reduced motion
+Handle moves with the finger and snaps without spring overshoot (linear 100ms); button color change is instant.
+
+## Don&#x27;t miss
+- The handle is a pin/teardrop, not a round thumb - the point touches the line.
+- CHECK stays visibly disabled until the first snap; dragging without releasing does not enable it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">drag-to-answer number line slider.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-math-slider-2">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo Math's \"Answer on the line\" quiz - the learner drags a teardrop handle along a horizontal number line to place the answer to a multiplication problem, and the CHECK button flips from disabled gray to bright green the moment a value is selected.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nQuiz screen, white background. Top bar: X close button, green segmented progress bar, heart counter. Title \"Answer on the line\". Center: equation built from dotted unit blocks (stacked dot columns) with a rounded-square answer slot. Lower third: horizontal number line from 6 to 36 in steps of 6, small tick labels. Blue teardrop handle (map-pin shape, point down) rests on the line. Bottom: full-width CHECK button, disabled gray.\n\n## Motion spec\nPattern: drag-to-answer number line slider.\n- The handle tracks the finger 1:1 horizontally, clamped to the line's extents.\n- On release the handle snaps to the nearest tick: spring stiffness ~300, damping ~22, settling in ~300ms with one small overshoot.\n- While dragging, the handle lifts slightly (scale 1.0 to 1.15 over 100ms) and casts a soft shadow; it settles back on release.\n- The first snap to any value enables CHECK: gray to Duolingo green (#58CC02) over 150ms, no other change.\n- The answer slot in the equation fills with the selected value on snap, fading in over 150ms.\n\n## Calibration\n- Snap spring must overshoot noticeably - this is a playful kids' surface, not a utility slider.\n- Keep tick hit targets wide: snap radius of half a step so the line always resolves to a labeled value.\n\n## Reduced motion\nHandle moves with the finger and snaps without spring overshoot (linear 100ms); button color change is instant.\n\n## Don't miss\n- The handle is a pin/teardrop, not a round thumb - the point touches the line.\n- CHECK stays visibly disabled until the first snap; dragging without releasing does not enable it."</script>
+</body></html>

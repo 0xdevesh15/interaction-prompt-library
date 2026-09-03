@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StressWatch Pricing Offer Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>StressWatch Pricing Offer Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/stresswatch-pricing-offer-animation"><b>Stresswatch</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stresswatch-pricing-offer-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stresswatch-pricing-offer-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: StressWatch&#x27;s paywall offer moment - the plan screen gives way to a Special Offer sheet where a purple starburst &quot;25% OFF&quot; badge scales up with a springy overshoot while the yearly total and fine print fade in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ea4b99ff4b1209fb8dd714/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ea4b99ff4b1209fb8dd714/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-stresswatch-pricing-offer-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: StressWatch&#x27;s paywall offer moment - the plan screen gives way to a Special Offer sheet where a purple starburst &quot;25% OFF&quot; badge scales up with a springy overshoot while the yearly total and fine print fade in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Lavender Special Offer screen: &quot;Special Offer&quot; eyebrow with subcopy, a large purple starburst badge reading &quot;25% OFF&quot;, &quot;Total ₹ 1,499.00/year&quot; with struck-through original price, &quot;View All Plans&quot; link, purple Continue button.
+
+## Motion spec
+Pattern: springy discount badge pop.
+- Screen background tints to lavender (250ms) as the eyebrow text fades in (200ms).
+- The starburst scales from 0 to 1 with a pronounced overshoot (spring ~300/14, ~550ms - visibly bounces past full size twice) and rotates ~8deg on the way in.
+- Small sparkle accents around the badge pop in sequence (scale + fade, 150ms each, 3 sparkles).
+- Pricing block (&quot;Total ₹ 1,499.00/year&quot;, struck original, trial note) fades + rises 10px (300ms) once the badge settles; View All Plans and Continue follow 100ms later.
+- Badge then idles with a subtle pulse (scale 1 -&gt; 1.03, 2.2s loop).
+
+## Calibration
+- The overshoot is the point: a badge that lands cleanly reads flat.
+- Struck-through price appears with the total - never after.
+
+## Reduced motion
+Badge fades in at full size; no rotation or pulse.
+
+## Don&#x27;t miss
+- The badge is a jagged starburst shape, not a circle - keep the spiky silhouette.
+- The whole sequence lands in under 1.5s; it should feel instant but playful.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy discount badge pop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/stresswatch-pricing-offer-animation">original interaction</a> by Stresswatch. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: StressWatch's paywall offer moment - the plan screen gives way to a Special Offer sheet where a purple starburst \"25% OFF\" badge scales up with a springy overshoot while the yearly total and fine print fade in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLavender Special Offer screen: \"Special Offer\" eyebrow with subcopy, a large purple starburst badge reading \"25% OFF\", \"Total \u20b9 1,499.00/year\" with struck-through original price, \"View All Plans\" link, purple Continue button.\n\n## Motion spec\nPattern: springy discount badge pop.\n- Screen background tints to lavender (250ms) as the eyebrow text fades in (200ms).\n- The starburst scales from 0 to 1 with a pronounced overshoot (spring ~300/14, ~550ms - visibly bounces past full size twice) and rotates ~8deg on the way in.\n- Small sparkle accents around the badge pop in sequence (scale + fade, 150ms each, 3 sparkles).\n- Pricing block (\"Total \u20b9 1,499.00/year\", struck original, trial note) fades + rises 10px (300ms) once the badge settles; View All Plans and Continue follow 100ms later.\n- Badge then idles with a subtle pulse (scale 1 -> 1.03, 2.2s loop).\n\n## Calibration\n- The overshoot is the point: a badge that lands cleanly reads flat.\n- Struck-through price appears with the total - never after.\n\n## Reduced motion\nBadge fades in at full size; no rotation or pulse.\n\n## Don't miss\n- The badge is a jagged starburst shape, not a circle - keep the spiky silhouette.\n- The whole sequence lands in under 1.5s; it should feel instant but playful."</script>
+</body></html>

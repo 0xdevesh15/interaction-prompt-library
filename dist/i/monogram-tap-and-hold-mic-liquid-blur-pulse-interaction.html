@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monogram Tap and Hold Mic Liquid Blur Pulse Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monogram Tap and Hold Mic Liquid Blur Pulse Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monogram-tap-and-hold-mic-liquid-blur-pulse-interaction"><b>Monogram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monogram-tap-and-hold-mic-liquid-blur-pulse-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monogram-tap-and-hold-mic-liquid-blur-pulse-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monogram&#x27;s hold-to-talk mic - pressing and holding the bottom-bar mic pill triggers a full-screen liquid blur wash that settles into a focused dark mic pill, and on release the bar morphs into a thin progress strip while the answer content fades into view.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980a151fd52183e4012/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980a151fd52183e4012/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monogram-tap-and-hold-mic-liquid-blur-pulse-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monogram&#x27;s hold-to-talk mic - pressing and holding the bottom-bar mic pill triggers a full-screen liquid blur wash that settles into a focused dark mic pill, and on release the bar morphs into a thin progress strip while the answer content fades into view.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+AI chat screen: header Q&amp;A list, &quot;You might want to ask&quot; suggestion section with 3 rows, and a bottom bar with + button, central dark pill (mic icon), and grid button. A hint pill (&quot;Tap and hold while you talk&quot;) sits just above the bar before first use.
+
+## Motion spec
+Pattern: hold-to-talk morph - blur pulse covers the screen, then the bar re-forms into a focused mic state; release resolves into a content reveal.
+- On touch-down, the hint pill fades out (150ms) and a frosted liquid blur layer scales up from the bottom bar (scale 0.6 -&gt; 1, 300ms, ease-out), washing the whole screen behind a soft white-violet blur.
+- The bottom bar collapses into a single dark mic pill (width shrinks ~180px -&gt; 64px, 250ms, spring ~300/24); + and grid buttons fade out (200ms).
+- While held, the blur gently breathes (blur radius oscillates +/- 10% at ~1Hz).
+- On release, the blur clears (250ms ease-in-out), the pill stretches into a thin dark progress strip (height 48 -&gt; 4px, 300ms), and the response content fades/slides in from 16px below (350ms, ease-out).
+- One-shot per hold; the screen returns to the idle bar after the answer renders.
+
+## Calibration
+- The blur is the star: it must feel like liquid spreading from the mic, not a plain dim overlay.
+- Keep the mic pill visible on top of the blur at all times so the user never loses the hold target.
+
+## Reduced motion
+Crossfade the list to a dimmed state (150ms), swap the bar for the mic pill without scale motion; release crossfades to the answer (200ms).
+
+## Don&#x27;t miss
+- The blur wash originates from the bottom bar, not screen center.
+- The hint pill (&quot;Tap and hold while you talk&quot;) only exists before the first hold.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">hold-to-talk morph - blur pulse covers the screen, then the bar re-forms into a focused mic state; release resolves into a content reveal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monogram-tap-and-hold-mic-liquid-blur-pulse-interaction">original interaction</a> by Monogram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monogram's hold-to-talk mic - pressing and holding the bottom-bar mic pill triggers a full-screen liquid blur wash that settles into a focused dark mic pill, and on release the bar morphs into a thin progress strip while the answer content fades into view.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAI chat screen: header Q&A list, \"You might want to ask\" suggestion section with 3 rows, and a bottom bar with + button, central dark pill (mic icon), and grid button. A hint pill (\"Tap and hold while you talk\") sits just above the bar before first use.\n\n## Motion spec\nPattern: hold-to-talk morph - blur pulse covers the screen, then the bar re-forms into a focused mic state; release resolves into a content reveal.\n- On touch-down, the hint pill fades out (150ms) and a frosted liquid blur layer scales up from the bottom bar (scale 0.6 -> 1, 300ms, ease-out), washing the whole screen behind a soft white-violet blur.\n- The bottom bar collapses into a single dark mic pill (width shrinks ~180px -> 64px, 250ms, spring ~300/24); + and grid buttons fade out (200ms).\n- While held, the blur gently breathes (blur radius oscillates +/- 10% at ~1Hz).\n- On release, the blur clears (250ms ease-in-out), the pill stretches into a thin dark progress strip (height 48 -> 4px, 300ms), and the response content fades/slides in from 16px below (350ms, ease-out).\n- One-shot per hold; the screen returns to the idle bar after the answer renders.\n\n## Calibration\n- The blur is the star: it must feel like liquid spreading from the mic, not a plain dim overlay.\n- Keep the mic pill visible on top of the blur at all times so the user never loses the hold target.\n\n## Reduced motion\nCrossfade the list to a dimmed state (150ms), swap the bar for the mic pill without scale motion; release crossfades to the answer (200ms).\n\n## Don't miss\n- The blur wash originates from the bottom bar, not screen center.\n- The hint pill (\"Tap and hold while you talk\") only exists before the first hold."</script>
+</body></html>

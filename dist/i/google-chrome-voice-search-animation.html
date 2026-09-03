@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Chrome Voice Search Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Google Chrome Voice Search Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/google-chrome-voice-search-animation"><b>Google</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-chrome-voice-search-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-chrome-voice-search-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Google Chrome&#x27;s voice search - four Google-colored dots hover at screen center, stretch into vertical listening bars that dance with input, then settle back into dots and resolve into the microphone state.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6703704ad81b3dcea576097f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6703704ad81b3dcea576097f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-google-chrome-voice-search-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Google Chrome&#x27;s voice search - four Google-colored dots hover at screen center, stretch into vertical listening bars that dance with input, then settle back into dots and resolve into the microphone state.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Clean white voice search sheet: X close button bottom-left, globe bottom-right, and the Google mark element centered - four dots in blue, red, yellow, green on a horizontal line.
+
+## Motion spec
+Pattern: state-morphing audio indicator (idle -&gt; listening -&gt; processing).
+- Idle: four dots (~10px) bob gently in place, subtle vertical offset wave (~1s loop).
+- Listening: each dot stretches into a rounded vertical bar (width stays ~10px, heights oscillate independently 20-60px, staggered phases, ~500ms cycles) - amplitude follows voice input level.
+- Resolving: bars collapse back to dots (200ms, ease-in-out), dots hold a beat, then a small arc/mic element fades in beneath as the state resolves.
+- Colors never change; only geometry morphs.
+
+## Calibration
+- Bar heights must move independently - synchronized bars read as an equalizer graphic, not Google&#x27;s mark.
+- Keep morphs gooey-smooth (ease-in-out), no linear steps.
+
+## Reduced motion
+Dots pulse opacity in listening state instead of stretching.
+
+## Don&#x27;t miss
+- Exactly four elements, Google color order: blue, red, yellow, green.
+- The dot-to-bar morph is continuous - rounded rect corner radius animates with the stretch.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">state-morphing audio indicator (idle -&gt; listening -&gt; processing).</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/google-chrome-voice-search-animation">original interaction</a> by Google. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Google Chrome's voice search - four Google-colored dots hover at screen center, stretch into vertical listening bars that dance with input, then settle back into dots and resolve into the microphone state.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nClean white voice search sheet: X close button bottom-left, globe bottom-right, and the Google mark element centered - four dots in blue, red, yellow, green on a horizontal line.\n\n## Motion spec\nPattern: state-morphing audio indicator (idle -> listening -> processing).\n- Idle: four dots (~10px) bob gently in place, subtle vertical offset wave (~1s loop).\n- Listening: each dot stretches into a rounded vertical bar (width stays ~10px, heights oscillate independently 20-60px, staggered phases, ~500ms cycles) - amplitude follows voice input level.\n- Resolving: bars collapse back to dots (200ms, ease-in-out), dots hold a beat, then a small arc/mic element fades in beneath as the state resolves.\n- Colors never change; only geometry morphs.\n\n## Calibration\n- Bar heights must move independently - synchronized bars read as an equalizer graphic, not Google's mark.\n- Keep morphs gooey-smooth (ease-in-out), no linear steps.\n\n## Reduced motion\nDots pulse opacity in listening state instead of stretching.\n\n## Don't miss\n- Exactly four elements, Google color order: blue, red, yellow, green.\n- The dot-to-bar morph is continuous - rounded rect corner radius animates with the stretch."</script>
+</body></html>

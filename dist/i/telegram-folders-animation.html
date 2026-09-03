@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram Folders Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Telegram Folders Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/telegram-folders-animation"><b>Telegram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-folders-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-folders-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Telegram&#x27;s Folders empty-state illustration - a springy vector folder at the top of the Folders settings page that opens its flap and lifts colorful categorized tabs out of its body on a loop.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f6beca4cca5b67b6306d95/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f6beca4cca5b67b6306d95/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-telegram-folders-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Telegram&#x27;s Folders empty-state illustration - a springy vector folder at the top of the Folders settings page that opens its flap and lifts colorful categorized tabs out of its body on a loop.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Folders settings screen: nav title &quot;Folders&quot; with Back/Edit, centered tan folder illustration with red, blue, and white tab dividers peeking from its top, helper text beneath, then grouped list rows (Create a Folder, All Chats, Design...).
+
+## Motion spec
+Pattern: looping springy illustration.
+- Folder flap: rotates open toward the viewer (~30deg, spring ~200/16, slight overshoot) and settles.
+- Tabs: three colored tabs rise from inside the folder in a stagger (60ms apart, translateY + slight tilt, spring ~240/18), hold, then drop back and the flap closes.
+- Full cycle ~2.5s with a pause; loops continuously.
+- Rest of the screen is completely static.
+
+## Calibration
+- Springs overshoot just enough to feel playful - one visible wobble, no ringing.
+- Tabs stay inside the folder&#x27;s silhouette until they clear the flap line.
+
+## Reduced motion
+Static illustration of the open folder with tabs out.
+
+## Don&#x27;t miss
+- The flap and tabs move together as one rig - flap opens first, tabs follow.
+- Colors are flat Telegram-palette fills, no gradients on the folder.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping springy illustration.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/telegram-folders-animation">original interaction</a> by Telegram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Telegram's Folders empty-state illustration - a springy vector folder at the top of the Folders settings page that opens its flap and lifts colorful categorized tabs out of its body on a loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFolders settings screen: nav title \"Folders\" with Back/Edit, centered tan folder illustration with red, blue, and white tab dividers peeking from its top, helper text beneath, then grouped list rows (Create a Folder, All Chats, Design...).\n\n## Motion spec\nPattern: looping springy illustration.\n- Folder flap: rotates open toward the viewer (~30deg, spring ~200/16, slight overshoot) and settles.\n- Tabs: three colored tabs rise from inside the folder in a stagger (60ms apart, translateY + slight tilt, spring ~240/18), hold, then drop back and the flap closes.\n- Full cycle ~2.5s with a pause; loops continuously.\n- Rest of the screen is completely static.\n\n## Calibration\n- Springs overshoot just enough to feel playful - one visible wobble, no ringing.\n- Tabs stay inside the folder's silhouette until they clear the flap line.\n\n## Reduced motion\nStatic illustration of the open folder with tabs out.\n\n## Don't miss\n- The flap and tabs move together as one rig - flap opens first, tabs follow.\n- Colors are flat Telegram-palette fills, no gradients on the folder."</script>
+</body></html>

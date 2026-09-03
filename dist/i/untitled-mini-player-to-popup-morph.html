@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[untitled] Mini Player to Popup Morph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>[untitled] Mini Player to Popup Morph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/untitled-mini-player-to-popup-morph"><b>Untitled</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-mini-player-to-popup-morph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-mini-player-to-popup-morph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: a mini player bar that springs open into a full-screen dark audio player - the bar&#x27;s circular artwork grows into a giant disc, the waveform expands, and controls fade in; collapsing reverses the whole morph.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400325af36c63d00336e0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400325af36c63d00336e0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-untitled-mini-player-to-popup-morph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: a mini player bar that springs open into a full-screen dark audio player - the bar&#x27;s circular artwork grows into a giant disc, the waveform expands, and controls fade in; collapsing reverses the whole morph.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light library screen with a rounded-square pink artwork, title &quot;First&quot;, subtitle &quot;60fps&quot;. Mini player bar docked above the home indicator: pink circular artwork, &quot;amber recording / First - 60fps&quot;, progress ticks, share and plus buttons. Expanded player: dark full-screen card with &quot;amber recording / First - 60fps&quot; header, a large pink disc, a waveform scrubber with time labels, and transport controls (skip back, play, skip forward, share, more).
+
+## Motion spec
+Pattern: shared-element expansion morph with spring.
+- Tap mini bar: the bar expands upward into the dark player (spring ~320/28, ~350ms) while the background dims (200ms).
+- Artwork: the mini bar&#x27;s pink circle is the same element as the big disc - it translates to center and scales ~5x through the same spring, no crossfade.
+- Waveform + timestamps grow out of the bar&#x27;s tiny progress row (~250ms, slight stagger after the disc).
+- Transport controls fade + rise ~12px in a 40ms bottom-up stagger, trailing the disc by ~100ms.
+- Collapse: reverse the same morph; the disc shrinks back into the bar&#x27;s circle exactly.
+
+## Calibration
+- One spring drives container, disc, and waveform so the morph reads as a single motion.
+- Pink is the only accent in both states - no color crossfade.
+
+## Reduced motion
+Player fades in over a dim (200ms); no shared-element travel.
+
+## Don&#x27;t miss
+- The disc never jumps: scale and position interpolate from the bar slot to the hero slot.
+- The mini bar&#x27;s share/plus icons become the player&#x27;s footer actions, not duplicated elements.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element expansion morph with spring.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/untitled-mini-player-to-popup-morph">original interaction</a> by Untitled. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: a mini player bar that springs open into a full-screen dark audio player - the bar's circular artwork grows into a giant disc, the waveform expands, and controls fade in; collapsing reverses the whole morph.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight library screen with a rounded-square pink artwork, title \"First\", subtitle \"60fps\". Mini player bar docked above the home indicator: pink circular artwork, \"amber recording / First - 60fps\", progress ticks, share and plus buttons. Expanded player: dark full-screen card with \"amber recording / First - 60fps\" header, a large pink disc, a waveform scrubber with time labels, and transport controls (skip back, play, skip forward, share, more).\n\n## Motion spec\nPattern: shared-element expansion morph with spring.\n- Tap mini bar: the bar expands upward into the dark player (spring ~320/28, ~350ms) while the background dims (200ms).\n- Artwork: the mini bar's pink circle is the same element as the big disc - it translates to center and scales ~5x through the same spring, no crossfade.\n- Waveform + timestamps grow out of the bar's tiny progress row (~250ms, slight stagger after the disc).\n- Transport controls fade + rise ~12px in a 40ms bottom-up stagger, trailing the disc by ~100ms.\n- Collapse: reverse the same morph; the disc shrinks back into the bar's circle exactly.\n\n## Calibration\n- One spring drives container, disc, and waveform so the morph reads as a single motion.\n- Pink is the only accent in both states - no color crossfade.\n\n## Reduced motion\nPlayer fades in over a dim (200ms); no shared-element travel.\n\n## Don't miss\n- The disc never jumps: scale and position interpolate from the bar slot to the hero slot.\n- The mini bar's share/plus icons become the player's footer actions, not duplicated elements."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Binsoo Filter 3D Camera Images Spin Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Binsoo Filter 3D Camera Images Spin Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/binsoo-filter-3d-camera-images-spin-interaction"><b>Binsoo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/binsoo-filter-3d-camera-images-spin-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/binsoo-filter-3d-camera-images-spin-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Binsoo&#x27;s filter spin - swiping through filter presets rotates a 3D camera model (red DPM, grey ADR3, boxy BEL) to a new angle while its floating polaroid previews orbit and swap with it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb6d89ec653eb3c148d5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb6d89ec653eb3c148d5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-binsoo-filter-3d-camera-images-spin-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Binsoo&#x27;s filter spin - swiping through filter presets rotates a 3D camera model (red DPM, grey ADR3, boxy BEL) to a new angle while its floating polaroid previews orbit and swap with it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark camera-detail screen entered from a capture UI: a 3D camera model center, 3-5 polaroid previews floating in an arc around it, the filter/preset name (&quot;DPM&quot;, &quot;BEL&quot;) with a subline below, a bottom preset row, and a shutter button.
+
+## Motion spec
+Pattern: swipe-driven 3D spin linking camera model and orbiting previews.
+- Horizontal swipe rotates the whole rig: camera turns on Y (follows finger 1:1 while dragging, ~1.2x rotation gain) and the polaroid arc swings in the same direction with perspective depth.
+- On release, velocity carries into a decaying flick that snaps the camera to the nearest preset angle (spring ~240/16, one overshoot).
+- The polaroids nearest the camera trade places with a swap shuffle (scale down 0.8, arc out, new ones arc in, 400ms staggered 60ms).
+- Preset name crossfades with a 6px vertical drift (200ms); bottom row indicator slides with the snap.
+
+## Calibration
+- Dragging feels physical: the rig has inertia and the snap is earned, not instant.
+- Each camera body is a distinct 3D model - the spin reveals its real geometry, not a billboard.
+
+## Reduced motion
+Camera and previews crossfade between presets (250ms); no drag-follow.
+
+## Don&#x27;t miss
+- The red accent dot on the DPM body is a fixed detail of the model - it travels with the spin.
+- Polaroids keep their white frames and slight random tilts through every transition.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-driven 3D spin linking camera model and orbiting previews.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/binsoo-filter-3d-camera-images-spin-interaction">original interaction</a> by Binsoo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Binsoo's filter spin - swiping through filter presets rotates a 3D camera model (red DPM, grey ADR3, boxy BEL) to a new angle while its floating polaroid previews orbit and swap with it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark camera-detail screen entered from a capture UI: a 3D camera model center, 3-5 polaroid previews floating in an arc around it, the filter/preset name (\"DPM\", \"BEL\") with a subline below, a bottom preset row, and a shutter button.\n\n## Motion spec\nPattern: swipe-driven 3D spin linking camera model and orbiting previews.\n- Horizontal swipe rotates the whole rig: camera turns on Y (follows finger 1:1 while dragging, ~1.2x rotation gain) and the polaroid arc swings in the same direction with perspective depth.\n- On release, velocity carries into a decaying flick that snaps the camera to the nearest preset angle (spring ~240/16, one overshoot).\n- The polaroids nearest the camera trade places with a swap shuffle (scale down 0.8, arc out, new ones arc in, 400ms staggered 60ms).\n- Preset name crossfades with a 6px vertical drift (200ms); bottom row indicator slides with the snap.\n\n## Calibration\n- Dragging feels physical: the rig has inertia and the snap is earned, not instant.\n- Each camera body is a distinct 3D model - the spin reveals its real geometry, not a billboard.\n\n## Reduced motion\nCamera and previews crossfade between presets (250ms); no drag-follow.\n\n## Don't miss\n- The red accent dot on the DPM body is a fixed detail of the model - it travels with the spin.\n- Polaroids keep their white frames and slight random tilts through every transition."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnBar Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BurnBar Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/burnbar-intro-animation"><b>Burnbar</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/burnbar-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/burnbar-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BurnBar&#x27;s intro - on an electric blue field an orange flame progress bar charges across the screen, kinetic type (&quot;Earn your Drinks&quot;) slams in, the flame streaks and loops into the brand&#x27;s C-shaped mark, and a glass fills with amber liquid.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8d0308835595b0e9e32d7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8d0308835595b0e9e32d7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-burnbar-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BurnBar&#x27;s intro - on an electric blue field an orange flame progress bar charges across the screen, kinetic type (&quot;Earn your Drinks&quot;) slams in, the flame streaks and loops into the brand&#x27;s C-shaped mark, and a glass fills with amber liquid.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-bleed electric blue screen. Cast: an orange pill progress bar with a flame head, chunky white kinetic typography, an orange C-arc logo mark, and a pint glass that fills with beer.
+
+## Motion spec
+Pattern: one-shot kinetic intro - progress-bar charge, type slam, logo loop, liquid fill.
+- The flame-bar stretches left-to-right across center (width 0 -&gt; 70%, 600ms, ease-out), its flame head flickering (scale/skew jitter at ~8Hz).
+- Type slams in word by word (&quot;Earn&quot; / &quot;your&quot; / &quot;Drinks&quot;), each scaling 1.3 -&gt; 1 with a hard spring (~400/18, 200ms, 120ms stagger) and a slight rotation settle.
+- The bar reignites as a flame streak that whips around into the C-arc (rotation sweep 270deg, 500ms, ease-in-out).
+- The glass fades in bottom-center (200ms) and fills with amber liquid rising in a smooth wave (fill 0 -&gt; 90%, 1.2s, ease-in-out) with a foam head forming at the end.
+
+## Calibration
+- Everything moves fast and hits hard - this intro is energy, not elegance.
+- The flame head stays attached to the bar&#x27;s leading edge through every transform.
+
+## Reduced motion
+Bar fills without flicker (500ms), type fades in (200ms), glass fills via rising clip (800ms).
+
+## Don&#x27;t miss
+- Blue field is flat and saturated; orange and white are the only other colors.
+- The C-arc is the same stroke weight as the progress bar - they are one continuous shape.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">one-shot kinetic intro - progress-bar charge, type slam, logo loop, liquid fill.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/burnbar-intro-animation">original interaction</a> by Burnbar. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BurnBar's intro - on an electric blue field an orange flame progress bar charges across the screen, kinetic type (\"Earn your Drinks\") slams in, the flame streaks and loops into the brand's C-shaped mark, and a glass fills with amber liquid.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-bleed electric blue screen. Cast: an orange pill progress bar with a flame head, chunky white kinetic typography, an orange C-arc logo mark, and a pint glass that fills with beer.\n\n## Motion spec\nPattern: one-shot kinetic intro - progress-bar charge, type slam, logo loop, liquid fill.\n- The flame-bar stretches left-to-right across center (width 0 -> 70%, 600ms, ease-out), its flame head flickering (scale/skew jitter at ~8Hz).\n- Type slams in word by word (\"Earn\" / \"your\" / \"Drinks\"), each scaling 1.3 -> 1 with a hard spring (~400/18, 200ms, 120ms stagger) and a slight rotation settle.\n- The bar reignites as a flame streak that whips around into the C-arc (rotation sweep 270deg, 500ms, ease-in-out).\n- The glass fades in bottom-center (200ms) and fills with amber liquid rising in a smooth wave (fill 0 -> 90%, 1.2s, ease-in-out) with a foam head forming at the end.\n\n## Calibration\n- Everything moves fast and hits hard - this intro is energy, not elegance.\n- The flame head stays attached to the bar's leading edge through every transform.\n\n## Reduced motion\nBar fills without flicker (500ms), type fades in (200ms), glass fills via rising clip (800ms).\n\n## Don't miss\n- Blue field is flat and saturated; orange and white are the only other colors.\n- The C-arc is the same stroke weight as the progress bar - they are one continuous shape."</script>
+</body></html>

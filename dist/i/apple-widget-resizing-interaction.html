@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Widget Resizing Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Widget Resizing Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-widget-resizing-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-widget-resizing-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-widget-resizing-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: iOS home-screen widget resizing - in edit mode, dragging the widget&#x27;s corner handle morphs a music widget between small, medium, and large sizes, content reflowing live (a Recently Played list appearing only at large).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f0110f1b4fccd623008697/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f0110f1b4fccd623008697/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-widget-resizing-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: iOS home-screen widget resizing - in edit mode, dragging the widget&#x27;s corner handle morphs a music widget between small, medium, and large sizes, content reflowing live (a Recently Played list appearing only at large).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark home screen with a dock; a red music widget (album art, &quot;Love In Slow Motion&quot;, &quot;Ed Sheeran&quot;, Play button, music-note glyph). Edit mode: a small grabber dot on the widget&#x27;s bottom-right corner. Large size adds a &quot;RECENTLY PLAYED&quot; section with track rows.
+
+## Motion spec
+Pattern: corner-drag resize with live reflow.
+- Long-press enters edit mode: widget gets the corner handle, icons jiggle.
+- Drag the handle: the widget&#x27;s width/height follow the finger continuously (rubber-banded between the 3 size classes); content scales with the container, album art anchored top-left.
+- Crossing a size-class threshold: content reflows with a 200ms ease - medium adds the Now Playing row, large reveals the Recently Played list rows fading in with 40ms stagger.
+- Release: widget springs to the nearest size class (spring ~300/26, ~300ms); handle fades out on edit-mode exit.
+- Wallpaper and dock stay static.
+
+## Calibration
+- Between thresholds the container free-follows; only the CONTENT snaps at thresholds.
+- Recently Played rows belong to large only - they collapse away below it.
+
+## Reduced motion
+Widget steps between sizes without free-follow drag.
+
+## Don&#x27;t miss
+- The handle is only visible in edit mode.
+- Album art never stretches - it crops/scales uniformly during free-follow.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">corner-drag resize with live reflow.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-widget-resizing-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: iOS home-screen widget resizing - in edit mode, dragging the widget's corner handle morphs a music widget between small, medium, and large sizes, content reflowing live (a Recently Played list appearing only at large).\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark home screen with a dock; a red music widget (album art, \"Love In Slow Motion\", \"Ed Sheeran\", Play button, music-note glyph). Edit mode: a small grabber dot on the widget's bottom-right corner. Large size adds a \"RECENTLY PLAYED\" section with track rows.\n\n## Motion spec\nPattern: corner-drag resize with live reflow.\n- Long-press enters edit mode: widget gets the corner handle, icons jiggle.\n- Drag the handle: the widget's width/height follow the finger continuously (rubber-banded between the 3 size classes); content scales with the container, album art anchored top-left.\n- Crossing a size-class threshold: content reflows with a 200ms ease - medium adds the Now Playing row, large reveals the Recently Played list rows fading in with 40ms stagger.\n- Release: widget springs to the nearest size class (spring ~300/26, ~300ms); handle fades out on edit-mode exit.\n- Wallpaper and dock stay static.\n\n## Calibration\n- Between thresholds the container free-follows; only the CONTENT snaps at thresholds.\n- Recently Played rows belong to large only - they collapse away below it.\n\n## Reduced motion\nWidget steps between sizes without free-follow drag.\n\n## Don't miss\n- The handle is only visible in edit mode.\n- Album art never stretches - it crops/scales uniformly during free-follow."</script>
+</body></html>

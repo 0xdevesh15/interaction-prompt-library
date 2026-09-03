@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dropset Trends Graph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Dropset Trends Graph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/dropset-trends-graph-interaction"><b>Dropset</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dropset-trends-graph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dropset-trends-graph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Dropset&#x27;s exercise trends screen - a dark line chart of lift history with dot markers where scrubbing or tapping a point raises a value tooltip, and metric/range dropdowns re-plot the chart with an animated redraw.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f7960232bd75f30a2411d2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f7960232bd75f30a2411d2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-dropset-trends-graph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Dropset&#x27;s exercise trends screen - a dark line chart of lift history with dot markers where scrubbing or tapping a point raises a value tooltip, and metric/range dropdowns re-plot the chart with an animated redraw.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen titled &quot;Deadlift&quot; with demo-data notice, two dropdown pills (&quot;1 Rep Max&quot;, &quot;All time&quot;), and a line chart: white polyline with circular markers, y-axis weight labels, x-axis dates. Tooltip is a dark elevated card (e.g. &quot;56.2 kg / Theoretical max for 1 rep / date&quot;). Metric menu lists 1 Rep Max, Heaviest weight, Total weight, Reps.
+
+## Motion spec
+Pattern: data scrubbing with tooltip + animated dataset transitions.
+- Touch/drag on chart: a vertical crosshair line follows the finger, nearest marker highlights (scale 1 -&gt; 1.4, 100ms), tooltip card fades in above it (150ms) and tracks horizontally, flipping sides near edges.
+- Release: tooltip and crosshair fade out (150ms).
+- Metric switch: dropdown menu slides down (200ms, ease-out); on selection the polyline morphs to the new dataset - points interpolate vertically to new positions (~350ms, ease-in-out), y-axis labels crossfade.
+- Range switch re-scales the x-axis with the same interpolation.
+
+## Calibration
+- Tooltip always fully on-screen: clamp and flip near edges.
+- Point interpolation is per-marker vertical travel - lines never crossfade as images.
+
+## Reduced motion
+Dataset swaps with a 200ms fade; tooltip appears without tracking animation.
+
+## Don&#x27;t miss
+- Markers are part of the resting chart, not shown only on scrub.
+- Tooltip content includes the metric label and exact date, not just the number.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">data scrubbing with tooltip + animated dataset transitions.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/dropset-trends-graph-interaction">original interaction</a> by Dropset. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Dropset's exercise trends screen - a dark line chart of lift history with dot markers where scrubbing or tapping a point raises a value tooltip, and metric/range dropdowns re-plot the chart with an animated redraw.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen titled \"Deadlift\" with demo-data notice, two dropdown pills (\"1 Rep Max\", \"All time\"), and a line chart: white polyline with circular markers, y-axis weight labels, x-axis dates. Tooltip is a dark elevated card (e.g. \"56.2 kg / Theoretical max for 1 rep / date\"). Metric menu lists 1 Rep Max, Heaviest weight, Total weight, Reps.\n\n## Motion spec\nPattern: data scrubbing with tooltip + animated dataset transitions.\n- Touch/drag on chart: a vertical crosshair line follows the finger, nearest marker highlights (scale 1 -> 1.4, 100ms), tooltip card fades in above it (150ms) and tracks horizontally, flipping sides near edges.\n- Release: tooltip and crosshair fade out (150ms).\n- Metric switch: dropdown menu slides down (200ms, ease-out); on selection the polyline morphs to the new dataset - points interpolate vertically to new positions (~350ms, ease-in-out), y-axis labels crossfade.\n- Range switch re-scales the x-axis with the same interpolation.\n\n## Calibration\n- Tooltip always fully on-screen: clamp and flip near edges.\n- Point interpolation is per-marker vertical travel - lines never crossfade as images.\n\n## Reduced motion\nDataset swaps with a 200ms fade; tooltip appears without tracking animation.\n\n## Don't miss\n- Markers are part of the resting chart, not shown only on scrub.\n- Tooltip content includes the metric label and exact date, not just the number."</script>
+</body></html>

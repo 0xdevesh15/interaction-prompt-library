@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[untitled] Pull Down to Record Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>[untitled] Pull Down to Record Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/untitled-pull-down-to-record-interaction"><b>Untitled</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-pull-down-to-record-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-pull-down-to-record-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: pull down from the top of an empty-project screen to reveal a hidden red Record button - the pink artwork stretches with the pull, the screen dims into a recording overlay with a live waveform, then lands on a New Recording review screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400325af36c63d00336de/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400325af36c63d00336de/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-untitled-pull-down-to-record-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: pull down from the top of an empty-project screen to reveal a hidden red Record button - the pink artwork stretches with the pull, the screen dims into a recording overlay with a live waveform, then lands on a New Recording review screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White empty state: pink rounded artwork, &quot;Start your first project&quot; heading, &quot;Add Audio&quot; pill button. Pull-down state: a red &quot;Record&quot; pill descends from the top edge. Recording overlay: dimmed background, pink waveform cluster, &quot;Record ideas on [untitled]&quot; copy, Continue button. Review screen: &quot;New Recording&quot; header, waveform with trim readout, Cancel / Save / Retry row.
+
+## Motion spec
+Pattern: overscroll pull-to-reveal + staged flow.
+- Pull down anywhere: content tracks the finger 1:1 downward; the pink artwork stretches vertically with rubber-band resistance (scaleY up to ~1.15) as the red Record pill slides in from off-screen top, meeting the finger&#x27;s progress.
+- Past ~80px threshold: release commits - screen dims (250ms), Record pill locks to top-center, waveform cluster fades in pulsing with input level; under threshold, everything springs back (~300/24).
+- Continue advances: overlay crossfades to the New Recording review screen (~300ms), waveform re-lays-out horizontally with a trim tooltip, and Cancel / Save / Retry fade in with 60ms stagger.
+- Save: screen springs back to the project view with the new clip attached.
+
+## Calibration
+- The Record pill reveal is tied to pull distance, not time - partial pull shows a partial pill.
+- Artwork stretch is resistance-mapped (diminishing), never linear past the threshold.
+
+## Reduced motion
+Pull reveals the pill without artwork stretch; overlays crossfade.
+
+## Don&#x27;t miss
+- The pill only commits past the threshold; short pulls bounce it back off-screen.
+- The waveform pulses live during recording - it is not a static decoration.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">overscroll pull-to-reveal + staged flow.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/untitled-pull-down-to-record-interaction">original interaction</a> by Untitled. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: pull down from the top of an empty-project screen to reveal a hidden red Record button - the pink artwork stretches with the pull, the screen dims into a recording overlay with a live waveform, then lands on a New Recording review screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite empty state: pink rounded artwork, \"Start your first project\" heading, \"Add Audio\" pill button. Pull-down state: a red \"Record\" pill descends from the top edge. Recording overlay: dimmed background, pink waveform cluster, \"Record ideas on [untitled]\" copy, Continue button. Review screen: \"New Recording\" header, waveform with trim readout, Cancel / Save / Retry row.\n\n## Motion spec\nPattern: overscroll pull-to-reveal + staged flow.\n- Pull down anywhere: content tracks the finger 1:1 downward; the pink artwork stretches vertically with rubber-band resistance (scaleY up to ~1.15) as the red Record pill slides in from off-screen top, meeting the finger's progress.\n- Past ~80px threshold: release commits - screen dims (250ms), Record pill locks to top-center, waveform cluster fades in pulsing with input level; under threshold, everything springs back (~300/24).\n- Continue advances: overlay crossfades to the New Recording review screen (~300ms), waveform re-lays-out horizontally with a trim tooltip, and Cancel / Save / Retry fade in with 60ms stagger.\n- Save: screen springs back to the project view with the new clip attached.\n\n## Calibration\n- The Record pill reveal is tied to pull distance, not time - partial pull shows a partial pill.\n- Artwork stretch is resistance-mapped (diminishing), never linear past the threshold.\n\n## Reduced motion\nPull reveals the pill without artwork stretch; overlays crossfade.\n\n## Don't miss\n- The pill only commits past the threshold; short pulls bounce it back off-screen.\n- The waveform pulses live during recording - it is not a static decoration."</script>
+</body></html>

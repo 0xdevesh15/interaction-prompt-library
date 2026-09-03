@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy DineCash Hero Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy DineCash Hero Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-dinecash-hero-animation"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-dinecash-hero-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-dinecash-hero-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Swiggy&#x27;s DineCash hero - a 3D hexagonal rupee token materializes on a mint canvas, then gives way to two hands holding phones at the edges with coins looping along an arc between them, above a QR scan card.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980a151fd52183e4027/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980a151fd52183e4027/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-dinecash-hero-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Swiggy&#x27;s DineCash hero - a 3D hexagonal rupee token materializes on a mint canvas, then gives way to two hands holding phones at the edges with coins looping along an arc between them, above a QR scan card.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Receive DineCash&quot; screen on a mint-green field with a faint radial sunburst. Hero zone occupies the top half; below it sit the title (&quot;Receive DineCash &amp; save more on this bill!&quot;) and a white card with &quot;Ask friends to scan the QR code&quot; and a QR code.
+
+## Motion spec
+Pattern: looping hero - token pop-in, then a peer-to-peer coin arc cycle.
+- Entrance: the 3D hex token scales 0 -&gt; 1 with a fast spin (rotateY 180deg, 500ms, spring ~300/20), hovering with a soft drop shadow and a subtle float bob (+/- 6px, 2.4s).
+- Swap: the token fades and shrinks (300ms) as two hands holding phones slide in from the left and right edges (translate 60px -&gt; 0, 400ms, ease-out).
+- Coin loop: 4-6 rupee coins travel along a shallow arc from the left phone to the right phone (1.6s per coin, ease-in-out, staggered 300ms, scale 0.7 -&gt; 1 -&gt; 0.7 along the path), looping indefinitely.
+- Title and QR card stay static throughout; only the hero zone animates.
+
+## Calibration
+- The arc must read as money in flight between two people - keep the coin path flat and shallow, not a rainbow.
+- The token&#x27;s spin is glossy and physical (metal shading), the coins are flat and graphic.
+
+## Reduced motion
+Token fades in (200ms); hands appear static with coins frozen mid-arc; no looping travel.
+
+## Don&#x27;t miss
+- Hands enter from opposite edges and hold phones facing each other.
+- The sunburst rays behind the hero rotate very slowly (~60s per revolution) - barely perceptible, but present.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping hero - token pop-in, then a peer-to-peer coin arc cycle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-dinecash-hero-animation">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Swiggy's DineCash hero - a 3D hexagonal rupee token materializes on a mint canvas, then gives way to two hands holding phones at the edges with coins looping along an arc between them, above a QR scan card.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Receive DineCash\" screen on a mint-green field with a faint radial sunburst. Hero zone occupies the top half; below it sit the title (\"Receive DineCash & save more on this bill!\") and a white card with \"Ask friends to scan the QR code\" and a QR code.\n\n## Motion spec\nPattern: looping hero - token pop-in, then a peer-to-peer coin arc cycle.\n- Entrance: the 3D hex token scales 0 -> 1 with a fast spin (rotateY 180deg, 500ms, spring ~300/20), hovering with a soft drop shadow and a subtle float bob (+/- 6px, 2.4s).\n- Swap: the token fades and shrinks (300ms) as two hands holding phones slide in from the left and right edges (translate 60px -> 0, 400ms, ease-out).\n- Coin loop: 4-6 rupee coins travel along a shallow arc from the left phone to the right phone (1.6s per coin, ease-in-out, staggered 300ms, scale 0.7 -> 1 -> 0.7 along the path), looping indefinitely.\n- Title and QR card stay static throughout; only the hero zone animates.\n\n## Calibration\n- The arc must read as money in flight between two people - keep the coin path flat and shallow, not a rainbow.\n- The token's spin is glossy and physical (metal shading), the coins are flat and graphic.\n\n## Reduced motion\nToken fades in (200ms); hands appear static with coins frozen mid-arc; no looping travel.\n\n## Don't miss\n- Hands enter from opposite edges and hold phones facing each other.\n- The sunburst rays behind the hero rotate very slowly (~60s per revolution) - barely perceptible, but present."</script>
+</body></html>

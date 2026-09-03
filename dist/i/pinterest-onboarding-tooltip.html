@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pinterest Onboarding Tooltip - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Pinterest Onboarding Tooltip</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/pinterest-onboarding-tooltip"><b>Pinterest</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pinterest-onboarding-tooltip">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pinterest-onboarding-tooltip">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Pinterest&#x27;s collage-editor onboarding tooltip - a green speech bubble instructs &quot;Keep your fingers pressed on the top layer and don&#x27;t let go!&quot; while an animated hand with a yellow touch ring presses and holds the image, which lifts in response.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f1634f09e513e17c2cda61/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f1634f09e513e17c2cda61/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-pinterest-onboarding-tooltip.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Pinterest&#x27;s collage-editor onboarding tooltip - a green speech bubble instructs &quot;Keep your fingers pressed on the top layer and don&#x27;t let go!&quot; while an animated hand with a yellow touch ring presses and holds the image, which lifts in response.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Collage editor: a blue-marble image on a white canvas, a green tooltip bubble anchored above it (&quot;Keep your fingers pressed on the top layer and don&#x27;t let go!&quot;), an illustrated hand with a yellow ring at the fingertip, and a bottom toolbar (undo, text, plus, image, camera icons).
+
+## Motion spec
+Pattern: guided press-and-hold demo loop.
+- The hand glides in and settles its fingertip (yellow ring) onto the image (~400ms, ease-out).
+- Touch-down: the yellow ring pulses once (scale 1 -&gt; 1.3 -&gt; 1, ~300ms) and the image lifts - scale 1 -&gt; 1.04 with a deepening shadow (~250ms, spring ~300/24) - communicating &quot;this layer is now held&quot;.
+- Hold: hand stays planted ~1s; the tooltip nudges gently (translateY 2px loop).
+- Release: image settles back (spring, slight overshoot), hand glides off, loop restarts after ~800ms.
+- Toolbar and canvas stay static.
+
+## Calibration
+- The lift is small (4%) but the shadow doubles - depth sells the hold, not scale.
+- Tooltip bubble points at the touch point and never covers it.
+
+## Reduced motion
+Hand fades between positions; image highlights without lift.
+
+## Don&#x27;t miss
+- The yellow ring is the touch indicator - it leads the press, appearing a beat before the lift.
+- The demo loops cleanly: full reset between cycles, no leftover states.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">guided press-and-hold demo loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/pinterest-onboarding-tooltip">original interaction</a> by Pinterest. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Pinterest's collage-editor onboarding tooltip - a green speech bubble instructs \"Keep your fingers pressed on the top layer and don't let go!\" while an animated hand with a yellow touch ring presses and holds the image, which lifts in response.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCollage editor: a blue-marble image on a white canvas, a green tooltip bubble anchored above it (\"Keep your fingers pressed on the top layer and don't let go!\"), an illustrated hand with a yellow ring at the fingertip, and a bottom toolbar (undo, text, plus, image, camera icons).\n\n## Motion spec\nPattern: guided press-and-hold demo loop.\n- The hand glides in and settles its fingertip (yellow ring) onto the image (~400ms, ease-out).\n- Touch-down: the yellow ring pulses once (scale 1 -> 1.3 -> 1, ~300ms) and the image lifts - scale 1 -> 1.04 with a deepening shadow (~250ms, spring ~300/24) - communicating \"this layer is now held\".\n- Hold: hand stays planted ~1s; the tooltip nudges gently (translateY 2px loop).\n- Release: image settles back (spring, slight overshoot), hand glides off, loop restarts after ~800ms.\n- Toolbar and canvas stay static.\n\n## Calibration\n- The lift is small (4%) but the shadow doubles - depth sells the hold, not scale.\n- Tooltip bubble points at the touch point and never covers it.\n\n## Reduced motion\nHand fades between positions; image highlights without lift.\n\n## Don't miss\n- The yellow ring is the touch indicator - it leads the press, appearing a beat before the lift.\n- The demo loops cleanly: full reset between cycles, no leftover states."</script>
+</body></html>

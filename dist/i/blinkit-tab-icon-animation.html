@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blinkit Tab Icon Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Blinkit Tab Icon Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/blinkit-tab-icon-animation"><b>Blinkit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blinkit-tab-icon-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blinkit-tab-icon-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Blinkit&#x27;s bottom tab bar - selecting a tab fires a playful springy micro-animation on its icon (bounce, pop, or jiggle) while the label tints and the active indicator slides under it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66eac3e45cf71582ac5603d9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66eac3e45cf71582ac5603d9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-blinkit-tab-icon-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Blinkit&#x27;s bottom tab bar - selecting a tab fires a playful springy micro-animation on its icon (bounce, pop, or jiggle) while the label tints and the active indicator slides under it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Blinkit grocery app: product feed (categories, Previously bought, a &quot;Packing your order&quot; tracker card), bottom tab bar with Home, Order Again, Categories, Print. Print tab opens a page with &quot;Safe &amp; Secure / Fast delivery / Lowest prices&quot; badges and FAQs.
+
+## Motion spec
+Pattern: per-tab icon micro-animation on selection.
+- Tap a tab: its icon does a signature bounce - scale 1 -&gt; 1.25 -&gt; 0.95 -&gt; 1 (spring ~400/18, ~350ms) with a tiny rotation (~8deg) on the way up; haptic tap.
+- The active pill/underline indicator slides horizontally to the new tab (spring ~320/26, ~250ms), slightly overshooting.
+- Label tints to the active color with a 150ms crossfade; the previously active icon settles back instantly.
+- The page content switches with a quick crossfade (~200ms) - the icon animation runs on top, independent of page load.
+
+## Calibration
+- Each icon&#x27;s bounce is the same spring but icons read differently (house, bag, grid, printer) - keep the motion uniform, not per-icon choreography.
+- The indicator never teleports; it slides from wherever it was.
+
+## Reduced motion
+Icons swap with tint only; indicator slides without overshoot.
+
+## Don&#x27;t miss
+- The &quot;Packing your order&quot; tracker is content, not part of the tab bar - it doesn&#x27;t animate.
+- Print&#x27;s page content (badges, FAQs) appears with the page, not with the icon bounce.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">per-tab icon micro-animation on selection.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/blinkit-tab-icon-animation">original interaction</a> by Blinkit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Blinkit's bottom tab bar - selecting a tab fires a playful springy micro-animation on its icon (bounce, pop, or jiggle) while the label tints and the active indicator slides under it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlinkit grocery app: product feed (categories, Previously bought, a \"Packing your order\" tracker card), bottom tab bar with Home, Order Again, Categories, Print. Print tab opens a page with \"Safe & Secure / Fast delivery / Lowest prices\" badges and FAQs.\n\n## Motion spec\nPattern: per-tab icon micro-animation on selection.\n- Tap a tab: its icon does a signature bounce - scale 1 -> 1.25 -> 0.95 -> 1 (spring ~400/18, ~350ms) with a tiny rotation (~8deg) on the way up; haptic tap.\n- The active pill/underline indicator slides horizontally to the new tab (spring ~320/26, ~250ms), slightly overshooting.\n- Label tints to the active color with a 150ms crossfade; the previously active icon settles back instantly.\n- The page content switches with a quick crossfade (~200ms) - the icon animation runs on top, independent of page load.\n\n## Calibration\n- Each icon's bounce is the same spring but icons read differently (house, bag, grid, printer) - keep the motion uniform, not per-icon choreography.\n- The indicator never teleports; it slides from wherever it was.\n\n## Reduced motion\nIcons swap with tint only; indicator slides without overshoot.\n\n## Don't miss\n- The \"Packing your order\" tracker is content, not part of the tab bar - it doesn't animate.\n- Print's page content (badges, FAQs) appears with the page, not with the icon bounce."</script>
+</body></html>

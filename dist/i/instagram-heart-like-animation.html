@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Heart Like Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Heart Like Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-heart-like-animation"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-heart-like-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-heart-like-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Instagram&#x27;s double-tap like - a big heart bursts at the tap point, scales up with a slight rotation, then drifts upward and fades; rapid double-taps stack multiple floating hearts, and the action bar&#x27;s heart fills red.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66eb1dde8a67e83abb8fca37/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66eb1dde8a67e83abb8fca37/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-heart-like-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Instagram&#x27;s double-tap like - a big heart bursts at the tap point, scales up with a slight rotation, then drifts upward and fades; rapid double-taps stack multiple floating hearts, and the action bar&#x27;s heart fills red.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Instagram feed: stories rail, a photo post, action bar (heart, comment, share, bookmark), caption. The like hearts are pink-red gradient with soft glow.
+
+## Motion spec
+Pattern: burst-scale-rotate + upward drift fade.
+- Double-tap on the post: a heart spawns at the tap point at scale 0.3, springs to 1.0 with overshoot (spring ~350/20, ~300ms) and a random slight rotation (~±12deg).
+- Hold ~250ms, then the heart drifts upward ~80px while fading out (~450ms, ease-in).
+- Rapid repeats: each tap spawns an independent heart - several can drift simultaneously, each at its own phase.
+- Action bar: the small heart icon pops (scale 1.3 -&gt; 1, 200ms) and fills red on the first tap; like count increments.
+- The post itself doesn&#x27;t move (no zoom).
+
+## Calibration
+- Spawn point = tap point, always - not screen center (unless tapped center).
+- Rotation is randomized per heart so stacked taps don&#x27;t look cloned.
+
+## Reduced motion
+Single heart fades at the tap point; no drift or rotation.
+
+## Don&#x27;t miss
+- The heart is BIG (roughly a quarter of the post width) - this is the celebratory burst, not the icon.
+- Fade-out is paired with upward drift, never a plain vanish.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">burst-scale-rotate + upward drift fade.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-heart-like-animation">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Instagram's double-tap like - a big heart bursts at the tap point, scales up with a slight rotation, then drifts upward and fades; rapid double-taps stack multiple floating hearts, and the action bar's heart fills red.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nInstagram feed: stories rail, a photo post, action bar (heart, comment, share, bookmark), caption. The like hearts are pink-red gradient with soft glow.\n\n## Motion spec\nPattern: burst-scale-rotate + upward drift fade.\n- Double-tap on the post: a heart spawns at the tap point at scale 0.3, springs to 1.0 with overshoot (spring ~350/20, ~300ms) and a random slight rotation (~\u00b112deg).\n- Hold ~250ms, then the heart drifts upward ~80px while fading out (~450ms, ease-in).\n- Rapid repeats: each tap spawns an independent heart - several can drift simultaneously, each at its own phase.\n- Action bar: the small heart icon pops (scale 1.3 -> 1, 200ms) and fills red on the first tap; like count increments.\n- The post itself doesn't move (no zoom).\n\n## Calibration\n- Spawn point = tap point, always - not screen center (unless tapped center).\n- Rotation is randomized per heart so stacked taps don't look cloned.\n\n## Reduced motion\nSingle heart fades at the tap point; no drift or rotation.\n\n## Don't miss\n- The heart is BIG (roughly a quarter of the post width) - this is the celebratory burst, not the icon.\n- Fade-out is paired with upward drift, never a plain vanish."</script>
+</body></html>

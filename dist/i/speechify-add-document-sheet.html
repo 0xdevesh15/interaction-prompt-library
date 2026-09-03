@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speechify Add Document Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Speechify Add Document Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/speechify-add-document-sheet"><b>Speechify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/speechify-add-document-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/speechify-add-document-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Speechify&#x27;s add-document sheet - tapping the tab bar&#x27;s blue + slides up a &quot;Create&quot; sheet (Scan Text, Type or Paste Text, Paste Web Link, Chat with AI) that expands into Connected and Import sections (iOS Files, Kindle Library, Google Drive, Gmail, Dropbox, ...) and dismisses back down.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f01047db3e2329871b357c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f01047db3e2329871b357c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-speechify-add-document-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Speechify&#x27;s add-document sheet - tapping the tab bar&#x27;s blue + slides up a &quot;Create&quot; sheet (Scan Text, Type or Paste Text, Paste Web Link, Chat with AI) that expands into Connected and Import sections (iOS Files, Kindle Library, Google Drive, Gmail, Dropbox, ...) and dismisses back down.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Library screen (&quot;Great start, Rishi!&quot; checklist) with tab bar, center blue + button. Sheet: &quot;Create&quot; header with X, four create rows with icons, &quot;Connected&quot; section (iOS Files), &quot;Import&quot; section (Kindle Library NEW, From Computer, Google Drive, Gmail, Dropbox, Microsoft OneDrive, Canvas, Photos) with &quot;PDF, Doc, and more&quot; hint, &quot;Discover&quot; section (Browse websites, feedback row).
+
+## Motion spec
+Pattern: bottom sheet rise + progressive expansion + slide-down dismiss.
+- Tap +: sheet slides up to half height (spring ~320/28, ~300ms), background dims 40%.
+- The sheet&#x27;s sections are already laid out - scrolling inside expands it to full height with a springy detent snap (~250ms); the tab bar hides as the sheet passes it.
+- Section rows stagger in on first open (30ms, fade + 8px rise).
+- Dismiss (X, swipe down, or backdrop): sheet slides down with drag 1:1 tracking, velocity-aware; slow drags under half spring back up.
+- The + button rotates to X (or morphs) while the sheet is open, 200ms.
+
+## Calibration
+- Detents (half, full) are true stops - the sheet never rests between them.
+- Dismiss is gesture-driven: fast fling closes from any position.
+
+## Reduced motion
+Sheet fades/slides without spring; sections appear as a block.
+
+## Don&#x27;t miss
+- Import rows carry real service icons (Gmail, Drive, Dropbox, OneDrive, Canvas, Photos) - it&#x27;s a branded list.
+- &quot;PDF, Doc, and more&quot; hint sits at the Import section&#x27;s right edge.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bottom sheet rise + progressive expansion + slide-down dismiss.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/speechify-add-document-sheet">original interaction</a> by Speechify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Speechify's add-document sheet - tapping the tab bar's blue + slides up a \"Create\" sheet (Scan Text, Type or Paste Text, Paste Web Link, Chat with AI) that expands into Connected and Import sections (iOS Files, Kindle Library, Google Drive, Gmail, Dropbox, ...) and dismisses back down.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLibrary screen (\"Great start, Rishi!\" checklist) with tab bar, center blue + button. Sheet: \"Create\" header with X, four create rows with icons, \"Connected\" section (iOS Files), \"Import\" section (Kindle Library NEW, From Computer, Google Drive, Gmail, Dropbox, Microsoft OneDrive, Canvas, Photos) with \"PDF, Doc, and more\" hint, \"Discover\" section (Browse websites, feedback row).\n\n## Motion spec\nPattern: bottom sheet rise + progressive expansion + slide-down dismiss.\n- Tap +: sheet slides up to half height (spring ~320/28, ~300ms), background dims 40%.\n- The sheet's sections are already laid out - scrolling inside expands it to full height with a springy detent snap (~250ms); the tab bar hides as the sheet passes it.\n- Section rows stagger in on first open (30ms, fade + 8px rise).\n- Dismiss (X, swipe down, or backdrop): sheet slides down with drag 1:1 tracking, velocity-aware; slow drags under half spring back up.\n- The + button rotates to X (or morphs) while the sheet is open, 200ms.\n\n## Calibration\n- Detents (half, full) are true stops - the sheet never rests between them.\n- Dismiss is gesture-driven: fast fling closes from any position.\n\n## Reduced motion\nSheet fades/slides without spring; sections appear as a block.\n\n## Don't miss\n- Import rows carry real service icons (Gmail, Drive, Dropbox, OneDrive, Canvas, Photos) - it's a branded list.\n- \"PDF, Doc, and more\" hint sits at the Import section's right edge."</script>
+</body></html>

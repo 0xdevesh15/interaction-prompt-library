@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spark Correct Card Slide Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spark Correct Card Slide Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spark-correct-card-slide-animation"><b>Spark</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spark-correct-card-slide-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spark-correct-card-slide-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Spark&#x27;s quiz round transition - after a correct answer, tapping &quot;Next round&quot; slides the pair of answer cards off to the left while the next question&#x27;s cards slide in from the right, with the round counter and question text crossfading in sync.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538e815722ddd136fc4b9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538e815722ddd136fc4b9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spark-correct-card-slide-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Spark&#x27;s quiz round transition - after a correct answer, tapping &quot;Next round&quot; slides the pair of answer cards off to the left while the next question&#x27;s cards slide in from the right, with the round counter and question text crossfading in sync.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Quiz screen on cream: &quot;Round 6 of 7&quot; eyebrow, question headline (&quot;Which has more vitamin C?&quot;), two answer cards side by side (image, name tag, value range), the &quot;That&#x27;s right!&quot; verdict with explainer copy, and a dark &quot;Next round&quot; button.
+
+## Motion spec
+Pattern: horizontal card-slide between quiz rounds.
+- On Next round: both answer cards slide left and out (translate -120%, 350ms, ease-in) as a pair, keeping their gap.
+- The new pair slides in from the right (translate 120% -&gt; 0, 350ms, ease-out) with a 50ms lag behind the exit so they never overlap.
+- Question text and round counter crossfade during the card transit (200ms).
+- The verdict block collapses (height -&gt; 0, fade, 250ms) before the new cards arrive.
+- The round counter ticks its number with a small vertical roll (old digit up, new digit in, 200ms).
+
+## Calibration
+- Exit and entrance share one continuous horizontal flow - like a carousel advancing, not two separate animations.
+- Cards keep their exact size and spacing through the whole move.
+
+## Reduced motion
+Cards crossfade in place (200ms); counter changes without the roll.
+
+## Don&#x27;t miss
+- The pair moves as one unit - no stagger between the two cards.
+- The verdict must fully clear before new cards land, or the layout jumps.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal card-slide between quiz rounds.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spark-correct-card-slide-animation">original interaction</a> by Spark. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Spark's quiz round transition - after a correct answer, tapping \"Next round\" slides the pair of answer cards off to the left while the next question's cards slide in from the right, with the round counter and question text crossfading in sync.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nQuiz screen on cream: \"Round 6 of 7\" eyebrow, question headline (\"Which has more vitamin C?\"), two answer cards side by side (image, name tag, value range), the \"That's right!\" verdict with explainer copy, and a dark \"Next round\" button.\n\n## Motion spec\nPattern: horizontal card-slide between quiz rounds.\n- On Next round: both answer cards slide left and out (translate -120%, 350ms, ease-in) as a pair, keeping their gap.\n- The new pair slides in from the right (translate 120% -> 0, 350ms, ease-out) with a 50ms lag behind the exit so they never overlap.\n- Question text and round counter crossfade during the card transit (200ms).\n- The verdict block collapses (height -> 0, fade, 250ms) before the new cards arrive.\n- The round counter ticks its number with a small vertical roll (old digit up, new digit in, 200ms).\n\n## Calibration\n- Exit and entrance share one continuous horizontal flow - like a carousel advancing, not two separate animations.\n- Cards keep their exact size and spacing through the whole move.\n\n## Reduced motion\nCards crossfade in place (200ms); counter changes without the roll.\n\n## Don't miss\n- The pair moves as one unit - no stagger between the two cards.\n- The verdict must fully clear before new cards land, or the layout jumps."</script>
+</body></html>

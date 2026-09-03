@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[untitled] Phone Number Sign in Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>[untitled] Phone Number Sign in Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/untitled-phone-number-sign-in-interaction"><b>Untitled</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-phone-number-sign-in-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-phone-number-sign-in-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: a sign-in transition where the welcome screen&#x27;s central 3D disc shrinks and travels to a small header slot as the phone-number entry screen slides in underneath - one shared element carries across both screens.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400325af36c63d00336cf/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400325af36c63d00336cf/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-untitled-phone-number-sign-in-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a sign-in transition where the welcome screen&#x27;s central 3D disc shrinks and travels to a small header slot as the phone-number entry screen slides in underneath - one shared element carries across both screens.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Welcome screen: large iridescent CD disc centered in a gray rounded card, tagline &quot;A sacred place for your work-in-progress music&quot;, &quot;Sign in with Apple&quot; (dark) and &quot;Sign in with phone number&quot; buttons. Phone screen: back chevron, small disc at top-center, &quot;Enter your phone number&quot; heading, country-code + number field, &quot;Use recovery email&quot; link, disabled Next button, numeric keypad.
+
+## Motion spec
+Pattern: shared-element shrink-and-travel + screen slide.
+- On load, the hero disc&#x27;s surface swirls from a pink abstract blob into the CD texture (~600ms crossfade with slight rotation).
+- Tap &quot;Sign in with phone number&quot;: the phone-entry screen slides up/in (~300ms, ease-out) while the disc scales ~0.45 and translates to the header slot through the same motion (spring ~300/26, ~350ms) - the disc never cuts, it travels.
+- Welcome copy and buttons fade + drop ~20px as the new screen arrives (200ms).
+- Keypad rises with the screen (same 300ms), no separate animation.
+- Back reverses the whole transition.
+
+## Calibration
+- The disc is one element across both screens; its scale/position interpolate, never reset.
+- The travel arc is vertical (center -&gt; top), no horizontal drift.
+
+## Reduced motion
+Screens crossfade; disc swaps size without travel.
+
+## Don&#x27;t miss
+- The disc keeps spinning/shimmering subtly throughout the transition.
+- The gray card behind the welcome disc does not travel - only the disc does.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element shrink-and-travel + screen slide.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/untitled-phone-number-sign-in-interaction">original interaction</a> by Untitled. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a sign-in transition where the welcome screen's central 3D disc shrinks and travels to a small header slot as the phone-number entry screen slides in underneath - one shared element carries across both screens.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWelcome screen: large iridescent CD disc centered in a gray rounded card, tagline \"A sacred place for your work-in-progress music\", \"Sign in with Apple\" (dark) and \"Sign in with phone number\" buttons. Phone screen: back chevron, small disc at top-center, \"Enter your phone number\" heading, country-code + number field, \"Use recovery email\" link, disabled Next button, numeric keypad.\n\n## Motion spec\nPattern: shared-element shrink-and-travel + screen slide.\n- On load, the hero disc's surface swirls from a pink abstract blob into the CD texture (~600ms crossfade with slight rotation).\n- Tap \"Sign in with phone number\": the phone-entry screen slides up/in (~300ms, ease-out) while the disc scales ~0.45 and translates to the header slot through the same motion (spring ~300/26, ~350ms) - the disc never cuts, it travels.\n- Welcome copy and buttons fade + drop ~20px as the new screen arrives (200ms).\n- Keypad rises with the screen (same 300ms), no separate animation.\n- Back reverses the whole transition.\n\n## Calibration\n- The disc is one element across both screens; its scale/position interpolate, never reset.\n- The travel arc is vertical (center -> top), no horizontal drift.\n\n## Reduced motion\nScreens crossfade; disc swaps size without travel.\n\n## Don't miss\n- The disc keeps spinning/shimmering subtly throughout the transition.\n- The gray card behind the welcome disc does not travel - only the disc does."</script>
+</body></html>

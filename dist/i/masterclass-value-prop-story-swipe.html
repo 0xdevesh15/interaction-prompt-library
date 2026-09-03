@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MasterClass Value Prop Story Swipe - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>MasterClass Value Prop Story Swipe</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/masterclass-value-prop-story-swipe"><b>Masterclass</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/masterclass-value-prop-story-swipe">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/masterclass-value-prop-story-swipe">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: MasterClass onboarding value-prop carousel - horizontal swipes move between story pages (&quot;Learn from the best&quot;, &quot;Download and watch anytime&quot;, &quot;Explore a range of topics&quot;) with parallax photo collages, springy page physics, and crossfading captions.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400345af36c63d0033716/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400345af36c63d0033716/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-masterclass-value-prop-story-swipe.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: MasterClass onboarding value-prop carousel - horizontal swipes move between story pages (&quot;Learn from the best&quot;, &quot;Download and watch anytime&quot;, &quot;Explore a range of topics&quot;) with parallax photo collages, springy page physics, and crossfading captions.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark onboarding screen: a photo collage hero zone (scattered instructor portraits, then a video-still collage, then a topic grid), headline + subcopy below, a red &quot;EXPLORE FOR FREE&quot; button, LOG IN link, and a three-dot page indicator.
+
+## Motion spec
+Pattern: paged horizontal swipe with parallax collage + crossfading text.
+- Swipe: pages track the finger 1:1; release snaps to the nearest page (spring ~280/26, ~350ms).
+- Parallax: the collage tiles move at ~0.5x the page translation, individual tiles offset from each other (~10-20% depth variance), so the collage feels layered during the swipe.
+- Text: outgoing headline/subcopy crossfade and drift ~20px opposite the swipe direction (~250ms) as the incoming copy fades in.
+- Page indicator: active dot stretches/red-tints to the new position with a 150ms ease.
+- Button and LOG IN stay fixed.
+
+## Calibration
+- Collage parallax must keep every tile fully inside the hero zone - no tile clips at rest.
+- Text crossfade overlaps the snap, never after it.
+
+## Reduced motion
+Pages crossfade; no parallax drift.
+
+## Don&#x27;t miss
+- The collage is per-page (portraits vs. video stills vs. topic grid) and changes WITH the swipe, not after.
+- Active page dot is visually distinct (red, wider).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">paged horizontal swipe with parallax collage + crossfading text.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/masterclass-value-prop-story-swipe">original interaction</a> by Masterclass. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: MasterClass onboarding value-prop carousel - horizontal swipes move between story pages (\"Learn from the best\", \"Download and watch anytime\", \"Explore a range of topics\") with parallax photo collages, springy page physics, and crossfading captions.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark onboarding screen: a photo collage hero zone (scattered instructor portraits, then a video-still collage, then a topic grid), headline + subcopy below, a red \"EXPLORE FOR FREE\" button, LOG IN link, and a three-dot page indicator.\n\n## Motion spec\nPattern: paged horizontal swipe with parallax collage + crossfading text.\n- Swipe: pages track the finger 1:1; release snaps to the nearest page (spring ~280/26, ~350ms).\n- Parallax: the collage tiles move at ~0.5x the page translation, individual tiles offset from each other (~10-20% depth variance), so the collage feels layered during the swipe.\n- Text: outgoing headline/subcopy crossfade and drift ~20px opposite the swipe direction (~250ms) as the incoming copy fades in.\n- Page indicator: active dot stretches/red-tints to the new position with a 150ms ease.\n- Button and LOG IN stay fixed.\n\n## Calibration\n- Collage parallax must keep every tile fully inside the hero zone - no tile clips at rest.\n- Text crossfade overlaps the snap, never after it.\n\n## Reduced motion\nPages crossfade; no parallax drift.\n\n## Don't miss\n- The collage is per-page (portraits vs. video stills vs. topic grid) and changes WITH the swipe, not after.\n- Active page dot is visually distinct (red, wider)."</script>
+</body></html>

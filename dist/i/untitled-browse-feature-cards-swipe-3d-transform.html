@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[untitled] Browse Cards 3D Transform - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>[untitled] Browse Cards 3D Transform</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/untitled-browse-feature-cards-swipe-3d-transform"><b>Untitled</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-browse-feature-cards-swipe-3d-transform">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-browse-feature-cards-swipe-3d-transform">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: an onboarding feature carousel where horizontal swipes rotate cards in 3D perspective - the center card faces forward at full scale while neighbors tilt away and shrink, captions crossfade below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f4003239eb587d9eca86c2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f4003239eb587d9eca86c2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-untitled-browse-feature-cards-swipe-3d-transform.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: an onboarding feature carousel where horizontal swipes rotate cards in 3D perspective - the center card faces forward at full scale while neighbors tilt away and shrink, captions crossfade below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Browse our features&quot; onboarding: a horizontal stack of rounded feature cards (screenshot + title) center stage, caption + subcopy beneath (&quot;Organize your music the way you want&quot;, &quot;Share snippets directly to Instagram&quot;, &quot;Update your tracks with new versions&quot;, ...), page dots, and a dark Continue button.
+
+## Motion spec
+Pattern: 3D cover-flow carousel.
+- Drag/swipe: cards translate horizontally tracking the finger 1:1 while each card&#x27;s rotateY interpolates by distance from center (0deg center, ~55deg at one card-width offset) and scale drops to ~0.8; perspective ~1000px.
+- Release: snap to nearest card (spring ~260/26, ~350ms); the incoming card un-rotates to flat and scales to 1 through the same spring.
+- Caption text: outgoing caption fades + slides ~16px along the swipe (~200ms), incoming fades in trailing by ~80ms; page dot advances.
+- Continue button and header stay fixed.
+
+## Calibration
+- Rotation and scale are continuous functions of offset - never stepped - so mid-drag reads as a physical fan of cards.
+- Only two neighbors are visible; further cards cull to avoid depth noise.
+
+## Reduced motion
+Cards slide flat without rotateY; captions crossfade.
+
+## Don&#x27;t miss
+- The center card is always perfectly flat - any residual tilt at rest is a bug.
+- Side cards tilt their inner edge away (rotateY sign follows side).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D cover-flow carousel.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/untitled-browse-feature-cards-swipe-3d-transform">original interaction</a> by Untitled. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: an onboarding feature carousel where horizontal swipes rotate cards in 3D perspective - the center card faces forward at full scale while neighbors tilt away and shrink, captions crossfade below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Browse our features\" onboarding: a horizontal stack of rounded feature cards (screenshot + title) center stage, caption + subcopy beneath (\"Organize your music the way you want\", \"Share snippets directly to Instagram\", \"Update your tracks with new versions\", ...), page dots, and a dark Continue button.\n\n## Motion spec\nPattern: 3D cover-flow carousel.\n- Drag/swipe: cards translate horizontally tracking the finger 1:1 while each card's rotateY interpolates by distance from center (0deg center, ~55deg at one card-width offset) and scale drops to ~0.8; perspective ~1000px.\n- Release: snap to nearest card (spring ~260/26, ~350ms); the incoming card un-rotates to flat and scales to 1 through the same spring.\n- Caption text: outgoing caption fades + slides ~16px along the swipe (~200ms), incoming fades in trailing by ~80ms; page dot advances.\n- Continue button and header stay fixed.\n\n## Calibration\n- Rotation and scale are continuous functions of offset - never stepped - so mid-drag reads as a physical fan of cards.\n- Only two neighbors are visible; further cards cull to avoid depth noise.\n\n## Reduced motion\nCards slide flat without rotateY; captions crossfade.\n\n## Don't miss\n- The center card is always perfectly flat - any residual tilt at rest is a bug.\n- Side cards tilt their inner edge away (rotateY sign follows side)."</script>
+</body></html>

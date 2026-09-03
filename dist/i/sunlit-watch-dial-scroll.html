@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunlit Watch Dial Scroll - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sunlit Watch Dial Scroll</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sunlit-watch-dial-scroll"><b>Sunlit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sunlit-watch-dial-scroll">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sunlit-watch-dial-scroll">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: a watchOS sun-position dial - scrubbing time moves a glowing sun along a spiral arc while the whole face&#x27;s background crossfades from night navy through dawn to bright midday yellow.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f00dcedb3e2329871b2c3c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f00dcedb3e2329871b2c3c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sunlit-watch-dial-scroll.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a watchOS sun-position dial - scrubbing time moves a glowing sun along a spiral arc while the whole face&#x27;s background crossfades from night navy through dawn to bright midday yellow.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Apple Watch face: menu icon top-left, small clock &quot;5:34&quot; top-right, a white pill reading the scrubbed time (&quot;04:08 AM&quot;), a white rounded diamond glyph center, location row &quot;SOUTH ANDAMAN (IST)&quot; bottom. A spiral arc trail sweeps the lower half with a glowing sun orb on it.
+
+## Motion spec
+Pattern: crown/drag time scrub driving color + sun position.
+- Scrub (crown or drag): the time pill updates live; the sun orb travels along its spiral arc proportionally to the hour (low-left at dawn, high arc at noon, back down at dusk).
+- Background: full-bleed color crossfade keyed to the sun&#x27;s height - deep navy at night, pale blue-white at dawn (~06:00), saturated yellow by midday, back to navy by ~18:00; interpolate continuously, no steps.
+- The sun&#x27;s glow halo blooms as it rises (opacity/blur scale with height); at night the orb and trail fade out entirely, leaving navy.
+- White diamond and pill stay fixed; text inverts appropriately (white on navy, dark-navy on yellow).
+
+## Calibration
+- Position AND color are both direct functions of the scrubbed hour - scrubbing backward runs the sunset in reverse.
+- The spiral trail draws progressively behind the sun.
+
+## Reduced motion
+Background steps between 4 keyed colors; sun jumps to position.
+
+## Don&#x27;t miss
+- The pill reads the SCRUBBED time while the small top-right clock stays real.
+- Night state removes the sun entirely - no dim orb left behind.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">crown/drag time scrub driving color + sun position.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sunlit-watch-dial-scroll">original interaction</a> by Sunlit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a watchOS sun-position dial - scrubbing time moves a glowing sun along a spiral arc while the whole face's background crossfades from night navy through dawn to bright midday yellow.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nApple Watch face: menu icon top-left, small clock \"5:34\" top-right, a white pill reading the scrubbed time (\"04:08 AM\"), a white rounded diamond glyph center, location row \"SOUTH ANDAMAN (IST)\" bottom. A spiral arc trail sweeps the lower half with a glowing sun orb on it.\n\n## Motion spec\nPattern: crown/drag time scrub driving color + sun position.\n- Scrub (crown or drag): the time pill updates live; the sun orb travels along its spiral arc proportionally to the hour (low-left at dawn, high arc at noon, back down at dusk).\n- Background: full-bleed color crossfade keyed to the sun's height - deep navy at night, pale blue-white at dawn (~06:00), saturated yellow by midday, back to navy by ~18:00; interpolate continuously, no steps.\n- The sun's glow halo blooms as it rises (opacity/blur scale with height); at night the orb and trail fade out entirely, leaving navy.\n- White diamond and pill stay fixed; text inverts appropriately (white on navy, dark-navy on yellow).\n\n## Calibration\n- Position AND color are both direct functions of the scrubbed hour - scrubbing backward runs the sunset in reverse.\n- The spiral trail draws progressively behind the sun.\n\n## Reduced motion\nBackground steps between 4 keyed colors; sun jumps to position.\n\n## Don't miss\n- The pill reads the SCRUBBED time while the small top-right clock stays real.\n- Night state removes the sun entirely - no dim orb left behind."</script>
+</body></html>

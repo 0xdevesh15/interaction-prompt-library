@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[untitled] Cancel Recording Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>[untitled] Cancel Recording Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/untitled-cancel-recording-interaction"><b>Untitled</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-cancel-recording-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-cancel-recording-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: on the recording review screen, tapping Cancel morphs the small Cancel action into a full-width red &quot;Cancel Recording&quot; confirmation bar while Save and Retry slide away - a destructive-action confirmation built from the button itself.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f40032228eb02365479ebf/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f40032228eb02365479ebf/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-untitled-cancel-recording-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: on the recording review screen, tapping Cancel morphs the small Cancel action into a full-width red &quot;Cancel Recording&quot; confirmation bar while Save and Retry slide away - a destructive-action confirmation built from the button itself.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;New Recording&quot; review screen: trim readout and pink waveform center, bottom action row with three small pills - Cancel (red text), Save (dark filled), Retry (gray). After confirmation: back on the library screen with the pink artwork card and an Add button.
+
+## Motion spec
+Pattern: button morph to full-width confirmation.
+- Tap Cancel: the Cancel pill expands horizontally to full width and fills red, its label swapping to &quot;Cancel Recording&quot; with a trash icon (~250ms, ease-out); simultaneously Save and Retry slide outward (Save up, Retry down ~24px) and fade (~200ms).
+- Title/copy above fades to a confirmation prompt (~150ms).
+- Tapping the red bar commits: the whole review screen dismisses downward (~300ms, ease-in) and the library screen settles in.
+- Tapping outside reverses the morph to the three-pill row.
+
+## Calibration
+- The confirmation bar must visibly grow from the Cancel pill&#x27;s original slot - no teleport.
+- Destructive styling (solid red) appears only in the expanded state; the small pill stays text-only.
+
+## Reduced motion
+Pill crossfades to the red bar in place (150ms).
+
+## Don&#x27;t miss
+- Save and Retry leave in different directions so the row feels like it splits apart.
+- The commit dismiss is a downward sheet drop, not a fade.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">button morph to full-width confirmation.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/untitled-cancel-recording-interaction">original interaction</a> by Untitled. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: on the recording review screen, tapping Cancel morphs the small Cancel action into a full-width red \"Cancel Recording\" confirmation bar while Save and Retry slide away - a destructive-action confirmation built from the button itself.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"New Recording\" review screen: trim readout and pink waveform center, bottom action row with three small pills - Cancel (red text), Save (dark filled), Retry (gray). After confirmation: back on the library screen with the pink artwork card and an Add button.\n\n## Motion spec\nPattern: button morph to full-width confirmation.\n- Tap Cancel: the Cancel pill expands horizontally to full width and fills red, its label swapping to \"Cancel Recording\" with a trash icon (~250ms, ease-out); simultaneously Save and Retry slide outward (Save up, Retry down ~24px) and fade (~200ms).\n- Title/copy above fades to a confirmation prompt (~150ms).\n- Tapping the red bar commits: the whole review screen dismisses downward (~300ms, ease-in) and the library screen settles in.\n- Tapping outside reverses the morph to the three-pill row.\n\n## Calibration\n- The confirmation bar must visibly grow from the Cancel pill's original slot - no teleport.\n- Destructive styling (solid red) appears only in the expanded state; the small pill stays text-only.\n\n## Reduced motion\nPill crossfades to the red bar in place (150ms).\n\n## Don't miss\n- Save and Retry leave in different directions so the row feels like it splits apart.\n- The commit dismiss is a downward sheet drop, not a fade."</script>
+</body></html>

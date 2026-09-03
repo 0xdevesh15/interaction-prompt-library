@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slack Pull Down Funny Quotes Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Slack Pull Down Funny Quotes Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/slack-pull-down-funny-quotes-interaction"><b>Slack</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/slack-pull-down-funny-quotes-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/slack-pull-down-funny-quotes-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Slack mobile&#x27;s pull-down easter egg - dragging down on the home screen&#x27;s dark header reveals a randomized playful quote in the space above the workspace content, then snaps back on release.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6703704ab875f411d7391127/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6703704ab875f411d7391127/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-slack-pull-down-funny-quotes-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Slack mobile&#x27;s pull-down easter egg - dragging down on the home screen&#x27;s dark header reveals a randomized playful quote in the space above the workspace content, then snaps back on release.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Slack home: dark purple header with workspace name (&quot;60FPS&quot;), search bar, and shortcut row (Huddles, Later, Drafts &amp; Sent), white channel list below. Pulling down stretches the header region, revealing a centered one-line quote with an emoji (e.g. &quot;Here, take this: apple&quot;, &quot;You look nice today&quot;, &quot;Drink some water&quot;).
+
+## Motion spec
+Pattern: gesture-driven reveal with rubber-band and snap-back.
+- Drag: header height tracks the finger 1:1 up to ~120px, then rubber-bands (0.5x beyond); the quote fades in proportionally with pull distance (fully opaque at ~80px).
+- Quote is picked randomly from a pool on each pull.
+- Release: header springs back to rest height (spring ~260/26, ~300ms), quote fades out in the last 100ms.
+- Channel list rides the header edge down and back; no independent motion.
+
+## Calibration
+- The quote must be legible before snap-back: require the pull past ~80px, otherwise collapse immediately.
+- Rubber-band curve keeps the drag feeling elastic, never sticky.
+
+## Reduced motion
+No rubber-band; header extends linearly and returns without overshoot.
+
+## Don&#x27;t miss
+- A fresh random quote on every pull, including repeats in one session.
+- Status bar area stays the header&#x27;s dark purple throughout - the pull grows the colored region, not a white gap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gesture-driven reveal with rubber-band and snap-back.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/slack-pull-down-funny-quotes-interaction">original interaction</a> by Slack. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Slack mobile's pull-down easter egg - dragging down on the home screen's dark header reveals a randomized playful quote in the space above the workspace content, then snaps back on release.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSlack home: dark purple header with workspace name (\"60FPS\"), search bar, and shortcut row (Huddles, Later, Drafts & Sent), white channel list below. Pulling down stretches the header region, revealing a centered one-line quote with an emoji (e.g. \"Here, take this: apple\", \"You look nice today\", \"Drink some water\").\n\n## Motion spec\nPattern: gesture-driven reveal with rubber-band and snap-back.\n- Drag: header height tracks the finger 1:1 up to ~120px, then rubber-bands (0.5x beyond); the quote fades in proportionally with pull distance (fully opaque at ~80px).\n- Quote is picked randomly from a pool on each pull.\n- Release: header springs back to rest height (spring ~260/26, ~300ms), quote fades out in the last 100ms.\n- Channel list rides the header edge down and back; no independent motion.\n\n## Calibration\n- The quote must be legible before snap-back: require the pull past ~80px, otherwise collapse immediately.\n- Rubber-band curve keeps the drag feeling elastic, never sticky.\n\n## Reduced motion\nNo rubber-band; header extends linearly and returns without overshoot.\n\n## Don't miss\n- A fresh random quote on every pull, including repeats in one session.\n- Status bar area stays the header's dark purple throughout - the pull grows the colored region, not a white gap."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Good Air Time Slider Dynamic Weather Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Good Air Time Slider Dynamic Weather Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/good-air-time-slider-dynamic-weather-interaction"><b>Good</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/good-air-time-slider-dynamic-weather-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/good-air-time-slider-dynamic-weather-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Good Air&#x27;s time scrubber - dragging the hourly timeline strip scrubs the whole sky between day and night, crossfading sun and moon, shifting the background lighting, and counting the temperature and condition label to match each hour.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a362212ba0085952b3e9130/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a362212ba0085952b3e9130/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-good-air-time-slider-dynamic-weather-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Good Air&#x27;s time scrubber - dragging the hourly timeline strip scrubs the whole sky between day and night, crossfading sun and moon, shifting the background lighting, and counting the temperature and condition label to match each hour.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Weather home: fullscreen sky photo/gradient (day blue with sun, night near-black with moon), condition label top-left (&quot;Mostly Cloudy&quot;), huge temperature mid-left, and a bottom hourly timeline strip with tick marks, a &quot;Now&quot; pill, and hour labels. Bottom tab bar stays fixed.
+
+## Motion spec
+Pattern: time scrubber driving a continuous day-night scene transition.
+- The timeline tracks the finger 1:1 horizontally; the selected hour snaps to ticks on release (spring ~320/26, 250ms).
+- Sky lighting interpolates continuously with scrub position: sun arcs down as the moon rises (both on an arc path, opacity crossfade around dusk/dawn), background hue shifts blue -&gt; indigo -&gt; black and back.
+- Temperature counts between hourly values (whole-degree steps, ~80ms per step) while the condition label crossfades when its value changes (150ms).
+- The selected hour pill (&quot;9 PM&quot;, &quot;1 AM&quot;) highlights filled; &quot;Now&quot; pill is the default anchor the strip returns to on double-tap.
+
+## Calibration
+- The transition is seamless - no cuts; every pixel of the sky is a function of scrub position.
+- Temperature lags the finger slightly (~100ms) so numbers roll rather than snap.
+
+## Reduced motion
+Sky crossfades between day/night presets (300ms) instead of continuous interpolation; temperature jumps to final value.
+
+## Don&#x27;t miss
+- Sun and moon share one arc path in the same sky region.
+- The condition label sits over the sky and stays readable in both day and night palettes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">time scrubber driving a continuous day-night scene transition.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/good-air-time-slider-dynamic-weather-interaction">original interaction</a> by Good. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Good Air's time scrubber - dragging the hourly timeline strip scrubs the whole sky between day and night, crossfading sun and moon, shifting the background lighting, and counting the temperature and condition label to match each hour.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWeather home: fullscreen sky photo/gradient (day blue with sun, night near-black with moon), condition label top-left (\"Mostly Cloudy\"), huge temperature mid-left, and a bottom hourly timeline strip with tick marks, a \"Now\" pill, and hour labels. Bottom tab bar stays fixed.\n\n## Motion spec\nPattern: time scrubber driving a continuous day-night scene transition.\n- The timeline tracks the finger 1:1 horizontally; the selected hour snaps to ticks on release (spring ~320/26, 250ms).\n- Sky lighting interpolates continuously with scrub position: sun arcs down as the moon rises (both on an arc path, opacity crossfade around dusk/dawn), background hue shifts blue -> indigo -> black and back.\n- Temperature counts between hourly values (whole-degree steps, ~80ms per step) while the condition label crossfades when its value changes (150ms).\n- The selected hour pill (\"9 PM\", \"1 AM\") highlights filled; \"Now\" pill is the default anchor the strip returns to on double-tap.\n\n## Calibration\n- The transition is seamless - no cuts; every pixel of the sky is a function of scrub position.\n- Temperature lags the finger slightly (~100ms) so numbers roll rather than snap.\n\n## Reduced motion\nSky crossfades between day/night presets (300ms) instead of continuous interpolation; temperature jumps to final value.\n\n## Don't miss\n- Sun and moon share one arc path in the same sky region.\n- The condition label sits over the sky and stays readable in both day and night palettes."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Outlook Fab Button Expand - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Outlook Fab Button Expand</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/outlook-fab-button-expand"><b>Outlook</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/outlook-fab-button-expand">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/outlook-fab-button-expand">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Outlook mobile&#x27;s FAB expansion - tapping the red &quot;New Mail&quot; floating button blurs the inbox behind it and expands the button upward into a quick-actions stack (Teams Call, New Event, New Message) with staggered entrances.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f41e6df51ad802a629502c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f41e6df51ad802a629502c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-outlook-fab-button-expand.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Outlook mobile&#x27;s FAB expansion - tapping the red &quot;New Mail&quot; floating button blurs the inbox behind it and expands the button upward into a quick-actions stack (Teams Call, New Event, New Message) with staggered entrances.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Inbox empty state (&quot;Nothing Left to Read&quot; illustration) with tab bar and a red FAB reading &quot;New Mail&quot; with a compose icon, bottom-right. Expanded state: vertical stack of three labeled action rows (Teams Call, New Event, New Message), each label left of a small circular icon button, the FAB transformed into the bottom &quot;New Message&quot; row.
+
+## Motion spec
+Pattern: FAB-to-menu morph with backdrop blur + stagger.
+- Backdrop: content blurs (0 -&gt; ~12px) and dims slightly (150ms).
+- FAB: the pill collapses its label and becomes the bottom circular action (150ms) as two more circular actions rise above it (translateY + fade, spring ~350/24, ~250ms).
+- Rows stagger: bottom action first, then 60ms between the ones above; labels fade in 80ms after their circle.
+- Close (tap backdrop or FAB): rows sink and fade in reverse order (~200ms), blur lifts.
+
+## Calibration
+- The original FAB must be visibly the same element as the bottom action - it never disappears.
+- Stagger is bottom-up; labels trail their icons.
+
+## Reduced motion
+Menu fades in as a unit (150ms); no blur animation.
+
+## Don&#x27;t miss
+- Icons stay right-aligned on a consistent vertical axis; labels sit to their left.
+- Backdrop tap dismisses - the blur region is the dismiss target.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">FAB-to-menu morph with backdrop blur + stagger.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/outlook-fab-button-expand">original interaction</a> by Outlook. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Outlook mobile's FAB expansion - tapping the red \"New Mail\" floating button blurs the inbox behind it and expands the button upward into a quick-actions stack (Teams Call, New Event, New Message) with staggered entrances.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nInbox empty state (\"Nothing Left to Read\" illustration) with tab bar and a red FAB reading \"New Mail\" with a compose icon, bottom-right. Expanded state: vertical stack of three labeled action rows (Teams Call, New Event, New Message), each label left of a small circular icon button, the FAB transformed into the bottom \"New Message\" row.\n\n## Motion spec\nPattern: FAB-to-menu morph with backdrop blur + stagger.\n- Backdrop: content blurs (0 -> ~12px) and dims slightly (150ms).\n- FAB: the pill collapses its label and becomes the bottom circular action (150ms) as two more circular actions rise above it (translateY + fade, spring ~350/24, ~250ms).\n- Rows stagger: bottom action first, then 60ms between the ones above; labels fade in 80ms after their circle.\n- Close (tap backdrop or FAB): rows sink and fade in reverse order (~200ms), blur lifts.\n\n## Calibration\n- The original FAB must be visibly the same element as the bottom action - it never disappears.\n- Stagger is bottom-up; labels trail their icons.\n\n## Reduced motion\nMenu fades in as a unit (150ms); no blur animation.\n\n## Don't miss\n- Icons stay right-aligned on a consistent vertical axis; labels sit to their left.\n- Backdrop tap dismisses - the blur region is the dismiss target."</script>
+</body></html>

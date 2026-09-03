@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Picky 3D Button Spin Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Picky 3D Button Spin Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/picky-3d-button-spin-interaction"><b>Picky</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/picky-3d-button-spin-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/picky-3d-button-spin-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Picky&#x27;s center tab button - tapping the metallic globe button in the middle of the tab bar spins it in 3D like a coin, flipping between its globe face and edge profile while the destination label highlights.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8d1fab73ee3afb2a188be/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8d1fab73ee3afb2a188be/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-picky-3d-button-spin-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Picky&#x27;s center tab button - tapping the metallic globe button in the middle of the tab bar spins it in 3D like a coin, flipping between its globe face and edge profile while the destination label highlights.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light, airy screen with a cloudy backdrop, &quot;picky&quot; wordmark top-left, a dark chip pill top-center (&quot;Checking the...&quot;), and a three-item tab bar at the bottom: My Picky, a raised center button (metallic globe, labeled New York), and a paper-plane icon.
+
+## Motion spec
+Pattern: 3D coin-spin on tab selection.
+- On tap, the center button spins around its vertical axis (rotateY 0 -&gt; 360deg, 600ms, ease-out) with true 3D depth - the globe thins to an edge and back, catching a highlight sweep mid-spin.
+- The button lifts slightly during the spin (translate -6px, shadow deepens) and settles back.
+- A small bounce ends the spin (scale 1 -&gt; 1.06 -&gt; 1, spring ~340/20, 200ms).
+- The tab label under the button crossfades to the selected destination (200ms) as the spin starts.
+- Repeating taps retrigger the spin from the current angle; spins queue, never cut.
+
+## Calibration
+- The metallic shading is the payoff: a light sweep must travel across the face as it turns.
+- The rest of the tab bar stays perfectly still - all playfulness is in the center button.
+
+## Reduced motion
+Button crossfades between faces (200ms) with no rotation or lift.
+
+## Don&#x27;t miss
+- The button is a raised floating element, not flush with the tab bar.
+- The globe is the resting face; the spin always completes a full turn back to it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D coin-spin on tab selection.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/picky-3d-button-spin-interaction">original interaction</a> by Picky. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Picky's center tab button - tapping the metallic globe button in the middle of the tab bar spins it in 3D like a coin, flipping between its globe face and edge profile while the destination label highlights.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight, airy screen with a cloudy backdrop, \"picky\" wordmark top-left, a dark chip pill top-center (\"Checking the...\"), and a three-item tab bar at the bottom: My Picky, a raised center button (metallic globe, labeled New York), and a paper-plane icon.\n\n## Motion spec\nPattern: 3D coin-spin on tab selection.\n- On tap, the center button spins around its vertical axis (rotateY 0 -> 360deg, 600ms, ease-out) with true 3D depth - the globe thins to an edge and back, catching a highlight sweep mid-spin.\n- The button lifts slightly during the spin (translate -6px, shadow deepens) and settles back.\n- A small bounce ends the spin (scale 1 -> 1.06 -> 1, spring ~340/20, 200ms).\n- The tab label under the button crossfades to the selected destination (200ms) as the spin starts.\n- Repeating taps retrigger the spin from the current angle; spins queue, never cut.\n\n## Calibration\n- The metallic shading is the payoff: a light sweep must travel across the face as it turns.\n- The rest of the tab bar stays perfectly still - all playfulness is in the center button.\n\n## Reduced motion\nButton crossfades between faces (200ms) with no rotation or lift.\n\n## Don't miss\n- The button is a raised floating element, not flush with the tab bar.\n- The globe is the resting face; the spin always completes a full turn back to it."</script>
+</body></html>

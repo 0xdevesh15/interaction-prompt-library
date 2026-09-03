@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MD Calculator Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>MD Calculator Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/md-calculator-splash"><b>MD</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/md-calculator-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/md-calculator-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: MD Calculator&#x27;s splash - bold 3D isometric operator keys (divide, plus, minus, equals, multiply) drift and tilt gently on a cream backdrop above &quot;Welcome to MD Calculator&quot; and a Continue button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66eac3e2fbe1f26433c583aa/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66eac3e2fbe1f26433c583aa/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-md-calculator-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: MD Calculator&#x27;s splash - bold 3D isometric operator keys (divide, plus, minus, equals, multiply) drift and tilt gently on a cream backdrop above &quot;Welcome to MD Calculator&quot; and a Continue button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream screen: a cluster of five oversized calculator keys rendered as chunky 3D blocks (colored faces - blue, peach, red, cream, white - with darker side faces) floating in a loose isometric arrangement. Below: &quot;Welcome to MD Calculator&quot; (MD Calculator in red) and a dark Continue button.
+
+## Motion spec
+Pattern: idle floating 3D key cluster.
+- Each key bobs on its own slow sine loop (translateY ±8px, 3-4.5s, phase-offset per key).
+- Keys rock gently around their isometric axis (rotate ±3deg, same loops) so side faces catch light differently.
+- One key does a periodic &quot;press&quot;: dips down 6px and back (400ms, ease-out) every ~3s, like someone tapped it.
+- Text and button static; Continue pulses its fill subtly (opacity 1 -&gt; 0.9, 2s loop).
+
+## Calibration
+- The drift must be independent per key - no synchronized bobbing.
+- Shadows under each key move with the key, not with the background.
+
+## Reduced motion
+Static key cluster; press animation removed.
+
+## Don&#x27;t miss
+- The keys are operator symbols only (÷, +, −, =, ×) - no digits.
+- Isometric perspective stays fixed; keys tilt on their own axes, the camera never moves.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">idle floating 3D key cluster.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/md-calculator-splash">original interaction</a> by MD. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: MD Calculator's splash - bold 3D isometric operator keys (divide, plus, minus, equals, multiply) drift and tilt gently on a cream backdrop above \"Welcome to MD Calculator\" and a Continue button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream screen: a cluster of five oversized calculator keys rendered as chunky 3D blocks (colored faces - blue, peach, red, cream, white - with darker side faces) floating in a loose isometric arrangement. Below: \"Welcome to MD Calculator\" (MD Calculator in red) and a dark Continue button.\n\n## Motion spec\nPattern: idle floating 3D key cluster.\n- Each key bobs on its own slow sine loop (translateY \u00b18px, 3-4.5s, phase-offset per key).\n- Keys rock gently around their isometric axis (rotate \u00b13deg, same loops) so side faces catch light differently.\n- One key does a periodic \"press\": dips down 6px and back (400ms, ease-out) every ~3s, like someone tapped it.\n- Text and button static; Continue pulses its fill subtly (opacity 1 -> 0.9, 2s loop).\n\n## Calibration\n- The drift must be independent per key - no synchronized bobbing.\n- Shadows under each key move with the key, not with the background.\n\n## Reduced motion\nStatic key cluster; press animation removed.\n\n## Don't miss\n- The keys are operator symbols only (\u00f7, +, \u2212, =, \u00d7) - no digits.\n- Isometric perspective stays fixed; keys tilt on their own axes, the camera never moves."</script>
+</body></html>

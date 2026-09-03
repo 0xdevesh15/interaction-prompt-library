@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnBar Progress and Confetti Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BurnBar Progress and Confetti Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/burnbar-progress-and-confetti-animation"><b>Burnbar</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/burnbar-progress-and-confetti-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/burnbar-progress-and-confetti-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BurnBar&#x27;s tab opening - a loading bar with a flame tip fills across a blue screen under &quot;Opening your tab...&quot;, then the dashboard pops in with a confetti burst around the glass as the big counter ticks up to the day&#x27;s total.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff3c3d879bf57303c85/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff3c3d879bf57303c85/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-burnbar-progress-and-confetti-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BurnBar&#x27;s tab opening - a loading bar with a flame tip fills across a blue screen under &quot;Opening your tab...&quot;, then the dashboard pops in with a confetti burst around the glass as the big counter ticks up to the day&#x27;s total.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Two states on electric blue. Loading: &quot;Opening your tab...&quot; headline top-left, a thin track with an orange fill bar and a flame riding its tip. Dashboard: streak pill, giant counter with drink name, progress bar, hero glass with confetti around it, and the bottom drink row.
+
+## Motion spec
+Pattern: loading bar resolves into a celebration reveal.
+- The bar fills left to right over ~1.5s with a slight ease; the flame at its tip flickers (scale +/- 8%, rotate +/- 5 degrees at 10Hz).
+- On completion the bar flashes full-white for one frame and dissolves.
+- Dashboard elements spring in from 24px below (spring ~280/16): counter first, then glass, then bottom row, 90ms stagger.
+- The glass lands with a confetti burst - 20-30 small rectangles in orange, white, and dark blue, ejected radially from behind the glass (gravity pulls them down, they fade over 900ms).
+- The counter ticks up from 0 to the final value (odometer roll, ~600ms, easing out).
+
+## Calibration
+- Confetti is paper-like: flat rectangles that rotate as they fall, not circles.
+- The loading flame is small and cheeky - it should feel like the bar is being burned through.
+
+## Reduced motion
+Loading bar fills without flicker; dashboard fades in (250ms) without confetti; counter shows the final value directly.
+
+## Don&#x27;t miss
+- Confetti bursts once, at the glass landing - it is not a loop.
+- The transition from bar to dashboard is a hard cut with a spring entrance, not a crossfade.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">loading bar resolves into a celebration reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/burnbar-progress-and-confetti-animation">original interaction</a> by Burnbar. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BurnBar's tab opening - a loading bar with a flame tip fills across a blue screen under \"Opening your tab...\", then the dashboard pops in with a confetti burst around the glass as the big counter ticks up to the day's total.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTwo states on electric blue. Loading: \"Opening your tab...\" headline top-left, a thin track with an orange fill bar and a flame riding its tip. Dashboard: streak pill, giant counter with drink name, progress bar, hero glass with confetti around it, and the bottom drink row.\n\n## Motion spec\nPattern: loading bar resolves into a celebration reveal.\n- The bar fills left to right over ~1.5s with a slight ease; the flame at its tip flickers (scale +/- 8%, rotate +/- 5 degrees at 10Hz).\n- On completion the bar flashes full-white for one frame and dissolves.\n- Dashboard elements spring in from 24px below (spring ~280/16): counter first, then glass, then bottom row, 90ms stagger.\n- The glass lands with a confetti burst - 20-30 small rectangles in orange, white, and dark blue, ejected radially from behind the glass (gravity pulls them down, they fade over 900ms).\n- The counter ticks up from 0 to the final value (odometer roll, ~600ms, easing out).\n\n## Calibration\n- Confetti is paper-like: flat rectangles that rotate as they fall, not circles.\n- The loading flame is small and cheeky - it should feel like the bar is being burned through.\n\n## Reduced motion\nLoading bar fills without flicker; dashboard fades in (250ms) without confetti; counter shows the final value directly.\n\n## Don't miss\n- Confetti bursts once, at the glass landing - it is not a loop.\n- The transition from bar to dashboard is a hard cut with a spring entrance, not a crossfade."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Train Workout Recovery Graph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Train Workout Recovery Graph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/train-workout-recovery-graph"><b>Train</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/train-workout-recovery-graph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/train-workout-recovery-graph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Train&#x27;s muscle recovery carousel - swiping horizontally pages through muscle groups, each rendering a large circular recovery ring that draws to its percentage with a color-coded arc (green recovered to red fatigued) while the screen&#x27;s background tint shifts to match.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f796024cca5b67b633f0a8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f796024cca5b67b633f0a8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-train-workout-recovery-graph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Train&#x27;s muscle recovery carousel - swiping horizontally pages through muscle groups, each rendering a large circular recovery ring that draws to its percentage with a color-coded arc (green recovered to red fatigued) while the screen&#x27;s background tint shifts to match.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Workout&quot; screen: large ring gauge center-upper area showing muscle name (&quot;Shoulders&quot;), big percentage (&quot;78%&quot;), &quot;days to recovery&quot; line and &quot;Last hit today&quot; beneath; page dots below the ring; fixed bottom buttons &quot;Freeform&quot; and &quot;+ Generate&quot;. Pages shown: Triceps 100% (green), Shoulders 78% (green), Traps 62% (orange), Biceps 21% (red), Lats 8% (red).
+
+## Motion spec
+Pattern: swipe carousel with drawing ring + ambient color sync.
+- Swipe: page tracks finger 1:1; release snaps to nearest muscle page (spring ~280/26, ~300ms).
+- On each page settle: the ring&#x27;s arc redraws from 0 to its value (clockwise from top, ~500ms, ease-out), the % counter ticks up with it.
+- Arc color interpolates with value (red &lt; 40% &lt; orange &lt; 80% &lt;= green); background gradient tint crossfades to the same hue family (~400ms) as the page settles.
+- Page dots update with drag progress, active dot emphasized.
+
+## Calibration
+- Ring redraw happens on every page arrival, even re-visits.
+- Background tint is a soft wash (10-15% saturation) of the arc color - never full-strength.
+
+## Reduced motion
+Ring fills without the draw animation; background tint swaps instantly.
+
+## Don&#x27;t miss
+- The arc always draws from the 12 o&#x27;clock position.
+- Muscle name, % and recovery line swap as a block per page - they do not animate independently.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe carousel with drawing ring + ambient color sync.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/train-workout-recovery-graph">original interaction</a> by Train. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Train's muscle recovery carousel - swiping horizontally pages through muscle groups, each rendering a large circular recovery ring that draws to its percentage with a color-coded arc (green recovered to red fatigued) while the screen's background tint shifts to match.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Workout\" screen: large ring gauge center-upper area showing muscle name (\"Shoulders\"), big percentage (\"78%\"), \"days to recovery\" line and \"Last hit today\" beneath; page dots below the ring; fixed bottom buttons \"Freeform\" and \"+ Generate\". Pages shown: Triceps 100% (green), Shoulders 78% (green), Traps 62% (orange), Biceps 21% (red), Lats 8% (red).\n\n## Motion spec\nPattern: swipe carousel with drawing ring + ambient color sync.\n- Swipe: page tracks finger 1:1; release snaps to nearest muscle page (spring ~280/26, ~300ms).\n- On each page settle: the ring's arc redraws from 0 to its value (clockwise from top, ~500ms, ease-out), the % counter ticks up with it.\n- Arc color interpolates with value (red < 40% < orange < 80% <= green); background gradient tint crossfades to the same hue family (~400ms) as the page settles.\n- Page dots update with drag progress, active dot emphasized.\n\n## Calibration\n- Ring redraw happens on every page arrival, even re-visits.\n- Background tint is a soft wash (10-15% saturation) of the arc color - never full-strength.\n\n## Reduced motion\nRing fills without the draw animation; background tint swaps instantly.\n\n## Don't miss\n- The arc always draws from the 12 o'clock position.\n- Muscle name, % and recovery line swap as a block per page - they do not animate independently."</script>
+</body></html>

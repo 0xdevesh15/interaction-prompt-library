@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[untitled] Disk Picker Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>[untitled] Disk Picker Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/untitled-disk-picker-interaction"><b>Untitled</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-disk-picker-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-disk-picker-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: a &quot;Choose a disc&quot; onboarding picker - tapping one of five colorful CD discs springs it into the large preview slot at top with a scale-up and spin, the previous preview bouncing back to the grid.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400325af36c63d00336d1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f400325af36c63d00336d1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-untitled-disk-picker-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: a &quot;Choose a disc&quot; onboarding picker - tapping one of five colorful CD discs springs it into the large preview slot at top with a scale-up and spin, the previous preview bouncing back to the grid.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Welcome to [untitled] - Choose a disc&quot; screen: a large rounded-square preview slot up top holding one shiny CD, a grid of five small discs beneath (blue, green, purple/red, multicolor variants), &quot;Already have an account?&quot; link, dark Next button. Next leads to a &quot;Choose a username&quot; screen with keyboard.
+
+## Motion spec
+Pattern: tap-to-select with shared-element disc swap.
+- Tap a grid disc: it springs from its grid cell into the preview slot, scaling ~2.2x with a slight rotation (~180deg over ~350ms, spring ~300/20) while the previous preview disc shrinks and spins back into the vacated grid cell (same spring, mirrored).
+- Selected grid cell shows a subtle ring; the incoming disc settles with one overshoot bounce (scale ~1.08 -&gt; 1).
+- Grid discs jiggle ~2deg on tap of any disc, keeping the picker feeling alive.
+- Preview slot background (rounded gray card) stays static - only the disc swaps.
+
+## Calibration
+- The swap is simultaneous and mirrored: no frame where the preview slot is empty.
+- Rotation is integral to the travel - a straight translate reads flat.
+
+## Reduced motion
+Discs crossfade between grid and preview without travel or spin.
+
+## Don&#x27;t miss
+- The disc that returns to the grid lands in the exact cell the new pick left.
+- The five grid discs keep their order across swaps; only positions exchanged.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-to-select with shared-element disc swap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/untitled-disk-picker-interaction">original interaction</a> by Untitled. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: a \"Choose a disc\" onboarding picker - tapping one of five colorful CD discs springs it into the large preview slot at top with a scale-up and spin, the previous preview bouncing back to the grid.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Welcome to [untitled] - Choose a disc\" screen: a large rounded-square preview slot up top holding one shiny CD, a grid of five small discs beneath (blue, green, purple/red, multicolor variants), \"Already have an account?\" link, dark Next button. Next leads to a \"Choose a username\" screen with keyboard.\n\n## Motion spec\nPattern: tap-to-select with shared-element disc swap.\n- Tap a grid disc: it springs from its grid cell into the preview slot, scaling ~2.2x with a slight rotation (~180deg over ~350ms, spring ~300/20) while the previous preview disc shrinks and spins back into the vacated grid cell (same spring, mirrored).\n- Selected grid cell shows a subtle ring; the incoming disc settles with one overshoot bounce (scale ~1.08 -> 1).\n- Grid discs jiggle ~2deg on tap of any disc, keeping the picker feeling alive.\n- Preview slot background (rounded gray card) stays static - only the disc swaps.\n\n## Calibration\n- The swap is simultaneous and mirrored: no frame where the preview slot is empty.\n- Rotation is integral to the travel - a straight translate reads flat.\n\n## Reduced motion\nDiscs crossfade between grid and preview without travel or spin.\n\n## Don't miss\n- The disc that returns to the grid lands in the exact cell the new pick left.\n- The five grid discs keep their order across swaps; only positions exchanged."</script>
+</body></html>

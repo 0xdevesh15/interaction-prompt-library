@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChatGPT Intelligence Picker Long Press Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ChatGPT Intelligence Picker Long Press Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/chatgpt-intelligence-picker-long-press-slider-interaction"><b>Chatgpt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/chatgpt-intelligence-picker-long-press-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/chatgpt-intelligence-picker-long-press-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: ChatGPT&#x27;s intelligence picker - long-pressing the composer blurs the chat into a full-screen picker where a vertical list (Extended, Thinking, Instant) rides a dot-track slider that follows your drag with elastic snapping.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a265e92bc82cd6f1ac425f1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a265e92bc82cd6f1ac425f1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-chatgpt-intelligence-picker-long-press-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: ChatGPT&#x27;s intelligence picker - long-pressing the composer blurs the chat into a full-screen picker where a vertical list (Extended, Thinking, Instant) rides a dot-track slider that follows your drag with elastic snapping.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Chat screen with keyboard up. On long-press the whole UI blurs and dims, the keyboard sinks away, and the picker fades in: &quot;Intelligence&quot; eyebrow top-center, a vertical list of option labels center-right, and a vertical track of small dots aligned to them with a larger indicator dot marking the selection.
+
+## Motion spec
+Pattern: long-press overlay with drag-to-snap vertical option slider.
+- Entrance: backdrop blur ramps 0 -&gt; 24px over 250ms; list items fade in from 8px below with 50ms stagger; keyboard dismisses in the same beat.
+- The indicator dot tracks the finger while dragging (no lag), stretching into a small capsule in the drag direction (scaleY 1.4 while moving).
+- Option labels react to proximity: the nearest label brightens to full white and bumps to its active size (scale 1.0 -&gt; 1.15); others stay dim grey.
+- On release, the dot snaps to the nearest slot (spring ~300/18, one soft overshoot) and the label locks to its active state.
+- Tap outside or the selection itself dismisses: blur ramps out, chat returns (200ms).
+
+## Calibration
+- The drag must feel fluid - the dot follows the finger 1:1, the snap only happens on release.
+- Labels morph weight/size smoothly; there is no hard swap between dim and active.
+
+## Reduced motion
+No blur ramp; the picker crossfades in (200ms) and the dot snaps without stretch.
+
+## Don&#x27;t miss
+- The dot&#x27;s elastic squash while dragging is the tactile signature.
+- Option order stays fixed; only the indicator and label emphasis move.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">long-press overlay with drag-to-snap vertical option slider.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/chatgpt-intelligence-picker-long-press-slider-interaction">original interaction</a> by Chatgpt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: ChatGPT's intelligence picker - long-pressing the composer blurs the chat into a full-screen picker where a vertical list (Extended, Thinking, Instant) rides a dot-track slider that follows your drag with elastic snapping.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nChat screen with keyboard up. On long-press the whole UI blurs and dims, the keyboard sinks away, and the picker fades in: \"Intelligence\" eyebrow top-center, a vertical list of option labels center-right, and a vertical track of small dots aligned to them with a larger indicator dot marking the selection.\n\n## Motion spec\nPattern: long-press overlay with drag-to-snap vertical option slider.\n- Entrance: backdrop blur ramps 0 -> 24px over 250ms; list items fade in from 8px below with 50ms stagger; keyboard dismisses in the same beat.\n- The indicator dot tracks the finger while dragging (no lag), stretching into a small capsule in the drag direction (scaleY 1.4 while moving).\n- Option labels react to proximity: the nearest label brightens to full white and bumps to its active size (scale 1.0 -> 1.15); others stay dim grey.\n- On release, the dot snaps to the nearest slot (spring ~300/18, one soft overshoot) and the label locks to its active state.\n- Tap outside or the selection itself dismisses: blur ramps out, chat returns (200ms).\n\n## Calibration\n- The drag must feel fluid - the dot follows the finger 1:1, the snap only happens on release.\n- Labels morph weight/size smoothly; there is no hard swap between dim and active.\n\n## Reduced motion\nNo blur ramp; the picker crossfades in (200ms) and the dot snaps without stretch.\n\n## Don't miss\n- The dot's elastic squash while dragging is the tactile signature.\n- Option order stays fixed; only the indicator and label emphasis move."</script>
+</body></html>

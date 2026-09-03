@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lake Onboarding Illustration Paint Effect - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lake Onboarding Illustration Paint Effect</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lake-onboarding-illustration-paint-effect"><b>Lake</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lake-onboarding-illustration-paint-effect">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lake-onboarding-illustration-paint-effect">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Lake&#x27;s onboarding carousel - each page pairs a headline with a black-and-white line illustration that colorizes with a spreading watercolor paint effect as the page settles, so art arrives monochrome and blooms into color.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e6a0f24c4721fb10a2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e6a0f24c4721fb10a2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lake-onboarding-illustration-paint-effect.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Lake&#x27;s onboarding carousel - each page pairs a headline with a black-and-white line illustration that colorizes with a spreading watercolor paint effect as the page settles, so art arrives monochrome and blooms into color.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White onboarding pager: large square illustration upper half, headline + body copy below, page dots / next control at bottom. Three pages shown: a woman&#x27;s face in dense florals (&quot;Be kind to your mind&quot;), objects on a shelf (&quot;Make the world a better place&quot;), a classical bust with rocket and clouds (&quot;Let your creativity flow&quot;).
+
+## Motion spec
+Pattern: choreographed entrance on page change.
+- Page transition: horizontal swipe between pages (~300ms, ease-out), standard pager behavior.
+- On page settle, the illustration starts fully black-and-white line art.
+- Color blooms in as soft watercolor washes: each region fills with an organic, slightly overspilling edge (paint bleed past the line art), staggered region by region over ~1.2-1.8s.
+- Larger background washes first, small accents last; each fill eases opacity 0 -&gt; 1 with a soft radial spread (~400ms per region, 80-120ms stagger).
+- Headline and copy are static; only the illustration paints.
+
+## Calibration
+- The paint must feel wet: edges bleed outside the linework a few px, colors slightly desaturated like real watercolor.
+- Stagger long enough to read as painting, not a crossfade.
+
+## Reduced motion
+Illustration crossfades from monochrome to full color (250ms) on page settle, no regional stagger.
+
+## Don&#x27;t miss
+- Color overshoots the line boundaries - contained fills kill the effect.
+- Each new page re-enters monochrome and repaints; the color is per-page, not remembered.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">choreographed entrance on page change.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lake-onboarding-illustration-paint-effect">original interaction</a> by Lake. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Lake's onboarding carousel - each page pairs a headline with a black-and-white line illustration that colorizes with a spreading watercolor paint effect as the page settles, so art arrives monochrome and blooms into color.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite onboarding pager: large square illustration upper half, headline + body copy below, page dots / next control at bottom. Three pages shown: a woman's face in dense florals (\"Be kind to your mind\"), objects on a shelf (\"Make the world a better place\"), a classical bust with rocket and clouds (\"Let your creativity flow\").\n\n## Motion spec\nPattern: choreographed entrance on page change.\n- Page transition: horizontal swipe between pages (~300ms, ease-out), standard pager behavior.\n- On page settle, the illustration starts fully black-and-white line art.\n- Color blooms in as soft watercolor washes: each region fills with an organic, slightly overspilling edge (paint bleed past the line art), staggered region by region over ~1.2-1.8s.\n- Larger background washes first, small accents last; each fill eases opacity 0 -> 1 with a soft radial spread (~400ms per region, 80-120ms stagger).\n- Headline and copy are static; only the illustration paints.\n\n## Calibration\n- The paint must feel wet: edges bleed outside the linework a few px, colors slightly desaturated like real watercolor.\n- Stagger long enough to read as painting, not a crossfade.\n\n## Reduced motion\nIllustration crossfades from monochrome to full color (250ms) on page settle, no regional stagger.\n\n## Don't miss\n- Color overshoots the line boundaries - contained fills kill the effect.\n- Each new page re-enters monochrome and repaints; the color is per-page, not remembered."</script>
+</body></html>

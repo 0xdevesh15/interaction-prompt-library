@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monogram Pulse Calendar Connect Reveal Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monogram Pulse Calendar Connect Reveal Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monogram-pulse-calendar-connect-reveal-interaction"><b>Monogram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monogram-pulse-calendar-connect-reveal-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monogram-pulse-calendar-connect-reveal-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monogram&#x27;s ambient voice home - a floating status pill on a pastel gradient canvas pulses as it listens, morphs into bottom voice controls, and a &quot;Connect your Google Calendar&quot; card slides up as the screen transitions into the chat layout.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980a151fd52183e4025/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a5e2980a151fd52183e4025/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monogram-pulse-calendar-connect-reveal-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monogram&#x27;s ambient voice home - a floating status pill on a pastel gradient canvas pulses as it listens, morphs into bottom voice controls, and a &quot;Connect your Google Calendar&quot; card slides up as the screen transitions into the chat layout.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Empty-state assistant home: soft pastel gradient backdrop (lilac to mint, slowly drifting), greeting text block (&quot;Good evening. How can I help you today? Ask me anything.&quot;) mid-screen, a small floating dark status pill low-center, and two circular icon buttons top corners.
+
+## Motion spec
+Pattern: ambient idle pulse that morphs a floating pill into a bottom control bar, then reveals an action card.
+- Idle: the status pill breathes (scale 1 -&gt; 1.06 -&gt; 1, 2s loop, ease-in-out) while the gradient drifts over a ~20s cycle.
+- On activation, the pill expands into a wide listening bar (width ~64 -&gt; 200px, 300ms, spring ~280/22) with a &quot;Listening...&quot; label and animated mic dot.
+- The pill then docks to the bottom and splits into the standard bar (+ / mic pill / grid), each element fading in with 60ms stagger.
+- The greeting block shifts up and left-aligns (translate ~40px, 350ms, ease-out) as the calendar connect card slides up from below (translate 100% -&gt; 0, 400ms, spring ~260/26) with a white surface, provider icon, title, body copy, and Connect button.
+
+## Calibration
+- The gradient never stops moving; even static frames should feel alive.
+- Card entrance is a single confident spring, no bounce overshoot beyond ~4%.
+
+## Reduced motion
+Gradient freezes on a static pastel wash; pill changes state by crossfade (150ms); card fades in at final position (200ms).
+
+## Don&#x27;t miss
+- The listening pill and the final bottom bar share one continuous morph - never unmount the pill.
+- The calendar card slides over the gradient, which stays visible behind it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient idle pulse that morphs a floating pill into a bottom control bar, then reveals an action card.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monogram-pulse-calendar-connect-reveal-interaction">original interaction</a> by Monogram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monogram's ambient voice home - a floating status pill on a pastel gradient canvas pulses as it listens, morphs into bottom voice controls, and a \"Connect your Google Calendar\" card slides up as the screen transitions into the chat layout.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nEmpty-state assistant home: soft pastel gradient backdrop (lilac to mint, slowly drifting), greeting text block (\"Good evening. How can I help you today? Ask me anything.\") mid-screen, a small floating dark status pill low-center, and two circular icon buttons top corners.\n\n## Motion spec\nPattern: ambient idle pulse that morphs a floating pill into a bottom control bar, then reveals an action card.\n- Idle: the status pill breathes (scale 1 -> 1.06 -> 1, 2s loop, ease-in-out) while the gradient drifts over a ~20s cycle.\n- On activation, the pill expands into a wide listening bar (width ~64 -> 200px, 300ms, spring ~280/22) with a \"Listening...\" label and animated mic dot.\n- The pill then docks to the bottom and splits into the standard bar (+ / mic pill / grid), each element fading in with 60ms stagger.\n- The greeting block shifts up and left-aligns (translate ~40px, 350ms, ease-out) as the calendar connect card slides up from below (translate 100% -> 0, 400ms, spring ~260/26) with a white surface, provider icon, title, body copy, and Connect button.\n\n## Calibration\n- The gradient never stops moving; even static frames should feel alive.\n- Card entrance is a single confident spring, no bounce overshoot beyond ~4%.\n\n## Reduced motion\nGradient freezes on a static pastel wash; pill changes state by crossfade (150ms); card fades in at final position (200ms).\n\n## Don't miss\n- The listening pill and the final bottom bar share one continuous morph - never unmount the pill.\n- The calendar card slides over the gradient, which stays visible behind it."</script>
+</body></html>

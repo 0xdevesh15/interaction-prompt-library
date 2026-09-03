@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Loading Music Course - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Loading Music Course</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-loading-music-course"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-loading-music-course">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-loading-music-course">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s music-course loading screen - tapping the Music tile in New Courses fades to a dark interstitial where Duo plays a white piano, hands moving over the keys, above a &quot;LOADING MUSIC...&quot; caption and a music-trivia line.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad2653c6551dedd1d559/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad2653c6551dedd1d559/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-loading-music-course.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s music-course loading screen - tapping the Music tile in New Courses fades to a dark interstitial where Duo plays a white piano, hands moving over the keys, above a &quot;LOADING MUSIC...&quot; caption and a music-trivia line.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark background (near-black navy). Entry point: course-select screen, New Courses section, purple Music tile. Loading screen: Duo seated at a white grand piano, center stage. Below: letterspaced gray caption &quot;LOADING MUSIC...&quot;, then small copy: &quot;Many famous musicians can&#x27;t read music, but you&#x27;re on your way!&quot;
+
+## Motion spec
+Pattern: performing mascot loading loop.
+- Transition in: fade over the course screen (200ms); Duo and piano scale 0.9 to 1.0 (250ms, ease-out).
+- Playing loop: Duo&#x27;s hands alternate over the keys (each hand translateY 0 to 6px and back, 300ms, 150ms apart, repeating) and 2 to 3 keys dip in sync with the hands (key top translateY 2px, 150ms).
+- Duo sways with the music (rotation +-3deg, 1.8s sine) and bobs (translateY +-5px, 2s sine).
+- The caption pulses (opacity 0.4 to 1.0, 1s sine loop).
+
+## Calibration
+- Hand/key sync sells the performance - a key must dip exactly when its hand lands.
+- Keep the sway slow relative to the hands: fast hands, slow body.
+
+## Reduced motion
+Static composition, full-opacity caption, no loops.
+
+## Don&#x27;t miss
+- The piano is white with black keys - it is the one bright object on the dark stage, keep the contrast.
+- Entry comes from the Music tile specifically; the caption is fixed (&quot;LOADING MUSIC...&quot;), not templated.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">performing mascot loading loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-loading-music-course">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's music-course loading screen - tapping the Music tile in New Courses fades to a dark interstitial where Duo plays a white piano, hands moving over the keys, above a \"LOADING MUSIC...\" caption and a music-trivia line.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark background (near-black navy). Entry point: course-select screen, New Courses section, purple Music tile. Loading screen: Duo seated at a white grand piano, center stage. Below: letterspaced gray caption \"LOADING MUSIC...\", then small copy: \"Many famous musicians can't read music, but you're on your way!\"\n\n## Motion spec\nPattern: performing mascot loading loop.\n- Transition in: fade over the course screen (200ms); Duo and piano scale 0.9 to 1.0 (250ms, ease-out).\n- Playing loop: Duo's hands alternate over the keys (each hand translateY 0 to 6px and back, 300ms, 150ms apart, repeating) and 2 to 3 keys dip in sync with the hands (key top translateY 2px, 150ms).\n- Duo sways with the music (rotation +-3deg, 1.8s sine) and bobs (translateY +-5px, 2s sine).\n- The caption pulses (opacity 0.4 to 1.0, 1s sine loop).\n\n## Calibration\n- Hand/key sync sells the performance - a key must dip exactly when its hand lands.\n- Keep the sway slow relative to the hands: fast hands, slow body.\n\n## Reduced motion\nStatic composition, full-opacity caption, no loops.\n\n## Don't miss\n- The piano is white with black keys - it is the one bright object on the dark stage, keep the contrast.\n- Entry comes from the Music tile specifically; the caption is fixed (\"LOADING MUSIC...\"), not templated."</script>
+</body></html>

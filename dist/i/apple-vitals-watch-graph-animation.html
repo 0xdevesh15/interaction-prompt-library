@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Vitals Watch Graph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Vitals Watch Graph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-vitals-watch-graph-animation"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-vitals-watch-graph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-vitals-watch-graph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Apple Watch Vitals - scrolling through health metric cards crossfades each card&#x27;s accent color (purple, blue, pink) and fluidly morphs the graph between bar and line styles while values and range labels swap.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f403465af36c63d0034ba6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f403465af36c63d0034ba6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-vitals-watch-graph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Apple Watch Vitals - scrolling through health metric cards crossfades each card&#x27;s accent color (purple, blue, pink) and fluidly morphs the graph between bar and line styles while values and range labels swap.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Watch-face-sized dark cards, one metric per card: header icon + time, &quot;Past 7 Days&quot;/&quot;Today&quot; tab labels, a graph zone (7-day bar chart or line chart with day letters T F S S M T W), metric name (&quot;Overnight Vitals&quot;, &quot;Heart Rate&quot;, &quot;Respiratory Rate&quot;, &quot;Blood Oxygen&quot;, &quot;Sleep Duration&quot;), big value, and a status line (&quot;1 Outlier&quot;, &quot;Within Typical Range&quot;, &quot;2H 58M Above Baseline&quot;).
+
+## Motion spec
+Pattern: scroll-driven card transitions with graph morphing.
+- Vertical scroll/crown: outgoing card&#x27;s content fades + slides up (~200ms) as the incoming card&#x27;s content slides up from below with a slight scale 0.96 -&gt; 1 (~250ms, ease-out).
+- Accent color: the whole card&#x27;s tint (icon chip, tab highlight, graph stroke, value text) crossfades to the new metric&#x27;s hue (~300ms) - purple for vitals, blue for heart/respiratory, pink for sleep.
+- Graph morph: bar chart &lt;-&gt; line chart transitions interpolate point positions vertically (~350ms, ease-in-out); today-view swaps to a dot-scatter layout.
+- Status line and value swap with a quick fade (150ms), slightly after the graph starts.
+
+## Calibration
+- Color identity is per-metric and total - no mixed hues during the crossfade.
+- Graph morph keeps the same 7-day x-positions; only y values and style change.
+
+## Reduced motion
+Cards crossfade without slide; graph swaps without morph.
+
+## Don&#x27;t miss
+- Day letters stay pinned while the graph morphs above them.
+- The outlier metric (purple) uses bar highlighting on the outlier day.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-driven card transitions with graph morphing.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-vitals-watch-graph-animation">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Apple Watch Vitals - scrolling through health metric cards crossfades each card's accent color (purple, blue, pink) and fluidly morphs the graph between bar and line styles while values and range labels swap.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWatch-face-sized dark cards, one metric per card: header icon + time, \"Past 7 Days\"/\"Today\" tab labels, a graph zone (7-day bar chart or line chart with day letters T F S S M T W), metric name (\"Overnight Vitals\", \"Heart Rate\", \"Respiratory Rate\", \"Blood Oxygen\", \"Sleep Duration\"), big value, and a status line (\"1 Outlier\", \"Within Typical Range\", \"2H 58M Above Baseline\").\n\n## Motion spec\nPattern: scroll-driven card transitions with graph morphing.\n- Vertical scroll/crown: outgoing card's content fades + slides up (~200ms) as the incoming card's content slides up from below with a slight scale 0.96 -> 1 (~250ms, ease-out).\n- Accent color: the whole card's tint (icon chip, tab highlight, graph stroke, value text) crossfades to the new metric's hue (~300ms) - purple for vitals, blue for heart/respiratory, pink for sleep.\n- Graph morph: bar chart <-> line chart transitions interpolate point positions vertically (~350ms, ease-in-out); today-view swaps to a dot-scatter layout.\n- Status line and value swap with a quick fade (150ms), slightly after the graph starts.\n\n## Calibration\n- Color identity is per-metric and total - no mixed hues during the crossfade.\n- Graph morph keeps the same 7-day x-positions; only y values and style change.\n\n## Reduced motion\nCards crossfade without slide; graph swaps without morph.\n\n## Don't miss\n- Day letters stay pinned while the graph morphs above them.\n- The outlier metric (purple) uses bar highlighting on the outlier day."</script>
+</body></html>

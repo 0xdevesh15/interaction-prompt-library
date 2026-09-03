@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ahead Quit the App Nudge - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Ahead Quit the App Nudge</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ahead-quit-the-app-nudge"><b>Ahead</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ahead-quit-the-app-nudge">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ahead-quit-the-app-nudge">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Ahead&#x27;s app-exit nudge - a purple blob mascot peeks in under &quot;Will you be back tomorrow?&quot;, a &quot;Tap here&quot; bubble appears, and on tap the screen flashes through an orange color burst while the mascot winks, gives a thumbs up, and the copy switches to &quot;See you then!&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ea4b9918638a3e00f5f5ef/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ea4b9918638a3e00f5f5ef/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ahead-quit-the-app-nudge.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Ahead&#x27;s app-exit nudge - a purple blob mascot peeks in under &quot;Will you be back tomorrow?&quot;, a &quot;Tap here&quot; bubble appears, and on tap the screen flashes through an orange color burst while the mascot winks, gives a thumbs up, and the copy switches to &quot;See you then!&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Minimal off-white screen: small X top-right, centered copy (&quot;Will you be back tomorrow?&quot; -&gt; &quot;See you then!&quot;), and a round purple blob mascot with eyes and a tiny smile peeking from the lower-left edge.
+
+## Motion spec
+Pattern: reactive mascot nudge with color burst.
+- The mascot slides in from the left edge (spring ~280/22, ~500ms, slight overshoot) and idles with a gentle bob (±4px, 2.4s loop).
+- A dark &quot;Tap here&quot; bubble pops in next to its head (scale 0.5 -&gt; 1, spring ~380/20, ~250ms).
+- On tap: an orange blob shape blooms from behind the mascot to fill the whole screen (scale 0 -&gt; full-bleed, 500ms ease-out), then recedes back (400ms) revealing the off-white again.
+- During the burst the mascot winks (one eye squeezes, 200ms), then raises a thumb (arm rotates up 60deg, spring ~350/20, ~300ms) as a small yellow star pops near its head (scale + fade, 250ms).
+- Copy crossfades to &quot;See you then!&quot; (250ms) as the burst recedes.
+
+## Calibration
+- The burst is one fluid orange shape with irregular edges - not a flat color fill.
+- Mascot reactions sequence strictly: wink first, thumbs-up as the burst recedes, star last.
+
+## Reduced motion
+Burst becomes a quick background tint swap; mascot changes pose without spring motion.
+
+## Don&#x27;t miss
+- The mascot peeks from the screen edge - half of it stays off-canvas at rest.
+- &quot;Tap here&quot; is part of the mascot cluster and disappears the moment the tap lands.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">reactive mascot nudge with color burst.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ahead-quit-the-app-nudge">original interaction</a> by Ahead. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Ahead's app-exit nudge - a purple blob mascot peeks in under \"Will you be back tomorrow?\", a \"Tap here\" bubble appears, and on tap the screen flashes through an orange color burst while the mascot winks, gives a thumbs up, and the copy switches to \"See you then!\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMinimal off-white screen: small X top-right, centered copy (\"Will you be back tomorrow?\" -> \"See you then!\"), and a round purple blob mascot with eyes and a tiny smile peeking from the lower-left edge.\n\n## Motion spec\nPattern: reactive mascot nudge with color burst.\n- The mascot slides in from the left edge (spring ~280/22, ~500ms, slight overshoot) and idles with a gentle bob (\u00b14px, 2.4s loop).\n- A dark \"Tap here\" bubble pops in next to its head (scale 0.5 -> 1, spring ~380/20, ~250ms).\n- On tap: an orange blob shape blooms from behind the mascot to fill the whole screen (scale 0 -> full-bleed, 500ms ease-out), then recedes back (400ms) revealing the off-white again.\n- During the burst the mascot winks (one eye squeezes, 200ms), then raises a thumb (arm rotates up 60deg, spring ~350/20, ~300ms) as a small yellow star pops near its head (scale + fade, 250ms).\n- Copy crossfades to \"See you then!\" (250ms) as the burst recedes.\n\n## Calibration\n- The burst is one fluid orange shape with irregular edges - not a flat color fill.\n- Mascot reactions sequence strictly: wink first, thumbs-up as the burst recedes, star last.\n\n## Reduced motion\nBurst becomes a quick background tint swap; mascot changes pose without spring motion.\n\n## Don't miss\n- The mascot peeks from the screen edge - half of it stays off-canvas at rest.\n- \"Tap here\" is part of the mascot cluster and disappears the moment the tap lands."</script>
+</body></html>

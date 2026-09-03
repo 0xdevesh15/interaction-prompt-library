@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Fitness Slide to Unlock Controls - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Fitness Slide to Unlock Controls</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-fitness-slide-to-unlock-controls"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-fitness-slide-to-unlock-controls">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-fitness-slide-to-unlock-controls">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Fitness&#x27;s slide-to-unlock - a dark pill with a lock icon and &quot;Unlock Controls&quot; label; dragging the lock right fades the label away, and at the end of travel the lock springs open and workout controls appear.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f017d6d6a13510db2e07dd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f017d6d6a13510db2e07dd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-fitness-slide-to-unlock-controls.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Fitness&#x27;s slide-to-unlock - a dark pill with a lock icon and &quot;Unlock Controls&quot; label; dragging the lock right fades the label away, and at the end of travel the lock springs open and workout controls appear.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark workout screen: activity rings (pink/green/teal), &quot;242/310 MOVE&quot;, &quot;7/30 EXERCISE&quot;, &quot;8/12 STAND&quot;, elapsed timer &quot;01:16.19&quot; with small ring badges. Bottom: a full-width dark pill with a lock icon in a circle at its left edge and &quot;Unlock Controls&quot; text. Unlocked: the pill becomes &quot;Lock Controls&quot; plus Stop Viewing and a red End Workout button.
+
+## Motion spec
+Pattern: slide-to-commit with fading label + icon morph.
+- Drag the lock knob: it tracks the finger 1:1 along the pill; the &quot;Unlock Controls&quot; label fades proportionally to drag distance (opacity 1 -&gt; 0 across ~70% of travel).
+- Under ~85% travel on release: knob springs back (spring ~350/25, ~250ms), label fades back in.
+- Past threshold: knob accelerates to the end (~150ms), lock icon morphs shackle-closed to shackle-open (~200ms), success haptic.
+- The pill then crossfades to the controls stack (Lock Controls, Stop Viewing, End Workout) sliding up with 60ms stagger (~300ms).
+- Locking again reverses to the pill.
+
+## Calibration
+- Label fade is distance-mapped, not time-mapped - slow drags fade slowly.
+- The threshold (85%) must feel deliberate; accidental half-swipes always snap back.
+
+## Reduced motion
+Knob slides without label fade; lock swaps icon state.
+
+## Don&#x27;t miss
+- The knob never leaves the pill&#x27;s bounds; travel ends flush with the right edge.
+- End Workout is red and visually separate from Lock/Stop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slide-to-commit with fading label + icon morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-fitness-slide-to-unlock-controls">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Fitness's slide-to-unlock - a dark pill with a lock icon and \"Unlock Controls\" label; dragging the lock right fades the label away, and at the end of travel the lock springs open and workout controls appear.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark workout screen: activity rings (pink/green/teal), \"242/310 MOVE\", \"7/30 EXERCISE\", \"8/12 STAND\", elapsed timer \"01:16.19\" with small ring badges. Bottom: a full-width dark pill with a lock icon in a circle at its left edge and \"Unlock Controls\" text. Unlocked: the pill becomes \"Lock Controls\" plus Stop Viewing and a red End Workout button.\n\n## Motion spec\nPattern: slide-to-commit with fading label + icon morph.\n- Drag the lock knob: it tracks the finger 1:1 along the pill; the \"Unlock Controls\" label fades proportionally to drag distance (opacity 1 -> 0 across ~70% of travel).\n- Under ~85% travel on release: knob springs back (spring ~350/25, ~250ms), label fades back in.\n- Past threshold: knob accelerates to the end (~150ms), lock icon morphs shackle-closed to shackle-open (~200ms), success haptic.\n- The pill then crossfades to the controls stack (Lock Controls, Stop Viewing, End Workout) sliding up with 60ms stagger (~300ms).\n- Locking again reverses to the pill.\n\n## Calibration\n- Label fade is distance-mapped, not time-mapped - slow drags fade slowly.\n- The threshold (85%) must feel deliberate; accidental half-swipes always snap back.\n\n## Reduced motion\nKnob slides without label fade; lock swaps icon state.\n\n## Don't miss\n- The knob never leaves the pill's bounds; travel ends flush with the right edge.\n- End Workout is red and visually separate from Lock/Stop."</script>
+</body></html>

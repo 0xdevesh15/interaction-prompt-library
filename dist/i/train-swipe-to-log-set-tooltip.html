@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Train Swipe to Log Set Tooltip - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Train Swipe to Log Set Tooltip</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/train-swipe-to-log-set-tooltip"><b>Train</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/train-swipe-to-log-set-tooltip">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/train-swipe-to-log-set-tooltip">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Train&#x27;s swipe-to-log tutorial - a bottom sheet over the workout list explains the gesture, and inside it a demo exercise row loops a green swipe fill showing how swiping right logs a set.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/671885517544fc3800337c94/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/671885517544fc3800337c94/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-train-swipe-to-log-set-tooltip.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Train&#x27;s swipe-to-log tutorial - a bottom sheet over the workout list explains the gesture, and inside it a demo exercise row loops a green swipe fill showing how swiping right logs a set.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dimmed workout exercise list behind a white bottom sheet: grabber, close X, title &quot;14/58 Sets Logged&quot;, instruction copy (&quot;swiping right on the set as you complete it&quot;), a demo card row (exercise thumbnail, name, set/weight/reps fields), a green log button area, &quot;Log All Sets&quot; button, and a red &quot;Discard 54 Unlogged Sets&quot; link.
+
+## Motion spec
+Pattern: looping instructional gesture demo inside a static sheet.
+- Sheet entrance: slides up (spring ~320/30, ~300ms) over a dimming scrim (0 -&gt; 0.5, 200ms).
+- Demo loop (~2s cycle): a green fill sweeps into the demo row from the left edge, tracking a simulated rightward swipe (ease-out, ~600ms); the row&#x27;s log button flashes solid green with a white check; hold ~500ms; reset with a 200ms fade.
+- Loop repeats indefinitely while the sheet is open.
+
+## Calibration
+- The simulated swipe should read as a finger drag: smooth ease-out, constant direction, no bounce.
+- Keep the loop&#x27;s reset gentle (fade), never a hard cut.
+
+## Reduced motion
+Static green completed state with a small &quot;swipe right&quot; arrow hint, no loop.
+
+## Don&#x27;t miss
+- Only the demo row animates - the rest of the sheet is still.
+- Green fill enters from the left and travels right (the direction of the real gesture).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping instructional gesture demo inside a static sheet.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/train-swipe-to-log-set-tooltip">original interaction</a> by Train. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Train's swipe-to-log tutorial - a bottom sheet over the workout list explains the gesture, and inside it a demo exercise row loops a green swipe fill showing how swiping right logs a set.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDimmed workout exercise list behind a white bottom sheet: grabber, close X, title \"14/58 Sets Logged\", instruction copy (\"swiping right on the set as you complete it\"), a demo card row (exercise thumbnail, name, set/weight/reps fields), a green log button area, \"Log All Sets\" button, and a red \"Discard 54 Unlogged Sets\" link.\n\n## Motion spec\nPattern: looping instructional gesture demo inside a static sheet.\n- Sheet entrance: slides up (spring ~320/30, ~300ms) over a dimming scrim (0 -> 0.5, 200ms).\n- Demo loop (~2s cycle): a green fill sweeps into the demo row from the left edge, tracking a simulated rightward swipe (ease-out, ~600ms); the row's log button flashes solid green with a white check; hold ~500ms; reset with a 200ms fade.\n- Loop repeats indefinitely while the sheet is open.\n\n## Calibration\n- The simulated swipe should read as a finger drag: smooth ease-out, constant direction, no bounce.\n- Keep the loop's reset gentle (fade), never a hard cut.\n\n## Reduced motion\nStatic green completed state with a small \"swipe right\" arrow hint, no loop.\n\n## Don't miss\n- Only the demo row animates - the rest of the sheet is still.\n- Green fill enters from the left and travels right (the direction of the real gesture)."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pinterest Reorder Interaction Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Pinterest Reorder Interaction Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/pinterest-reorder-interaction-onboarding"><b>Pinterest</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pinterest-reorder-interaction-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pinterest-reorder-interaction-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Pinterest&#x27;s layer-reorder tutorial - tooltips coach &quot;Keep your fingers pressed on the top layer and don&#x27;t let go!&quot; then &quot;Keeping your finger pressed, drag down to reorder&quot;, a hand drags the image downward to reorder, and a confetti burst plus a bottom card celebrate completion.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f1634f9ca516d69983b9c5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66f1634f9ca516d69983b9c5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-pinterest-reorder-interaction-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Pinterest&#x27;s layer-reorder tutorial - tooltips coach &quot;Keep your fingers pressed on the top layer and don&#x27;t let go!&quot; then &quot;Keeping your finger pressed, drag down to reorder&quot;, a hand drags the image downward to reorder, and a confetti burst plus a bottom card celebrate completion.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Collage editor: blue-marble image with a green phone cutout, green tooltip bubble top, illustrated hand with yellow touch ring, toolbar at bottom. Reorder state: canvas dims, image lifts. Completion: confetti burst, then a white bottom card &quot;Hooray! Lastly, let&#x27;s change the background color&quot; with &quot;Not now&quot; and a red primary button.
+
+## Motion spec
+Pattern: coached hold-and-drag reorder + celebration.
+- Tooltip 1 shows; hand presses the image: yellow ring pulses, image lifts (scale 1.04, shadow deepens, ~250ms).
+- Tooltip swaps to &quot;Keeping your finger pressed, drag down to reorder&quot; (crossfade 200ms); background dims (~30%) so the held layer pops.
+- Hand drags the image down ~120px over ~600ms (ease-in-out); the layer follows 1:1 with slight tilt (~3deg).
+- Release: image drops into its new z-order with a soft bounce (spring ~350/22, ~300ms), dim lifts.
+- Confetti: ~40 pieces from the top, gravity + rotation + drift, ~1.2s fall; simultaneously the completion card slides up (spring ~300/26, ~300ms).
+
+## Calibration
+- The drag is the lesson: image follows the finger exactly, tilt subtle.
+- Confetti and the card fire together, immediately on successful drop.
+
+## Reduced motion
+Drag without tilt; confetti becomes a check pulse.
+
+## Don&#x27;t miss
+- The dim only exists while dragging - it frames the held layer.
+- Completion card has both a dismissive (&quot;Not now&quot;) and primary action.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">coached hold-and-drag reorder + celebration.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/pinterest-reorder-interaction-onboarding">original interaction</a> by Pinterest. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Pinterest's layer-reorder tutorial - tooltips coach \"Keep your fingers pressed on the top layer and don't let go!\" then \"Keeping your finger pressed, drag down to reorder\", a hand drags the image downward to reorder, and a confetti burst plus a bottom card celebrate completion.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCollage editor: blue-marble image with a green phone cutout, green tooltip bubble top, illustrated hand with yellow touch ring, toolbar at bottom. Reorder state: canvas dims, image lifts. Completion: confetti burst, then a white bottom card \"Hooray! Lastly, let's change the background color\" with \"Not now\" and a red primary button.\n\n## Motion spec\nPattern: coached hold-and-drag reorder + celebration.\n- Tooltip 1 shows; hand presses the image: yellow ring pulses, image lifts (scale 1.04, shadow deepens, ~250ms).\n- Tooltip swaps to \"Keeping your finger pressed, drag down to reorder\" (crossfade 200ms); background dims (~30%) so the held layer pops.\n- Hand drags the image down ~120px over ~600ms (ease-in-out); the layer follows 1:1 with slight tilt (~3deg).\n- Release: image drops into its new z-order with a soft bounce (spring ~350/22, ~300ms), dim lifts.\n- Confetti: ~40 pieces from the top, gravity + rotation + drift, ~1.2s fall; simultaneously the completion card slides up (spring ~300/26, ~300ms).\n\n## Calibration\n- The drag is the lesson: image follows the finger exactly, tilt subtle.\n- Confetti and the card fire together, immediately on successful drop.\n\n## Reduced motion\nDrag without tilt; confetti becomes a check pulse.\n\n## Don't miss\n- The dim only exists while dragging - it frames the held layer.\n- Completion card has both a dismissive (\"Not now\") and primary action."</script>
+</body></html>

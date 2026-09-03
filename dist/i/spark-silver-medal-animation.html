@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spark Silver Medal Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spark Silver Medal Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spark-silver-medal-animation"><b>Spark</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spark-silver-medal-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spark-silver-medal-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Spark&#x27;s medal recap - the session summary screen springs a silver &quot;2&quot; medal into view with an elastic bounce, draws its ribbon, scatters sparkle particles, and types &quot;Well done!&quot; in rainbow letters over the accuracy pill and Share/Continue buttons.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538ebe2653946cb001015/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538ebe2653946cb001015/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spark-silver-medal-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Spark&#x27;s medal recap - the session summary screen springs a silver &quot;2&quot; medal into view with an elastic bounce, draws its ribbon, scatters sparkle particles, and types &quot;Well done!&quot; in rainbow letters over the accuracy pill and Share/Continue buttons.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Recap screen on cream: date + topic line (&quot;See, Sea, C&quot;) top-center, medal stage mid-screen, &quot;Accuracy 85%&quot; pill below it, then the celebration line &quot;Well done!&quot;, with Share and Continue buttons at the bottom.
+
+## Motion spec
+Pattern: one-shot celebration - elastic medal drop with particles and rainbow typewriter.
+- The medal drops in from a thin vertical sliver (scaleY 0 -&gt; 1, then scale 1.15 -&gt; 1, spring ~260/14, ~600ms) with a clear elastic wobble.
+- The ribbon draws on above the medal (path draw, 300ms, starting as the medal lands).
+- 6-8 sparkle particles (four-point stars, small dots) pop around the medal (scale 0 -&gt; 1 -&gt; 0, 400ms, staggered 60ms, positions randomized per replay).
+- &quot;Accuracy 85%&quot; fades in (200ms) as the medal settles.
+- &quot;Well done!&quot; types letter by letter (~90ms per char), each letter landing in a different rainbow hue before settling to dark.
+- Buttons were present from the start; nothing blocks them.
+
+## Calibration
+- The medal&#x27;s elastic overshoot is the personality - allow 2 visible bounces.
+- Sparkles are seasoning: small, quick, never overlapping the medal&#x27;s number.
+
+## Reduced motion
+Medal fades in at final size (250ms); title appears whole (200ms); no particles.
+
+## Don&#x27;t miss
+- The medal hangs from its ribbon - the ribbon must draw before the wobble ends.
+- Rainbow typing resolves to plain dark text; the rainbow is transient.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">one-shot celebration - elastic medal drop with particles and rainbow typewriter.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spark-silver-medal-animation">original interaction</a> by Spark. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Spark's medal recap - the session summary screen springs a silver \"2\" medal into view with an elastic bounce, draws its ribbon, scatters sparkle particles, and types \"Well done!\" in rainbow letters over the accuracy pill and Share/Continue buttons.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRecap screen on cream: date + topic line (\"See, Sea, C\") top-center, medal stage mid-screen, \"Accuracy 85%\" pill below it, then the celebration line \"Well done!\", with Share and Continue buttons at the bottom.\n\n## Motion spec\nPattern: one-shot celebration - elastic medal drop with particles and rainbow typewriter.\n- The medal drops in from a thin vertical sliver (scaleY 0 -> 1, then scale 1.15 -> 1, spring ~260/14, ~600ms) with a clear elastic wobble.\n- The ribbon draws on above the medal (path draw, 300ms, starting as the medal lands).\n- 6-8 sparkle particles (four-point stars, small dots) pop around the medal (scale 0 -> 1 -> 0, 400ms, staggered 60ms, positions randomized per replay).\n- \"Accuracy 85%\" fades in (200ms) as the medal settles.\n- \"Well done!\" types letter by letter (~90ms per char), each letter landing in a different rainbow hue before settling to dark.\n- Buttons were present from the start; nothing blocks them.\n\n## Calibration\n- The medal's elastic overshoot is the personality - allow 2 visible bounces.\n- Sparkles are seasoning: small, quick, never overlapping the medal's number.\n\n## Reduced motion\nMedal fades in at final size (250ms); title appears whole (200ms); no particles.\n\n## Don't miss\n- The medal hangs from its ribbon - the ribbon must draw before the wobble ends.\n- Rainbow typing resolves to plain dark text; the rainbow is transient."</script>
+</body></html>
