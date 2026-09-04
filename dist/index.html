@@ -126,8 +126,7 @@ q.style.cursor='pointer';
 q.addEventListener('focus',()=>{q.blur();window.__cmdk&&window.__cmdk.open();});
 q.addEventListener('click',()=>{window.__cmdk&&window.__cmdk.open();});
 document.addEventListener('keydown',e=>{
-  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();window.__cmdk&&window.__cmdk.toggle();}
-  else if(e.key==='/'&&document.activeElement!==q){e.preventDefault();window.__cmdk&&window.__cmdk.open();}
+  if(e.key==='/'&&document.activeElement!==q){e.preventDefault();window.__cmdk&&window.__cmdk.open();}
 });
 render();
 </script>
