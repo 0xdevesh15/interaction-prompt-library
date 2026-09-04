@@ -152,6 +152,19 @@ FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="p
 
 DIMS = json.load(open('/tmp/insp-site/poster-dims.json')) if os.path.exists('/tmp/insp-site/poster-dims.json') else {}
 
+
+POSTHOG = r"""
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="El Rl Pl Al Ll init iu ru Xl tu au fa eu uu Jl cu fu pu capture getExtension nu Ml yu calculateEventProperties mu register register_once register_for_session unregister unregister_for_session ku Yl bu getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Su identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset xu shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty vu createPersonProfile setInternalOrTestUser wu Dl $l opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing hu debug pa ns getPageViewId captureTraceFeedback captureTraceMetric Vl".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_kHyZKHe5ShLwYAczZbAypxF2AukQ9ja6QdQC5dLevC8v', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'identified_only',
+        disable_session_recording: true,
+    })
+</script>
+"""
+
 PALETTE_CSS = r"""
 <style>
 .ck-overlay{position:fixed;inset:0;z-index:100;background:rgba(9,9,11,.3);backdrop-filter:blur(10px) saturate(1.1);-webkit-backdrop-filter:blur(10px) saturate(1.1);display:flex;justify-content:center;align-items:flex-start;padding:14vh 16px 16px;opacity:0;transition:opacity .18s var(--ease)}
@@ -395,7 +408,7 @@ index_html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><met
 <meta name="twitter:title" content="16ms - 2,113 frame-by-frame UI interaction teardowns">
 <meta name="twitter:description" content="A curated library of 2,113 mobile and web interactions, reverse-engineered frame-by-frame into build-ready prompts.">
 <meta name="twitter:image" content="https://16ms.vercel.app/og-image.png">
-{FONTS}<link rel="stylesheet" href="assets-style.css">{BENTO_STYLE}</head><body>
+{FONTS}{POSTHOG}<link rel="stylesheet" href="assets-style.css">{BENTO_STYLE}</head><body>
 <div class="bbar"><div class="bin">
 <a class="bword" href="./">16<span>ms</span></a>
 <div class="btabs" id="btabs"></div>
@@ -451,7 +464,7 @@ for r in recs:
 <meta name="twitter:title" content="{E(r['title'])} - 16ms">
 <meta name="twitter:description" content="{E(r.get('desc') or r.get('summary') or '')}">
 <meta name="twitter:image" content="https://16ms.vercel.app/{E(r['media'][0].get('montage') or '')}">
-{FONTS}<link rel="stylesheet" href="../assets-style.css"></head><body>
+{FONTS}{POSTHOG}<link rel="stylesheet" href="../assets-style.css"></head><body>
 <div class="wrap">
 <div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
 <h1>{E(r['title'])}</h1>
@@ -605,7 +618,7 @@ mcp_page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta 
 <meta property="og:image" content="https://16ms.vercel.app/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://16ms.vercel.app/og-image.png">
-{FONTS}<link rel="stylesheet" href="../assets-style.css">{MCP_STYLE}</head><body class="mcpd">
+{FONTS}{POSTHOG}<link rel="stylesheet" href="../assets-style.css">{MCP_STYLE}</head><body class="mcpd">
 <div class="mwrap">
 <a class="mhome" href="../">&larr; 16ms</a>
 <h1>Query {len(recs):,} interaction teardowns<br>from <span class="cli" id="cli">Claude</span>.</h1>
