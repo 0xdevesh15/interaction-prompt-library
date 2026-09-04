@@ -86,49 +86,102 @@ footer{padding:48px 0 72px;color:var(--mut);font-size:13px;border-top:1px solid 
 open(f'{DIST}/assets-style.css','w').write(STYLE)
 
 APPJS = """
-const R = window.__DATA__;
-const grid = document.getElementById('grid');
-const q = document.getElementById('q');
-let cat = null;
-const cats = [...new Set(R.map(r=>r.category))];
-const cwrap = document.getElementById('cats');
-let src_filter=null;
-const swrap=document.getElementById('srcs');
+const R=window.__DATA__;
+const wall=document.getElementById('wall');
+const q=document.getElementById('q');
+let cat=null,srcf=null;
+const counts={};R.forEach(r=>counts[r.category]=(counts[r.category]||0)+1);
+const cats=Object.keys(counts).filter(c=>counts[c]>=5).sort((a,b)=>counts[b]-counts[a]);
 const sources=[...new Set(R.map(r=>r.source))];
-sources.forEach(c=>{
-  const el=document.createElement('span');el.className='chip';el.textContent=c;
-  el.onclick=()=>{src_filter=(src_filter===c?null:c);document.querySelectorAll('#srcs .chip').forEach(x=>x.classList.toggle('on',x.textContent===src_filter));render();};
-  swrap.appendChild(el);
-});
-cats.forEach(c=>{
-  const el=document.createElement('span');el.className='chip';el.textContent=c;
-  el.onclick=()=>{cat=(cat===c?null:c);document.querySelectorAll('#cats .chip').forEach(x=>x.classList.toggle('on',x.textContent===cat));render();};
-  cwrap.appendChild(el);
-});
+const cwrap=document.getElementById('btabs');
+function addTab(label){
+  const b=document.createElement('button');b.className='btab'+(label===null?' on':'');b.textContent=label||'All';
+  b.onclick=()=>{cat=(label===null||cat===label)?null:label;
+    cwrap.querySelectorAll('.btab').forEach(x=>x.classList.toggle('on',x.textContent===(cat||'All')));render();};
+  cwrap.appendChild(b);
+}
+addTab(null);cats.forEach(addTab);
+const swrap=document.getElementById('stabs');
+function addSrc(label){
+  const b=document.createElement('button');b.className='stab'+(label===null?' on':'');b.textContent=label||'All sources';
+  b.onclick=()=>{srcf=(label===null||srcf===label)?null:label;
+    swrap.querySelectorAll('.stab').forEach(x=>x.classList.toggle('on',x.textContent===(srcf||'All sources')));render();};
+  swrap.appendChild(b);
+}
+addSrc(null);sources.forEach(addSrc);
+const LAYERS='<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 8l10 6 10-6-10-6z"/><path d="m2 14 10 6 10-6"/></svg>';
 function render(){
   const s=(q.value||'').toLowerCase();
-  grid.innerHTML='';
-  let n=0, i=0;
+  wall.innerHTML='';let n=0;
+  const frag=document.createDocumentFragment();
   for(const r of R){
     if(cat&&r.category!==cat)continue;
-    if(src_filter&&r.source!==src_filter)continue;
+    if(srcf&&r.source!==srcf)continue;
     if(s&&!(r.title+' '+r.desc+' '+r.summary+' '+r.prompt).toLowerCase().includes(s))continue;
-    n++; i++;
-    const thumb=r.media[0]?(r.media[0].poster||r.media[0].montage||r.media[0].src):'';
-    const a=document.createElement('a');a.className='card';a.href='i/'+r.slug+'.html';
-    a.style.animationDelay=Math.min(i*28,400)+'ms';
-    a.innerHTML=`<div class="imgwrap"><img loading="lazy" src="${thumb}" alt=""></div><div class="b"><div class="cat">${r.category}</div><h3></h3><div class="m"><span>${r.author||''}</span><span>${r.media.length} media</span></div></div>`;
-    a.querySelector('h3').textContent=r.title;
-    grid.appendChild(a);
+    n++;
+    const m=r.media[0]||{};
+    const thumb=m.poster||m.src||m.montage||'';
+    const a=document.createElement('a');a.className='mcard';a.href='i/'+r.slug+'.html';
+    a.innerHTML=`<img loading="lazy" src="${thumb}" alt="">`+
+      (r.media.length>1?`<span class="mcount">${LAYERS}${r.media.length}</span>`:'')+
+      `<span class="mover"><span class="mt"></span><span class="mm">${r.category} &middot; ${r.author||r.source}</span></span>`;
+    a.querySelector('.mt').textContent=r.title;
+    frag.appendChild(a);
   }
-  document.getElementById('count').textContent=n;
+  wall.appendChild(frag);
+  document.getElementById('count').textContent=n.toLocaleString();
 }
-q.addEventListener('input',render);render();
+q.addEventListener('input',render);
+document.addEventListener('keydown',e=>{
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();q.focus();}
+  else if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}
+});
+render();
 """
+
+
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">'
 
 lite = [{k:r[k] for k in ('slug','title','category','desc','author','summary','prompt','source')} | {'media':[{'poster':m.get('poster'),'src':m.get('src'),'montage':m.get('montage')} for m in r['media']]} for r in recs]
+BENTO_STYLE = """
+<style>
+.bbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bin{max-width:1400px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:24px}
+.bword{font-weight:700;font-size:16.5px;letter-spacing:-.02em;color:var(--txt);text-decoration:none;flex:none}
+.bword:hover{text-decoration:none}
+.bword span{color:#f97316}
+.btabs{display:flex;gap:2px;flex:1;justify-content:center;overflow:auto;scrollbar-width:none}
+.btabs::-webkit-scrollbar{display:none}
+.btab{padding:6px 13px;border-radius:var(--pill);background:none;border:0;color:var(--sec);font:500 13px var(--sans);cursor:pointer;white-space:nowrap;transition:background-color .18s var(--ease),color .18s var(--ease)}
+.btab:hover{color:var(--txt)}
+.btab.on{background:#09090b;color:#fff}
+#q{flex:none;width:210px;background:var(--bg);border:1px solid var(--line-strong);color:var(--txt);border-radius:var(--pill);padding:7px 15px;font:13px var(--sans);outline:none;transition:border-color .18s var(--ease)}
+#q::placeholder{color:var(--mut)}
+#q:focus{border-color:#09090b}
+.bwrap{max-width:1400px;margin:0 auto;padding:0 24px}
+.bhero{padding:48px 0 4px;animation:rise .5s var(--ease) both}
+.bsub{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0 0;flex-wrap:wrap}
+.stabs{display:flex;gap:16px}
+.stab{font:500 13px var(--sans);color:var(--mut);background:none;border:0;cursor:pointer;padding:5px 1px;border-bottom:2px solid transparent;transition:color .18s var(--ease)}
+.stab:hover{color:var(--txt)}
+.stab.on{color:var(--txt);border-color:var(--txt)}
+.shown{font:12px var(--mono);color:var(--mut)}
+.shown b{color:var(--sec);font-weight:500}
+.masonry{columns:4 250px;column-gap:16px;padding:20px 0 96px}
+.mcard{position:relative;display:block;margin:0 0 16px;border-radius:14px;overflow:hidden;break-inside:avoid;background:var(--fill);animation:rise .45s var(--ease) both}
+.mcard:hover{text-decoration:none}
+.mcard img{width:100%;height:auto;display:block;transition:transform .5s var(--ease)}
+.mcard:hover img{transform:scale(1.03)}
+.mcount{position:absolute;top:10px;right:10px;display:flex;align-items:center;gap:5px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font:500 11px var(--mono);padding:4px 9px;border-radius:var(--pill)}
+.mover{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,0) 42%);opacity:0;transition:opacity .22s var(--ease)}
+.mcard:hover .mover{opacity:1}
+.mt{display:block;color:#fff;font-size:13.5px;font-weight:600;letter-spacing:-.01em;line-height:1.35}
+.mm{display:block;color:rgba(255,255,255,.75);font-size:11.5px;margin-top:3px}
+@media(max-width:680px){.bin{gap:12px;padding:10px 16px}.bwrap{padding:0 16px}#q{width:130px}.masonry{columns:2;column-gap:10px}.mcard{margin-bottom:10px;border-radius:12px}}
+</style>
+"""
+
 index_html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>16ms - 2,113 frame-by-frame UI interaction teardowns</title>
 <meta name="description" content="A curated library of 2,113 mobile and web interactions, reverse-engineered frame-by-frame into build-ready prompts. Sources: inspora.design and 60fps.design.">
@@ -147,15 +200,20 @@ index_html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><met
 <meta name="twitter:title" content="16ms - 2,113 frame-by-frame UI interaction teardowns">
 <meta name="twitter:description" content="A curated library of 2,113 mobile and web interactions, reverse-engineered frame-by-frame into build-ready prompts.">
 <meta name="twitter:image" content="https://16ms.vercel.app/og-image.png">
-{FONTS}<link rel="stylesheet" href="assets-style.css"></head><body>
-<div class="wrap"><header class="top">
-<div class="eyebrow">16ms &middot; {len(recs)} interactions &middot; inspora.design + 60fps.design</div>
-<h1>16<span style="color:#f97316">ms</span></h1>
-<p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Sources: <a href="https://www.inspora.design/">inspora.design</a> (80) and <a href="https://60fps.design/">60fps.design</a> (2,033 shots, full teardown). Query it from your AI tool via the <a href="mcp/">MCP server</a>.</p>
-<div class="stats"><span><b>{len(recs)}</b> interactions</span><span><b>{sum(len(r['media']) for r in recs)}</b> media teardowns</span><span><b>{len(set(r['category'] for r in recs))}</b> categories</span><span><b>{len(set(r['source'] for r in recs))}</b> sources</span><span><b id="count">{len(recs)}</b> shown</span></div>
+{FONTS}<link rel="stylesheet" href="assets-style.css">{BENTO_STYLE}</head><body>
+<div class="bbar"><div class="bin">
+<a class="bword" href="./">16<span>ms</span></a>
+<div class="btabs" id="btabs"></div>
+<input id="q" placeholder="Search  &#8984;K">
+</div></div>
+<div class="bwrap">
+<header class="bhero">
+<div class="eyebrow">{len(recs)} interactions &middot; inspora.design + 60fps.design</div>
+<p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Query the library from your AI tool via the <a href="mcp/">MCP server</a>.</p>
+<div class="stats"><span><b>{len(recs)}</b> interactions</span><span><b>{sum(len(r['media']) for r in recs)}</b> media</span><span><b>{len(set(r['category'] for r in recs))}</b> categories</span><span><b>{len(set(r['source'] for r in recs))}</b> sources</span></div>
 </header>
-<div class="controls"><input id="q" placeholder="Search interactions, mechanics, prompts..." ><div id="srcs" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"></div><div id="cats" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"></div></div>
-<div class="grid" id="grid"></div>
+<div class="bsub"><div class="stabs" id="stabs"></div><span class="shown"><b id="count">{len(recs)}</b> shown</span></div>
+<div class="masonry" id="wall"></div>
 <footer>Built from full teardowns of inspora.design (80 posts, Sep 2026 snapshot) and 60fps.design (2,033 shots, full teardown, Sep 2026). Every record: summary, montage, mechanics, and a build prompt.</footer>
 </div>
 <script>window.__DATA__={json.dumps(lite)}</script><script>{APPJS}</script>
