@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Reels Long Press Quick Actions - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Reels Long Press Quick Actions</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-reels-long-press-quick-actions"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-reels-long-press-quick-actions">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-reels-long-press-quick-actions">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Instagram Reels&#x27; long-press quick actions - hold on a Reel and a compact radial cluster of action buttons springs in around your finger, each with a dynamic label.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4badf371d29849d7bc91e/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4badf371d29849d7bc91e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-reels-long-press-quick-actions.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Instagram Reels&#x27; long-press quick actions - hold on a Reel and a compact radial cluster of action buttons springs in around your finger, each with a dynamic label.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A full-screen Reel playing (bold on-video text captions over the footage). Long-pressing anywhere summons a quick-actions cluster: small circular glass buttons (like, save, share, remix-style glyphs) fanning into a tight arc just above the press point, each with a tiny text label.
+
+## Motion spec
+Pattern: long-press radial menu.
+- Long-press (hold ~250ms): the Reel dims slightly (opacity to 0.85) and the video&#x27;s big caption words pause; a light haptic fires at menu open.
+- The cluster bursts in from the press point: each button scales from 0 with elastic overshoot (spring ~400/18, ~350ms settle), staggered 30ms apart along the arc; buttons land on a semicircle (radius ~72px, 5-7 items, 30deg apart).
+- Labels appear with their buttons: a one-word label under each icon fades/slides in (translateY 4px, 150ms) and can swap text contextually as the finger drags over options.
+- Drag to select: the hovered button grows (scale 1.15) and its label highlights; the others stay put.
+- Release on a button: it pops (scale 1.3, 150ms) with a confirmation haptic and the menu collapses back into the press point (scale to 0, staggered 15ms, 150ms) while the Reel undims.
+- Release off-menu: the cluster scatters out (same collapse, no haptic).
+
+## Calibration
+- The cluster must fit one-handed reach: keep the arc within a 90px radius of the press point.
+- Buttons are translucent dark glass over the video - never solid blocks.
+
+## Reduced motion
+Menu fades in fully formed; selection is a simple highlight.
+
+## Don&#x27;t miss
+- The arc is anchored to where the finger actually pressed, not screen center.
+- The Reel keeps playing behind the dimmed state; the menu is an overlay, not a mode switch.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">long-press radial menu.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-reels-long-press-quick-actions">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Instagram Reels' long-press quick actions - hold on a Reel and a compact radial cluster of action buttons springs in around your finger, each with a dynamic label.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA full-screen Reel playing (bold on-video text captions over the footage). Long-pressing anywhere summons a quick-actions cluster: small circular glass buttons (like, save, share, remix-style glyphs) fanning into a tight arc just above the press point, each with a tiny text label.\n\n## Motion spec\nPattern: long-press radial menu.\n- Long-press (hold ~250ms): the Reel dims slightly (opacity to 0.85) and the video's big caption words pause; a light haptic fires at menu open.\n- The cluster bursts in from the press point: each button scales from 0 with elastic overshoot (spring ~400/18, ~350ms settle), staggered 30ms apart along the arc; buttons land on a semicircle (radius ~72px, 5-7 items, 30deg apart).\n- Labels appear with their buttons: a one-word label under each icon fades/slides in (translateY 4px, 150ms) and can swap text contextually as the finger drags over options.\n- Drag to select: the hovered button grows (scale 1.15) and its label highlights; the others stay put.\n- Release on a button: it pops (scale 1.3, 150ms) with a confirmation haptic and the menu collapses back into the press point (scale to 0, staggered 15ms, 150ms) while the Reel undims.\n- Release off-menu: the cluster scatters out (same collapse, no haptic).\n\n## Calibration\n- The cluster must fit one-handed reach: keep the arc within a 90px radius of the press point.\n- Buttons are translucent dark glass over the video - never solid blocks.\n\n## Reduced motion\nMenu fades in fully formed; selection is a simple highlight.\n\n## Don't miss\n- The arc is anchored to where the finger actually pressed, not screen center.\n- The Reel keeps playing behind the dimmed state; the menu is an overlay, not a mode switch."</script>
+</body></html>

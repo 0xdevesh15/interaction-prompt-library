@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb New Intro Sequence - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb New Intro Sequence</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-new-intro-sequence"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-new-intro-sequence">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-new-intro-sequence">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Airbnb&#x27;s app intro sequence - the Airbnb logo fades in on a white screen, then a simulated device slides in showing &quot;Introducing experiences and services&quot; and auto-scrolls through feature rails (Airbnb Originals, Services in Mexico City, Popular homes) before the view zooms into the live app interface.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23dd7ce6c42e74b4960/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23dd7ce6c42e74b4960/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-new-intro-sequence.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Airbnb&#x27;s app intro sequence - the Airbnb logo fades in on a white screen, then a simulated device slides in showing &quot;Introducing experiences and services&quot; and auto-scrolls through feature rails (Airbnb Originals, Services in Mexico City, Popular homes) before the view zooms into the live app interface.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White intro screen with the Airbnb logo. Then a phone-framed preview under the heading &quot;Introducing experiences and services&quot; with a Skip button top-right. Inside the frame: the Airbnb home feed - tab strip (Homes / Experiences / Services), &quot;Airbnb Originals&quot; cards, &quot;Services in Mexico City&quot; rail, &quot;Photography&quot; rail, then &quot;In the all-new Airbnb app.&quot; heading with &quot;Popular homes in Mexico City&quot; and weekend availability rails.
+
+## Motion spec
+Pattern: sequenced feature showcase inside a device frame with zoom-out finish.
+- The logo fades in center (300ms), holds 600ms, then scales down and fades as the device frame slides up from below (spring ~260/20).
+- The heading &quot;Introducing experiences and services&quot; fades in above the frame (250ms).
+- The framed feed auto-scrolls: each rail slides in horizontally (350ms ease-out, 300ms apart) - Originals, Services, Photography - with cards fading up staggered (60ms).
+- The heading crossfades to &quot;In the all-new Airbnb app.&quot; (250ms) as the feed scrolls to homes rails (400ms ease-in-out).
+- Finale: the device frame expands and its screen content scales up to become the real interface (zoom 1.0 -&gt; 1.15, 450ms ease-in-out), the frame chrome fades, and the live tab strip and rails snap to interactive positions.
+
+## Calibration
+- Auto-scroll pacing is deliberate: each rail gets about a beat on screen before the next.
+- The zoom-out finish must land exactly on the live layout - no jump after the chrome fades.
+
+## Reduced motion
+Logo fades in, then the sequence skips straight to the live interface with a 300ms fade.
+
+## Don&#x27;t miss
+- The Skip button is visible the whole time the device frame is on screen.
+- The device frame has its own status bar content matching the simulated feed.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequenced feature showcase inside a device frame with zoom-out finish.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-new-intro-sequence">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Airbnb's app intro sequence - the Airbnb logo fades in on a white screen, then a simulated device slides in showing \"Introducing experiences and services\" and auto-scrolls through feature rails (Airbnb Originals, Services in Mexico City, Popular homes) before the view zooms into the live app interface.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite intro screen with the Airbnb logo. Then a phone-framed preview under the heading \"Introducing experiences and services\" with a Skip button top-right. Inside the frame: the Airbnb home feed - tab strip (Homes / Experiences / Services), \"Airbnb Originals\" cards, \"Services in Mexico City\" rail, \"Photography\" rail, then \"In the all-new Airbnb app.\" heading with \"Popular homes in Mexico City\" and weekend availability rails.\n\n## Motion spec\nPattern: sequenced feature showcase inside a device frame with zoom-out finish.\n- The logo fades in center (300ms), holds 600ms, then scales down and fades as the device frame slides up from below (spring ~260/20).\n- The heading \"Introducing experiences and services\" fades in above the frame (250ms).\n- The framed feed auto-scrolls: each rail slides in horizontally (350ms ease-out, 300ms apart) - Originals, Services, Photography - with cards fading up staggered (60ms).\n- The heading crossfades to \"In the all-new Airbnb app.\" (250ms) as the feed scrolls to homes rails (400ms ease-in-out).\n- Finale: the device frame expands and its screen content scales up to become the real interface (zoom 1.0 -> 1.15, 450ms ease-in-out), the frame chrome fades, and the live tab strip and rails snap to interactive positions.\n\n## Calibration\n- Auto-scroll pacing is deliberate: each rail gets about a beat on screen before the next.\n- The zoom-out finish must land exactly on the live layout - no jump after the chrome fades.\n\n## Reduced motion\nLogo fades in, then the sequence skips straight to the live interface with a 300ms fade.\n\n## Don't miss\n- The Skip button is visible the whole time the device frame is on screen.\n- The device frame has its own status bar content matching the simulated feed."</script>
+</body></html>

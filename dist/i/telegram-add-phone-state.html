@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram Add Phone State - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Telegram Add Phone State</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/telegram-add-phone-state"><b>Telegram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-add-phone-state">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-add-phone-state">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Telegram&#x27;s &quot;Your Phone&quot; registration screen - a red retro telephone illustration at the top idles and morphs through poses (rotary dial, handset lifting off the base) while the form below stays perfectly still.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb73371d29849d7bcec3/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb73371d29849d7bcec3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-telegram-add-phone-state.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Telegram&#x27;s &quot;Your Phone&quot; registration screen - a red retro telephone illustration at the top idles and morphs through poses (rotary dial, handset lifting off the base) while the form below stays perfectly still.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white registration screen: Cancel top-left, then a red retro telephone illustration, &quot;Your Phone&quot; title, helper copy, a country row with flag, a +code phone field, a Sync Contacts toggle, a disabled Continue button, and the numeric keypad docked at the bottom.
+
+## Motion spec
+Pattern: idle morphing illustration.
+- The telephone loops a small choreography: the rotary dial spins (rotate 25deg and back, 700ms, ease-in-out), the handset lifts off the cradle (translateY -8px + rotate -6deg, spring ~300/16) hovers a beat, and sets back down with a soft bounce (spring ~380/18, slight overshoot).
+- The whole illustration breathes between poses: scale 1 to 1.03 over 2s, holding the composition alive without distracting from the keypad.
+- Each pose change is a smooth vector morph, not a cut - dial, handset, and base paths interpolate (400ms, ease-in-out).
+- The keypad keys highlight on press (background gray-200, instant) and digits append to the field with a tiny pop (scale 1.08 settling to 1, 120ms); Continue enables with a fade from gray to black (200ms) once enough digits exist.
+- The screen itself entered with a standard right-to-left push (300ms).
+
+## Calibration
+- The illustration is flat red line-art (single accent red, no gradients); nothing else on screen uses the red except the phone field caret.
+- Idle animation pauses while the user types; it resumes 2s after the last keypress.
+
+## Reduced motion
+Static illustration; keypad and button states unchanged.
+
+## Don&#x27;t miss
+- The phone is a LANDLINE, not a smartphone glyph - rotary dial and curved handset are the character.
+- The illustration sits tight against the title; the animation never pushes layout (fixed bounding box, transforms only).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">idle morphing illustration.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/telegram-add-phone-state">original interaction</a> by Telegram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Telegram's \"Your Phone\" registration screen - a red retro telephone illustration at the top idles and morphs through poses (rotary dial, handset lifting off the base) while the form below stays perfectly still.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white registration screen: Cancel top-left, then a red retro telephone illustration, \"Your Phone\" title, helper copy, a country row with flag, a +code phone field, a Sync Contacts toggle, a disabled Continue button, and the numeric keypad docked at the bottom.\n\n## Motion spec\nPattern: idle morphing illustration.\n- The telephone loops a small choreography: the rotary dial spins (rotate 25deg and back, 700ms, ease-in-out), the handset lifts off the cradle (translateY -8px + rotate -6deg, spring ~300/16) hovers a beat, and sets back down with a soft bounce (spring ~380/18, slight overshoot).\n- The whole illustration breathes between poses: scale 1 to 1.03 over 2s, holding the composition alive without distracting from the keypad.\n- Each pose change is a smooth vector morph, not a cut - dial, handset, and base paths interpolate (400ms, ease-in-out).\n- The keypad keys highlight on press (background gray-200, instant) and digits append to the field with a tiny pop (scale 1.08 settling to 1, 120ms); Continue enables with a fade from gray to black (200ms) once enough digits exist.\n- The screen itself entered with a standard right-to-left push (300ms).\n\n## Calibration\n- The illustration is flat red line-art (single accent red, no gradients); nothing else on screen uses the red except the phone field caret.\n- Idle animation pauses while the user types; it resumes 2s after the last keypress.\n\n## Reduced motion\nStatic illustration; keypad and button states unchanged.\n\n## Don't miss\n- The phone is a LANDLINE, not a smartphone glyph - rotary dial and curved handset are the character.\n- The illustration sits tight against the title; the animation never pushes layout (fixed bounding box, transforms only)."</script>
+</body></html>

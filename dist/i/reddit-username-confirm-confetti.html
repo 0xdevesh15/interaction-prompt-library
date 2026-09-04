@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reddit Username Confirm Confetti - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Reddit Username Confirm Confetti</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/reddit-username-confirm-confetti"><b>Reddit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/reddit-username-confirm-confetti">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/reddit-username-confirm-confetti">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Reddit&#x27;s username confirm confetti - the &quot;Nice name, u/60fpsdesign!&quot; confirmation card pops in over the dimmed profile while branded confetti (Snoo heads and orange-pink shards) bursts from the top and rains down around it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b915e962df2301435d2d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b915e962df2301435d2d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-reddit-username-confirm-confetti.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Reddit&#x27;s username confirm confetti - the &quot;Nice name, u/60fpsdesign!&quot; confirmation card pops in over the dimmed profile while branded confetti (Snoo heads and orange-pink shards) bursts from the top and rains down around it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The dimmed Reddit profile (Snoo avatar, u/60fpsdesign handle, karma chips, menu rows) behind a centered white card: pink circular avatar, bold &quot;Nice name, u/60fpsdesign!&quot;, the caption &quot;May it serve you well.&quot;, and a full-width blue &quot;OK&quot; pill.
+
+## Motion spec
+Pattern: modal pop + celebratory particle rain.
+- The card pops in: scale 0.85 -&gt; 1 with fade, spring ~420/18 (small overshoot, 300ms) as the background dims (black 45%, 200ms).
+- At the same moment the confetti fires: a burst of particles - Snoo head icons, orange and pink rounded shards - spawns along the top edge (60-90 pieces) and falls with gravity.
+- Each particle tumbles (random spin +/-180deg/s) and sways (horizontal sine wobble, random phase) with slight size variance (0.6x-1.4x) for depth.
+- The fall lasts about 2.5s - particles fade out in their last 20% of travel below the card.
+- The card holds perfectly still through the rain - the celebration happens around it.
+
+## Calibration
+- Confetti density peaks in the first second - a burst, not a snowstorm.
+- Snoo pieces are the minority (about 1 in 6) - they read as Easter eggs among the shards.
+
+## Reduced motion
+Card fades in; no particles.
+
+## Don&#x27;t miss
+- Confetti falls in front of the dimmed profile but behind nothing - it passes over the card too.
+- The OK button is immediately tappable - the confetti never blocks the dismissal.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">modal pop + celebratory particle rain.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/reddit-username-confirm-confetti">original interaction</a> by Reddit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Reddit's username confirm confetti - the \"Nice name, u/60fpsdesign!\" confirmation card pops in over the dimmed profile while branded confetti (Snoo heads and orange-pink shards) bursts from the top and rains down around it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe dimmed Reddit profile (Snoo avatar, u/60fpsdesign handle, karma chips, menu rows) behind a centered white card: pink circular avatar, bold \"Nice name, u/60fpsdesign!\", the caption \"May it serve you well.\", and a full-width blue \"OK\" pill.\n\n## Motion spec\nPattern: modal pop + celebratory particle rain.\n- The card pops in: scale 0.85 -> 1 with fade, spring ~420/18 (small overshoot, 300ms) as the background dims (black 45%, 200ms).\n- At the same moment the confetti fires: a burst of particles - Snoo head icons, orange and pink rounded shards - spawns along the top edge (60-90 pieces) and falls with gravity.\n- Each particle tumbles (random spin +/-180deg/s) and sways (horizontal sine wobble, random phase) with slight size variance (0.6x-1.4x) for depth.\n- The fall lasts about 2.5s - particles fade out in their last 20% of travel below the card.\n- The card holds perfectly still through the rain - the celebration happens around it.\n\n## Calibration\n- Confetti density peaks in the first second - a burst, not a snowstorm.\n- Snoo pieces are the minority (about 1 in 6) - they read as Easter eggs among the shards.\n\n## Reduced motion\nCard fades in; no particles.\n\n## Don't miss\n- Confetti falls in front of the dimmed profile but behind nothing - it passes over the card too.\n- The OK button is immediately tappable - the confetti never blocks the dismissal."</script>
+</body></html>

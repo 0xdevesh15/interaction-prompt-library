@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Push Tab Switch Swipe Up Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Push Tab Switch Swipe Up Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/push-tab-switch-swipe-up-interaction"><b>Push</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/push-tab-switch-swipe-up-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/push-tab-switch-swipe-up-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Push&#x27;s vertical tab switch - swiping up on the workout dashboard slides the &quot;your history&quot; screen over it with a dynamic blur, and swiping down returns, both riding spring physics with velocity.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf475d44f5c916c11d2054/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf475d44f5c916c11d2054/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-push-tab-switch-swipe-up-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Push&#x27;s vertical tab switch - swiping up on the workout dashboard slides the &quot;your history&quot; screen over it with a dynamic blur, and swiping down returns, both riding spring physics with velocity.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light, minimal: the &quot;push&quot; dashboard (&quot;push-ups today&quot; ring card, stat tiles, &quot;this week&quot; day dots, &quot;start workout&quot; bar pinned bottom) and above it the &quot;your history&quot; screen (big lowercase title, empty-state caption), which covers the dashboard when raised.
+
+## Motion spec
+Pattern: vertical cover-flow tab switch with dynamic blur.
+- Swipe up: the history screen tracks the finger 1:1 as it slides up over the dashboard; the dashboard beneath blurs progressively (0 -&gt; 12px) and dims slightly as the cover rises.
+- Release: velocity-aware spring (~320/26) completes or reverses the transition - a fast flick commits even from 20% travel, a slow drag needs ~50%.
+- The history screen carries a small grabber notch at its top edge; the &quot;start workout&quot; bar stays pinned above everything, dimming to 60% while history is up.
+- Swipe down reverses: the blur unwinds with the drag, dashboard sharpening as the cover drops.
+
+## Calibration
+- The blur is the depth cue - it must track drag position continuously, never toggle.
+- Both screens stay live under the transition; no snapshotting artifacts.
+
+## Reduced motion
+Screens crossfade; no blur or tracking.
+
+## Don&#x27;t miss
+- The cover has a soft top-corner radius and a hairline shadow that deepens as it rises.
+- Scroll inside history only begins once the cover is fully up - gesture priority is unambiguous.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vertical cover-flow tab switch with dynamic blur.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/push-tab-switch-swipe-up-interaction">original interaction</a> by Push. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Push's vertical tab switch - swiping up on the workout dashboard slides the \"your history\" screen over it with a dynamic blur, and swiping down returns, both riding spring physics with velocity.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight, minimal: the \"push\" dashboard (\"push-ups today\" ring card, stat tiles, \"this week\" day dots, \"start workout\" bar pinned bottom) and above it the \"your history\" screen (big lowercase title, empty-state caption), which covers the dashboard when raised.\n\n## Motion spec\nPattern: vertical cover-flow tab switch with dynamic blur.\n- Swipe up: the history screen tracks the finger 1:1 as it slides up over the dashboard; the dashboard beneath blurs progressively (0 -> 12px) and dims slightly as the cover rises.\n- Release: velocity-aware spring (~320/26) completes or reverses the transition - a fast flick commits even from 20% travel, a slow drag needs ~50%.\n- The history screen carries a small grabber notch at its top edge; the \"start workout\" bar stays pinned above everything, dimming to 60% while history is up.\n- Swipe down reverses: the blur unwinds with the drag, dashboard sharpening as the cover drops.\n\n## Calibration\n- The blur is the depth cue - it must track drag position continuously, never toggle.\n- Both screens stay live under the transition; no snapshotting artifacts.\n\n## Reduced motion\nScreens crossfade; no blur or tracking.\n\n## Don't miss\n- The cover has a soft top-corner radius and a hairline shadow that deepens as it rises.\n- Scroll inside history only begins once the cover is fully up - gesture priority is unambiguous."</script>
+</body></html>

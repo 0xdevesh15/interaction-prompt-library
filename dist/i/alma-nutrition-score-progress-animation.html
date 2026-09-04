@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alma Nutrition Score Progress Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Alma Nutrition Score Progress Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/alma-nutrition-score-progress-animation"><b>Alma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alma-nutrition-score-progress-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alma-nutrition-score-progress-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Alma&#x27;s score reveal - the &quot;Balance your nutrition with the Alma Score&quot; screen enters with a circular progress ring drawing itself around the number 95 while nutrient cards (Nuts/Legumes, Fruits, Vegetables, Whole Grains) cascade in below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6914c54979556512262f3301/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6914c54979556512262f3301/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-alma-nutrition-score-progress-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Alma&#x27;s score reveal - the &quot;Balance your nutrition with the Alma Score&quot; screen enters with a circular progress ring drawing itself around the number 95 while nutrient cards (Nuts/Legumes, Fruits, Vegetables, Whole Grains) cascade in below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream onboarding screen: back chevron, serif headline &quot;Balance your nutrition with the Alma Score&quot; (Alma Score in italic), a large circular progress ring (yellow gradient arc) with &quot;95&quot; centered, then a 2x2 grid of white nutrient cards with small icons and labels, a faint extra row peeking below, and a dark Continue button.
+
+## Motion spec
+Pattern: ring draw + cascading card reveal, ~1.6s.
+- Ring: the arc sweeps clockwise from 0 to its value (900ms, ease-out) while the number counts 0 -&gt; 95 (900ms, ease-out, tabular digits); the ring has a soft glow that fades in with the arc.
+- Cards: the 2x2 grid cards cascade in (translateY 16px -&gt; 0 + fade, 300ms each, 90ms stagger, top-left first) after the ring starts (~400ms in).
+- Peek: a third row of ghosted cards slides up slightly at the bottom edge (250ms) to imply more content.
+- Continue: fades in last (200ms).
+
+## Calibration
+- The count and the arc stay in sync - the number hits 95 as the arc completes.
+- Cards are white with a hairline border and small colored icons; no shadows.
+
+## Reduced motion
+Ring, number, and cards appear with a single 250ms cross-fade.
+
+## Don&#x27;t miss
+- The arc is a warm yellow gradient, not a flat stroke.
+- The headline italicizes only &quot;Alma Score&quot; - keep the serif mix.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ring draw + cascading card reveal, ~1.6s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/alma-nutrition-score-progress-animation">original interaction</a> by Alma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Alma's score reveal - the \"Balance your nutrition with the Alma Score\" screen enters with a circular progress ring drawing itself around the number 95 while nutrient cards (Nuts/Legumes, Fruits, Vegetables, Whole Grains) cascade in below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream onboarding screen: back chevron, serif headline \"Balance your nutrition with the Alma Score\" (Alma Score in italic), a large circular progress ring (yellow gradient arc) with \"95\" centered, then a 2x2 grid of white nutrient cards with small icons and labels, a faint extra row peeking below, and a dark Continue button.\n\n## Motion spec\nPattern: ring draw + cascading card reveal, ~1.6s.\n- Ring: the arc sweeps clockwise from 0 to its value (900ms, ease-out) while the number counts 0 -> 95 (900ms, ease-out, tabular digits); the ring has a soft glow that fades in with the arc.\n- Cards: the 2x2 grid cards cascade in (translateY 16px -> 0 + fade, 300ms each, 90ms stagger, top-left first) after the ring starts (~400ms in).\n- Peek: a third row of ghosted cards slides up slightly at the bottom edge (250ms) to imply more content.\n- Continue: fades in last (200ms).\n\n## Calibration\n- The count and the arc stay in sync - the number hits 95 as the arc completes.\n- Cards are white with a hairline border and small colored icons; no shadows.\n\n## Reduced motion\nRing, number, and cards appear with a single 250ms cross-fade.\n\n## Don't miss\n- The arc is a warm yellow gradient, not a flat stroke.\n- The headline italicizes only \"Alma Score\" - keep the serif mix."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy IPO Story Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy IPO Story Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-ipo-story-interaction"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-ipo-story-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-ipo-story-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Swiggy&#x27;s IPO story - a vertical timeline of illustrated milestone cards (&quot;The birth of Swiggy!&quot;, &quot;We hit our millionth order!&quot;) where tapping the bell button card-slides to the next milestone, with a progress bar tracking the journey.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9b2e962df2301435f64/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9b2e962df2301435f64/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-ipo-story-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Swiggy&#x27;s IPO story - a vertical timeline of illustrated milestone cards (&quot;The birth of Swiggy!&quot;, &quot;We hit our millionth order!&quot;) where tapping the bell button card-slides to the next milestone, with a progress bar tracking the journey.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A cream story page (Swiggy logo top-center, back chevron top-left, share top-right). Each card is a full-bleed illustration with a caption: &quot;7th August, 2014 The birth of Swiggy!&quot;, &quot;2018: We hit our millionth order!&quot;, &quot;2018: We launched Swiggy Daily&quot;, &quot;August, 2020: The birth of Instamart!&quot;, &quot;2020: We launched Swiggy Genie&quot;, &quot;2022: Dineout became a part of the Swiggy universe&quot;, &quot;2023: We launched Pocket Hero&quot;, &quot;2024: Bolt, Swiggy XL Fleet&quot;. Bottom controls: red circular back arrow left, bell button center, thin orange progress bar at the very bottom.
+
+## Motion spec
+Pattern: tap-driven story pagination.
+- Tap the bell: it rings (rotate -18deg -&gt; 14deg -&gt; 0, 300ms) and the current card slides up and out while the next card slides up from below (300ms, ease-out, cards passing with a slight scale-down on the exiting one).
+- The caption text (date + line) staggers in after the card lands: date first, line 100ms later (fade + translateY 10pt).
+- The progress bar fills left-to-right proportionally to the milestone index (animated 300ms per step).
+- Back arrow steps to the previous card with the reverse slide (cards move down).
+- The illustrations have a light internal parallax on entry (foreground elements lag the card by ~60ms).
+
+## Calibration
+- Card transition is one direction per intent: up = forward, down = back - never horizontal.
+- The bell ring fires before the slide starts - cause, then effect.
+
+## Reduced motion
+Cards crossfade; progress bar steps instantly; no bell ring.
+
+## Don&#x27;t miss
+- The bell is the only forward control - it stays center-bottom and pulses gently (scale 1 -&gt; 1.06, 2s) when idle for &gt;3s.
+- Last milestone swaps the bell for the confetti/IPO finale state.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-driven story pagination.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-ipo-story-interaction">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Swiggy's IPO story - a vertical timeline of illustrated milestone cards (\"The birth of Swiggy!\", \"We hit our millionth order!\") where tapping the bell button card-slides to the next milestone, with a progress bar tracking the journey.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA cream story page (Swiggy logo top-center, back chevron top-left, share top-right). Each card is a full-bleed illustration with a caption: \"7th August, 2014 The birth of Swiggy!\", \"2018: We hit our millionth order!\", \"2018: We launched Swiggy Daily\", \"August, 2020: The birth of Instamart!\", \"2020: We launched Swiggy Genie\", \"2022: Dineout became a part of the Swiggy universe\", \"2023: We launched Pocket Hero\", \"2024: Bolt, Swiggy XL Fleet\". Bottom controls: red circular back arrow left, bell button center, thin orange progress bar at the very bottom.\n\n## Motion spec\nPattern: tap-driven story pagination.\n- Tap the bell: it rings (rotate -18deg -> 14deg -> 0, 300ms) and the current card slides up and out while the next card slides up from below (300ms, ease-out, cards passing with a slight scale-down on the exiting one).\n- The caption text (date + line) staggers in after the card lands: date first, line 100ms later (fade + translateY 10pt).\n- The progress bar fills left-to-right proportionally to the milestone index (animated 300ms per step).\n- Back arrow steps to the previous card with the reverse slide (cards move down).\n- The illustrations have a light internal parallax on entry (foreground elements lag the card by ~60ms).\n\n## Calibration\n- Card transition is one direction per intent: up = forward, down = back - never horizontal.\n- The bell ring fires before the slide starts - cause, then effect.\n\n## Reduced motion\nCards crossfade; progress bar steps instantly; no bell ring.\n\n## Don't miss\n- The bell is the only forward control - it stays center-bottom and pulses gently (scale 1 -> 1.06, 2s) when idle for >3s.\n- Last milestone swaps the bell for the confetti/IPO finale state."</script>
+</body></html>

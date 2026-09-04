@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brilliant Streak Pulse Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Brilliant Streak Pulse Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/brilliant-streak-pulse-animation"><b>Brilliant</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-streak-pulse-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-streak-pulse-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Brilliant&#x27;s streak explainer - the mascot pulses above a counter that climbs day by day, then morphs to a cracked state as the copy flips to the reset warning.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec024f936951f1cb7db2a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec024f936951f1cb7db2a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-brilliant-streak-pulse-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Brilliant&#x27;s streak explainer - the mascot pulses above a counter that climbs day by day, then morphs to a cracked state as the copy flips to the reset warning.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Onboarding card: the green rounded mascot centered, a yellow streak number with a small lightning bolt below it, explainer copy (&quot;A streak counts how many days you&#x27;ve practiced in a row.&quot; then &quot;Miss a day and your streak resets to 0.&quot;), page dots, and a dark Continue button.
+
+## Motion spec
+Pattern: pulsing auto-play counter with morph, ~4s.
+- The mascot pulses gently (scale 1 to 1.06 and back, 900ms loop) as the streak number increments one day at a time (1, 4, 7, 10, 13, 17, 20 - each step a quick pop: scale 1.3 to 1 in 200ms, 350ms apart).
+- On each increment the mascot&#x27;s glow swells with the number&#x27;s pop.
+- At 20 the mascot flashes and morphs to a cracked, desaturated state (300ms crossfade with a small shake, +-2deg) as the number resets to 0 with a downward drop (200ms, ease-in).
+- The copy crossfades to the reset warning (250ms) as the morph completes.
+- Page dots and Continue are static throughout.
+
+## Calibration
+- Number steps pop individually - this is counting, not a smooth roll.
+- The morph is the lesson&#x27;s turn: it must read as loss (desaturate + crack), not just a state swap.
+
+## Reduced motion
+Counter steps without pops; morph becomes a plain crossfade.
+
+## Don&#x27;t miss
+- The yellow number carries a tiny lightning bolt superscript.
+- The mascot&#x27;s happy expression disappears with the morph - face changes with the body.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">pulsing auto-play counter with morph, ~4s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/brilliant-streak-pulse-animation">original interaction</a> by Brilliant. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Brilliant's streak explainer - the mascot pulses above a counter that climbs day by day, then morphs to a cracked state as the copy flips to the reset warning.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOnboarding card: the green rounded mascot centered, a yellow streak number with a small lightning bolt below it, explainer copy (\"A streak counts how many days you've practiced in a row.\" then \"Miss a day and your streak resets to 0.\"), page dots, and a dark Continue button.\n\n## Motion spec\nPattern: pulsing auto-play counter with morph, ~4s.\n- The mascot pulses gently (scale 1 to 1.06 and back, 900ms loop) as the streak number increments one day at a time (1, 4, 7, 10, 13, 17, 20 - each step a quick pop: scale 1.3 to 1 in 200ms, 350ms apart).\n- On each increment the mascot's glow swells with the number's pop.\n- At 20 the mascot flashes and morphs to a cracked, desaturated state (300ms crossfade with a small shake, +-2deg) as the number resets to 0 with a downward drop (200ms, ease-in).\n- The copy crossfades to the reset warning (250ms) as the morph completes.\n- Page dots and Continue are static throughout.\n\n## Calibration\n- Number steps pop individually - this is counting, not a smooth roll.\n- The morph is the lesson's turn: it must read as loss (desaturate + crack), not just a state swap.\n\n## Reduced motion\nCounter steps without pops; morph becomes a plain crossfade.\n\n## Don't miss\n- The yellow number carries a tiny lightning bolt superscript.\n- The mascot's happy expression disappears with the morph - face changes with the body."</script>
+</body></html>

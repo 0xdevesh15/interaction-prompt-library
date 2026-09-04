@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oura Splash Text Sweep Reveal Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Oura Splash Text Sweep Reveal Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/oura-splash-text-sweep-reveal-animation"><b>Oura</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/oura-splash-text-sweep-reveal-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/oura-splash-text-sweep-reveal-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Oura&#x27;s splash - the ring logo holds on black, then a lifestyle photo crossfades in and a light bar sweeps across to reveal the tagline before the brand mark and buttons arrive.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d5372779cd218090c89a41/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d5372779cd218090c89a41/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-oura-splash-text-sweep-reveal-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Oura&#x27;s splash - the ring logo holds on black, then a lifestyle photo crossfades in and a light bar sweeps across to reveal the tagline before the brand mark and buttons arrive.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-bleed splash: opens black with the thin white &quot;ō&quot; ring mark center; then a lifestyle photo (teal backdrop, a hand wearing the ring) fills the screen; the tagline &quot;Personal insights empower your everyday.&quot; sits mid-left, the OURA wordmark appears top-left, and frosted pill buttons rise at the bottom.
+
+## Motion spec
+Pattern: photo crossfade with a sweeping mask-bar text reveal.
+- The ō mark fades out (300ms) as the photo crossfades in (500ms, ease-in-out) with a slow Ken Burns settle (scale 1.06 -&gt; 1, 2s).
+- A white bar sweeps left to right across the tagline line (300ms, ease-in-out), and the tagline text wipes in behind it - the bar is the mask&#x27;s leading edge, so the words appear exactly where the bar has passed.
+- The OURA wordmark fades in top-left (300ms) once the sweep completes.
+- The bottom buttons rise (translateY 30 -&gt; 0, spring ~320/20) and frost in (backdrop blur ramps 0 -&gt; full, 300ms) in sequence with 100ms stagger.
+
+## Calibration
+- The sweep bar is pure white and tall enough to cover the tagline&#x27;s cap height; it reads as a scan, not a divider.
+- The photo stays dim enough that white text reads at full contrast.
+
+## Reduced motion
+Photo fades in; tagline fades in whole (300ms); no sweep or Ken Burns.
+
+## Don&#x27;t miss
+- The bar leads the text by zero pixels - text revealed behind it is visible the instant the bar passes.
+- Buttons arrive after copy, never before - the eye goes logo, photo, tagline, actions.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">photo crossfade with a sweeping mask-bar text reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/oura-splash-text-sweep-reveal-animation">original interaction</a> by Oura. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Oura's splash - the ring logo holds on black, then a lifestyle photo crossfades in and a light bar sweeps across to reveal the tagline before the brand mark and buttons arrive.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-bleed splash: opens black with the thin white \"\u014d\" ring mark center; then a lifestyle photo (teal backdrop, a hand wearing the ring) fills the screen; the tagline \"Personal insights empower your everyday.\" sits mid-left, the OURA wordmark appears top-left, and frosted pill buttons rise at the bottom.\n\n## Motion spec\nPattern: photo crossfade with a sweeping mask-bar text reveal.\n- The \u014d mark fades out (300ms) as the photo crossfades in (500ms, ease-in-out) with a slow Ken Burns settle (scale 1.06 -> 1, 2s).\n- A white bar sweeps left to right across the tagline line (300ms, ease-in-out), and the tagline text wipes in behind it - the bar is the mask's leading edge, so the words appear exactly where the bar has passed.\n- The OURA wordmark fades in top-left (300ms) once the sweep completes.\n- The bottom buttons rise (translateY 30 -> 0, spring ~320/20) and frost in (backdrop blur ramps 0 -> full, 300ms) in sequence with 100ms stagger.\n\n## Calibration\n- The sweep bar is pure white and tall enough to cover the tagline's cap height; it reads as a scan, not a divider.\n- The photo stays dim enough that white text reads at full contrast.\n\n## Reduced motion\nPhoto fades in; tagline fades in whole (300ms); no sweep or Ken Burns.\n\n## Don't miss\n- The bar leads the text by zero pixels - text revealed behind it is visible the instant the bar passes.\n- Buttons arrive after copy, never before - the eye goes logo, photo, tagline, actions."</script>
+</body></html>

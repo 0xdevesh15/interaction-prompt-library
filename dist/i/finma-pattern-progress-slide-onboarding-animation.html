@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finma Pattern Progress Slide Onboarding Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Finma Pattern Progress Slide Onboarding Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/finma-pattern-progress-slide-onboarding-animation"><b>Finma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-pattern-progress-slide-onboarding-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-pattern-progress-slide-onboarding-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Finma&#x27;s Spot the Patterns transition - the floating category bubbles of &quot;Where&#x27;s my money going?&quot; collapse into the single pink Restaurants bubble (shared element), which rides to the top of the &quot;Spot the Patterns&quot; page as staggered horizontal red bars grow beneath it into a monthly chart.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f283a3162ff378ad5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f283a3162ff378ad5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-finma-pattern-progress-slide-onboarding-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Finma&#x27;s Spot the Patterns transition - the floating category bubbles of &quot;Where&#x27;s my money going?&quot; collapse into the single pink Restaurants bubble (shared element), which rides to the top of the &quot;Spot the Patterns&quot; page as staggered horizontal red bars grow beneath it into a monthly chart.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark onboarding. Page 1 &quot;Where&#x27;s my money going?&quot;: floating colored bubbles with amounts (pink &quot;Restaurants $108&quot;, purple &quot;Travel $234&quot;, yellow, green &quot;Groceries $123&quot;) drifting with small icons. Page 2 &quot;Spot the Patterns&quot;: the pink Restaurants bubble ($108) anchored at top, and below it a chart of horizontal red bars (months Jan-Dec) of varying widths with value labels. Title, &quot;See how your spendings change over time, identify patterns and create budgets to limit your spending&quot; subcopy, pager, gradient Next pill.
+
+## Motion spec
+Pattern: shared-element bubble with staggered bar growth.
+- Advance: the non-pink bubbles scatter outward and fade (translate away radially, 300ms, 30ms stagger) while the pink Restaurants bubble travels to the top-center slot (arc, spring ~300/20, 400ms) and shrinks slightly (scale 0.85).
+- The page title/subcopy crossfade in place (200ms).
+- Bars: each month&#x27;s red bar grows from zero width (600ms, ease-out) in a top-to-bottom stagger (50ms apart), its value label fading in at the bar&#x27;s end when growth completes (150ms).
+- The bubble gently bobs after landing (translateY +-3pt, 3s loop).
+- Back: bars shrink away (reverse stagger, 300ms) and the bubbles regather (springs, 400ms).
+
+## Calibration
+- The pink bubble is visually identical on both pages - one element, two homes.
+- Bars are all the same red; length carries the data.
+
+## Reduced motion
+Pages crossfade (250ms); bars appear fully grown.
+
+## Don&#x27;t miss
+- The bubble keeps &quot;$108&quot; legible through the flight - it never flips or spins.
+- The bar stagger is quick enough to read as one wave, not twelve events.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element bubble with staggered bar growth.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/finma-pattern-progress-slide-onboarding-animation">original interaction</a> by Finma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Finma's Spot the Patterns transition - the floating category bubbles of \"Where's my money going?\" collapse into the single pink Restaurants bubble (shared element), which rides to the top of the \"Spot the Patterns\" page as staggered horizontal red bars grow beneath it into a monthly chart.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark onboarding. Page 1 \"Where's my money going?\": floating colored bubbles with amounts (pink \"Restaurants $108\", purple \"Travel $234\", yellow, green \"Groceries $123\") drifting with small icons. Page 2 \"Spot the Patterns\": the pink Restaurants bubble ($108) anchored at top, and below it a chart of horizontal red bars (months Jan-Dec) of varying widths with value labels. Title, \"See how your spendings change over time, identify patterns and create budgets to limit your spending\" subcopy, pager, gradient Next pill.\n\n## Motion spec\nPattern: shared-element bubble with staggered bar growth.\n- Advance: the non-pink bubbles scatter outward and fade (translate away radially, 300ms, 30ms stagger) while the pink Restaurants bubble travels to the top-center slot (arc, spring ~300/20, 400ms) and shrinks slightly (scale 0.85).\n- The page title/subcopy crossfade in place (200ms).\n- Bars: each month's red bar grows from zero width (600ms, ease-out) in a top-to-bottom stagger (50ms apart), its value label fading in at the bar's end when growth completes (150ms).\n- The bubble gently bobs after landing (translateY +-3pt, 3s loop).\n- Back: bars shrink away (reverse stagger, 300ms) and the bubbles regather (springs, 400ms).\n\n## Calibration\n- The pink bubble is visually identical on both pages - one element, two homes.\n- Bars are all the same red; length carries the data.\n\n## Reduced motion\nPages crossfade (250ms); bars appear fully grown.\n\n## Don't miss\n- The bubble keeps \"$108\" legible through the flight - it never flips or spins.\n- The bar stagger is quick enough to read as one wave, not twelve events."</script>
+</body></html>

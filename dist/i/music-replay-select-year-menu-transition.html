@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Music Replay Select Year Menu Transition - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Music Replay Select Year Menu Transition</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/music-replay-select-year-menu-transition"><b>Music</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/music-replay-select-year-menu-transition">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/music-replay-select-year-menu-transition">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Music Replay&#x27;s year picker - from the Replay intro card, the view transitions to a year-selection menu where giant typographic years (&#x27;24, &#x27;23, &#x27;22) stack vertically over a soft aurora gradient, with the focused year at full opacity and the others ghosted.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67133faabf3ce1dd7e387861/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67133faabf3ce1dd7e387861/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-music-replay-select-year-menu-transition.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Music Replay&#x27;s year picker - from the Replay intro card, the view transitions to a year-selection menu where giant typographic years (&#x27;24, &#x27;23, &#x27;22) stack vertically over a soft aurora gradient, with the focused year at full opacity and the others ghosted.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A Safari web view (replay.music.apple.com). Intro: blue-green gradient card with &quot;Replay your year in music.&quot; and a Play Your Highlight Reel button. Menu state: an X close button top-left, &quot;Select a year to see your listening&quot; header, and the huge year list filling the screen over a warm aurora gradient (blue, orange, green fields).
+
+## Motion spec
+Pattern: view transition + staggered oversized type reveal.
+- The intro card slides down and fades (translateY +60px, opacity -&gt; 0, 250ms, ease-in) as the aurora gradient blooms behind it (scale 1.1 -&gt; 1, opacity 0 -&gt; 1, 400ms).
+- The header (&quot;Select a year...&quot;) fades in first (200ms), then the years stagger in from below: each year slides up (translateY 40px -&gt; 0, 350ms, ease-out) with 80ms between them, &#x27;24 first, then &#x27;23, then &#x27;22.
+- Year type is enormous (roughly a third of the viewport height per row) with an apostrophe prefix; the current/default year sits at 100% opacity, the others at ~30%.
+- Scrolling the list shifts the opacity hierarchy: the centered year eases to full opacity (250ms) as its neighbors fade back.
+- Tap a year: it pulses (scale 1 -&gt; 1.03 -&gt; 1, 200ms) before the view transitions on.
+
+## Calibration
+- The gradient drifts very slowly (hue shift over ~10s) - alive, but sub-perceptual.
+- Opacity does the hierarchy work - no size change between focused and ghosted years.
+
+## Reduced motion
+Years appear without stagger; gradient static.
+
+## Don&#x27;t miss
+- The years use an apostrophe abbreviation (&#x27;24, not 2024) set at poster scale.
+- The ghosted years stay readable - 30% opacity, never below.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">view transition + staggered oversized type reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/music-replay-select-year-menu-transition">original interaction</a> by Music. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Music Replay's year picker - from the Replay intro card, the view transitions to a year-selection menu where giant typographic years ('24, '23, '22) stack vertically over a soft aurora gradient, with the focused year at full opacity and the others ghosted.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA Safari web view (replay.music.apple.com). Intro: blue-green gradient card with \"Replay your year in music.\" and a Play Your Highlight Reel button. Menu state: an X close button top-left, \"Select a year to see your listening\" header, and the huge year list filling the screen over a warm aurora gradient (blue, orange, green fields).\n\n## Motion spec\nPattern: view transition + staggered oversized type reveal.\n- The intro card slides down and fades (translateY +60px, opacity -> 0, 250ms, ease-in) as the aurora gradient blooms behind it (scale 1.1 -> 1, opacity 0 -> 1, 400ms).\n- The header (\"Select a year...\") fades in first (200ms), then the years stagger in from below: each year slides up (translateY 40px -> 0, 350ms, ease-out) with 80ms between them, '24 first, then '23, then '22.\n- Year type is enormous (roughly a third of the viewport height per row) with an apostrophe prefix; the current/default year sits at 100% opacity, the others at ~30%.\n- Scrolling the list shifts the opacity hierarchy: the centered year eases to full opacity (250ms) as its neighbors fade back.\n- Tap a year: it pulses (scale 1 -> 1.03 -> 1, 200ms) before the view transitions on.\n\n## Calibration\n- The gradient drifts very slowly (hue shift over ~10s) - alive, but sub-perceptual.\n- Opacity does the hierarchy work - no size change between focused and ghosted years.\n\n## Reduced motion\nYears appear without stagger; gradient static.\n\n## Don't miss\n- The years use an apostrophe abbreviation ('24, not 2024) set at poster scale.\n- The ghosted years stay readable - 30% opacity, never below."</script>
+</body></html>

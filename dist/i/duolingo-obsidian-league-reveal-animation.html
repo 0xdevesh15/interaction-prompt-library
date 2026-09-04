@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Obsidian League Reveal Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Obsidian League Reveal Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-obsidian-league-reveal-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-obsidian-league-reveal-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-obsidian-league-reveal-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s Obsidian League reveal - the leaderboard slides away, the pink trophy steps aside, and the obsidian trophy materializes with a glow and confetti as &quot;You moved up to the Obsidian League!&quot; lands.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adefefcd4a3cfd5419b241/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adefefcd4a3cfd5419b241/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-obsidian-league-reveal-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s Obsidian League reveal - the leaderboard slides away, the pink trophy steps aside, and the obsidian trophy materializes with a glow and confetti as &quot;You moved up to the Obsidian League!&quot; lands.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The weekly results screen (&quot;Congratulations! You finished #4 last week&quot;, ranked list, CONTINUE) with a trio of league trophies on top. The reveal stage centers one pedestal slot between the pink and grey trophies.
+
+## Motion spec
+Pattern: multi-stage trophy reveal, ~2.2s.
+- Exit: the list and copy slide down and fade (350ms) leaving the trophy stage.
+- Setup: the pink trophy slides left and dims (300ms) as a grey silhouette with a lock sits center.
+- Materialize: the silhouette flashes (100ms) and the obsidian trophy scales in (spring ~380/16, 450ms) with a bright outline glow that sweeps its edge (300ms) and confetti bursting from behind (20 pieces, 700ms, gravity).
+- Copy: &quot;You moved up to the Obsidian League!&quot; fades up 10px (300ms); CONTINUE slides up (300ms, +100ms).
+- Idle: the trophy holds a slow glow pulse (2.5s).
+
+## Calibration
+- Confetti emits behind the trophy, not over its face.
+- The lock silhouette is visible long enough to register (~400ms) before the flash.
+
+## Reduced motion
+The obsidian trophy fades in; no confetti.
+
+## Don&#x27;t miss
+- The reveal is a transformation in place - no new trophy slides in from off-screen.
+- The glow sweeps the outline once, then settles into the idle pulse.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">multi-stage trophy reveal, ~2.2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-obsidian-league-reveal-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's Obsidian League reveal - the leaderboard slides away, the pink trophy steps aside, and the obsidian trophy materializes with a glow and confetti as \"You moved up to the Obsidian League!\" lands.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe weekly results screen (\"Congratulations! You finished #4 last week\", ranked list, CONTINUE) with a trio of league trophies on top. The reveal stage centers one pedestal slot between the pink and grey trophies.\n\n## Motion spec\nPattern: multi-stage trophy reveal, ~2.2s.\n- Exit: the list and copy slide down and fade (350ms) leaving the trophy stage.\n- Setup: the pink trophy slides left and dims (300ms) as a grey silhouette with a lock sits center.\n- Materialize: the silhouette flashes (100ms) and the obsidian trophy scales in (spring ~380/16, 450ms) with a bright outline glow that sweeps its edge (300ms) and confetti bursting from behind (20 pieces, 700ms, gravity).\n- Copy: \"You moved up to the Obsidian League!\" fades up 10px (300ms); CONTINUE slides up (300ms, +100ms).\n- Idle: the trophy holds a slow glow pulse (2.5s).\n\n## Calibration\n- Confetti emits behind the trophy, not over its face.\n- The lock silhouette is visible long enough to register (~400ms) before the flash.\n\n## Reduced motion\nThe obsidian trophy fades in; no confetti.\n\n## Don't miss\n- The reveal is a transformation in place - no new trophy slides in from off-screen.\n- The glow sweeps the outline once, then settles into the idle pulse."</script>
+</body></html>

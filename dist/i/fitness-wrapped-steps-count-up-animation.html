@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fitness Wrapped Steps Count Up Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fitness Wrapped Steps Count Up Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fitness-wrapped-steps-count-up-animation"><b>Fitness</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fitness-wrapped-steps-count-up-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fitness-wrapped-steps-count-up-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: a fitness wrapped recap card - a huge neon-green step count rolls up in a blurred ticker animation, sharpens on the final number, then supporting text fades in below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676813eb8f5e80dcc0b1a238/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676813eb8f5e80dcc0b1a238/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fitness-wrapped-steps-count-up-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: a fitness wrapped recap card - a huge neon-green step count rolls up in a blurred ticker animation, sharpens on the final number, then supporting text fades in below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark story-style card with a faint green radial glow and a close X at top right. Header text reads &quot;Keep on walking. Every step counts.&quot; Below it, a giant neon-green number ticks upward in a blur (&quot;4,50,108&quot; to &quot;11,12,80&quot; in motion) and lands sharp on &quot;15,04,232&quot;. Then a &quot;Total Steps&quot; label and supporting line fade in: &quot;That&#x27;s 752 miles, or walking around Central Park 123 times.&quot;
+
+## Motion spec
+Pattern: blurred count-up ticker, ~3s total.
+- The header fades in first (300ms).
+- The counter starts at 0 and rolls up over 1.8s (ease-out): digits change rapidly with a vertical motion blur that scales with the count speed - heavy blur mid-roll, sharpening as it decelerates.
+- The number lands with a subtle settle (scale 1.04 to 1, 150ms) and full sharpness on the final formatted value (Indian digit grouping: 15,04,232).
+- &quot;Total Steps&quot; fades in 200ms after landing, the supporting line 250ms later (both 300ms fades with an 8px rise).
+
+## Calibration
+- The blur is directional (vertical) and tied to digit velocity - a ticker, not a glow.
+- The final number holds perfectly still; the life is in the roll.
+
+## Reduced motion
+Number fades in at its final value.
+
+## Don&#x27;t miss
+- The count uses Indian locale grouping (lakh-style commas), not Western thousands.
+- The header never moves; only the number and the lines below it animate.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">blurred count-up ticker, ~3s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fitness-wrapped-steps-count-up-animation">original interaction</a> by Fitness. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: a fitness wrapped recap card - a huge neon-green step count rolls up in a blurred ticker animation, sharpens on the final number, then supporting text fades in below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark story-style card with a faint green radial glow and a close X at top right. Header text reads \"Keep on walking. Every step counts.\" Below it, a giant neon-green number ticks upward in a blur (\"4,50,108\" to \"11,12,80\" in motion) and lands sharp on \"15,04,232\". Then a \"Total Steps\" label and supporting line fade in: \"That's 752 miles, or walking around Central Park 123 times.\"\n\n## Motion spec\nPattern: blurred count-up ticker, ~3s total.\n- The header fades in first (300ms).\n- The counter starts at 0 and rolls up over 1.8s (ease-out): digits change rapidly with a vertical motion blur that scales with the count speed - heavy blur mid-roll, sharpening as it decelerates.\n- The number lands with a subtle settle (scale 1.04 to 1, 150ms) and full sharpness on the final formatted value (Indian digit grouping: 15,04,232).\n- \"Total Steps\" fades in 200ms after landing, the supporting line 250ms later (both 300ms fades with an 8px rise).\n\n## Calibration\n- The blur is directional (vertical) and tied to digit velocity - a ticker, not a glow.\n- The final number holds perfectly still; the life is in the roll.\n\n## Reduced motion\nNumber fades in at its final value.\n\n## Don't miss\n- The count uses Indian locale grouping (lakh-style commas), not Western thousands.\n- The header never moves; only the number and the lines below it animate."</script>
+</body></html>

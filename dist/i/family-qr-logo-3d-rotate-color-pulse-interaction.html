@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family QR Logo 3D Rotate Color Pulse Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family QR Logo 3D Rotate Color Pulse Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-qr-logo-3d-rotate-color-pulse-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-qr-logo-3d-rotate-color-pulse-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-qr-logo-3d-rotate-color-pulse-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s QR showcase loop - on the &quot;Receive&quot; screen, the customized QR code runs an automatic looping animation: the center logo flips in 3D (rotating around its vertical axis), the QR&#x27;s corner finder squares cycle through vibrant colors, and a color pulse sweeps across the code, all while the QR gently scales in a breathing pulse.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f927c84c6b7e105ce009/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f927c84c6b7e105ce009/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-qr-logo-3d-rotate-color-pulse-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s QR showcase loop - on the &quot;Receive&quot; screen, the customized QR code runs an automatic looping animation: the center logo flips in 3D (rotating around its vertical axis), the QR&#x27;s corner finder squares cycle through vibrant colors, and a color pulse sweeps across the code, all while the QR gently scales in a breathing pulse.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black &quot;Receive&quot; screen: a QR code (&quot;60fps&quot; label above, colorful dot strip below) with rounded finder squares, a center logo, and three action buttons at the bottom.
+
+## Motion spec
+Pattern: looping 3D logo flip with color cycling and pulse.
+- The center logo rotates around its vertical axis (rotateY 0 -&gt; 360deg, 2s, ease-in-out), revealing a different colored face/logo on the back, then flips again on the next cycle.
+- The three finder squares cycle hues in sequence (top-left -&gt; top-right -&gt; bottom-left, each stepping through red/orange/purple/blue/green, 250ms per color step, crossfading).
+- A color pulse sweeps outward from the logo across the modules (a wave of the accent hue passing over the dots, ~800ms per sweep) timed to each logo flip.
+- The whole QR breathes (scale 1 -&gt; 1.02 -&gt; 1, 2s loop) in sync with the flip.
+- The loop repeats indefinitely; the action buttons and labels stay static.
+
+## Calibration
+- The flip has real perspective (slight skew and shading at 90deg) - not a flat mirror.
+- Module dots stay dark throughout; only finder squares and the sweep carry color.
+
+## Reduced motion
+Static QR with the default logo face and finder colors.
+
+## Don&#x27;t miss
+- The logo flip and the color pulse are phase-locked - the sweep starts at the logo as it turns.
+- Finder-square colors cycle in order around the code, never randomly.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping 3D logo flip with color cycling and pulse.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-qr-logo-3d-rotate-color-pulse-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's QR showcase loop - on the \"Receive\" screen, the customized QR code runs an automatic looping animation: the center logo flips in 3D (rotating around its vertical axis), the QR's corner finder squares cycle through vibrant colors, and a color pulse sweeps across the code, all while the QR gently scales in a breathing pulse.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack \"Receive\" screen: a QR code (\"60fps\" label above, colorful dot strip below) with rounded finder squares, a center logo, and three action buttons at the bottom.\n\n## Motion spec\nPattern: looping 3D logo flip with color cycling and pulse.\n- The center logo rotates around its vertical axis (rotateY 0 -> 360deg, 2s, ease-in-out), revealing a different colored face/logo on the back, then flips again on the next cycle.\n- The three finder squares cycle hues in sequence (top-left -> top-right -> bottom-left, each stepping through red/orange/purple/blue/green, 250ms per color step, crossfading).\n- A color pulse sweeps outward from the logo across the modules (a wave of the accent hue passing over the dots, ~800ms per sweep) timed to each logo flip.\n- The whole QR breathes (scale 1 -> 1.02 -> 1, 2s loop) in sync with the flip.\n- The loop repeats indefinitely; the action buttons and labels stay static.\n\n## Calibration\n- The flip has real perspective (slight skew and shading at 90deg) - not a flat mirror.\n- Module dots stay dark throughout; only finder squares and the sweep carry color.\n\n## Reduced motion\nStatic QR with the default logo face and finder colors.\n\n## Don't miss\n- The logo flip and the color pulse are phase-locked - the sweep starts at the logo as it turns.\n- Finder-square colors cycle in order around the code, never randomly."</script>
+</body></html>

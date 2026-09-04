@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waterllama Goal Finished Celebration - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Waterllama Goal Finished Celebration</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/waterllama-goal-finished-celebration"><b>Waterllama</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waterllama-goal-finished-celebration">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waterllama-goal-finished-celebration">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Waterllama&#x27;s goal-finished celebration - confetti rains as the llama mascot reveals rainbow-striped leggings, then a share card and a staggered share sheet follow.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7ad99371d29849d8c42f8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7ad99371d29849d8c42f8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-waterllama-goal-finished-celebration.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Waterllama&#x27;s goal-finished celebration - confetti rains as the llama mascot reveals rainbow-striped leggings, then a share card and a staggered share sheet follow.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Home with the full llama (teal body, 1860ml) transitions into the celebration screen: &quot;Lucid Saturday!&quot; header, confetti falling over the mascot, and a black &quot;CELEBRATE YOUR DAY&quot; pill. Mid-celebration the llama&#x27;s legs morph to reveal rainbow-striped socks. A share card (&quot;MY lucid SATURDAY&quot;, mascot, 2110ml badge) and a share sheet (iMessage, Messenger, Instagram, Facebook, More) complete the flow.
+
+## Motion spec
+Pattern: confetti + mascot morph + staggered share sheet.
+- Trigger: the header (&quot;Lucid Saturday!&quot;) drops in (translateY -20px + fade, spring ~360/22) as confetti begins - 80-120 pieces spawning above the viewport, falling with per-piece rotation, horizontal sway (sine, +-20px), and varied fall speeds (2.5-4.5s to bottom), in the app&#x27;s teal/yellow/pink palette.
+- The mascot morph: the llama&#x27;s plain legs wiggle (rotate +-3deg, 2 cycles, 300ms) then the rainbow stripes wipe upward onto each leg (250ms per leg, staggered 80ms hoof-up) - a reveal, not a swap; the llama does a happy hop once (translateY -14px, spring ~340/16) as the last stripe lands.
+- The &quot;CELEBRATE YOUR DAY&quot; pill slides up (spring ~380/24) 200ms after the header.
+- Share card: the scene compresses into a card (bounds spring ~340/22, 400ms) with the big title typing-scale pop (scale 0.9 to 1, spring ~400/20).
+- Share sheet: slides up (spring ~360/28), its five rows staggering in bottom-up (translateY 20px + fade, 220ms each, 60ms apart), each row a soft pastel pill with its service icon.
+
+## Calibration
+- Confetti persists at low density behind everything until the sheet is dismissed - it&#x27;s a celebration state, not a one-shot burst.
+- The rainbow leggings are THE payoff; keep every other element quiet while the morph plays.
+
+## Reduced motion
+Confetti becomes 12 static pieces; legs swap without wiggle; sheet fades in.
+
+## Don&#x27;t miss
+- The llama faces away (tail toward viewer) so the leggings read clearly - keep the pose.
+- Share rows are pastels (mint, lavender, pink, sky, pale teal), not brand-saturated colors.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">confetti + mascot morph + staggered share sheet.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/waterllama-goal-finished-celebration">original interaction</a> by Waterllama. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Waterllama's goal-finished celebration - confetti rains as the llama mascot reveals rainbow-striped leggings, then a share card and a staggered share sheet follow.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nHome with the full llama (teal body, 1860ml) transitions into the celebration screen: \"Lucid Saturday!\" header, confetti falling over the mascot, and a black \"CELEBRATE YOUR DAY\" pill. Mid-celebration the llama's legs morph to reveal rainbow-striped socks. A share card (\"MY lucid SATURDAY\", mascot, 2110ml badge) and a share sheet (iMessage, Messenger, Instagram, Facebook, More) complete the flow.\n\n## Motion spec\nPattern: confetti + mascot morph + staggered share sheet.\n- Trigger: the header (\"Lucid Saturday!\") drops in (translateY -20px + fade, spring ~360/22) as confetti begins - 80-120 pieces spawning above the viewport, falling with per-piece rotation, horizontal sway (sine, +-20px), and varied fall speeds (2.5-4.5s to bottom), in the app's teal/yellow/pink palette.\n- The mascot morph: the llama's plain legs wiggle (rotate +-3deg, 2 cycles, 300ms) then the rainbow stripes wipe upward onto each leg (250ms per leg, staggered 80ms hoof-up) - a reveal, not a swap; the llama does a happy hop once (translateY -14px, spring ~340/16) as the last stripe lands.\n- The \"CELEBRATE YOUR DAY\" pill slides up (spring ~380/24) 200ms after the header.\n- Share card: the scene compresses into a card (bounds spring ~340/22, 400ms) with the big title typing-scale pop (scale 0.9 to 1, spring ~400/20).\n- Share sheet: slides up (spring ~360/28), its five rows staggering in bottom-up (translateY 20px + fade, 220ms each, 60ms apart), each row a soft pastel pill with its service icon.\n\n## Calibration\n- Confetti persists at low density behind everything until the sheet is dismissed - it's a celebration state, not a one-shot burst.\n- The rainbow leggings are THE payoff; keep every other element quiet while the morph plays.\n\n## Reduced motion\nConfetti becomes 12 static pieces; legs swap without wiggle; sheet fades in.\n\n## Don't miss\n- The llama faces away (tail toward viewer) so the leggings read clearly - keep the pose.\n- Share rows are pastels (mint, lavender, pink, sky, pale teal), not brand-saturated colors."</script>
+</body></html>

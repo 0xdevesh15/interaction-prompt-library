@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retro Music Player iPod Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Retro Music Player iPod Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/retro-music-player-ipod-scroll-interaction"><b>Retro</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/retro-music-player-ipod-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/retro-music-player-ipod-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Retro&#x27;s iPod Cover Flow - the click wheel scrubs a 3D carousel of album covers, with momentum, snap-to-center, and the center cover&#x27;s reflection and title updating as it turns.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a615722ddd136fbccc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a615722ddd136fbccc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-retro-music-player-ipod-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Retro&#x27;s iPod Cover Flow - the click wheel scrubs a 3D carousel of album covers, with momentum, snap-to-center, and the center cover&#x27;s reflection and title updating as it turns.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+An iPod classic rendered on screen, grey: top half a &quot;Cover Flow&quot; display - center album cover flat and forward, neighbors angled away in 3D perspective with floor reflections, album title and artist under the center cover; bottom half the click wheel (MENU top, skip back/forward at the sides, play/pause bottom, center select button).
+
+## Motion spec
+Pattern: wheel-driven Cover Flow carousel with inertia.
+- Circular drag on the wheel maps angular distance to carousel rotation 1:1 (one full wheel turn advances ~5 covers); covers rotate around a horizontal axis: center at 0 degrees, neighbors at +/- 65 degrees, spacing tightens with distance.
+- Release with velocity: the carousel coasts (friction ~0.92 per frame) then snaps to the nearest cover (spring ~300/18, slight overshoot).
+- The center cover is largest and flat; as a cover leaves center it rotates away and slides aside (translateX follows the arc), its reflection dimming.
+- Title and artist crossfade (150ms) only after the carousel settles on a new center - not while spinning fast.
+- Fast spins blur the passing covers slightly (motion blur or 0.6 opacity on off-center covers).
+
+## Calibration
+- The wheel is the input surface - no swiping the covers themselves; the tactile fiction is the wheel.
+- Center cover always faces the viewer dead-on at rest; any settle that leaves it tilted is a bug.
+
+## Reduced motion
+Carousel advances one cover per wheel click detent (150ms slide, no coasting).
+
+## Don&#x27;t miss
+- Reflections mirror each cover&#x27;s current rotation, not just the flat state.
+- The screen&#x27;s glass sheen and the wheel&#x27;s printed glyphs are static - only the Cover Flow world moves.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">wheel-driven Cover Flow carousel with inertia.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/retro-music-player-ipod-scroll-interaction">original interaction</a> by Retro. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Retro's iPod Cover Flow - the click wheel scrubs a 3D carousel of album covers, with momentum, snap-to-center, and the center cover's reflection and title updating as it turns.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAn iPod classic rendered on screen, grey: top half a \"Cover Flow\" display - center album cover flat and forward, neighbors angled away in 3D perspective with floor reflections, album title and artist under the center cover; bottom half the click wheel (MENU top, skip back/forward at the sides, play/pause bottom, center select button).\n\n## Motion spec\nPattern: wheel-driven Cover Flow carousel with inertia.\n- Circular drag on the wheel maps angular distance to carousel rotation 1:1 (one full wheel turn advances ~5 covers); covers rotate around a horizontal axis: center at 0 degrees, neighbors at +/- 65 degrees, spacing tightens with distance.\n- Release with velocity: the carousel coasts (friction ~0.92 per frame) then snaps to the nearest cover (spring ~300/18, slight overshoot).\n- The center cover is largest and flat; as a cover leaves center it rotates away and slides aside (translateX follows the arc), its reflection dimming.\n- Title and artist crossfade (150ms) only after the carousel settles on a new center - not while spinning fast.\n- Fast spins blur the passing covers slightly (motion blur or 0.6 opacity on off-center covers).\n\n## Calibration\n- The wheel is the input surface - no swiping the covers themselves; the tactile fiction is the wheel.\n- Center cover always faces the viewer dead-on at rest; any settle that leaves it tilted is a bug.\n\n## Reduced motion\nCarousel advances one cover per wheel click detent (150ms slide, no coasting).\n\n## Don't miss\n- Reflections mirror each cover's current rotation, not just the flat state.\n- The screen's glass sheen and the wheel's printed glyphs are static - only the Cover Flow world moves."</script>
+</body></html>

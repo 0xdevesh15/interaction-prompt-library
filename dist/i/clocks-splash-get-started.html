@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clocks Splash Get Started - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Clocks Splash Get Started</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/clocks-splash-get-started"><b>Clocks</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clocks-splash-get-started">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clocks-splash-get-started">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Clocks&#x27; splash - a white screen parts as the app icon slides up to the top, the headline &quot;Clocks is a more fun standby mode&quot; and subcopy fade in, a horizontal carousel of clock cards auto-scrolls behind the text, and a black Get Started button slides up at the bottom.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682ac1d6482c4f1c2fce60fb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682ac1d6482c4f1c2fce60fb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-clocks-splash-get-started.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Clocks&#x27; splash - a white screen parts as the app icon slides up to the top, the headline &quot;Clocks is a more fun standby mode&quot; and subcopy fade in, a horizontal carousel of clock cards auto-scrolls behind the text, and a black Get Started button slides up at the bottom.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White splash that becomes the onboarding page: small Clocks icon pinned top-center, an auto-scrolling row of clock cards (gradient landscapes, abstract paint strokes, minimal faces - some showing 10:02), &quot;Clocks is a more fun standby mode&quot; headline with two-line subcopy, and a black Get Started button.
+
+## Motion spec
+Pattern: splash reveal with auto-scrolling card carousel.
+- The icon pops in top-center (scale 0 -&gt; 1.1 -&gt; 1, spring ~320/16).
+- The headline fades up (250ms), then the subcopy (200ms).
+- The card carousel enters from the right (translateX 60pt -&gt; 0, 350ms ease-out) and immediately begins auto-scrolling left at ~40pt/s, looping seamlessly.
+- Cards in the carousel have a slight vertical stagger (alternate cards offset 8pt) and each card&#x27;s artwork is its own mini-composition with the time overlaid.
+- Get Started slides up last (280ms ease-out) and stays pinned while the carousel keeps scrolling.
+
+## Calibration
+- The auto-scroll is constant speed and infinite - no easing bumps at the loop point.
+- Text stays static and readable above the moving cards.
+
+## Reduced motion
+Carousel shows a static row of three cards; no auto-scroll.
+
+## Don&#x27;t miss
+- The carousel runs behind the text block - text is layered over the scroll zone&#x27;s fade mask.
+- Cards vary in artwork but share the same height and corner radius.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">splash reveal with auto-scrolling card carousel.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/clocks-splash-get-started">original interaction</a> by Clocks. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Clocks' splash - a white screen parts as the app icon slides up to the top, the headline \"Clocks is a more fun standby mode\" and subcopy fade in, a horizontal carousel of clock cards auto-scrolls behind the text, and a black Get Started button slides up at the bottom.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite splash that becomes the onboarding page: small Clocks icon pinned top-center, an auto-scrolling row of clock cards (gradient landscapes, abstract paint strokes, minimal faces - some showing 10:02), \"Clocks is a more fun standby mode\" headline with two-line subcopy, and a black Get Started button.\n\n## Motion spec\nPattern: splash reveal with auto-scrolling card carousel.\n- The icon pops in top-center (scale 0 -> 1.1 -> 1, spring ~320/16).\n- The headline fades up (250ms), then the subcopy (200ms).\n- The card carousel enters from the right (translateX 60pt -> 0, 350ms ease-out) and immediately begins auto-scrolling left at ~40pt/s, looping seamlessly.\n- Cards in the carousel have a slight vertical stagger (alternate cards offset 8pt) and each card's artwork is its own mini-composition with the time overlaid.\n- Get Started slides up last (280ms ease-out) and stays pinned while the carousel keeps scrolling.\n\n## Calibration\n- The auto-scroll is constant speed and infinite - no easing bumps at the loop point.\n- Text stays static and readable above the moving cards.\n\n## Reduced motion\nCarousel shows a static row of three cards; no auto-scroll.\n\n## Don't miss\n- The carousel runs behind the text block - text is layered over the scroll zone's fade mask.\n- Cards vary in artwork but share the same height and corner radius."</script>
+</body></html>

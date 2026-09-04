@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strava Save Activity Morph Path Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Strava Save Activity Morph Path Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/strava-save-activity-morph-path-animation"><b>Strava</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/strava-save-activity-morph-path-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/strava-save-activity-morph-path-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Strava&#x27;s save-activity celebration - saving floods the screen with an orange path that morphs into a dark &quot;Nice work!&quot; screen with ribbon swooshes and floating kudos icons.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980ce365ff8d4ab5d5a47d0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980ce365ff8d4ab5d5a47d0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-strava-save-activity-morph-path-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Strava&#x27;s save-activity celebration - saving floods the screen with an orange path that morphs into a dark &quot;Nice work!&quot; screen with ribbon swooshes and floating kudos icons.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Strava: the white Save Activity form (map thumbnail, details, orange Save Activity button); the celebration screen - black with bold &quot;Nice work!&quot;, thick orange swoosh ribbons arcing across, and small floating icons (thumbs-ups, shoes); then the activity detail page with a map and a subscription upsell sheet.
+
+## Motion spec
+Pattern: orange path flood morphing into the celebration screen.
+- Tap Save Activity: the button fills and an orange wave erupts from it - a thick curved path that sweeps across the form (stroke draws on, 400ms) while the whole screen tints orange behind it (300ms).
+- The orange field flips to black as two ribbon swooshes arc in from opposite corners (stroke draw, 500ms each, staggered 150ms, ease-out) - one hot orange, one deeper orange, curving across the screen&#x27;s midline.
+- &quot;Nice work!&quot; pops in center-left (scale 0.8 -&gt; 1, spring ~350/15) as the ribbons settle.
+- Kudos icons (thumbs-up, shoe) float in from the edges (translate + rotate, 450ms, staggered 80ms, 6-8 pieces) and drift gently (translateY +/-6px, 2.5s loops, out of phase).
+- After ~2.5s the celebration slides up and away (350ms) revealing the activity detail page, whose subscription sheet slides up a beat later (300ms, 150ms delay).
+
+## Calibration
+- The two ribbons never touch the headline - they frame it above and below.
+- Icon pieces are outlined white/grey on black - small, flat, and sparse.
+
+## Reduced motion
+Form crossfades to the celebration screen (300ms), icons static.
+
+## Don&#x27;t miss
+- The initial flood originates from the Save button itself - the button is the source of the orange.
+- The headline is bold white sans, left-of-center, and never animates after its pop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orange path flood morphing into the celebration screen.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/strava-save-activity-morph-path-animation">original interaction</a> by Strava. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Strava's save-activity celebration - saving floods the screen with an orange path that morphs into a dark \"Nice work!\" screen with ribbon swooshes and floating kudos icons.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nStrava: the white Save Activity form (map thumbnail, details, orange Save Activity button); the celebration screen - black with bold \"Nice work!\", thick orange swoosh ribbons arcing across, and small floating icons (thumbs-ups, shoes); then the activity detail page with a map and a subscription upsell sheet.\n\n## Motion spec\nPattern: orange path flood morphing into the celebration screen.\n- Tap Save Activity: the button fills and an orange wave erupts from it - a thick curved path that sweeps across the form (stroke draws on, 400ms) while the whole screen tints orange behind it (300ms).\n- The orange field flips to black as two ribbon swooshes arc in from opposite corners (stroke draw, 500ms each, staggered 150ms, ease-out) - one hot orange, one deeper orange, curving across the screen's midline.\n- \"Nice work!\" pops in center-left (scale 0.8 -> 1, spring ~350/15) as the ribbons settle.\n- Kudos icons (thumbs-up, shoe) float in from the edges (translate + rotate, 450ms, staggered 80ms, 6-8 pieces) and drift gently (translateY +/-6px, 2.5s loops, out of phase).\n- After ~2.5s the celebration slides up and away (350ms) revealing the activity detail page, whose subscription sheet slides up a beat later (300ms, 150ms delay).\n\n## Calibration\n- The two ribbons never touch the headline - they frame it above and below.\n- Icon pieces are outlined white/grey on black - small, flat, and sparse.\n\n## Reduced motion\nForm crossfades to the celebration screen (300ms), icons static.\n\n## Don't miss\n- The initial flood originates from the Save button itself - the button is the source of the orange.\n- The headline is bold white sans, left-of-center, and never animates after its pop."</script>
+</body></html>

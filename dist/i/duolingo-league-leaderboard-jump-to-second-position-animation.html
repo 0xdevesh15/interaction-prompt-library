@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo League Leaderboard Jump to Second Position Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo League Leaderboard Jump to Second Position Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-league-leaderboard-jump-to-second-position-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-league-leaderboard-jump-to-second-position-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-league-leaderboard-jump-to-second-position-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s leaderboard jump - on the white league screen, the user&#x27;s highlighted row leaps from third to second place in one springy arc, the displaced row slides down, confetti bursts, and both rows settle into their new ranks under the &quot;You moved up!&quot; header.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313ca14683753e669fe60/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313ca14683753e669fe60/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-league-leaderboard-jump-to-second-position-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s leaderboard jump - on the white league screen, the user&#x27;s highlighted row leaps from third to second place in one springy arc, the displaced row slides down, confetti bursts, and both rows settle into their new ranks under the &quot;You moved up!&quot; header.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White league screen. Top: bronze league trophy, headline &quot;You moved up! Get to #1 to win the grand prize.&quot; A ranked list of 6 rows (rank numeral, circular avatar, username, XP right-aligned); the user&#x27;s row carries a peach/orange highlight. Bottom: share icon and blue &quot;I CAN DO IT!&quot; button.
+
+## Motion spec
+Pattern: single-jump list reorder with spring settle and confetti.
+- The list fades in with the user at rank 3 (250ms).
+- The jump: the user&#x27;s row lifts (scale 1.0 -&gt; 1.05, shadow deepens) and arcs up over the rank-2 row in one motion (450ms, spring ~280/20, overshoot ~10pt above the target slot before settling).
+- The displaced rank-2 row slides down one slot in the same window (350ms, ease-in-out).
+- Rank numerals on both rows crossfade to the new values (150ms) at the midpoint.
+- On landing: a confetti burst of ~16 pieces sprays from the user&#x27;s row (up and outward, gravity, 700ms life, staggered 30ms).
+- The user row settles with a soft bounce (scale 1.05 -&gt; 0.98 -&gt; 1.0, 250ms).
+
+## Calibration
+- One jump only - this reads as a leap, not the step-by-step climb of the multi-hop variant.
+- The row must visibly pass OVER the other row (z-order lift), not slide through it.
+
+## Reduced motion
+Rows crossfade into the new order over 250ms; no arc, no confetti.
+
+## Don&#x27;t miss
+- The highlight travels with the user row through the entire jump.
+- Header, trophy, and CTA never move.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">single-jump list reorder with spring settle and confetti.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-league-leaderboard-jump-to-second-position-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's leaderboard jump - on the white league screen, the user's highlighted row leaps from third to second place in one springy arc, the displaced row slides down, confetti bursts, and both rows settle into their new ranks under the \"You moved up!\" header.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite league screen. Top: bronze league trophy, headline \"You moved up! Get to #1 to win the grand prize.\" A ranked list of 6 rows (rank numeral, circular avatar, username, XP right-aligned); the user's row carries a peach/orange highlight. Bottom: share icon and blue \"I CAN DO IT!\" button.\n\n## Motion spec\nPattern: single-jump list reorder with spring settle and confetti.\n- The list fades in with the user at rank 3 (250ms).\n- The jump: the user's row lifts (scale 1.0 -> 1.05, shadow deepens) and arcs up over the rank-2 row in one motion (450ms, spring ~280/20, overshoot ~10pt above the target slot before settling).\n- The displaced rank-2 row slides down one slot in the same window (350ms, ease-in-out).\n- Rank numerals on both rows crossfade to the new values (150ms) at the midpoint.\n- On landing: a confetti burst of ~16 pieces sprays from the user's row (up and outward, gravity, 700ms life, staggered 30ms).\n- The user row settles with a soft bounce (scale 1.05 -> 0.98 -> 1.0, 250ms).\n\n## Calibration\n- One jump only - this reads as a leap, not the step-by-step climb of the multi-hop variant.\n- The row must visibly pass OVER the other row (z-order lift), not slide through it.\n\n## Reduced motion\nRows crossfade into the new order over 250ms; no arc, no confetti.\n\n## Don't miss\n- The highlight travels with the user row through the entire jump.\n- Header, trophy, and CTA never move."</script>
+</body></html>

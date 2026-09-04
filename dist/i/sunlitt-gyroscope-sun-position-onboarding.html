@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunlitt Gyroscope Sun Position Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sunlitt Gyroscope Sun Position Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sunlitt-gyroscope-sun-position-onboarding"><b>Sunlitt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sunlitt-gyroscope-sun-position-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sunlitt-gyroscope-sun-position-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Sunlitt&#x27;s gyroscope onboarding - a 3D scene (white monolith, orbiting sun dot) on a flat yellow field that responds to device tilt with camera rotation and live shadow casting.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5a0e761d73e2622b9649c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5a0e761d73e2622b9649c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sunlitt-gyroscope-sun-position-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Sunlitt&#x27;s gyroscope onboarding - a 3D scene (white monolith, orbiting sun dot) on a flat yellow field that responds to device tilt with camera rotation and live shadow casting.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Solid yellow screen. Center: a 3D diorama - a small white cube/monolith on the ground plane, a sun dot traveling a drawn orbit arc over it, and a time chip (&quot;01:13 PM&quot;) tagging the sun. A dark toast card at the bottom carries the onboarding copy with a forward arrow.
+
+## Motion spec
+Pattern: gyroscope-driven 3D camera with live shadows.
+- Device tilt drives the camera: roll and pitch map to orbit angles around the diorama (about +-25deg horizontal, +-12deg vertical), smoothed with a low-pass filter (~150ms response) so motion feels weighted, not jittery.
+- The monolith&#x27;s shadow re-casts in real time from the sun dot&#x27;s position - shadow direction and length track the sun along its arc.
+- The sun dot eases along its orbit (slow drift, ~20s per visible pass) with the time chip following at a fixed offset.
+- On release of tilt, the camera springs back to neutral (spring stiffness ~120, damping ~14) - slow and calm.
+- The toast card is exempt from parallax; it stays fixed to the screen.
+
+## Calibration
+- Tilt response needs dead-zone filtering - micro-tremors in the hand must not shimmer the scene.
+- Shadow fidelity is the magic: a static shadow under a moving sun exposes the trick.
+
+## Reduced motion
+Static camera at a three-quarter view; sun drifts without tilt response.
+
+## Don&#x27;t miss
+- The background is one flat saturated yellow - the 3D scene floats on it without a visible ground edge.
+- The orbit arc line is drawn on the scene, thin and slightly transparent.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gyroscope-driven 3D camera with live shadows.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sunlitt-gyroscope-sun-position-onboarding">original interaction</a> by Sunlitt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Sunlitt's gyroscope onboarding - a 3D scene (white monolith, orbiting sun dot) on a flat yellow field that responds to device tilt with camera rotation and live shadow casting.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSolid yellow screen. Center: a 3D diorama - a small white cube/monolith on the ground plane, a sun dot traveling a drawn orbit arc over it, and a time chip (\"01:13 PM\") tagging the sun. A dark toast card at the bottom carries the onboarding copy with a forward arrow.\n\n## Motion spec\nPattern: gyroscope-driven 3D camera with live shadows.\n- Device tilt drives the camera: roll and pitch map to orbit angles around the diorama (about +-25deg horizontal, +-12deg vertical), smoothed with a low-pass filter (~150ms response) so motion feels weighted, not jittery.\n- The monolith's shadow re-casts in real time from the sun dot's position - shadow direction and length track the sun along its arc.\n- The sun dot eases along its orbit (slow drift, ~20s per visible pass) with the time chip following at a fixed offset.\n- On release of tilt, the camera springs back to neutral (spring stiffness ~120, damping ~14) - slow and calm.\n- The toast card is exempt from parallax; it stays fixed to the screen.\n\n## Calibration\n- Tilt response needs dead-zone filtering - micro-tremors in the hand must not shimmer the scene.\n- Shadow fidelity is the magic: a static shadow under a moving sun exposes the trick.\n\n## Reduced motion\nStatic camera at a three-quarter view; sun drifts without tilt response.\n\n## Don't miss\n- The background is one flat saturated yellow - the 3D scene floats on it without a visible ground edge.\n- The orbit arc line is drawn on the scene, thin and slightly transparent."</script>
+</body></html>

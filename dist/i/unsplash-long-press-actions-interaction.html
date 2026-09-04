@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unsplash Long Press Actions Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Unsplash Long Press Actions Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/unsplash-long-press-actions-interaction"><b>Unsplash</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/unsplash-long-press-actions-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/unsplash-long-press-actions-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Unsplash&#x27;s long-press quick actions - holding a photo card dims it and springs in a staggered trio of circular buttons (download, collect, like) that float over the image and bounce away on release.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509738ff6640815e7e85fb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509738ff6640815e7e85fb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-unsplash-long-press-actions-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Unsplash&#x27;s long-press quick actions - holding a photo card dims it and springs in a staggered trio of circular buttons (download, collect, like) that float over the image and bounce away on release.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The dark Unsplash feed (photo cards with author names, tab bar below). The long-pressed card (a red/orange wall photo) carries three white circular buttons over its center: download arrow, plus (collect), heart - arranged in a loose triangle.
+
+## Motion spec
+Pattern: springy staggered action reveal.
+- Long-press (500ms hold): the card scales down a touch (1 -&gt; 0.97) and dims (~35% black overlay fades in, 200ms).
+- The three buttons spring in staggered from the press point: each scales 0 -&gt; 1 with an overshoot spring (~450/18), 60ms apart, order download -&gt; collect -&gt; heart, each also translating to its slot.
+- The buttons cast soft shadows and bob once as they land.
+- Slide the held finger onto a button and release: the button flashes (scale 1 -&gt; 1.2 -&gt; 1) and its action fires (download starts / collect sheet opens / heart fills red).
+- Release on empty space: the trio springs back out in reverse stagger (40ms apart, faster, no overshoot) and the card undims.
+
+## Calibration
+- The trio stays centered on the original press point, not the card center.
+- Buttons are finger-sized (~44pt) with clear spacing - no accidental hits.
+
+## Reduced motion
+Buttons fade in together; card dims without scaling.
+
+## Don&#x27;t miss
+- The reverse-stagger exit is quicker than the entrance - dismissing should feel effortless.
+- A light haptic tick fires when the hold triggers.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy staggered action reveal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/unsplash-long-press-actions-interaction">original interaction</a> by Unsplash. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Unsplash's long-press quick actions - holding a photo card dims it and springs in a staggered trio of circular buttons (download, collect, like) that float over the image and bounce away on release.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe dark Unsplash feed (photo cards with author names, tab bar below). The long-pressed card (a red/orange wall photo) carries three white circular buttons over its center: download arrow, plus (collect), heart - arranged in a loose triangle.\n\n## Motion spec\nPattern: springy staggered action reveal.\n- Long-press (500ms hold): the card scales down a touch (1 -> 0.97) and dims (~35% black overlay fades in, 200ms).\n- The three buttons spring in staggered from the press point: each scales 0 -> 1 with an overshoot spring (~450/18), 60ms apart, order download -> collect -> heart, each also translating to its slot.\n- The buttons cast soft shadows and bob once as they land.\n- Slide the held finger onto a button and release: the button flashes (scale 1 -> 1.2 -> 1) and its action fires (download starts / collect sheet opens / heart fills red).\n- Release on empty space: the trio springs back out in reverse stagger (40ms apart, faster, no overshoot) and the card undims.\n\n## Calibration\n- The trio stays centered on the original press point, not the card center.\n- Buttons are finger-sized (~44pt) with clear spacing - no accidental hits.\n\n## Reduced motion\nButtons fade in together; card dims without scaling.\n\n## Don't miss\n- The reverse-stagger exit is quicker than the entrance - dismissing should feel effortless.\n- A light haptic tick fires when the hold triggers."</script>
+</body></html>

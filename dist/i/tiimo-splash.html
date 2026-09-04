@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tiimo Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tiimo Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tiimo-splash"><b>Tiimo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiimo-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiimo-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Tiimo&#x27;s splash - liquid circles morph and drift on a pastel field, then dissolve seamlessly into the onboarding screen&#x27;s staggered text and illustration.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cbecbe06bd6fa02560/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cbecbe06bd6fa02560/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tiimo-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Tiimo&#x27;s splash - liquid circles morph and drift on a pastel field, then dissolve seamlessly into the onboarding screen&#x27;s staggered text and illustration.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Opens on a soft pastel field with 3-4 colored circles that wobble like liquid, drift, and coalesce around the center. The circles dissolve into the first onboarding screen: illustration rises, headline and subline stagger in, and a CTA slides up.
+
+## Motion spec
+Pattern: liquid morph dissolve into staggered reveal.
+- Each circle is a blob - its border-radius values animate continuously (~3s period, phase-offset per circle) so edges flow like liquid.
+- Circles drift slowly (20-40px excursions, ease-in-out, offset periods) and merge when they meet: approaching blobs bulge toward each other before combining into a larger blob.
+- At ~1.8s the unified blob contracts to center and dissolves (scale down + fade, 400ms, ease-in) as the onboarding screen fades up beneath it.
+- The illustration pops in (scale 0.92 to 1, spring ~350/22), the headline fades up 100ms later (250ms), the subline 80ms after that, and the CTA slides up last (spring ~320/26).
+- The pastel background carries over unchanged - the transition is content-only.
+
+## Calibration
+- Liquid wobble must be continuous from frame one; a static circle that starts morphing reads as a glitch.
+- The dissolve point lines up the blob&#x27;s center with where the illustration lands - the eye should follow one object.
+
+## Reduced motion
+Simple fade from splash mark to onboarding screen.
+
+## Don&#x27;t miss
+- Blob edges are smooth, never polygonal - radius animation, not vertex steps.
+- The CTA is the last thing to arrive; the screen feels empty until it does, by design.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">liquid morph dissolve into staggered reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tiimo-splash">original interaction</a> by Tiimo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Tiimo's splash - liquid circles morph and drift on a pastel field, then dissolve seamlessly into the onboarding screen's staggered text and illustration.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOpens on a soft pastel field with 3-4 colored circles that wobble like liquid, drift, and coalesce around the center. The circles dissolve into the first onboarding screen: illustration rises, headline and subline stagger in, and a CTA slides up.\n\n## Motion spec\nPattern: liquid morph dissolve into staggered reveal.\n- Each circle is a blob - its border-radius values animate continuously (~3s period, phase-offset per circle) so edges flow like liquid.\n- Circles drift slowly (20-40px excursions, ease-in-out, offset periods) and merge when they meet: approaching blobs bulge toward each other before combining into a larger blob.\n- At ~1.8s the unified blob contracts to center and dissolves (scale down + fade, 400ms, ease-in) as the onboarding screen fades up beneath it.\n- The illustration pops in (scale 0.92 to 1, spring ~350/22), the headline fades up 100ms later (250ms), the subline 80ms after that, and the CTA slides up last (spring ~320/26).\n- The pastel background carries over unchanged - the transition is content-only.\n\n## Calibration\n- Liquid wobble must be continuous from frame one; a static circle that starts morphing reads as a glitch.\n- The dissolve point lines up the blob's center with where the illustration lands - the eye should follow one object.\n\n## Reduced motion\nSimple fade from splash mark to onboarding screen.\n\n## Don't miss\n- Blob edges are smooth, never polygonal - radius animation, not vertex steps.\n- The CTA is the last thing to arrive; the screen feels empty until it does, by design."</script>
+</body></html>

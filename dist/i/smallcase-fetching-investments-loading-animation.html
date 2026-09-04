@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smallcase Fetching Investments Loading Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Smallcase Fetching Investments Loading Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/smallcase-fetching-investments-loading-animation"><b>Smallcase</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/smallcase-fetching-investments-loading-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/smallcase-fetching-investments-loading-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Smallcase&#x27;s &quot;Fetching your investments&quot; loader - geometric shapes (pyramid, sphere, torus) rise from an isometric purple platform one after another while a progress bar fills beneath the copy.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edcbe9610ba04ea93787/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edcbe9610ba04ea93787/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-smallcase-fetching-investments-loading-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Smallcase&#x27;s &quot;Fetching your investments&quot; loader - geometric shapes (pyramid, sphere, torus) rise from an isometric purple platform one after another while a progress bar fills beneath the copy.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Smallcase loading screen, white: a purple-outlined isometric diamond platform center; &quot;Fetching your investments&quot; with &quot;Usually takes less than 20 secs&quot; beneath; a thin blue progress bar at the bottom; an X close appears top-right after a few seconds. Shapes cycle: a green pyramid, a blue sphere, an orange torus.
+
+## Motion spec
+Pattern: cycling 3D shapes emerging from an isometric platform with a filling progress bar.
+- The platform draws in first: its outline strokes draw on (300ms), then its translucent faces fade in (200ms).
+- Each shape&#x27;s cycle (~1.6s): it rises from the platform&#x27;s center (translateY -40 -&gt; 0 relative, spring ~260/16) scaling 0.5 -&gt; 1, rotates slowly while aloft (rotateY 180 degrees over its stay), then sinks back (scale -&gt; 0.5, fade, 300ms) as the next shape begins.
+- Consecutive shapes overlap slightly - the next starts rising as the current sinks (150ms overlap).
+- The platform&#x27;s glow pulses gently under each shape (opacity 0.3 -&gt; 0.55, matching the rise).
+- The progress bar fills linearly over the expected duration (~20s), indeterminate-shimmering if the fetch runs long; a close X fades in top-right after 4s.
+
+## Calibration
+- Isometric discipline: every shape enters along the platform&#x27;s vertical axis - no diagonal drifts.
+- One shape aloft at a time; the platform is a stage, not a toybox.
+
+## Reduced motion
+Shapes crossfade above the platform (300ms each); progress bar fills without shimmer.
+
+## Don&#x27;t miss
+- Each shape casts a soft contact shadow on the platform that scales with its height.
+- The platform never moves - all motion belongs to the shapes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cycling 3D shapes emerging from an isometric platform with a filling progress bar.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/smallcase-fetching-investments-loading-animation">original interaction</a> by Smallcase. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Smallcase's \"Fetching your investments\" loader - geometric shapes (pyramid, sphere, torus) rise from an isometric purple platform one after another while a progress bar fills beneath the copy.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSmallcase loading screen, white: a purple-outlined isometric diamond platform center; \"Fetching your investments\" with \"Usually takes less than 20 secs\" beneath; a thin blue progress bar at the bottom; an X close appears top-right after a few seconds. Shapes cycle: a green pyramid, a blue sphere, an orange torus.\n\n## Motion spec\nPattern: cycling 3D shapes emerging from an isometric platform with a filling progress bar.\n- The platform draws in first: its outline strokes draw on (300ms), then its translucent faces fade in (200ms).\n- Each shape's cycle (~1.6s): it rises from the platform's center (translateY -40 -> 0 relative, spring ~260/16) scaling 0.5 -> 1, rotates slowly while aloft (rotateY 180 degrees over its stay), then sinks back (scale -> 0.5, fade, 300ms) as the next shape begins.\n- Consecutive shapes overlap slightly - the next starts rising as the current sinks (150ms overlap).\n- The platform's glow pulses gently under each shape (opacity 0.3 -> 0.55, matching the rise).\n- The progress bar fills linearly over the expected duration (~20s), indeterminate-shimmering if the fetch runs long; a close X fades in top-right after 4s.\n\n## Calibration\n- Isometric discipline: every shape enters along the platform's vertical axis - no diagonal drifts.\n- One shape aloft at a time; the platform is a stage, not a toybox.\n\n## Reduced motion\nShapes crossfade above the platform (300ms each); progress bar fills without shimmer.\n\n## Don't miss\n- Each shape casts a soft contact shadow on the platform that scales with its height.\n- The platform never moves - all motion belongs to the shapes."</script>
+</body></html>

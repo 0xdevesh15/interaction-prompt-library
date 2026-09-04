@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elevate Workout Detail Morph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Elevate Workout Detail Morph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/elevate-workout-detail-morph"><b>Elevate</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-workout-detail-morph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-workout-detail-morph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Elevate&#x27;s workout detail morph - tapping a Today card floods the screen with the card&#x27;s blue, the recommendation icon and &quot;Percentages&quot; title settle top, answer slots and a promo banner stagger in, and Play/Swap buttons anchor the bottom.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c96af75a8333cd209cc06d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c96af75a8333cd209cc06d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-elevate-workout-detail-morph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Elevate&#x27;s workout detail morph - tapping a Today card floods the screen with the card&#x27;s blue, the recommendation icon and &quot;Percentages&quot; title settle top, answer slots and a promo banner stagger in, and Play/Swap buttons anchor the bottom.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Today feed with workout cards; the detail screen: full blue field, close X top-left, a small &quot;Recommended&quot; icon header, the workout card (purple &quot;Percentages&quot; tile with score/progress), two pale &quot;?&quot; slots, a dark promo banner (&quot;Access 35+ games UNLOCK ELEVATE&quot;), and bottom Play / Swap buttons.
+
+## Motion spec
+Pattern: color-flood card expansion.
+- Tap: the card&#x27;s blue floods outward from the card bounds to fill the screen (400ms, ease-out, the color leading, content following).
+- The header icon and &quot;Recommended&quot; label fade in at top (250ms, 100ms late).
+- The Percentages tile slides down from the top edge into place (spring ~320/22) while the two &quot;?&quot; slots scale up staggered (0.9 -&gt; 1, 250ms each, 100ms apart).
+- The promo banner rises from the bottom (300ms), then Play and Swap slide up last, splitting left/right.
+- Reverse on close: everything collapses back into the card&#x27;s bounds, the feed reappearing under the receding blue.
+
+## Calibration
+- The flood is one continuous color surface - the card&#x27;s corner radius expands to zero as it fills.
+- Detail content keeps generous center spacing; the screen breathes despite the saturated field.
+
+## Reduced motion
+Crossfade to the composed detail screen.
+
+## Don&#x27;t miss
+- The blue is sampled from the card itself - different workouts flood different colors.
+- Play is bright cyan and dominant; Swap is quiet - hierarchy survives the flood.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">color-flood card expansion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/elevate-workout-detail-morph">original interaction</a> by Elevate. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Elevate's workout detail morph - tapping a Today card floods the screen with the card's blue, the recommendation icon and \"Percentages\" title settle top, answer slots and a promo banner stagger in, and Play/Swap buttons anchor the bottom.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nToday feed with workout cards; the detail screen: full blue field, close X top-left, a small \"Recommended\" icon header, the workout card (purple \"Percentages\" tile with score/progress), two pale \"?\" slots, a dark promo banner (\"Access 35+ games UNLOCK ELEVATE\"), and bottom Play / Swap buttons.\n\n## Motion spec\nPattern: color-flood card expansion.\n- Tap: the card's blue floods outward from the card bounds to fill the screen (400ms, ease-out, the color leading, content following).\n- The header icon and \"Recommended\" label fade in at top (250ms, 100ms late).\n- The Percentages tile slides down from the top edge into place (spring ~320/22) while the two \"?\" slots scale up staggered (0.9 -> 1, 250ms each, 100ms apart).\n- The promo banner rises from the bottom (300ms), then Play and Swap slide up last, splitting left/right.\n- Reverse on close: everything collapses back into the card's bounds, the feed reappearing under the receding blue.\n\n## Calibration\n- The flood is one continuous color surface - the card's corner radius expands to zero as it fills.\n- Detail content keeps generous center spacing; the screen breathes despite the saturated field.\n\n## Reduced motion\nCrossfade to the composed detail screen.\n\n## Don't miss\n- The blue is sampled from the card itself - different workouts flood different colors.\n- Play is bright cyan and dominant; Swap is quiet - hierarchy survives the flood."</script>
+</body></html>

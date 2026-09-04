@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monday Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monday Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monday-splash"><b>Monday</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monday-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monday-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: monday.com&#x27;s splash - the three-bar &quot;M&quot; logo juggles its colored bars on black, then opens the app through a scaling circular reveal.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb22225b7b88f78c69b5/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb22225b7b88f78c69b5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monday-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: monday.com&#x27;s splash - the three-bar &quot;M&quot; logo juggles its colored bars on black, then opens the app through a scaling circular reveal.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen. Center: the monday mark - two slanted bars (pink/red and yellow) plus a green dot. The pieces scramble playfully: bars swap places, the dot jumps, the mark tumbles. Finally a circle expands from center to reveal the monday home screen (Recently visited, empty-state illustration, blue FAB).
+
+## Motion spec
+Pattern: logo juggling morph + circular reveal.
+- The mark&#x27;s pieces animate independently: bars rotate and trade positions (spring ~300/22 each, offset 80ms), the green dot hops to its alternate spot with a bounce (spring ~380/20); the sequence cycles through 2-3 arrangements of the same pieces.
+- Each arrangement holds ~250ms - enough to read as intentional juggling, not a glitch.
+- Final arrangement: the classic &quot;M&quot;. It holds (~300ms), then a circular mask centered on the logo scales from 0 to full-screen (450ms, ease-in-out), revealing the app UI underneath.
+- The revealed home screen is already laid out - no additional stagger after the wipe; the reveal is the entrance.
+
+## Calibration
+- Pieces keep their exact brand colors through every scramble - the juggling rearranges geometry, never color.
+- The circular reveal center is the logo&#x27;s center; the eye should land in the app where the logo was.
+
+## Reduced motion
+Logo fades; simple circular reveal without juggling.
+
+## Don&#x27;t miss
+- The bars are rounded-end capsules at a slant - monday&#x27;s exact geometry, not generic rectangles.
+- The dot is a perfect circle, smaller than the bar width; its hop is the most playful beat - give it the bounciest spring.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo juggling morph + circular reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monday-splash">original interaction</a> by Monday. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: monday.com's splash - the three-bar \"M\" logo juggles its colored bars on black, then opens the app through a scaling circular reveal.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen. Center: the monday mark - two slanted bars (pink/red and yellow) plus a green dot. The pieces scramble playfully: bars swap places, the dot jumps, the mark tumbles. Finally a circle expands from center to reveal the monday home screen (Recently visited, empty-state illustration, blue FAB).\n\n## Motion spec\nPattern: logo juggling morph + circular reveal.\n- The mark's pieces animate independently: bars rotate and trade positions (spring ~300/22 each, offset 80ms), the green dot hops to its alternate spot with a bounce (spring ~380/20); the sequence cycles through 2-3 arrangements of the same pieces.\n- Each arrangement holds ~250ms - enough to read as intentional juggling, not a glitch.\n- Final arrangement: the classic \"M\". It holds (~300ms), then a circular mask centered on the logo scales from 0 to full-screen (450ms, ease-in-out), revealing the app UI underneath.\n- The revealed home screen is already laid out - no additional stagger after the wipe; the reveal is the entrance.\n\n## Calibration\n- Pieces keep their exact brand colors through every scramble - the juggling rearranges geometry, never color.\n- The circular reveal center is the logo's center; the eye should land in the app where the logo was.\n\n## Reduced motion\nLogo fades; simple circular reveal without juggling.\n\n## Don't miss\n- The bars are rounded-end capsules at a slant - monday's exact geometry, not generic rectangles.\n- The dot is a perfect circle, smaller than the bar width; its hop is the most playful beat - give it the bounciest spring."</script>
+</body></html>

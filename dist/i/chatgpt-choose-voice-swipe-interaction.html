@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChatGPT Choose Voice Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ChatGPT Choose Voice Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/chatgpt-choose-voice-swipe-interaction"><b>Chatgpt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/chatgpt-choose-voice-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/chatgpt-choose-voice-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: ChatGPT&#x27;s &quot;Choose a voice&quot; picker - a big fluid orb sits center-screen, and swiping horizontally cycles through voices (Breeze, Spruce, Ember, Juniper, Maple, Cove), the orb morphing its internal flow as each voice plays a preview, with the name and tagline swapping under it and page dots tracking position.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670922d26ef193b227eb8ca7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670922d26ef193b227eb8ca7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-chatgpt-choose-voice-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: ChatGPT&#x27;s &quot;Choose a voice&quot; picker - a big fluid orb sits center-screen, and swiping horizontally cycles through voices (Breeze, Spruce, Ember, Juniper, Maple, Cove), the orb morphing its internal flow as each voice plays a preview, with the name and tagline swapping under it and page dots tracking position.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen: &quot;Choose a voice&quot; title, a large spherical orb (blue-white fluid gradient), voice name + descriptor line, a row of page dots, and a white &quot;Get Started&quot; button at the bottom.
+
+## Motion spec
+Pattern: horizontal swipe carousel with a morphing audio orb.
+- Swipe: the orb translates with the finger (1:1), the next voice&#x27;s orb entering from the side; release snaps (spring ~380/26, 300ms).
+- On settle, the voice preview plays and the orb reacts: internal fluid patterns swirl and pulse with the audio amplitude (brightness +/-20%, swirl speed keyed to loudness).
+- Name and tagline crossfade (200ms) as the orb passes center; page dots update, the active dot brightening.
+- Idle: the orb breathes slowly (scale 1 -&gt; 1.03 -&gt; 1, 3s) with gentle internal drift.
+- Each voice&#x27;s orb has its own tint bias (some cooler, some warmer) that tweens during the swipe.
+
+## Calibration
+- The orb is the only visual - no avatars, no waveforms; all personality comes from its flow.
+- Audio reactivity is amplitude-driven, not a fixed loop.
+
+## Reduced motion
+Swipe snaps without orb travel (crossfade); orb holds a static gradient during previews.
+
+## Don&#x27;t miss
+- The orb reacts to the voice preview in real time - it is a visualizer, not decoration.
+- Page dots sit directly under the name, not at the screen bottom.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal swipe carousel with a morphing audio orb.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/chatgpt-choose-voice-swipe-interaction">original interaction</a> by Chatgpt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: ChatGPT's \"Choose a voice\" picker - a big fluid orb sits center-screen, and swiping horizontally cycles through voices (Breeze, Spruce, Ember, Juniper, Maple, Cove), the orb morphing its internal flow as each voice plays a preview, with the name and tagline swapping under it and page dots tracking position.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen: \"Choose a voice\" title, a large spherical orb (blue-white fluid gradient), voice name + descriptor line, a row of page dots, and a white \"Get Started\" button at the bottom.\n\n## Motion spec\nPattern: horizontal swipe carousel with a morphing audio orb.\n- Swipe: the orb translates with the finger (1:1), the next voice's orb entering from the side; release snaps (spring ~380/26, 300ms).\n- On settle, the voice preview plays and the orb reacts: internal fluid patterns swirl and pulse with the audio amplitude (brightness +/-20%, swirl speed keyed to loudness).\n- Name and tagline crossfade (200ms) as the orb passes center; page dots update, the active dot brightening.\n- Idle: the orb breathes slowly (scale 1 -> 1.03 -> 1, 3s) with gentle internal drift.\n- Each voice's orb has its own tint bias (some cooler, some warmer) that tweens during the swipe.\n\n## Calibration\n- The orb is the only visual - no avatars, no waveforms; all personality comes from its flow.\n- Audio reactivity is amplitude-driven, not a fixed loop.\n\n## Reduced motion\nSwipe snaps without orb travel (crossfade); orb holds a static gradient during previews.\n\n## Don't miss\n- The orb reacts to the voice preview in real time - it is a visualizer, not decoration.\n- Page dots sit directly under the name, not at the screen bottom."</script>
+</body></html>

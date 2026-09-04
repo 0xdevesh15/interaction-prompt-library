@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luminar Contrast Wiggly Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Luminar Contrast Wiggly Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/luminar-contrast-wiggly-slider"><b>Luminar</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/luminar-contrast-wiggly-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/luminar-contrast-wiggly-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Luminar&#x27;s contrast slider - the slider track is a live waveform: flat at zero contrast, and as you drag the handle right the track morphs into an increasingly high-amplitude zigzag wave around the handle, visualizing contrast itself.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721f3027a5365818691a2d9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721f3027a5365818691a2d9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-luminar-contrast-wiggly-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Luminar&#x27;s contrast slider - the slider track is a live waveform: flat at zero contrast, and as you drag the handle right the track morphs into an increasingly high-amplitude zigzag wave around the handle, visualizing contrast itself.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark photo editor: photo of a cat top half, orange-accented tool rail, and the contrast control - a horizontal amber line that is the slider track, with a vertical handle. Bottom tool bar with crop / adjust icons.
+
+## Motion spec
+Pattern: morphing-track slider.
+- At value 0: the track is a nearly flat amber line with barely visible ripples.
+- Drag: the track&#x27;s wave amplitude maps directly to the value - the section around the handle oscillates with growing peaks (amplitude 0 -&gt; ~14px at max), the filled portion left of the handle rendering the wave in solid amber, the remainder as a dimmer dashed ripple.
+- The handle is a short vertical bar that rides the wave&#x27;s center, glowing brighter as amplitude grows (opacity 0.7 -&gt; 1).
+- Release: the wave settles with a decaying oscillation (amplitude wobbles +/-2px, ~400ms, like a plucked string) before holding at its value.
+- The photo&#x27;s contrast updates live in sync with the drag.
+
+## Calibration
+- Wave frequency stays constant; only amplitude maps to value - the metaphor is &quot;more contrast = bigger waves&quot;.
+- The flat-to-wavy morph is smooth and continuous, never stepping.
+
+## Reduced motion
+Track stays a plain line with a standard fill; no wave.
+
+## Don&#x27;t miss
+- The unfilled track to the right still shows a faint ghost of the wave - the shape previews where you could go.
+- The amber is Luminar&#x27;s signature accent - keep it on dark grey, no other hues.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">morphing-track slider.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/luminar-contrast-wiggly-slider">original interaction</a> by Luminar. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Luminar's contrast slider - the slider track is a live waveform: flat at zero contrast, and as you drag the handle right the track morphs into an increasingly high-amplitude zigzag wave around the handle, visualizing contrast itself.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark photo editor: photo of a cat top half, orange-accented tool rail, and the contrast control - a horizontal amber line that is the slider track, with a vertical handle. Bottom tool bar with crop / adjust icons.\n\n## Motion spec\nPattern: morphing-track slider.\n- At value 0: the track is a nearly flat amber line with barely visible ripples.\n- Drag: the track's wave amplitude maps directly to the value - the section around the handle oscillates with growing peaks (amplitude 0 -> ~14px at max), the filled portion left of the handle rendering the wave in solid amber, the remainder as a dimmer dashed ripple.\n- The handle is a short vertical bar that rides the wave's center, glowing brighter as amplitude grows (opacity 0.7 -> 1).\n- Release: the wave settles with a decaying oscillation (amplitude wobbles +/-2px, ~400ms, like a plucked string) before holding at its value.\n- The photo's contrast updates live in sync with the drag.\n\n## Calibration\n- Wave frequency stays constant; only amplitude maps to value - the metaphor is \"more contrast = bigger waves\".\n- The flat-to-wavy morph is smooth and continuous, never stepping.\n\n## Reduced motion\nTrack stays a plain line with a standard fill; no wave.\n\n## Don't miss\n- The unfilled track to the right still shows a faint ghost of the wave - the shape previews where you could go.\n- The amber is Luminar's signature accent - keep it on dark grey, no other hues."</script>
+</body></html>

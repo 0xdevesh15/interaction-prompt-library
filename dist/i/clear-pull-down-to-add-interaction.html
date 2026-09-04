@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clear Pull Down to Add Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Clear Pull Down to Add Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/clear-pull-down-to-add-interaction"><b>Clear</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clear-pull-down-to-add-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clear-pull-down-to-add-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Clear&#x27;s pull-to-add - dragging the list down stretches the heat-gradient rows like rubber, a new blank row in the deepest red emerges at the top, and the keyboard is already up with the cursor blinking.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf51ac3f9ae8767d8f56dc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf51ac3f9ae8767d8f56dc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-clear-pull-down-to-add-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Clear&#x27;s pull-to-add - dragging the list down stretches the heat-gradient rows like rubber, a new blank row in the deepest red emerges at the top, and the keyboard is already up with the cursor blinking.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen, &quot;Welcome to Clear&quot; header, and a list whose rows run a heat gradient from deep red (top) to orange (bottom) - the tutorial rows (&quot;This is an example list&quot;, &quot;Pull to add to top&quot;, &quot;Tap bottom of list to add to it&quot;).
+
+## Motion spec
+Pattern: elastic pull-down with inline row birth.
+- Pull down: the whole list translates with the finger but each row lags by its index - the stack visibly stretches, gaps opening between rows as they shear apart (max separation ~24px at full pull).
+- Past the threshold (~90px): a new row slot opens at the top in the darkest red of the gradient, all existing rows shift down one color step, and the keyboard slides up (300ms) with focus already in the new row - cursor blinking.
+- Release early: the rows spring back together with elastic overshoot (spring ~260/14), gaps snapping shut.
+- Type and submit: the new row settles into the gradient, keyboard dismisses, rows relax.
+
+## Calibration
+- The shear is the signature: rows move at slightly different rates, never as a rigid block.
+- The new row inherits the TOP of the gradient; recoloring cascades down the whole list in one 300ms crossfade.
+
+## Reduced motion
+New row fades in at top; no stretch.
+
+## Don&#x27;t miss
+- The keyboard is up BEFORE the pull releases fully - zero dead time between gesture and typing.
+- Row text scales a touch with stretch (~2%) so the rubber feel carries into the type.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">elastic pull-down with inline row birth.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/clear-pull-down-to-add-interaction">original interaction</a> by Clear. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Clear's pull-to-add - dragging the list down stretches the heat-gradient rows like rubber, a new blank row in the deepest red emerges at the top, and the keyboard is already up with the cursor blinking.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen, \"Welcome to Clear\" header, and a list whose rows run a heat gradient from deep red (top) to orange (bottom) - the tutorial rows (\"This is an example list\", \"Pull to add to top\", \"Tap bottom of list to add to it\").\n\n## Motion spec\nPattern: elastic pull-down with inline row birth.\n- Pull down: the whole list translates with the finger but each row lags by its index - the stack visibly stretches, gaps opening between rows as they shear apart (max separation ~24px at full pull).\n- Past the threshold (~90px): a new row slot opens at the top in the darkest red of the gradient, all existing rows shift down one color step, and the keyboard slides up (300ms) with focus already in the new row - cursor blinking.\n- Release early: the rows spring back together with elastic overshoot (spring ~260/14), gaps snapping shut.\n- Type and submit: the new row settles into the gradient, keyboard dismisses, rows relax.\n\n## Calibration\n- The shear is the signature: rows move at slightly different rates, never as a rigid block.\n- The new row inherits the TOP of the gradient; recoloring cascades down the whole list in one 300ms crossfade.\n\n## Reduced motion\nNew row fades in at top; no stretch.\n\n## Don't miss\n- The keyboard is up BEFORE the pull releases fully - zero dead time between gesture and typing.\n- Row text scales a touch with stretch (~2%) so the rubber feel carries into the type."</script>
+</body></html>

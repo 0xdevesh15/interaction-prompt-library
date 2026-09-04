@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dropset Workout Scroll Picker - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Dropset Workout Scroll Picker</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/dropset-workout-scroll-picker"><b>Dropset</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dropset-workout-scroll-picker">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dropset-workout-scroll-picker">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Dropset&#x27;s workout-type picker - a dark sheet lists Custom, Push, Pull, Full body, Upper body, Legs, Glutes, Back, Chest...; scrolling snaps each type into a bolded focus row with a circular arrow button at its right edge.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d851cda23851dc5ed39471/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d851cda23851dc5ed39471/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-dropset-workout-scroll-picker.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Dropset&#x27;s workout-type picker - a dark sheet lists Custom, Push, Pull, Full body, Upper body, Legs, Glutes, Back, Chest...; scrolling snaps each type into a bolded focus row with a circular arrow button at its right edge.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black sheet over a dimmed Workouts screen: a vertical list of workout types in gray, the focused one in bold white with a white circular arrow button right-aligned on its row; a one-line description at the sheet&#x27;s bottom that changes with the focus (&quot;Create a Full body workout...&quot;).
+
+## Motion spec
+Pattern: snapping list picker with focus row.
+- Scroll: rows glide 1:1 with the drag; the row crossing the center zone bolds and brightens to white (150ms) while the previous focus relaxes back to gray.
+- Release: the list snaps the nearest row to center (spring ~340/26, ~280ms) with a haptic tick per row passed.
+- The circular arrow button slides in from the row&#x27;s right edge (100ms) only on the focused row; it pops (scale 0.8 -&gt; 1, spring ~420/20).
+- The bottom description crossfades per focus change (200ms).
+- Tap the arrow: the row flashes once and the sheet pushes to the workout builder.
+
+## Calibration
+- Only one bold row at a time; rows above and below the focus stay readable but clearly secondary.
+- The arrow belongs to the row, not the sheet - it travels with whichever row holds focus.
+
+## Reduced motion
+List snaps without row emphasis animations; focus changes by color only.
+
+## Don&#x27;t miss
+- The dimmed Workouts screen stays visible behind the sheet - this is a modal picker, not a page.
+- Custom sits at top with a plus-style affordance; it behaves like the others in scroll focus.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">snapping list picker with focus row.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/dropset-workout-scroll-picker">original interaction</a> by Dropset. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Dropset's workout-type picker - a dark sheet lists Custom, Push, Pull, Full body, Upper body, Legs, Glutes, Back, Chest...; scrolling snaps each type into a bolded focus row with a circular arrow button at its right edge.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack sheet over a dimmed Workouts screen: a vertical list of workout types in gray, the focused one in bold white with a white circular arrow button right-aligned on its row; a one-line description at the sheet's bottom that changes with the focus (\"Create a Full body workout...\").\n\n## Motion spec\nPattern: snapping list picker with focus row.\n- Scroll: rows glide 1:1 with the drag; the row crossing the center zone bolds and brightens to white (150ms) while the previous focus relaxes back to gray.\n- Release: the list snaps the nearest row to center (spring ~340/26, ~280ms) with a haptic tick per row passed.\n- The circular arrow button slides in from the row's right edge (100ms) only on the focused row; it pops (scale 0.8 -> 1, spring ~420/20).\n- The bottom description crossfades per focus change (200ms).\n- Tap the arrow: the row flashes once and the sheet pushes to the workout builder.\n\n## Calibration\n- Only one bold row at a time; rows above and below the focus stay readable but clearly secondary.\n- The arrow belongs to the row, not the sheet - it travels with whichever row holds focus.\n\n## Reduced motion\nList snaps without row emphasis animations; focus changes by color only.\n\n## Don't miss\n- The dimmed Workouts screen stays visible behind the sheet - this is a modal picker, not a page.\n- Custom sits at top with a plus-style affordance; it behaves like the others in scroll focus."</script>
+</body></html>

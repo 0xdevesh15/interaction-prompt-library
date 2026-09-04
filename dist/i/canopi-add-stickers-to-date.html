@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Canopi Add Stickers to Date - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Canopi Add Stickers to Date</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/canopi-add-stickers-to-date"><b>Canopi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/canopi-add-stickers-to-date">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/canopi-add-stickers-to-date">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Canopi&#x27;s sticker canvas - from a date page (&quot;Aug Saturday 31&quot;), Add Stickers raises an emoji picker sheet, and each tapped emoji springs onto the canvas as a draggable sticker with a count badge; Done commits the collage back onto the date.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e3c93c98a6ede244acd8a3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e3c93c98a6ede244acd8a3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-canopi-add-stickers-to-date.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Canopi&#x27;s sticker canvas - from a date page (&quot;Aug Saturday 31&quot;), Add Stickers raises an emoji picker sheet, and each tapped emoji springs onto the canvas as a draggable sticker with a count badge; Done commits the collage back onto the date.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White date canvas with big &quot;31&quot; and weekday header, faint calendar grid behind. Edit mode: emoji keyboard sheet at half height (search field, recents row, category icons), blue Done pill floating above it. Placed stickers (red hearts with &quot;10&quot; badges, sparkles, party face) sit on the canvas. Exit shows &quot;Replaced Existing Stickers&quot; action.
+
+## Motion spec
+Pattern: spring-placed sticker collage.
+- Tap Add Stickers: the emoji sheet rises (spring ~320/26, ~350ms); the canvas dims slightly and the date shrinks to a faint watermark behind the editing area.
+- Tap an emoji: a sticker springs onto the canvas center-top with a bounce (scale 0.2 -&gt; 1.15 -&gt; 1, spring ~380/16, ~400ms) and lands at a slight random rotation (±8deg); tapping the same emoji again increments its red count badge (badge pops scale 0.5 -&gt; 1 per increment).
+- Drag any sticker freely; release gives it a tiny settle bounce; dragging over the sheet area dims the sticker to hint removal.
+- Tap Done: the sheet slides down (280ms), stickers settle with a 200ms stagger (each scales 1 -&gt; 0.92 -&gt; 1), and the canvas returns to the date view showing the collage in place.
+- A confirmation pill (&quot;Replaced Existing Stickers&quot; or similar) slides up from the bottom (spring ~340/24) and auto-dismisses after ~2s.
+
+## Calibration
+- Sticker rotation is assigned at placement and persists - the collage looks hand-placed.
+- Count badges track taps of the same emoji, not separate stickers.
+
+## Reduced motion
+Stickers fade in at their positions without bounce; sheet crossfades.
+
+## Don&#x27;t miss
+- The emoji sheet is the system-style keyboard grid, not a custom picker.
+- Placed stickers persist on the date view at reduced size - the canvas is a preview of the decorated date.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring-placed sticker collage.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/canopi-add-stickers-to-date">original interaction</a> by Canopi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Canopi's sticker canvas - from a date page (\"Aug Saturday 31\"), Add Stickers raises an emoji picker sheet, and each tapped emoji springs onto the canvas as a draggable sticker with a count badge; Done commits the collage back onto the date.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite date canvas with big \"31\" and weekday header, faint calendar grid behind. Edit mode: emoji keyboard sheet at half height (search field, recents row, category icons), blue Done pill floating above it. Placed stickers (red hearts with \"10\" badges, sparkles, party face) sit on the canvas. Exit shows \"Replaced Existing Stickers\" action.\n\n## Motion spec\nPattern: spring-placed sticker collage.\n- Tap Add Stickers: the emoji sheet rises (spring ~320/26, ~350ms); the canvas dims slightly and the date shrinks to a faint watermark behind the editing area.\n- Tap an emoji: a sticker springs onto the canvas center-top with a bounce (scale 0.2 -> 1.15 -> 1, spring ~380/16, ~400ms) and lands at a slight random rotation (\u00b18deg); tapping the same emoji again increments its red count badge (badge pops scale 0.5 -> 1 per increment).\n- Drag any sticker freely; release gives it a tiny settle bounce; dragging over the sheet area dims the sticker to hint removal.\n- Tap Done: the sheet slides down (280ms), stickers settle with a 200ms stagger (each scales 1 -> 0.92 -> 1), and the canvas returns to the date view showing the collage in place.\n- A confirmation pill (\"Replaced Existing Stickers\" or similar) slides up from the bottom (spring ~340/24) and auto-dismisses after ~2s.\n\n## Calibration\n- Sticker rotation is assigned at placement and persists - the collage looks hand-placed.\n- Count badges track taps of the same emoji, not separate stickers.\n\n## Reduced motion\nStickers fade in at their positions without bounce; sheet crossfades.\n\n## Don't miss\n- The emoji sheet is the system-style keyboard grid, not a custom picker.\n- Placed stickers persist on the date view at reduced size - the canvas is a preview of the decorated date."</script>
+</body></html>

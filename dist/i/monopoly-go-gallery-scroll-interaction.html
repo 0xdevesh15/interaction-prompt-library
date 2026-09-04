@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Gallery Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Gallery Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-gallery-scroll-interaction"><b>Monopoly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-gallery-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-gallery-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monopoly Go&#x27;s Net Worth Gallery - a vertically scrolling gallery wall of framed reward cards with a gold progress rail and milestone marker on the right edge, and tapping any frame opens its reward preview card over the dimmed wall.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6750974b948718dd94147f10/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6750974b948718dd94147f10/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-gallery-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monopoly Go&#x27;s Net Worth Gallery - a vertically scrolling gallery wall of framed reward cards with a gold progress rail and milestone marker on the right edge, and tapping any frame opens its reward preview card over the dimmed wall.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A full-screen &quot;NET WORTH GALLERY&quot; view: deep-blue gallery wall with gold curtain swag at top, two staggered columns of framed artwork cards (some gold-framed and owned, some greyed/locked, one with a red &quot;UP NEXT&quot; ribbon), a vertical gold rail on the right carrying the current net-worth badge (&quot;7,860&quot;), and a cream bottom bar with a page dot.
+
+## Motion spec
+Pattern: vertical scroll with rail-linked progress + card preview.
+- Vertical scroll: the card wall scrolls with 1:1 finger tracking, flick momentum (~2500px/s decay), and rubber-band at the ends (max 60px overscroll, spring return ~300/20).
+- The two columns are vertically offset by half a card - the stagger stays fixed while scrolling.
+- As the wall scrolls, the gold rail&#x27;s milestone badge slides to track the visible region&#x27;s net-worth value, updating its number on milestone crossings.
+- Tap a frame: the wall dims (black overlay to 60%, 200ms) and the tapped card&#x27;s preview pops in (scale 0.85 -&gt; 1, spring ~350/22, 250ms) showing the reward value, name, and &quot;Current Welcome Reward: Bonus Payout&quot; detail with a dice count.
+- Dismiss: tap the X or backdrop - the preview scales down (0.95 -&gt; gone, 180ms) and the dim lifts.
+
+## Calibration
+- Locked frames stay desaturated grey while scrolling past - ownership reads at a glance.
+- The rail badge never lags the scroll - it moves continuously with the content.
+
+## Reduced motion
+Scroll without momentum; preview appears without spring.
+
+## Don&#x27;t miss
+- The gold rail is a separate layer from the card columns - it parallaxes slightly against the wall during scroll.
+- &quot;UP NEXT&quot; gets a red diagonal ribbon on its frame corner - the one piece of red on the wall.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vertical scroll with rail-linked progress + card preview.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-gallery-scroll-interaction">original interaction</a> by Monopoly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monopoly Go's Net Worth Gallery - a vertically scrolling gallery wall of framed reward cards with a gold progress rail and milestone marker on the right edge, and tapping any frame opens its reward preview card over the dimmed wall.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA full-screen \"NET WORTH GALLERY\" view: deep-blue gallery wall with gold curtain swag at top, two staggered columns of framed artwork cards (some gold-framed and owned, some greyed/locked, one with a red \"UP NEXT\" ribbon), a vertical gold rail on the right carrying the current net-worth badge (\"7,860\"), and a cream bottom bar with a page dot.\n\n## Motion spec\nPattern: vertical scroll with rail-linked progress + card preview.\n- Vertical scroll: the card wall scrolls with 1:1 finger tracking, flick momentum (~2500px/s decay), and rubber-band at the ends (max 60px overscroll, spring return ~300/20).\n- The two columns are vertically offset by half a card - the stagger stays fixed while scrolling.\n- As the wall scrolls, the gold rail's milestone badge slides to track the visible region's net-worth value, updating its number on milestone crossings.\n- Tap a frame: the wall dims (black overlay to 60%, 200ms) and the tapped card's preview pops in (scale 0.85 -> 1, spring ~350/22, 250ms) showing the reward value, name, and \"Current Welcome Reward: Bonus Payout\" detail with a dice count.\n- Dismiss: tap the X or backdrop - the preview scales down (0.95 -> gone, 180ms) and the dim lifts.\n\n## Calibration\n- Locked frames stay desaturated grey while scrolling past - ownership reads at a glance.\n- The rail badge never lags the scroll - it moves continuously with the content.\n\n## Reduced motion\nScroll without momentum; preview appears without spring.\n\n## Don't miss\n- The gold rail is a separate layer from the card columns - it parallaxes slightly against the wall during scroll.\n- \"UP NEXT\" gets a red diagonal ribbon on its frame corner - the one piece of red on the wall."</script>
+</body></html>

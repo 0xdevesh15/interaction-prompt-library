@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Namma Yatri Book Cab 3D Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Namma Yatri Book Cab 3D Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/namma-yatri-book-cab-3d-animation"><b>Namma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/namma-yatri-book-cab-3d-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/namma-yatri-book-cab-3d-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Namma Yatri&#x27;s home screen - a 3D cab illustration drives across the map area and a springy &quot;Book a cab now&quot; tooltip pops out above it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f5f3c7ed780e097a4e0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f5f3c7ed780e097a4e0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-namma-yatri-book-cab-3d-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Namma Yatri&#x27;s home screen - a 3D cab illustration drives across the map area and a springy &quot;Book a cab now&quot; tooltip pops out above it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Ride-hailing home: map top half (street grid, green pickup zone, driver pins, a blue ETA pill), dark &quot;Where would you like to go?&quot; search bar, saved-place card (Carlton Towers), Home/Add More chips, vehicle options row (Namma Yatri, Metro, Intercity), &quot;View All Services&quot; link, bottom tab bar. A 3D yellow-and-white cab model sits on the map.
+
+## Motion spec
+Pattern: 3D object traversal + tooltip pop, ~3s loop.
+- Cab: the 3D cab glides from left to right across the map (3s, ease-in-out), rotating a few degrees with the path and casting a soft ground shadow; it loops back after a pause.
+- Tooltip: as the cab crosses mid-map, a dark pill tooltip &quot;Book a cab now&quot; pops in above it (spring scale 0.6 -&gt; 1.08 -&gt; 1, ~400ms, ~350/18) and tracks the cab&#x27;s position, then pops out as the cab exits.
+- Map: pins and ETA pill stay fixed; a subtle map pan (4-6px) follows the cab.
+
+## Calibration
+- The tooltip attaches to the cab, not the map - it moves with the model.
+- The pop spring is snappy but soft - no harsh bounce.
+
+## Reduced motion
+Cab parked mid-map with the tooltip already visible; no traversal.
+
+## Don&#x27;t miss
+- The cab is a rendered 3D model with perspective and shadow, not a flat icon.
+- The map beneath stays fully interactive-looking; nothing else animates.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D object traversal + tooltip pop, ~3s loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/namma-yatri-book-cab-3d-animation">original interaction</a> by Namma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Namma Yatri's home screen - a 3D cab illustration drives across the map area and a springy \"Book a cab now\" tooltip pops out above it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRide-hailing home: map top half (street grid, green pickup zone, driver pins, a blue ETA pill), dark \"Where would you like to go?\" search bar, saved-place card (Carlton Towers), Home/Add More chips, vehicle options row (Namma Yatri, Metro, Intercity), \"View All Services\" link, bottom tab bar. A 3D yellow-and-white cab model sits on the map.\n\n## Motion spec\nPattern: 3D object traversal + tooltip pop, ~3s loop.\n- Cab: the 3D cab glides from left to right across the map (3s, ease-in-out), rotating a few degrees with the path and casting a soft ground shadow; it loops back after a pause.\n- Tooltip: as the cab crosses mid-map, a dark pill tooltip \"Book a cab now\" pops in above it (spring scale 0.6 -> 1.08 -> 1, ~400ms, ~350/18) and tracks the cab's position, then pops out as the cab exits.\n- Map: pins and ETA pill stay fixed; a subtle map pan (4-6px) follows the cab.\n\n## Calibration\n- The tooltip attaches to the cab, not the map - it moves with the model.\n- The pop spring is snappy but soft - no harsh bounce.\n\n## Reduced motion\nCab parked mid-map with the tooltip already visible; no traversal.\n\n## Don't miss\n- The cab is a rendered 3D model with perspective and shadow, not a flat icon.\n- The map beneath stays fully interactive-looking; nothing else animates."</script>
+</body></html>

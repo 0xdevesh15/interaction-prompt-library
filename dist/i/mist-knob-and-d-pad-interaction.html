@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mist Knob and D-Pad Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mist Knob and D-Pad Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mist-knob-and-d-pad-interaction"><b>Mist</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mist-knob-and-d-pad-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mist-knob-and-d-pad-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Mist&#x27;s knob and D-pad - on the white retro console body, tapping the red D-pad directions and rotating the dial skews, shifts, and stretches the CRT mascot&#x27;s face in real time - eyes drifting, mouth tilting, the whole face deforming like analog signal drift.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745fb58080b60408ca1a501/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745fb58080b60408ca1a501/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mist-knob-and-d-pad-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Mist&#x27;s knob and D-pad - on the white retro console body, tapping the red D-pad directions and rotating the dial skews, shifts, and stretches the CRT mascot&#x27;s face in real time - eyes drifting, mouth tilting, the whole face deforming like analog signal drift.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White/light console variant: CRT screen showing the pixel face (neutral expression, light pixels on dark), below it a red plus-shaped D-pad left, a round grey dial right, speaker grille bottom. Status microcopy appears under the face.
+
+## Motion spec
+Pattern: direct-manipulation face deformation.
+- D-pad tap: the face nudges in that direction (translate 8px, spring ~400/18, snappy return overshoot) - left/right shift the eyes and mouth together; up/down stretch or squash the face vertically (scaleY +/-10%).
+- Dial rotate: the face skews continuously with the dial angle (skewX mapped -12deg..+12deg, direct 1:1) and a soft chromatic fringe grows with the skew (RGB split up to 3px at extremes).
+- Release the dial: it springs back to center (spring ~300/18, visible wobble) and the face relaxes to neutral on the same spring.
+- The microcopy under the face updates with the deformation (&quot;MIST SKEWED HARD PORTSIDE MODE&quot; etc.), typed in 20ms/char.
+
+## Calibration
+- Every deformation has an under-damped return - the face feels like jelly on springs.
+- The chromatic fringe only appears under deformation - neutral face is clean white pixels.
+
+## Reduced motion
+Face snaps to deformed poses without springs; no fringe.
+
+## Don&#x27;t miss
+- The face deforms as one connected raster - eyes, mouth, and outline distort together, not as separate sprites.
+- The dial has a real indicator line - its rotation state is readable without looking at the screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">direct-manipulation face deformation.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mist-knob-and-d-pad-interaction">original interaction</a> by Mist. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Mist's knob and D-pad - on the white retro console body, tapping the red D-pad directions and rotating the dial skews, shifts, and stretches the CRT mascot's face in real time - eyes drifting, mouth tilting, the whole face deforming like analog signal drift.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite/light console variant: CRT screen showing the pixel face (neutral expression, light pixels on dark), below it a red plus-shaped D-pad left, a round grey dial right, speaker grille bottom. Status microcopy appears under the face.\n\n## Motion spec\nPattern: direct-manipulation face deformation.\n- D-pad tap: the face nudges in that direction (translate 8px, spring ~400/18, snappy return overshoot) - left/right shift the eyes and mouth together; up/down stretch or squash the face vertically (scaleY +/-10%).\n- Dial rotate: the face skews continuously with the dial angle (skewX mapped -12deg..+12deg, direct 1:1) and a soft chromatic fringe grows with the skew (RGB split up to 3px at extremes).\n- Release the dial: it springs back to center (spring ~300/18, visible wobble) and the face relaxes to neutral on the same spring.\n- The microcopy under the face updates with the deformation (\"MIST SKEWED HARD PORTSIDE MODE\" etc.), typed in 20ms/char.\n\n## Calibration\n- Every deformation has an under-damped return - the face feels like jelly on springs.\n- The chromatic fringe only appears under deformation - neutral face is clean white pixels.\n\n## Reduced motion\nFace snaps to deformed poses without springs; no fringe.\n\n## Don't miss\n- The face deforms as one connected raster - eyes, mouth, and outline distort together, not as separate sprites.\n- The dial has a real indicator line - its rotation state is readable without looking at the screen."</script>
+</body></html>

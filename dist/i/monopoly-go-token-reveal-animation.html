@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Token Reveal Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Token Reveal Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-token-reveal-animation"><b>Monopoly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-token-reveal-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-token-reveal-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Monopoly Go&#x27;s token reveal - a glass dome over the new token rises, tips away, and vanishes while the token sparkles on its pedestal and the action buttons slide up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab99aa18a0c275c3da/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab99aa18a0c275c3da/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-token-reveal-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Monopoly Go&#x27;s token reveal - a glass dome over the new token rises, tips away, and vanishes while the token sparkles on its pedestal and the action buttons slide up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark stage with a glowing &quot;NEW TOKEN!&quot; header. A silver top-hat token sits on a blue pedestal inside a glass dome. The dome lifts and tips off-screen, the token sparkles alone on the pedestal, and a white action bar with green EQUIP and orange SKIP buttons slides up at the bottom.
+
+## Motion spec
+Pattern: dome-lift reveal with staged UI, ~2.5s.
+- The dome with the token inside rises into view under the header (spring stiffness 260 damping 18), a light sweep crossing the glass.
+- The dome lifts straight up 120px (400ms, ease-in-out), then tips sideways and slides off-screen right (300ms, ease-in, rotating 30deg).
+- The token stays on the pedestal, catching a sparkle burst (6-8 star sparkles popping around it, 150ms stagger, scale 0 to 1 to 0).
+- The pedestal glow brightens under the revealed token (300ms).
+- The action bar slides up from the bottom (spring stiffness 300 damping 20), EQUIP and SKIP settling side by side.
+
+## Calibration
+- The dome&#x27;s exit is a lift, then a tip - one continuous but two-phased motion. A straight slide reads as a lid, not a dome.
+- The token never moves during the dome exit; the stillness is what spotlights it.
+
+## Reduced motion
+Dome fades out; bar fades in.
+
+## Don&#x27;t miss
+- The header glows yellow with a slight neon flicker.
+- Sparkles fire after the dome clears the token, not during the lift.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">dome-lift reveal with staged UI, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-token-reveal-animation">original interaction</a> by Monopoly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Monopoly Go's token reveal - a glass dome over the new token rises, tips away, and vanishes while the token sparkles on its pedestal and the action buttons slide up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark stage with a glowing \"NEW TOKEN!\" header. A silver top-hat token sits on a blue pedestal inside a glass dome. The dome lifts and tips off-screen, the token sparkles alone on the pedestal, and a white action bar with green EQUIP and orange SKIP buttons slides up at the bottom.\n\n## Motion spec\nPattern: dome-lift reveal with staged UI, ~2.5s.\n- The dome with the token inside rises into view under the header (spring stiffness 260 damping 18), a light sweep crossing the glass.\n- The dome lifts straight up 120px (400ms, ease-in-out), then tips sideways and slides off-screen right (300ms, ease-in, rotating 30deg).\n- The token stays on the pedestal, catching a sparkle burst (6-8 star sparkles popping around it, 150ms stagger, scale 0 to 1 to 0).\n- The pedestal glow brightens under the revealed token (300ms).\n- The action bar slides up from the bottom (spring stiffness 300 damping 20), EQUIP and SKIP settling side by side.\n\n## Calibration\n- The dome's exit is a lift, then a tip - one continuous but two-phased motion. A straight slide reads as a lid, not a dome.\n- The token never moves during the dome exit; the stillness is what spotlights it.\n\n## Reduced motion\nDome fades out; bar fades in.\n\n## Don't miss\n- The header glows yellow with a slight neon flicker.\n- Sparkles fire after the dome clears the token, not during the lift."</script>
+</body></html>

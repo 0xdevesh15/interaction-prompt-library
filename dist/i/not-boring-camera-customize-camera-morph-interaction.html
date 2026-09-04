@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Boring Camera Customize Camera Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Not Boring Camera Customize Camera Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/not-boring-camera-customize-camera-morph-interaction"><b>Not</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-camera-customize-camera-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-camera-customize-camera-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Not Boring Camera&#x27;s customize morph - the live camera interface morphs into a skeuomorphic 3D camera model surrounded by a part-color dot grid, colors apply per part, and the model spins to show off the build.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6841d1680f8d7a05183cddb1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6841d1680f8d7a05183cddb1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-not-boring-camera-customize-camera-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Not Boring Camera&#x27;s customize morph - the live camera interface morphs into a skeuomorphic 3D camera model surrounded by a part-color dot grid, colors apply per part, and the model spins to show off the build.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The camera UI: viewfinder with purple film door, yellow grip, red flash, big white shutter. A settings list (&quot;!Camera&quot;, Customize, Styles, Capture, Controls, Guide). The customize screen: a 3D camera model front-on (teal body, pink lens ring) over a blueprint backdrop, a part tab row (Body, Top, Lens, Back), a grid of color dots, and a &quot;Done&quot; pill with a change counter. Final beat: the model rotates to a 3/4 angle showing the customized top and grip.
+
+## Motion spec
+Pattern: interface-to-model morph with per-part recoloring.
+- Entering customize: the live camera UI&#x27;s parts fly apart slightly and reassemble as the 3D model (parts translate + scale to their model positions, 400ms, spring ~280/18) while the viewfinder fades to the blueprint backdrop (300ms).
+- Part tabs: tapping switches the active part (tab underline slides, spring ~300/22); the model highlights that part (others dim 30%, 200ms).
+- Color dots: tapping a dot recolors the active part (color tween 200ms) with a dot pop (scale 1 -&gt; 1.3 -&gt; 1, spring ~340/14) and a checkmark on the chosen dot; the Done counter ticks up with a badge pop.
+- The model idles with a slow turntable sway (rotateY +-8deg, 4s).
+- Done: the model spins to the 3/4 hero angle (rotateY 0 -&gt; -30deg + rotateX 10deg, 600ms, ease-in-out) with a glint sweeping the lens (200ms), then the view morphs back to the live camera UI wearing the new colors (reverse of entry, 400ms).
+
+## Calibration
+- Part recolors are instant-feeling: 200ms max, no fading through white.
+- The model&#x27;s materials stay matte-plastic skeuomorphic - soft top light, contact shadow.
+
+## Reduced motion
+Morphs crossfade (300ms); recolors instant; no turntable or spin.
+
+## Don&#x27;t miss
+- The morph&#x27;s continuity: shutter button becomes the model&#x27;s shutter, film door becomes its back - parts map 1:1.
+- The blueprint grid backdrop remains static and faint throughout.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">interface-to-model morph with per-part recoloring.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/not-boring-camera-customize-camera-morph-interaction">original interaction</a> by Not. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Not Boring Camera's customize morph - the live camera interface morphs into a skeuomorphic 3D camera model surrounded by a part-color dot grid, colors apply per part, and the model spins to show off the build.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe camera UI: viewfinder with purple film door, yellow grip, red flash, big white shutter. A settings list (\"!Camera\", Customize, Styles, Capture, Controls, Guide). The customize screen: a 3D camera model front-on (teal body, pink lens ring) over a blueprint backdrop, a part tab row (Body, Top, Lens, Back), a grid of color dots, and a \"Done\" pill with a change counter. Final beat: the model rotates to a 3/4 angle showing the customized top and grip.\n\n## Motion spec\nPattern: interface-to-model morph with per-part recoloring.\n- Entering customize: the live camera UI's parts fly apart slightly and reassemble as the 3D model (parts translate + scale to their model positions, 400ms, spring ~280/18) while the viewfinder fades to the blueprint backdrop (300ms).\n- Part tabs: tapping switches the active part (tab underline slides, spring ~300/22); the model highlights that part (others dim 30%, 200ms).\n- Color dots: tapping a dot recolors the active part (color tween 200ms) with a dot pop (scale 1 -> 1.3 -> 1, spring ~340/14) and a checkmark on the chosen dot; the Done counter ticks up with a badge pop.\n- The model idles with a slow turntable sway (rotateY +-8deg, 4s).\n- Done: the model spins to the 3/4 hero angle (rotateY 0 -> -30deg + rotateX 10deg, 600ms, ease-in-out) with a glint sweeping the lens (200ms), then the view morphs back to the live camera UI wearing the new colors (reverse of entry, 400ms).\n\n## Calibration\n- Part recolors are instant-feeling: 200ms max, no fading through white.\n- The model's materials stay matte-plastic skeuomorphic - soft top light, contact shadow.\n\n## Reduced motion\nMorphs crossfade (300ms); recolors instant; no turntable or spin.\n\n## Don't miss\n- The morph's continuity: shutter button becomes the model's shutter, film door becomes its back - parts map 1:1.\n- The blueprint grid backdrop remains static and faint throughout."</script>
+</body></html>

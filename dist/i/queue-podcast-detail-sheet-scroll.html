@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queue Podcast Detail Sheet Scroll - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Queue Podcast Detail Sheet Scroll</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/queue-podcast-detail-sheet-scroll"><b>Queue</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-podcast-detail-sheet-scroll">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-podcast-detail-sheet-scroll">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Queue&#x27;s podcast detail web sheet - a bottom sheet web view of the show&#x27;s site with a sticky green header, Home/Episodes/Bonus episodes tabs that swap content, smooth scrolling through episodes, subscribe options, and host cards, and a slide-down dismissal.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734c16ceea627f19500a853/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734c16ceea627f19500a853/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-queue-podcast-detail-sheet-scroll.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Queue&#x27;s podcast detail web sheet - a bottom sheet web view of the show&#x27;s site with a sticky green header, Home/Episodes/Bonus episodes tabs that swap content, smooth scrolling through episodes, subscribe options, and host cards, and a slide-down dismissal.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The sheet holds the Design Details site: green banner header (&quot;DESIGN DETAILS&quot; script logo), tab bar (Home / Episodes / Bonus episodes), then content - &quot;Latest Episode&quot; with a play row, &quot;Subscribe&quot; list (Apple Podcasts, Spotify, Overcast, PocketCasts), &quot;Where to begin?&quot; episode links, host cards (Marshall Bock, Brian Lovin, each with a follow button), a red &quot;Listener supported&quot; Patreon block, and a Done button pinned at the bottom.
+
+## Motion spec
+Pattern: sticky-header web sheet with tab transitions and drag-to-dismiss.
+- The sheet rises to near-full height (spring ~320/26, 380ms) leaving a sliver of the dimmed app at top.
+- Scroll: content scrolls under the sticky green header; the tab bar pins just beneath it after the banner scrolls past.
+- Tab switch: the outgoing content fades + slides left 24px (180ms, ease-in) as the new tab&#x27;s content fades + slides in from the right (220ms, ease-out); the active tab underline slides to the new position (200ms).
+- Drag the header/grabber down: the sheet follows the finger 1:1; past 30% drag it dismisses (slide down 300ms, ease-in), otherwise springs back (spring ~380/24).
+- The Done button also dismisses with the same slide.
+
+## Calibration
+- Tab underline movement is a single slide - no fade of the underline itself.
+- Dismissal velocity inherits the fling - a fast flick closes immediately.
+
+## Reduced motion
+Tabs crossfade; dismissal is a fade-down.
+
+## Don&#x27;t miss
+- The status bar area stays dark/dimmed - the sheet never claims the very top.
+- The host cards&#x27; blue follow buttons and the red Patreon block are the only saturated accents on the white page.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sticky-header web sheet with tab transitions and drag-to-dismiss.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/queue-podcast-detail-sheet-scroll">original interaction</a> by Queue. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Queue's podcast detail web sheet - a bottom sheet web view of the show's site with a sticky green header, Home/Episodes/Bonus episodes tabs that swap content, smooth scrolling through episodes, subscribe options, and host cards, and a slide-down dismissal.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe sheet holds the Design Details site: green banner header (\"DESIGN DETAILS\" script logo), tab bar (Home / Episodes / Bonus episodes), then content - \"Latest Episode\" with a play row, \"Subscribe\" list (Apple Podcasts, Spotify, Overcast, PocketCasts), \"Where to begin?\" episode links, host cards (Marshall Bock, Brian Lovin, each with a follow button), a red \"Listener supported\" Patreon block, and a Done button pinned at the bottom.\n\n## Motion spec\nPattern: sticky-header web sheet with tab transitions and drag-to-dismiss.\n- The sheet rises to near-full height (spring ~320/26, 380ms) leaving a sliver of the dimmed app at top.\n- Scroll: content scrolls under the sticky green header; the tab bar pins just beneath it after the banner scrolls past.\n- Tab switch: the outgoing content fades + slides left 24px (180ms, ease-in) as the new tab's content fades + slides in from the right (220ms, ease-out); the active tab underline slides to the new position (200ms).\n- Drag the header/grabber down: the sheet follows the finger 1:1; past 30% drag it dismisses (slide down 300ms, ease-in), otherwise springs back (spring ~380/24).\n- The Done button also dismisses with the same slide.\n\n## Calibration\n- Tab underline movement is a single slide - no fade of the underline itself.\n- Dismissal velocity inherits the fling - a fast flick closes immediately.\n\n## Reduced motion\nTabs crossfade; dismissal is a fade-down.\n\n## Don't miss\n- The status bar area stays dark/dimmed - the sheet never claims the very top.\n- The host cards' blue follow buttons and the red Patreon block are the only saturated accents on the white page."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Emphasis Commit Circular Timer Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Emphasis Commit Circular Timer Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/emphasis-commit-circular-timer-animation"><b>Emphasis</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/emphasis-commit-circular-timer-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/emphasis-commit-circular-timer-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Emphasis&#x27;s commit timer - on the &quot;Commit to the Timer&quot; screen, tapping the large circular play button morphs it into a pie-chart timer: the play triangle dissolves, the ring fills into a white pie wedge that sweeps clockwise, and a dotted tick ring materializes around the dial as the timer runs.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a863350c08ef72ea6fd0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a863350c08ef72ea6fd0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-emphasis-commit-circular-timer-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Emphasis&#x27;s commit timer - on the &quot;Commit to the Timer&quot; screen, tapping the large circular play button morphs it into a pie-chart timer: the play triangle dissolves, the ring fills into a white pie wedge that sweeps clockwise, and a dotted tick ring materializes around the dial as the timer runs.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Near-black screen: a large circular outline button with a play triangle at center, a small green &quot;Reading&quot; tag below it, &quot;Commit to the Timer&quot; headline with explainer copy, and a &quot;Continue&quot; button at the bottom.
+
+## Motion spec
+Pattern: button-to-timer morph.
+- Tap: the play triangle scales down and fades (150ms) while the ring stays put.
+- The white pie wedge grows from the 12 o&#x27;clock position (sweep, ~500ms to the first resting segment), filling the circle&#x27;s interior; the ring&#x27;s stroke converts into the pie&#x27;s outline.
+- A ring of small dots/ticks fades in around the dial (250ms, staggered clockwise) once the pie lands.
+- The pie then sweeps steadily clockwise like a timer hand (continuous, linear), with the dotted ring shimmering subtly as it passes.
+- The &quot;Reading&quot; tag and copy stay static - the dial owns the motion.
+
+## Calibration
+- The morph keeps the circle&#x27;s geometry constant - only its interior changes from play glyph to pie fill.
+- The pie fill is solid white on black - the strongest contrast on the screen.
+
+## Reduced motion
+The play button cross-fades to the current pie state (250ms); no sweep loop.
+
+## Don&#x27;t miss
+- The tick ring appears after the pie, not with it - two beats, not one.
+- The wedge grows from 12 o&#x27;clock - never from the side.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">button-to-timer morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/emphasis-commit-circular-timer-animation">original interaction</a> by Emphasis. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Emphasis's commit timer - on the \"Commit to the Timer\" screen, tapping the large circular play button morphs it into a pie-chart timer: the play triangle dissolves, the ring fills into a white pie wedge that sweeps clockwise, and a dotted tick ring materializes around the dial as the timer runs.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNear-black screen: a large circular outline button with a play triangle at center, a small green \"Reading\" tag below it, \"Commit to the Timer\" headline with explainer copy, and a \"Continue\" button at the bottom.\n\n## Motion spec\nPattern: button-to-timer morph.\n- Tap: the play triangle scales down and fades (150ms) while the ring stays put.\n- The white pie wedge grows from the 12 o'clock position (sweep, ~500ms to the first resting segment), filling the circle's interior; the ring's stroke converts into the pie's outline.\n- A ring of small dots/ticks fades in around the dial (250ms, staggered clockwise) once the pie lands.\n- The pie then sweeps steadily clockwise like a timer hand (continuous, linear), with the dotted ring shimmering subtly as it passes.\n- The \"Reading\" tag and copy stay static - the dial owns the motion.\n\n## Calibration\n- The morph keeps the circle's geometry constant - only its interior changes from play glyph to pie fill.\n- The pie fill is solid white on black - the strongest contrast on the screen.\n\n## Reduced motion\nThe play button cross-fades to the current pie state (250ms); no sweep loop.\n\n## Don't miss\n- The tick ring appears after the pie, not with it - two beats, not one.\n- The wedge grows from 12 o'clock - never from the side."</script>
+</body></html>

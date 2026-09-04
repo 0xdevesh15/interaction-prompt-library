@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slack Channel Options Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Slack Channel Options Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/slack-channel-options-morph-interaction"><b>Slack</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/slack-channel-options-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/slack-channel-options-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Slack&#x27;s channel options morph - tapping the channel header expands it into a rounded options card (Add / Star / Search row, then Messages, Untitled, Files, Members, Settings &amp; Details rows) that grows seamlessly out of the header and collapses back into it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d35558b404636cd3542/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d35558b404636cd3542/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-slack-channel-options-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Slack&#x27;s channel options morph - tapping the channel header expands it into a rounded options card (Add / Star / Search row, then Messages, Untitled, Files, Members, Settings &amp; Details rows) that grows seamlessly out of the header and collapses back into it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark Slack channel (#60fpsdesign, &quot;1 member - 3 tabs&quot;): message area with channel intro copy and Add description / Add people shortcuts. Expanded state: the header morphs into a floating dark card pinned under the nav bar - three action buttons (Add, Star, Search), then list rows: Messages (highlighted), Untitled, Files, Members &gt;, Settings &amp; Details &gt;. The back chevron becomes an X during expansion.
+
+## Motion spec
+Pattern: header-to-card morph, ~350ms.
+- Expand: the header&#x27;s bounds grow into the card (height + width expand, 300ms, ease-out, corner radius 0 -&gt; 14px); the message area behind dims and pushes down slightly (8px).
+- Content: the action button row fades in first (150ms), list rows follow with 40ms stagger, sliding down 6px each.
+- Chevron swap: back-chevron crossfades to X (150ms).
+- Collapse: the reverse - rows stagger out, card shrinks back into the header (250ms, ease-in).
+
+## Calibration
+- The morph is one continuous shape change - the card and header share a surface, no crossfade between two views.
+- The rest of the screen stays mounted; only the header region deforms.
+
+## Reduced motion
+Card fades in over the header (200ms); no shape morph.
+
+## Don&#x27;t miss
+- The expanded card keeps the channel name row visible at its top as the morph&#x27;s anchor.
+- &quot;Messages&quot; row arrives pre-highlighted as the active tab.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">header-to-card morph, ~350ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/slack-channel-options-morph-interaction">original interaction</a> by Slack. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Slack's channel options morph - tapping the channel header expands it into a rounded options card (Add / Star / Search row, then Messages, Untitled, Files, Members, Settings & Details rows) that grows seamlessly out of the header and collapses back into it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark Slack channel (#60fpsdesign, \"1 member - 3 tabs\"): message area with channel intro copy and Add description / Add people shortcuts. Expanded state: the header morphs into a floating dark card pinned under the nav bar - three action buttons (Add, Star, Search), then list rows: Messages (highlighted), Untitled, Files, Members >, Settings & Details >. The back chevron becomes an X during expansion.\n\n## Motion spec\nPattern: header-to-card morph, ~350ms.\n- Expand: the header's bounds grow into the card (height + width expand, 300ms, ease-out, corner radius 0 -> 14px); the message area behind dims and pushes down slightly (8px).\n- Content: the action button row fades in first (150ms), list rows follow with 40ms stagger, sliding down 6px each.\n- Chevron swap: back-chevron crossfades to X (150ms).\n- Collapse: the reverse - rows stagger out, card shrinks back into the header (250ms, ease-in).\n\n## Calibration\n- The morph is one continuous shape change - the card and header share a surface, no crossfade between two views.\n- The rest of the screen stays mounted; only the header region deforms.\n\n## Reduced motion\nCard fades in over the header (200ms); no shape morph.\n\n## Don't miss\n- The expanded card keeps the channel name row visible at its top as the morph's anchor.\n- \"Messages\" row arrives pre-highlighted as the active tab."</script>
+</body></html>

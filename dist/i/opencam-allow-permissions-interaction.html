@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenCam Allow Permissions Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>OpenCam Allow Permissions Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opencam-allow-permissions-interaction"><b>Opencam</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opencam-allow-permissions-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opencam-allow-permissions-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: OpenCam&#x27;s permission primer - as each system dialog is approved, its list row floods green with a check and the flow advances to the next permission.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9cd0a8c57042d46cfdc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9cd0a8c57042d46cfdc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opencam-allow-permissions-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: OpenCam&#x27;s permission primer - as each system dialog is approved, its list row floods green with a check and the flow advances to the next permission.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen &quot;OpenCam needs access to these permissions&quot;: three rows (Camera, Microphone, Photos Library - icon, name, subcopy, &quot;Continue&quot; right-aligned), a disabled &quot;Please Grant Permissions&quot; pill at the bottom, and the red recording indicator in the status bar.
+
+## Motion spec
+Pattern: sequential permission success states.
+- Prompt: the iOS system dialog pops (scale 0.9 -&gt; 1 with fade, spring ~420/18) centered over the dimmed list.
+- Approve: on &quot;Allow&quot; the dialog dismisses (scale down + fade, 200ms) and the approved row floods green edge-to-edge (color wipe left-to-right, 300ms, ease-out) as a white check circle pops in (spring ~440/18, 200ms) replacing &quot;Continue&quot;.
+- Advance: the next row&#x27;s &quot;Continue&quot; brightens (opacity 0.5 -&gt; 1, 200ms) and after a 300ms beat its system dialog pops.
+- Complete: with all rows green, the bottom pill becomes enabled (fade + slight rise, 250ms).
+
+## Calibration
+- Only the approved row changes; pending rows stay dark.
+- The green wipe is a fill from the left edge, not a whole-row fade.
+
+## Reduced motion
+Rows fade to green without the wipe.
+
+## Don&#x27;t miss
+- The system dialogs are modal pauses - the list never animates behind them.
+- The check replaces the &quot;Continue&quot; text in place.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential permission success states.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opencam-allow-permissions-interaction">original interaction</a> by Opencam. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: OpenCam's permission primer - as each system dialog is approved, its list row floods green with a check and the flow advances to the next permission.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen \"OpenCam needs access to these permissions\": three rows (Camera, Microphone, Photos Library - icon, name, subcopy, \"Continue\" right-aligned), a disabled \"Please Grant Permissions\" pill at the bottom, and the red recording indicator in the status bar.\n\n## Motion spec\nPattern: sequential permission success states.\n- Prompt: the iOS system dialog pops (scale 0.9 -> 1 with fade, spring ~420/18) centered over the dimmed list.\n- Approve: on \"Allow\" the dialog dismisses (scale down + fade, 200ms) and the approved row floods green edge-to-edge (color wipe left-to-right, 300ms, ease-out) as a white check circle pops in (spring ~440/18, 200ms) replacing \"Continue\".\n- Advance: the next row's \"Continue\" brightens (opacity 0.5 -> 1, 200ms) and after a 300ms beat its system dialog pops.\n- Complete: with all rows green, the bottom pill becomes enabled (fade + slight rise, 250ms).\n\n## Calibration\n- Only the approved row changes; pending rows stay dark.\n- The green wipe is a fill from the left edge, not a whole-row fade.\n\n## Reduced motion\nRows fade to green without the wipe.\n\n## Don't miss\n- The system dialogs are modal pauses - the list never animates behind them.\n- The check replaces the \"Continue\" text in place."</script>
+</body></html>

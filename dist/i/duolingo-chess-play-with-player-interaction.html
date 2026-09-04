@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Chess Play with Player Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Chess Play with Player Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-chess-play-with-player-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-chess-play-with-player-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-chess-play-with-player-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo Chess live play - fluid piece slides and captures on the board while the red opponent mascot and your orange avatar react to every move from the top and bottom rails.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934347703bcee22ddcfcd66/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934347703bcee22ddcfcd66/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-chess-play-with-player-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo Chess live play - fluid piece slides and captures on the board while the red opponent mascot and your orange avatar react to every move from the top and bottom rails.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Duolingo Chess, near-black: a top bar with close X, both clocks (10:00 each), and sound controls; the red opponent mascot sits above the board, your orange avatar below it; the board is a dark green checker with flat white and dark-green pieces.
+
+## Motion spec
+Pattern: reactive mascots plus fluid piece motion in a chess match.
+- Piece moves glide: a tapped piece slides along its path (250ms, ease-in-out, arc-less straight lines), landing with a tiny settle (scale 1 -&gt; 0.96 -&gt; 1, 120ms). The destination square flashes a highlight pill before the move commits.
+- Captures: the taken piece shrinks and fades under the attacker (150ms) as the attacker lands; the captured piece slides into the scorer tray (300ms).
+- The red mascot reacts per move: eyes dart to the moved piece (150ms), then one of its expressions - confident smirk on its good moves, squeezed-shut worry on its blunders, wide-eye surprise on your captures. Each expression crossfades over 200ms and holds until the next move.
+- Your orange avatar mirrors smaller reactions: a slight lean and eye shift toward the action (150ms).
+- Clocks tick per second with a soft digit roll (100ms); the active player&#x27;s clock glows subtly.
+- The board itself never moves - no tilts, no zooms.
+
+## Calibration
+- Mascot expressions are emotional reads of position quality, not random loops - wire them to move evaluation.
+- Piece motion is fast enough to keep play snappy: never over 300ms for a slide.
+
+## Reduced motion
+Pieces jump squares with a 150ms fade; mascots swap expressions without eye darts.
+
+## Don&#x27;t miss
+- The mascots&#x27; eyes track the actual moved piece - that tracking sells the aliveness.
+- Last-move highlight is a soft square glow, not an outline.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">reactive mascots plus fluid piece motion in a chess match.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-chess-play-with-player-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo Chess live play - fluid piece slides and captures on the board while the red opponent mascot and your orange avatar react to every move from the top and bottom rails.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDuolingo Chess, near-black: a top bar with close X, both clocks (10:00 each), and sound controls; the red opponent mascot sits above the board, your orange avatar below it; the board is a dark green checker with flat white and dark-green pieces.\n\n## Motion spec\nPattern: reactive mascots plus fluid piece motion in a chess match.\n- Piece moves glide: a tapped piece slides along its path (250ms, ease-in-out, arc-less straight lines), landing with a tiny settle (scale 1 -> 0.96 -> 1, 120ms). The destination square flashes a highlight pill before the move commits.\n- Captures: the taken piece shrinks and fades under the attacker (150ms) as the attacker lands; the captured piece slides into the scorer tray (300ms).\n- The red mascot reacts per move: eyes dart to the moved piece (150ms), then one of its expressions - confident smirk on its good moves, squeezed-shut worry on its blunders, wide-eye surprise on your captures. Each expression crossfades over 200ms and holds until the next move.\n- Your orange avatar mirrors smaller reactions: a slight lean and eye shift toward the action (150ms).\n- Clocks tick per second with a soft digit roll (100ms); the active player's clock glows subtly.\n- The board itself never moves - no tilts, no zooms.\n\n## Calibration\n- Mascot expressions are emotional reads of position quality, not random loops - wire them to move evaluation.\n- Piece motion is fast enough to keep play snappy: never over 300ms for a slide.\n\n## Reduced motion\nPieces jump squares with a 150ms fade; mascots swap expressions without eye darts.\n\n## Don't miss\n- The mascots' eyes track the actual moved piece - that tracking sells the aliveness.\n- Last-move highlight is a soft square glow, not an outline."</script>
+</body></html>

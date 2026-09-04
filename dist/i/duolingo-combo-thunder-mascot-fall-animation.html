@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Combo Thunder Mascot Fall Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Combo Thunder Mascot Fall Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-combo-thunder-mascot-fall-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-combo-thunder-mascot-fall-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-combo-thunder-mascot-fall-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo Chess&#x27; combo thunder - solve the panic puzzle and a giant lightning bolt crashes down the whole screen while Oscar tumbles, the combo counter bumps, and the success sheet slides up with confetti.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a6f790f211a1d673feb6a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a6f790f211a1d673feb6a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-combo-thunder-mascot-fall-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo Chess&#x27; combo thunder - solve the panic puzzle and a giant lightning bolt crashes down the whole screen while Oscar tumbles, the combo counter bumps, and the success sheet slides up with confetti.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Duolingo Chess puzzle, near-black: &quot;Solve the puzzle&quot; title with a &quot;PANIC PUZZLE&quot; tag, close X, the progress bar (orange combo segment), Oscar top-left with his bubble (&quot;You&#x27;ve got this, no sweat.&quot;), the chess board, and the success sheet (&quot;Great job!&quot; with a green Continue button).
+
+## Motion spec
+Pattern: full-screen lightning strike with a falling mascot and confetti sheet.
+- The correct move lands (piece slide, 250ms), then the bolt: a thick jagged lightning column draws from the top edge to the board (stroke draw, 150ms, bright yellow) with one 80ms white flash at 20% opacity.
+- The strike knocks Oscar loose: he tumbles downward with rotation (translateY ~140px, rotate ~200deg, 600ms, ease-in then bounce) as small confetti squares scatter around his fall.
+- The progress bar&#x27;s combo tag bumps (&quot;COMBO x4&quot;, scale 1 -&gt; 1.25 -&gt; 1, spring ~450/14) and the orange segment fills (250ms).
+- Oscar lands at the bottom of his area, dazed (eyes as spirals, one wobble, 300ms), then rights himself.
+- The success sheet slides up (translateY 100% -&gt; 0, spring ~320/20): green check, &quot;Great job!&quot;, Continue - 250ms after Oscar lands.
+
+## Calibration
+- The bolt is screen-scale - it spans from the status bar to the sheet, wider than the combo-5 variant&#x27;s strike.
+- Oscar&#x27;s tumble is the joke: he must actually leave his anchor position, not just shake.
+
+## Reduced motion
+Skip the bolt and tumble; Oscar wobbles once and the sheet fades up.
+
+## Don&#x27;t miss
+- The bubble text (&quot;You&#x27;ve got this, no sweat.&quot;) stays put while Oscar falls - the words hang where he was.
+- The combo segment is orange against the bar&#x27;s green base - the tier reads before the number does.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-screen lightning strike with a falling mascot and confetti sheet.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-combo-thunder-mascot-fall-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo Chess' combo thunder - solve the panic puzzle and a giant lightning bolt crashes down the whole screen while Oscar tumbles, the combo counter bumps, and the success sheet slides up with confetti.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDuolingo Chess puzzle, near-black: \"Solve the puzzle\" title with a \"PANIC PUZZLE\" tag, close X, the progress bar (orange combo segment), Oscar top-left with his bubble (\"You've got this, no sweat.\"), the chess board, and the success sheet (\"Great job!\" with a green Continue button).\n\n## Motion spec\nPattern: full-screen lightning strike with a falling mascot and confetti sheet.\n- The correct move lands (piece slide, 250ms), then the bolt: a thick jagged lightning column draws from the top edge to the board (stroke draw, 150ms, bright yellow) with one 80ms white flash at 20% opacity.\n- The strike knocks Oscar loose: he tumbles downward with rotation (translateY ~140px, rotate ~200deg, 600ms, ease-in then bounce) as small confetti squares scatter around his fall.\n- The progress bar's combo tag bumps (\"COMBO x4\", scale 1 -> 1.25 -> 1, spring ~450/14) and the orange segment fills (250ms).\n- Oscar lands at the bottom of his area, dazed (eyes as spirals, one wobble, 300ms), then rights himself.\n- The success sheet slides up (translateY 100% -> 0, spring ~320/20): green check, \"Great job!\", Continue - 250ms after Oscar lands.\n\n## Calibration\n- The bolt is screen-scale - it spans from the status bar to the sheet, wider than the combo-5 variant's strike.\n- Oscar's tumble is the joke: he must actually leave his anchor position, not just shake.\n\n## Reduced motion\nSkip the bolt and tumble; Oscar wobbles once and the sheet fades up.\n\n## Don't miss\n- The bubble text (\"You've got this, no sweat.\") stays put while Oscar falls - the words hang where he was.\n- The combo segment is orange against the bar's green base - the tier reads before the number does."</script>
+</body></html>

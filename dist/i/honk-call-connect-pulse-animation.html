@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Call Connect Pulse Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Call Connect Pulse Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-call-connect-pulse-animation"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-call-connect-pulse-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-call-connect-pulse-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Honk&#x27;s call connect - the green chat flips to a full-screen green call screen where the caller&#x27;s avatar pulses with expanding rings, and on connect the controls and the second avatar spring in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b9e1ead5e2ea455009d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b9e1ead5e2ea455009d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-call-connect-pulse-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Honk&#x27;s call connect - the green chat flips to a full-screen green call screen where the caller&#x27;s avatar pulses with expanding rings, and on connect the controls and the second avatar spring in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-bleed bright green call screen (&quot;Miles&quot; header). Center: the contact&#x27;s avatar (masked face illustration) inside a white ring, radiating concentric pulse rings. Bottom: red X end-call button while ringing; after connect, a second avatar pops in below the first and call controls (speaker, video, mute) slide into the bottom row.
+
+## Motion spec
+Pattern: continuous radar pulse with staged connect entrance.
+- Transition: the green washes over the chat screen from the message area outward (radial reveal, 350ms); the avatar scales up from the chat bubble&#x27;s position (spring ~300/20, 400ms).
+- Ringing: pulse rings expand from the avatar (scale 1 -&gt; 2.6, opacity 0.5 -&gt; 0, 1.6s each, 530ms stagger between three rings, looping); the red X bobs subtly (translateY +-2pt, 2s sine).
+- Connect: the pulse rings stop and collapse (scale -&gt; 0.9 fade, 200ms); the avatar gets a solid white ring (stroke draws, 250ms); the second avatar springs in below (scale 0 -&gt; 1.15 -&gt; 1, spring ~340/14); the control buttons slide up into the bottom row (translateY 30pt -&gt; 0, opacity, 300ms, 60ms stagger).
+- The X swaps out as the controls arrive (crossfade, 200ms).
+
+## Calibration
+- Ringing pulses originate exactly at the avatar&#x27;s edge, never from screen center.
+- The green is the app&#x27;s saturated brand green, full-bleed including status bar.
+
+## Reduced motion
+No pulse rings; connect uses fades (250ms).
+
+## Don&#x27;t miss
+- The second avatar is smaller and sits below the first - a stacked pair, not side by side.
+- The header name/status text stays visible through the whole sequence.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous radar pulse with staged connect entrance.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-call-connect-pulse-animation">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Honk's call connect - the green chat flips to a full-screen green call screen where the caller's avatar pulses with expanding rings, and on connect the controls and the second avatar spring in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-bleed bright green call screen (\"Miles\" header). Center: the contact's avatar (masked face illustration) inside a white ring, radiating concentric pulse rings. Bottom: red X end-call button while ringing; after connect, a second avatar pops in below the first and call controls (speaker, video, mute) slide into the bottom row.\n\n## Motion spec\nPattern: continuous radar pulse with staged connect entrance.\n- Transition: the green washes over the chat screen from the message area outward (radial reveal, 350ms); the avatar scales up from the chat bubble's position (spring ~300/20, 400ms).\n- Ringing: pulse rings expand from the avatar (scale 1 -> 2.6, opacity 0.5 -> 0, 1.6s each, 530ms stagger between three rings, looping); the red X bobs subtly (translateY +-2pt, 2s sine).\n- Connect: the pulse rings stop and collapse (scale -> 0.9 fade, 200ms); the avatar gets a solid white ring (stroke draws, 250ms); the second avatar springs in below (scale 0 -> 1.15 -> 1, spring ~340/14); the control buttons slide up into the bottom row (translateY 30pt -> 0, opacity, 300ms, 60ms stagger).\n- The X swaps out as the controls arrive (crossfade, 200ms).\n\n## Calibration\n- Ringing pulses originate exactly at the avatar's edge, never from screen center.\n- The green is the app's saturated brand green, full-bleed including status bar.\n\n## Reduced motion\nNo pulse rings; connect uses fades (250ms).\n\n## Don't miss\n- The second avatar is smaller and sits below the first - a stacked pair, not side by side.\n- The header name/status text stays visible through the whole sequence."</script>
+</body></html>

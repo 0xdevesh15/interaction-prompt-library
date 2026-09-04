@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Must Feed Preview Cards Snap Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Must Feed Preview Cards Snap Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/must-feed-preview-cards-snap-interaction"><b>Must</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/must-feed-preview-cards-snap-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/must-feed-preview-cards-snap-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Must&#x27;s feed snap - the &quot;New and trending&quot; feed of full-width video preview cards (Avatar: Fire and Ash, Greenland 2: Migration, In Your Dreams, A House of Dynamite, Nobody Wants This, The Astronaut) scrolls with a magnetic snap that locks one card to center while the next peeks below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d72001fefe1a9ab1767a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d72001fefe1a9ab1767a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-must-feed-preview-cards-snap-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Must&#x27;s feed snap - the &quot;New and trending&quot; feed of full-width video preview cards (Avatar: Fire and Ash, Greenland 2: Migration, In Your Dreams, A House of Dynamite, Nobody Wants This, The Astronaut) scrolls with a magnetic snap that locks one card to center while the next peeks below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White feed: &quot;Today&quot; header with &quot;New and trending&quot; and a LIVE dot, then a vertical stream of large rounded preview cards - each a movie still with the title, year, genre tag, and small action buttons (rating, share) pinned at the card&#x27;s lower edge. Bottom tab bar below.
+
+## Motion spec
+Pattern: scroll-snap card feed, gesture-driven.
+- Scroll: cards move 1:1 with the drag; the topmost card scales down slightly (1 -&gt; 0.96) as it exits, the incoming one scales up (0.96 -&gt; 1).
+- Snap: on release, the nearest card locks to its resting offset (spring ~340/26, 300ms) - one card always sits fully revealed with the next peeking 15% at the bottom.
+- Buttons: the per-card action buttons fade in only when the card is at rest (200ms) and hide mid-scroll.
+- Overscroll: top and bottom rubber-band (translate 0.4x) and spring back.
+
+## Calibration
+- Snapping is per-card: the feed never rests between cards.
+- Peek height stays constant so the next title is always teased.
+
+## Reduced motion
+Cards settle with a 250ms ease; no scale change.
+
+## Don&#x27;t miss
+- Card art is edge-to-edge with the title overlaid top-left, not a separate thumbnail.
+- The LIVE indicator pulses (opacity 0.5 -&gt; 1, 1s) on the header.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-snap card feed, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/must-feed-preview-cards-snap-interaction">original interaction</a> by Must. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Must's feed snap - the \"New and trending\" feed of full-width video preview cards (Avatar: Fire and Ash, Greenland 2: Migration, In Your Dreams, A House of Dynamite, Nobody Wants This, The Astronaut) scrolls with a magnetic snap that locks one card to center while the next peeks below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite feed: \"Today\" header with \"New and trending\" and a LIVE dot, then a vertical stream of large rounded preview cards - each a movie still with the title, year, genre tag, and small action buttons (rating, share) pinned at the card's lower edge. Bottom tab bar below.\n\n## Motion spec\nPattern: scroll-snap card feed, gesture-driven.\n- Scroll: cards move 1:1 with the drag; the topmost card scales down slightly (1 -> 0.96) as it exits, the incoming one scales up (0.96 -> 1).\n- Snap: on release, the nearest card locks to its resting offset (spring ~340/26, 300ms) - one card always sits fully revealed with the next peeking 15% at the bottom.\n- Buttons: the per-card action buttons fade in only when the card is at rest (200ms) and hide mid-scroll.\n- Overscroll: top and bottom rubber-band (translate 0.4x) and spring back.\n\n## Calibration\n- Snapping is per-card: the feed never rests between cards.\n- Peek height stays constant so the next title is always teased.\n\n## Reduced motion\nCards settle with a 250ms ease; no scale change.\n\n## Don't miss\n- Card art is edge-to-edge with the title overlaid top-left, not a separate thumbnail.\n- The LIVE indicator pulses (opacity 0.5 -> 1, 1s) on the header."</script>
+</body></html>

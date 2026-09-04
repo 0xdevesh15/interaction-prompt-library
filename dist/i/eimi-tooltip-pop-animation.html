@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eimi Tooltip Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Eimi Tooltip Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/eimi-tooltip-pop-animation"><b>Eimi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/eimi-tooltip-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/eimi-tooltip-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Eimi&#x27;s coach-mark tooltip - a white bubble pops in above the quote card with a springy overshoot, reading &quot;Drag the Card to * or (trash)&quot; with inline icons.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdc5ff8d4ab5d59e423/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdc5ff8d4ab5d59e423/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-eimi-tooltip-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Eimi&#x27;s coach-mark tooltip - a white bubble pops in above the quote card with a springy overshoot, reading &quot;Drag the Card to * or (trash)&quot; with inline icons.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Eimi quote screen, dark brown: &quot;Munger&#x27;s Mental Models&quot; with the RUNNING pill at top and the orange quote card below. The tooltip: a small white rounded bubble with a down-pointing tail, dark text &quot;Drag the Card to&quot; plus a gold star icon, &quot;or&quot;, and a blue trash icon.
+
+## Motion spec
+Pattern: springy coach-mark pop with an attention nudge.
+- The bubble pops in anchored above the card: scale 0.3 -&gt; 1 with spring ~420/13 (overshoot to ~1.12) from its tail tip as the anchor point, plus opacity 0 -&gt; 1 in the first 100ms.
+- On landing it does a single settle bounce (translateY -4 -&gt; 0, 200ms).
+- While visible, it idles with a gentle bob (translateY +/-3px, 2s ease-in-out loop) so it reads as alive but not urgent.
+- The star and trash icons inside the text sparkle once on entry (scale 1 -&gt; 1.3 -&gt; 1, 250ms each, 100ms apart).
+- On the user&#x27;s first card drag, the bubble scales to 0.3 into its tail anchor and fades (200ms); it never returns that session.
+
+## Calibration
+- The tail must point at the card&#x27;s drag area - the anchor alignment is the instruction.
+- Bubble is pure white with a soft shadow; text is dark with the two colored icons inline.
+
+## Reduced motion
+Bubble fades in (200ms) at rest position; no bob.
+
+## Don&#x27;t miss
+- The pop origin is the tail tip, not the bubble center - it should feel spat out by the card.
+- The bob is position-only; the tail stays glued to its anchor point.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy coach-mark pop with an attention nudge.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/eimi-tooltip-pop-animation">original interaction</a> by Eimi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Eimi's coach-mark tooltip - a white bubble pops in above the quote card with a springy overshoot, reading \"Drag the Card to * or (trash)\" with inline icons.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nEimi quote screen, dark brown: \"Munger's Mental Models\" with the RUNNING pill at top and the orange quote card below. The tooltip: a small white rounded bubble with a down-pointing tail, dark text \"Drag the Card to\" plus a gold star icon, \"or\", and a blue trash icon.\n\n## Motion spec\nPattern: springy coach-mark pop with an attention nudge.\n- The bubble pops in anchored above the card: scale 0.3 -> 1 with spring ~420/13 (overshoot to ~1.12) from its tail tip as the anchor point, plus opacity 0 -> 1 in the first 100ms.\n- On landing it does a single settle bounce (translateY -4 -> 0, 200ms).\n- While visible, it idles with a gentle bob (translateY +/-3px, 2s ease-in-out loop) so it reads as alive but not urgent.\n- The star and trash icons inside the text sparkle once on entry (scale 1 -> 1.3 -> 1, 250ms each, 100ms apart).\n- On the user's first card drag, the bubble scales to 0.3 into its tail anchor and fades (200ms); it never returns that session.\n\n## Calibration\n- The tail must point at the card's drag area - the anchor alignment is the instruction.\n- Bubble is pure white with a soft shadow; text is dark with the two colored icons inline.\n\n## Reduced motion\nBubble fades in (200ms) at rest position; no bob.\n\n## Don't miss\n- The pop origin is the tail tip, not the bubble center - it should feel spat out by the card.\n- The bob is position-only; the tail stays glued to its anchor point."</script>
+</body></html>

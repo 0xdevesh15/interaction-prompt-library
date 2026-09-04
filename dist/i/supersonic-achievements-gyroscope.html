@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supersonic Achievements Gyroscope - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Supersonic Achievements Gyroscope</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/supersonic-achievements-gyroscope"><b>Supersonic</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/supersonic-achievements-gyroscope">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/supersonic-achievements-gyroscope">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Supersonic&#x27;s achievement detail - tap a badge card and it expands into a full modal trading card with a neon frame that tilts in 3D as you move the phone (gyroscope parallax).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ba4c31233f93f013caaf86/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ba4c31233f93f013caaf86/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-supersonic-achievements-gyroscope.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Supersonic&#x27;s achievement detail - tap a badge card and it expands into a full modal trading card with a neon frame that tilts in 3D as you move the phone (gyroscope parallax).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark achievements grid of badge cards (earned ones in full color with glow, locked ones grayscale). Tapping one opens a modal: the card large at center - illustrated artwork, pennant shape, title like &quot;SHOWED UP&quot; or &quot;FASTEST 100KM&quot;, a category tag above - over a dimmed smoky backdrop.
+
+## Motion spec
+Pattern: card-expand modal + gyroscope tilt.
+- Tap: the card lifts from its grid slot and expands to modal size (bounds spring ~320/22, 500ms), the grid behind dimming (black to 70%) and blurring slightly.
+- The neon frame ignites after landing: the border glow sweeps around the card&#x27;s edge (gradient stroke chase, 600ms) then idles with a slow pulse (glow radius +-4px, 2.5s).
+- Gyroscope tilt: the card rotates in 3D with device motion (max +-10deg X/Y, spring-smoothed ~200/18 so it lags and settles like a physical card); the artwork layers parallax at different depths (background 0.4x, character 1x, title 1.3x) and a specular highlight sweeps across the artwork opposite the tilt.
+- The title and tag beneath stay screen-aligned while the card body tilts, heightening the depth.
+- Locked cards open the same modal but desaturated, with no neon sweep - just a faint gray frame.
+- Dismiss (tap backdrop or drag down): the card shrinks back into its grid slot along the same path.
+
+## Calibration
+- Tilt must feel weighty: heavy smoothing, no jitter, quick to rest when the phone stops.
+- Keep the tilt range modest - past 12deg the illusion breaks.
+
+## Reduced motion
+No gyro tilt or parallax; the card glows statically.
+
+## Don&#x27;t miss
+- The pennant card shape (banner with a pointed bottom) is the identity - don&#x27;t render plain rectangles.
+- Earned vs locked is color vs grayscale; there is no &quot;locked&quot; padlock chrome.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card-expand modal + gyroscope tilt.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/supersonic-achievements-gyroscope">original interaction</a> by Supersonic. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Supersonic's achievement detail - tap a badge card and it expands into a full modal trading card with a neon frame that tilts in 3D as you move the phone (gyroscope parallax).\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark achievements grid of badge cards (earned ones in full color with glow, locked ones grayscale). Tapping one opens a modal: the card large at center - illustrated artwork, pennant shape, title like \"SHOWED UP\" or \"FASTEST 100KM\", a category tag above - over a dimmed smoky backdrop.\n\n## Motion spec\nPattern: card-expand modal + gyroscope tilt.\n- Tap: the card lifts from its grid slot and expands to modal size (bounds spring ~320/22, 500ms), the grid behind dimming (black to 70%) and blurring slightly.\n- The neon frame ignites after landing: the border glow sweeps around the card's edge (gradient stroke chase, 600ms) then idles with a slow pulse (glow radius +-4px, 2.5s).\n- Gyroscope tilt: the card rotates in 3D with device motion (max +-10deg X/Y, spring-smoothed ~200/18 so it lags and settles like a physical card); the artwork layers parallax at different depths (background 0.4x, character 1x, title 1.3x) and a specular highlight sweeps across the artwork opposite the tilt.\n- The title and tag beneath stay screen-aligned while the card body tilts, heightening the depth.\n- Locked cards open the same modal but desaturated, with no neon sweep - just a faint gray frame.\n- Dismiss (tap backdrop or drag down): the card shrinks back into its grid slot along the same path.\n\n## Calibration\n- Tilt must feel weighty: heavy smoothing, no jitter, quick to rest when the phone stops.\n- Keep the tilt range modest - past 12deg the illusion breaks.\n\n## Reduced motion\nNo gyro tilt or parallax; the card glows statically.\n\n## Don't miss\n- The pennant card shape (banner with a pointed bottom) is the identity - don't render plain rectangles.\n- Earned vs locked is color vs grayscale; there is no \"locked\" padlock chrome."</script>
+</body></html>

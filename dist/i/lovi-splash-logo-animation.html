@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lovi Splash Logo Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lovi Splash Logo Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lovi-splash-logo-animation"><b>Lovi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lovi-splash-logo-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lovi-splash-logo-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Lovi&#x27;s splash - a shifting blue-purple aurora background, a frosted glass card at center, and the &quot;lovi&quot; script logo drawn stroke by stroke inside it, then a handoff to sign-in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edcb825d3351d55261fd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edcb825d3351d55261fd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lovi-splash-logo-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Lovi&#x27;s splash - a shifting blue-purple aurora background, a frosted glass card at center, and the &quot;lovi&quot; script logo drawn stroke by stroke inside it, then a handoff to sign-in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Lovi splash: a full-screen gradient field that drifts from deep blue to purple-pink (soft blurred blobs moving like an aurora); centered, a frosted glass rounded-square card; inside it, the white cursive &quot;lovi&quot; wordmark.
+
+## Motion spec
+Pattern: aurora drift + vector logo stroke-draw on frosted glass.
+- The background&#x27;s color blobs drift continuously (15-20s loop, slow translate + scale, always soft - never sharp edges).
+- The glass card fades in and scales 0.92 -&gt; 1 (400ms, ease-out), its blur picking up the moving colors behind it.
+- The logo draws itself: each letter&#x27;s stroke animates path-length 0 -&gt; full (~300ms per letter, 120ms apart, ease-in-out), left to right, white 3px line.
+- After the final letter, a small dot accents the &quot;i&quot; (scale pop, spring ~450/18) and the full logo does one gentle glow pulse (opacity halo, 600ms).
+- Hold 500ms, then the card + logo shrink and fade (300ms) into the sign-in screen rising from below (translateY 30 -&gt; 0, 350ms).
+
+## Calibration
+- The aurora moves the whole time, even during the draw - the glass card exists to show it off.
+- The script draw must read as handwriting - variable speed, not a constant-rate mask.
+
+## Reduced motion
+Background static; logo fades in whole (300ms).
+
+## Don&#x27;t miss
+- The card&#x27;s frosted edge highlight - a 1px inner stroke that keeps the glass readable on the lightest parts of the gradient.
+- Letters connect: the draw is one continuous cursive path where the letterforms join.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">aurora drift + vector logo stroke-draw on frosted glass.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lovi-splash-logo-animation">original interaction</a> by Lovi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Lovi's splash - a shifting blue-purple aurora background, a frosted glass card at center, and the \"lovi\" script logo drawn stroke by stroke inside it, then a handoff to sign-in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLovi splash: a full-screen gradient field that drifts from deep blue to purple-pink (soft blurred blobs moving like an aurora); centered, a frosted glass rounded-square card; inside it, the white cursive \"lovi\" wordmark.\n\n## Motion spec\nPattern: aurora drift + vector logo stroke-draw on frosted glass.\n- The background's color blobs drift continuously (15-20s loop, slow translate + scale, always soft - never sharp edges).\n- The glass card fades in and scales 0.92 -> 1 (400ms, ease-out), its blur picking up the moving colors behind it.\n- The logo draws itself: each letter's stroke animates path-length 0 -> full (~300ms per letter, 120ms apart, ease-in-out), left to right, white 3px line.\n- After the final letter, a small dot accents the \"i\" (scale pop, spring ~450/18) and the full logo does one gentle glow pulse (opacity halo, 600ms).\n- Hold 500ms, then the card + logo shrink and fade (300ms) into the sign-in screen rising from below (translateY 30 -> 0, 350ms).\n\n## Calibration\n- The aurora moves the whole time, even during the draw - the glass card exists to show it off.\n- The script draw must read as handwriting - variable speed, not a constant-rate mask.\n\n## Reduced motion\nBackground static; logo fades in whole (300ms).\n\n## Don't miss\n- The card's frosted edge highlight - a 1px inner stroke that keeps the glass readable on the lightest parts of the gradient.\n- Letters connect: the draw is one continuous cursive path where the letterforms join."</script>
+</body></html>

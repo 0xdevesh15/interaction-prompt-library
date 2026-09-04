@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solos Tactic Player Controls - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Solos Tactic Player Controls</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/solos-tactic-player-controls"><b>Solos</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/solos-tactic-player-controls">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/solos-tactic-player-controls">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Solos&#x27; tactile player - a skeuomorphic dark deck: a cassette tape with spinning reels sits in its slot, and the row of chunky physical buttons below depresses with real 3D depth when tapped; switching tracks swaps the cassette&#x27;s label.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6737fee4e962df23014895ef/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6737fee4e962df23014895ef/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-solos-tactic-player-controls.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Solos&#x27; tactile player - a skeuomorphic dark deck: a cassette tape with spinning reels sits in its slot, and the row of chunky physical buttons below depresses with real 3D depth when tapped; switching tracks swaps the cassette&#x27;s label.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A matte black deck: a cassette graphic in the upper slot (label showing the track - &quot;Eyes Closed&quot;, then &quot;Radioactive&quot;, then &quot;Believer&quot;), both reels visible through the window; below it a hardware button row - one red play key plus dark square keys - each with top-face highlights and side shadow. Tiny screws sit in the panel corners.
+
+## Motion spec
+Pattern: physical button presses + tape mechanics.
+- Press a button: the keycap travels down (translateY +3px, 60ms, ease-in), its side shadow shortens, and its top highlight dims - a real depression; release springs it back (spring ~600/25, 120ms) with a faint click bounce.
+- Play: the red key stays half-depressed (latched state) and the cassette reels start spinning - right reel winds faster than the left (tape transfers), both with a subtle spin-up ramp (400ms to full speed, not instant).
+- Track change: the cassette slides/tilts forward and flips (rotateX 90deg, 300ms) as the label swaps mid-flip, then settles back - the new track&#x27;s label reads on the settled cassette.
+- Pause: reels decelerate to a stop over 500ms; the red key unlatches with a pop-up spring.
+
+## Calibration
+- Reel speed difference sells the tape metaphor - the supply reel empties as the take-up fills.
+- Button travel is 3px max - any more reads mushy, any less reads flat.
+
+## Reduced motion
+Buttons toggle state with opacity change; reels rotate slowly without ramp.
+
+## Don&#x27;t miss
+- The tape window shows the tape pack thickness on each reel changing over time.
+- Idle state has the faintest reel wobble (1rpm drift) - the deck is never dead.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">physical button presses + tape mechanics.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/solos-tactic-player-controls">original interaction</a> by Solos. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Solos' tactile player - a skeuomorphic dark deck: a cassette tape with spinning reels sits in its slot, and the row of chunky physical buttons below depresses with real 3D depth when tapped; switching tracks swaps the cassette's label.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA matte black deck: a cassette graphic in the upper slot (label showing the track - \"Eyes Closed\", then \"Radioactive\", then \"Believer\"), both reels visible through the window; below it a hardware button row - one red play key plus dark square keys - each with top-face highlights and side shadow. Tiny screws sit in the panel corners.\n\n## Motion spec\nPattern: physical button presses + tape mechanics.\n- Press a button: the keycap travels down (translateY +3px, 60ms, ease-in), its side shadow shortens, and its top highlight dims - a real depression; release springs it back (spring ~600/25, 120ms) with a faint click bounce.\n- Play: the red key stays half-depressed (latched state) and the cassette reels start spinning - right reel winds faster than the left (tape transfers), both with a subtle spin-up ramp (400ms to full speed, not instant).\n- Track change: the cassette slides/tilts forward and flips (rotateX 90deg, 300ms) as the label swaps mid-flip, then settles back - the new track's label reads on the settled cassette.\n- Pause: reels decelerate to a stop over 500ms; the red key unlatches with a pop-up spring.\n\n## Calibration\n- Reel speed difference sells the tape metaphor - the supply reel empties as the take-up fills.\n- Button travel is 3px max - any more reads mushy, any less reads flat.\n\n## Reduced motion\nButtons toggle state with opacity change; reels rotate slowly without ramp.\n\n## Don't miss\n- The tape window shows the tape pack thickness on each reel changing over time.\n- Idle state has the faintest reel wobble (1rpm drift) - the deck is never dead."</script>
+</body></html>

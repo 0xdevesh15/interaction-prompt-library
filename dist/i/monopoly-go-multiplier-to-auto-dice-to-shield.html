@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Multiplier to Auto Dice to Shield - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Multiplier to Auto Dice to Shield</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-multiplier-to-auto-dice-to-shield"><b>Monopoly Go</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-multiplier-to-auto-dice-to-shield">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-multiplier-to-auto-dice-to-shield">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monopoly Go&#x27;s board controls - tapping through the dice multiplier, long-pressing GO to arm auto-roll with the green auto button, and a shield collect that swoops into its slot.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b64f79371d29849d865d0a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b64f79371d29849d865d0a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-multiplier-to-auto-dice-to-shield.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monopoly Go&#x27;s board controls - tapping through the dice multiplier, long-pressing GO to arm auto-roll with the green auto button, and a shield collect that swoops into its slot.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Monopoly Go board: the big red &quot;GO&quot; roll button bottom-center with a purple &quot;x10&quot; multiplier badge at its top-right, the dice counter (&quot;161/100&quot;) below, event banners stacked at the left edge, and a &quot;ALL REWARDS&quot; pill above the button. Long-press state: the GO button swaps to a green auto-roll button (&quot;TAP TO STOP&quot; style). Shield state: a shield token collects from the board into its HUD slot.
+
+## Motion spec
+Pattern: multiplier cycle, long-press auto-roll, shield swoop.
+- Tap the multiplier badge: it pops (scale 1.0 to 1.2 to 1.0, 200ms) and the value cycles (x2, x3, x5, x10...) with a quick vertical tick (old value slides up, new slides in, 150ms).
+- Long-press GO (~400ms): the button depresses, a radial fill sweeps around it, then it flips to the green auto-roll state (color wipe red to green, 250ms) and dice begin rolling on their own cadence (~1 roll/s) across the board.
+- Tap again to stop: the button flips back to red GO with the same wipe.
+- Shield collect: when the token lands on a shield tile, a shield icon bursts from the tile (scale 0.5 to 1.2, 250ms), then swoops along an arc into the shield HUD slot at the left (500ms, ease-in), the slot flashing and its count ticking up on arrival.
+
+## Calibration
+- The long-press fill is the affordance: without the radial sweep the gesture feels like a laggy tap.
+- Auto-roll cadence is steady and slightly slower than manual tapping - the player should feel they can stop it.
+
+## Reduced motion
+Multiplier ticks without pop; shield fades into its slot.
+
+## Don&#x27;t miss
+- The multiplier badge rides on the GO button&#x27;s corner and scales with it when the button state changes.
+- The shield&#x27;s arc path targets the actual slot position, not a generic corner.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">multiplier cycle, long-press auto-roll, shield swoop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-multiplier-to-auto-dice-to-shield">original interaction</a> by Monopoly Go. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monopoly Go's board controls - tapping through the dice multiplier, long-pressing GO to arm auto-roll with the green auto button, and a shield collect that swoops into its slot.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Monopoly Go board: the big red \"GO\" roll button bottom-center with a purple \"x10\" multiplier badge at its top-right, the dice counter (\"161/100\") below, event banners stacked at the left edge, and a \"ALL REWARDS\" pill above the button. Long-press state: the GO button swaps to a green auto-roll button (\"TAP TO STOP\" style). Shield state: a shield token collects from the board into its HUD slot.\n\n## Motion spec\nPattern: multiplier cycle, long-press auto-roll, shield swoop.\n- Tap the multiplier badge: it pops (scale 1.0 to 1.2 to 1.0, 200ms) and the value cycles (x2, x3, x5, x10...) with a quick vertical tick (old value slides up, new slides in, 150ms).\n- Long-press GO (~400ms): the button depresses, a radial fill sweeps around it, then it flips to the green auto-roll state (color wipe red to green, 250ms) and dice begin rolling on their own cadence (~1 roll/s) across the board.\n- Tap again to stop: the button flips back to red GO with the same wipe.\n- Shield collect: when the token lands on a shield tile, a shield icon bursts from the tile (scale 0.5 to 1.2, 250ms), then swoops along an arc into the shield HUD slot at the left (500ms, ease-in), the slot flashing and its count ticking up on arrival.\n\n## Calibration\n- The long-press fill is the affordance: without the radial sweep the gesture feels like a laggy tap.\n- Auto-roll cadence is steady and slightly slower than manual tapping - the player should feel they can stop it.\n\n## Reduced motion\nMultiplier ticks without pop; shield fades into its slot.\n\n## Don't miss\n- The multiplier badge rides on the GO button's corner and scales with it when the button state changes.\n- The shield's arc path targets the actual slot position, not a generic corner."</script>
+</body></html>

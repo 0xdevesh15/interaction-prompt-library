@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fold Cash Flow Graph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fold Cash Flow Graph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fold-cash-flow-graph-interaction"><b>Fold</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-cash-flow-graph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-cash-flow-graph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Fold&#x27;s cash flow graph - drag horizontally across a multi-line chart and a vertical indicator snaps month to month, updating the month title and the three colored stat badges above the graph.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b21baec7d0ca132d5ebed/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b21baec7d0ca132d5ebed/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fold-cash-flow-graph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Fold&#x27;s cash flow graph - drag horizontally across a multi-line chart and a vertical indicator snaps month to month, updating the month title and the three colored stat badges above the graph.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Fold&#x27;s &quot;Cash Flow&quot; screen: a line chart with three thin colored lines (green, blue, red) traced across a horizontal month axis, grid dots at each data point. Above the chart sit three rounded stat badges - green, blue, and red amounts - below a bold &quot;January 2024&quot; month title with small delta percentages. Below the chart, &quot;Incoming transactions&quot; and &quot;Outgoing transactions&quot; list rows. Dragging scrubs a vertical indicator line across the months.
+
+## Motion spec
+Pattern: scrub with snap, gesture-driven.
+- The drag tracks 1:1: the vertical indicator line follows the finger across the chart, crossing the grid.
+- On release or on crossing a midpoint, the line snaps to the nearest month column (spring stiffness 400 damping 28), landing on that month&#x27;s data points, which highlight.
+- The month title crossfades to the new month (&quot;February 2024&quot;, &quot;April 2024&quot;...) and the three badges update with the month&#x27;s amounts, their numbers crossfading (200ms).
+- The two transaction rows below refresh in step with the selected month.
+
+## Calibration
+- Snap only - the indicator never rests between months.
+- Badge values change every snap; the lines themselves are static geometry.
+
+## Reduced motion
+Indicator jumps on release; values swap without crossfade.
+
+## Don&#x27;t miss
+- The indicator is a thin line spanning the chart height, with the three badges as the live readout above.
+- Month title, badges, and list rows always agree - one snap updates all three.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scrub with snap, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fold-cash-flow-graph-interaction">original interaction</a> by Fold. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Fold's cash flow graph - drag horizontally across a multi-line chart and a vertical indicator snaps month to month, updating the month title and the three colored stat badges above the graph.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFold's \"Cash Flow\" screen: a line chart with three thin colored lines (green, blue, red) traced across a horizontal month axis, grid dots at each data point. Above the chart sit three rounded stat badges - green, blue, and red amounts - below a bold \"January 2024\" month title with small delta percentages. Below the chart, \"Incoming transactions\" and \"Outgoing transactions\" list rows. Dragging scrubs a vertical indicator line across the months.\n\n## Motion spec\nPattern: scrub with snap, gesture-driven.\n- The drag tracks 1:1: the vertical indicator line follows the finger across the chart, crossing the grid.\n- On release or on crossing a midpoint, the line snaps to the nearest month column (spring stiffness 400 damping 28), landing on that month's data points, which highlight.\n- The month title crossfades to the new month (\"February 2024\", \"April 2024\"...) and the three badges update with the month's amounts, their numbers crossfading (200ms).\n- The two transaction rows below refresh in step with the selected month.\n\n## Calibration\n- Snap only - the indicator never rests between months.\n- Badge values change every snap; the lines themselves are static geometry.\n\n## Reduced motion\nIndicator jumps on release; values swap without crossfade.\n\n## Don't miss\n- The indicator is a thin line spanning the chart height, with the three badges as the live readout above.\n- Month title, badges, and list rows always agree - one snap updates all three."</script>
+</body></html>

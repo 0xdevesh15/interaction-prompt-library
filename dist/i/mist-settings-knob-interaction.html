@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mist Settings Knob Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mist Settings Knob Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mist-settings-knob-interaction"><b>Mist</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mist-settings-knob-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mist-settings-knob-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Mist&#x27;s settings menu - a retro text menu (THEME, SKIN, LANGUAGE, SOUND, ABOUT MIST, RECOMMENDATIONS) navigated by rotating the console&#x27;s knob, where picking SKIN -&gt; LIGHT flips the entire device UI from dark to light theme in one instant repaint.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9ebf82ccc4efafb4562/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9ebf82ccc4efafb4562/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mist-settings-knob-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Mist&#x27;s settings menu - a retro text menu (THEME, SKIN, LANGUAGE, SOUND, ABOUT MIST, RECOMMENDATIONS) navigated by rotating the console&#x27;s knob, where picking SKIN -&gt; LIGHT flips the entire device UI from dark to light theme in one instant repaint.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Console body with CRT screen showing a monospace menu under a &quot;SETTINGS&quot; header bar; a small arrow cursor marks the selected row. Control cluster below: purple knob, wide red button, colored pill keys, red power dot. The whole device (body, screen chrome) has both dark and light skins.
+
+## Motion spec
+Pattern: knob-driven list navigation + instant theme swap.
+- Rotate the knob: the selection arrow steps one row per detent (15deg of rotation), moving instantly (no slide animation) with a haptic tick and a blip sound; at list ends the arrow stops - no wrap.
+- The header bar and selected row invert (selected row shows in the accent green).
+- Press the red button: the highlighted item opens - SKIN drills into its submenu (BACK TO SETTINGS, LIGHT, DARK, SYSTEM), sliding the menu content left in one fast step (120ms, ease-out) rather than a push animation.
+- Select LIGHT: the checkmark jumps to the new row instantly, and the entire UI - device body, bezel, menu colors - flips to the light theme in a single frame. No fade, no sweep. The flip is the effect.
+- Back returns to the parent menu with the same instant step.
+
+## Calibration
+- Every interaction is 1-frame instant except the submenu step - the retro feel comes from zero easing on navigation.
+- The knob detents are audible/tactile: 40ms tick per step.
+
+## Reduced motion
+No change - the interactions are already instant.
+
+## Don&#x27;t miss
+- The theme flip repaints the console body itself, not just the screen - the whole object changes.
+- The checkmark swap and the theme flip happen in the same frame.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">knob-driven list navigation + instant theme swap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mist-settings-knob-interaction">original interaction</a> by Mist. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Mist's settings menu - a retro text menu (THEME, SKIN, LANGUAGE, SOUND, ABOUT MIST, RECOMMENDATIONS) navigated by rotating the console's knob, where picking SKIN -> LIGHT flips the entire device UI from dark to light theme in one instant repaint.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nConsole body with CRT screen showing a monospace menu under a \"SETTINGS\" header bar; a small arrow cursor marks the selected row. Control cluster below: purple knob, wide red button, colored pill keys, red power dot. The whole device (body, screen chrome) has both dark and light skins.\n\n## Motion spec\nPattern: knob-driven list navigation + instant theme swap.\n- Rotate the knob: the selection arrow steps one row per detent (15deg of rotation), moving instantly (no slide animation) with a haptic tick and a blip sound; at list ends the arrow stops - no wrap.\n- The header bar and selected row invert (selected row shows in the accent green).\n- Press the red button: the highlighted item opens - SKIN drills into its submenu (BACK TO SETTINGS, LIGHT, DARK, SYSTEM), sliding the menu content left in one fast step (120ms, ease-out) rather than a push animation.\n- Select LIGHT: the checkmark jumps to the new row instantly, and the entire UI - device body, bezel, menu colors - flips to the light theme in a single frame. No fade, no sweep. The flip is the effect.\n- Back returns to the parent menu with the same instant step.\n\n## Calibration\n- Every interaction is 1-frame instant except the submenu step - the retro feel comes from zero easing on navigation.\n- The knob detents are audible/tactile: 40ms tick per step.\n\n## Reduced motion\nNo change - the interactions are already instant.\n\n## Don't miss\n- The theme flip repaints the console body itself, not just the screen - the whole object changes.\n- The checkmark swap and the theme flip happen in the same frame."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Find Someone Profile Stats Carousel Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Find Someone Profile Stats Carousel Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-find-someone-profile-stats-carousel-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-find-someone-profile-stats-carousel-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-find-someone-profile-stats-carousel-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s Find Someone match preview - after &quot;Finding Someone Great&quot;, the match card appears with the avatar ringed by a colorful circular countdown, and a purple stats card auto-cycles through the person&#x27;s facts while &quot;Chat starting in N&quot; ticks down to &quot;Ok, get ready!&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b801ead5e2ea454ff30/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b801ead5e2ea454ff30/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-find-someone-profile-stats-carousel-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s Find Someone match preview - after &quot;Finding Someone Great&quot;, the match card appears with the avatar ringed by a colorful circular countdown, and a purple stats card auto-cycles through the person&#x27;s facts while &quot;Chat starting in N&quot; ticks down to &quot;Ok, get ready!&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Meet tab: rainbow-outlined &quot;Find&quot; button. Searching state: &quot;Finding Someone Great&quot; with Cancel. Match state: &quot;We found someone!&quot; header, &quot;Chat starting in 14&quot; countdown line, the avatar ringed by a rainbow gradient ring that depletes as the countdown ticks, &quot;Alex&quot; with a green badge, a purple info card center, and &quot;Find Someone Else&quot; at the bottom. Final beat: &quot;Ok, get ready! Chat starting in 1&quot;.
+
+## Motion spec
+Pattern: auto-cycling stat carousel with depleting countdown ring.
+- Find button: the rainbow ring around &quot;Find&quot; rotates continuously (2s/rev) while searching; &quot;Finding Someone Great&quot; fades in (250ms).
+- Match reveal: avatar pops (scale 0.6 -&gt; 1.05 -&gt; 1, spring ~340/15) with the rainbow ring drawing around it (stroke trim, 500ms); header and name fade in (250ms stagger).
+- Countdown: the ring depletes counterclockwise (trim proportional to remaining seconds, ~15s total), its gradient rotating slowly; the &quot;Chat starting in N&quot; number ticks each second with a small roll (100ms).
+- The purple stat card auto-advances every ~2.5s: current content slides up and out, next slides in from below (250ms, ease-in-out) - bio line, &quot;April 2025&quot; (calendar icon), &quot;Earth&quot; (globe icon), trait pills (Night owl...). Each swap comes with a subtle card pulse (scale 1 -&gt; 1.02 -&gt; 1).
+- At 1s: &quot;Ok, get ready!&quot; replaces the header (crossfade 200ms), the ring completes and flashes once (opacity pulse, 200ms).
+
+## Calibration
+- The ring is a countdown first and decoration second - trim must track the actual seconds.
+- The stat carousel loops only if time remains; it pauses on the last swipe before chat starts.
+
+## Reduced motion
+Static ring showing remaining fraction; stat card crossfades.
+
+## Don&#x27;t miss
+- The Find button&#x27;s rainbow ring and the match ring share the same gradient language.
+- &quot;Find Someone Else&quot; stays available the whole countdown.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-cycling stat carousel with depleting countdown ring.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-find-someone-profile-stats-carousel-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's Find Someone match preview - after \"Finding Someone Great\", the match card appears with the avatar ringed by a colorful circular countdown, and a purple stats card auto-cycles through the person's facts while \"Chat starting in N\" ticks down to \"Ok, get ready!\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMeet tab: rainbow-outlined \"Find\" button. Searching state: \"Finding Someone Great\" with Cancel. Match state: \"We found someone!\" header, \"Chat starting in 14\" countdown line, the avatar ringed by a rainbow gradient ring that depletes as the countdown ticks, \"Alex\" with a green badge, a purple info card center, and \"Find Someone Else\" at the bottom. Final beat: \"Ok, get ready! Chat starting in 1\".\n\n## Motion spec\nPattern: auto-cycling stat carousel with depleting countdown ring.\n- Find button: the rainbow ring around \"Find\" rotates continuously (2s/rev) while searching; \"Finding Someone Great\" fades in (250ms).\n- Match reveal: avatar pops (scale 0.6 -> 1.05 -> 1, spring ~340/15) with the rainbow ring drawing around it (stroke trim, 500ms); header and name fade in (250ms stagger).\n- Countdown: the ring depletes counterclockwise (trim proportional to remaining seconds, ~15s total), its gradient rotating slowly; the \"Chat starting in N\" number ticks each second with a small roll (100ms).\n- The purple stat card auto-advances every ~2.5s: current content slides up and out, next slides in from below (250ms, ease-in-out) - bio line, \"April 2025\" (calendar icon), \"Earth\" (globe icon), trait pills (Night owl...). Each swap comes with a subtle card pulse (scale 1 -> 1.02 -> 1).\n- At 1s: \"Ok, get ready!\" replaces the header (crossfade 200ms), the ring completes and flashes once (opacity pulse, 200ms).\n\n## Calibration\n- The ring is a countdown first and decoration second - trim must track the actual seconds.\n- The stat carousel loops only if time remains; it pauses on the last swipe before chat starts.\n\n## Reduced motion\nStatic ring showing remaining fraction; stat card crossfades.\n\n## Don't miss\n- The Find button's rainbow ring and the match ring share the same gradient language.\n- \"Find Someone Else\" stays available the whole countdown."</script>
+</body></html>

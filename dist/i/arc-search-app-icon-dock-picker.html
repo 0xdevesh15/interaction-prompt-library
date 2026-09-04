@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Search App Icon Dock Picker - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Arc Search App Icon Dock Picker</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/arc-search-app-icon-dock-picker"><b>Arc</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-app-icon-dock-picker">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-app-icon-dock-picker">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Arc Search&#x27;s app icon dock picker - a glass dock inside the settings sheet scrolls horizontally through icon variants, the centered icon enlarging, and tapping one fires a confirmation alert.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67695fd88f5e80dcc0b72d34/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67695fd88f5e80dcc0b72d34/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-arc-search-app-icon-dock-picker.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Arc Search&#x27;s app icon dock picker - a glass dock inside the settings sheet scrolls horizontally through icon variants, the centered icon enlarging, and tapping one fires a confirmation alert.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Arc&#x27;s settings list dimmed behind an &quot;App Icon&quot; bottom sheet: a skeuomorphic glass dock (frosted translucent bar with specular top edge) holding a horizontal strip of Arc icon variants (blue gradient, dark, black, outline, colorful). The selected icon sits centered and enlarged on the dock. An alert confirms &quot;You have changed the icon for Arc Search&quot;.
+
+## Motion spec
+Pattern: dock carousel with center magnification, gesture-driven.
+- The dock slides up with the sheet (spring stiffness 300 damping 24), icons settling into their slots.
+- Dragging scrolls the icon strip 1:1; on release it decelerates (600ms) and snaps the nearest icon to center (spring stiffness 350 damping 24).
+- Icons scale by distance from center (center 1.15x, edges 0.9x) and brighten at center, like a dock magnification.
+- Tapping the centered icon selects it: a small bounce (scale 1.15 to 1.3 to 1.15, spring stiffness 400 damping 16) and the system-style alert pops in (scale 0.9 to 1, 250ms).
+
+## Calibration
+- The glass dock is the star: blur, specular highlight, and a subtle reflection of the icons above its surface.
+- Magnification follows scroll position continuously, not after snap.
+
+## Reduced motion
+Strip scrolls without magnification; alert fades.
+
+## Don&#x27;t miss
+- The selected icon&#x27;s slot is marked (underline dot) so selection and centering are distinct states.
+- The dock sits flush with the sheet&#x27;s bottom, home-indicator clear.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">dock carousel with center magnification, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/arc-search-app-icon-dock-picker">original interaction</a> by Arc. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Arc Search's app icon dock picker - a glass dock inside the settings sheet scrolls horizontally through icon variants, the centered icon enlarging, and tapping one fires a confirmation alert.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nArc's settings list dimmed behind an \"App Icon\" bottom sheet: a skeuomorphic glass dock (frosted translucent bar with specular top edge) holding a horizontal strip of Arc icon variants (blue gradient, dark, black, outline, colorful). The selected icon sits centered and enlarged on the dock. An alert confirms \"You have changed the icon for Arc Search\".\n\n## Motion spec\nPattern: dock carousel with center magnification, gesture-driven.\n- The dock slides up with the sheet (spring stiffness 300 damping 24), icons settling into their slots.\n- Dragging scrolls the icon strip 1:1; on release it decelerates (600ms) and snaps the nearest icon to center (spring stiffness 350 damping 24).\n- Icons scale by distance from center (center 1.15x, edges 0.9x) and brighten at center, like a dock magnification.\n- Tapping the centered icon selects it: a small bounce (scale 1.15 to 1.3 to 1.15, spring stiffness 400 damping 16) and the system-style alert pops in (scale 0.9 to 1, 250ms).\n\n## Calibration\n- The glass dock is the star: blur, specular highlight, and a subtle reflection of the icons above its surface.\n- Magnification follows scroll position continuously, not after snap.\n\n## Reduced motion\nStrip scrolls without magnification; alert fades.\n\n## Don't miss\n- The selected icon's slot is marked (underline dot) so selection and centering are distinct states.\n- The dock sits flush with the sheet's bottom, home-indicator clear."</script>
+</body></html>

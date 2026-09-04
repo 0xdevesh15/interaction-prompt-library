@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rapido Set Price Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Rapido Set Price Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/rapido-set-price-slider-interaction"><b>Rapido</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/rapido-set-price-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/rapido-set-price-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Rapido&#x27;s set-your-price sheet - a stepped fare slider where dragging snaps through +20 increments, the big rupee readout and the Book button&#x27;s label update live, and a reset link springs the price back to base.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67f35c49e6d1a5d6bcd252a8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67f35c49e6d1a5d6bcd252a8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-rapido-set-price-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Rapido&#x27;s set-your-price sheet - a stepped fare slider where dragging snaps through +20 increments, the big rupee readout and the Book button&#x27;s label update live, and a reset link springs the price back to base.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white bottom sheet over the ride map (back chevron top-left). Title &quot;Set your price&quot;, subline &quot;We charge no commission. Full amount goes to the captain&quot;, a huge centered fare (&quot;₹75&quot;), a hint line that flips between &quot;Higher the price, higher the chance of getting a ride&quot; and &quot;Higher chance of getting a ride&quot; with a small up-right arrow, a horizontal slider with tick labels (+20 +30 +40 +50 +60) and a teal fill, a &quot;Reset to ₹75&quot; link, and a yellow &quot;Book Auto for ₹75&quot; button.
+
+## Motion spec
+Pattern: stepped price slider with live fare readout.
+- Dragging the slider knob moves it 1:1; the teal fill tracks the knob; the fare readout and the button label update live as each step is crossed (₹75 -&gt; ₹95 -&gt; ₹115 -&gt; ₹125 -&gt; ₹135).
+- Release: the knob snaps to the nearest step (spring ~320/18, one small overshoot) with a tick haptic per step passed.
+- The fare numeral crossfades on each step change (120ms, old value up and out, new in).
+- The hint line swaps its copy and arrow at the first step above base (150ms crossfade).
+- &quot;Reset to ₹75&quot; fades in once the price leaves base (200ms); tapping it springs the knob back to zero (spring ~300/20) with the readout ticking down through the steps.
+- The Book button&#x27;s label updates live with the fare and presses with a 0.97 scale.
+
+## Calibration
+- Steps, not continuous: the knob never rests between ticks.
+- The button label and the big readout must always agree - same value in the same frame.
+
+## Reduced motion
+Knob jumps to the selected step (150ms fill redraw); readout crossfades.
+
+## Don&#x27;t miss
+- The map stays visible (dimmed) behind the sheet - this is a sheet, not a page.
+- Yellow button, teal fill: Rapido&#x27;s two brand colors, exactly placed.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stepped price slider with live fare readout.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/rapido-set-price-slider-interaction">original interaction</a> by Rapido. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Rapido's set-your-price sheet - a stepped fare slider where dragging snaps through +20 increments, the big rupee readout and the Book button's label update live, and a reset link springs the price back to base.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white bottom sheet over the ride map (back chevron top-left). Title \"Set your price\", subline \"We charge no commission. Full amount goes to the captain\", a huge centered fare (\"\u20b975\"), a hint line that flips between \"Higher the price, higher the chance of getting a ride\" and \"Higher chance of getting a ride\" with a small up-right arrow, a horizontal slider with tick labels (+20 +30 +40 +50 +60) and a teal fill, a \"Reset to \u20b975\" link, and a yellow \"Book Auto for \u20b975\" button.\n\n## Motion spec\nPattern: stepped price slider with live fare readout.\n- Dragging the slider knob moves it 1:1; the teal fill tracks the knob; the fare readout and the button label update live as each step is crossed (\u20b975 -> \u20b995 -> \u20b9115 -> \u20b9125 -> \u20b9135).\n- Release: the knob snaps to the nearest step (spring ~320/18, one small overshoot) with a tick haptic per step passed.\n- The fare numeral crossfades on each step change (120ms, old value up and out, new in).\n- The hint line swaps its copy and arrow at the first step above base (150ms crossfade).\n- \"Reset to \u20b975\" fades in once the price leaves base (200ms); tapping it springs the knob back to zero (spring ~300/20) with the readout ticking down through the steps.\n- The Book button's label updates live with the fare and presses with a 0.97 scale.\n\n## Calibration\n- Steps, not continuous: the knob never rests between ticks.\n- The button label and the big readout must always agree - same value in the same frame.\n\n## Reduced motion\nKnob jumps to the selected step (150ms fill redraw); readout crossfades.\n\n## Don't miss\n- The map stays visible (dimmed) behind the sheet - this is a sheet, not a page.\n- Yellow button, teal fill: Rapido's two brand colors, exactly placed."</script>
+</body></html>

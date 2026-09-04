@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tilt Time Style - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tilt Time Style</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tilt-time-style"><b>Tilt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tilt-time-style">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tilt-time-style">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Tilt&#x27;s idle capture screen - a pulsing shutter button with a gently bobbing tooltip coaching the user toward their first photo.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be3aee131e88d4acadf9f4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be3aee131e88d4acadf9f4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tilt-time-style.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Tilt&#x27;s idle capture screen - a pulsing shutter button with a gently bobbing tooltip coaching the user toward their first photo.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The capture screen at rest: viewfinder area, a large circular shutter button centered at the bottom, and a small tooltip bubble above it (&quot;Tap to take your first photo&quot;). The scene idles - no user input - and the motion is the coach.
+
+## Motion spec
+Pattern: idle pulse + bobbing tooltip.
+- The shutter button breathes: an outer ring scales 1.0 to 1.15 and fades (1.8s loop, ease-out), echoing like a slow sonar ping; a second ring follows 400ms behind.
+- The button core subtly scales 1.0 to 1.04 on the same period, in phase with the ring.
+- The tooltip bobs: translateY 0 to -8px and back (2.2s, ease-in-out), with its little pointer triangle anchored to the button.
+- The tooltip text swaps or shimmers every ~4s to keep the coach alive (opacity crossfade, 300ms).
+- On tap: the pulse rings collapse inward (150ms), the button compresses (scale 0.9, 100ms) and fires; the tooltip slides up and fades (200ms) - coaching ends the moment the user acts.
+
+## Calibration
+- Idle motion amplitude stays small - this is a heartbeat, not an alarm; if it reads as urgent, halve the scale range.
+- All idle loops run on independent periods so the composition never visibly repeats.
+
+## Reduced motion
+Static button and tooltip; no pulse or bob.
+
+## Don&#x27;t miss
+- The rings emit from the button&#x27;s exact center and clip to the screen - no rectangular fade edges.
+- The tooltip never overlaps the button; the bob keeps a constant gap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">idle pulse + bobbing tooltip.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tilt-time-style">original interaction</a> by Tilt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Tilt's idle capture screen - a pulsing shutter button with a gently bobbing tooltip coaching the user toward their first photo.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe capture screen at rest: viewfinder area, a large circular shutter button centered at the bottom, and a small tooltip bubble above it (\"Tap to take your first photo\"). The scene idles - no user input - and the motion is the coach.\n\n## Motion spec\nPattern: idle pulse + bobbing tooltip.\n- The shutter button breathes: an outer ring scales 1.0 to 1.15 and fades (1.8s loop, ease-out), echoing like a slow sonar ping; a second ring follows 400ms behind.\n- The button core subtly scales 1.0 to 1.04 on the same period, in phase with the ring.\n- The tooltip bobs: translateY 0 to -8px and back (2.2s, ease-in-out), with its little pointer triangle anchored to the button.\n- The tooltip text swaps or shimmers every ~4s to keep the coach alive (opacity crossfade, 300ms).\n- On tap: the pulse rings collapse inward (150ms), the button compresses (scale 0.9, 100ms) and fires; the tooltip slides up and fades (200ms) - coaching ends the moment the user acts.\n\n## Calibration\n- Idle motion amplitude stays small - this is a heartbeat, not an alarm; if it reads as urgent, halve the scale range.\n- All idle loops run on independent periods so the composition never visibly repeats.\n\n## Reduced motion\nStatic button and tooltip; no pulse or bob.\n\n## Don't miss\n- The rings emit from the button's exact center and clip to the screen - no rectangular fade edges.\n- The tooltip never overlaps the button; the bob keeps a constant gap."</script>
+</body></html>

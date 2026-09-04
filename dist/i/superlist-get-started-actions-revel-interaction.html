@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Superlist Get Started Actions Revel Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Superlist Get Started Actions Revel Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/superlist-get-started-actions-revel-interaction"><b>Superlist</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/superlist-get-started-actions-revel-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/superlist-get-started-actions-revel-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Superlist&#x27;s get-started screen - three auth buttons morph into a single action while the red intro card above rewrites itself and its Team Sync note fills with content.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e002ed96aa9b8d652d5f5f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e002ed96aa9b8d652d5f5f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-superlist-get-started-actions-revel-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Superlist&#x27;s get-started screen - three auth buttons morph into a single action while the red intro card above rewrites itself and its Team Sync note fills with content.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Split screen: a red card on top with the headline &quot;Take notes and transform thoughts into actions&quot; and a floating white note card titled &quot;Team Sync&quot;; a black section below with &quot;Let&#x27;s get started&quot;, subtext, and the actions - initially a single dark button, then three white buttons (&quot;Continue with Google&quot;, &quot;Continue with Apple&quot;, &quot;Continue with email&quot;), which later merge back into one dark action as the note card fills with text lines.
+
+## Motion spec
+Pattern: button morph with synchronized card content swap.
+- The reveal: the single dark button stretches and splits into the three stacked white auth buttons (height + fade, spring ~320/26, 80ms stagger between them).
+- The note card on the red panel grows (height spring ~300/26) as its content lines draw in one by one (fade + rise 6pt, 150ms each, 90ms apart) and the headline crossfades (250ms).
+- The merge: the three buttons collapse back toward the bottom one (translate + fade, 300ms, ease-in-out) as it flips white -&gt; dark and its label swaps (200ms crossfade).
+- The red panel and black section stay pinned; only the card and buttons transform.
+
+## Calibration
+- The morph is geometric: buttons actually travel and merge, not three fades and an appear.
+- Card content updates overlap the button morph by ~50% - the whole screen changes as one move.
+
+## Reduced motion
+Buttons crossfade between states (250ms); card content fades in as a block.
+
+## Don&#x27;t miss
+- The note card keeps its tilt/shadow while growing - it is a physical card, not a text block.
+- Button labels swap without layout jump: same height, same radius throughout.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">button morph with synchronized card content swap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/superlist-get-started-actions-revel-interaction">original interaction</a> by Superlist. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Superlist's get-started screen - three auth buttons morph into a single action while the red intro card above rewrites itself and its Team Sync note fills with content.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSplit screen: a red card on top with the headline \"Take notes and transform thoughts into actions\" and a floating white note card titled \"Team Sync\"; a black section below with \"Let's get started\", subtext, and the actions - initially a single dark button, then three white buttons (\"Continue with Google\", \"Continue with Apple\", \"Continue with email\"), which later merge back into one dark action as the note card fills with text lines.\n\n## Motion spec\nPattern: button morph with synchronized card content swap.\n- The reveal: the single dark button stretches and splits into the three stacked white auth buttons (height + fade, spring ~320/26, 80ms stagger between them).\n- The note card on the red panel grows (height spring ~300/26) as its content lines draw in one by one (fade + rise 6pt, 150ms each, 90ms apart) and the headline crossfades (250ms).\n- The merge: the three buttons collapse back toward the bottom one (translate + fade, 300ms, ease-in-out) as it flips white -> dark and its label swaps (200ms crossfade).\n- The red panel and black section stay pinned; only the card and buttons transform.\n\n## Calibration\n- The morph is geometric: buttons actually travel and merge, not three fades and an appear.\n- Card content updates overlap the button morph by ~50% - the whole screen changes as one move.\n\n## Reduced motion\nButtons crossfade between states (250ms); card content fades in as a block.\n\n## Don't miss\n- The note card keeps its tilt/shadow while growing - it is a physical card, not a text block.\n- Button labels swap without layout jump: same height, same radius throughout."</script>
+</body></html>

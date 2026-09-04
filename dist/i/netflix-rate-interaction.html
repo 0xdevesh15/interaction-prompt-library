@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Netflix Rate Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Netflix Rate Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/netflix-rate-interaction"><b>Netflix</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/netflix-rate-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/netflix-rate-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Netflix&#x27;s rating popover - tapping Rate on a title sheet opens a springy three-thumb popover (Not for me / I like this / Love this!) with staggered pops and a particle burst on the top rating.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb3c371d29849d7bcc47/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb3c371d29849d7bcc47/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-netflix-rate-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Netflix&#x27;s rating popover - tapping Rate on a title sheet opens a springy three-thumb popover (Not for me / I like this / Love this!) with staggered pops and a particle burst on the top rating.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A title detail sheet (Suits: Play, Download, episode list) dimmed behind a floating dark popover centered on screen: three thumb options in a row - &quot;Not for me&quot; (thumb down), &quot;I like this&quot; (thumb up), &quot;Love this!&quot; (double thumb) - each labeled beneath its icon.
+
+## Motion spec
+Pattern: staggered spring popover with selection burst.
+- Tap Rate: the sheet dims (black scrim to ~60%, 200ms) and the popover scales in from the Rate button&#x27;s location (scale 0.7 to 1, spring ~380/24), fading from 0.
+- The three options pop in staggered (50ms apart): each icon scales 0.5 to 1 with a bounce (spring ~480/22), labels fading up just after.
+- Tap an option: the chosen thumb bounces (scale 1 to 1.25 to 1, spring ~420/20) and fills white; &quot;Love this!&quot; fires a small burst of spark/paw-like particles around the icon (6-8 particles, 400ms life).
+- The popover then collapses back toward the Rate button (scale down + fade, 200ms), the scrim lifts, and the Rate control shows the chosen state (thumbs-up icon filled).
+- Tap the scrim or re-tap the current rating: popover dismisses with the same collapse; re-tapping an active rating clears it (icon returns to outline, 150ms).
+
+## Calibration
+- The popover&#x27;s transform origin is the Rate button - it must visibly grow out of and return to that spot.
+- The stagger is tight; total entrance under 350ms so the menu feels instant.
+
+## Reduced motion
+Popover fades in centered; no stagger or burst.
+
+## Don&#x27;t miss
+- The double-thumb &quot;Love this!&quot; icon is visually distinct (two thumbs), and its burst is the only particle effect.
+- The detail sheet stays fully rendered under the scrim - no snapshot flattening.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered spring popover with selection burst.</div></div><div><div class="k">Content type</div><div class="v">interactive gesture</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/netflix-rate-interaction">original interaction</a> by Netflix. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Netflix's rating popover - tapping Rate on a title sheet opens a springy three-thumb popover (Not for me / I like this / Love this!) with staggered pops and a particle burst on the top rating.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA title detail sheet (Suits: Play, Download, episode list) dimmed behind a floating dark popover centered on screen: three thumb options in a row - \"Not for me\" (thumb down), \"I like this\" (thumb up), \"Love this!\" (double thumb) - each labeled beneath its icon.\n\n## Motion spec\nPattern: staggered spring popover with selection burst.\n- Tap Rate: the sheet dims (black scrim to ~60%, 200ms) and the popover scales in from the Rate button's location (scale 0.7 to 1, spring ~380/24), fading from 0.\n- The three options pop in staggered (50ms apart): each icon scales 0.5 to 1 with a bounce (spring ~480/22), labels fading up just after.\n- Tap an option: the chosen thumb bounces (scale 1 to 1.25 to 1, spring ~420/20) and fills white; \"Love this!\" fires a small burst of spark/paw-like particles around the icon (6-8 particles, 400ms life).\n- The popover then collapses back toward the Rate button (scale down + fade, 200ms), the scrim lifts, and the Rate control shows the chosen state (thumbs-up icon filled).\n- Tap the scrim or re-tap the current rating: popover dismisses with the same collapse; re-tapping an active rating clears it (icon returns to outline, 150ms).\n\n## Calibration\n- The popover's transform origin is the Rate button - it must visibly grow out of and return to that spot.\n- The stagger is tight; total entrance under 350ms so the menu feels instant.\n\n## Reduced motion\nPopover fades in centered; no stagger or burst.\n\n## Don't miss\n- The double-thumb \"Love this!\" icon is visually distinct (two thumbs), and its burst is the only particle effect.\n- The detail sheet stays fully rendered under the scrim - no snapshot flattening."</script>
+</body></html>

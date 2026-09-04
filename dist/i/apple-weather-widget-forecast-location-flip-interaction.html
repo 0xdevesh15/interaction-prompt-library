@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Weather Widget Forecast Location Flip Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Weather Widget Forecast Location Flip Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-weather-widget-forecast-location-flip-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-weather-widget-forecast-location-flip-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-weather-widget-forecast-location-flip-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the iOS Weather widget&#x27;s edit flip - in home screen edit mode, tapping the widget rotates it 180 degrees in 3D to reveal the Forecast configuration back, and it flips back on Done.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67695ec6a080a6ad160872b1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67695ec6a080a6ad160872b1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-weather-widget-forecast-location-flip-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the iOS Weather widget&#x27;s edit flip - in home screen edit mode, tapping the widget rotates it 180 degrees in 3D to reveal the Forecast configuration back, and it flips back on Done.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A home screen in jiggle mode (badges on widgets, dimmed wallpaper): a large Weather widget (Oslo 13°, hourly icons, weekly bars) stacked over other app widgets. Tapped, the Weather widget rotates on its vertical axis to a dark back face (&quot;Forecast&quot; title, Location row with a blue link), then flips forward again when done.
+
+## Motion spec
+Pattern: 3D card flip, gesture-driven, ~700ms per flip.
+- On tap, the widget lifts slightly (scale 1 to 1.03, shadow deepening) and rotates around its vertical center axis from 0 to 180 degrees (650ms, ease-in-out), the front face fading out past 90 degrees as the back face fades in.
+- The back face is mirrored-correct (it reads properly when the rotation completes), with its own slight parallax settling (100ms).
+- Surrounding widgets keep wiggling; the flipping widget leaves jiggle mode while turned.
+- On Done (or tapping outside), it flips back with the same motion and rejoins the wiggle.
+
+## Calibration
+- Perspective must be visible: edges foreshorten as the card turns, no flat crossfade.
+- The lift happens in the first 150ms and settles in the last 150ms of the flip.
+
+## Reduced motion
+Front and back crossfade.
+
+## Don&#x27;t miss
+- The back is dark and quiet - a configuration panel, not a second UI.
+- The widget&#x27;s rounded corners and shadow stay consistent through the rotation.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D card flip, gesture-driven, ~700ms per flip.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-weather-widget-forecast-location-flip-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the iOS Weather widget's edit flip - in home screen edit mode, tapping the widget rotates it 180 degrees in 3D to reveal the Forecast configuration back, and it flips back on Done.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA home screen in jiggle mode (badges on widgets, dimmed wallpaper): a large Weather widget (Oslo 13\u00b0, hourly icons, weekly bars) stacked over other app widgets. Tapped, the Weather widget rotates on its vertical axis to a dark back face (\"Forecast\" title, Location row with a blue link), then flips forward again when done.\n\n## Motion spec\nPattern: 3D card flip, gesture-driven, ~700ms per flip.\n- On tap, the widget lifts slightly (scale 1 to 1.03, shadow deepening) and rotates around its vertical center axis from 0 to 180 degrees (650ms, ease-in-out), the front face fading out past 90 degrees as the back face fades in.\n- The back face is mirrored-correct (it reads properly when the rotation completes), with its own slight parallax settling (100ms).\n- Surrounding widgets keep wiggling; the flipping widget leaves jiggle mode while turned.\n- On Done (or tapping outside), it flips back with the same motion and rejoins the wiggle.\n\n## Calibration\n- Perspective must be visible: edges foreshorten as the card turns, no flat crossfade.\n- The lift happens in the first 150ms and settles in the last 150ms of the flip.\n\n## Reduced motion\nFront and back crossfade.\n\n## Don't miss\n- The back is dark and quiet - a configuration panel, not a second UI.\n- The widget's rounded corners and shadow stay consistent through the rotation."</script>
+</body></html>

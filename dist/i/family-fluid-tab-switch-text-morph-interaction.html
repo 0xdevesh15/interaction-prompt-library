@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Fluid Tab Switch Text Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Fluid Tab Switch Text Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-fluid-tab-switch-text-morph-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-fluid-tab-switch-text-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-fluid-tab-switch-text-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s Tokens/Collectibles tab switch - on the light &quot;Fees&quot; wallet screen, switching between Tokens and Collectibles slides the content sideways with spring while the two empty states (&quot;There&#x27;s nothing here, yet&quot; / &quot;Nothing to see here, for now&quot;) crossfade, and skeleton placeholders flash during the swap.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d16410daa283ff12f4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d16410daa283ff12f4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-fluid-tab-switch-text-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s Tokens/Collectibles tab switch - on the light &quot;Fees&quot; wallet screen, switching between Tokens and Collectibles slides the content sideways with spring while the two empty states (&quot;There&#x27;s nothing here, yet&quot; / &quot;Nothing to see here, for now&quot;) crossfade, and skeleton placeholders flash during the swap.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light wallet screen &quot;Fees&quot;: tab pair (Tokens / Collectibles) under the header with &quot;$0.00&quot; totals, a single Ethereum row ($0.00) on Tokens, empty-state art with copy (&quot;There&#x27;s nothing here, yet&quot; with subtext; &quot;Nothing to see here, for now&quot; with subtext), a &quot;Receive&quot; pill, a floating black &quot;+&quot; button, and the bottom tab bar (home, compass, activity). Skeleton gray blocks stand in for loading rows.
+
+## Motion spec
+Pattern: spring content slide with crossfading empty states.
+- Tap a tab: the active tab label&#x27;s weight/color animates (200ms) and an underline slides to it (spring ~340/22, 250ms).
+- The outgoing content slides sideways (direction of the tapped tab, translateX to +-30pt, 200ms ease-in) while fading (150ms); the incoming content slides from the opposite side (spring ~320/20, 300ms) with a 40ms overlap.
+- During the swap, skeleton rows shimmer (gray blocks, opacity 1 -&gt; 0.5 -&gt; 1, 1s loop) until the content resolves.
+- The empty-state illustration and copy crossfade as one group (250ms); the Receive pill slides up (200ms) after the copy lands.
+- The &quot;$0.00&quot; totals persist through the switch; only list content changes.
+
+## Calibration
+- The slide distance is short (30pt) - the motion reads as a nudge, not a page swipe.
+- The black &quot;+&quot; button and bottom bar stay fixed throughout.
+
+## Reduced motion
+Tabs crossfade content (200ms) without sliding.
+
+## Don&#x27;t miss
+- Both empty states have different copy - the morph swaps text, not just art.
+- The Ethereum row on Tokens keeps its &quot;$0.00&quot; alignment while skeletons load around it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring content slide with crossfading empty states.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-fluid-tab-switch-text-morph-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's Tokens/Collectibles tab switch - on the light \"Fees\" wallet screen, switching between Tokens and Collectibles slides the content sideways with spring while the two empty states (\"There's nothing here, yet\" / \"Nothing to see here, for now\") crossfade, and skeleton placeholders flash during the swap.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight wallet screen \"Fees\": tab pair (Tokens / Collectibles) under the header with \"$0.00\" totals, a single Ethereum row ($0.00) on Tokens, empty-state art with copy (\"There's nothing here, yet\" with subtext; \"Nothing to see here, for now\" with subtext), a \"Receive\" pill, a floating black \"+\" button, and the bottom tab bar (home, compass, activity). Skeleton gray blocks stand in for loading rows.\n\n## Motion spec\nPattern: spring content slide with crossfading empty states.\n- Tap a tab: the active tab label's weight/color animates (200ms) and an underline slides to it (spring ~340/22, 250ms).\n- The outgoing content slides sideways (direction of the tapped tab, translateX to +-30pt, 200ms ease-in) while fading (150ms); the incoming content slides from the opposite side (spring ~320/20, 300ms) with a 40ms overlap.\n- During the swap, skeleton rows shimmer (gray blocks, opacity 1 -> 0.5 -> 1, 1s loop) until the content resolves.\n- The empty-state illustration and copy crossfade as one group (250ms); the Receive pill slides up (200ms) after the copy lands.\n- The \"$0.00\" totals persist through the switch; only list content changes.\n\n## Calibration\n- The slide distance is short (30pt) - the motion reads as a nudge, not a page swipe.\n- The black \"+\" button and bottom bar stay fixed throughout.\n\n## Reduced motion\nTabs crossfade content (200ms) without sliding.\n\n## Don't miss\n- Both empty states have different copy - the morph swaps text, not just art.\n- The Ethereum row on Tokens keeps its \"$0.00\" alignment while skeletons load around it."</script>
+</body></html>

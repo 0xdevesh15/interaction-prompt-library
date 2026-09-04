@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Weather Watch Scroll - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Weather Watch Scroll</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-weather-watch-scroll"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-weather-watch-scroll">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-weather-watch-scroll">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: watchOS Weather navigation - a city summary (&quot;Bengaluru 29° Partly Cloudy&quot;) with three metric circles; crown-scrolling morphs it into a circular hourly dial (condition icons on a clock ring), then a 10-day list; tapping a metric circle pushes a full-screen detail (&quot;22 kph&quot;, &quot;Gusts: 43 kph&quot;) over the animated cloudy sky.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2d71e98a6ede244a95f8d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2d71e98a6ede244a95f8d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-weather-watch-scroll.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: watchOS Weather navigation - a city summary (&quot;Bengaluru 29° Partly Cloudy&quot;) with three metric circles; crown-scrolling morphs it into a circular hourly dial (condition icons on a clock ring), then a 10-day list; tapping a metric circle pushes a full-screen detail (&quot;22 kph&quot;, &quot;Gusts: 43 kph&quot;) over the animated cloudy sky.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Watch screens over a live cloudy-sky background: summary (city, big 29°, condition, H/L, three small circles: UV 8, wind 22 KPH, humidity 51%); hourly dial (hours 1-12 around a ring with condition glyphs, 29° center); 10-day list rows (Thu/Fri/Sat with icons and ranges, &quot;Weather data sources and BreezoMeter&quot;); wind detail (giant &quot;22 kph&quot;, &quot;Gusts: 43 kph&quot;).
+
+## Motion spec
+Pattern: crown-scrolled view ladder + metric push.
+- Crown scroll: the summary crossfades through its states - the metric circles shrink and orbit into the hourly dial&#x27;s ring (icons travel along arcs, spring ~260/24, ~500ms), and the 29° readout stays pinned as the shared element.
+- Continued scrolling: the dial tilts and flattens into the list (ring elements fade, rows rise with 50ms stagger, 400ms).
+- Reverse scroll unwinds the exact same ladder.
+- Tap a metric circle: it expands to fill the screen (scale + radius morph, spring ~300/24, ~400ms) into the detail view - value counts up (&quot;22&quot; from 0, 500ms), unit and &quot;Gusts&quot; line fade in after.
+- The cloudy sky animates continuously behind every view (slow drift, ~2% scale breathe) and dims slightly on detail views.
+
+## Calibration
+- One continuous ladder: summary &lt;-&gt; dial &lt;-&gt; list are positions on the same scroll axis, not separate screens.
+- The background sky never cuts - it is the app&#x27;s constant layer.
+
+## Reduced motion
+View changes crossfade; the sky is static.
+
+## Don&#x27;t miss
+- Hour icons sit ON the clock ring at their hour positions - the dial is a real clock mapping.
+- The detail view keeps the same wind-glyph chrome top-right as the metric circle had.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">crown-scrolled view ladder + metric push.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-weather-watch-scroll">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: watchOS Weather navigation - a city summary (\"Bengaluru 29\u00b0 Partly Cloudy\") with three metric circles; crown-scrolling morphs it into a circular hourly dial (condition icons on a clock ring), then a 10-day list; tapping a metric circle pushes a full-screen detail (\"22 kph\", \"Gusts: 43 kph\") over the animated cloudy sky.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWatch screens over a live cloudy-sky background: summary (city, big 29\u00b0, condition, H/L, three small circles: UV 8, wind 22 KPH, humidity 51%); hourly dial (hours 1-12 around a ring with condition glyphs, 29\u00b0 center); 10-day list rows (Thu/Fri/Sat with icons and ranges, \"Weather data sources and BreezoMeter\"); wind detail (giant \"22 kph\", \"Gusts: 43 kph\").\n\n## Motion spec\nPattern: crown-scrolled view ladder + metric push.\n- Crown scroll: the summary crossfades through its states - the metric circles shrink and orbit into the hourly dial's ring (icons travel along arcs, spring ~260/24, ~500ms), and the 29\u00b0 readout stays pinned as the shared element.\n- Continued scrolling: the dial tilts and flattens into the list (ring elements fade, rows rise with 50ms stagger, 400ms).\n- Reverse scroll unwinds the exact same ladder.\n- Tap a metric circle: it expands to fill the screen (scale + radius morph, spring ~300/24, ~400ms) into the detail view - value counts up (\"22\" from 0, 500ms), unit and \"Gusts\" line fade in after.\n- The cloudy sky animates continuously behind every view (slow drift, ~2% scale breathe) and dims slightly on detail views.\n\n## Calibration\n- One continuous ladder: summary <-> dial <-> list are positions on the same scroll axis, not separate screens.\n- The background sky never cuts - it is the app's constant layer.\n\n## Reduced motion\nView changes crossfade; the sky is static.\n\n## Don't miss\n- Hour icons sit ON the clock ring at their hour positions - the dial is a real clock mapping.\n- The detail view keeps the same wind-glyph chrome top-right as the metric circle had."</script>
+</body></html>

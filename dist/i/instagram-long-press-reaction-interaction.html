@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Long Press Reaction Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Long Press Reaction Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-long-press-reaction-interaction"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-long-press-reaction-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-long-press-reaction-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Instagram DM&#x27;s long-press reaction - long-pressing a message bubble pops a reaction emoji bar and context menu; tapping the heart fires a heart particle explosion that floats up over the message as the menu collapses.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb6448dc35fae3b8a6b9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb6448dc35fae3b8a6b9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-long-press-reaction-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Instagram DM&#x27;s long-press reaction - long-pressing a message bubble pops a reaction emoji bar and context menu; tapping the heart fires a heart particle explosion that floats up over the message as the menu collapses.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark chat screen: header (back arrow, chat name, call/video icons), message bubbles on a near-black green-tinted background, input bar at bottom. Overlay state: dimmed/blurred backdrop, the pressed message lifted, emoji reaction bar (heart, laughing, surprised, fire, clap, +) floating above it, context menu (Reply, Forward, Delete for you) below.
+
+## Motion spec
+Pattern: context menu + particle burst, ~1.5s total.
+- Long-press: backdrop dims to 70% (200ms), the pressed message scales 1 -&gt; 1.03 and lifts with a shadow (200ms, ease-out); emoji bar pops in above it (scale 0.7 -&gt; 1, spring ~400/20) with emojis staggering in left to right (30ms apart); menu slides up under the message (250ms).
+- Emoji tap: the chosen heart scales 1 -&gt; 1.6 -&gt; 1 (150ms) and detonates into 12-18 small hearts that spray outward with gravity arcs, drifting up over the message while fading (800ms, staggered sizes 8-20px).
+- Simultaneously the emoji bar and menu collapse (scale -&gt; 0.8, fade, 200ms) and the backdrop undims.
+- A small heart badge settles onto the message&#x27;s lower corner (scale 0 -&gt; 1, spring ~350/18) as particles finish.
+
+## Calibration
+- The particle burst starts on the same frame the menu begins collapsing - sequencing them reads as two separate effects.
+- Particles drift upward with slight horizontal wobble; straight-line particles read as confetti debris.
+
+## Reduced motion
+Emoji bar and menu appear/disappear instantly; the reaction lands as the corner badge only, no particles.
+
+## Don&#x27;t miss
+- The pressed message stays visually lifted the whole time the overlay is up; dropping it early breaks the focus illusion.
+- The corner badge is the durable outcome - particles are ephemeral and must fully clean up (no stuck hearts).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">context menu + particle burst, ~1.5s total.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-long-press-reaction-interaction">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Instagram DM's long-press reaction - long-pressing a message bubble pops a reaction emoji bar and context menu; tapping the heart fires a heart particle explosion that floats up over the message as the menu collapses.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark chat screen: header (back arrow, chat name, call/video icons), message bubbles on a near-black green-tinted background, input bar at bottom. Overlay state: dimmed/blurred backdrop, the pressed message lifted, emoji reaction bar (heart, laughing, surprised, fire, clap, +) floating above it, context menu (Reply, Forward, Delete for you) below.\n\n## Motion spec\nPattern: context menu + particle burst, ~1.5s total.\n- Long-press: backdrop dims to 70% (200ms), the pressed message scales 1 -> 1.03 and lifts with a shadow (200ms, ease-out); emoji bar pops in above it (scale 0.7 -> 1, spring ~400/20) with emojis staggering in left to right (30ms apart); menu slides up under the message (250ms).\n- Emoji tap: the chosen heart scales 1 -> 1.6 -> 1 (150ms) and detonates into 12-18 small hearts that spray outward with gravity arcs, drifting up over the message while fading (800ms, staggered sizes 8-20px).\n- Simultaneously the emoji bar and menu collapse (scale -> 0.8, fade, 200ms) and the backdrop undims.\n- A small heart badge settles onto the message's lower corner (scale 0 -> 1, spring ~350/18) as particles finish.\n\n## Calibration\n- The particle burst starts on the same frame the menu begins collapsing - sequencing them reads as two separate effects.\n- Particles drift upward with slight horizontal wobble; straight-line particles read as confetti debris.\n\n## Reduced motion\nEmoji bar and menu appear/disappear instantly; the reaction lands as the corner badge only, no particles.\n\n## Don't miss\n- The pressed message stays visually lifted the whole time the overlay is up; dropping it early breaks the focus illusion.\n- The corner badge is the durable outcome - particles are ephemeral and must fully clean up (no stuck hearts)."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elevate Wrong Answer Words Collapse Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Elevate Wrong Answer Words Collapse Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/elevate-wrong-answer-words-collapse-interaction"><b>Elevate</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-wrong-answer-words-collapse-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-wrong-answer-words-collapse-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Elevate&#x27;s wrong-answer beat - the highlighted phrase flashes red, an explanation fades in below, and on continue the sentence&#x27;s letters collapse under gravity, piling at the bottom of the screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edd7e9610ba04ea93948/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edd7e9610ba04ea93948/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-elevate-wrong-answer-words-collapse-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Elevate&#x27;s wrong-answer beat - the highlighted phrase flashes red, an explanation fades in below, and on continue the sentence&#x27;s letters collapse under gravity, piling at the bottom of the screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Elevate question screen, dark: a sentence (&quot;Jack bought a lottery ticket even though he knew it was a shot in the ark&quot;) with the phrase &quot;shot in the ark&quot; highlighted; &quot;IS THE HIGHLIGHTED EXPRESSION VALID?&quot; prompt; ERROR / VALID buttons. Wrong state: the highlight turns magenta-red, the screen warms darker, and an explanation block appears (&quot;shot in the dark means an attempt with little chance of success, while the ark is not a phrase&quot;).
+
+## Motion spec
+Pattern: red-highlight error reveal with an explanation, then a gravity letter collapse.
+- On the wrong answer the highlight flips white -&gt; magenta (150ms) and the screen background shifts to a dark red cast (300ms); the chosen button shakes 3 cycles (translateX +/-6px, 240ms).
+- The explanation fades in below the passage (translateY 10 -&gt; 0, 300ms) with the key correction word itself highlighted.
+- &quot;TAP TO CONTINUE&quot; pulses softly at the bottom (opacity 0.5 -&gt; 1, 1.2s loop).
+- On continue: the passage&#x27;s letters lose their baseline - each glyph falls with gravity (accelerating translateY, rotate +/-30 degrees, staggered 8ms per letter, 600-900ms) and lands in a loose pile along the bottom edge (tiny bounce, spring ~300/12), then the pile fades out (300ms) as the next question fades in (300ms).
+
+## Calibration
+- The fall is per-letter physics - heavier letters can fall a touch faster for texture.
+- The red state is the only warm screen in the flow; everything returns cool on the next question.
+
+## Reduced motion
+Highlight crossfades to red (200ms); passage fades out whole (300ms).
+
+## Don&#x27;t miss
+- Letters accumulate visibly at the bottom before fading - the pile is the punchline.
+- The explanation&#x27;s correction word carries the same magenta highlight, tying it to the error.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">red-highlight error reveal with an explanation, then a gravity letter collapse.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/elevate-wrong-answer-words-collapse-interaction">original interaction</a> by Elevate. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Elevate's wrong-answer beat - the highlighted phrase flashes red, an explanation fades in below, and on continue the sentence's letters collapse under gravity, piling at the bottom of the screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nElevate question screen, dark: a sentence (\"Jack bought a lottery ticket even though he knew it was a shot in the ark\") with the phrase \"shot in the ark\" highlighted; \"IS THE HIGHLIGHTED EXPRESSION VALID?\" prompt; ERROR / VALID buttons. Wrong state: the highlight turns magenta-red, the screen warms darker, and an explanation block appears (\"shot in the dark means an attempt with little chance of success, while the ark is not a phrase\").\n\n## Motion spec\nPattern: red-highlight error reveal with an explanation, then a gravity letter collapse.\n- On the wrong answer the highlight flips white -> magenta (150ms) and the screen background shifts to a dark red cast (300ms); the chosen button shakes 3 cycles (translateX +/-6px, 240ms).\n- The explanation fades in below the passage (translateY 10 -> 0, 300ms) with the key correction word itself highlighted.\n- \"TAP TO CONTINUE\" pulses softly at the bottom (opacity 0.5 -> 1, 1.2s loop).\n- On continue: the passage's letters lose their baseline - each glyph falls with gravity (accelerating translateY, rotate +/-30 degrees, staggered 8ms per letter, 600-900ms) and lands in a loose pile along the bottom edge (tiny bounce, spring ~300/12), then the pile fades out (300ms) as the next question fades in (300ms).\n\n## Calibration\n- The fall is per-letter physics - heavier letters can fall a touch faster for texture.\n- The red state is the only warm screen in the flow; everything returns cool on the next question.\n\n## Reduced motion\nHighlight crossfades to red (200ms); passage fades out whole (300ms).\n\n## Don't miss\n- Letters accumulate visibly at the bottom before fading - the pile is the punchline.\n- The explanation's correction word carries the same magenta highlight, tying it to the error."</script>
+</body></html>

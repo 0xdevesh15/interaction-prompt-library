@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airlearn Streak Fire Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airlearn Streak Fire Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airlearn-streak-fire-animation"><b>Airlearn</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airlearn-streak-fire-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airlearn-streak-fire-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airlearn&#x27;s streak celebration screen - a big orange flame with the streak number &quot;1&quot; rises and settles while small ember particles detach from its tip and float upward, over a static headline and an &quot;Add streak widget&quot; card.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6750974aff6640815e7e8779/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6750974aff6640815e7e8779/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airlearn-streak-fire-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airlearn&#x27;s streak celebration screen - a big orange flame with the streak number &quot;1&quot; rises and settles while small ember particles detach from its tip and float upward, over a static headline and an &quot;Add streak widget&quot; card.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Mobile screen, pale blue gradient top fading to white. Centered upper half: orange flame icon containing a white numeral &quot;1&quot;. Below: &quot;You&#x27;ve started your Spanish streak!&quot; headline, &quot;Keep this momentum up&quot; subline, and a coral-outlined card (&quot;Never miss your streak! / Add a widget on homescreen.&quot; with an orange &quot;Add streak widget&quot; button and a cactus mascot in a sombrero at its right edge).
+
+## Motion spec
+Pattern: looping ember particles over a settled hero icon.
+- Entrance: flame scales up from 0.6 with a soft spring (~220/17, ~450ms) as the headline fades in.
+- Embers: small orange dots (4-8px) spawn at the flame tip, drift upward 60-120px with slight horizontal wander, shrinking and fading out over ~1.2-1.8s; 1-2 new embers spawn every ~400ms, continuous loop.
+- The flame itself gently pulses (scale 1 -&gt; 1.03 -&gt; 1, ~1.6s, ease-in-out).
+- Headline, subline, and widget card stay static after entrance.
+
+## Calibration
+- Embers are the life of the shot - sparse (never more than ~5 alive) and slow; dense particles read as noise.
+- Flame pulse is barely perceptible; do not bounce it.
+
+## Reduced motion
+Static flame and headline; no embers, no pulse.
+
+## Don&#x27;t miss
+- Ember spawn point is the flame&#x27;s top tip, not its center.
+- The streak numeral is cut out of the flame (knockout), not overlaid text on top of a solid shape.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping ember particles over a settled hero icon.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airlearn-streak-fire-animation">original interaction</a> by Airlearn. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airlearn's streak celebration screen - a big orange flame with the streak number \"1\" rises and settles while small ember particles detach from its tip and float upward, over a static headline and an \"Add streak widget\" card.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMobile screen, pale blue gradient top fading to white. Centered upper half: orange flame icon containing a white numeral \"1\". Below: \"You've started your Spanish streak!\" headline, \"Keep this momentum up\" subline, and a coral-outlined card (\"Never miss your streak! / Add a widget on homescreen.\" with an orange \"Add streak widget\" button and a cactus mascot in a sombrero at its right edge).\n\n## Motion spec\nPattern: looping ember particles over a settled hero icon.\n- Entrance: flame scales up from 0.6 with a soft spring (~220/17, ~450ms) as the headline fades in.\n- Embers: small orange dots (4-8px) spawn at the flame tip, drift upward 60-120px with slight horizontal wander, shrinking and fading out over ~1.2-1.8s; 1-2 new embers spawn every ~400ms, continuous loop.\n- The flame itself gently pulses (scale 1 -> 1.03 -> 1, ~1.6s, ease-in-out).\n- Headline, subline, and widget card stay static after entrance.\n\n## Calibration\n- Embers are the life of the shot - sparse (never more than ~5 alive) and slow; dense particles read as noise.\n- Flame pulse is barely perceptible; do not bounce it.\n\n## Reduced motion\nStatic flame and headline; no embers, no pulse.\n\n## Don't miss\n- Ember spawn point is the flame's top tip, not its center.\n- The streak numeral is cut out of the flame (knockout), not overlaid text on top of a solid shape."</script>
+</body></html>

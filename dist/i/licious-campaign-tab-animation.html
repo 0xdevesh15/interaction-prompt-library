@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Licious Campaign Tab Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Licious Campaign Tab Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/licious-campaign-tab-animation"><b>Licious</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/licious-campaign-tab-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/licious-campaign-tab-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Licious&#x27; campaign tab - the center bottom-tab badge (&quot;Fresh Arrivals&quot;) idles with a wiggle-and-pulse loop that pulls the eye without a badge or banner.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb03c8169b1868c985551/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb03c8169b1868c985551/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-licious-campaign-tab-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Licious&#x27; campaign tab - the center bottom-tab badge (&quot;Fresh Arrivals&quot;) idles with a wiggle-and-pulse loop that pulls the eye without a badge or banner.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Category list screen with a bottom tab bar; the center tab is a raised circular campaign badge with an illustrated label, sitting above the bar&#x27;s baseline.
+
+## Motion spec
+Pattern: attention idle loop, ~4s.
+- The badge wiggles: rotates +-6deg twice quickly (200ms each, ease-in-out), then snaps level.
+- Immediately after, it pulses: scales 1 to 1.12 and back (300ms, ease-out) with a soft ring that expands from its rim and fades (400ms).
+- Then it rests for ~2.5s before repeating; the other four tabs never move.
+
+## Calibration
+- The wiggle and pulse are one combined beat, then silence - constant motion would train users to ignore it.
+- The pulse ring is clipped to nothing: it expands past the badge edge and dissolves.
+
+## Reduced motion
+Badge holds static.
+
+## Don&#x27;t miss
+- The badge&#x27;s label artwork rotates with the badge - no counter-rotation tricks.
+- The tab bar layout never shifts; the scale grows around the badge&#x27;s center, overlapping its neighbors slightly during the pulse.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">attention idle loop, ~4s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/licious-campaign-tab-animation">original interaction</a> by Licious. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Licious' campaign tab - the center bottom-tab badge (\"Fresh Arrivals\") idles with a wiggle-and-pulse loop that pulls the eye without a badge or banner.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCategory list screen with a bottom tab bar; the center tab is a raised circular campaign badge with an illustrated label, sitting above the bar's baseline.\n\n## Motion spec\nPattern: attention idle loop, ~4s.\n- The badge wiggles: rotates +-6deg twice quickly (200ms each, ease-in-out), then snaps level.\n- Immediately after, it pulses: scales 1 to 1.12 and back (300ms, ease-out) with a soft ring that expands from its rim and fades (400ms).\n- Then it rests for ~2.5s before repeating; the other four tabs never move.\n\n## Calibration\n- The wiggle and pulse are one combined beat, then silence - constant motion would train users to ignore it.\n- The pulse ring is clipped to nothing: it expands past the badge edge and dissolves.\n\n## Reduced motion\nBadge holds static.\n\n## Don't miss\n- The badge's label artwork rotates with the badge - no counter-rotation tricks.\n- The tab bar layout never shifts; the scale grows around the badge's center, overlapping its neighbors slightly during the pulse."</script>
+</body></html>

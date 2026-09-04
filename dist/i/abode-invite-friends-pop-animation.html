@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abode Invite Friends Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Abode Invite Friends Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/abode-invite-friends-pop-animation"><b>Abode</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/abode-invite-friends-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/abode-invite-friends-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Abode&#x27;s invite friends sheet - two blob characters (a big yellow blob and a small spiky purple-pink blob) pop in with springy scale, bounce toward each other, and then the headline &quot;Make your Abode come to life!&quot; with subcopy and two action buttons stagger in below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8f2dcb2a6516988e9c91/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8f2dcb2a6516988e9c91/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-abode-invite-friends-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Abode&#x27;s invite friends sheet - two blob characters (a big yellow blob and a small spiky purple-pink blob) pop in with springy scale, bounce toward each other, and then the headline &quot;Make your Abode come to life!&quot; with subcopy and two action buttons stagger in below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White sheet. Center: a large yellow blob character with eyes and a smaller spiky purple blob with a pink ring, side by side. Below: &quot;Make your Abode come to life!&quot; headline, subcopy about sharing an invite link, a green &quot;Send Invite Link&quot; button, and a secondary &quot;Copy Invite Code&quot; button.
+
+## Motion spec
+Pattern: springy character pop with staggered content reveal.
+- The yellow blob pops in first (scale 0 -&gt; 1.15 -&gt; 1.0, spring ~300/14, wobble on the blob edges).
+- The purple blob pops in 150ms later from the right (scale 0 -&gt; 1.2 -&gt; 1.0, spring ~320/16) with a small spin (rotate -15deg -&gt; 0).
+- The two blobs lean toward each other (translate 8pt inward each, rotate +/-5deg, 300ms ease-out), hold, then settle back with a soft bounce.
+- Idle: both blobs bob gently (translateY +/-3pt, 2.2s sine, phase-offset) and blink every 3s.
+- Headline fades up (250ms), then subcopy (200ms), then Send Invite Link button slides up (250ms), then Copy Invite Code fades in (150ms).
+
+## Calibration
+- The blobs&#x27; lean-in is the emotional beat - give it a hold before settling.
+- Content staggers after the characters land, never during.
+
+## Reduced motion
+Characters and content fade in together over 300ms; no pops or leaning.
+
+## Don&#x27;t miss
+- The purple blob&#x27;s spiky edge wiggles as it lands (a quick squash on the spikes).
+- The characters&#x27; eyes look at each other during the lean-in.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy character pop with staggered content reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/abode-invite-friends-pop-animation">original interaction</a> by Abode. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Abode's invite friends sheet - two blob characters (a big yellow blob and a small spiky purple-pink blob) pop in with springy scale, bounce toward each other, and then the headline \"Make your Abode come to life!\" with subcopy and two action buttons stagger in below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite sheet. Center: a large yellow blob character with eyes and a smaller spiky purple blob with a pink ring, side by side. Below: \"Make your Abode come to life!\" headline, subcopy about sharing an invite link, a green \"Send Invite Link\" button, and a secondary \"Copy Invite Code\" button.\n\n## Motion spec\nPattern: springy character pop with staggered content reveal.\n- The yellow blob pops in first (scale 0 -> 1.15 -> 1.0, spring ~300/14, wobble on the blob edges).\n- The purple blob pops in 150ms later from the right (scale 0 -> 1.2 -> 1.0, spring ~320/16) with a small spin (rotate -15deg -> 0).\n- The two blobs lean toward each other (translate 8pt inward each, rotate +/-5deg, 300ms ease-out), hold, then settle back with a soft bounce.\n- Idle: both blobs bob gently (translateY +/-3pt, 2.2s sine, phase-offset) and blink every 3s.\n- Headline fades up (250ms), then subcopy (200ms), then Send Invite Link button slides up (250ms), then Copy Invite Code fades in (150ms).\n\n## Calibration\n- The blobs' lean-in is the emotional beat - give it a hold before settling.\n- Content staggers after the characters land, never during.\n\n## Reduced motion\nCharacters and content fade in together over 300ms; no pops or leaning.\n\n## Don't miss\n- The purple blob's spiky edge wiggles as it lands (a quick squash on the spikes).\n- The characters' eyes look at each other during the lean-in."</script>
+</body></html>

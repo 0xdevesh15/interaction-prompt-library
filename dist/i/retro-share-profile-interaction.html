@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retro Share Profile Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Retro Share Profile Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/retro-share-profile-interaction"><b>Retro</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/retro-share-profile-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/retro-share-profile-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Retro&#x27;s share profile - tapping &quot;Share Profile&quot; lifts a custom profile card off the page with a scale-up, blurs the profile behind it, and slides the share sheet up under the floating card with a spring.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc2043b21a129d1102e8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc2043b21a129d1102e8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-retro-share-profile-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Retro&#x27;s share profile - tapping &quot;Share Profile&quot; lifts a custom profile card off the page with a scale-up, blurs the profile behind it, and slides the share sheet up under the floating card with a spring.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Profile page (&quot;prithvi_ravi&quot;) with a week-by-week photo journal. Share state: a white profile card - avatar, name, handle, QR-style code, week thumbnails, &quot;Save to Camera Roll&quot; - floats center over a dimmed, blurred profile, with the share sheet (&quot;Add me on Retro&quot; contact row, AirDrop / Messages / WhatsApp / More icons, Copy) sliding up beneath it.
+
+## Motion spec
+Pattern: card lift + spring sheet, ~600ms.
+- Tap: the background dims to 40% and blurs (20px, 300ms).
+- Card: the profile card scales 0.85 -&gt; 1 with a spring (~340/20, 400ms) and rises 30px, casting a soft shadow (blur 24px, 25% opacity).
+- Sheet: the share sheet slides up from the bottom (spring ~300/24, 450ms) settling with one small overshoot; the card stays above it.
+- Stagger: contact avatars pop in along the sheet row (spring ~400/18, 30ms stagger).
+- Dismiss: tapping the dimmed area drops the sheet and scales the card back into the header (350ms, ease-in-out).
+
+## Calibration
+- The card floats independently of the sheet - two separate moving layers, not one panel.
+- The profile card never covers the sheet&#x27;s contact row.
+
+## Reduced motion
+Background crossfades; card and sheet fade/slide without spring overshoot.
+
+## Don&#x27;t miss
+- The card&#x27;s scale-up begins from the profile header position, not from screen center.
+- The sheet&#x27;s settle overshoot is visible but small (about 6px).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card lift + spring sheet, ~600ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/retro-share-profile-interaction">original interaction</a> by Retro. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Retro's share profile - tapping \"Share Profile\" lifts a custom profile card off the page with a scale-up, blurs the profile behind it, and slides the share sheet up under the floating card with a spring.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nProfile page (\"prithvi_ravi\") with a week-by-week photo journal. Share state: a white profile card - avatar, name, handle, QR-style code, week thumbnails, \"Save to Camera Roll\" - floats center over a dimmed, blurred profile, with the share sheet (\"Add me on Retro\" contact row, AirDrop / Messages / WhatsApp / More icons, Copy) sliding up beneath it.\n\n## Motion spec\nPattern: card lift + spring sheet, ~600ms.\n- Tap: the background dims to 40% and blurs (20px, 300ms).\n- Card: the profile card scales 0.85 -> 1 with a spring (~340/20, 400ms) and rises 30px, casting a soft shadow (blur 24px, 25% opacity).\n- Sheet: the share sheet slides up from the bottom (spring ~300/24, 450ms) settling with one small overshoot; the card stays above it.\n- Stagger: contact avatars pop in along the sheet row (spring ~400/18, 30ms stagger).\n- Dismiss: tapping the dimmed area drops the sheet and scales the card back into the header (350ms, ease-in-out).\n\n## Calibration\n- The card floats independently of the sheet - two separate moving layers, not one panel.\n- The profile card never covers the sheet's contact row.\n\n## Reduced motion\nBackground crossfades; card and sheet fade/slide without spring overshoot.\n\n## Don't miss\n- The card's scale-up begins from the profile header position, not from screen center.\n- The sheet's settle overshoot is visible but small (about 6px)."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Backup Codes Card Morph Between Screens - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Backup Codes Card Morph Between Screens</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-backup-codes-card-morph-between-screens"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-backup-codes-card-morph-between-screens">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-backup-codes-card-morph-between-screens">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s recovery phrase card morph - on &quot;Your Secret Recovery Phrase&quot;, picking a backup method (iCloud Backup / Manual Backup) makes the purple phrase card scale and shift as a shared element, becoming the focal card of the chosen step, then returning to its slot when navigating back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d12f7f889f3d1b43bc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d12f7f889f3d1b43bc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-backup-codes-card-morph-between-screens.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s recovery phrase card morph - on &quot;Your Secret Recovery Phrase&quot;, picking a backup method (iCloud Backup / Manual Backup) makes the purple phrase card scale and shift as a shared element, becoming the focal card of the chosen step, then returning to its slot when navigating back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light &quot;Your Secret Recovery Phrase&quot; screen: the purple twelve-word card, then two option rows - &quot;iCloud Backup&quot; (cloud icon, &quot;Recommended&quot; tag) and &quot;Manual Backup&quot; (shield icon). Choosing iCloud Backup pushes the &quot;iCloud Backup&quot; screen where the same purple card sits smaller and centered above a &quot;Copy to Clipboard&quot; link and &quot;Continue&quot;. Choosing Manual Backup pushes &quot;Manual Backup&quot; with the card at top and &quot;I Understand, Continue&quot;.
+
+## Motion spec
+Pattern: shared-element card morph between onboarding steps.
+- Tap an option: the row highlights (150ms) and the purple card lifts from its slot (shadow deepening) while the new page slides in beneath it (300ms ease-out).
+- The card travels and resizes to its destination rect (spring ~300/20), corner radius easing (16 -&gt; 12pt), the words inside reflowing with a slight scale (0.95) rather than a jump.
+- The option row&#x27;s icon crossfades into the new page&#x27;s header glyph (200ms).
+- Back swipe: the card morphs home along the reverse path, landing in its slot with a soft settle (scale 1.02 -&gt; 1, spring ~340/16).
+
+## Calibration
+- The card never disappears mid-transition - it is the continuity object across every step.
+- Words stay readable during the morph; no blur or fade on the card itself.
+
+## Reduced motion
+The card crossfades between positions (250ms) without travel.
+
+## Don&#x27;t miss
+- Both destination screens reuse the same card asset at different sizes - layout adapts, content does not change.
+- The &quot;Recommended&quot; tag stays attached to the iCloud row through the highlight.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element card morph between onboarding steps.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-backup-codes-card-morph-between-screens">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's recovery phrase card morph - on \"Your Secret Recovery Phrase\", picking a backup method (iCloud Backup / Manual Backup) makes the purple phrase card scale and shift as a shared element, becoming the focal card of the chosen step, then returning to its slot when navigating back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight \"Your Secret Recovery Phrase\" screen: the purple twelve-word card, then two option rows - \"iCloud Backup\" (cloud icon, \"Recommended\" tag) and \"Manual Backup\" (shield icon). Choosing iCloud Backup pushes the \"iCloud Backup\" screen where the same purple card sits smaller and centered above a \"Copy to Clipboard\" link and \"Continue\". Choosing Manual Backup pushes \"Manual Backup\" with the card at top and \"I Understand, Continue\".\n\n## Motion spec\nPattern: shared-element card morph between onboarding steps.\n- Tap an option: the row highlights (150ms) and the purple card lifts from its slot (shadow deepening) while the new page slides in beneath it (300ms ease-out).\n- The card travels and resizes to its destination rect (spring ~300/20), corner radius easing (16 -> 12pt), the words inside reflowing with a slight scale (0.95) rather than a jump.\n- The option row's icon crossfades into the new page's header glyph (200ms).\n- Back swipe: the card morphs home along the reverse path, landing in its slot with a soft settle (scale 1.02 -> 1, spring ~340/16).\n\n## Calibration\n- The card never disappears mid-transition - it is the continuity object across every step.\n- Words stay readable during the morph; no blur or fade on the card itself.\n\n## Reduced motion\nThe card crossfades between positions (250ms) without travel.\n\n## Don't miss\n- Both destination screens reuse the same card asset at different sizes - layout adapts, content does not change.\n- The \"Recommended\" tag stays attached to the iCloud row through the highlight."</script>
+</body></html>

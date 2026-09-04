@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hero Assistant Intro Sequence - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Hero Assistant Intro Sequence</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/hero-assistant-intro-sequence"><b>Hero</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/hero-assistant-intro-sequence">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/hero-assistant-intro-sequence">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Hero&#x27;s onboarding intro - a central phone mockup cycles through app screens (chat, tasks, lists) against a blue cloud gradient while &quot;Your Daily Assistant&quot; sits above and the Google/Apple sign-in buttons slide up below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f249f16a95954e2c453/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f249f16a95954e2c453/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-hero-assistant-intro-sequence.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Hero&#x27;s onboarding intro - a central phone mockup cycles through app screens (chat, tasks, lists) against a blue cloud gradient while &quot;Your Daily Assistant&quot; sits above and the Google/Apple sign-in buttons slide up below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-bleed blue gradient background (deep blue top, lighter toward bottom) with soft white clouds along the bottom edge. White two-line title &quot;Your Daily Assistant&quot; top-center. Center: a floating phone mockup whose screen crossfades through different app views (chat conversation, task list, message list). Bottom: white &quot;Sign in with Google&quot; pill, dark &quot;Sign in with Apple&quot; pill beneath it.
+
+## Motion spec
+Pattern: screen-cycling device mockup with staged entrance.
+- Entrance: background gradient fades in (300ms); title fades down (translateY -10pt -&gt; 0, 300ms); the phone rises from below-center (translateY 60pt -&gt; 0, spring ~280/20, 500ms); the two sign-in buttons slide up in stagger (translateY 30pt -&gt; 0, 300ms, Google first, Apple 100ms later).
+- Screen cycling: every 1.6s the phone&#x27;s screen crossfades to the next app view (opacity + slight scale 1.02 -&gt; 1, 400ms), looping through 3-4 screens.
+- The phone idles with a gentle float (translateY +-6pt, 3.5s sine) and a barely-there tilt (rotate +-1deg).
+- Clouds drift slowly along the bottom (pan, 25s loop).
+
+## Calibration
+- Screen crossfades never disturb the phone&#x27;s float - the mockup body and its screen are separate layers.
+- Buttons are full-width pills with service logos; Google is white with dark text, Apple is near-black with white text.
+
+## Reduced motion
+The phone shows one static screen; entrance animations become simple fades (250ms).
+
+## Don&#x27;t miss
+- The title is two stacked lines, white, medium weight - not a single line.
+- Keep the crossfade inside the phone&#x27;s screen mask with rounded corners.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">screen-cycling device mockup with staged entrance.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/hero-assistant-intro-sequence">original interaction</a> by Hero. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Hero's onboarding intro - a central phone mockup cycles through app screens (chat, tasks, lists) against a blue cloud gradient while \"Your Daily Assistant\" sits above and the Google/Apple sign-in buttons slide up below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-bleed blue gradient background (deep blue top, lighter toward bottom) with soft white clouds along the bottom edge. White two-line title \"Your Daily Assistant\" top-center. Center: a floating phone mockup whose screen crossfades through different app views (chat conversation, task list, message list). Bottom: white \"Sign in with Google\" pill, dark \"Sign in with Apple\" pill beneath it.\n\n## Motion spec\nPattern: screen-cycling device mockup with staged entrance.\n- Entrance: background gradient fades in (300ms); title fades down (translateY -10pt -> 0, 300ms); the phone rises from below-center (translateY 60pt -> 0, spring ~280/20, 500ms); the two sign-in buttons slide up in stagger (translateY 30pt -> 0, 300ms, Google first, Apple 100ms later).\n- Screen cycling: every 1.6s the phone's screen crossfades to the next app view (opacity + slight scale 1.02 -> 1, 400ms), looping through 3-4 screens.\n- The phone idles with a gentle float (translateY +-6pt, 3.5s sine) and a barely-there tilt (rotate +-1deg).\n- Clouds drift slowly along the bottom (pan, 25s loop).\n\n## Calibration\n- Screen crossfades never disturb the phone's float - the mockup body and its screen are separate layers.\n- Buttons are full-width pills with service logos; Google is white with dark text, Apple is near-black with white text.\n\n## Reduced motion\nThe phone shows one static screen; entrance animations become simple fades (250ms).\n\n## Don't miss\n- The title is two stacked lines, white, medium weight - not a single line.\n- Keep the crossfade inside the phone's screen mask with rounded corners."</script>
+</body></html>

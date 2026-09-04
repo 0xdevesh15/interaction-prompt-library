@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Search Fidget Spinner - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Arc Search Fidget Spinner</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/arc-search-fidget-spinner"><b>Arc Search</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-fidget-spinner">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-fidget-spinner">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Arc Search&#x27;s fidget-spinner logo - the green squiggle mark on the start screen spins with real physics when flicked, and can be dragged and released into a spin.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcf5371d29849d7bd8fb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcf5371d29849d7bd8fb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-arc-search-fidget-spinner.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Arc Search&#x27;s fidget-spinner logo - the green squiggle mark on the start screen spins with real physics when flicked, and can be dragged and released into a spin.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Arc&#x27;s dark start screen: the green squiggle logo centered on a near-black field with a faint warm glow, the tab bar at the bottom. The logo is a toy: flick it and it spins like a fidget spinner.
+
+## Motion spec
+Pattern: inertial spin toy.
+- Drag on the logo: it rotates 1:1 with the finger&#x27;s angular movement around its center, with a slight elastic lead (it leans into the drag direction ~5 degrees).
+- Release with velocity: the logo free-spins with angular friction - decays exponentially (halving ~every 1.2s), wobbling on its axis like a real bearing (+-2 degrees tilt at speed, settling as it slows).
+- A hard flick adds a satisfying clicky haptic at each quarter turn for the first second.
+- While spinning fast, the logo motion-blurs radially and its green brightens ~10%; as it decays below ~30 deg/s it snaps gently to the nearest rest orientation (spring ~260/24).
+- The logo can also be nudged off-center: it translates with the drag and springs back to center on release (~300/22), spinning down as it returns.
+- The background glow breathes faintly throughout (opacity +-8%, 6s loop), unaffected by the toy.
+
+## Calibration
+- Friction curve is everything: a good flick should spin for 3-5 seconds, not 1 or 20.
+- Rotation pivot is the logo&#x27;s visual centroid, which is not its bounding-box center - tune it.
+
+## Reduced motion
+Drag rotates without inertia; no free spin.
+
+## Don&#x27;t miss
+- The squiggle is Arc&#x27;s exact green mark; do not substitute a generic spinner.
+- Spin is planar (2D rotation with a tilt wobble), not a 3D card flip.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">inertial spin toy.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/arc-search-fidget-spinner">original interaction</a> by Arc Search. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Arc Search's fidget-spinner logo - the green squiggle mark on the start screen spins with real physics when flicked, and can be dragged and released into a spin.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nArc's dark start screen: the green squiggle logo centered on a near-black field with a faint warm glow, the tab bar at the bottom. The logo is a toy: flick it and it spins like a fidget spinner.\n\n## Motion spec\nPattern: inertial spin toy.\n- Drag on the logo: it rotates 1:1 with the finger's angular movement around its center, with a slight elastic lead (it leans into the drag direction ~5 degrees).\n- Release with velocity: the logo free-spins with angular friction - decays exponentially (halving ~every 1.2s), wobbling on its axis like a real bearing (+-2 degrees tilt at speed, settling as it slows).\n- A hard flick adds a satisfying clicky haptic at each quarter turn for the first second.\n- While spinning fast, the logo motion-blurs radially and its green brightens ~10%; as it decays below ~30 deg/s it snaps gently to the nearest rest orientation (spring ~260/24).\n- The logo can also be nudged off-center: it translates with the drag and springs back to center on release (~300/22), spinning down as it returns.\n- The background glow breathes faintly throughout (opacity +-8%, 6s loop), unaffected by the toy.\n\n## Calibration\n- Friction curve is everything: a good flick should spin for 3-5 seconds, not 1 or 20.\n- Rotation pivot is the logo's visual centroid, which is not its bounding-box center - tune it.\n\n## Reduced motion\nDrag rotates without inertia; no free spin.\n\n## Don't miss\n- The squiggle is Arc's exact green mark; do not substitute a generic spinner.\n- Spin is planar (2D rotation with a tilt wobble), not a 3D card flip."</script>
+</body></html>

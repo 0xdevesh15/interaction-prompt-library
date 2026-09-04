@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stompers Add Widget Setup - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Stompers Add Widget Setup</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/stompers-add-widget-setup"><b>Stompers</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stompers-add-widget-setup">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stompers-add-widget-setup">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Stompers&#x27; widget setup carousel - step-by-step pages where each instruction pairs with a looping animated illustration of the iOS gesture it describes.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb290b8fd64e67f89016b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb290b8fd64e67f89016b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-stompers-add-widget-setup.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Stompers&#x27; widget setup carousel - step-by-step pages where each instruction pairs with a looping animated illustration of the iOS gesture it describes.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light onboarding flow: back chevron, an instruction title (&quot;Add the widget to your home screen&quot;, &quot;Hold down on your home screen to edit&quot;, ...), an animated illustration card, and a Continue button. Pages step sequentially.
+
+## Motion spec
+Pattern: instructional illustration loops with paged steps, ~2s per loop.
+- Each page&#x27;s illustration demonstrates its own gesture: a widget card wiggles in jiggle mode, a finger dot presses and holds on a home-screen mock (icons trembling +-2deg), a &quot;+&quot; corner button pulses, a search field types &quot;Stompers&quot; character by character.
+- Gesture loops run continuously: press-hold ring fills over 800ms, holds 400ms, resets; typing advances one character per 120ms with a blinking caret.
+- On Continue, the page slides left (300ms, ease-out) and the next page&#x27;s illustration starts its loop on arrival.
+- Illustrations sit in a soft white card; everything else stays static.
+
+## Calibration
+- Each loop must read at a glance - one clear gesture per page, no overlapping motions.
+- The jiggle tremor is small and fast; big wobbles read as an error state.
+
+## Reduced motion
+Illustrations show a mid-gesture still; page transitions still slide.
+
+## Don&#x27;t miss
+- The finger dot is the only moving element within a static UI mock - the mock itself never pans or zooms.
+- The Continue button is always live; the loops are decoration, not gates.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">instructional illustration loops with paged steps, ~2s per loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/stompers-add-widget-setup">original interaction</a> by Stompers. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Stompers' widget setup carousel - step-by-step pages where each instruction pairs with a looping animated illustration of the iOS gesture it describes.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight onboarding flow: back chevron, an instruction title (\"Add the widget to your home screen\", \"Hold down on your home screen to edit\", ...), an animated illustration card, and a Continue button. Pages step sequentially.\n\n## Motion spec\nPattern: instructional illustration loops with paged steps, ~2s per loop.\n- Each page's illustration demonstrates its own gesture: a widget card wiggles in jiggle mode, a finger dot presses and holds on a home-screen mock (icons trembling +-2deg), a \"+\" corner button pulses, a search field types \"Stompers\" character by character.\n- Gesture loops run continuously: press-hold ring fills over 800ms, holds 400ms, resets; typing advances one character per 120ms with a blinking caret.\n- On Continue, the page slides left (300ms, ease-out) and the next page's illustration starts its loop on arrival.\n- Illustrations sit in a soft white card; everything else stays static.\n\n## Calibration\n- Each loop must read at a glance - one clear gesture per page, no overlapping motions.\n- The jiggle tremor is small and fast; big wobbles read as an error state.\n\n## Reduced motion\nIllustrations show a mid-gesture still; page transitions still slide.\n\n## Don't miss\n- The finger dot is the only moving element within a static UI mock - the mock itself never pans or zooms.\n- The Continue button is always live; the loops are decoration, not gates."</script>
+</body></html>

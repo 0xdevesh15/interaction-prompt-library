@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Craft Zoom Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Craft Zoom Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/craft-zoom-slider-interaction"><b>Craft</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/craft-zoom-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/craft-zoom-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Craft&#x27;s text zoom slider - a horizontal slider with a small-A to large-A scale live-resizes the document&#x27;s typography as you drag, with the text reflowing fluidly and the slider thumb showing the current zoom value.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6714c75e350c08ef72f13aae/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6714c75e350c08ef72f13aae/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-craft-zoom-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Craft&#x27;s text zoom slider - a horizontal slider with a small-A to large-A scale live-resizes the document&#x27;s typography as you drag, with the text reflowing fluidly and the slider thumb showing the current zoom value.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A Craft document with the zoom control visible (small &quot;A&quot; at the left of a track, large &quot;A&quot; at the right, a rounded thumb). The document behind shows a title and body paragraphs.
+
+## Motion spec
+Pattern: live typographic scaling.
+- Drag: all document text scales continuously with the thumb (1:1, ~70%-160% range), preserving the type ramp proportions (title, body, captions scale together).
+- Text reflows live: line wraps re-break during the drag with no flicker; scroll position anchors to the first visible line so the reading point holds.
+- The thumb tracks the finger and displays the current percentage; the A glyphs at the ends stay fixed size.
+- Release: the zoom settles without snap (value is continuous); the control fades back to a compact pill after 1.5s idle (250ms).
+
+## Calibration
+- Scale typography, not the layout canvas: images and margins adjust but do not zoom 1:1 with text.
+- Reflow must be per-frame - deferred relayout reads as lag.
+
+## Reduced motion
+Zoom applies on release in one step (100ms tween); no live reflow.
+
+## Don&#x27;t miss
+- The control appears over the document (floating), not inline in the text.
+- The reading position never jumps - anchor the viewport to content, not to pixel offsets.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">live typographic scaling.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/craft-zoom-slider-interaction">original interaction</a> by Craft. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Craft's text zoom slider - a horizontal slider with a small-A to large-A scale live-resizes the document's typography as you drag, with the text reflowing fluidly and the slider thumb showing the current zoom value.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA Craft document with the zoom control visible (small \"A\" at the left of a track, large \"A\" at the right, a rounded thumb). The document behind shows a title and body paragraphs.\n\n## Motion spec\nPattern: live typographic scaling.\n- Drag: all document text scales continuously with the thumb (1:1, ~70%-160% range), preserving the type ramp proportions (title, body, captions scale together).\n- Text reflows live: line wraps re-break during the drag with no flicker; scroll position anchors to the first visible line so the reading point holds.\n- The thumb tracks the finger and displays the current percentage; the A glyphs at the ends stay fixed size.\n- Release: the zoom settles without snap (value is continuous); the control fades back to a compact pill after 1.5s idle (250ms).\n\n## Calibration\n- Scale typography, not the layout canvas: images and margins adjust but do not zoom 1:1 with text.\n- Reflow must be per-frame - deferred relayout reads as lag.\n\n## Reduced motion\nZoom applies on release in one step (100ms tween); no live reflow.\n\n## Don't miss\n- The control appears over the document (floating), not inline in the text.\n- The reading position never jumps - anchor the viewport to content, not to pixel offsets."</script>
+</body></html>

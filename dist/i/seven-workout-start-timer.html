@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seven Workout Start Timer - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Seven Workout Start Timer</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/seven-workout-start-timer"><b>Seven</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/seven-workout-start-timer">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/seven-workout-start-timer">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Seven&#x27;s workout start countdown - a big 3-2-1 with pulsing numbers and a drawing circular ring inside a white exercise circle, handing off to the 30-second exercise timer.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf54033f9ae8767d8f5e72/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf54033f9ae8767d8f5e72/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-seven-workout-start-timer.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Seven&#x27;s workout start countdown - a big 3-2-1 with pulsing numbers and a drawing circular ring inside a white exercise circle, handing off to the 30-second exercise timer.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Blue screen: &quot;1 of 12 / Jumping Jacks&quot; header, a large white circle containing an animated figure demoing the move, the countdown number centered below the circle, corner icons (back, sound) top.
+
+## Motion spec
+Pattern: pulsing countdown with drawing ring.
+- Each count (3, 2, 1) scales in from 1.4 -&gt; 1 with a spring (~380/18) and fades slightly as it lands; a circular ring around the number draws a full revolution per second (linear, 1s), resetting with each count.
+- The exercise figure inside the white circle loops its rep animation continuously through the countdown - the prep preview never freezes.
+- After &quot;1&quot;: the number crossfades to &quot;30&quot; (the work interval), the ring restarts as the interval progress ring, and the header&#x27;s exercise name holds.
+- The white circle breathes gently (scale 1 &lt;-&gt; 1.015, 2s) throughout.
+
+## Calibration
+- Exactly 1s per count; the ring sweep is the second-hand.
+- Numbers are large and white; the ring is a thin white stroke at ~70% opacity.
+
+## Reduced motion
+Numbers crossfade; ring hidden, replaced by a static label.
+
+## Don&#x27;t miss
+- The countdown and the demo figure are independent loops - cutting the figure during the countdown would kill the preview&#x27;s purpose.
+- The transition from countdown to work timer is instant (no interstitial).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">pulsing countdown with drawing ring.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/seven-workout-start-timer">original interaction</a> by Seven. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Seven's workout start countdown - a big 3-2-1 with pulsing numbers and a drawing circular ring inside a white exercise circle, handing off to the 30-second exercise timer.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlue screen: \"1 of 12 / Jumping Jacks\" header, a large white circle containing an animated figure demoing the move, the countdown number centered below the circle, corner icons (back, sound) top.\n\n## Motion spec\nPattern: pulsing countdown with drawing ring.\n- Each count (3, 2, 1) scales in from 1.4 -> 1 with a spring (~380/18) and fades slightly as it lands; a circular ring around the number draws a full revolution per second (linear, 1s), resetting with each count.\n- The exercise figure inside the white circle loops its rep animation continuously through the countdown - the prep preview never freezes.\n- After \"1\": the number crossfades to \"30\" (the work interval), the ring restarts as the interval progress ring, and the header's exercise name holds.\n- The white circle breathes gently (scale 1 <-> 1.015, 2s) throughout.\n\n## Calibration\n- Exactly 1s per count; the ring sweep is the second-hand.\n- Numbers are large and white; the ring is a thin white stroke at ~70% opacity.\n\n## Reduced motion\nNumbers crossfade; ring hidden, replaced by a static label.\n\n## Don't miss\n- The countdown and the demo figure are independent loops - cutting the figure during the countdown would kill the preview's purpose.\n- The transition from countdown to work timer is instant (no interstitial)."</script>
+</body></html>

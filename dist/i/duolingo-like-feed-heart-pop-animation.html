@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Like Feed Heart Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Like Feed Heart Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-like-feed-heart-pop-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-like-feed-heart-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-like-feed-heart-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s feed like - tapping the heart on a feed item fills it green with a bouncy scale-and-wiggle pop while the count ticks up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/693434657d19d070282a049f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/693434657d19d070282a049f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-like-feed-heart-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s feed like - tapping the heart on a feed item fills it green with a bouncy scale-and-wiggle pop while the count ticks up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Duolingo Feed, near-black: &quot;Feed&quot; title, a list of friend activity items (avatar, name, activity like &quot;Played 5 chess matches in a day!&quot;, sticker art on the right), each with a heart + like count and a comment bubble; the colorful bottom nav sits below.
+
+## Motion spec
+Pattern: bouncy heart fill with wiggle and count tick.
+- Tap the outline heart: it fills Duolingo green while popping scale 1 -&gt; 1.45 with a stiff spring (~500/12, one clear overshoot), then wiggles rotation +12deg -&gt; -8deg -&gt; 0deg over 250ms as the scale settles back to 1.
+- The like count beside the heart ticks up one with a digit roll (150ms) and a brief green flash on the number (300ms fade-out).
+- If the item shows a &quot;Liked by X and others&quot; row, the liker avatar stack gains your avatar sliding in from the left (200ms, spring ~400/18).
+- Unliking reverses plainly: fill drains to outline (150ms, no wiggle, no pop) and the count rolls down.
+- Double-tap on the sticker art also triggers the same heart pop on the row&#x27;s heart, plus a transient heart burst at the tap point (scale 0 -&gt; 1.2 -&gt; fade, 400ms).
+
+## Calibration
+- The pop is quick and complete in under 500ms - it must never delay scrolling.
+- Green fill, white outline default - match Duolingo&#x27;s exact heart treatment.
+
+## Reduced motion
+Heart fills with a 150ms crossfade; count changes without rolling.
+
+## Don&#x27;t miss
+- The wiggle happens after the scale peak, not during it.
+- The comment bubble next to the heart never animates - only the heart and count.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bouncy heart fill with wiggle and count tick.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-like-feed-heart-pop-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's feed like - tapping the heart on a feed item fills it green with a bouncy scale-and-wiggle pop while the count ticks up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDuolingo Feed, near-black: \"Feed\" title, a list of friend activity items (avatar, name, activity like \"Played 5 chess matches in a day!\", sticker art on the right), each with a heart + like count and a comment bubble; the colorful bottom nav sits below.\n\n## Motion spec\nPattern: bouncy heart fill with wiggle and count tick.\n- Tap the outline heart: it fills Duolingo green while popping scale 1 -> 1.45 with a stiff spring (~500/12, one clear overshoot), then wiggles rotation +12deg -> -8deg -> 0deg over 250ms as the scale settles back to 1.\n- The like count beside the heart ticks up one with a digit roll (150ms) and a brief green flash on the number (300ms fade-out).\n- If the item shows a \"Liked by X and others\" row, the liker avatar stack gains your avatar sliding in from the left (200ms, spring ~400/18).\n- Unliking reverses plainly: fill drains to outline (150ms, no wiggle, no pop) and the count rolls down.\n- Double-tap on the sticker art also triggers the same heart pop on the row's heart, plus a transient heart burst at the tap point (scale 0 -> 1.2 -> fade, 400ms).\n\n## Calibration\n- The pop is quick and complete in under 500ms - it must never delay scrolling.\n- Green fill, white outline default - match Duolingo's exact heart treatment.\n\n## Reduced motion\nHeart fills with a 150ms crossfade; count changes without rolling.\n\n## Don't miss\n- The wiggle happens after the scale peak, not during it.\n- The comment bubble next to the heart never animates - only the heart and count."</script>
+</body></html>

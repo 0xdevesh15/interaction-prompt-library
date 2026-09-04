@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Instamart Long Press Summarise Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Instamart Long Press Summarise Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-instamart-long-press-summarise-interaction"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-instamart-long-press-summarise-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-instamart-long-press-summarise-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Swiggy Instamart&#x27;s long-press summary - hold a product card and it morphs into a floating AI summary modal over a blurred pastel backdrop, with a &quot;Summarising&quot; state and staggered text reveals.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694c0d20f1ad267a0647eca5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694c0d20f1ad267a0647eca5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-instamart-long-press-summarise-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Swiggy Instamart&#x27;s long-press summary - hold a product card and it morphs into a floating AI summary modal over a blurred pastel backdrop, with a &quot;Summarising&quot; state and staggered text reveals.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A grocery list screen (&quot;Gourmet At Its Finest&quot;) of product cards. On long-press, the pressed card lifts out and becomes a floating modal: the product image pinned at top with a close X, over a soft pastel gradient backdrop (pink to lilac to mint). The modal body fills with an AI summary: a title line, &quot;Why you should go for it&quot; bullet sections with icons, and &quot;Things to note&quot;.
+
+## Motion spec
+Pattern: long-press card morph into an AI summary modal with staggered content reveal.
+- Long-press (400ms hold): the card scales down slightly (0.96) under the finger, then lifts - scale to 1.0 while the list behind it blurs (blur 0 -&gt; 20px, 300ms) and dims.
+- The card morphs to the modal (matched-geometry transition: image, position, and corner radius interpolate, 350ms, ease-out) as the pastel gradient backdrop fades in beneath it.
+- Loading state: a &quot;Summarising&quot; shimmer line pulses under the image (shimmer sweep 1.2s loop) while the backdrop gradient slowly shifts hue.
+- When content arrives, the shimmer yields to the summary: the title types/fades in first, then sections stagger in 120ms apart, each rising 14px and fading (300ms); bullets inside a section cascade 60ms apart.
+- A &quot;Powered by&quot; footer strip fades in last at the modal&#x27;s bottom.
+- Tap the X or the backdrop: the modal morphs back into the card in the list (reverse interpolation, 300ms) as the blur clears.
+
+## Calibration
+- The morph must be seamless - the product image is the shared element and never jumps or cross-fades.
+- The backdrop gradient is pastel and soft - it reads as an AI moment, not a dimmed overlay.
+
+## Reduced motion
+Card fades into the modal (250ms) without the morph; content fades in without stagger.
+
+## Don&#x27;t miss
+- The summary is structured (benefits vs things-to-note with distinct icons) - not a single paragraph dump.
+- &quot;Summarising&quot; shows before content - never pop the modal open with empty space.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">long-press card morph into an AI summary modal with staggered content reveal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-instamart-long-press-summarise-interaction">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Swiggy Instamart's long-press summary - hold a product card and it morphs into a floating AI summary modal over a blurred pastel backdrop, with a \"Summarising\" state and staggered text reveals.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA grocery list screen (\"Gourmet At Its Finest\") of product cards. On long-press, the pressed card lifts out and becomes a floating modal: the product image pinned at top with a close X, over a soft pastel gradient backdrop (pink to lilac to mint). The modal body fills with an AI summary: a title line, \"Why you should go for it\" bullet sections with icons, and \"Things to note\".\n\n## Motion spec\nPattern: long-press card morph into an AI summary modal with staggered content reveal.\n- Long-press (400ms hold): the card scales down slightly (0.96) under the finger, then lifts - scale to 1.0 while the list behind it blurs (blur 0 -> 20px, 300ms) and dims.\n- The card morphs to the modal (matched-geometry transition: image, position, and corner radius interpolate, 350ms, ease-out) as the pastel gradient backdrop fades in beneath it.\n- Loading state: a \"Summarising\" shimmer line pulses under the image (shimmer sweep 1.2s loop) while the backdrop gradient slowly shifts hue.\n- When content arrives, the shimmer yields to the summary: the title types/fades in first, then sections stagger in 120ms apart, each rising 14px and fading (300ms); bullets inside a section cascade 60ms apart.\n- A \"Powered by\" footer strip fades in last at the modal's bottom.\n- Tap the X or the backdrop: the modal morphs back into the card in the list (reverse interpolation, 300ms) as the blur clears.\n\n## Calibration\n- The morph must be seamless - the product image is the shared element and never jumps or cross-fades.\n- The backdrop gradient is pastel and soft - it reads as an AI moment, not a dimmed overlay.\n\n## Reduced motion\nCard fades into the modal (250ms) without the morph; content fades in without stagger.\n\n## Don't miss\n- The summary is structured (benefits vs things-to-note with distinct icons) - not a single paragraph dump.\n- \"Summarising\" shows before content - never pop the modal open with empty space."</script>
+</body></html>

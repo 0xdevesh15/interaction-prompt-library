@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Credit Card Full Page Offers Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Credit Card Full Page Offers Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-credit-card-full-page-offers-swipe-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-credit-card-full-page-offers-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-credit-card-full-page-offers-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s credit-card offer pages - swiping pages through full-screen benefit sections (5% back online, 1% back on UPI, travel points, transparent by design) while the card visual docks into the header and each section&#x27;s illustration takes the stage.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d43a549438044fc90b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d43a549438044fc90b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-credit-card-full-page-offers-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s credit-card offer pages - swiping pages through full-screen benefit sections (5% back online, 1% back on UPI, travel points, transparent by design) while the card visual docks into the header and each section&#x27;s illustration takes the stage.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED card product page, white: a persistent header strip with a small card art, then paged sections - &quot;shop, scan, swipe. earn every time.&quot; with the card hero, &quot;get 5% back on all online spends&quot; with a grid of brand logos, &quot;get 1% back on UPI QR payments&quot; with a POS-terminal illustration, &quot;use your reward points to travel for free&quot; with a suitcase/passport, &quot;transparent by design&quot; with the card in hand. A black &quot;Get your card&quot; button pins the bottom.
+
+## Motion spec
+Pattern: paged benefit sections with a docking card visual.
+- Vertical swipe pages whole sections with spring settling (spring ~300/20); the section indicator under the header advances with the page.
+- The first section&#x27;s large card art shrinks and docks into the header as you leave it (scale + translate interpolated with page progress, so the header card is a mini of the hero).
+- Each section&#x27;s illustration enters on page-in: brand grid pops in row by row (60ms stagger, scale 0.9 -&gt; 1), POS terminal rises with a tilt settle (spring ~280/16), suitcase slides up (translateY 40 -&gt; 0, 300ms), hand+card from the left (translateX -30% -&gt; 0, spring ~260/14).
+- Copy (headline + subcopy) fades up 100ms before its illustration on every page.
+- The &quot;Get your card&quot; button and header stay fixed through all paging.
+
+## Calibration
+- Paging is one-section-per-swipe, not free scroll - the spring snap is the whole feel.
+- Illustrations are centered in a fixed stage zone; only their entrance differs per section.
+
+## Reduced motion
+Sections crossfade (300ms); illustrations fade in place (200ms).
+
+## Don&#x27;t miss
+- The header card appears only after the hero docks - it fades in as the hero shrinks, one continuous morph.
+- The brand-logo grid staggers top row first, left to right.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">paged benefit sections with a docking card visual.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-credit-card-full-page-offers-swipe-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's credit-card offer pages - swiping pages through full-screen benefit sections (5% back online, 1% back on UPI, travel points, transparent by design) while the card visual docks into the header and each section's illustration takes the stage.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED card product page, white: a persistent header strip with a small card art, then paged sections - \"shop, scan, swipe. earn every time.\" with the card hero, \"get 5% back on all online spends\" with a grid of brand logos, \"get 1% back on UPI QR payments\" with a POS-terminal illustration, \"use your reward points to travel for free\" with a suitcase/passport, \"transparent by design\" with the card in hand. A black \"Get your card\" button pins the bottom.\n\n## Motion spec\nPattern: paged benefit sections with a docking card visual.\n- Vertical swipe pages whole sections with spring settling (spring ~300/20); the section indicator under the header advances with the page.\n- The first section's large card art shrinks and docks into the header as you leave it (scale + translate interpolated with page progress, so the header card is a mini of the hero).\n- Each section's illustration enters on page-in: brand grid pops in row by row (60ms stagger, scale 0.9 -> 1), POS terminal rises with a tilt settle (spring ~280/16), suitcase slides up (translateY 40 -> 0, 300ms), hand+card from the left (translateX -30% -> 0, spring ~260/14).\n- Copy (headline + subcopy) fades up 100ms before its illustration on every page.\n- The \"Get your card\" button and header stay fixed through all paging.\n\n## Calibration\n- Paging is one-section-per-swipe, not free scroll - the spring snap is the whole feel.\n- Illustrations are centered in a fixed stage zone; only their entrance differs per section.\n\n## Reduced motion\nSections crossfade (300ms); illustrations fade in place (200ms).\n\n## Don't miss\n- The header card appears only after the hero docks - it fades in as the hero shrinks, one continuous morph.\n- The brand-logo grid staggers top row first, left to right."</script>
+</body></html>

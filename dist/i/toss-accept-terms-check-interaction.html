@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toss Accept Terms Check Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Toss Accept Terms Check Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/toss-accept-terms-check-interaction"><b>Toss</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/toss-accept-terms-check-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/toss-accept-terms-check-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Toss&#x27;s accept-terms flow - tapping agree turns each &quot;[Required]&quot; label into a blue checkmark cascading down the list before the sheet slides away.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd982f3b0964930ef4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd982f3b0964930ef4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-toss-accept-terms-check-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Toss&#x27;s accept-terms flow - tapping agree turns each &quot;[Required]&quot; label into a blue checkmark cascading down the list before the sheet slides away.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark confirm screen (&quot;Is this information correct?&quot;, phone number, country code, Verify button). A terms bottom sheet rises: Korean heading (&quot;토스를 이용하기 위해 꼭 필요한 동의만 추렸어요&quot;), a list of terms each prefixed with a blue &quot;[Required]&quot; tag (Service Use Terms and Conditions, Integrated Financial Information and Electronic Document Service Terms, 개인정보 수집·이용 동의, Consent to Provision of Personal Information to Third Party), a blue agree button, and a close option.
+
+## Motion spec
+Pattern: cascading label-to-checkmark morph with sheet dismissal.
+- The sheet rises with a spring (~320/28) over a 50% dim.
+- Tapping the agree button: the button shows a three-dot loading pulse (dots fade in sequence, 300ms loop).
+- Then each &quot;[Required]&quot; tag morphs into a filled blue checkmark in top-to-bottom order: the tag text collapses (width -&gt; 0, 150ms) as the check pops in (scale 0.5 -&gt; 1.15 -&gt; 1, spring ~380/16), cascading at 120ms intervals.
+- After the last check lands (250ms), the sheet slides down and out (400ms, ease-in) and the dim lifts (300ms), returning to the confirm screen.
+
+## Calibration
+- The cascade is the confirmation: even though one tap agreed to all, each item visibly acknowledges.
+- The morph happens in place - the checkmark occupies exactly where the tag sat.
+
+## Reduced motion
+All tags swap to checks simultaneously (200ms fade); sheet dismisses without cascade delay.
+
+## Don&#x27;t miss
+- The tag&#x27;s blue and the checkmark&#x27;s blue match exactly - it reads as a transformation, not a replacement.
+- The sheet&#x27;s rounded top corners and grabber persist through dismissal.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cascading label-to-checkmark morph with sheet dismissal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/toss-accept-terms-check-interaction">original interaction</a> by Toss. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Toss's accept-terms flow - tapping agree turns each \"[Required]\" label into a blue checkmark cascading down the list before the sheet slides away.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark confirm screen (\"Is this information correct?\", phone number, country code, Verify button). A terms bottom sheet rises: Korean heading (\"\ud1a0\uc2a4\ub97c \uc774\uc6a9\ud558\uae30 \uc704\ud574 \uaf2d \ud544\uc694\ud55c \ub3d9\uc758\ub9cc \ucd94\ub838\uc5b4\uc694\"), a list of terms each prefixed with a blue \"[Required]\" tag (Service Use Terms and Conditions, Integrated Financial Information and Electronic Document Service Terms, \uac1c\uc778\uc815\ubcf4 \uc218\uc9d1\u00b7\uc774\uc6a9 \ub3d9\uc758, Consent to Provision of Personal Information to Third Party), a blue agree button, and a close option.\n\n## Motion spec\nPattern: cascading label-to-checkmark morph with sheet dismissal.\n- The sheet rises with a spring (~320/28) over a 50% dim.\n- Tapping the agree button: the button shows a three-dot loading pulse (dots fade in sequence, 300ms loop).\n- Then each \"[Required]\" tag morphs into a filled blue checkmark in top-to-bottom order: the tag text collapses (width -> 0, 150ms) as the check pops in (scale 0.5 -> 1.15 -> 1, spring ~380/16), cascading at 120ms intervals.\n- After the last check lands (250ms), the sheet slides down and out (400ms, ease-in) and the dim lifts (300ms), returning to the confirm screen.\n\n## Calibration\n- The cascade is the confirmation: even though one tap agreed to all, each item visibly acknowledges.\n- The morph happens in place - the checkmark occupies exactly where the tag sat.\n\n## Reduced motion\nAll tags swap to checks simultaneously (200ms fade); sheet dismisses without cascade delay.\n\n## Don't miss\n- The tag's blue and the checkmark's blue match exactly - it reads as a transformation, not a replacement.\n- The sheet's rounded top corners and grabber persist through dismissal."</script>
+</body></html>

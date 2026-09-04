@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShutEye Sleep Demo Recordings and Patterns Tip Overlay - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ShutEye Sleep Demo Recordings and Patterns Tip Overlay</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shuteye-sleep-demo-recordings-and-patterns-tip-overlay"><b>Shuteye</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuteye-sleep-demo-recordings-and-patterns-tip-overlay">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuteye-sleep-demo-recordings-and-patterns-tip-overlay">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: ShutEye&#x27;s demo tip overlay - a floating &quot;This is a demo. Start tracking to get your own sleep recordings &amp; patterns.&quot; pill stays pinned above the tab bar while the sleep stats scroll underneath.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc260fb87dca19b4d0581/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc260fb87dca19b4d0581/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shuteye-sleep-demo-recordings-and-patterns-tip-overlay.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: ShutEye&#x27;s demo tip overlay - a floating &quot;This is a demo. Start tracking to get your own sleep recordings &amp; patterns.&quot; pill stays pinned above the tab bar while the sleep stats scroll underneath.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The ShutEye stats screen (dark, sleep score ring 87, stage graphs, recordings list with Talk in Sleep / Scream / Snore rows, Sleep Stages bar, Snore &amp; Health, Breathing Abnormal Pauses). A dark pill with the demo tip text and an arrow floats just above the bottom tab bar&#x27;s glowing center button.
+
+## Motion spec
+Pattern: persistent floating tip over scrolling content, continuous.
+- The tip pill slides up and fades in above the tab bar (spring stiffness 300 damping 22) when the screen loads.
+- As the user scrolls the stats, all content moves under the pill; the pill stays fixed, its backdrop blurring whatever passes behind it.
+- The pill bobs very subtly on scroll stop (2px settle, 300ms) to read as floating, not glued.
+- The tab bar&#x27;s center button keeps its glow pulse underneath the pill.
+
+## Calibration
+- The pill never scrolls, shrinks, or repositions - the entire effect is its stubbornness.
+- Backdrop blur on the pill is light (about 12px) so passing charts tint it without smearing.
+
+## Reduced motion
+Pill appears without the rise; no bob.
+
+## Don&#x27;t miss
+- The pill points down at the center tab button with a small arrow or anchor alignment.
+- It survives every section of the scroll - recordings, stages, health, breathing - unchanged.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">persistent floating tip over scrolling content, continuous.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shuteye-sleep-demo-recordings-and-patterns-tip-overlay">original interaction</a> by Shuteye. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: ShutEye's demo tip overlay - a floating \"This is a demo. Start tracking to get your own sleep recordings & patterns.\" pill stays pinned above the tab bar while the sleep stats scroll underneath.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe ShutEye stats screen (dark, sleep score ring 87, stage graphs, recordings list with Talk in Sleep / Scream / Snore rows, Sleep Stages bar, Snore & Health, Breathing Abnormal Pauses). A dark pill with the demo tip text and an arrow floats just above the bottom tab bar's glowing center button.\n\n## Motion spec\nPattern: persistent floating tip over scrolling content, continuous.\n- The tip pill slides up and fades in above the tab bar (spring stiffness 300 damping 22) when the screen loads.\n- As the user scrolls the stats, all content moves under the pill; the pill stays fixed, its backdrop blurring whatever passes behind it.\n- The pill bobs very subtly on scroll stop (2px settle, 300ms) to read as floating, not glued.\n- The tab bar's center button keeps its glow pulse underneath the pill.\n\n## Calibration\n- The pill never scrolls, shrinks, or repositions - the entire effect is its stubbornness.\n- Backdrop blur on the pill is light (about 12px) so passing charts tint it without smearing.\n\n## Reduced motion\nPill appears without the rise; no bob.\n\n## Don't miss\n- The pill points down at the center tab button with a small arrow or anchor alignment.\n- It survives every section of the scroll - recordings, stages, health, breathing - unchanged."</script>
+</body></html>

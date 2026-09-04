@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mindllama Sparkle Text Effect - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mindllama Sparkle Text Effect</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mindllama-sparkle-text-effect"><b>Mindllama</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mindllama-sparkle-text-effect">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mindllama-sparkle-text-effect">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Mindllama&#x27;s sparkle text reveal - a drifting cloud of shimmering particles slowly coalesces until a quote snaps into crisp readable type.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b9f0f8a093f14360332281/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b9f0f8a093f14360332281/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mindllama-sparkle-text-effect.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Mindllama&#x27;s sparkle text reveal - a drifting cloud of shimmering particles slowly coalesces until a quote snaps into crisp readable type.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Deep blue screen. Top: a small icon row (streak and utility icons). Center: a quote (&quot;Life is too short for long-term grudges.&quot;) with a small author label above it. Bottom-center: a small circular llama-icon button. The quote begins as a loose cloud of glowing white-violet particles in the text&#x27;s rough shape.
+
+## Motion spec
+Pattern: particle-cloud coalescence into text.
+- The particle cloud drifts and shimmers in the text region (~1.5s): individual particles twinkle (opacity 0.3 to 1.0, randomized ~600ms cycles) and wander on small noise paths (+-12px).
+- Particles converge toward their glyph positions over ~800ms (ease-out), twinkle frequency rising as they tighten.
+- At landing, the particle field crossfades to the crisp type (200ms) with a final soft sparkle pass (a few particles flash and die along the letterforms).
+- The author label fades in above once the text is crisp (200ms).
+- The llama button stays still below throughout.
+
+## Calibration
+- The cloud should be barely legible at its tightest pre-snap state - the payoff is the moment chaos becomes words.
+- Keep particle count high enough to suggest letterforms (hundreds), but the final text is real type, not particles.
+
+## Reduced motion
+The quote fades in over 400ms with no particle phase.
+
+## Don&#x27;t miss
+- Shimmer continues subtly on the settled text for ~1s after landing, then stops - a quote that sparkles forever is unreadable.
+- The effect is centered and self-contained; the icon row and button never participate.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">particle-cloud coalescence into text.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mindllama-sparkle-text-effect">original interaction</a> by Mindllama. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Mindllama's sparkle text reveal - a drifting cloud of shimmering particles slowly coalesces until a quote snaps into crisp readable type.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDeep blue screen. Top: a small icon row (streak and utility icons). Center: a quote (\"Life is too short for long-term grudges.\") with a small author label above it. Bottom-center: a small circular llama-icon button. The quote begins as a loose cloud of glowing white-violet particles in the text's rough shape.\n\n## Motion spec\nPattern: particle-cloud coalescence into text.\n- The particle cloud drifts and shimmers in the text region (~1.5s): individual particles twinkle (opacity 0.3 to 1.0, randomized ~600ms cycles) and wander on small noise paths (+-12px).\n- Particles converge toward their glyph positions over ~800ms (ease-out), twinkle frequency rising as they tighten.\n- At landing, the particle field crossfades to the crisp type (200ms) with a final soft sparkle pass (a few particles flash and die along the letterforms).\n- The author label fades in above once the text is crisp (200ms).\n- The llama button stays still below throughout.\n\n## Calibration\n- The cloud should be barely legible at its tightest pre-snap state - the payoff is the moment chaos becomes words.\n- Keep particle count high enough to suggest letterforms (hundreds), but the final text is real type, not particles.\n\n## Reduced motion\nThe quote fades in over 400ms with no particle phase.\n\n## Don't miss\n- Shimmer continues subtly on the settled text for ~1s after landing, then stops - a quote that sparkles forever is unreadable.\n- The effect is centered and self-contained; the icon row and button never participate."</script>
+</body></html>

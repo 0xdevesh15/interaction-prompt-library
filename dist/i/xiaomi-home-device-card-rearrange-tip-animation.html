@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xiaomi Home Device Card Rearrange Tip Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Xiaomi Home Device Card Rearrange Tip Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/xiaomi-home-device-card-rearrange-tip-animation"><b>Xiaomi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/xiaomi-home-device-card-rearrange-tip-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/xiaomi-home-device-card-rearrange-tip-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Xiaomi Home&#x27;s rearrange tip - a looping demo on the onboarding screen shows a device card being dragged out of the grid while the other cards shuffle aside to make room, then settling into its new slot.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682ab8be283a3162ff3771c1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682ab8be283a3162ff3771c1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-xiaomi-home-device-card-rearrange-tip-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Xiaomi Home&#x27;s rearrange tip - a looping demo on the onboarding screen shows a device card being dragged out of the grid while the other cards shuffle aside to make room, then settling into its new slot.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark green-black onboarding screen: &quot;Rearrange device cards&quot; title, two lines of explainer copy, a green &quot;Open app&quot; button pinned at bottom. Center stage: a mock device grid - one wide card with a yellow location-pin icon on top and a 2x2 set of smaller cards below.
+
+## Motion spec
+Pattern: looping drag-and-drop demonstration with grid reflow.
+- The wide card lifts: scales 1 -&gt; 1.04 with a deepening shadow and a 2deg tilt (spring ~280/20, 250ms), reading as &quot;picked up&quot;.
+- It drifts downward along a gentle S-path (700ms, ease-in-out) while the smaller cards reflow: the two cards in its path slide apart sideways (spring ~320/26, 60ms stagger) opening a gap.
+- The card settles into the gap (scale and tilt back to rest, spring ~300/18) and the grid reads as rearranged.
+- After a 900ms hold, the sequence reverses (cards glide back, 600ms) and the loop repeats (~4s cycle).
+
+## Calibration
+- The lifted card must look held: elevated shadow, slight tilt, above siblings in z-order.
+- Reflow is anticipatory - neighbors start moving as the card approaches, not after it arrives.
+
+## Reduced motion
+Cards crossfade between the two arrangements (300ms), no drag path.
+
+## Don&#x27;t miss
+- The yellow pin card is the only moving piece; the grid&#x27;s other cards only shuffle.
+- The demo loops indefinitely - it is a tip, not a one-shot intro.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping drag-and-drop demonstration with grid reflow.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/xiaomi-home-device-card-rearrange-tip-animation">original interaction</a> by Xiaomi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Xiaomi Home's rearrange tip - a looping demo on the onboarding screen shows a device card being dragged out of the grid while the other cards shuffle aside to make room, then settling into its new slot.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark green-black onboarding screen: \"Rearrange device cards\" title, two lines of explainer copy, a green \"Open app\" button pinned at bottom. Center stage: a mock device grid - one wide card with a yellow location-pin icon on top and a 2x2 set of smaller cards below.\n\n## Motion spec\nPattern: looping drag-and-drop demonstration with grid reflow.\n- The wide card lifts: scales 1 -> 1.04 with a deepening shadow and a 2deg tilt (spring ~280/20, 250ms), reading as \"picked up\".\n- It drifts downward along a gentle S-path (700ms, ease-in-out) while the smaller cards reflow: the two cards in its path slide apart sideways (spring ~320/26, 60ms stagger) opening a gap.\n- The card settles into the gap (scale and tilt back to rest, spring ~300/18) and the grid reads as rearranged.\n- After a 900ms hold, the sequence reverses (cards glide back, 600ms) and the loop repeats (~4s cycle).\n\n## Calibration\n- The lifted card must look held: elevated shadow, slight tilt, above siblings in z-order.\n- Reflow is anticipatory - neighbors start moving as the card approaches, not after it arrives.\n\n## Reduced motion\nCards crossfade between the two arrangements (300ms), no drag path.\n\n## Don't miss\n- The yellow pin card is the only moving piece; the grid's other cards only shuffle.\n- The demo loops indefinitely - it is a tip, not a one-shot intro."</script>
+</body></html>

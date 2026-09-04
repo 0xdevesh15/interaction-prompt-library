@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finma Demo Account Setup Check Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Finma Demo Account Setup Check Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/finma-demo-account-setup-check-animation"><b>Finma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-demo-account-setup-check-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-demo-account-setup-check-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Finma&#x27;s demo account setup checklist - on the dark &quot;Demo Account&quot; screen under a globe-and-card illustration, setup rows stagger in one at a time, each showing a loading beat before its green checkmark pops in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f58c48a3ebad12fe4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f58c48a3ebad12fe4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-finma-demo-account-setup-check-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Finma&#x27;s demo account setup checklist - on the dark &quot;Demo Account&quot; screen under a globe-and-card illustration, setup rows stagger in one at a time, each showing a loading beat before its green checkmark pops in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark &quot;Demo Account&quot; screen: header title, an illustration of a globe with green cards floating around it, then a checklist area where rows appear sequentially - each row a label (connecting/importing steps) with a status at its right, ending in a small green check. Three checklist rows complete by the end.
+
+## Motion spec
+Pattern: sequential checklist with loading-to-check pops.
+- Entrance: the illustration fades in (300ms) with a slow float (translateY +-4pt, 3s loop); the first row slides up (translateY 12pt -&gt; 0, opacity, 250ms).
+- Each row: a spinner runs at its right (600ms), then the green check pops (scale 0.5 -&gt; 1.15 -&gt; 1, spring ~340/14, 250ms) while the label brightens (gray -&gt; white, 200ms).
+- Rows cascade with 400ms between starts; each new row slides up as the previous one checks.
+- After the final check, a beat of stillness (all green, 400ms), then the page is ready to advance.
+
+## Calibration
+- Only one spinner at a time - the checklist is strictly sequential.
+- The green check is the single accent color on the dark screen.
+
+## Reduced motion
+Rows fade in pre-checked (200ms stagger) without spinners.
+
+## Don&#x27;t miss
+- The illustration floats gently the whole time - the checklist is the only staged element.
+- Labels brighten when their check lands, not before.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential checklist with loading-to-check pops.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/finma-demo-account-setup-check-animation">original interaction</a> by Finma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Finma's demo account setup checklist - on the dark \"Demo Account\" screen under a globe-and-card illustration, setup rows stagger in one at a time, each showing a loading beat before its green checkmark pops in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark \"Demo Account\" screen: header title, an illustration of a globe with green cards floating around it, then a checklist area where rows appear sequentially - each row a label (connecting/importing steps) with a status at its right, ending in a small green check. Three checklist rows complete by the end.\n\n## Motion spec\nPattern: sequential checklist with loading-to-check pops.\n- Entrance: the illustration fades in (300ms) with a slow float (translateY +-4pt, 3s loop); the first row slides up (translateY 12pt -> 0, opacity, 250ms).\n- Each row: a spinner runs at its right (600ms), then the green check pops (scale 0.5 -> 1.15 -> 1, spring ~340/14, 250ms) while the label brightens (gray -> white, 200ms).\n- Rows cascade with 400ms between starts; each new row slides up as the previous one checks.\n- After the final check, a beat of stillness (all green, 400ms), then the page is ready to advance.\n\n## Calibration\n- Only one spinner at a time - the checklist is strictly sequential.\n- The green check is the single accent color on the dark screen.\n\n## Reduced motion\nRows fade in pre-checked (200ms stagger) without spinners.\n\n## Don't miss\n- The illustration floats gently the whole time - the checklist is the only staged element.\n- Labels brighten when their check lands, not before."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OK Video Focus Action - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>OK Video Focus Action</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ok-video-focus-action"><b>Ok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ok-video-focus-action">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ok-video-focus-action">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: OK Video&#x27;s tap-to-focus - in a guided mode with &quot;Tap anywhere to focus&quot; and a Done button, tapping the viewfinder spawns a dashed square at the touch point whose dashes march around its perimeter until focus locks.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c8690f349efb1a9d1049ca/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c8690f349efb1a9d1049ca/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ok-video-focus-action.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: OK Video&#x27;s tap-to-focus - in a guided mode with &quot;Tap anywhere to focus&quot; and a Done button, tapping the viewfinder spawns a dashed square at the touch point whose dashes march around its perimeter until focus locks.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Camera viewfinder with a gray hint bar (&quot;Tap anywhere to focus&quot;) and a white &quot;Done&quot; pill beneath it; standard bottom control bar.
+
+## Motion spec
+Pattern: marching-ants focus reticle.
+- Tap: a dashed square (48px, white dashes at 90% opacity) pops in at the touch point (scale 1.4 -&gt; 1, spring ~420/18, 150ms).
+- While focusing, the dashes march clockwise around the square (dash-offset animation, one lap per 900ms, linear) - unmistakably alive.
+- On focus lock (~600ms): the marching slows and stops over 300ms, the square holds solid for 400ms, then fades to 30% opacity and shrinks to 32px, parked at the focus point.
+- A second tap elsewhere: the parked square fades out as the new one pops in - only one reticle ever lives.
+- The hint bar pulses once (background to 60% gray, 300ms) on the first successful focus, confirming the gesture worked.
+
+## Calibration
+- Dash pattern: 6px on / 4px off, 2px stroke - crisp at 1x scale.
+- The reticle never blocks the subject long: full visibility only during the 600ms hunt.
+
+## Reduced motion
+Static dashed square that fades after lock; no marching.
+
+## Don&#x27;t miss
+- Marching ants are the point - a solid square would read as dead UI, the motion IS the &quot;working on it&quot; signal.
+- The reticle parks small instead of disappearing - the user can see where focus is set.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">marching-ants focus reticle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ok-video-focus-action">original interaction</a> by Ok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: OK Video's tap-to-focus - in a guided mode with \"Tap anywhere to focus\" and a Done button, tapping the viewfinder spawns a dashed square at the touch point whose dashes march around its perimeter until focus locks.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCamera viewfinder with a gray hint bar (\"Tap anywhere to focus\") and a white \"Done\" pill beneath it; standard bottom control bar.\n\n## Motion spec\nPattern: marching-ants focus reticle.\n- Tap: a dashed square (48px, white dashes at 90% opacity) pops in at the touch point (scale 1.4 -> 1, spring ~420/18, 150ms).\n- While focusing, the dashes march clockwise around the square (dash-offset animation, one lap per 900ms, linear) - unmistakably alive.\n- On focus lock (~600ms): the marching slows and stops over 300ms, the square holds solid for 400ms, then fades to 30% opacity and shrinks to 32px, parked at the focus point.\n- A second tap elsewhere: the parked square fades out as the new one pops in - only one reticle ever lives.\n- The hint bar pulses once (background to 60% gray, 300ms) on the first successful focus, confirming the gesture worked.\n\n## Calibration\n- Dash pattern: 6px on / 4px off, 2px stroke - crisp at 1x scale.\n- The reticle never blocks the subject long: full visibility only during the 600ms hunt.\n\n## Reduced motion\nStatic dashed square that fades after lock; no marching.\n\n## Don't miss\n- Marching ants are the point - a solid square would read as dead UI, the motion IS the \"working on it\" signal.\n- The reticle parks small instead of disappearing - the user can see where focus is set."</script>
+</body></html>

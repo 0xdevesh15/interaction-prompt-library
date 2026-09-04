@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agora Podcast Card Details Expand - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Agora Podcast Card Details Expand</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/agora-podcast-card-details-expand"><b>Agora</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/agora-podcast-card-details-expand">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/agora-podcast-card-details-expand">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Agora&#x27;s podcast card expansion - tapping a card in the Updates feed morphs it into a full-screen detail view (art, title, action row, long description) with springy shared-element physics, then collapses back into the list.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b4ecdca5b9380d93735/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b4ecdca5b9380d93735/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-agora-podcast-card-details-expand.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Agora&#x27;s podcast card expansion - tapping a card in the Updates feed morphs it into a full-screen detail view (art, title, action row, long description) with springy shared-element physics, then collapses back into the list.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Orange feed with a podcast card (&quot;Grand Challenges in Healthcare AI&quot;, duration, date). Detail: same art + title pinned top, a white action bar (download, check, play, add, star), long episode description, resources links.
+
+## Motion spec
+Pattern: shared-element card-to-detail morph.
+- Tap: the card lifts from the list (scale 1 -&gt; 1.03, 120ms) then expands to full screen (spring ~280/24, ~500ms) - its corners round 12px -&gt; 0, art and title travel to their detail positions as true shared elements.
+- The action bar fades + rises into place mid-expansion (~60% through, 250ms); description text crossfades from the 2-line preview to the full body (300ms).
+- Background feed dims (black 20%) and scales 0.97 during expansion; restores on collapse.
+- Drag-down anywhere on the detail: card follows the finger (translate 1:1, scale down to 0.95), release past 25% collapses it back into its list slot (reverse spring, ~400ms); otherwise snaps back open.
+- List position is preserved - the card returns to its exact original row.
+
+## Calibration
+- The description crossfade must align its first lines with the preview&#x27;s - no text jump.
+- The white action bar is part of the expanded card, not a separate sheet.
+
+## Reduced motion
+Card crossfades to the detail layout in place.
+
+## Don&#x27;t miss
+- Everything stays on the orange theme - the detail is a grown card, not a new screen.
+- The star/action icons animate a tiny pop when the bar lands (scale 0.8 -&gt; 1, staggered 30ms).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element card-to-detail morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/agora-podcast-card-details-expand">original interaction</a> by Agora. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Agora's podcast card expansion - tapping a card in the Updates feed morphs it into a full-screen detail view (art, title, action row, long description) with springy shared-element physics, then collapses back into the list.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOrange feed with a podcast card (\"Grand Challenges in Healthcare AI\", duration, date). Detail: same art + title pinned top, a white action bar (download, check, play, add, star), long episode description, resources links.\n\n## Motion spec\nPattern: shared-element card-to-detail morph.\n- Tap: the card lifts from the list (scale 1 -> 1.03, 120ms) then expands to full screen (spring ~280/24, ~500ms) - its corners round 12px -> 0, art and title travel to their detail positions as true shared elements.\n- The action bar fades + rises into place mid-expansion (~60% through, 250ms); description text crossfades from the 2-line preview to the full body (300ms).\n- Background feed dims (black 20%) and scales 0.97 during expansion; restores on collapse.\n- Drag-down anywhere on the detail: card follows the finger (translate 1:1, scale down to 0.95), release past 25% collapses it back into its list slot (reverse spring, ~400ms); otherwise snaps back open.\n- List position is preserved - the card returns to its exact original row.\n\n## Calibration\n- The description crossfade must align its first lines with the preview's - no text jump.\n- The white action bar is part of the expanded card, not a separate sheet.\n\n## Reduced motion\nCard crossfades to the detail layout in place.\n\n## Don't miss\n- Everything stays on the orange theme - the detail is a grown card, not a new screen.\n- The star/action icons animate a tiny pop when the bar lands (scale 0.8 -> 1, staggered 30ms)."</script>
+</body></html>

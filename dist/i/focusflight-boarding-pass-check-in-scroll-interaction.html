@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FocusFlight Boarding Pass Check in Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>FocusFlight Boarding Pass Check in Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/focusflight-boarding-pass-check-in-scroll-interaction"><b>Focusflight</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/focusflight-boarding-pass-check-in-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/focusflight-boarding-pass-check-in-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: FocusFlight&#x27;s check-in - a boarding-pass sheet slides up over the live route map, revealing the ticket detail rows, then the barcode, then the Check In button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6942314f616d7c8c6a869588/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6942314f616d7c8c6a869588/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-focusflight-boarding-pass-check-in-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: FocusFlight&#x27;s check-in - a boarding-pass sheet slides up over the live route map, revealing the ticket detail rows, then the barcode, then the Check In button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+FocusFlight: a dark satellite-style map showing the route arc DXB -&gt; KIH with labeled airport chips. Over it, a dark boarding-pass sheet: big &quot;DXB&quot; and &quot;KIH&quot; codes with times, then detail rows (gate 03C, seat/class 123 ML, date 2025/11/15), a barcode strip, and a &quot;Check In&quot; pill button.
+
+## Motion spec
+Pattern: staged bottom-sheet reveal of a boarding pass over the route map.
+- The map animates first: the route arc draws from DXB to KIH (900ms, ease-in-out) with the airport chips popping at each end (scale 0 -&gt; 1, spring ~450/18).
+- The sheet slides up in three stages: first the code header (DXB / KIH, translateY 40 -&gt; 0, 350ms), then 250ms later the detail rows stagger in (60ms apart, 250ms each, 16px rise), then the barcode wipes in with a horizontal reveal (300ms, left to right).
+- Finally the Check In button rises and brightens (250ms), then idles with a slow glow pulse (2.5s).
+- Dragging the sheet tracks 1:1 with rubber-band at the top; release snaps to expanded or collapsed (spring ~320/20).
+- The map stays interactive behind the sheet - panning drifts the route under the pass.
+
+## Calibration
+- The barcode is a real dense strip, not placeholder blocks - it must read as scannable.
+- The sheet&#x27;s top edge is a grabber pill; the notch between code header and details is the classic ticket perforation line.
+
+## Reduced motion
+The sheet appears fully expanded with a 300ms fade; route arc draws without chip pops.
+
+## Don&#x27;t miss
+- Airport codes are huge and left/right aligned with times small beneath - the pass reads at a glance.
+- The route line is a clean arc with a slight dash texture, never a straight line.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staged bottom-sheet reveal of a boarding pass over the route map.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/focusflight-boarding-pass-check-in-scroll-interaction">original interaction</a> by Focusflight. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: FocusFlight's check-in - a boarding-pass sheet slides up over the live route map, revealing the ticket detail rows, then the barcode, then the Check In button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFocusFlight: a dark satellite-style map showing the route arc DXB -> KIH with labeled airport chips. Over it, a dark boarding-pass sheet: big \"DXB\" and \"KIH\" codes with times, then detail rows (gate 03C, seat/class 123 ML, date 2025/11/15), a barcode strip, and a \"Check In\" pill button.\n\n## Motion spec\nPattern: staged bottom-sheet reveal of a boarding pass over the route map.\n- The map animates first: the route arc draws from DXB to KIH (900ms, ease-in-out) with the airport chips popping at each end (scale 0 -> 1, spring ~450/18).\n- The sheet slides up in three stages: first the code header (DXB / KIH, translateY 40 -> 0, 350ms), then 250ms later the detail rows stagger in (60ms apart, 250ms each, 16px rise), then the barcode wipes in with a horizontal reveal (300ms, left to right).\n- Finally the Check In button rises and brightens (250ms), then idles with a slow glow pulse (2.5s).\n- Dragging the sheet tracks 1:1 with rubber-band at the top; release snaps to expanded or collapsed (spring ~320/20).\n- The map stays interactive behind the sheet - panning drifts the route under the pass.\n\n## Calibration\n- The barcode is a real dense strip, not placeholder blocks - it must read as scannable.\n- The sheet's top edge is a grabber pill; the notch between code header and details is the classic ticket perforation line.\n\n## Reduced motion\nThe sheet appears fully expanded with a 300ms fade; route arc draws without chip pops.\n\n## Don't miss\n- Airport codes are huge and left/right aligned with times small beneath - the pass reads at a glance.\n- The route line is a clean arc with a slight dash texture, never a straight line."</script>
+</body></html>

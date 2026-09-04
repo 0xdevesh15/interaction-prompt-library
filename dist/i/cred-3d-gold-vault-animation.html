@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED 3D Gold Vault Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED 3D Gold Vault Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-3d-gold-vault-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-3d-gold-vault-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-3d-gold-vault-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s gold vault screen - a 3D gold vault rotates into place, its dark window lighting to reveal stacked gold bars, while the total owned value counts up in a ticker below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980ce2c5ff8d4ab5d5a4655/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980ce2c5ff8d4ab5d5a4655/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-3d-gold-vault-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s gold vault screen - a 3D gold vault rotates into place, its dark window lighting to reveal stacked gold bars, while the total owned value counts up in a ticker below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED gold, white: top pill &quot;current gold price ₹16,903.33/g&quot;; center a metallic gold vault box with a dark glass window; below &quot;YOU OWN GOLD WORTH&quot; and a large tabular-figure total (&quot;₹13,287.71&quot;) with &quot;0.7861g&quot; and a green &quot;+₹384.79&quot; delta; bottom pair &quot;Buy gold&quot; (outlined) / &quot;Start SIP&quot; (black).
+
+## Motion spec
+Pattern: 3D vault reveal with a value count-up ticker.
+- The screen pushes in from the right (300ms shared-element style from the gold card) as the vault rotates from -25deg yaw to 0 (500ms, ease-out) with a metallic highlight sweeping its face.
+- The vault&#x27;s window lights up: dark glass fades to reveal the gold bars inside (400ms) with a warm glow blooming from within (radial light, opacity 0 -&gt; 0.8).
+- The total counts up from ₹6,776.10 -&gt; ₹13,287.71 over 900ms (ease-out), tabular figures so no layout shift; the gram count and green delta fade in at the end (250ms).
+- At rest the vault idles: slow +/-3deg yaw sway (4s loop) with the window glow breathing (0.8 -&gt; 0.6 -&gt; 0.8).
+- The top price pill ticks its value up every ~2s with a 1-frame green flash.
+
+## Calibration
+- The vault reads as real brushed metal - specular highlight tracks the rotation.
+- All currency uses tabular lining figures; the count-up never reflows.
+
+## Reduced motion
+Vault fades in static (300ms); totals appear instantly.
+
+## Don&#x27;t miss
+- The vault&#x27;s window is the reveal - bars must be visibly stacked, lit from inside.
+- The rupee formatting (Indian digit grouping) is exact: ₹13,287.71.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D vault reveal with a value count-up ticker.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-3d-gold-vault-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's gold vault screen - a 3D gold vault rotates into place, its dark window lighting to reveal stacked gold bars, while the total owned value counts up in a ticker below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED gold, white: top pill \"current gold price \u20b916,903.33/g\"; center a metallic gold vault box with a dark glass window; below \"YOU OWN GOLD WORTH\" and a large tabular-figure total (\"\u20b913,287.71\") with \"0.7861g\" and a green \"+\u20b9384.79\" delta; bottom pair \"Buy gold\" (outlined) / \"Start SIP\" (black).\n\n## Motion spec\nPattern: 3D vault reveal with a value count-up ticker.\n- The screen pushes in from the right (300ms shared-element style from the gold card) as the vault rotates from -25deg yaw to 0 (500ms, ease-out) with a metallic highlight sweeping its face.\n- The vault's window lights up: dark glass fades to reveal the gold bars inside (400ms) with a warm glow blooming from within (radial light, opacity 0 -> 0.8).\n- The total counts up from \u20b96,776.10 -> \u20b913,287.71 over 900ms (ease-out), tabular figures so no layout shift; the gram count and green delta fade in at the end (250ms).\n- At rest the vault idles: slow +/-3deg yaw sway (4s loop) with the window glow breathing (0.8 -> 0.6 -> 0.8).\n- The top price pill ticks its value up every ~2s with a 1-frame green flash.\n\n## Calibration\n- The vault reads as real brushed metal - specular highlight tracks the rotation.\n- All currency uses tabular lining figures; the count-up never reflows.\n\n## Reduced motion\nVault fades in static (300ms); totals appear instantly.\n\n## Don't miss\n- The vault's window is the reveal - bars must be visibly stacked, lit from inside.\n- The rupee formatting (Indian digit grouping) is exact: \u20b913,287.71."</script>
+</body></html>

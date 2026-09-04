@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mist Knob Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mist Knob Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mist-knob-interaction"><b>Mist</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mist-knob-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mist-knob-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Mist&#x27;s knob - rotating the small round knob on the dark retro console warps the CRT mascot face in real time: the resting red smiley dissolves through RGB-split glitch frames into a purple wide-eyed &quot;O&quot; face, with glitch copy typing out below it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9ebe962df2301436059/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9ebe962df2301436059/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mist-knob-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Mist&#x27;s knob - rotating the small round knob on the dark retro console warps the CRT mascot face in real time: the resting red smiley dissolves through RGB-split glitch frames into a purple wide-eyed &quot;O&quot; face, with glitch copy typing out below it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark handheld console body: scanline CRT screen showing a large pixel face, below it the control cluster - purple round knob (with indicator mark), wide red button, a row of colored pill keys (green, red, yellow, blue, grey), red power dot.
+
+## Motion spec
+Pattern: direct-manipulation knob with glitch morph.
+- Rotate the knob: the face deforms 1:1 with the knob angle - pixels smear horizontally, the RGB channels split (up to 4px fringe), and the face slides between states like tuning an analog TV.
+- Mid-rotation, the screen passes through static frames: horizontal displacement bands jump (translateX +/-12px in 3-5 strips, 1-2 frames each).
+- Land the rotation: the new face state (purple, wide oval eyes, gaping &quot;O&quot; mouth) locks in with one final shake frame (translate jitter +/-5px, 100ms) and a luminance pop.
+- The knob itself rotates under the finger with slight detents (snap every 15deg, 40ms) and a haptic tick per detent.
+- Glitch text types out under the face character by character (30ms/char, monospace, blinking block cursor): &quot;IS THIS A GLITCH IN THE MATRIX OR AM I DREAMING? REALITY SEEMS A BIT WOBBLY&quot;.
+
+## Calibration
+- The RGB split scales with rotation speed, not just position - fast spins fringe harder.
+- The scanline texture desyncs from the face during smears - the glitch detail that sells it.
+
+## Reduced motion
+Face snaps between states without smears or channel split.
+
+## Don&#x27;t miss
+- The face color shifts from warm red to cool purple across the knob&#x27;s travel - hue is part of the state.
+- The typed text starts only after the face locks, not during the spin.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">direct-manipulation knob with glitch morph.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mist-knob-interaction">original interaction</a> by Mist. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Mist's knob - rotating the small round knob on the dark retro console warps the CRT mascot face in real time: the resting red smiley dissolves through RGB-split glitch frames into a purple wide-eyed \"O\" face, with glitch copy typing out below it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark handheld console body: scanline CRT screen showing a large pixel face, below it the control cluster - purple round knob (with indicator mark), wide red button, a row of colored pill keys (green, red, yellow, blue, grey), red power dot.\n\n## Motion spec\nPattern: direct-manipulation knob with glitch morph.\n- Rotate the knob: the face deforms 1:1 with the knob angle - pixels smear horizontally, the RGB channels split (up to 4px fringe), and the face slides between states like tuning an analog TV.\n- Mid-rotation, the screen passes through static frames: horizontal displacement bands jump (translateX +/-12px in 3-5 strips, 1-2 frames each).\n- Land the rotation: the new face state (purple, wide oval eyes, gaping \"O\" mouth) locks in with one final shake frame (translate jitter +/-5px, 100ms) and a luminance pop.\n- The knob itself rotates under the finger with slight detents (snap every 15deg, 40ms) and a haptic tick per detent.\n- Glitch text types out under the face character by character (30ms/char, monospace, blinking block cursor): \"IS THIS A GLITCH IN THE MATRIX OR AM I DREAMING? REALITY SEEMS A BIT WOBBLY\".\n\n## Calibration\n- The RGB split scales with rotation speed, not just position - fast spins fringe harder.\n- The scanline texture desyncs from the face during smears - the glitch detail that sells it.\n\n## Reduced motion\nFace snaps between states without smears or channel split.\n\n## Don't miss\n- The face color shifts from warm red to cool purple across the knob's travel - hue is part of the state.\n- The typed text starts only after the face locks, not during the spin."</script>
+</body></html>

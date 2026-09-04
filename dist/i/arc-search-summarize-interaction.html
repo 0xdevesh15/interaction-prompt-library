@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Search Summarize Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Arc Search Summarize Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/arc-search-summarize-interaction"><b>Arc Search</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-summarize-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-summarize-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Arc Search&#x27;s page summarizer - the webpage shrinks into a pinned mini card over a purple gradient, wiggles while the AI reads, then summary sections stack in below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcf8225b7b88f78c76ee/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcf8225b7b88f78c76ee/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-arc-search-summarize-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Arc Search&#x27;s page summarizer - the webpage shrinks into a pinned mini card over a purple gradient, wiggles while the AI reads, then summary sections stack in below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A webpage in Arc. On summarize, the page scales down into a small rounded card pinned near the top over a rising purple/pink gradient backdrop (&quot;Summarizing for you...&quot;). Structured summary sections (Real-life Examples, Key Concepts...) then stack below the card with purple markers.
+
+## Motion spec
+Pattern: shrink-pin wiggle loader into stacked summary.
+- Trigger: the page scales to ~0.35 and rounds its corners (to 16px) while rising to its pinned slot (spring ~300/24, 350ms); the purple gradient floods up behind it (translateY +40% to 0, 500ms, ease-out).
+- While processing, the mini card wiggles: rotate +-2.5 degrees at ~2Hz with a tiny scale pulse (1 to 1.03), like it&#x27;s being shaken loose; &quot;Summarizing for you...&quot; breathes beneath (opacity 0.6 to 1, 1.2s loop).
+- On completion the card settles level (spring ~380/22) and summary sections stack in below it: each slides up 14px and fades (spring ~360/26, 90ms stagger), its purple marker popping first (scale 0 to 1, 140ms).
+- The card stays pinned as content scrolls beneath it (with a soft shadow growing on scroll, 0 to 12px blur).
+- Tapping the mini card expands the full page back over the summary (reverse spring, 350ms).
+
+## Calibration
+- The wiggle says &quot;working on it&quot; - stop it the instant results land, mid-cycle or not (ease to level).
+- The mini page is a live scaled snapshot, not a screenshot icon.
+
+## Reduced motion
+Card scales without wiggle; sections fade.
+
+## Don&#x27;t miss
+- Corners round as the page shrinks - the morph from full-bleed page to card needs the radius animated together with scale.
+- The gradient backdrop persists behind the summary; it is the summarize mode, not just the loader.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shrink-pin wiggle loader into stacked summary.</div></div><div><div class="k">Content type</div><div class="v">interactive gesture</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/arc-search-summarize-interaction">original interaction</a> by Arc Search. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Arc Search's page summarizer - the webpage shrinks into a pinned mini card over a purple gradient, wiggles while the AI reads, then summary sections stack in below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA webpage in Arc. On summarize, the page scales down into a small rounded card pinned near the top over a rising purple/pink gradient backdrop (\"Summarizing for you...\"). Structured summary sections (Real-life Examples, Key Concepts...) then stack below the card with purple markers.\n\n## Motion spec\nPattern: shrink-pin wiggle loader into stacked summary.\n- Trigger: the page scales to ~0.35 and rounds its corners (to 16px) while rising to its pinned slot (spring ~300/24, 350ms); the purple gradient floods up behind it (translateY +40% to 0, 500ms, ease-out).\n- While processing, the mini card wiggles: rotate +-2.5 degrees at ~2Hz with a tiny scale pulse (1 to 1.03), like it's being shaken loose; \"Summarizing for you...\" breathes beneath (opacity 0.6 to 1, 1.2s loop).\n- On completion the card settles level (spring ~380/22) and summary sections stack in below it: each slides up 14px and fades (spring ~360/26, 90ms stagger), its purple marker popping first (scale 0 to 1, 140ms).\n- The card stays pinned as content scrolls beneath it (with a soft shadow growing on scroll, 0 to 12px blur).\n- Tapping the mini card expands the full page back over the summary (reverse spring, 350ms).\n\n## Calibration\n- The wiggle says \"working on it\" - stop it the instant results land, mid-cycle or not (ease to level).\n- The mini page is a live scaled snapshot, not a screenshot icon.\n\n## Reduced motion\nCard scales without wiggle; sections fade.\n\n## Don't miss\n- Corners round as the page shrinks - the morph from full-bleed page to card needs the radius animated together with scale.\n- The gradient backdrop persists behind the summary; it is the summarize mode, not just the loader."</script>
+</body></html>

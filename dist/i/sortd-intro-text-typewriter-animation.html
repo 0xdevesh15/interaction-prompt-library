@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sortd Intro Text Typewriter Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sortd Intro Text Typewriter Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sortd-intro-text-typewriter-animation"><b>Sortd</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sortd-intro-text-typewriter-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sortd-intro-text-typewriter-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Sortd&#x27;s typewriter tagline - under the &quot;Sortd.&quot; wordmark, the value proposition types itself out, holds, deletes, and cycles to the next phrase.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb03cb8fd64e67f88f9e1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb03cb8fd64e67f88f9e1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sortd-intro-text-typewriter-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Sortd&#x27;s typewriter tagline - under the &quot;Sortd.&quot; wordmark, the value proposition types itself out, holds, deletes, and cycles to the next phrase.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light intro screen: &quot;Sortd.&quot; wordmark, the typing tagline below it, a Get Started button, and the orbiting icon illustration above. The tagline is the moving part.
+
+## Motion spec
+Pattern: typewriter cycler, ~4s per phrase.
+- The phrase types character by character (~55ms per character, slightly jittered +-20ms for a human feel) with a block caret at the insertion point.
+- The caret blinks at 530ms intervals whenever typing pauses.
+- The completed phrase holds ~1.5s, then deletes quickly (~25ms per character, left to right or as a fast backward sweep), and the next phrase starts after a 300ms pause.
+- Phrases cycle through the set and loop.
+
+## Calibration
+- Typing speed is consistent within a phrase but the jitter keeps it from feeling like a marquee.
+- Deletion is roughly twice as fast as typing - hesitation on delete reads as indecision.
+
+## Reduced motion
+Phrases crossfade whole (250ms), no caret.
+
+## Don&#x27;t miss
+- The caret disappears only between phrases, never mid-word.
+- The text wraps at a stable width; later lines must not shift the wordmark or button.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">typewriter cycler, ~4s per phrase.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sortd-intro-text-typewriter-animation">original interaction</a> by Sortd. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Sortd's typewriter tagline - under the \"Sortd.\" wordmark, the value proposition types itself out, holds, deletes, and cycles to the next phrase.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight intro screen: \"Sortd.\" wordmark, the typing tagline below it, a Get Started button, and the orbiting icon illustration above. The tagline is the moving part.\n\n## Motion spec\nPattern: typewriter cycler, ~4s per phrase.\n- The phrase types character by character (~55ms per character, slightly jittered +-20ms for a human feel) with a block caret at the insertion point.\n- The caret blinks at 530ms intervals whenever typing pauses.\n- The completed phrase holds ~1.5s, then deletes quickly (~25ms per character, left to right or as a fast backward sweep), and the next phrase starts after a 300ms pause.\n- Phrases cycle through the set and loop.\n\n## Calibration\n- Typing speed is consistent within a phrase but the jitter keeps it from feeling like a marquee.\n- Deletion is roughly twice as fast as typing - hesitation on delete reads as indecision.\n\n## Reduced motion\nPhrases crossfade whole (250ms), no caret.\n\n## Don't miss\n- The caret disappears only between phrases, never mid-word.\n- The text wraps at a stable width; later lines must not shift the wordmark or button."</script>
+</body></html>

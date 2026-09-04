@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fold Fetch Accounts Card Reveal - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fold Fetch Accounts Card Reveal</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fold-fetch-accounts-card-reveal"><b>Fold</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-fetch-accounts-card-reveal">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-fetch-accounts-card-reveal">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Fold&#x27;s fetch-accounts card reveal - a navy card with a flashlight illustration sweeps its beam across the dark, then the whole card shrinks and springs into the &quot;Welcome to Fold&quot; main card (phone illustration, confetti shapes, FETCH BANK ACCOUNTS button) with a staggered reveal.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38ad153c6551dedd7412e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38ad153c6551dedd7412e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fold-fetch-accounts-card-reveal.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Fold&#x27;s fetch-accounts card reveal - a navy card with a flashlight illustration sweeps its beam across the dark, then the whole card shrinks and springs into the &quot;Welcome to Fold&quot; main card (phone illustration, confetti shapes, FETCH BANK ACCOUNTS button) with a staggered reveal.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Card 1: dark navy rounded card, a white line-art flashlight at center emitting a light cone. Card 2 (main): white card with a phone illustration showing OTP fields, a dark &quot;FETCH BANK ACCOUNTS&quot; pill, confetti shards scattered around, under a &quot;Welcome to Fold&quot; header.
+
+## Motion spec
+Pattern: flashlight sweep, then card-morph reveal.
+- The flashlight rotates slowly (-25deg to +25deg, 1.6s, ease-in-out, 2 sweeps), its cone lighting the navy card - the &quot;searching&quot; metaphor plays out fully once.
+- On the last sweep the beam flares (opacity spike + cone widens 20%, 250ms), then the navy card shrinks toward center (scale 1 -&gt; 0.6 + fade, 350ms, ease-in).
+- The main card springs up in its place (scale 0.8 -&gt; 1, translateY 30 -&gt; 0, spring ~330/17 - one confident bounce).
+- Contents stagger: confetti shards pop in around the edges (scale 0 -&gt; 1, spring ~420/16, random 40-120ms delays), the phone illustration rises (fade + 16px, 300ms), then header, copy, and the FETCH button last (200ms fades, 80ms apart).
+- The button&#x27;s leading icon pulses gently (scale 1 -&gt; 1.1, 1.4s) until tapped.
+
+## Calibration
+- One full flashlight performance before the reveal - cutting it short loses the story.
+- The confetti is asymmetric - shards scattered, not ringed.
+
+## Reduced motion
+Flashlight holds static; cards crossfade; no confetti pops.
+
+## Don&#x27;t miss
+- The shrink-to-spring handoff is overlapping (new card starts at 70% of the old one&#x27;s exit) - no dead frame between them.
+- The navy card is a stage, not a screen - everything happens inside the card&#x27;s bounds.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">flashlight sweep, then card-morph reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fold-fetch-accounts-card-reveal">original interaction</a> by Fold. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Fold's fetch-accounts card reveal - a navy card with a flashlight illustration sweeps its beam across the dark, then the whole card shrinks and springs into the \"Welcome to Fold\" main card (phone illustration, confetti shapes, FETCH BANK ACCOUNTS button) with a staggered reveal.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCard 1: dark navy rounded card, a white line-art flashlight at center emitting a light cone. Card 2 (main): white card with a phone illustration showing OTP fields, a dark \"FETCH BANK ACCOUNTS\" pill, confetti shards scattered around, under a \"Welcome to Fold\" header.\n\n## Motion spec\nPattern: flashlight sweep, then card-morph reveal.\n- The flashlight rotates slowly (-25deg to +25deg, 1.6s, ease-in-out, 2 sweeps), its cone lighting the navy card - the \"searching\" metaphor plays out fully once.\n- On the last sweep the beam flares (opacity spike + cone widens 20%, 250ms), then the navy card shrinks toward center (scale 1 -> 0.6 + fade, 350ms, ease-in).\n- The main card springs up in its place (scale 0.8 -> 1, translateY 30 -> 0, spring ~330/17 - one confident bounce).\n- Contents stagger: confetti shards pop in around the edges (scale 0 -> 1, spring ~420/16, random 40-120ms delays), the phone illustration rises (fade + 16px, 300ms), then header, copy, and the FETCH button last (200ms fades, 80ms apart).\n- The button's leading icon pulses gently (scale 1 -> 1.1, 1.4s) until tapped.\n\n## Calibration\n- One full flashlight performance before the reveal - cutting it short loses the story.\n- The confetti is asymmetric - shards scattered, not ringed.\n\n## Reduced motion\nFlashlight holds static; cards crossfade; no confetti pops.\n\n## Don't miss\n- The shrink-to-spring handoff is overlapping (new card starts at 70% of the old one's exit) - no dead frame between them.\n- The navy card is a stage, not a screen - everything happens inside the card's bounds."</script>
+</body></html>

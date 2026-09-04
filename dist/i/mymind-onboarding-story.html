@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mymind Onboarding Story - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mymind Onboarding Story</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mymind-onboarding-story"><b>Mymind</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mymind-onboarding-story">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mymind-onboarding-story">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: mymind&#x27;s tap-to-advance onboarding story - a sequence of pastel full-screen cards (&quot;It&#x27;s like your real mind, but enhanced with AI&quot;, &quot;No folders. No collections...&quot;, &quot;Bookmark websites and images by sharing them to your mind&quot;...) where each page&#x27;s hero artwork builds with staggered element reveals.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ddc2cf21f1e264a3e44e76/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ddc2cf21f1e264a3e44e76/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mymind-onboarding-story.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: mymind&#x27;s tap-to-advance onboarding story - a sequence of pastel full-screen cards (&quot;It&#x27;s like your real mind, but enhanced with AI&quot;, &quot;No folders. No collections...&quot;, &quot;Bookmark websites and images by sharing them to your mind&quot;...) where each page&#x27;s hero artwork builds with staggered element reveals.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen cards, each a different pastel wash (blue, pink, peach, lavender, mint) with a centered serif headline, a composed collage of product imagery below (screens, photos, contextual tag chips like &quot;Slowy&quot;, &quot;Product&quot;, &quot;Colour&quot;, &quot;Serendipity&quot;), &quot;Skip&quot; bottom-left, &quot;Continue&quot; bottom-right.
+
+## Motion spec
+Pattern: paged story with staggered collage builds.
+- Tap Continue (or right side): the current card slides out left and scales 0.96 (300ms, ease-out) while the next card slides in from the right, unblurring as it lands.
+- On each card&#x27;s entrance: the background wash fades in first (200ms), the headline rises 16px and fades (300ms), then the collage builds - hero image scales 0.9 -&gt; 1 (spring ~280/22) and surrounding tag chips pop in around it (scale 0.5 -&gt; 1, spring ~450/20, stagger 60ms).
+- The share-sheet demo card animates its mini sheet rising inside the artwork; the AI card pulses its tag chips gently (scale 1 &lt;-&gt; 1.04, 1.6s loop).
+- Skip jumps straight to the end with a fast crossfade (200ms).
+
+## Calibration
+- Each card owns one pastel hue; washes never mix mid-transition.
+- Serif headlines are the constant - imagery changes, type treatment does not.
+
+## Reduced motion
+Cards crossfade; collage elements appear without springs or stagger.
+
+## Don&#x27;t miss
+- Tag chips have tiny icon + word, like mymind&#x27;s auto-tags, and they orbit the hero image at varied radii.
+- The collage imagery is slightly rotated and overlapping - a mind-dump composition, not a grid.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">paged story with staggered collage builds.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mymind-onboarding-story">original interaction</a> by Mymind. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: mymind's tap-to-advance onboarding story - a sequence of pastel full-screen cards (\"It's like your real mind, but enhanced with AI\", \"No folders. No collections...\", \"Bookmark websites and images by sharing them to your mind\"...) where each page's hero artwork builds with staggered element reveals.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen cards, each a different pastel wash (blue, pink, peach, lavender, mint) with a centered serif headline, a composed collage of product imagery below (screens, photos, contextual tag chips like \"Slowy\", \"Product\", \"Colour\", \"Serendipity\"), \"Skip\" bottom-left, \"Continue\" bottom-right.\n\n## Motion spec\nPattern: paged story with staggered collage builds.\n- Tap Continue (or right side): the current card slides out left and scales 0.96 (300ms, ease-out) while the next card slides in from the right, unblurring as it lands.\n- On each card's entrance: the background wash fades in first (200ms), the headline rises 16px and fades (300ms), then the collage builds - hero image scales 0.9 -> 1 (spring ~280/22) and surrounding tag chips pop in around it (scale 0.5 -> 1, spring ~450/20, stagger 60ms).\n- The share-sheet demo card animates its mini sheet rising inside the artwork; the AI card pulses its tag chips gently (scale 1 <-> 1.04, 1.6s loop).\n- Skip jumps straight to the end with a fast crossfade (200ms).\n\n## Calibration\n- Each card owns one pastel hue; washes never mix mid-transition.\n- Serif headlines are the constant - imagery changes, type treatment does not.\n\n## Reduced motion\nCards crossfade; collage elements appear without springs or stagger.\n\n## Don't miss\n- Tag chips have tiny icon + word, like mymind's auto-tags, and they orbit the hero image at varied radii.\n- The collage imagery is slightly rotated and overlapping - a mind-dump composition, not a grid."</script>
+</body></html>

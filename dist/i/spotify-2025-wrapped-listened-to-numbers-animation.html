@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spotify 2025 Wrapped Listened to Numbers Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spotify 2025 Wrapped Listened to Numbers Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spotify-2025-wrapped-listened-to-numbers-animation"><b>Spotify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-2025-wrapped-listened-to-numbers-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-2025-wrapped-listened-to-numbers-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Spotify Wrapped&#x27;s minutes-and-genres run - a huge purple minute count on black, then the &quot;Taste like yours can&#x27;t be defined&quot; scene where dots rain down with physics before the genre list slides up through them.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934008e03bcee22ddcbf0c5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934008e03bcee22ddcbf0c5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spotify-2025-wrapped-listened-to-numbers-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Spotify Wrapped&#x27;s minutes-and-genres run - a huge purple minute count on black, then the &quot;Taste like yours can&#x27;t be defined&quot; scene where dots rain down with physics before the genre list slides up through them.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Scene one: black, a huge purple &quot;4,229&quot; (minutes listened) with its caption and a Share pill, white warped stripes at the bottom edge. Scene two: cream, the copy &quot;Taste like yours can&#x27;t be defined. But let&#x27;s try anyway.&quot; with a genre-count sub-line, as black dots fall from the top and settle; the dots flash red; then &quot;Your top genres&quot; (Electronica, Desi, Lo-Fi, Lounge, Pop) slides up as a big numbered list over the settled dots.
+
+## Motion spec
+Pattern: staggered text reveals over physics-driven falling dots.
+- The minute count types on as a rolling counter (0 -&gt; 4,229, 800ms, ease-out) at full width; caption and Share pill fade up after (200ms, 100ms apart).
+- Scene two: the copy staggers in line by line (150ms apart, 20px rise each), then dots begin to rain - each a physics body with gravity, a slight random horizontal drift, and a soft bounce (restitution ~0.4) settling into piles along the bottom.
+- Mid-scene the dots flip color (black -&gt; red, 150ms wave sweeping left to right) and some roll to new rest positions - the field rearranges like it is thinking.
+- The genre list slides up from the bottom (spring ~320/18), each entry stamping in 70ms apart with its number chip, dots nudged aside as the list lands.
+
+## Calibration
+- Dots are real physics - no keyframed arcs; the pile-up must look accidental.
+- The number 4,229 is the hero - it owns its scene alone before any other text appears.
+
+## Reduced motion
+Counter counts without rolling; dots fade in already settled; list fades up.
+
+## Don&#x27;t miss
+- The genre list is set huge and cropped-tight - numbers hug the left edge, names run wide.
+- The red flash is one wave, not a shimmer - decisive, like a stamp.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered text reveals over physics-driven falling dots.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spotify-2025-wrapped-listened-to-numbers-animation">original interaction</a> by Spotify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Spotify Wrapped's minutes-and-genres run - a huge purple minute count on black, then the \"Taste like yours can't be defined\" scene where dots rain down with physics before the genre list slides up through them.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nScene one: black, a huge purple \"4,229\" (minutes listened) with its caption and a Share pill, white warped stripes at the bottom edge. Scene two: cream, the copy \"Taste like yours can't be defined. But let's try anyway.\" with a genre-count sub-line, as black dots fall from the top and settle; the dots flash red; then \"Your top genres\" (Electronica, Desi, Lo-Fi, Lounge, Pop) slides up as a big numbered list over the settled dots.\n\n## Motion spec\nPattern: staggered text reveals over physics-driven falling dots.\n- The minute count types on as a rolling counter (0 -> 4,229, 800ms, ease-out) at full width; caption and Share pill fade up after (200ms, 100ms apart).\n- Scene two: the copy staggers in line by line (150ms apart, 20px rise each), then dots begin to rain - each a physics body with gravity, a slight random horizontal drift, and a soft bounce (restitution ~0.4) settling into piles along the bottom.\n- Mid-scene the dots flip color (black -> red, 150ms wave sweeping left to right) and some roll to new rest positions - the field rearranges like it is thinking.\n- The genre list slides up from the bottom (spring ~320/18), each entry stamping in 70ms apart with its number chip, dots nudged aside as the list lands.\n\n## Calibration\n- Dots are real physics - no keyframed arcs; the pile-up must look accidental.\n- The number 4,229 is the hero - it owns its scene alone before any other text appears.\n\n## Reduced motion\nCounter counts without rolling; dots fade in already settled; list fades up.\n\n## Don't miss\n- The genre list is set huge and cropped-tight - numbers hug the left edge, names run wide.\n- The red flash is one wave, not a shimmer - decisive, like a stamp."</script>
+</body></html>

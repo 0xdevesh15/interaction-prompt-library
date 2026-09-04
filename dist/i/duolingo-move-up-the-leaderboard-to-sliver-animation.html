@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Move up the Leaderboard to Sliver Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Move up the Leaderboard to Sliver Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-move-up-the-leaderboard-to-sliver-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-move-up-the-leaderboard-to-sliver-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-move-up-the-leaderboard-to-sliver-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s leaderboard climb - the league screen reframes around the user&#x27;s row, which slides up past rivals into the promotion zone with a green highlight while ranks renumber, under a &quot;You moved up!&quot; header with the league gem.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68749fb0b0f230ae67854820/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68749fb0b0f230ae67854820/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-move-up-the-leaderboard-to-sliver-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s leaderboard climb - the league screen reframes around the user&#x27;s row, which slides up past rivals into the promotion zone with a green highlight while ranks renumber, under a &quot;You moved up!&quot; header with the league gem.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White league screen. Top: a red-ruby league gem, the headline &quot;You moved up! Get to #1 to win the grand prize.&quot; Below: a ranked list of ~7 rows (rank number, circular avatar, username, XP right-aligned), a green PROMOTION ZONE divider with arrows partway down, and a blue &quot;I CAN DO IT!&quot; button pinned at the bottom. The user&#x27;s row carries a light green highlight.
+
+## Motion spec
+Pattern: animated list reorder with highlight tracking.
+- Entrance: the list fades in from a slight offset (250ms ease-out) with the user mid-table.
+- The climb: the user&#x27;s highlighted row slides up row-by-row (each hop ~350ms, spring ~300/24), overtaking one rival at a time; passed rows slide down one slot in the same beat.
+- Rank numerals on affected rows count down/up with a quick vertical digit slide (150ms).
+- When the user row crosses the PROMOTION ZONE divider, the divider flashes green (200ms) and the row&#x27;s highlight brightens (opacity 0.6 -&gt; 1.0).
+- Final settle: the user row lands at its new rank with a small scale pulse (1.0 -&gt; 1.04 -&gt; 1.0, 200ms); XP values on shifted rows crossfade if they changed.
+
+## Calibration
+- The user&#x27;s green row is the camera - it must stay visually tracked through every hop; rivals move only to make room.
+- Hops are discrete and rhythmic, not one continuous scroll.
+
+## Reduced motion
+The list crossfades from old order to new order over 250ms; the highlight stays on the user row throughout; no per-row hops.
+
+## Don&#x27;t miss
+- The PROMOTION ZONE divider stays pinned in place; rows move through it, it never scrolls with them.
+- The header and CTA never move - only the list reorders.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">animated list reorder with highlight tracking.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-move-up-the-leaderboard-to-sliver-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's leaderboard climb - the league screen reframes around the user's row, which slides up past rivals into the promotion zone with a green highlight while ranks renumber, under a \"You moved up!\" header with the league gem.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite league screen. Top: a red-ruby league gem, the headline \"You moved up! Get to #1 to win the grand prize.\" Below: a ranked list of ~7 rows (rank number, circular avatar, username, XP right-aligned), a green PROMOTION ZONE divider with arrows partway down, and a blue \"I CAN DO IT!\" button pinned at the bottom. The user's row carries a light green highlight.\n\n## Motion spec\nPattern: animated list reorder with highlight tracking.\n- Entrance: the list fades in from a slight offset (250ms ease-out) with the user mid-table.\n- The climb: the user's highlighted row slides up row-by-row (each hop ~350ms, spring ~300/24), overtaking one rival at a time; passed rows slide down one slot in the same beat.\n- Rank numerals on affected rows count down/up with a quick vertical digit slide (150ms).\n- When the user row crosses the PROMOTION ZONE divider, the divider flashes green (200ms) and the row's highlight brightens (opacity 0.6 -> 1.0).\n- Final settle: the user row lands at its new rank with a small scale pulse (1.0 -> 1.04 -> 1.0, 200ms); XP values on shifted rows crossfade if they changed.\n\n## Calibration\n- The user's green row is the camera - it must stay visually tracked through every hop; rivals move only to make room.\n- Hops are discrete and rhythmic, not one continuous scroll.\n\n## Reduced motion\nThe list crossfades from old order to new order over 250ms; the highlight stays on the user row throughout; no per-row hops.\n\n## Don't miss\n- The PROMOTION ZONE divider stays pinned in place; rows move through it, it never scrolls with them.\n- The header and CTA never move - only the list reorders."</script>
+</body></html>

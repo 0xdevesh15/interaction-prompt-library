@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mindllama Mindful Reminders - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mindllama Mindful Reminders</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mindllama-mindful-reminders"><b>Mindllama</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mindllama-mindful-reminders">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mindllama-mindful-reminders">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Mindllama&#x27;s mindful-reminders screen - springy swipeable quote cards with mascot art, a &quot;Remind me to breathe&quot; button that triggers the notification permission prompt, then a paywall sliding up as a bottom sheet.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b9efd999f86c96259078f3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b9efd999f86c96259078f3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mindllama-mindful-reminders.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Mindllama&#x27;s mindful-reminders screen - springy swipeable quote cards with mascot art, a &quot;Remind me to breathe&quot; button that triggers the notification permission prompt, then a paywall sliding up as a bottom sheet.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark navy &quot;Mindful Reminders&quot; screen. Center: a large sky-blue rounded card with a quote (&quot;Think of many things. Do one.&quot;) above a mascot illustration (sloth with heart glasses; next card: yellow dog with &quot;Change the world by being yourself.&quot;). Bottom: white &quot;Remind me to breathe&quot; pill. Later: the system notification alert appears over the dimmed card, then a paywall sheet (&quot;Stress less with cute characters&quot;, character previews, plan rows, trial badge) rises from the bottom.
+
+## Motion spec
+Pattern: springy card swipe into a sheet stack.
+- Swipe the quote card horizontally: it follows the finger 1:1 with slight rotation (+-4deg), and on release past ~35% it flies off (400ms, ease-out) while the next card springs in from the opposite side (stiffness ~260, damping ~22).
+- The quote text and mascot arrive as one card - no separate text transition.
+- Tap &quot;Remind me to breathe&quot;: the system notification permission alert presents with the standard scale-and-fade over a dimmed screen.
+- On alert dismissal, the paywall sheet slides up (spring stiffness ~280, damping ~26) to near-full height, the reminders screen dimming and scaling back ~4% behind it.
+
+## Calibration
+- The card swipe needs the rotation; a flat slide loses the physical playing-card feel.
+- Paywall appears only after the permission prompt resolves - never stack both at once.
+
+## Reduced motion
+Cards crossfade; paywall fades in without slide.
+
+## Don&#x27;t miss
+- Each quote card pairs its own mascot and quote - they never mix across cards.
+- The reminders screen stays visible (dimmed, scaled back) behind the paywall rather than being covered by an opaque page.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy card swipe into a sheet stack.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mindllama-mindful-reminders">original interaction</a> by Mindllama. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Mindllama's mindful-reminders screen - springy swipeable quote cards with mascot art, a \"Remind me to breathe\" button that triggers the notification permission prompt, then a paywall sliding up as a bottom sheet.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark navy \"Mindful Reminders\" screen. Center: a large sky-blue rounded card with a quote (\"Think of many things. Do one.\") above a mascot illustration (sloth with heart glasses; next card: yellow dog with \"Change the world by being yourself.\"). Bottom: white \"Remind me to breathe\" pill. Later: the system notification alert appears over the dimmed card, then a paywall sheet (\"Stress less with cute characters\", character previews, plan rows, trial badge) rises from the bottom.\n\n## Motion spec\nPattern: springy card swipe into a sheet stack.\n- Swipe the quote card horizontally: it follows the finger 1:1 with slight rotation (+-4deg), and on release past ~35% it flies off (400ms, ease-out) while the next card springs in from the opposite side (stiffness ~260, damping ~22).\n- The quote text and mascot arrive as one card - no separate text transition.\n- Tap \"Remind me to breathe\": the system notification permission alert presents with the standard scale-and-fade over a dimmed screen.\n- On alert dismissal, the paywall sheet slides up (spring stiffness ~280, damping ~26) to near-full height, the reminders screen dimming and scaling back ~4% behind it.\n\n## Calibration\n- The card swipe needs the rotation; a flat slide loses the physical playing-card feel.\n- Paywall appears only after the permission prompt resolves - never stack both at once.\n\n## Reduced motion\nCards crossfade; paywall fades in without slide.\n\n## Don't miss\n- Each quote card pairs its own mascot and quote - they never mix across cards.\n- The reminders screen stays visible (dimmed, scaled back) behind the paywall rather than being covered by an opaque page."</script>
+</body></html>

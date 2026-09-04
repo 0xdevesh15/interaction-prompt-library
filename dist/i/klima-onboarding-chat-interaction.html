@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klima Onboarding Chat Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Klima Onboarding Chat Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/klima-onboarding-chat-interaction"><b>Klima</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/klima-onboarding-chat-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/klima-onboarding-chat-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Klima&#x27;s onboarding questionnaire - over looping lifestyle video backgrounds, chat bubbles slide in asking about flights, driving, energy and diet; each answer taps update the live carbon counter (&quot;2.33 -&gt; 6.54 Tons CO2e&quot;) pinned at the top.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d84ed26c0fbb153fa85a6e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d84ed26c0fbb153fa85a6e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-klima-onboarding-chat-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Klima&#x27;s onboarding questionnaire - over looping lifestyle video backgrounds, chat bubbles slide in asking about flights, driving, energy and diet; each answer taps update the live carbon counter (&quot;2.33 -&gt; 6.54 Tons CO2e&quot;) pinned at the top.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen video backdrops (forest canopy, airplane wing, kitchen, living room) behind a chat stack: white question bubbles, then a white answer card with radio/checkbox rows (&quot;I fly never or rarely&quot; / &quot;Occasionally&quot; / &quot;Regularly&quot;), a green Next button, Skip link, and page dots (&quot;3 of 8&quot;). Top center: the live counter &quot;5.92 Tons CO2e&quot;.
+
+## Motion spec
+Pattern: chat-style questionnaire with a live counter.
+- Each step: the background video crossfades to a new scene (400ms) while the previous chat collapses upward and the new question bubble slides in from the bottom (spring ~300/24), followed by its answer card (120ms later).
+- Selecting an answer row: the radio fills green with a small pop (scale 0.7 -&gt; 1, spring ~450/20) and Next lights solid green.
+- Tap Next: the counter counts up/down to the new footprint (600ms rolling digits) with a subtle scale pulse at settle; the answered card compresses into the chat history above.
+- The final step flips to the Result card: &quot;Meet your personal carbon footprint: 6.54 Tons CO2e&quot; - the counter&#x27;s last count-up is slower (900ms) for weight.
+
+## Calibration
+- Bubbles stack like a chat - history stays visible above, dimmed.
+- The counter never leaves the top; it is the through-line of the whole flow.
+
+## Reduced motion
+Backgrounds crossfade slowly; bubbles fade in place; counter changes without roll.
+
+## Don&#x27;t miss
+- Each question&#x27;s video matches its topic (plane for flights, kitchen for diet).
+- Skip is always present but quiet; the green Next carries the flow.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">chat-style questionnaire with a live counter.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/klima-onboarding-chat-interaction">original interaction</a> by Klima. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Klima's onboarding questionnaire - over looping lifestyle video backgrounds, chat bubbles slide in asking about flights, driving, energy and diet; each answer taps update the live carbon counter (\"2.33 -> 6.54 Tons CO2e\") pinned at the top.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen video backdrops (forest canopy, airplane wing, kitchen, living room) behind a chat stack: white question bubbles, then a white answer card with radio/checkbox rows (\"I fly never or rarely\" / \"Occasionally\" / \"Regularly\"), a green Next button, Skip link, and page dots (\"3 of 8\"). Top center: the live counter \"5.92 Tons CO2e\".\n\n## Motion spec\nPattern: chat-style questionnaire with a live counter.\n- Each step: the background video crossfades to a new scene (400ms) while the previous chat collapses upward and the new question bubble slides in from the bottom (spring ~300/24), followed by its answer card (120ms later).\n- Selecting an answer row: the radio fills green with a small pop (scale 0.7 -> 1, spring ~450/20) and Next lights solid green.\n- Tap Next: the counter counts up/down to the new footprint (600ms rolling digits) with a subtle scale pulse at settle; the answered card compresses into the chat history above.\n- The final step flips to the Result card: \"Meet your personal carbon footprint: 6.54 Tons CO2e\" - the counter's last count-up is slower (900ms) for weight.\n\n## Calibration\n- Bubbles stack like a chat - history stays visible above, dimmed.\n- The counter never leaves the top; it is the through-line of the whole flow.\n\n## Reduced motion\nBackgrounds crossfade slowly; bubbles fade in place; counter changes without roll.\n\n## Don't miss\n- Each question's video matches its topic (plane for flights, kitchen for diet).\n- Skip is always present but quiet; the green Next carries the flow."</script>
+</body></html>

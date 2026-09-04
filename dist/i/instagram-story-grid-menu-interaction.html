@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Story Grid Menu Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Story Grid Menu Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-story-grid-menu-interaction"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-story-grid-menu-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-story-grid-menu-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Instagram Stories&#x27; layout grid selector - tapping the layout icon on the story camera rail expands a floating panel of grid options, and picking one morphs the panel back into the icon, which now wears the selected grid.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67601c7465e9b66b97de9254/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67601c7465e9b66b97de9254/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-story-grid-menu-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Instagram Stories&#x27; layout grid selector - tapping the layout icon on the story camera rail expands a floating panel of grid options, and picking one morphs the panel back into the icon, which now wears the selected grid.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Instagram Story camera (dark viewfinder, shutter button bottom center, tool rail on the left edge). The rail&#x27;s layout icon (a small grid glyph) expands on tap into a floating panel of six layout options (2-cell, 3-cell, 4-cell, 6-cell grids in different splits). Selecting a layout collapses the panel into the rail icon, and the viewfinder draws the chosen grid&#x27;s frame guides.
+
+## Motion spec
+Pattern: expanding layout panel with icon morph, gesture-driven.
+- On tap, the panel grows out of the rail icon (spring stiffness 320 damping 24): a rounded dark card with the grid options scaling in (0.8 to 1) and the option cells staggering in (30ms apart).
+- The rail icon fades as the panel emerges - they never coexist.
+- Tapping an option highlights it (brief scale to 1.1, 150ms), then the panel shrinks back into the rail (250ms, ease-in), the icon morphing to show the selected grid arrangement.
+- The viewfinder then draws the layout&#x27;s frames: thin white guides stroking in (300ms, ease-out).
+
+## Calibration
+- The panel opens toward the canvas, anchored at the rail icon&#x27;s position.
+- Collapse is the exact reverse path of expansion.
+
+## Reduced motion
+Panel fades in and out.
+
+## Don&#x27;t miss
+- The icon after selection is the chosen layout&#x27;s glyph, not the generic grid.
+- The rest of the rail tools stay put while the panel opens.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">expanding layout panel with icon morph, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-story-grid-menu-interaction">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Instagram Stories' layout grid selector - tapping the layout icon on the story camera rail expands a floating panel of grid options, and picking one morphs the panel back into the icon, which now wears the selected grid.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Instagram Story camera (dark viewfinder, shutter button bottom center, tool rail on the left edge). The rail's layout icon (a small grid glyph) expands on tap into a floating panel of six layout options (2-cell, 3-cell, 4-cell, 6-cell grids in different splits). Selecting a layout collapses the panel into the rail icon, and the viewfinder draws the chosen grid's frame guides.\n\n## Motion spec\nPattern: expanding layout panel with icon morph, gesture-driven.\n- On tap, the panel grows out of the rail icon (spring stiffness 320 damping 24): a rounded dark card with the grid options scaling in (0.8 to 1) and the option cells staggering in (30ms apart).\n- The rail icon fades as the panel emerges - they never coexist.\n- Tapping an option highlights it (brief scale to 1.1, 150ms), then the panel shrinks back into the rail (250ms, ease-in), the icon morphing to show the selected grid arrangement.\n- The viewfinder then draws the layout's frames: thin white guides stroking in (300ms, ease-out).\n\n## Calibration\n- The panel opens toward the canvas, anchored at the rail icon's position.\n- Collapse is the exact reverse path of expansion.\n\n## Reduced motion\nPanel fades in and out.\n\n## Don't miss\n- The icon after selection is the chosen layout's glyph, not the generic grid.\n- The rest of the rail tools stay put while the panel opens."</script>
+</body></html>

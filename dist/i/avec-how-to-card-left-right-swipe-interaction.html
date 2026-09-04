@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avec How to Card Left Right Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Avec How to Card Left Right Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/avec-how-to-card-left-right-swipe-interaction"><b>Avec</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/avec-how-to-card-left-right-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/avec-how-to-card-left-right-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Avec&#x27;s swipe-direction tutorial - onboarding cards teach Stack and Done; swiping right floods the card green for Done, swiping left floods it red, and the copy and action pill follow the direction.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a119742a2314e1a99863748/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a119742a2314e1a99863748/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-avec-how-to-card-left-right-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Avec&#x27;s swipe-direction tutorial - onboarding cards teach Stack and Done; swiping right floods the card green for Done, swiping left floods it red, and the copy and action pill follow the direction.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;How to use Avec&quot; sheet: a white email card center (&quot;This is your Stack&quot; / &quot;Done - Mark an email Done when you have finished with it&quot;) with a hint line and action pills below, over a faint inbox backdrop.
+
+## Motion spec
+Pattern: direction-aware card swipe with full-card color verdicts.
+- Drag moves the card 1:1 with rotateZ up to +/- 10 degrees, pivot at the bottom corner.
+- Crossing the commit threshold (~30% width) fills the whole card with the verdict color: green sweeping in from the right for Done, red from the left - the fill is a wipe tied to drag distance, not an overlay fade.
+- The card&#x27;s copy crossfades to match (&quot;Done&quot; with a check on green) as the fill passes mid-card.
+- Release past threshold: the card flicks off in the swipe direction (velocity-inherited, 300ms) and the next card slides up from behind (scale 0.95 -&gt; 1, 250ms).
+- The matching action pill below fills with the same color on commit.
+
+## Calibration
+- Color commitment is total - the entire card goes green or red, copy included.
+- Red is a correction, not an error: same speed, same physics, different paint.
+
+## Reduced motion
+Cards slide without rotation; color fades instead of wiping.
+
+## Don&#x27;t miss
+- The wipe edge is angled with the card&#x27;s rotation - the color floods along the tilt.
+- The next card is dimly visible behind the current one throughout.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">direction-aware card swipe with full-card color verdicts.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/avec-how-to-card-left-right-swipe-interaction">original interaction</a> by Avec. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Avec's swipe-direction tutorial - onboarding cards teach Stack and Done; swiping right floods the card green for Done, swiping left floods it red, and the copy and action pill follow the direction.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"How to use Avec\" sheet: a white email card center (\"This is your Stack\" / \"Done - Mark an email Done when you have finished with it\") with a hint line and action pills below, over a faint inbox backdrop.\n\n## Motion spec\nPattern: direction-aware card swipe with full-card color verdicts.\n- Drag moves the card 1:1 with rotateZ up to +/- 10 degrees, pivot at the bottom corner.\n- Crossing the commit threshold (~30% width) fills the whole card with the verdict color: green sweeping in from the right for Done, red from the left - the fill is a wipe tied to drag distance, not an overlay fade.\n- The card's copy crossfades to match (\"Done\" with a check on green) as the fill passes mid-card.\n- Release past threshold: the card flicks off in the swipe direction (velocity-inherited, 300ms) and the next card slides up from behind (scale 0.95 -> 1, 250ms).\n- The matching action pill below fills with the same color on commit.\n\n## Calibration\n- Color commitment is total - the entire card goes green or red, copy included.\n- Red is a correction, not an error: same speed, same physics, different paint.\n\n## Reduced motion\nCards slide without rotation; color fades instead of wiping.\n\n## Don't miss\n- The wipe edge is angled with the card's rotation - the color floods along the tilt.\n- The next card is dimly visible behind the current one throughout."</script>
+</body></html>

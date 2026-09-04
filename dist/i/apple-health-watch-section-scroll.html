@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Health Watch Section Scroll - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Health Watch Section Scroll</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-health-watch-section-scroll"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-health-watch-section-scroll">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-health-watch-section-scroll">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the watchOS Heart Rate app&#x27;s section scroll - vertical paging between metric screens (live Measuring..., day graph with Range 45-104 BPM, Resting Rate 50 BPM, Walking Average 91 BPM) where each transition blurs, scales, and fades the outgoing screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db3a6d21f1e264a3db4276/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db3a6d21f1e264a3db4276/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-health-watch-section-scroll.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the watchOS Heart Rate app&#x27;s section scroll - vertical paging between metric screens (live Measuring..., day graph with Range 45-104 BPM, Resting Rate 50 BPM, Walking Average 91 BPM) where each transition blurs, scales, and fades the outgoing screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black watch screens: measuring view (3D red heart, &quot;Measuring...&quot;, &quot;-- BPM&quot;, &quot;57 BPM, 4m ago&quot; footnote); day graph (red heart-rate line over time grid, &quot;Range 45-104 BPM Today&quot;); Resting Rate (white graph, &quot;50 BPM&quot;); Walking Average (&quot;91 BPM&quot;). Page dots at the right edge; an info button top-left on metric pages.
+
+## Motion spec
+Pattern: blur-scale-fade vertical pager.
+- Crown/drag between sections: the outgoing screen blurs (radius 0 -&gt; 12px), scales down to 0.92, and fades (250ms) while the incoming screen un-blurs, scales 1.05 -&gt; 1, and fades in - a depth swap, not a slide.
+- Page dots light in sync with the transition; the current dot is full white.
+- The measuring heart pulses continuously (scale 1 -&gt; 1.08, ~0.9s, matched to ~65 BPM) with a soft inner glow; when a reading lands, &quot;-- BPM&quot; crossfades to the live value (200ms) and the graph pages&#x27; lines draw in (trim, 700ms).
+- The info button fades in only on metric pages; the measuring page hides it.
+
+## Calibration
+- Blur is the dominant cue - the scale and fade support it; never slide these pages.
+- Graph axes (12 AM / 6 AM / 12 PM / 6 PM, BPM bounds) stay consistent across Range/Resting/Walking so only the line and value change.
+
+## Reduced motion
+Screens crossfade without blur or scale.
+
+## Don&#x27;t miss
+- The heart is glossy 3D, not a flat glyph.
+- Values are white with red &quot;BPM&quot; units - the red unit treatment is consistent across pages.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">blur-scale-fade vertical pager.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-health-watch-section-scroll">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the watchOS Heart Rate app's section scroll - vertical paging between metric screens (live Measuring..., day graph with Range 45-104 BPM, Resting Rate 50 BPM, Walking Average 91 BPM) where each transition blurs, scales, and fades the outgoing screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack watch screens: measuring view (3D red heart, \"Measuring...\", \"-- BPM\", \"57 BPM, 4m ago\" footnote); day graph (red heart-rate line over time grid, \"Range 45-104 BPM Today\"); Resting Rate (white graph, \"50 BPM\"); Walking Average (\"91 BPM\"). Page dots at the right edge; an info button top-left on metric pages.\n\n## Motion spec\nPattern: blur-scale-fade vertical pager.\n- Crown/drag between sections: the outgoing screen blurs (radius 0 -> 12px), scales down to 0.92, and fades (250ms) while the incoming screen un-blurs, scales 1.05 -> 1, and fades in - a depth swap, not a slide.\n- Page dots light in sync with the transition; the current dot is full white.\n- The measuring heart pulses continuously (scale 1 -> 1.08, ~0.9s, matched to ~65 BPM) with a soft inner glow; when a reading lands, \"-- BPM\" crossfades to the live value (200ms) and the graph pages' lines draw in (trim, 700ms).\n- The info button fades in only on metric pages; the measuring page hides it.\n\n## Calibration\n- Blur is the dominant cue - the scale and fade support it; never slide these pages.\n- Graph axes (12 AM / 6 AM / 12 PM / 6 PM, BPM bounds) stay consistent across Range/Resting/Walking so only the line and value change.\n\n## Reduced motion\nScreens crossfade without blur or scale.\n\n## Don't miss\n- The heart is glossy 3D, not a flat glyph.\n- Values are white with red \"BPM\" units - the red unit treatment is consistent across pages."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Haptic Onboarding Cards - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Haptic Onboarding Cards</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/haptic-onboarding-cards"><b>Haptic</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/haptic-onboarding-cards">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/haptic-onboarding-cards">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Haptic&#x27;s onboarding card carousel - full-height cards (white Welcome, purple Add habits, orange Enable Health, dark Start adding events) swipe horizontally with the next card peeking at the edge, springy settles, and a per-card action button plus &quot;Maybe later&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2d2f9f18be3eb6e1fe875/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2d2f9f18be3eb6e1fe875/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-haptic-onboarding-cards.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Haptic&#x27;s onboarding card carousel - full-height cards (white Welcome, purple Add habits, orange Enable Health, dark Start adding events) swipe horizontally with the next card peeking at the edge, springy settles, and a per-card action button plus &quot;Maybe later&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Each card: small circular avatar/close glyph top-left, &quot;STEP n&quot; eyebrow, bold headline copy, a bottom pill button (Choose / Enable / Get started) and a &quot;Maybe later&quot; text link pinned below the card. Cards are colored (white, purple, orange, dark gray) with the next card&#x27;s edge visible at the right.
+
+## Motion spec
+Pattern: peeking card pager with spring settle.
+- Drag: the current card tracks the finger (1:1), its corners stay rounded; the next card slides in from the right edge already visible as a colored sliver that grows.
+- Release past ~35%: the outgoing card exits left (spring ~320/24, ~350ms) while the incoming card expands to full width; the card subtly overshoots and settles (scale 0.98 -&gt; 1).
+- The bottom button and Maybe later stay pinned - only the card body and its copy travel.
+- The small circle glyph top-left crossfades its icon per step; STEP label counts up.
+- Edge resistance on the first/last card (rubber-band x^0.5).
+
+## Calibration
+- The peek sliver is ~24px at rest - enough to read the next card&#x27;s color, not its content.
+- Text inside cards is left-aligned with generous padding; cards never go full-bleed to screen corners.
+
+## Reduced motion
+Cards crossfade; no drag translation needed for paging (buttons advance).
+
+## Don&#x27;t miss
+- Card color IS the step identity - the background behind the card stays the app&#x27;s neutral gray.
+- Maybe later is present on every step, pinned outside the card.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">peeking card pager with spring settle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/haptic-onboarding-cards">original interaction</a> by Haptic. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Haptic's onboarding card carousel - full-height cards (white Welcome, purple Add habits, orange Enable Health, dark Start adding events) swipe horizontally with the next card peeking at the edge, springy settles, and a per-card action button plus \"Maybe later\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nEach card: small circular avatar/close glyph top-left, \"STEP n\" eyebrow, bold headline copy, a bottom pill button (Choose / Enable / Get started) and a \"Maybe later\" text link pinned below the card. Cards are colored (white, purple, orange, dark gray) with the next card's edge visible at the right.\n\n## Motion spec\nPattern: peeking card pager with spring settle.\n- Drag: the current card tracks the finger (1:1), its corners stay rounded; the next card slides in from the right edge already visible as a colored sliver that grows.\n- Release past ~35%: the outgoing card exits left (spring ~320/24, ~350ms) while the incoming card expands to full width; the card subtly overshoots and settles (scale 0.98 -> 1).\n- The bottom button and Maybe later stay pinned - only the card body and its copy travel.\n- The small circle glyph top-left crossfades its icon per step; STEP label counts up.\n- Edge resistance on the first/last card (rubber-band x^0.5).\n\n## Calibration\n- The peek sliver is ~24px at rest - enough to read the next card's color, not its content.\n- Text inside cards is left-aligned with generous padding; cards never go full-bleed to screen corners.\n\n## Reduced motion\nCards crossfade; no drag translation needed for paging (buttons advance).\n\n## Don't miss\n- Card color IS the step identity - the background behind the card stays the app's neutral gray.\n- Maybe later is present on every step, pinned outside the card."</script>
+</body></html>

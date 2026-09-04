@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Captions Pricing Tab Theme Change Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Captions Pricing Tab Theme Change Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/captions-pricing-tab-theme-change-interaction"><b>Captions</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/captions-pricing-tab-theme-change-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/captions-pricing-tab-theme-change-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Captions&#x27; pricing theme switch - toggling between the MAX and SCALE tabs sweeps the entire screen from amber to green, plans and all.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3df2ecf0543e54f6d4b8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3df2ecf0543e54f6d4b8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-captions-pricing-tab-theme-change-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Captions&#x27; pricing theme switch - toggling between the MAX and SCALE tabs sweeps the entire screen from amber to green, plans and all.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Captions pricing screen, dark: a segmented MAX | SCALE control at top, the &quot;captions MAX&quot; header with feature rows and a creator photo, plan cards (Monthly Plan, Annual Plan with ₹ prices), and a full-width Get Started button. The whole screen is tinted by the active tab&#x27;s theme: amber for MAX, green for SCALE. A detail page shows a creator-photo strip, &quot;₹1,199/mo&quot; with the struck ₹2,699, feature checklist (AI Twins, Chat-based editing, AI Edit), and the trial button.
+
+## Motion spec
+Pattern: full-UI theme transition on pricing tab toggle.
+- Tapping the other tab slides the segmented pill (spring ~380/20, ~250ms) and the entire screen re-themes in one coordinated 400ms sweep: background tint, header accent, feature icons, plan-card borders, and the Get Started fill all cross-fade hue together (amber -&gt; green) - top to bottom with a 60ms vertical cascade so the color appears to pour down the screen.
+- Plan names and prices crossfade to the new tier&#x27;s values in the same window (250ms), with the Get Started label updating last.
+- The creator photo in the header swaps with a 200ms crossfade - no slide.
+- Selecting a plan pushes to the detail page (standard slide, 300ms) which inherits the tab&#x27;s theme: its checklist checks, price, and trial button all wear the same accent.
+
+## Calibration
+- Every accent on screen belongs to the theme - nothing stays amber when SCALE is active (audit the status bar tint and dividers too).
+- The transition is a hue cascade, not a full-screen flash - content never blanks.
+
+## Reduced motion
+Theme crossfades uniformly (300ms) without the cascade; prices change without stagger.
+
+## Don&#x27;t miss
+- The struck-through original price sits right above the big ₹1,199/mo on the detail page - the deal framing is part of the design.
+- The segmented control&#x27;s pill is the theme color itself - it previews the hue it selects.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-UI theme transition on pricing tab toggle.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/captions-pricing-tab-theme-change-interaction">original interaction</a> by Captions. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Captions' pricing theme switch - toggling between the MAX and SCALE tabs sweeps the entire screen from amber to green, plans and all.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCaptions pricing screen, dark: a segmented MAX | SCALE control at top, the \"captions MAX\" header with feature rows and a creator photo, plan cards (Monthly Plan, Annual Plan with \u20b9 prices), and a full-width Get Started button. The whole screen is tinted by the active tab's theme: amber for MAX, green for SCALE. A detail page shows a creator-photo strip, \"\u20b91,199/mo\" with the struck \u20b92,699, feature checklist (AI Twins, Chat-based editing, AI Edit), and the trial button.\n\n## Motion spec\nPattern: full-UI theme transition on pricing tab toggle.\n- Tapping the other tab slides the segmented pill (spring ~380/20, ~250ms) and the entire screen re-themes in one coordinated 400ms sweep: background tint, header accent, feature icons, plan-card borders, and the Get Started fill all cross-fade hue together (amber -> green) - top to bottom with a 60ms vertical cascade so the color appears to pour down the screen.\n- Plan names and prices crossfade to the new tier's values in the same window (250ms), with the Get Started label updating last.\n- The creator photo in the header swaps with a 200ms crossfade - no slide.\n- Selecting a plan pushes to the detail page (standard slide, 300ms) which inherits the tab's theme: its checklist checks, price, and trial button all wear the same accent.\n\n## Calibration\n- Every accent on screen belongs to the theme - nothing stays amber when SCALE is active (audit the status bar tint and dividers too).\n- The transition is a hue cascade, not a full-screen flash - content never blanks.\n\n## Reduced motion\nTheme crossfades uniformly (300ms) without the cascade; prices change without stagger.\n\n## Don't miss\n- The struck-through original price sits right above the big \u20b91,199/mo on the detail page - the deal framing is part of the design.\n- The segmented control's pill is the theme color itself - it previews the hue it selects."</script>
+</body></html>

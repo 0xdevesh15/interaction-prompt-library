@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>uCal Swipe to Change Time Day Week Month Year Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>uCal Swipe to Change Time Day Week Month Year Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ucal-swipe-to-change-time-day-week-month-year-interaction"><b>Ucal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ucal-swipe-to-change-time-day-week-month-year-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ucal-swipe-to-change-time-day-week-month-year-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: uCal&#x27;s time scrubber - dragging around a U-shaped track moves a central clock indicator through time while the header date updates live and the track rescales from hours to years.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f249f16a95954e2c451/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f249f16a95954e2c451/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ucal-swipe-to-change-time-day-week-month-year-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: uCal&#x27;s time scrubber - dragging around a U-shaped track moves a central clock indicator through time while the header date updates live and the track rescales from hours to years.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen. Dominating the center: a tall U-shaped track of thin concentric lines (a stadium-ring shape, open at the top). At its bottom curve sits a circular indicator with a clock glyph. Header shows the current date and time (&quot;Thursday, 21 Feb 2030, 18:13&quot;); a bottom tab shows the active scale (Hours, Days, Weeks, Months, Years) with &quot;Sync Calendar&quot; centered.
+
+## Motion spec
+Pattern: rotational scrubbing on a U-track with live date readout and scale morphing.
+- Dragging along the track scrubs time with 1:1 angular tracking: the indicator glides along the U&#x27;s curve and the header date/time updates continuously (18:13 -&gt; 22:08 -&gt; next day...).
+- The track&#x27;s tick lines flow under the indicator like a tape measure - marks pass through the bottom point as you scrub.
+- The indicator glows red in one direction of travel and blue in the other (crossfade 200ms on direction change).
+- Crossing a scale boundary morphs the track: tick density rescales (hours -&gt; days -&gt; weeks) with a 300ms ease and the bottom scale label swaps (150ms crossfade).
+- On release, the scrub decelerates with momentum and eases to rest (no snap).
+
+## Calibration
+- The indicator is the read head: it stays on the track&#x27;s bottom curve; the track&#x27;s contents move, not the finger&#x27;s raw position.
+- Direction color is immediate - it is the only persistent state cue besides the header.
+
+## Reduced motion
+Scrub jumps in fixed steps; scale swaps without morph.
+
+## Don&#x27;t miss
+- The U shape is the identity: straight tracks are a different control.
+- Header typography is monospaced and small; the date changes digit-by-digit, not as a block.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rotational scrubbing on a U-track with live date readout and scale morphing.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ucal-swipe-to-change-time-day-week-month-year-interaction">original interaction</a> by Ucal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: uCal's time scrubber - dragging around a U-shaped track moves a central clock indicator through time while the header date updates live and the track rescales from hours to years.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen. Dominating the center: a tall U-shaped track of thin concentric lines (a stadium-ring shape, open at the top). At its bottom curve sits a circular indicator with a clock glyph. Header shows the current date and time (\"Thursday, 21 Feb 2030, 18:13\"); a bottom tab shows the active scale (Hours, Days, Weeks, Months, Years) with \"Sync Calendar\" centered.\n\n## Motion spec\nPattern: rotational scrubbing on a U-track with live date readout and scale morphing.\n- Dragging along the track scrubs time with 1:1 angular tracking: the indicator glides along the U's curve and the header date/time updates continuously (18:13 -> 22:08 -> next day...).\n- The track's tick lines flow under the indicator like a tape measure - marks pass through the bottom point as you scrub.\n- The indicator glows red in one direction of travel and blue in the other (crossfade 200ms on direction change).\n- Crossing a scale boundary morphs the track: tick density rescales (hours -> days -> weeks) with a 300ms ease and the bottom scale label swaps (150ms crossfade).\n- On release, the scrub decelerates with momentum and eases to rest (no snap).\n\n## Calibration\n- The indicator is the read head: it stays on the track's bottom curve; the track's contents move, not the finger's raw position.\n- Direction color is immediate - it is the only persistent state cue besides the header.\n\n## Reduced motion\nScrub jumps in fixed steps; scale swaps without morph.\n\n## Don't miss\n- The U shape is the identity: straight tracks are a different control.\n- Header typography is monospaced and small; the date changes digit-by-digit, not as a block."</script>
+</body></html>

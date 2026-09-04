@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Search Incognito Toggle - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Arc Search Incognito Toggle</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/arc-search-incognito-toggle"><b>Arc</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-incognito-toggle">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-incognito-toggle">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Arc Search&#x27;s incognito toggle - flipping into incognito crossfades the entire light search UI into a dark theme, the search bar, suggestion rows, and keyboard all re-skinning together, with &quot;You&#x27;re browsing incognito&quot; settling in the empty state.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c6344c138938bb55859dd2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c6344c138938bb55859dd2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-arc-search-incognito-toggle.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Arc Search&#x27;s incognito toggle - flipping into incognito crossfades the entire light search UI into a dark theme, the search bar, suggestion rows, and keyboard all re-skinning together, with &quot;You&#x27;re browsing incognito&quot; settling in the empty state.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Search interface: a &quot;Search...&quot; bar with suggestions below (&quot;convex optimization&quot;, a URL row), system keyboard up. Incognito state: the same layout fully dark - near-black background, dark gray bar and keycaps, centered &quot;You&#x27;re browsing incognito&quot; message.
+
+## Motion spec
+Pattern: full-UI theme crossfade with settling message.
+- Toggle: the whole screen crossfades light-to-dark over 400ms (ease-in-out) - background, bar, suggestion rows, and keyboard keys all interpolate colors simultaneously, nothing lagging behind.
+- The search bar&#x27;s icons swap with a tiny spin (incognito glyph rotates in, 250ms, spring ~380/20).
+- &quot;You&#x27;re browsing incognito&quot; fades in at center and rises 10px into place (350ms, 150ms after the theme flip starts).
+- The keyboard re-skins keycap-by-keycap in a wave sweeping from the top row down (30ms per row) - the one element with internal stagger.
+- Toggling back reverses it exactly, the message fading first (150ms) so the theme doesn&#x27;t return to a stale screen.
+
+## Calibration
+- Dark theme values: background near #1C1C1E, surfaces #2C2C2E - standard dark grays, not pure black.
+- Text fields keep their content and cursor position through the flip - the theme is cosmetic, state survives.
+
+## Reduced motion
+Instant theme swap; message fades.
+
+## Don&#x27;t miss
+- The keyboard participates - a light keyboard under a dark UI would break the whole illusion.
+- The crossfade is uniform in time but the keyboard&#x27;s row wave gives it texture - global change, local rhythm.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-UI theme crossfade with settling message.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/arc-search-incognito-toggle">original interaction</a> by Arc. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Arc Search's incognito toggle - flipping into incognito crossfades the entire light search UI into a dark theme, the search bar, suggestion rows, and keyboard all re-skinning together, with \"You're browsing incognito\" settling in the empty state.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSearch interface: a \"Search...\" bar with suggestions below (\"convex optimization\", a URL row), system keyboard up. Incognito state: the same layout fully dark - near-black background, dark gray bar and keycaps, centered \"You're browsing incognito\" message.\n\n## Motion spec\nPattern: full-UI theme crossfade with settling message.\n- Toggle: the whole screen crossfades light-to-dark over 400ms (ease-in-out) - background, bar, suggestion rows, and keyboard keys all interpolate colors simultaneously, nothing lagging behind.\n- The search bar's icons swap with a tiny spin (incognito glyph rotates in, 250ms, spring ~380/20).\n- \"You're browsing incognito\" fades in at center and rises 10px into place (350ms, 150ms after the theme flip starts).\n- The keyboard re-skins keycap-by-keycap in a wave sweeping from the top row down (30ms per row) - the one element with internal stagger.\n- Toggling back reverses it exactly, the message fading first (150ms) so the theme doesn't return to a stale screen.\n\n## Calibration\n- Dark theme values: background near #1C1C1E, surfaces #2C2C2E - standard dark grays, not pure black.\n- Text fields keep their content and cursor position through the flip - the theme is cosmetic, state survives.\n\n## Reduced motion\nInstant theme swap; message fades.\n\n## Don't miss\n- The keyboard participates - a light keyboard under a dark UI would break the whole illusion.\n- The crossfade is uniform in time but the keyboard's row wave gives it texture - global change, local rhythm."</script>
+</body></html>

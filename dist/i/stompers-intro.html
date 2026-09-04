@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stompers Intro - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Stompers Intro</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/stompers-intro"><b>Stompers</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stompers-intro">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stompers-intro">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Stompers&#x27; intro - a red splash whose wordmark circle morphs open into the app, where a cartoon character walks an endlessly scrolling desert with parallax plants.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb08bf9807bdad9fb0b59/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb08bf9807bdad9fb0b59/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-stompers-intro.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Stompers&#x27; intro - a red splash whose wordmark circle morphs open into the app, where a cartoon character walks an endlessly scrolling desert with parallax plants.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Red launch screen: STOMPERS wordmark inside a black circle ringed by darker red tunnels. Then the main screen: light sky, a walking character, a scrolling orange desert band with bushes and rocks, STOMPERS header, and a sign-up button pinned at bottom.
+
+## Motion spec
+Pattern: iris-open transition into parallax walk loop, continuous.
+- The splash holds (~600ms), then the black circle expands like an iris until it swallows the screen (500ms, ease-in), revealing the main scene inside it.
+- The character walks in place with a bouncy cartoon gait (+-6px body bob, arms swinging, ~600ms stride cycle).
+- The desert scrolls leftward in three parallax layers: ground band fastest (~90px/s), bushes mid (~50px/s), far rocks slow (~25px/s); each plant enters from the right, drifts through, exits left.
+- The STOMPERS header arcs in letter by letter on a curve (60ms stagger, spring stiffness 300 damping 16) once on entry.
+
+## Calibration
+- The iris must read as the splash circle growing, not a circular fade - keep its edge crisp.
+- Parallax speed ratios stay locked; independent drift between layers breaks the depth.
+
+## Reduced motion
+Splash crossfades; character and plants hold static.
+
+## Don&#x27;t miss
+- The character&#x27;s footfalls sync with the ground scroll - feet must not skate.
+- The wordmark on the splash is identical to the header that arcs in; the intro is one continuous brand moment.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">iris-open transition into parallax walk loop, continuous.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/stompers-intro">original interaction</a> by Stompers. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Stompers' intro - a red splash whose wordmark circle morphs open into the app, where a cartoon character walks an endlessly scrolling desert with parallax plants.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRed launch screen: STOMPERS wordmark inside a black circle ringed by darker red tunnels. Then the main screen: light sky, a walking character, a scrolling orange desert band with bushes and rocks, STOMPERS header, and a sign-up button pinned at bottom.\n\n## Motion spec\nPattern: iris-open transition into parallax walk loop, continuous.\n- The splash holds (~600ms), then the black circle expands like an iris until it swallows the screen (500ms, ease-in), revealing the main scene inside it.\n- The character walks in place with a bouncy cartoon gait (+-6px body bob, arms swinging, ~600ms stride cycle).\n- The desert scrolls leftward in three parallax layers: ground band fastest (~90px/s), bushes mid (~50px/s), far rocks slow (~25px/s); each plant enters from the right, drifts through, exits left.\n- The STOMPERS header arcs in letter by letter on a curve (60ms stagger, spring stiffness 300 damping 16) once on entry.\n\n## Calibration\n- The iris must read as the splash circle growing, not a circular fade - keep its edge crisp.\n- Parallax speed ratios stay locked; independent drift between layers breaks the depth.\n\n## Reduced motion\nSplash crossfades; character and plants hold static.\n\n## Don't miss\n- The character's footfalls sync with the ground scroll - feet must not skate.\n- The wordmark on the splash is identical to the header that arcs in; the intro is one continuous brand moment."</script>
+</body></html>

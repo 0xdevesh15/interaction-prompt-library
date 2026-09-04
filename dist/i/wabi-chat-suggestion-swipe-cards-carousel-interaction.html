@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wabi Chat Suggestion Swipe Cards Carousel Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Wabi Chat Suggestion Swipe Cards Carousel Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/wabi-chat-suggestion-swipe-cards-carousel-interaction"><b>Wabi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wabi-chat-suggestion-swipe-cards-carousel-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wabi-chat-suggestion-swipe-cards-carousel-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Wabi&#x27;s chat suggestions - a swipeable carousel of suggestion cards (&quot;Daily motivational quotes&quot;, &quot;Morning meetings briefing&quot;, &quot;A gratitude journal&quot;) where tapping a card&#x27;s action button morphs the card&#x27;s text into the chat input field and raises the keyboard.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c93c99376d4fef5f6c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c93c99376d4fef5f6c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-wabi-chat-suggestion-swipe-cards-carousel-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Wabi&#x27;s chat suggestions - a swipeable carousel of suggestion cards (&quot;Daily motivational quotes&quot;, &quot;Morning meetings briefing&quot;, &quot;A gratitude journal&quot;) where tapping a card&#x27;s action button morphs the card&#x27;s text into the chat input field and raises the keyboard.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White chat screen: close X top-right, &quot;Try something like...&quot; label, a carousel of white suggestion cards (title, two-line description, &quot;Tap it&quot; button) with the next card peeking, and the chat input pinned at bottom: &quot;What should we make?&quot; placeholder, + button, mic. Final frame: keyboard up with the suggestion text sitting in the input and a send arrow.
+
+## Motion spec
+Pattern: card-to-input text flight, ~450ms.
+- Swipe: cards track the drag 1:1 with a slight stack tilt (+-3deg); release snaps to the nearest card (spring ~340/24).
+- Tap: the card scales up slightly (1 -&gt; 1.03, 150ms), then its title text lifts out and flies to the input field (400ms, ease-in-out, shrinking from card scale to input scale); the card collapses away (250ms).
+- Land: the text settles into the input (character cascade optional, 120ms), the keyboard rises (250ms), and the send arrow fills.
+- Refill: the next suggestion card slides into the freed slot (300ms, ease-out).
+
+## Calibration
+- The flying text is the card&#x27;s actual title - same string, continuous geometry.
+- The input stays pinned; the keyboard appears only after the text lands.
+
+## Reduced motion
+Card fades out; text appears in the input (200ms).
+
+## Don&#x27;t miss
+- The carousel and the morph both work - swiping never triggers the flight, tapping the button never swipes.
+- &quot;Try something like...&quot; stays put while cards move under it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card-to-input text flight, ~450ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/wabi-chat-suggestion-swipe-cards-carousel-interaction">original interaction</a> by Wabi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Wabi's chat suggestions - a swipeable carousel of suggestion cards (\"Daily motivational quotes\", \"Morning meetings briefing\", \"A gratitude journal\") where tapping a card's action button morphs the card's text into the chat input field and raises the keyboard.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite chat screen: close X top-right, \"Try something like...\" label, a carousel of white suggestion cards (title, two-line description, \"Tap it\" button) with the next card peeking, and the chat input pinned at bottom: \"What should we make?\" placeholder, + button, mic. Final frame: keyboard up with the suggestion text sitting in the input and a send arrow.\n\n## Motion spec\nPattern: card-to-input text flight, ~450ms.\n- Swipe: cards track the drag 1:1 with a slight stack tilt (+-3deg); release snaps to the nearest card (spring ~340/24).\n- Tap: the card scales up slightly (1 -> 1.03, 150ms), then its title text lifts out and flies to the input field (400ms, ease-in-out, shrinking from card scale to input scale); the card collapses away (250ms).\n- Land: the text settles into the input (character cascade optional, 120ms), the keyboard rises (250ms), and the send arrow fills.\n- Refill: the next suggestion card slides into the freed slot (300ms, ease-out).\n\n## Calibration\n- The flying text is the card's actual title - same string, continuous geometry.\n- The input stays pinned; the keyboard appears only after the text lands.\n\n## Reduced motion\nCard fades out; text appears in the input (200ms).\n\n## Don't miss\n- The carousel and the morph both work - swiping never triggers the flight, tapping the button never swipes.\n- \"Try something like...\" stays put while cards move under it."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Button to Sheet Button Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Button to Sheet Button Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-button-to-sheet-button-morph-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-button-to-sheet-button-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-button-to-sheet-button-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s remove-wallet confirmation - on the light &quot;Remove Wallet&quot; screen with its red NFT Vault card, tapping the red Continue morphs the button into an &quot;Are you sure?&quot; bottom sheet with Cancel / Continue actions; canceling collapses the sheet back into the original button seamlessly.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895032f7f889f3d1b4490/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895032f7f889f3d1b4490/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-button-to-sheet-button-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s remove-wallet confirmation - on the light &quot;Remove Wallet&quot; screen with its red NFT Vault card, tapping the red Continue morphs the button into an &quot;Are you sure?&quot; bottom sheet with Cancel / Continue actions; canceling collapses the sheet back into the original button seamlessly.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light &quot;Remove Wallet&quot; screen: subcopy &quot;This wallet will be permanently removed from your device&quot;, a red wallet card (&quot;0x553c...3370&quot;, &quot;NFT Vault&quot;, &quot;1 ETH&quot;, &quot;Back Up Now&quot; tag), and a red &quot;Continue&quot; pill at the bottom. The sheet: warning icon, &quot;Are you sure?&quot;, explainer text, X close, and a button pair - light &quot;Cancel&quot; and red &quot;Continue&quot;.
+
+## Motion spec
+Pattern: button-to-sheet morph with reversible collapse.
+- Tap Continue: the red pill expands upward into the sheet (height grows, corner radius 28 -&gt; 20pt, spring ~300/18), the screen dimming (scrim 40%) as the sheet body fades in (warning icon popping at 100ms, text at 160ms).
+- The red Continue persists as the sheet&#x27;s right button - same red, same weight - while &quot;Cancel&quot; materializes beside it (fade + scale 0.9 -&gt; 1, 200ms).
+- Tap Cancel or X: the sheet collapses back into the red pill (reverse spring), the scrim lifting as the button settles with a small bounce (scale 1.04 -&gt; 1, spring ~340/16).
+- Tap the sheet&#x27;s Continue: the sheet slides down fully (250ms) and the flow proceeds.
+
+## Calibration
+- Red carries the danger meaning end to end - the morph keeps the color continuous.
+- The expansion reads as the button opening up, not a new element arriving.
+
+## Reduced motion
+Button and sheet crossfade (200ms) with a 40pt slide.
+
+## Don&#x27;t miss
+- The wallet card stays fully visible above the sheet - the thing being deleted remains in view.
+- The warning icon is a thin-line alert circle, matching the app&#x27;s quiet tone despite the red.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">button-to-sheet morph with reversible collapse.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-button-to-sheet-button-morph-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's remove-wallet confirmation - on the light \"Remove Wallet\" screen with its red NFT Vault card, tapping the red Continue morphs the button into an \"Are you sure?\" bottom sheet with Cancel / Continue actions; canceling collapses the sheet back into the original button seamlessly.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight \"Remove Wallet\" screen: subcopy \"This wallet will be permanently removed from your device\", a red wallet card (\"0x553c...3370\", \"NFT Vault\", \"1 ETH\", \"Back Up Now\" tag), and a red \"Continue\" pill at the bottom. The sheet: warning icon, \"Are you sure?\", explainer text, X close, and a button pair - light \"Cancel\" and red \"Continue\".\n\n## Motion spec\nPattern: button-to-sheet morph with reversible collapse.\n- Tap Continue: the red pill expands upward into the sheet (height grows, corner radius 28 -> 20pt, spring ~300/18), the screen dimming (scrim 40%) as the sheet body fades in (warning icon popping at 100ms, text at 160ms).\n- The red Continue persists as the sheet's right button - same red, same weight - while \"Cancel\" materializes beside it (fade + scale 0.9 -> 1, 200ms).\n- Tap Cancel or X: the sheet collapses back into the red pill (reverse spring), the scrim lifting as the button settles with a small bounce (scale 1.04 -> 1, spring ~340/16).\n- Tap the sheet's Continue: the sheet slides down fully (250ms) and the flow proceeds.\n\n## Calibration\n- Red carries the danger meaning end to end - the morph keeps the color continuous.\n- The expansion reads as the button opening up, not a new element arriving.\n\n## Reduced motion\nButton and sheet crossfade (200ms) with a 40pt slide.\n\n## Don't miss\n- The wallet card stays fully visible above the sheet - the thing being deleted remains in view.\n- The warning icon is a thin-line alert circle, matching the app's quiet tone despite the red."</script>
+</body></html>

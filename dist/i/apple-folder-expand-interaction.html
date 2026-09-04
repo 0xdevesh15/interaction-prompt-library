@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Folder Expand Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Folder Expand Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-folder-expand-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-folder-expand-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-folder-expand-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the iOS home screen folder - tapping a folder icon springs it open into a named grid of apps over a blurred home screen, and tapping outside springs it back shut.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775764ff936951f1cd6fc29/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775764ff936951f1cd6fc29/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-folder-expand-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the iOS home screen folder - tapping a folder icon springs it open into a named grid of apps over a blurred home screen, and tapping outside springs it back shut.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+iPhone home screen: wallpaper, a single folder icon top-left with a 2x2 mini-app preview, the dock at the bottom. Open state: the folder&#x27;s name as a large header and its apps in a grid over a dimmed, blurred home screen.
+
+## Motion spec
+Pattern: spring-expand container with background blur, ~500ms.
+- Tap the folder: it scales up from its icon position into the open container (spring stiffness 300 damping 25), its frame growing from the icon&#x27;s bounds to the full folder card.
+- In the same beat, the home screen behind dims and blurs (300ms, ease-out) and the dock slides down slightly (200ms).
+- The folder&#x27;s apps fade in to their grid slots with a 40ms stagger, row by row, each settling with a small overshoot.
+- The folder name fades in above the grid (250ms) last.
+- Tap outside or on the name: everything reverses - the apps stagger out, the card springs back into the icon&#x27;s exact bounds, the blur and dim lift.
+
+## Calibration
+- The container grows from the icon&#x27;s position, not the screen center - the icon must visibly become the card.
+- The blur ramps with the expand, never fully on at frame one.
+
+## Reduced motion
+Folder crossfades open over the dimmed screen; no position spring.
+
+## Don&#x27;t miss
+- The mini-app preview inside the closed icon crossfades into the real first row of apps.
+- The status bar stays sharp - only the wallpaper and icons behind the folder blur.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring-expand container with background blur, ~500ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-folder-expand-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the iOS home screen folder - tapping a folder icon springs it open into a named grid of apps over a blurred home screen, and tapping outside springs it back shut.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\niPhone home screen: wallpaper, a single folder icon top-left with a 2x2 mini-app preview, the dock at the bottom. Open state: the folder's name as a large header and its apps in a grid over a dimmed, blurred home screen.\n\n## Motion spec\nPattern: spring-expand container with background blur, ~500ms.\n- Tap the folder: it scales up from its icon position into the open container (spring stiffness 300 damping 25), its frame growing from the icon's bounds to the full folder card.\n- In the same beat, the home screen behind dims and blurs (300ms, ease-out) and the dock slides down slightly (200ms).\n- The folder's apps fade in to their grid slots with a 40ms stagger, row by row, each settling with a small overshoot.\n- The folder name fades in above the grid (250ms) last.\n- Tap outside or on the name: everything reverses - the apps stagger out, the card springs back into the icon's exact bounds, the blur and dim lift.\n\n## Calibration\n- The container grows from the icon's position, not the screen center - the icon must visibly become the card.\n- The blur ramps with the expand, never fully on at frame one.\n\n## Reduced motion\nFolder crossfades open over the dimmed screen; no position spring.\n\n## Don't miss\n- The mini-app preview inside the closed icon crossfades into the real first row of apps.\n- The status bar stays sharp - only the wallpaper and icons behind the folder blur."</script>
+</body></html>

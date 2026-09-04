@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brainly Splash Expert Solution Story - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Brainly Splash Expert Solution Story</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/brainly-splash-expert-solution-story"><b>Brainly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brainly-splash-expert-solution-story">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brainly-splash-expert-solution-story">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Brainly&#x27;s expert-solutions onboarding story - on a light blue screen, an open book with Explanation, Tips, and Solution tabs explodes into a floating grid of subject books, then reassembles into an expert character among book stacks, looping.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8651961d73e2622c61e6d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8651961d73e2622c61e6d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-brainly-splash-expert-solution-story.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Brainly&#x27;s expert-solutions onboarding story - on a light blue screen, an open book with Explanation, Tips, and Solution tabs explodes into a floating grid of subject books, then reassembles into an expert character among book stacks, looping.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light blue onboarding screen: Brainly logo, CLOSE, headline &quot;Step-by-step expert solutions&quot; with sub-line, page dots, JOIN FOR FREE and LOG IN buttons fixed at the bottom. The upper stage cycles three compositions: (1) an open book with colored tabs labeled Explanation, Tips, Solution; (2) a loose grid of floating colored book covers; (3) a green-haired expert holding a book beside book stacks and a bar chart.
+
+## Motion spec
+Pattern: looping three-beat illustration morph.
+- Beat 1: the tabbed book floats gently (translateY +-6px, 2.5s sine) with its tabs bobbing out of phase.
+- Morph to beat 2: the book&#x27;s pages and tabs fly apart and re-layout as the floating book grid (each piece travels on its own arc over ~500ms, ease-in-out), then the grid drifts subtly.
+- Morph to beat 3: the grid books slide and scale into the expert scene - spines become the book stacks, covers shrink away, the expert pops in last (spring stiffness ~350, damping ~18).
+- The loop holds each beat ~1.5s before morphing; after beat 3 it morphs back to beat 1.
+- Fixed UI (headline, buttons) never animates.
+
+## Calibration
+- Pieces should travel as a swarm, not in lockstep - randomize each piece&#x27;s path timing by +-60ms.
+- The expert pop is the only true spring; the morphs themselves are smooth tweens.
+
+## Reduced motion
+Crossfade between the three compositions (250ms each), no traveling pieces.
+
+## Don&#x27;t miss
+- The tabs (Explanation, Tips, Solution) are readable labels in beat 1 - they are the product promise, keep them legible.
+- The loop is seamless: the last morph returns to the exact first composition.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping three-beat illustration morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/brainly-splash-expert-solution-story">original interaction</a> by Brainly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Brainly's expert-solutions onboarding story - on a light blue screen, an open book with Explanation, Tips, and Solution tabs explodes into a floating grid of subject books, then reassembles into an expert character among book stacks, looping.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight blue onboarding screen: Brainly logo, CLOSE, headline \"Step-by-step expert solutions\" with sub-line, page dots, JOIN FOR FREE and LOG IN buttons fixed at the bottom. The upper stage cycles three compositions: (1) an open book with colored tabs labeled Explanation, Tips, Solution; (2) a loose grid of floating colored book covers; (3) a green-haired expert holding a book beside book stacks and a bar chart.\n\n## Motion spec\nPattern: looping three-beat illustration morph.\n- Beat 1: the tabbed book floats gently (translateY +-6px, 2.5s sine) with its tabs bobbing out of phase.\n- Morph to beat 2: the book's pages and tabs fly apart and re-layout as the floating book grid (each piece travels on its own arc over ~500ms, ease-in-out), then the grid drifts subtly.\n- Morph to beat 3: the grid books slide and scale into the expert scene - spines become the book stacks, covers shrink away, the expert pops in last (spring stiffness ~350, damping ~18).\n- The loop holds each beat ~1.5s before morphing; after beat 3 it morphs back to beat 1.\n- Fixed UI (headline, buttons) never animates.\n\n## Calibration\n- Pieces should travel as a swarm, not in lockstep - randomize each piece's path timing by +-60ms.\n- The expert pop is the only true spring; the morphs themselves are smooth tweens.\n\n## Reduced motion\nCrossfade between the three compositions (250ms each), no traveling pieces.\n\n## Don't miss\n- The tabs (Explanation, Tips, Solution) are readable labels in beat 1 - they are the product promise, keep them legible.\n- The loop is seamless: the last morph returns to the exact first composition."</script>
+</body></html>

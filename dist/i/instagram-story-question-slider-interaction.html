@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Story Question Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Story Question Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-story-question-slider-interaction"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-story-question-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-story-question-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Instagram Stories&#x27; emoji slider sticker - dragging the emoji handle along its track pops a giant springy version of the emoji that grows with the drag position, live over the story canvas.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67601c74dc9a30392f978c6a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67601c74dc9a30392f978c6a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-story-question-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Instagram Stories&#x27; emoji slider sticker - dragging the emoji handle along its track pops a giant springy version of the emoji that grows with the drag position, live over the story canvas.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Instagram Story composer on a purple canvas: an &quot;Ask a question...&quot;-style sticker card holding the emoji slider - a thin track with a heart-eyes emoji as its draggable handle. The keyboard sits open below with an emoji suggestions row above it. While dragging, a giant version of the emoji floats above the sticker, scaling with the handle&#x27;s position.
+
+## Motion spec
+Pattern: emoji slider with giant springy preview, gesture-driven.
+- The handle tracks the horizontal drag 1:1 along the track, the track&#x27;s filled portion tinting behind it.
+- On touch-down, the giant emoji springs in above the sticker (scale 0.3 to 1, spring stiffness 350 damping 15, a juicy overshoot), floating with a slight bob.
+- The giant emoji scales with the slider value (0.8x at the left end to 1.6x at the right) and wiggles (rotation plus/minus 6 degrees) as the value changes.
+- On release, the handle settles with a small bounce (spring stiffness 400 damping 18) and the giant emoji shrinks away (scale to 0.3, 200ms, ease-in).
+- The sticker&#x27;s own emoji handle keeps a subtle idle pulse when untouched.
+
+## Calibration
+- The giant preview is the same emoji as the handle - swapping the handle&#x27;s emoji swaps the preview.
+- The preview never blocks the track: it floats above, translucent to touches.
+
+## Reduced motion
+Preview scales without bounce or wiggle.
+
+## Don&#x27;t miss
+- The slider sits inside the story sticker card, which stays put while the handle moves.
+- The springy overshoot on preview entry is the personality - keep it big.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">emoji slider with giant springy preview, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-story-question-slider-interaction">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Instagram Stories' emoji slider sticker - dragging the emoji handle along its track pops a giant springy version of the emoji that grows with the drag position, live over the story canvas.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Instagram Story composer on a purple canvas: an \"Ask a question...\"-style sticker card holding the emoji slider - a thin track with a heart-eyes emoji as its draggable handle. The keyboard sits open below with an emoji suggestions row above it. While dragging, a giant version of the emoji floats above the sticker, scaling with the handle's position.\n\n## Motion spec\nPattern: emoji slider with giant springy preview, gesture-driven.\n- The handle tracks the horizontal drag 1:1 along the track, the track's filled portion tinting behind it.\n- On touch-down, the giant emoji springs in above the sticker (scale 0.3 to 1, spring stiffness 350 damping 15, a juicy overshoot), floating with a slight bob.\n- The giant emoji scales with the slider value (0.8x at the left end to 1.6x at the right) and wiggles (rotation plus/minus 6 degrees) as the value changes.\n- On release, the handle settles with a small bounce (spring stiffness 400 damping 18) and the giant emoji shrinks away (scale to 0.3, 200ms, ease-in).\n- The sticker's own emoji handle keeps a subtle idle pulse when untouched.\n\n## Calibration\n- The giant preview is the same emoji as the handle - swapping the handle's emoji swaps the preview.\n- The preview never blocks the track: it floats above, translucent to touches.\n\n## Reduced motion\nPreview scales without bounce or wiggle.\n\n## Don't miss\n- The slider sits inside the story sticker card, which stays put while the handle moves.\n- The springy overshoot on preview entry is the personality - keep it big."</script>
+</body></html>

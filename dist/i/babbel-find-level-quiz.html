@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Babbel Find Level Quiz - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Babbel Find Level Quiz</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/babbel-find-level-quiz"><b>Babbel</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/babbel-find-level-quiz">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/babbel-find-level-quiz">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Babbel&#x27;s placement quiz - a mascot-spinner load into fill-in-the-blank questions with word banks and tile building, ending in a level-confirmation screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cbecbe06bd6fa0255e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cbecbe06bd6fa0255e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-babbel-find-level-quiz.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Babbel&#x27;s placement quiz - a mascot-spinner load into fill-in-the-blank questions with word banks and tile building, ending in a level-confirmation screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+From the Babbel home (&quot;Answer a few questions to find your level&quot; red card), the quiz opens: a loading spinner (a yellow rounded square with a check that morphs colors), then question screens - an image with a gapped sentence (&quot;Tu ___ Eduardo?&quot;), a word bank of pill options, a &quot;Confirm answer&quot; red button - and a final &quot;Confirming your level...&quot; screen citing the CEFR standard.
+
+## Motion spec
+Pattern: staged quiz flow with morphing loader.
+- Loader: the rounded-square badge cycles background colors (yellow to green, 400ms crossfades) while its check bounces (scaleY 0.8 to 1, 500ms loop); ~1.2s total.
+- Question enter: the photo slides down from the top (spring ~360/26), the sentence fades in, then word-bank pills slide up with 60ms stagger (translateY 20px to 0, spring ~400/24).
+- Tap a pill: it lifts into the sentence gap (arc path, 250ms, ease-out) and settles with a soft thud (scale 1.08 to 1, 150ms); the gap&#x27;s dashed underline becomes solid; Confirm answer enables (fills red, 150ms).
+- Tile questions: tapped tiles slide into the answer row in order (200ms each); tapping a placed tile returns it to the bank with the reverse arc.
+- Confirm: the button press ripples, the placed answer flashes green (correct) or shakes red (wrong, +-6px, 2 cycles of 100ms), then the next question slides in from the right (300ms).
+- Finale: &quot;Confirming your level...&quot; fades in with a small animated ellipsis; the CEFR note types in below (fade, 300ms).
+
+## Calibration
+- The pill-to-gap arc is the core delight - it must travel, not teleport.
+- Word bank order reshuffles per question; the animation timings do not change.
+
+## Reduced motion
+Pills fade into gaps; questions crossfade.
+
+## Don&#x27;t miss
+- The red is Babbel&#x27;s brand red and only appears on primary actions and the home card.
+- Incorrect answers shake in place - the quiz never navigates away on a wrong answer.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staged quiz flow with morphing loader.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/babbel-find-level-quiz">original interaction</a> by Babbel. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Babbel's placement quiz - a mascot-spinner load into fill-in-the-blank questions with word banks and tile building, ending in a level-confirmation screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFrom the Babbel home (\"Answer a few questions to find your level\" red card), the quiz opens: a loading spinner (a yellow rounded square with a check that morphs colors), then question screens - an image with a gapped sentence (\"Tu ___ Eduardo?\"), a word bank of pill options, a \"Confirm answer\" red button - and a final \"Confirming your level...\" screen citing the CEFR standard.\n\n## Motion spec\nPattern: staged quiz flow with morphing loader.\n- Loader: the rounded-square badge cycles background colors (yellow to green, 400ms crossfades) while its check bounces (scaleY 0.8 to 1, 500ms loop); ~1.2s total.\n- Question enter: the photo slides down from the top (spring ~360/26), the sentence fades in, then word-bank pills slide up with 60ms stagger (translateY 20px to 0, spring ~400/24).\n- Tap a pill: it lifts into the sentence gap (arc path, 250ms, ease-out) and settles with a soft thud (scale 1.08 to 1, 150ms); the gap's dashed underline becomes solid; Confirm answer enables (fills red, 150ms).\n- Tile questions: tapped tiles slide into the answer row in order (200ms each); tapping a placed tile returns it to the bank with the reverse arc.\n- Confirm: the button press ripples, the placed answer flashes green (correct) or shakes red (wrong, +-6px, 2 cycles of 100ms), then the next question slides in from the right (300ms).\n- Finale: \"Confirming your level...\" fades in with a small animated ellipsis; the CEFR note types in below (fade, 300ms).\n\n## Calibration\n- The pill-to-gap arc is the core delight - it must travel, not teleport.\n- Word bank order reshuffles per question; the animation timings do not change.\n\n## Reduced motion\nPills fade into gaps; questions crossfade.\n\n## Don't miss\n- The red is Babbel's brand red and only appears on primary actions and the home card.\n- Incorrect answers shake in place - the quiz never navigates away on a wrong answer."</script>
+</body></html>

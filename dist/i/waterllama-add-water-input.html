@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waterllama Add Water Input - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Waterllama Add Water Input</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/waterllama-add-water-input"><b>Waterllama</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waterllama-add-water-input">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waterllama-add-water-input">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Waterllama&#x27;s custom-amount sheet - type milliliters on a numeric keypad and each digit pops into the readout with a spring.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7ae9561d73e2622c3ba8e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7ae9561d73e2622c3ba8e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-waterllama-add-water-input.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Waterllama&#x27;s custom-amount sheet - type milliliters on a numeric keypad and each digit pops into the readout with a spring.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The home screen (big glass with teal water, &quot;250ml&quot;) dims under a white bottom sheet: a centered readout (digits + gray &quot;ml&quot;, &quot;Custom amount&quot; beneath), a teal &quot;+ WATER&quot; pill, and a numeric keypad with letter sub-legends.
+
+## Motion spec
+Pattern: springy per-digit input.
+- Sheet entrance: slides up over a 40% dim (spring ~360/28, 300ms); the readout shows a blinking caret.
+- Key press: the key highlights (gray-200 fill, instant) with a light haptic tick; the new digit enters the readout from below (translateY 14px + scale 0.7 to 1, spring ~480/22) while existing digits shift left with a quick spring (~420/26).
+- The &quot;ml&quot; unit stays pinned at the end, sliding with the digit group as it grows.
+- Backspace: the last digit pops out upward (reverse spring, 180ms) with a softer haptic.
+- The + WATER pill enables once a nonzero value exists (opacity 0.5 to 1, 150ms); tapping it presses (scale 0.95, 100ms), the sheet springs down, and the home glass&#x27;s water level tweens up to the new total (600ms ease-out with a small surface wobble).
+- Input clamps at 4 digits; extra taps bounce the readout horizontally (+-6px shake, 200ms) as refusal.
+
+## Calibration
+- Digit pop is quick and per-keystroke - typing fast should feel like stacking pops, not a queue.
+- Readout typography is large and centered; the unit never wraps or detaches.
+
+## Reduced motion
+Digits appear instantly; sheet fades.
+
+## Don&#x27;t miss
+- The keypad keeps iOS letter sub-legends (ABC, DEF...) - it&#x27;s a phone keypad, not a calculator.
+- The caret blinks only when the field is empty; once digits exist, it disappears.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy per-digit input.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/waterllama-add-water-input">original interaction</a> by Waterllama. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Waterllama's custom-amount sheet - type milliliters on a numeric keypad and each digit pops into the readout with a spring.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe home screen (big glass with teal water, \"250ml\") dims under a white bottom sheet: a centered readout (digits + gray \"ml\", \"Custom amount\" beneath), a teal \"+ WATER\" pill, and a numeric keypad with letter sub-legends.\n\n## Motion spec\nPattern: springy per-digit input.\n- Sheet entrance: slides up over a 40% dim (spring ~360/28, 300ms); the readout shows a blinking caret.\n- Key press: the key highlights (gray-200 fill, instant) with a light haptic tick; the new digit enters the readout from below (translateY 14px + scale 0.7 to 1, spring ~480/22) while existing digits shift left with a quick spring (~420/26).\n- The \"ml\" unit stays pinned at the end, sliding with the digit group as it grows.\n- Backspace: the last digit pops out upward (reverse spring, 180ms) with a softer haptic.\n- The + WATER pill enables once a nonzero value exists (opacity 0.5 to 1, 150ms); tapping it presses (scale 0.95, 100ms), the sheet springs down, and the home glass's water level tweens up to the new total (600ms ease-out with a small surface wobble).\n- Input clamps at 4 digits; extra taps bounce the readout horizontally (+-6px shake, 200ms) as refusal.\n\n## Calibration\n- Digit pop is quick and per-keystroke - typing fast should feel like stacking pops, not a queue.\n- Readout typography is large and centered; the unit never wraps or detaches.\n\n## Reduced motion\nDigits appear instantly; sheet fades.\n\n## Don't miss\n- The keypad keeps iOS letter sub-legends (ABC, DEF...) - it's a phone keypad, not a calculator.\n- The caret blinks only when the field is empty; once digits exist, it disappears."</script>
+</body></html>

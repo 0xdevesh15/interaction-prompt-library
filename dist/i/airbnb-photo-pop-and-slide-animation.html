@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Photo Pop and Slide Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Photo Pop and Slide Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-photo-pop-and-slide-animation"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-photo-pop-and-slide-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-photo-pop-and-slide-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Airbnb&#x27;s booking-sheet photo pop - a small photo stack pops in above the title, the top photo rotating and sliding aside to reveal a fanned trio.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cddd282b61e5db5afe6d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cddd282b61e5db5afe6d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-photo-pop-and-slide-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Airbnb&#x27;s booking-sheet photo pop - a small photo stack pops in above the title, the top photo rotating and sliding aside to reveal a fanned trio.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Airbnb booking sheet, white: &quot;Dinner and crafting with Paralympian Dani Aravich&quot; with Date / Guests / Total price rows below. Above the title: a stack of rounded-corner photos that starts as one small card and ends fanned as three.
+
+## Motion spec
+Pattern: photo stack pop and fan.
+- On sheet open, the top photo pops in at center above the title: scale 0 -&gt; 1 with spring ~350/14 (clear overshoot), starting upright.
+- 150ms later it rotates -8deg and slides left (translateX -55px, 300ms ease-out), revealing the second photo beneath, which pops the same way and fans right (+8deg, +55px).
+- The third photo stays centered and upright, ending slightly larger than the other two - a three-card fan.
+- Each card has a soft shadow that grows as it lifts; shadows settle with the springs.
+- The fan holds; on pull-to-dismiss, the cards collapse back into the stack in reverse order (200ms each).
+
+## Calibration
+- Cards are small (~64px) with ~10px corner radius - thumbnails, not heroes.
+- The fan is symmetric around the sheet&#x27;s center axis above the title.
+
+## Reduced motion
+The trio fades in already fanned (250ms).
+
+## Don&#x27;t miss
+- The pop is per-card with its own spring - they never move as a group.
+- The title and price rows below stay perfectly still during the fan.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">photo stack pop and fan.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-photo-pop-and-slide-animation">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Airbnb's booking-sheet photo pop - a small photo stack pops in above the title, the top photo rotating and sliding aside to reveal a fanned trio.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAirbnb booking sheet, white: \"Dinner and crafting with Paralympian Dani Aravich\" with Date / Guests / Total price rows below. Above the title: a stack of rounded-corner photos that starts as one small card and ends fanned as three.\n\n## Motion spec\nPattern: photo stack pop and fan.\n- On sheet open, the top photo pops in at center above the title: scale 0 -> 1 with spring ~350/14 (clear overshoot), starting upright.\n- 150ms later it rotates -8deg and slides left (translateX -55px, 300ms ease-out), revealing the second photo beneath, which pops the same way and fans right (+8deg, +55px).\n- The third photo stays centered and upright, ending slightly larger than the other two - a three-card fan.\n- Each card has a soft shadow that grows as it lifts; shadows settle with the springs.\n- The fan holds; on pull-to-dismiss, the cards collapse back into the stack in reverse order (200ms each).\n\n## Calibration\n- Cards are small (~64px) with ~10px corner radius - thumbnails, not heroes.\n- The fan is symmetric around the sheet's center axis above the title.\n\n## Reduced motion\nThe trio fades in already fanned (250ms).\n\n## Don't miss\n- The pop is per-card with its own spring - they never move as a group.\n- The title and price rows below stay perfectly still during the fan."</script>
+</body></html>

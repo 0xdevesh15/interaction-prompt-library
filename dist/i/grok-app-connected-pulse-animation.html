@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grok App Connected Pulse Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Grok App Connected Pulse Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/grok-app-connected-pulse-animation"><b>Grok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-app-connected-pulse-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-app-connected-pulse-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Grok&#x27;s app-connected modal - the Gmail icon sits center on a dark sheet while a deep red halo pulses behind it through the OAuth wait, then resolves into the &quot;Gmail is connected&quot; state with staggered text and a Chat with Grok button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220a83334b304cced4e5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220a83334b304cced4e5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-grok-app-connected-pulse-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Grok&#x27;s app-connected modal - the Gmail icon sits center on a dark sheet while a deep red halo pulses behind it through the OAuth wait, then resolves into the &quot;Gmail is connected&quot; state with staggered text and a Chat with Grok button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark modal sheet over the Grok app: close X top-left, centered app icon (Gmail) on a rounded dark tile. Connecting state: a &quot;Gmail&quot; label and a pill progress bar under the icon. Success state: &quot;Gmail is connected&quot; headline, subcopy, and a &quot;Chat with Grok&quot; button at the bottom.
+
+## Motion spec
+Pattern: ambient radial pulse behind the icon during async connect, then a staggered success reveal.
+- Connecting: a dark-red radial halo blooms behind the icon (scale 0.7 -&gt; 1.5, opacity 0.5 -&gt; 0, blur ~50px, 2s loop, ease-out) - a slow heartbeat glow.
+- The icon tile floats subtly (+/- 3px, 2.5s).
+- On success: the halo flares once (scale -&gt; 1.8, 500ms) and fades to black.
+- &quot;Gmail is connected&quot; fades up from 8px (250ms), subcopy follows 80ms later (200ms), and the button slides up (translate 16px -&gt; 0, 300ms, ease-out) last.
+
+## Calibration
+- The pulse is very dark red on near-black - felt more than seen; edges fully diffuse.
+- Success is quiet: no confetti, just the settling stagger.
+
+## Reduced motion
+Halo holds a static soft glow; success elements fade in together (200ms).
+
+## Don&#x27;t miss
+- The icon never changes - the state change happens around it.
+- The connecting label and pill disappear the moment the headline starts in.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient radial pulse behind the icon during async connect, then a staggered success reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/grok-app-connected-pulse-animation">original interaction</a> by Grok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Grok's app-connected modal - the Gmail icon sits center on a dark sheet while a deep red halo pulses behind it through the OAuth wait, then resolves into the \"Gmail is connected\" state with staggered text and a Chat with Grok button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark modal sheet over the Grok app: close X top-left, centered app icon (Gmail) on a rounded dark tile. Connecting state: a \"Gmail\" label and a pill progress bar under the icon. Success state: \"Gmail is connected\" headline, subcopy, and a \"Chat with Grok\" button at the bottom.\n\n## Motion spec\nPattern: ambient radial pulse behind the icon during async connect, then a staggered success reveal.\n- Connecting: a dark-red radial halo blooms behind the icon (scale 0.7 -> 1.5, opacity 0.5 -> 0, blur ~50px, 2s loop, ease-out) - a slow heartbeat glow.\n- The icon tile floats subtly (+/- 3px, 2.5s).\n- On success: the halo flares once (scale -> 1.8, 500ms) and fades to black.\n- \"Gmail is connected\" fades up from 8px (250ms), subcopy follows 80ms later (200ms), and the button slides up (translate 16px -> 0, 300ms, ease-out) last.\n\n## Calibration\n- The pulse is very dark red on near-black - felt more than seen; edges fully diffuse.\n- Success is quiet: no confetti, just the settling stagger.\n\n## Reduced motion\nHalo holds a static soft glow; success elements fade in together (200ms).\n\n## Don't miss\n- The icon never changes - the state change happens around it.\n- The connecting label and pill disappear the moment the headline starts in."</script>
+</body></html>

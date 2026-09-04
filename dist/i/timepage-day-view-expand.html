@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Timepage Day View Expand - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Timepage Day View Expand</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/timepage-day-view-expand"><b>Timepage</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/timepage-day-view-expand">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/timepage-day-view-expand">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Timepage&#x27;s day-view expand - tap a day and the hourly timeline springs full-width, shoving the date sidebar off the left edge while events stretch into place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb77225b7b88f78c6d64/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb77225b7b88f78c6d64/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-timepage-day-view-expand.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Timepage&#x27;s day-view expand - tap a day and the hourly timeline springs full-width, shoving the date sidebar off the left edge while events stretch into place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A deep-purple calendar: a narrow date sidebar on the left (stacked day pills, the selected one light) beside a compressed hourly timeline (hour labels 8-13, event blocks squeezed narrow). Expanded state: full-width day view with &quot;TODAY / AUGUST 31&quot; header, a readable event card, and a bottom action bar.
+
+## Motion spec
+Pattern: springy sidebar-push expansion.
+- Tap a day pill: the sidebar accelerates off-screen left (translateX -100%, 300ms, cubic-bezier(0.5,0,0.2,1)) while the timeline expands to fill the freed width with a spring (~340/24) - the expansion slightly overshoots and settles, giving the springiness.
+- Hour labels and event blocks don&#x27;t just widen: event cards expand from their compressed columns with individual springs (staggered 30ms, ~360/26), their titles fading in once the card is wide enough to hold them (opacity 150ms, threshold-based).
+- The header (&quot;TODAY&quot; + date) slides down from -20px with a soft spring (~380/26) and fades in, arriving just after the timeline lands.
+- The bottom action bar slides up in the same beat (translateY 100% to 0, 250ms, ease-out).
+- Collapse (tap the back arrow or the day again): exact reverse - sidebar springs back in from the left, events squeeze and their titles fade first.
+
+## Calibration
+- Palette: deep purple background, light event cards, white text - keep Timepage&#x27;s high-contrast mood.
+- The expansion must read as ONE gesture: sidebar exit and timeline grow share the timeline, no dead gap between them.
+
+## Reduced motion
+Crossfade between compressed and expanded layouts; no springs.
+
+## Don&#x27;t miss
+- The compressed timeline keeps showing real hour labels and event slivers - it&#x27;s a peek, not a placeholder.
+- The selected day pill is the anchor: it visually hands off to the &quot;TODAY&quot; header as the sidebar leaves.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy sidebar-push expansion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/timepage-day-view-expand">original interaction</a> by Timepage. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Timepage's day-view expand - tap a day and the hourly timeline springs full-width, shoving the date sidebar off the left edge while events stretch into place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA deep-purple calendar: a narrow date sidebar on the left (stacked day pills, the selected one light) beside a compressed hourly timeline (hour labels 8-13, event blocks squeezed narrow). Expanded state: full-width day view with \"TODAY / AUGUST 31\" header, a readable event card, and a bottom action bar.\n\n## Motion spec\nPattern: springy sidebar-push expansion.\n- Tap a day pill: the sidebar accelerates off-screen left (translateX -100%, 300ms, cubic-bezier(0.5,0,0.2,1)) while the timeline expands to fill the freed width with a spring (~340/24) - the expansion slightly overshoots and settles, giving the springiness.\n- Hour labels and event blocks don't just widen: event cards expand from their compressed columns with individual springs (staggered 30ms, ~360/26), their titles fading in once the card is wide enough to hold them (opacity 150ms, threshold-based).\n- The header (\"TODAY\" + date) slides down from -20px with a soft spring (~380/26) and fades in, arriving just after the timeline lands.\n- The bottom action bar slides up in the same beat (translateY 100% to 0, 250ms, ease-out).\n- Collapse (tap the back arrow or the day again): exact reverse - sidebar springs back in from the left, events squeeze and their titles fade first.\n\n## Calibration\n- Palette: deep purple background, light event cards, white text - keep Timepage's high-contrast mood.\n- The expansion must read as ONE gesture: sidebar exit and timeline grow share the timeline, no dead gap between them.\n\n## Reduced motion\nCrossfade between compressed and expanded layouts; no springs.\n\n## Don't miss\n- The compressed timeline keeps showing real hour labels and event slivers - it's a peek, not a placeholder.\n- The selected day pill is the anchor: it visually hands off to the \"TODAY\" header as the sidebar leaves."</script>
+</body></html>

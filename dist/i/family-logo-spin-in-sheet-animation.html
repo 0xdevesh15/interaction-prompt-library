@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Logo Spin in Sheet Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Logo Spin in Sheet Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-logo-spin-in-sheet-animation"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-logo-spin-in-sheet-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-logo-spin-in-sheet-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Family&#x27;s onboarding sheet intro - from the light &quot;Your Family&quot; settings list, a blue-branded bottom sheet slides up while the Family logo spins and scales into place with a springy settle, above the title, explainer copy, and a blue &quot;Got It&quot; pill.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895132f7f889f3d1b44c3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895132f7f889f3d1b44c3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-logo-spin-in-sheet-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Family&#x27;s onboarding sheet intro - from the light &quot;Your Family&quot; settings list, a blue-branded bottom sheet slides up while the Family logo spins and scales into place with a springy settle, above the title, explainer copy, and a blue &quot;Got It&quot; pill.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light settings list &quot;Your Family&quot;: rows for Address Book, Preferences, Browser Settings, Chat Settings, Backups &amp; Security, Notifications, App Icon, Help &amp; Support, Advanced. The sheet: blue header block carrying the white Family logo, &quot;Your Family&quot; title, &quot;Learn more about Your Family&quot; subhead, two explainer paragraphs (&quot;Your Family is the centralized hub...&quot; and &quot;Global control at your fingertips&quot;), X close, and a blue &quot;Got It&quot; pill.
+
+## Motion spec
+Pattern: sheet entrance with spinning logo settle.
+- Trigger: the settings list dims (scrim 40%) as the sheet slides up (spring ~300/20, 350ms).
+- The logo starts rotated -120deg at scale 0.5 and spins upright while growing (rotation to 0deg, scale to 1, 500ms, ease-out), then overshoots (scale 1.08, rotation +6deg) and settles (spring ~300/14, 300ms) - a playful double-beat.
+- Title and subhead fade in under the logo (200ms, delayed 250ms); paragraphs stagger up (60ms apart, translateY 8pt -&gt; 0).
+- The blue &quot;Got It&quot; pill rises last (spring ~320/18, 250ms).
+- Tap Got It or X: the logo spins back 90deg while shrinking (200ms) and the sheet slides down (250ms).
+
+## Calibration
+- The logo is the only moving part during the first 250ms - the spin owns the entrance.
+- Blue is reserved for the header block and the pill.
+
+## Reduced motion
+Logo fades in upright (200ms); sheet slides without spring.
+
+## Don&#x27;t miss
+- The sheet&#x27;s header is a full-bleed blue block, not a floating icon.
+- The settings list stays legible behind the scrim.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet entrance with spinning logo settle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-logo-spin-in-sheet-animation">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Family's onboarding sheet intro - from the light \"Your Family\" settings list, a blue-branded bottom sheet slides up while the Family logo spins and scales into place with a springy settle, above the title, explainer copy, and a blue \"Got It\" pill.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight settings list \"Your Family\": rows for Address Book, Preferences, Browser Settings, Chat Settings, Backups & Security, Notifications, App Icon, Help & Support, Advanced. The sheet: blue header block carrying the white Family logo, \"Your Family\" title, \"Learn more about Your Family\" subhead, two explainer paragraphs (\"Your Family is the centralized hub...\" and \"Global control at your fingertips\"), X close, and a blue \"Got It\" pill.\n\n## Motion spec\nPattern: sheet entrance with spinning logo settle.\n- Trigger: the settings list dims (scrim 40%) as the sheet slides up (spring ~300/20, 350ms).\n- The logo starts rotated -120deg at scale 0.5 and spins upright while growing (rotation to 0deg, scale to 1, 500ms, ease-out), then overshoots (scale 1.08, rotation +6deg) and settles (spring ~300/14, 300ms) - a playful double-beat.\n- Title and subhead fade in under the logo (200ms, delayed 250ms); paragraphs stagger up (60ms apart, translateY 8pt -> 0).\n- The blue \"Got It\" pill rises last (spring ~320/18, 250ms).\n- Tap Got It or X: the logo spins back 90deg while shrinking (200ms) and the sheet slides down (250ms).\n\n## Calibration\n- The logo is the only moving part during the first 250ms - the spin owns the entrance.\n- Blue is reserved for the header block and the pill.\n\n## Reduced motion\nLogo fades in upright (200ms); sheet slides without spring.\n\n## Don't miss\n- The sheet's header is a full-bleed blue block, not a floating icon.\n- The settings list stays legible behind the scrim."</script>
+</body></html>

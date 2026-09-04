@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FocusFlight Onboarding Sequence Scale Back Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>FocusFlight Onboarding Sequence Scale Back Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/focusflight-onboarding-sequence-scale-back-interaction"><b>Focusflight</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/focusflight-onboarding-sequence-scale-back-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/focusflight-onboarding-sequence-scale-back-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: FocusFlight&#x27;s onboarding stack - each answer advances to a new step that slides in front while the previous step scales back, fades, and blurs into a receding stack (&quot;Welcome aboard!&quot;, &quot;Do you often feel distracted?&quot;, &quot;...hard to focus?&quot;, &quot;There&#x27;s a skill called Hyperfocus.&quot;, &quot;Build a focused environment...&quot;, &quot;That&#x27;s why we created FocusFlight&quot;, ending on a dark route map).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc7339020d76d55e07d7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc7339020d76d55e07d7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-focusflight-onboarding-sequence-scale-back-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: FocusFlight&#x27;s onboarding stack - each answer advances to a new step that slides in front while the previous step scales back, fades, and blurs into a receding stack (&quot;Welcome aboard!&quot;, &quot;Do you often feel distracted?&quot;, &quot;...hard to focus?&quot;, &quot;There&#x27;s a skill called Hyperfocus.&quot;, &quot;Build a focused environment...&quot;, &quot;That&#x27;s why we created FocusFlight&quot;, ending on a dark route map).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screens with left-aligned white text, one idea per step, and a bottom pill button per step (&quot;Hi!&quot;, &quot;Yes, I do&quot;, &quot;What&#x27;s the key to hyperfocus?&quot;, &quot;How can I get into hyperfocus?&quot;, &quot;Let&#x27;s get started&quot;). Behind the active step, up to two previous steps sit scaled down and blurred.
+
+## Motion spec
+Pattern: scale-back deck advance, ~500ms.
+- Advance: the current step scales to 0.92, fades to 30%, and blurs (8px) moving back (spring ~300/24, 400ms) while the next step rises from 40px below at full scale (same spring).
+- Depth: the step two-back scales further (0.85, 10% opacity, 16px blur) and older steps fade out entirely.
+- Button: each step&#x27;s pill fades in +100ms after its text lands.
+- Finale: the last step crossfades into the dark map (400ms) with the yellow plane marker pulsing once (scale 1 -&gt; 1.3 -&gt; 1, 400ms).
+
+## Calibration
+- Text alignment is identical across steps - only scale/blur/opacity separate the layers.
+- No sideways movement: the deck recedes straight back.
+
+## Reduced motion
+Steps crossfade (300ms) without scaling or stacking.
+
+## Don&#x27;t miss
+- The receding stack must be visible behind the current step - that depth is the whole effect.
+- Buttons are per-step and travel with their card.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scale-back deck advance, ~500ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/focusflight-onboarding-sequence-scale-back-interaction">original interaction</a> by Focusflight. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: FocusFlight's onboarding stack - each answer advances to a new step that slides in front while the previous step scales back, fades, and blurs into a receding stack (\"Welcome aboard!\", \"Do you often feel distracted?\", \"...hard to focus?\", \"There's a skill called Hyperfocus.\", \"Build a focused environment...\", \"That's why we created FocusFlight\", ending on a dark route map).\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screens with left-aligned white text, one idea per step, and a bottom pill button per step (\"Hi!\", \"Yes, I do\", \"What's the key to hyperfocus?\", \"How can I get into hyperfocus?\", \"Let's get started\"). Behind the active step, up to two previous steps sit scaled down and blurred.\n\n## Motion spec\nPattern: scale-back deck advance, ~500ms.\n- Advance: the current step scales to 0.92, fades to 30%, and blurs (8px) moving back (spring ~300/24, 400ms) while the next step rises from 40px below at full scale (same spring).\n- Depth: the step two-back scales further (0.85, 10% opacity, 16px blur) and older steps fade out entirely.\n- Button: each step's pill fades in +100ms after its text lands.\n- Finale: the last step crossfades into the dark map (400ms) with the yellow plane marker pulsing once (scale 1 -> 1.3 -> 1, 400ms).\n\n## Calibration\n- Text alignment is identical across steps - only scale/blur/opacity separate the layers.\n- No sideways movement: the deck recedes straight back.\n\n## Reduced motion\nSteps crossfade (300ms) without scaling or stacking.\n\n## Don't miss\n- The receding stack must be visible behind the current step - that depth is the whole effect.\n- Buttons are per-step and travel with their card."</script>
+</body></html>

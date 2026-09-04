@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Perceived Exertion Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Perceived Exertion Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-perceived-exertion-slider"><b>Gentler Streak</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-perceived-exertion-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-perceived-exertion-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Gentler Streak&#x27;s perceived-exertion slider - drag across a rainbow ramp while the heart mascot morphs through effort faces and a hatched &quot;usual range&quot; band marks where you should land.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1d371d29849d7bdc13/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1d371d29849d7bdc13/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-perceived-exertion-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Gentler Streak&#x27;s perceived-exertion slider - drag across a rainbow ramp while the heart mascot morphs through effort faces and a hatched &quot;usual range&quot; band marks where you should land.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A &quot;Perceived Exertion&quot; sheet (&quot;How did it feel?&quot;): a heart mascot whose face and color shift with effort (calm at Light, sweaty at Tiring, strained at Hard, dark red at Maximum Effort, serene at Almost Effortless), a one-line description per zone, a horizontal rainbow-gradient slider (blue to purple) with a hatched &quot;USUAL RANGE&quot; band and an &quot;ABOVE USUAL RANGE&quot; pill warning, and a Clear Entry link.
+
+## Motion spec
+Pattern: zone-morphing mascot slider.
+- Drag: the ring handle tracks 1:1 along the gradient track; the zone label (&quot;Light&quot;, &quot;Tiring&quot;, ...) crossfades at zone boundaries (150ms) and the description line swaps with a slide-up (120ms).
+- The mascot morphs per zone: color hue-rotates along the ramp (continuous with position), while facial features crossfade (eyes squeeze, sweat drop slides in, mouth opens) over 250ms at each boundary; on entering Maximum Effort the heart pulses faster (heartbeat scale 1 to 1.08, 500ms loop vs 900ms at rest).
+- The hatched usual-range band stays fixed on the track; when the handle leaves it, the &quot;ABOVE USUAL RANGE&quot; pill pops in above the track (scale 0.8 to 1, spring ~460/22) and shakes once (+-3px, 200ms); it collapses when back in range.
+- Release snaps the handle to the zone center (spring ~500/26) and the mascot does a small happy bounce (scaleY 0.9 to 1, spring ~440/20).
+- Clear Entry resets: handle slides back to default (300ms), mascot morphs home.
+
+## Calibration
+- Five zones evenly split the track; the gradient is continuous, zone changes are discrete - both signals must stay consistent.
+- Mascot hue follows handle position smoothly even inside a zone; only the face changes at boundaries.
+
+## Reduced motion
+Handle snaps per zone; mascot swaps faces without hue drift.
+
+## Don&#x27;t miss
+- The hatched band is the key contextual element - it communicates &quot;your usual&quot; without text.
+- The heart is the app&#x27;s mascot: rounded, face forward, never a generic emoji.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">zone-morphing mascot slider.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-perceived-exertion-slider">original interaction</a> by Gentler Streak. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Gentler Streak's perceived-exertion slider - drag across a rainbow ramp while the heart mascot morphs through effort faces and a hatched \"usual range\" band marks where you should land.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA \"Perceived Exertion\" sheet (\"How did it feel?\"): a heart mascot whose face and color shift with effort (calm at Light, sweaty at Tiring, strained at Hard, dark red at Maximum Effort, serene at Almost Effortless), a one-line description per zone, a horizontal rainbow-gradient slider (blue to purple) with a hatched \"USUAL RANGE\" band and an \"ABOVE USUAL RANGE\" pill warning, and a Clear Entry link.\n\n## Motion spec\nPattern: zone-morphing mascot slider.\n- Drag: the ring handle tracks 1:1 along the gradient track; the zone label (\"Light\", \"Tiring\", ...) crossfades at zone boundaries (150ms) and the description line swaps with a slide-up (120ms).\n- The mascot morphs per zone: color hue-rotates along the ramp (continuous with position), while facial features crossfade (eyes squeeze, sweat drop slides in, mouth opens) over 250ms at each boundary; on entering Maximum Effort the heart pulses faster (heartbeat scale 1 to 1.08, 500ms loop vs 900ms at rest).\n- The hatched usual-range band stays fixed on the track; when the handle leaves it, the \"ABOVE USUAL RANGE\" pill pops in above the track (scale 0.8 to 1, spring ~460/22) and shakes once (+-3px, 200ms); it collapses when back in range.\n- Release snaps the handle to the zone center (spring ~500/26) and the mascot does a small happy bounce (scaleY 0.9 to 1, spring ~440/20).\n- Clear Entry resets: handle slides back to default (300ms), mascot morphs home.\n\n## Calibration\n- Five zones evenly split the track; the gradient is continuous, zone changes are discrete - both signals must stay consistent.\n- Mascot hue follows handle position smoothly even inside a zone; only the face changes at boundaries.\n\n## Reduced motion\nHandle snaps per zone; mascot swaps faces without hue drift.\n\n## Don't miss\n- The hatched band is the key contextual element - it communicates \"your usual\" without text.\n- The heart is the app's mascot: rounded, face forward, never a generic emoji."</script>
+</body></html>

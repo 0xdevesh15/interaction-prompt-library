@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F1 TV Multiview Video Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>F1 TV Multiview Video Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/f1-tv-multiview-video-interaction"><b>F1</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/f1-tv-multiview-video-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/f1-tv-multiview-video-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: F1 TV&#x27;s multiview - the landscape player hosts a slide-out channel rail (F1 Live, International, Tracker, Data, onboard cams), and tapping feeds tiles them into a resizable multi-feed grid beside the main video.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d80b4d658cce8059eeba/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d80b4d658cce8059eeba/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-f1-tv-multiview-video-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: F1 TV&#x27;s multiview - the landscape player hosts a slide-out channel rail (F1 Live, International, Tracker, Data, onboard cams), and tapping feeds tiles them into a resizable multi-feed grid beside the main video.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Landscape dark player: main video area, top pill tab bar (Main, Pit Lane, Driver, Data, Tracker), right channel rail with thumbnails (F1 Live, International, Onboards, Data), bottom transport (scrubber, LIVE badge, layout icons, AirPlay). Multiview state: multiple feeds tiled - main feed large left, secondary feeds stacked right, each labeled.
+
+## Motion spec
+Pattern: panel-based multiview compose, gesture-driven ~350ms.
+- Rail: swiping or tapping the edge handle slides the channel rail in from the right (300ms, ease-out); it overlays, not pushes.
+- Add: tapping a channel thumbnail lifts it (scale 1.04, 150ms) and tiles it into the layout - the main feed shrinks (400ms, ease-in-out) as the new feed slides into the freed slot (300ms).
+- Rearrange: dragging a feed swaps positions with its neighbor, both animating to their new rects (350ms, ease-in-out); other feeds hold.
+- Remove: tapping a feed&#x27;s close shrinks it out (250ms) as the remaining feeds re-expand to fill (350ms).
+
+## Calibration
+- Feeds keep 16:9 aspect in every tile - letterbox inside the slot, never crop.
+- The transport bar auto-hides after 3s and reappears on tap (250ms fade).
+
+## Reduced motion
+Feeds snap into slots with 200ms fades; rail fades in.
+
+## Don&#x27;t miss
+- Onboard feeds carry driver name tags (VER, NOR...) on their thumbnails.
+- The scrubber stays live across layout changes - playback never pauses for a rearrange.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">panel-based multiview compose, gesture-driven ~350ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/f1-tv-multiview-video-interaction">original interaction</a> by F1. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: F1 TV's multiview - the landscape player hosts a slide-out channel rail (F1 Live, International, Tracker, Data, onboard cams), and tapping feeds tiles them into a resizable multi-feed grid beside the main video.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLandscape dark player: main video area, top pill tab bar (Main, Pit Lane, Driver, Data, Tracker), right channel rail with thumbnails (F1 Live, International, Onboards, Data), bottom transport (scrubber, LIVE badge, layout icons, AirPlay). Multiview state: multiple feeds tiled - main feed large left, secondary feeds stacked right, each labeled.\n\n## Motion spec\nPattern: panel-based multiview compose, gesture-driven ~350ms.\n- Rail: swiping or tapping the edge handle slides the channel rail in from the right (300ms, ease-out); it overlays, not pushes.\n- Add: tapping a channel thumbnail lifts it (scale 1.04, 150ms) and tiles it into the layout - the main feed shrinks (400ms, ease-in-out) as the new feed slides into the freed slot (300ms).\n- Rearrange: dragging a feed swaps positions with its neighbor, both animating to their new rects (350ms, ease-in-out); other feeds hold.\n- Remove: tapping a feed's close shrinks it out (250ms) as the remaining feeds re-expand to fill (350ms).\n\n## Calibration\n- Feeds keep 16:9 aspect in every tile - letterbox inside the slot, never crop.\n- The transport bar auto-hides after 3s and reappears on tap (250ms fade).\n\n## Reduced motion\nFeeds snap into slots with 200ms fades; rail fades in.\n\n## Don't miss\n- Onboard feeds carry driver name tags (VER, NOR...) on their thumbnails.\n- The scrubber stays live across layout changes - playback never pauses for a rearrange."</script>
+</body></html>

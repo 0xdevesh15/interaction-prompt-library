@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spotify for Podcasters Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spotify for Podcasters Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spotify-for-podcasters-splash"><b>Spotify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-for-podcasters-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-for-podcasters-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Spotify for Podcasters&#x27; splash-to-onboarding - from a purple splash, the podcast glyph in a circle (orbited by small dots) morphs into the Spotify wordmark, then splits into the glyph + &quot;for Podcasters&quot; lockup above the value props.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3dcdca5b9380d936a8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3dcdca5b9380d936a8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spotify-for-podcasters-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Spotify for Podcasters&#x27; splash-to-onboarding - from a purple splash, the podcast glyph in a circle (orbited by small dots) morphs into the Spotify wordmark, then splits into the glyph + &quot;for Podcasters&quot; lockup above the value props.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Purple splash with &quot;Spotify for Podcasters&quot; lockup. Onboarding: lavender screen, Spotify glyph in a dark circle with orbiting colored dots, &quot;Get discovered. Connect with fans. Grow your show.&quot; copy, black Get started pill.
+
+## Motion spec
+Pattern: logo morph sequence.
+- Splash crossfades to lavender (400ms); the circled glyph scales in (spring ~300/20, ~500ms) while small colored dots orbit it (one revolution per ~6s, staggered radii).
+- The dots fly outward and fade (300ms) as the circle morphs: the glyph slides left and the word &quot;Spotify&quot; draws in beside it (letter stagger, 60ms each) - forming the standard wordmark.
+- The wordmark holds, then &quot;Spotify&quot; text slides away right and fades (300ms) while the glyph travels right and &quot;for Podcasters&quot; fades in next to it (300ms), settling into the final lockup.
+- Copy lines fade in one per beat (200ms each, 150ms apart); Get started rises 12px + fades last (300ms).
+
+## Calibration
+- The glyph never disappears - every morph keeps it on screen as the anchor.
+- Orbit dots are the only looping element and they exit before the wordmark phase.
+
+## Reduced motion
+Splash crossfades to the final lockup directly.
+
+## Don&#x27;t miss
+- Three distinct lockup states: circled glyph -&gt; full &quot;Spotify&quot; wordmark -&gt; glyph + &quot;for Podcasters&quot;.
+- Copy sits below the lockup and never moves during the morphs.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo morph sequence.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spotify-for-podcasters-splash">original interaction</a> by Spotify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Spotify for Podcasters' splash-to-onboarding - from a purple splash, the podcast glyph in a circle (orbited by small dots) morphs into the Spotify wordmark, then splits into the glyph + \"for Podcasters\" lockup above the value props.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPurple splash with \"Spotify for Podcasters\" lockup. Onboarding: lavender screen, Spotify glyph in a dark circle with orbiting colored dots, \"Get discovered. Connect with fans. Grow your show.\" copy, black Get started pill.\n\n## Motion spec\nPattern: logo morph sequence.\n- Splash crossfades to lavender (400ms); the circled glyph scales in (spring ~300/20, ~500ms) while small colored dots orbit it (one revolution per ~6s, staggered radii).\n- The dots fly outward and fade (300ms) as the circle morphs: the glyph slides left and the word \"Spotify\" draws in beside it (letter stagger, 60ms each) - forming the standard wordmark.\n- The wordmark holds, then \"Spotify\" text slides away right and fades (300ms) while the glyph travels right and \"for Podcasters\" fades in next to it (300ms), settling into the final lockup.\n- Copy lines fade in one per beat (200ms each, 150ms apart); Get started rises 12px + fades last (300ms).\n\n## Calibration\n- The glyph never disappears - every morph keeps it on screen as the anchor.\n- Orbit dots are the only looping element and they exit before the wordmark phase.\n\n## Reduced motion\nSplash crossfades to the final lockup directly.\n\n## Don't miss\n- Three distinct lockup states: circled glyph -> full \"Spotify\" wordmark -> glyph + \"for Podcasters\".\n- Copy sits below the lockup and never moves during the morphs."</script>
+</body></html>

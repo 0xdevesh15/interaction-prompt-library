@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opal Streak Fire Focus Hourglass Icon Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Opal Streak Fire Focus Hourglass Icon Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opal-streak-fire-focus-hourglass-icon-animation"><b>Opal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-streak-fire-focus-hourglass-icon-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-streak-fire-focus-hourglass-icon-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Opal&#x27;s dashboard idle loops - the &quot;2 DAY STREAK&quot; flame flickers continuously while the &quot;1 FOCUS HOURS&quot; hourglass drains and flips, over the dark stats dashboard.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc712b33c1c85777a7f3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc712b33c1c85777a7f3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opal-streak-fire-focus-hourglass-icon-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Opal&#x27;s dashboard idle loops - the &quot;2 DAY STREAK&quot; flame flickers continuously while the &quot;1 FOCUS HOURS&quot; hourglass drains and flips, over the dark stats dashboard.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark dashboard: profile header (&quot;prithvi_ravi&quot;), a row of day circles, two stat cards side by side - yellow flame over &quot;2 DAY STREAK&quot; and green hourglass over &quot;1 FOCUS HOURS&quot; - a Weekly/Lifetime segmented pill, a &quot;3 hr, 02 min&quot; screen-time figure with a green area graph, and the tab bar.
+
+## Motion spec
+Pattern: looping icon idle animations.
+- Flame: the flame&#x27;s body wobbles (scale 1/1.06 alternating on x and y, 700ms period, ease-in-out) while its inner core flickers brightness (+-15%, 350ms, random phase) and a soft glow breathes behind it (2s).
+- Hourglass: sand streams from top bulb to bottom over 3s (top level sinks, bottom rises, a thin falling stream), pauses 400ms, then the hourglass rotates 180deg (spring ~300/20, 500ms) and repeats.
+- Graph: the green area wave undulates slowly (amplitude +-4px, 5s) beneath both.
+
+## Calibration
+- The two loops run on independent clocks - they never sync.
+- Icons loop in place; the stat numbers and labels are static.
+
+## Reduced motion
+Both icons are static; the graph holds its shape.
+
+## Don&#x27;t miss
+- The hourglass flip is a rotation, not a fade - the sand resets through the flip.
+- The flame never leaves its card bounds, glow included.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping icon idle animations.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opal-streak-fire-focus-hourglass-icon-animation">original interaction</a> by Opal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Opal's dashboard idle loops - the \"2 DAY STREAK\" flame flickers continuously while the \"1 FOCUS HOURS\" hourglass drains and flips, over the dark stats dashboard.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark dashboard: profile header (\"prithvi_ravi\"), a row of day circles, two stat cards side by side - yellow flame over \"2 DAY STREAK\" and green hourglass over \"1 FOCUS HOURS\" - a Weekly/Lifetime segmented pill, a \"3 hr, 02 min\" screen-time figure with a green area graph, and the tab bar.\n\n## Motion spec\nPattern: looping icon idle animations.\n- Flame: the flame's body wobbles (scale 1/1.06 alternating on x and y, 700ms period, ease-in-out) while its inner core flickers brightness (+-15%, 350ms, random phase) and a soft glow breathes behind it (2s).\n- Hourglass: sand streams from top bulb to bottom over 3s (top level sinks, bottom rises, a thin falling stream), pauses 400ms, then the hourglass rotates 180deg (spring ~300/20, 500ms) and repeats.\n- Graph: the green area wave undulates slowly (amplitude +-4px, 5s) beneath both.\n\n## Calibration\n- The two loops run on independent clocks - they never sync.\n- Icons loop in place; the stat numbers and labels are static.\n\n## Reduced motion\nBoth icons are static; the graph holds its shape.\n\n## Don't miss\n- The hourglass flip is a rotation, not a fade - the sand resets through the flip.\n- The flame never leaves its card bounds, glow included."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED All in Jackpot Spin Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED All in Jackpot Spin Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-all-in-jackpot-spin-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-all-in-jackpot-spin-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-all-in-jackpot-spin-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s &quot;all in&quot; jackpot - a tactile purple 3D slot machine where pressing SPIN sends three reels into a blurred spin with staggered stops, and a win floods the machine with golden light and a ticking cash counter.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68749fb014683753e6741524/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68749fb014683753e6741524/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-all-in-jackpot-spin-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s &quot;all in&quot; jackpot - a tactile purple 3D slot machine where pressing SPIN sends three reels into a blurred spin with staggered stops, and a win floods the machine with golden light and a ticking cash counter.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED&#x27;s dark rewards screen with a purple 3D slot-machine card (&quot;win a gift card worth ₹5000&quot;): a 3x3 reel window (7s, fruits, gems, coins), a gold SPIN button, a pink ALL IN knob, and a credit/balance pill at the machine&#x27;s base.
+
+## Motion spec
+Pattern: tactile reel spin with staggered stops and win counter, ~2.5s spin.
+- Press: SPIN compresses (scale 0.92, spring ~500/20 release) and the machine jolts (translateY +3 -&gt; 0, 150ms); the ALL IN knob does a half-twist when used (rotate 180deg, 250ms, ease-out).
+- Spin: reels accelerate vertically into motion blur (full speed in 300ms); rows streak past the window.
+- Stops: reels stop left to right, ~450ms apart, each decelerating with a small overshoot and settle (spring ~260/18); the machine rocks subtly on each stop (rotate +/-0.8deg, 150ms).
+- Win: golden light rays burst from behind the machine (scale 0.5 -&gt; 1.4 + fade in, 450ms), the machine glows, and &quot;you won ₹433&quot; ticks up on the face (counter 0 -&gt; final, 700ms, ease-out) with coin sparkles; the SPIN button dims while the counter runs.
+- No-win: reels settle, a brief machine shake (translateX +/-4px, 200ms), balance pill updates with a number flicker.
+
+## Calibration
+- Reels stop in strict left-to-right order; blur only while moving.
+- The win counter lands exactly on the amount added to the balance pill.
+
+## Reduced motion
+Reels crossfade to results; counter sets instantly; no shake or rays.
+
+## Don&#x27;t miss
+- The machine reads as a physical object - shading, highlights, and the jolt on press.
+- The light burst originates behind the machine, silhouetting it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tactile reel spin with staggered stops and win counter, ~2.5s spin.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-all-in-jackpot-spin-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's \"all in\" jackpot - a tactile purple 3D slot machine where pressing SPIN sends three reels into a blurred spin with staggered stops, and a win floods the machine with golden light and a ticking cash counter.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED's dark rewards screen with a purple 3D slot-machine card (\"win a gift card worth \u20b95000\"): a 3x3 reel window (7s, fruits, gems, coins), a gold SPIN button, a pink ALL IN knob, and a credit/balance pill at the machine's base.\n\n## Motion spec\nPattern: tactile reel spin with staggered stops and win counter, ~2.5s spin.\n- Press: SPIN compresses (scale 0.92, spring ~500/20 release) and the machine jolts (translateY +3 -> 0, 150ms); the ALL IN knob does a half-twist when used (rotate 180deg, 250ms, ease-out).\n- Spin: reels accelerate vertically into motion blur (full speed in 300ms); rows streak past the window.\n- Stops: reels stop left to right, ~450ms apart, each decelerating with a small overshoot and settle (spring ~260/18); the machine rocks subtly on each stop (rotate +/-0.8deg, 150ms).\n- Win: golden light rays burst from behind the machine (scale 0.5 -> 1.4 + fade in, 450ms), the machine glows, and \"you won \u20b9433\" ticks up on the face (counter 0 -> final, 700ms, ease-out) with coin sparkles; the SPIN button dims while the counter runs.\n- No-win: reels settle, a brief machine shake (translateX +/-4px, 200ms), balance pill updates with a number flicker.\n\n## Calibration\n- Reels stop in strict left-to-right order; blur only while moving.\n- The win counter lands exactly on the amount added to the balance pill.\n\n## Reduced motion\nReels crossfade to results; counter sets instantly; no shake or rays.\n\n## Don't miss\n- The machine reads as a physical object - shading, highlights, and the jolt on press.\n- The light burst originates behind the machine, silhouetting it."</script>
+</body></html>

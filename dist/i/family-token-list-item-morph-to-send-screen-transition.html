@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Token List Item Morph to Send Screen Transition - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Token List Item Morph to Send Screen Transition</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-token-list-item-morph-to-send-screen-transition"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-token-list-item-morph-to-send-screen-transition">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-token-list-item-morph-to-send-screen-transition">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s send token picker - on the dark Send screen to Jacques, tapping a token row (Uniswap, then Tether) morphs the row into the amount screen&#x27;s selected-token badge while the numpad rises, and switching tokens swaps the badge with a shared-element flip.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895bb2f7f889f3d1b471b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895bb2f7f889f3d1b471b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-token-list-item-morph-to-send-screen-transition.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s send token picker - on the dark Send screen to Jacques, tapping a token row (Uniswap, then Tether) morphs the row into the amount screen&#x27;s selected-token badge while the numpad rises, and switching tokens swaps the badge with a shared-element flip.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark Send screen: &quot;To: Jacques&quot; row, Tokens/Collectibles tabs, token list (Ethereum, Polygon, BUSD, Curve DAO, GALA, Hello Pets, Uniswap, Tether - each with logo, balance, fiat value). Amount state: big &quot;$0&quot; with a small colored balance dot, selected-token badge (logo + name + &quot;Use Max&quot; pill), numpad, Continue (disabled at $0).
+
+## Motion spec
+Pattern: list-item-to-badge morph with badge swap.
+- Tap a token row: a touch ripple flashes (dark circle, 150ms); the row&#x27;s logo and name lift off the list (arc toward the badge slot, 300ms, spring ~320/20) as the list slides down and fades (200ms).
+- The logo lands in the badge (scale settle spring ~340/16), &quot;Use Max&quot; fades in beside it (150ms), and the numpad rises (250ms, spring ~300/22) while &quot;$0&quot; fades in above (200ms).
+- Switch token: re-opening the list reverses the morph; picking a different row swaps the badge - the old logo scales out (0.8, 150ms) as the new one scales in (spring ~340/16, 200ms), the name crossfading (150ms).
+- The balance dot under &quot;$0&quot; takes the token&#x27;s brand color (pink for Uniswap, green for Tether) with a 200ms color ease.
+
+## Calibration
+- The badge keeps the row&#x27;s exact logo artwork and name typography.
+- The numpad appears only after a token is chosen.
+
+## Reduced motion
+Badge and list crossfade (200ms); no travel arc.
+
+## Don&#x27;t miss
+- The ripple marks the tapped row before the morph starts.
+- &quot;Use Max&quot; is part of the badge unit, arriving with it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">list-item-to-badge morph with badge swap.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-token-list-item-morph-to-send-screen-transition">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's send token picker - on the dark Send screen to Jacques, tapping a token row (Uniswap, then Tether) morphs the row into the amount screen's selected-token badge while the numpad rises, and switching tokens swaps the badge with a shared-element flip.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark Send screen: \"To: Jacques\" row, Tokens/Collectibles tabs, token list (Ethereum, Polygon, BUSD, Curve DAO, GALA, Hello Pets, Uniswap, Tether - each with logo, balance, fiat value). Amount state: big \"$0\" with a small colored balance dot, selected-token badge (logo + name + \"Use Max\" pill), numpad, Continue (disabled at $0).\n\n## Motion spec\nPattern: list-item-to-badge morph with badge swap.\n- Tap a token row: a touch ripple flashes (dark circle, 150ms); the row's logo and name lift off the list (arc toward the badge slot, 300ms, spring ~320/20) as the list slides down and fades (200ms).\n- The logo lands in the badge (scale settle spring ~340/16), \"Use Max\" fades in beside it (150ms), and the numpad rises (250ms, spring ~300/22) while \"$0\" fades in above (200ms).\n- Switch token: re-opening the list reverses the morph; picking a different row swaps the badge - the old logo scales out (0.8, 150ms) as the new one scales in (spring ~340/16, 200ms), the name crossfading (150ms).\n- The balance dot under \"$0\" takes the token's brand color (pink for Uniswap, green for Tether) with a 200ms color ease.\n\n## Calibration\n- The badge keeps the row's exact logo artwork and name typography.\n- The numpad appears only after a token is chosen.\n\n## Reduced motion\nBadge and list crossfade (200ms); no travel arc.\n\n## Don't miss\n- The ripple marks the tapped row before the morph starts.\n- \"Use Max\" is part of the badge unit, arriving with it."</script>
+</body></html>

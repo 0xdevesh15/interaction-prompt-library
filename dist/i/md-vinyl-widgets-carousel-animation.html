@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MD Vinyl Widgets Carousel Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>MD Vinyl Widgets Carousel Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/md-vinyl-widgets-carousel-animation"><b>Md</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/md-vinyl-widgets-carousel-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/md-vinyl-widgets-carousel-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: MD Vinyl&#x27;s widgets showcase - on the dark &quot;Control Your Music with Widgets&quot; onboarding page, a multi-column grid of home-screen widget mockups (album tiles, a purple now-playing widget, lock-screen widgets) auto-scrolls upward in staggered columns, each column drifting at its own speed in an endless loop.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675678ae63a84726545b8ac2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675678ae63a84726545b8ac2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-md-vinyl-widgets-carousel-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: MD Vinyl&#x27;s widgets showcase - on the dark &quot;Control Your Music with Widgets&quot; onboarding page, a multi-column grid of home-screen widget mockups (album tiles, a purple now-playing widget, lock-screen widgets) auto-scrolls upward in staggered columns, each column drifting at its own speed in an endless loop.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark onboarding page: the top two-thirds hold a tilted, edge-cropped grid of widget cards (album art squares, a wide purple &quot;drivers license&quot; player widget, small lock-screen widgets), fading out at top and bottom edges; below, the headline, subline, and purple Continue pill.
+
+## Motion spec
+Pattern: infinite multi-column marquee.
+- Each column scrolls upward continuously at its own constant velocity (outer columns ~20px/s, middle column ~30px/s), looping seamlessly - content wraps from top back to bottom.
+- The grid sits at a slight perspective tilt (rotateX ~8deg) with edge fade masks top and bottom (~40px gradient) so widgets dissolve in and out.
+- Widgets inside are live: the player widget&#x27;s progress bar creeps, album art glows - small internal motion inside the drifting grid.
+- The motion never pauses, reverses, or reacts to touch on this page - it is ambience behind the CTA.
+
+## Calibration
+- Column speeds differ but must divide evenly into the loop length - the pattern never visibly jumps at the wrap.
+- The tilt and fades do the depth work; there are no shadows between cards.
+
+## Reduced motion
+Static grid, no scroll; widget internals freeze.
+
+## Don&#x27;t miss
+- The grid is cropped by the screen edges on both sides - it reads as a window onto a bigger wall.
+- The purple player widget is the hero card - brightest element in the grid.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">infinite multi-column marquee.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/md-vinyl-widgets-carousel-animation">original interaction</a> by Md. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: MD Vinyl's widgets showcase - on the dark \"Control Your Music with Widgets\" onboarding page, a multi-column grid of home-screen widget mockups (album tiles, a purple now-playing widget, lock-screen widgets) auto-scrolls upward in staggered columns, each column drifting at its own speed in an endless loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark onboarding page: the top two-thirds hold a tilted, edge-cropped grid of widget cards (album art squares, a wide purple \"drivers license\" player widget, small lock-screen widgets), fading out at top and bottom edges; below, the headline, subline, and purple Continue pill.\n\n## Motion spec\nPattern: infinite multi-column marquee.\n- Each column scrolls upward continuously at its own constant velocity (outer columns ~20px/s, middle column ~30px/s), looping seamlessly - content wraps from top back to bottom.\n- The grid sits at a slight perspective tilt (rotateX ~8deg) with edge fade masks top and bottom (~40px gradient) so widgets dissolve in and out.\n- Widgets inside are live: the player widget's progress bar creeps, album art glows - small internal motion inside the drifting grid.\n- The motion never pauses, reverses, or reacts to touch on this page - it is ambience behind the CTA.\n\n## Calibration\n- Column speeds differ but must divide evenly into the loop length - the pattern never visibly jumps at the wrap.\n- The tilt and fades do the depth work; there are no shadows between cards.\n\n## Reduced motion\nStatic grid, no scroll; widget internals freeze.\n\n## Don't miss\n- The grid is cropped by the screen edges on both sides - it reads as a window onto a bigger wall.\n- The purple player widget is the hero card - brightest element in the grid."</script>
+</body></html>

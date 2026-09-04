@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Talky Onboarding Swipes - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Talky Onboarding Swipes</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/talky-onboarding-swipes"><b>Talky</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/talky-onboarding-swipes">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/talky-onboarding-swipes">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Talky&#x27;s onboarding carousel - over black, pages spring between a card-pack illustration (&quot;Talky are games with questions&quot;), a tilting white card (&quot;Talky is a simple card game&quot;, &quot;To get to know each other better&quot;), and the brushstroke Talky logo ringed by floating mini cards (&quot;And sometimes just for fun&quot;).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d7e9e826de5efb6c2fcff4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d7e9e826de5efb6c2fcff4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-talky-onboarding-swipes.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Talky&#x27;s onboarding carousel - over black, pages spring between a card-pack illustration (&quot;Talky are games with questions&quot;), a tilting white card (&quot;Talky is a simple card game&quot;, &quot;To get to know each other better&quot;), and the brushstroke Talky logo ringed by floating mini cards (&quot;And sometimes just for fun&quot;).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black throughout: page 1 shows a colorful card pack (wizard scene, &quot;150&quot;/&quot;200 cards&quot; badges) above serif-ish white copy and a round play button; page 2 a plain white card with the Talky mark; page 3 the white brushstroke logo surrounded by tiny cards and colored dots floating.
+
+## Motion spec
+Pattern: springy paged carousel with floating decoration.
+- Swipe/advance: the outgoing page slides left and scales 0.92 (280ms) while the incoming page springs in from the right (spring ~300/24); page dot fill slides to match.
+- Per page, the headline fades up first (250ms), body copy staggers in behind it (120ms), the play button pops last (scale 0.7 -&gt; 1, spring ~420/20).
+- The page-2 white card tilts slowly (+-4deg, 3s sway) like it&#x27;s being held.
+- Page 3: the mini cards and dots orbit the logo lazily (translate +-10px, varied 2.5-4s loops); the logo itself breathes (scale 1 &lt;-&gt; 1.02).
+
+## Calibration
+- One play button, always same spot bottom-center - it is the consistent exit.
+- Decorative float loops are ambient and offset in phase so nothing syncs up.
+
+## Reduced motion
+Pages crossfade; decorations static.
+
+## Don&#x27;t miss
+- The copy tone shifts across pages (games -&gt; connection -&gt; fun) while the visual language stays black + white + card art.
+- The card pack badges (&quot;150&quot;/&quot;200 cards&quot;) are part of the artwork, not UI.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy paged carousel with floating decoration.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/talky-onboarding-swipes">original interaction</a> by Talky. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Talky's onboarding carousel - over black, pages spring between a card-pack illustration (\"Talky are games with questions\"), a tilting white card (\"Talky is a simple card game\", \"To get to know each other better\"), and the brushstroke Talky logo ringed by floating mini cards (\"And sometimes just for fun\").\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack throughout: page 1 shows a colorful card pack (wizard scene, \"150\"/\"200 cards\" badges) above serif-ish white copy and a round play button; page 2 a plain white card with the Talky mark; page 3 the white brushstroke logo surrounded by tiny cards and colored dots floating.\n\n## Motion spec\nPattern: springy paged carousel with floating decoration.\n- Swipe/advance: the outgoing page slides left and scales 0.92 (280ms) while the incoming page springs in from the right (spring ~300/24); page dot fill slides to match.\n- Per page, the headline fades up first (250ms), body copy staggers in behind it (120ms), the play button pops last (scale 0.7 -> 1, spring ~420/20).\n- The page-2 white card tilts slowly (+-4deg, 3s sway) like it's being held.\n- Page 3: the mini cards and dots orbit the logo lazily (translate +-10px, varied 2.5-4s loops); the logo itself breathes (scale 1 <-> 1.02).\n\n## Calibration\n- One play button, always same spot bottom-center - it is the consistent exit.\n- Decorative float loops are ambient and offset in phase so nothing syncs up.\n\n## Reduced motion\nPages crossfade; decorations static.\n\n## Don't miss\n- The copy tone shifts across pages (games -> connection -> fun) while the visual language stays black + white + card art.\n- The card pack badges (\"150\"/\"200 cards\") are part of the artwork, not UI."</script>
+</body></html>

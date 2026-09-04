@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Interest Selection - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Interest Selection</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-interest-selection"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-interest-selection">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-interest-selection">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s investment-plan selection - three vertical rate bars on near-black; tapping one wraps it in a glowing green-to-purple gradient border and lights its label green.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd08225b7b88f78c7816/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd08225b7b88f78c7816/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-interest-selection.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s investment-plan selection - three vertical rate bars on near-black; tapping one wraps it in a glowing green-to-purple gradient border and lights its label green.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark screen titled &quot;select the plan you want to invest in&quot; with three tall vertical bar cards showing 8%, 9%, and 9.5% (heights proportional to rate), a &quot;view other plans&quot; link, and a Continue button at the bottom.
+
+## Motion spec
+Pattern: glowing-border card selection.
+- Entry: bars rise from the baseline to their heights (500ms, ease-out, 100ms stagger left to right) with labels fading in after.
+- Tap a bar: a 2px gradient border (green to purple, vertical) sweeps around the card&#x27;s perimeter (stroke-draw, 350ms clockwise from top-left) and stays glowing (outer shadow bloom, 12px, 60% opacity, pulsing +-20% on a 1.6s loop); a green gradient fill washes up from the card&#x27;s bottom edge (300ms) and the rate label crossfades gray to green (200ms).
+- Switching selection: the old card&#x27;s border unwinds (reverse draw, 250ms) as the new card&#x27;s draws - they overlap so the glow appears to travel.
+- Bars also respond with a press squash (scaleY 0.97, spring back ~450/24).
+- Continue enables on first selection (fills from ghost to solid white, 200ms).
+
+## Calibration
+- Only one card glows at a time; unselected bars stay flat gray on black.
+- Bar heights must stay proportional to rates (9.5% bar ~19% taller than 8%).
+
+## Reduced motion
+Selection is an instant border + fill swap; no glow pulse.
+
+## Don&#x27;t miss
+- The border is drawn, not faded - the sweep direction is visible.
+- Green is the selection accent; purple only exists inside the gradient border.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">glowing-border card selection.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-interest-selection">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's investment-plan selection - three vertical rate bars on near-black; tapping one wraps it in a glowing green-to-purple gradient border and lights its label green.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark screen titled \"select the plan you want to invest in\" with three tall vertical bar cards showing 8%, 9%, and 9.5% (heights proportional to rate), a \"view other plans\" link, and a Continue button at the bottom.\n\n## Motion spec\nPattern: glowing-border card selection.\n- Entry: bars rise from the baseline to their heights (500ms, ease-out, 100ms stagger left to right) with labels fading in after.\n- Tap a bar: a 2px gradient border (green to purple, vertical) sweeps around the card's perimeter (stroke-draw, 350ms clockwise from top-left) and stays glowing (outer shadow bloom, 12px, 60% opacity, pulsing +-20% on a 1.6s loop); a green gradient fill washes up from the card's bottom edge (300ms) and the rate label crossfades gray to green (200ms).\n- Switching selection: the old card's border unwinds (reverse draw, 250ms) as the new card's draws - they overlap so the glow appears to travel.\n- Bars also respond with a press squash (scaleY 0.97, spring back ~450/24).\n- Continue enables on first selection (fills from ghost to solid white, 200ms).\n\n## Calibration\n- Only one card glows at a time; unselected bars stay flat gray on black.\n- Bar heights must stay proportional to rates (9.5% bar ~19% taller than 8%).\n\n## Reduced motion\nSelection is an instant border + fill swap; no glow pulse.\n\n## Don't miss\n- The border is drawn, not faded - the sweep direction is visible.\n- Green is the selection accent; purple only exists inside the gradient border."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smallcase Credit Loader Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Smallcase Credit Loader Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/smallcase-credit-loader-animation"><b>Smallcase</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/smallcase-credit-loader-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/smallcase-credit-loader-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: smallcase&#x27;s credit loader - three flat blue shapes (triangle, square, circle) that assemble, morph, and spin into the 3D smallcase logo while trivia lines crossfade beneath, all over the dimmed app.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6808e842c1d254855e3ca6c7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6808e842c1d254855e3ca6c7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-smallcase-credit-loader-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: smallcase&#x27;s credit loader - three flat blue shapes (triangle, square, circle) that assemble, morph, and spin into the 3D smallcase logo while trivia lines crossfade beneath, all over the dimmed app.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The app behind (tab bar visible: Home, Discover, Investments, Loans, More) dimmed under a white veil. Center: a small loading stage - flat blue geometric shapes (a triangle, a square, a circle) that merge into the spinning smallcase logo (an open box / suitcase mark). Under it a single line of trivia that crossfades: &quot;Making sure everything is sanitized...&quot;, &quot;All good things come in smallcases&quot;, &quot;This is a reminder to stretch your back a little&quot;, &quot;The numbers on opposite sides of a dice always add up to seven&quot;.
+
+## Motion spec
+Pattern: shape-morphing logo loader with rotating trivia.
+- The three shapes pop in staggered (60ms apart, scale 0 -&gt; 1, spring ~340/14) in a row, then slide together (200ms) and merge.
+- The merged form spins into the 3D logo: a full rotateY revolution (700ms, ease-in-out) with a slight scale pulse at the flip point (1 -&gt; 1.15 -&gt; 1).
+- The logo then idles with a continuous slow spin (rotateY, 1.6s/rev) and a gentle bob (translateY +-3pt, 2s).
+- Trivia lines crossfade every 2.2s (old line fades down 4pt, new fades up, 250ms).
+- On completion: logo and text scale down and fade (250ms) as the white veil lifts (300ms).
+
+## Calibration
+- Shapes are flat smallcase blue, no gradients; the 3D read comes from the spin, not shading.
+- The loader never blocks for a set duration - it dismisses on data ready, minimum 1.6s on screen.
+
+## Reduced motion
+Static logo with a fade; trivia crossfades only.
+
+## Don&#x27;t miss
+- The merge-then-spin choreography: shapes -&gt; single form -&gt; one clean revolution -&gt; idle spin.
+- Keep trivia single-line, centered, sentence case - it is wit, not marketing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shape-morphing logo loader with rotating trivia.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/smallcase-credit-loader-animation">original interaction</a> by Smallcase. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: smallcase's credit loader - three flat blue shapes (triangle, square, circle) that assemble, morph, and spin into the 3D smallcase logo while trivia lines crossfade beneath, all over the dimmed app.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe app behind (tab bar visible: Home, Discover, Investments, Loans, More) dimmed under a white veil. Center: a small loading stage - flat blue geometric shapes (a triangle, a square, a circle) that merge into the spinning smallcase logo (an open box / suitcase mark). Under it a single line of trivia that crossfades: \"Making sure everything is sanitized...\", \"All good things come in smallcases\", \"This is a reminder to stretch your back a little\", \"The numbers on opposite sides of a dice always add up to seven\".\n\n## Motion spec\nPattern: shape-morphing logo loader with rotating trivia.\n- The three shapes pop in staggered (60ms apart, scale 0 -> 1, spring ~340/14) in a row, then slide together (200ms) and merge.\n- The merged form spins into the 3D logo: a full rotateY revolution (700ms, ease-in-out) with a slight scale pulse at the flip point (1 -> 1.15 -> 1).\n- The logo then idles with a continuous slow spin (rotateY, 1.6s/rev) and a gentle bob (translateY +-3pt, 2s).\n- Trivia lines crossfade every 2.2s (old line fades down 4pt, new fades up, 250ms).\n- On completion: logo and text scale down and fade (250ms) as the white veil lifts (300ms).\n\n## Calibration\n- Shapes are flat smallcase blue, no gradients; the 3D read comes from the spin, not shading.\n- The loader never blocks for a set duration - it dismisses on data ready, minimum 1.6s on screen.\n\n## Reduced motion\nStatic logo with a fade; trivia crossfades only.\n\n## Don't miss\n- The merge-then-spin choreography: shapes -> single form -> one clean revolution -> idle spin.\n- Keep trivia single-line, centered, sentence case - it is wit, not marketing."</script>
+</body></html>

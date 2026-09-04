@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flighty Pricing - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flighty Pricing</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flighty-pricing"><b>Flighty</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-pricing">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-pricing">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Flighty&#x27;s PRO pricing screen - an independently swipeable feature carousel on top and a pinned subscription card below, each feature page recoloring the header.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1061d73e2622b3555c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1061d73e2622b3555c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flighty-pricing.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Flighty&#x27;s PRO pricing screen - an independently swipeable feature carousel on top and a pinned subscription card below, each feature page recoloring the header.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A paywall split in two zones: a top feature carousel (Live Activities, Watch Complications, Lock Screen Widgets, Unlimited Historical Flights, Sync Your Life, Best-in-Class Alerts, Delay Forecast, Live Weather Radar, 25h Where&#x27;s My Plane) with a product visual and caption per page, and a bottom subscription card (&quot;BEST VALUE&quot;, &quot;Unlimited Annual&quot;, per-month price, Continue button) that stays put.
+
+## Motion spec
+Pattern: independent dual carousels.
+- The feature carousel pages horizontally, 1:1 swipe with snap (spring ~340/26); each page&#x27;s illustration parallaxes (moves at 0.85x drag speed) against its gradient backdrop.
+- Each page carries its own header gradient (purple-magenta variants): the background crossfades to the new page&#x27;s gradient (350ms) during the swipe, driven by drag progress, not after snap.
+- Captions (&quot;Expect low-hassle, Pain accordingly&quot;-style one-liners) fade/slide in after the snap (translateY 8px, 200ms).
+- The bottom plan card never moves with the carousel; if multiple plans exist they swipe in their own independent horizontal track with the same snap physics, and the price/month text rolls vertically on change (180ms).
+- Continue button: press squash (scale 0.96, spring ~480/24); loading state swaps the label for a spinner inside the button (no layout shift).
+- The &quot;Flighty PRO&quot; header and close X stay pinned above everything.
+
+## Calibration
+- Carousel and plan track must never gesture-lock each other: a vertical touch on the card scrolls plans, a horizontal touch on the visual pages features.
+- Gradient crossfade tracks drag continuously - half-swiped shows a half-blended gradient.
+
+## Reduced motion
+Pages snap without parallax; gradients crossfade post-snap.
+
+## Don&#x27;t miss
+- The feature visual is a device-context mock (watch face, lock screen, widget) - not abstract icons.
+- &quot;BEST VALUE&quot; tag and per-month pricing hierarchy stay fixed while features change above.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">independent dual carousels.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flighty-pricing">original interaction</a> by Flighty. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Flighty's PRO pricing screen - an independently swipeable feature carousel on top and a pinned subscription card below, each feature page recoloring the header.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA paywall split in two zones: a top feature carousel (Live Activities, Watch Complications, Lock Screen Widgets, Unlimited Historical Flights, Sync Your Life, Best-in-Class Alerts, Delay Forecast, Live Weather Radar, 25h Where's My Plane) with a product visual and caption per page, and a bottom subscription card (\"BEST VALUE\", \"Unlimited Annual\", per-month price, Continue button) that stays put.\n\n## Motion spec\nPattern: independent dual carousels.\n- The feature carousel pages horizontally, 1:1 swipe with snap (spring ~340/26); each page's illustration parallaxes (moves at 0.85x drag speed) against its gradient backdrop.\n- Each page carries its own header gradient (purple-magenta variants): the background crossfades to the new page's gradient (350ms) during the swipe, driven by drag progress, not after snap.\n- Captions (\"Expect low-hassle, Pain accordingly\"-style one-liners) fade/slide in after the snap (translateY 8px, 200ms).\n- The bottom plan card never moves with the carousel; if multiple plans exist they swipe in their own independent horizontal track with the same snap physics, and the price/month text rolls vertically on change (180ms).\n- Continue button: press squash (scale 0.96, spring ~480/24); loading state swaps the label for a spinner inside the button (no layout shift).\n- The \"Flighty PRO\" header and close X stay pinned above everything.\n\n## Calibration\n- Carousel and plan track must never gesture-lock each other: a vertical touch on the card scrolls plans, a horizontal touch on the visual pages features.\n- Gradient crossfade tracks drag continuously - half-swiped shows a half-blended gradient.\n\n## Reduced motion\nPages snap without parallax; gradients crossfade post-snap.\n\n## Don't miss\n- The feature visual is a device-context mock (watch face, lock screen, widget) - not abstract icons.\n- \"BEST VALUE\" tag and per-month pricing hierarchy stay fixed while features change above."</script>
+</body></html>

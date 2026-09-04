@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Canopi New Collection Add Items - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Canopi New Collection Add Items</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/canopi-new-collection-add-items"><b>Canopi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/canopi-new-collection-add-items">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/canopi-new-collection-add-items">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Canopi&#x27;s collection editor - in a dark &quot;Add a Title&quot; composer, tapping an add-option (Tasks, Notes) morphs that card from the embedded list into a fullscreen editor and back, with the keyboard sliding in for text fields.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd2a093f143602feab6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd2a093f143602feab6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-canopi-new-collection-add-items.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Canopi&#x27;s collection editor - in a dark &quot;Add a Title&quot; composer, tapping an add-option (Tasks, Notes) morphs that card from the embedded list into a fullscreen editor and back, with the keyboard sliding in for text fields.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark composer screen: &quot;Add a Title...&quot; field, a &quot;No Location Set&quot; map card embedded mid-screen, an options column on the right (Add Tasks, Add Notes, Add Date, Add Image, Add Location, Add Website), Shuffle bottom-left, a round create button bottom-right. Tapping Add Tasks: a dark Tasks card expands to fill the screen. Tapping Add Notes: an olive-yellow Notes editor expands to fullscreen, keyboard up with a blue Done button.
+
+## Motion spec
+Pattern: card-to-fullscreen morph from an options list.
+- Tap an option: a card of that type materializes at the option&#x27;s row position and expands to fullscreen (corner radius easing to 0, scale and translation linked, ~400ms, ease-in-out) while the composer behind dims slightly.
+- Text-type cards (Notes) raise the keyboard as the card passes ~70% expansion; the blue Done button docks above the keyboard.
+- The Notes card uses its own canvas color (olive-yellow) - the morph carries that color from the start.
+- Done (or close) reverses the morph: the card shrinks back into an embedded card in the composer, keyboard dropping first (~150ms lead).
+- The embedded card lands in the body stack with a soft settle (spring stiffness ~260, damping ~24).
+
+## Calibration
+- The morph origin must be the tapped option&#x27;s position - expanding from center breaks the spatial story.
+- Keyboard timing matters: raising it too early shows it floating over the composer.
+
+## Reduced motion
+Crossfade between composer and fullscreen editor (200ms); keyboard follows the system default.
+
+## Don&#x27;t miss
+- The map card stays embedded in the composer throughout - only the tapped option morphs.
+- Notes&#x27; fullscreen color (olive) is distinct from the composer&#x27;s dark theme; that contrast marks it as a different canvas.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card-to-fullscreen morph from an options list.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/canopi-new-collection-add-items">original interaction</a> by Canopi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Canopi's collection editor - in a dark \"Add a Title\" composer, tapping an add-option (Tasks, Notes) morphs that card from the embedded list into a fullscreen editor and back, with the keyboard sliding in for text fields.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark composer screen: \"Add a Title...\" field, a \"No Location Set\" map card embedded mid-screen, an options column on the right (Add Tasks, Add Notes, Add Date, Add Image, Add Location, Add Website), Shuffle bottom-left, a round create button bottom-right. Tapping Add Tasks: a dark Tasks card expands to fill the screen. Tapping Add Notes: an olive-yellow Notes editor expands to fullscreen, keyboard up with a blue Done button.\n\n## Motion spec\nPattern: card-to-fullscreen morph from an options list.\n- Tap an option: a card of that type materializes at the option's row position and expands to fullscreen (corner radius easing to 0, scale and translation linked, ~400ms, ease-in-out) while the composer behind dims slightly.\n- Text-type cards (Notes) raise the keyboard as the card passes ~70% expansion; the blue Done button docks above the keyboard.\n- The Notes card uses its own canvas color (olive-yellow) - the morph carries that color from the start.\n- Done (or close) reverses the morph: the card shrinks back into an embedded card in the composer, keyboard dropping first (~150ms lead).\n- The embedded card lands in the body stack with a soft settle (spring stiffness ~260, damping ~24).\n\n## Calibration\n- The morph origin must be the tapped option's position - expanding from center breaks the spatial story.\n- Keyboard timing matters: raising it too early shows it floating over the composer.\n\n## Reduced motion\nCrossfade between composer and fullscreen editor (200ms); keyboard follows the system default.\n\n## Don't miss\n- The map card stays embedded in the composer throughout - only the tapped option morphs.\n- Notes' fullscreen color (olive) is distinct from the composer's dark theme; that contrast marks it as a different canvas."</script>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Offsuit Stake Buy In Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Offsuit Stake Buy In Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/offsuit-stake-buy-in-slider"><b>Offsuit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/offsuit-stake-buy-in-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/offsuit-stake-buy-in-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Offsuit&#x27;s stake buy-in slider - drag across a tick ruler and the stakes and buy-in numbers climb through color tiers, from white to blue to red.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb4d225b7b88f78c6bd5/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb4d225b7b88f78c6bd5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-offsuit-stake-buy-in-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Offsuit&#x27;s stake buy-in slider - drag across a tick ruler and the stakes and buy-in numbers climb through color tiers, from white to blue to red.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A near-black game-setup screen: a dark card holding &quot;Stakes&quot; (e.g. 1/2) and &quot;Buy-in&quot; (e.g. 100/250) in large type, a horizontal tick-mark ruler beneath them, and at the bottom a PUBLIC GAME row and a white START GAME button.
+
+## Motion spec
+Pattern: color-tiered value slider.
+- Drag the ruler: the thumb position tracks the finger 1:1; ticks near the thumb stretch taller (height +8px, influence radius ~30px) and the active tick glows.
+- Values count live: stakes and buy-in digits roll to the selected step (50ms per step while dragging, no lag); steps snap on release with a light haptic tick at each detent while scrubbing.
+- Color tiers: as values climb, the stakes number shifts white to electric blue and the buy-in number shifts white to hot red - the color interpolates continuously with position (not stepped), so mid-drag states blend.
+- Ticks ahead of the thumb tint toward red as the tiers rise; ticks behind stay neutral gray.
+- Release: a soft spring settle (spring ~380/26) onto the detent; numbers pulse once (scale 1 to 1.04, 150ms).
+- START GAME stays static throughout - all drama lives in the card.
+
+## Calibration
+- Detents are the discrete stake steps (1/2, 2/4, 8/16, 400/800, 2K/4K...) - the ruler never lands between them.
+- Number formatting compacts at scale (100/250, 2K/4K, 400K/1M, 8M/20M) - match the K/M abbreviation rules exactly.
+
+## Reduced motion
+Slider snaps without tick stretching or color blending; tiers change discretely.
+
+## Don&#x27;t miss
+- Stakes and buy-in are different colors at high tiers (blue vs red) - they are two axes of risk, not one.
+- The card glows subtly with the tier color at the top edge as values rise.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">color-tiered value slider.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/offsuit-stake-buy-in-slider">original interaction</a> by Offsuit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Offsuit's stake buy-in slider - drag across a tick ruler and the stakes and buy-in numbers climb through color tiers, from white to blue to red.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA near-black game-setup screen: a dark card holding \"Stakes\" (e.g. 1/2) and \"Buy-in\" (e.g. 100/250) in large type, a horizontal tick-mark ruler beneath them, and at the bottom a PUBLIC GAME row and a white START GAME button.\n\n## Motion spec\nPattern: color-tiered value slider.\n- Drag the ruler: the thumb position tracks the finger 1:1; ticks near the thumb stretch taller (height +8px, influence radius ~30px) and the active tick glows.\n- Values count live: stakes and buy-in digits roll to the selected step (50ms per step while dragging, no lag); steps snap on release with a light haptic tick at each detent while scrubbing.\n- Color tiers: as values climb, the stakes number shifts white to electric blue and the buy-in number shifts white to hot red - the color interpolates continuously with position (not stepped), so mid-drag states blend.\n- Ticks ahead of the thumb tint toward red as the tiers rise; ticks behind stay neutral gray.\n- Release: a soft spring settle (spring ~380/26) onto the detent; numbers pulse once (scale 1 to 1.04, 150ms).\n- START GAME stays static throughout - all drama lives in the card.\n\n## Calibration\n- Detents are the discrete stake steps (1/2, 2/4, 8/16, 400/800, 2K/4K...) - the ruler never lands between them.\n- Number formatting compacts at scale (100/250, 2K/4K, 400K/1M, 8M/20M) - match the K/M abbreviation rules exactly.\n\n## Reduced motion\nSlider snaps without tick stretching or color blending; tiers change discretely.\n\n## Don't miss\n- Stakes and buy-in are different colors at high tiers (blue vs red) - they are two axes of risk, not one.\n- The card glows subtly with the tier color at the top edge as values rise."</script>
+</body></html>

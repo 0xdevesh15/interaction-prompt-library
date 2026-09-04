@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Invite Card Gyroscope - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Invite Card Gyroscope</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-invite-card-gyroscope"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-invite-card-gyroscope">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-invite-card-gyroscope">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s invite card - a premium vertical card on a white screen that responds to device tilt with layered 3D parallax and a glossy light sweep across its holographic surface.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c07789d0e39e18a3943704/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c07789d0e39e18a3943704/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-invite-card-gyroscope.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s invite card - a premium vertical card on a white screen that responds to device tilt with layered 3D parallax and a glossy light sweep across its holographic surface.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White modal screen (close X top-right, shield glyph top-left, SHARE pill bottom-center). Centered: a tall premium card with a mint-holographic foil finish - an embossed circle seal reading &quot;PREMIUM MINT&quot; at top, a shell motif below, &quot;MONEY&quot; engraved near the bottom, and a serial line. The card has visible depth: raised foil elements over a shifting iridescent base.
+
+## Motion spec
+Pattern: gyroscope-driven 3D parallax with foil gloss.
+- Tilting the device rotates the card in 3D (rotationX/rotationY up to +-10deg, mapped to tilt with smoothing - low-pass filter, ~150ms lag).
+- Internal layers parallax at different rates: the foil base moves least, the seal and shell motifs shift slightly more (1.2x), the engraved text most (1.4x) - the card feels thick, not flat.
+- A specular gloss band sweeps across the foil opposite to the tilt direction, its intensity peaking at mid-tilt angles - like catching light on a holographic sticker.
+- On release of tilt (device level), the card settles back to flat with a soft spring (stiffness ~180, damping ~16).
+
+## Calibration
+- Clamp rotation near +-10deg; beyond that the card reads as tipping over rather than catching light.
+- The gloss sweep is the premium cue - it should be bright but narrow, a band, not a wash.
+
+## Reduced motion
+Card is static; a single slow gloss sweep plays once on entry.
+
+## Don&#x27;t miss
+- Layer speeds must differ - uniform movement collapses the 3D illusion instantly.
+- The foil shifts hue subtly with angle (mint to aqua); a fixed-color surface kills the hologram feel.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gyroscope-driven 3D parallax with foil gloss.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-invite-card-gyroscope">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's invite card - a premium vertical card on a white screen that responds to device tilt with layered 3D parallax and a glossy light sweep across its holographic surface.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite modal screen (close X top-right, shield glyph top-left, SHARE pill bottom-center). Centered: a tall premium card with a mint-holographic foil finish - an embossed circle seal reading \"PREMIUM MINT\" at top, a shell motif below, \"MONEY\" engraved near the bottom, and a serial line. The card has visible depth: raised foil elements over a shifting iridescent base.\n\n## Motion spec\nPattern: gyroscope-driven 3D parallax with foil gloss.\n- Tilting the device rotates the card in 3D (rotationX/rotationY up to +-10deg, mapped to tilt with smoothing - low-pass filter, ~150ms lag).\n- Internal layers parallax at different rates: the foil base moves least, the seal and shell motifs shift slightly more (1.2x), the engraved text most (1.4x) - the card feels thick, not flat.\n- A specular gloss band sweeps across the foil opposite to the tilt direction, its intensity peaking at mid-tilt angles - like catching light on a holographic sticker.\n- On release of tilt (device level), the card settles back to flat with a soft spring (stiffness ~180, damping ~16).\n\n## Calibration\n- Clamp rotation near +-10deg; beyond that the card reads as tipping over rather than catching light.\n- The gloss sweep is the premium cue - it should be bright but narrow, a band, not a wash.\n\n## Reduced motion\nCard is static; a single slow gloss sweep plays once on entry.\n\n## Don't miss\n- Layer speeds must differ - uniform movement collapses the 3D illusion instantly.\n- The foil shifts hue subtly with angle (mint to aqua); a fixed-color surface kills the hologram feel."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Perfect Lesson - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Perfect Lesson</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-perfect-lesson"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-perfect-lesson">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-perfect-lesson">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s perfect-lesson celebration - Duo and a bowing character pop in with confetti over &quot;Perfect lesson! Take a bow!&quot;, then three stat cards (XP earned, time, 100% accuracy) stagger in below, with a CLAIM XP button at the bottom.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177d0522bbba81c9f818/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177d0522bbba81c9f818/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-perfect-lesson.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s perfect-lesson celebration - Duo and a bowing character pop in with confetti over &quot;Perfect lesson! Take a bow!&quot;, then three stat cards (XP earned, time, 100% accuracy) stagger in below, with a CLAIM XP button at the bottom.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White celebration screen: Duo and an orange-jacketed character mid-bow with confetti, &quot;Perfect lesson!&quot; headline and &quot;Take a bow!&quot; subline, three small stat cards (yellow XP, blue time, green accuracy), and a blue CLAIM XP button.
+
+## Motion spec
+Pattern: staggered celebration build.
+- The characters spring in from below (spring ~320/18, 450ms) as confetti pieces rain from the top (~20 pieces, random drift, 1.2s, gravity).
+- &quot;Perfect lesson!&quot; and &quot;Take a bow!&quot; fade up (250ms, 100ms stagger).
+- Stat cards pop in one at a time left to right (scale 0.6 -&gt; 1.1 -&gt; 1, spring ~340/20, 120ms stagger); each card&#x27;s value counts up as it lands (rolling digits, 300ms).
+- The characters keep a small celebration bounce (translateY +/-4px, 900ms loop) with occasional confetti re-bursts.
+- CLAIM XP fades in last (250ms).
+
+## Calibration
+- Confetti is sparse and light - a sprinkle, not a storm.
+- Card stagger is left to right matching reading order.
+
+## Reduced motion
+Everything fades in place (200ms, staggered 80ms); no confetti.
+
+## Don&#x27;t miss
+- The bow is literal - the character bends forward; Duo tips with them.
+- The 100% accuracy card is the payoff - it lands last and greenest.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered celebration build.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-perfect-lesson">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's perfect-lesson celebration - Duo and a bowing character pop in with confetti over \"Perfect lesson! Take a bow!\", then three stat cards (XP earned, time, 100% accuracy) stagger in below, with a CLAIM XP button at the bottom.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite celebration screen: Duo and an orange-jacketed character mid-bow with confetti, \"Perfect lesson!\" headline and \"Take a bow!\" subline, three small stat cards (yellow XP, blue time, green accuracy), and a blue CLAIM XP button.\n\n## Motion spec\nPattern: staggered celebration build.\n- The characters spring in from below (spring ~320/18, 450ms) as confetti pieces rain from the top (~20 pieces, random drift, 1.2s, gravity).\n- \"Perfect lesson!\" and \"Take a bow!\" fade up (250ms, 100ms stagger).\n- Stat cards pop in one at a time left to right (scale 0.6 -> 1.1 -> 1, spring ~340/20, 120ms stagger); each card's value counts up as it lands (rolling digits, 300ms).\n- The characters keep a small celebration bounce (translateY +/-4px, 900ms loop) with occasional confetti re-bursts.\n- CLAIM XP fades in last (250ms).\n\n## Calibration\n- Confetti is sparse and light - a sprinkle, not a storm.\n- Card stagger is left to right matching reading order.\n\n## Reduced motion\nEverything fades in place (200ms, staggered 80ms); no confetti.\n\n## Don't miss\n- The bow is literal - the character bends forward; Duo tips with them.\n- The 100% accuracy card is the payoff - it lands last and greenest."</script>
+</body></html>

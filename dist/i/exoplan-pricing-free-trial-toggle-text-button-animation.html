@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exoplan Pricing Free Trial Toggle Text Button Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Exoplan Pricing Free Trial Toggle Text Button Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/exoplan-pricing-free-trial-toggle-text-button-animation"><b>Exoplan</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/exoplan-pricing-free-trial-toggle-text-button-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/exoplan-pricing-free-trial-toggle-text-button-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Exoplan&#x27;s paywall toggle - flipping the &quot;Free trial&quot; switch swaps the price (₹999/month to ₹499 with a strikethrough original) and the main CTA&#x27;s label (&quot;Upgrade&quot; to &quot;Start 3-day free trial&quot;) with a vertical slide-and-fade text animation over the app&#x27;s aurora gradient.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f313c7ed780e0979efa/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f313c7ed780e0979efa/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-exoplan-pricing-free-trial-toggle-text-button-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Exoplan&#x27;s paywall toggle - flipping the &quot;Free trial&quot; switch swaps the price (₹999/month to ₹499 with a strikethrough original) and the main CTA&#x27;s label (&quot;Upgrade&quot; to &quot;Start 3-day free trial&quot;) with a vertical slide-and-fade text animation over the app&#x27;s aurora gradient.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark paywall: &quot;Upgrade to exoplan PRO&quot; header with PRO pill, tagline, feature list (Magic Planner, Auto-Reschedule, Plan My Day) with check icons, and a green-amber aurora glow rising from the bottom. Bottom stack: a &quot;Free trial&quot; row with a switch, the price line, a wide dark CTA button, and small Restore/Terms links.
+
+## Motion spec
+Pattern: toggle-driven state swap with rolling text.
+- Toggle: the switch knob slides and tints on (spring ~400/22, 200ms).
+- Price swap: the current price slides up and fades out while the new price slides in from below (250ms, ease-out); the strikethrough original fades in beside the trial price (150ms delay).
+- CTA label: the button&#x27;s text rolls vertically - old label exits upward, new label enters from below (250ms, ease-in-out) inside a clipped label container; button size stays fixed.
+- Aurora: the bottom glow brightens subtly when the trial is on (300ms).
+
+## Calibration
+- Price and CTA change together in one choreographed beat - never one without the other.
+- Keep the roll direction consistent (always upward) on both toggle directions.
+
+## Reduced motion
+Price and label cross-fade (150ms) without the vertical roll.
+
+## Don&#x27;t miss
+- The trial state shows the discounted price with the original struck through - both numbers visible.
+- The CTA never resizes; only its label animates.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">toggle-driven state swap with rolling text.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/exoplan-pricing-free-trial-toggle-text-button-animation">original interaction</a> by Exoplan. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Exoplan's paywall toggle - flipping the \"Free trial\" switch swaps the price (\u20b9999/month to \u20b9499 with a strikethrough original) and the main CTA's label (\"Upgrade\" to \"Start 3-day free trial\") with a vertical slide-and-fade text animation over the app's aurora gradient.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark paywall: \"Upgrade to exoplan PRO\" header with PRO pill, tagline, feature list (Magic Planner, Auto-Reschedule, Plan My Day) with check icons, and a green-amber aurora glow rising from the bottom. Bottom stack: a \"Free trial\" row with a switch, the price line, a wide dark CTA button, and small Restore/Terms links.\n\n## Motion spec\nPattern: toggle-driven state swap with rolling text.\n- Toggle: the switch knob slides and tints on (spring ~400/22, 200ms).\n- Price swap: the current price slides up and fades out while the new price slides in from below (250ms, ease-out); the strikethrough original fades in beside the trial price (150ms delay).\n- CTA label: the button's text rolls vertically - old label exits upward, new label enters from below (250ms, ease-in-out) inside a clipped label container; button size stays fixed.\n- Aurora: the bottom glow brightens subtly when the trial is on (300ms).\n\n## Calibration\n- Price and CTA change together in one choreographed beat - never one without the other.\n- Keep the roll direction consistent (always upward) on both toggle directions.\n\n## Reduced motion\nPrice and label cross-fade (150ms) without the vertical roll.\n\n## Don't miss\n- The trial state shows the discounted price with the original struck through - both numbers visible.\n- The CTA never resizes; only its label animates."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shuffles Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Shuffles Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shuffles-splash"><b>Shuffles</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuffles-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuffles-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Shuffles&#x27; splash - a rapid-fire montage of full-bleed collage art and loud typographic frames (CREATIVE repeats, FRAME, REALITY, &quot;Cut &amp; Paste&quot;, &quot;FIRE fit?&quot;, ENERGY) flashes by before landing on the SHUFFLES logo over a collage.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e8a0f24c4721fb10c3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e8a0f24c4721fb10c3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shuffles-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Shuffles&#x27; splash - a rapid-fire montage of full-bleed collage art and loud typographic frames (CREATIVE repeats, FRAME, REALITY, &quot;Cut &amp; Paste&quot;, &quot;FIRE fit?&quot;, ENERGY) flashes by before landing on the SHUFFLES logo over a collage.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen frames, each a different art-board: a layered travel collage with the SHUFFLES wordmark, a black board tiled with neon-yellow &quot;CREATIVE&quot; rows, a purple board with pink bars and giant yellow &quot;FRAME&quot;, a dotted blue board with a cut-out person and yellow &quot;REALITY&quot;, a flat red board reading &quot;Cut &amp; Paste&quot;, a dark green board reading &quot;FIRE fit?&quot;, navy with &quot;HYGGE home?&quot;, a warped purple checkerboard, and a yellow board tiled with &quot;ENERGY&quot;.
+
+## Motion spec
+Pattern: rapid-cut intro montage.
+- Each board slams in and holds ~300-450ms: enter with scale 1.06 -&gt; 1 (fast ease-out, 120ms), hold, then hard cut to the next - no crossfades between boards.
+- Some boards carry internal motion during their hold: the &quot;CREATIVE&quot; rows scroll vertically, the checkerboard warps, the cut-out person slides in from the bottom of the dotted board.
+- Roughly 9 boards in ~4s, tempo slightly accelerating toward the end.
+- Final beat: the travel-collage board returns full-screen, the SHUFFLES wordmark scales on with a spring (0.8 -&gt; 1, spring ~400/17, 350ms), and the intro hands off.
+
+## Calibration
+- Cuts, not fades - the energy comes from hard transitions.
+- Text boards and collage boards alternate so the eye never settles.
+
+## Reduced motion
+Boards crossfade at 500ms each.
+
+## Don&#x27;t miss
+- The first and last boards are the same collage - the montage is a loop back to identity.
+- The yellow &quot;ENERGY&quot; board has a torn-paper &quot;Creative&quot; patch - the collage aesthetic applies even to type boards.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rapid-cut intro montage.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shuffles-splash">original interaction</a> by Shuffles. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Shuffles' splash - a rapid-fire montage of full-bleed collage art and loud typographic frames (CREATIVE repeats, FRAME, REALITY, \"Cut & Paste\", \"FIRE fit?\", ENERGY) flashes by before landing on the SHUFFLES logo over a collage.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen frames, each a different art-board: a layered travel collage with the SHUFFLES wordmark, a black board tiled with neon-yellow \"CREATIVE\" rows, a purple board with pink bars and giant yellow \"FRAME\", a dotted blue board with a cut-out person and yellow \"REALITY\", a flat red board reading \"Cut & Paste\", a dark green board reading \"FIRE fit?\", navy with \"HYGGE home?\", a warped purple checkerboard, and a yellow board tiled with \"ENERGY\".\n\n## Motion spec\nPattern: rapid-cut intro montage.\n- Each board slams in and holds ~300-450ms: enter with scale 1.06 -> 1 (fast ease-out, 120ms), hold, then hard cut to the next - no crossfades between boards.\n- Some boards carry internal motion during their hold: the \"CREATIVE\" rows scroll vertically, the checkerboard warps, the cut-out person slides in from the bottom of the dotted board.\n- Roughly 9 boards in ~4s, tempo slightly accelerating toward the end.\n- Final beat: the travel-collage board returns full-screen, the SHUFFLES wordmark scales on with a spring (0.8 -> 1, spring ~400/17, 350ms), and the intro hands off.\n\n## Calibration\n- Cuts, not fades - the energy comes from hard transitions.\n- Text boards and collage boards alternate so the eye never settles.\n\n## Reduced motion\nBoards crossfade at 500ms each.\n\n## Don't miss\n- The first and last boards are the same collage - the montage is a loop back to identity.\n- The yellow \"ENERGY\" board has a torn-paper \"Creative\" patch - the collage aesthetic applies even to type boards."</script>
+</body></html>

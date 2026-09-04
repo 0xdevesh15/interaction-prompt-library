@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hostelworld Notification Arrow Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Hostelworld Notification Arrow Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/hostelworld-notification-arrow-pop-animation"><b>Hostelworld</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/hostelworld-notification-arrow-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/hostelworld-notification-arrow-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Hostelworld&#x27;s notification prompt - a hand-drawn white arrow draws itself from the bottom of the screen and curves up to point at the dialog&#x27;s YES button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343b117d19d070282a89c9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343b117d19d070282a89c9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-hostelworld-notification-arrow-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Hostelworld&#x27;s notification prompt - a hand-drawn white arrow draws itself from the bottom of the screen and curves up to point at the dialog&#x27;s YES button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Hostelworld, flat magenta: a centered white dialog - &quot;Get invites to surprise events!&quot; with explainer copy, &quot;No thanks&quot; text button and an orange &quot;YES!&quot; pill. Below it, a thin white hand-drawn curved arrow.
+
+## Motion spec
+Pattern: hand-drawn arrow stroke-draw pointing at the CTA.
+- The dialog pops in first (scale 0.9 -&gt; 1, spring ~400/16, 250ms).
+- 400ms later the arrow draws itself: a stroke starting low on the screen, sweeping in a loose hand-drawn curve up toward the YES button (stroke draw over 800ms, ease-in-out, with slight organic wobble in the path - never a geometric arc).
+- The arrowhead sketches on last (two quick strokes, 120ms each) and the whole arrow does a tiny settle wiggle (rotation +/-2deg, 200ms).
+- As the arrowhead lands, the YES button pulses once (scale 1 -&gt; 1.08 -&gt; 1, 250ms) - the arrow and the pulse read as one beat.
+- The arrow then idles with a very subtle bob (translateY +/-2px, 2s) until the user answers.
+- On either answer the dialog and arrow fade out together (250ms).
+
+## Calibration
+- The arrow is white, 2px, with slightly uneven stroke width - marker texture, not vector-perfect.
+- The arrowhead must land pointing at the YES pill&#x27;s lower edge - never at the dialog center.
+
+## Reduced motion
+Arrow fades in fully drawn (300ms); no wiggle or bob.
+
+## Don&#x27;t miss
+- &quot;No thanks&quot; is plain text; &quot;YES!&quot; is the orange pill - the arrow sells exactly one of them.
+- The dialog copy stays static - no typing or shimmer effects on the text.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">hand-drawn arrow stroke-draw pointing at the CTA.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/hostelworld-notification-arrow-pop-animation">original interaction</a> by Hostelworld. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Hostelworld's notification prompt - a hand-drawn white arrow draws itself from the bottom of the screen and curves up to point at the dialog's YES button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nHostelworld, flat magenta: a centered white dialog - \"Get invites to surprise events!\" with explainer copy, \"No thanks\" text button and an orange \"YES!\" pill. Below it, a thin white hand-drawn curved arrow.\n\n## Motion spec\nPattern: hand-drawn arrow stroke-draw pointing at the CTA.\n- The dialog pops in first (scale 0.9 -> 1, spring ~400/16, 250ms).\n- 400ms later the arrow draws itself: a stroke starting low on the screen, sweeping in a loose hand-drawn curve up toward the YES button (stroke draw over 800ms, ease-in-out, with slight organic wobble in the path - never a geometric arc).\n- The arrowhead sketches on last (two quick strokes, 120ms each) and the whole arrow does a tiny settle wiggle (rotation +/-2deg, 200ms).\n- As the arrowhead lands, the YES button pulses once (scale 1 -> 1.08 -> 1, 250ms) - the arrow and the pulse read as one beat.\n- The arrow then idles with a very subtle bob (translateY +/-2px, 2s) until the user answers.\n- On either answer the dialog and arrow fade out together (250ms).\n\n## Calibration\n- The arrow is white, 2px, with slightly uneven stroke width - marker texture, not vector-perfect.\n- The arrowhead must land pointing at the YES pill's lower edge - never at the dialog center.\n\n## Reduced motion\nArrow fades in fully drawn (300ms); no wiggle or bob.\n\n## Don't miss\n- \"No thanks\" is plain text; \"YES!\" is the orange pill - the arrow sells exactly one of them.\n- The dialog copy stays static - no typing or shimmer effects on the text."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>222 Intro Video Sequence - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>222 Intro Video Sequence</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/222-intro-video-sequence"><b>222</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/222-intro-video-sequence">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/222-intro-video-sequence">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: 222&#x27;s cinematic intro - typewriter questions over slow-motion night footage, film-frame borders flashing photos, ending on &quot;choose chance&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69874e5c742559dc5a3dce7c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69874e5c742559dc5a3dce7c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-222-intro-video-sequence.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: 222&#x27;s cinematic intro - typewriter questions over slow-motion night footage, film-frame borders flashing photos, ending on &quot;choose chance&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A near-black cinematic sequence: small typewriter text (&quot;when was the last time you met someone by chance?&quot;, &quot;through new experiences...&quot;, &quot;rather than distractions?&quot;, &quot;welcome to&quot;, &quot;this is not networking&quot;, &quot;this is not random&quot;, &quot;choose chance&quot;), slow-motion video of people at candlelit dinners and gatherings, film-strip frame borders with edge markings (&quot;400-3&quot;), and a single match-flame glow in the dark.
+
+## Motion spec
+Pattern: typewriter text over slow-mo video with film-photo flashes.
+- Text types on character by character (28ms per char, monospace-precise, cursor steady) - each line completes, holds ~1.2s, then fades (300ms) for the next.
+- Video beneath runs at dream pace (0.5x feel): faces, glasses, laughter - always dark, always warm-lit; scenes crossfade slowly (600ms).
+- Interstitial film frames flash in: a bordered photo slams on (1 frame hard cut), holds 400ms, cuts away - the film markings (&quot;400-3&quot;) included; 2-3 flashes between text beats.
+- The match flame: a single warm point of light flares up in the black (300ms), breathes (scale 1 -&gt; 1.1, 2s), and lights the &quot;welcome to&quot; line.
+- The final line &quot;choose chance&quot; types, then holds - no button, the sequence is the pitch.
+
+## Calibration
+- Everything is small and centered - big type would break the intimacy.
+- The film flashes must feel mechanical - hard cuts only, no dissolves on the frames.
+
+## Reduced motion
+Text fades in whole (300ms); film frames crossfade; video keeps its slow pace.
+
+## Don&#x27;t miss
+- The cadence is question, image, question - text never talks over the flashes.
+- Warm light on black is the whole grade - no blue, no white scenes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">typewriter text over slow-mo video with film-photo flashes.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/222-intro-video-sequence">original interaction</a> by 222. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: 222's cinematic intro - typewriter questions over slow-motion night footage, film-frame borders flashing photos, ending on \"choose chance\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA near-black cinematic sequence: small typewriter text (\"when was the last time you met someone by chance?\", \"through new experiences...\", \"rather than distractions?\", \"welcome to\", \"this is not networking\", \"this is not random\", \"choose chance\"), slow-motion video of people at candlelit dinners and gatherings, film-strip frame borders with edge markings (\"400-3\"), and a single match-flame glow in the dark.\n\n## Motion spec\nPattern: typewriter text over slow-mo video with film-photo flashes.\n- Text types on character by character (28ms per char, monospace-precise, cursor steady) - each line completes, holds ~1.2s, then fades (300ms) for the next.\n- Video beneath runs at dream pace (0.5x feel): faces, glasses, laughter - always dark, always warm-lit; scenes crossfade slowly (600ms).\n- Interstitial film frames flash in: a bordered photo slams on (1 frame hard cut), holds 400ms, cuts away - the film markings (\"400-3\") included; 2-3 flashes between text beats.\n- The match flame: a single warm point of light flares up in the black (300ms), breathes (scale 1 -> 1.1, 2s), and lights the \"welcome to\" line.\n- The final line \"choose chance\" types, then holds - no button, the sequence is the pitch.\n\n## Calibration\n- Everything is small and centered - big type would break the intimacy.\n- The film flashes must feel mechanical - hard cuts only, no dissolves on the frames.\n\n## Reduced motion\nText fades in whole (300ms); film frames crossfade; video keeps its slow pace.\n\n## Don't miss\n- The cadence is question, image, question - text never talks over the flashes.\n- Warm light on black is the whole grade - no blue, no white scenes."</script>
+</body></html>

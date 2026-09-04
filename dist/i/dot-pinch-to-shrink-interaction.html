@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dot Pinch to Shrink Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Dot Pinch to Shrink Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/dot-pinch-to-shrink-interaction"><b>Dot</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dot-pinch-to-shrink-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dot-pinch-to-shrink-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Dot&#x27;s pinch-to-shrink - pinching out on a journal conversation collapses it into a stacked deck of summary cards, then further into a single dated entry, and pinching in expands it back to the full thread.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7295be76d5c62e6f7a0af/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7295be76d5c62e6f7a0af/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-dot-pinch-to-shrink-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Dot&#x27;s pinch-to-shrink - pinching out on a journal conversation collapses it into a stacked deck of summary cards, then further into a single dated entry, and pinching in expands it back to the full thread.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Soft pink-gradient journal chat: a conversation thread (&quot;Hey Prithvi, what&#x27;s up?&quot;, &quot;Doing well&quot;, long reflective entries with a small photo). Pinch level 2: a deck of stacked summary cards (&quot;Introduction to Prithvi&#x27;s values&quot;, &quot;Shared Pikachu figurine, playing Tycoon Racers&quot;, &quot;Options for discussing Tycoon Racers&quot;) with card edges peeking. Pinch level 3: a single centered date card (&quot;Tuesday June 25&quot;). The pink gradient wash and a floating action pill persist at the bottom throughout.
+
+## Motion spec
+Pattern: semantic zoom via pinch, gesture-driven.
+- Pinch out: the thread scales down and folds into the top summary card (content blurs 8px as it shrinks, gesture-tracked); remaining cards stack behind with 10px offsets and slight rotation (+-2deg).
+- Commit: on release, the deck snaps to a settled fan (spring ~320/24) - front card full, two behind peeking.
+- Deeper pinch: the deck collapses into the single date card (300ms, ease-in-out), cards converging center.
+- Pinch in: reverses exactly - date card splits back into the deck, then the deck unfolds into the live thread (300ms), content sharpening as it grows.
+
+## Calibration
+- Zoom levels are discrete states; the gesture scrubs between them and springs to the nearest.
+- The bottom gradient and action pill never scale - only the content layer zooms.
+
+## Reduced motion
+Levels crossfade (250ms); no pinch scrub.
+
+## Don&#x27;t miss
+- Card stack edges show real content previews (titles + tiny thumbnails), not blank rectangles.
+- The date card is minimal: just weekday and date, centered, no chrome.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">semantic zoom via pinch, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/dot-pinch-to-shrink-interaction">original interaction</a> by Dot. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Dot's pinch-to-shrink - pinching out on a journal conversation collapses it into a stacked deck of summary cards, then further into a single dated entry, and pinching in expands it back to the full thread.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSoft pink-gradient journal chat: a conversation thread (\"Hey Prithvi, what's up?\", \"Doing well\", long reflective entries with a small photo). Pinch level 2: a deck of stacked summary cards (\"Introduction to Prithvi's values\", \"Shared Pikachu figurine, playing Tycoon Racers\", \"Options for discussing Tycoon Racers\") with card edges peeking. Pinch level 3: a single centered date card (\"Tuesday June 25\"). The pink gradient wash and a floating action pill persist at the bottom throughout.\n\n## Motion spec\nPattern: semantic zoom via pinch, gesture-driven.\n- Pinch out: the thread scales down and folds into the top summary card (content blurs 8px as it shrinks, gesture-tracked); remaining cards stack behind with 10px offsets and slight rotation (+-2deg).\n- Commit: on release, the deck snaps to a settled fan (spring ~320/24) - front card full, two behind peeking.\n- Deeper pinch: the deck collapses into the single date card (300ms, ease-in-out), cards converging center.\n- Pinch in: reverses exactly - date card splits back into the deck, then the deck unfolds into the live thread (300ms), content sharpening as it grows.\n\n## Calibration\n- Zoom levels are discrete states; the gesture scrubs between them and springs to the nearest.\n- The bottom gradient and action pill never scale - only the content layer zooms.\n\n## Reduced motion\nLevels crossfade (250ms); no pinch scrub.\n\n## Don't miss\n- Card stack edges show real content previews (titles + tiny thumbnails), not blank rectangles.\n- The date card is minimal: just weekday and date, centered, no chrome."</script>
+</body></html>

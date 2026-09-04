@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Superlist Onboarding Typing Notes Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Superlist Onboarding Typing Notes Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/superlist-onboarding-typing-notes-animation"><b>Superlist</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/superlist-onboarding-typing-notes-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/superlist-onboarding-typing-notes-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Superlist&#x27;s notes onboarding - the Team Sync note card auto-types its way from a title to a full meeting note, growing line by line on the red panel.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e002ed8be589b580cfaf7c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e002ed8be589b580cfaf7c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-superlist-onboarding-typing-notes-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Superlist&#x27;s notes onboarding - the Team Sync note card auto-types its way from a title to a full meeting note, growing line by line on the red panel.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Red panel with the headline &quot;Take notes and transform thoughts into actions&quot;. Center: a white note card that starts with just &quot;Team Sync&quot; and a cursor, then fills itself: a first sentence, a bullet list, a &quot;Meeting notes&quot; section, and closing lines - the card growing taller with every addition. Bottom: the dark sign-up bar.
+
+## Motion spec
+Pattern: auto-typing document with continuous card growth.
+- Text types character by character (~35ms/char) with a block cursor; line breaks land with a brief 150ms pause, section headers type slightly faster.
+- Bullets get their marker first (dash fades in, 100ms), then their text.
+- The card&#x27;s height animates continuously to fit (spring ~320/30), never clipping a half-typed line - it grows a line ahead of the cursor.
+- The card keeps a gentle float (+-3pt vertical drift, 3s loop) so the panel never feels frozen between keystrokes.
+
+## Calibration
+- Typing cadence is the texture: brisk for prose, pausing at structure (bullets, headers).
+- Growth follows the cursor, so the card&#x27;s bottom edge is always in motion while typing.
+
+## Reduced motion
+The note fades in fully written (300ms); card holds its final size.
+
+## Don&#x27;t miss
+- The note reads like a real artifact: title, prose, bullets, section header - not lorem lines.
+- The red panel and headline stay static; all life is inside the card.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-typing document with continuous card growth.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/superlist-onboarding-typing-notes-animation">original interaction</a> by Superlist. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Superlist's notes onboarding - the Team Sync note card auto-types its way from a title to a full meeting note, growing line by line on the red panel.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRed panel with the headline \"Take notes and transform thoughts into actions\". Center: a white note card that starts with just \"Team Sync\" and a cursor, then fills itself: a first sentence, a bullet list, a \"Meeting notes\" section, and closing lines - the card growing taller with every addition. Bottom: the dark sign-up bar.\n\n## Motion spec\nPattern: auto-typing document with continuous card growth.\n- Text types character by character (~35ms/char) with a block cursor; line breaks land with a brief 150ms pause, section headers type slightly faster.\n- Bullets get their marker first (dash fades in, 100ms), then their text.\n- The card's height animates continuously to fit (spring ~320/30), never clipping a half-typed line - it grows a line ahead of the cursor.\n- The card keeps a gentle float (+-3pt vertical drift, 3s loop) so the panel never feels frozen between keystrokes.\n\n## Calibration\n- Typing cadence is the texture: brisk for prose, pausing at structure (bullets, headers).\n- Growth follows the cursor, so the card's bottom edge is always in motion while typing.\n\n## Reduced motion\nThe note fades in fully written (300ms); card holds its final size.\n\n## Don't miss\n- The note reads like a real artifact: title, prose, bullets, section header - not lorem lines.\n- The red panel and headline stay static; all life is inside the card."</script>
+</body></html>

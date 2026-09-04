@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Polar Splash Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Polar Splash Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/polar-splash-intro-animation"><b>Polar</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/polar-splash-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/polar-splash-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Polar&#x27;s splash intro - over a black screen, the globe logo de-blurs into focus, a grainy blue-to-orange gradient washes up from the bottom, the &quot;Monetize your software&quot; headline and a &quot;Get Started&quot; pill follow in a staggered de-blur sequence.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6933fc5e491e9c48bfacc199/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6933fc5e491e9c48bfacc199/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-polar-splash-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Polar&#x27;s splash intro - over a black screen, the globe logo de-blurs into focus, a grainy blue-to-orange gradient washes up from the bottom, the &quot;Monetize your software&quot; headline and a &quot;Get Started&quot; pill follow in a staggered de-blur sequence.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen. Center: the Polar globe mark (white outline sphere with vertical meridians). Lower half: a grainy atmospheric gradient - deep blue upper region dissolving into warm orange-red at the bottom edge. Serif headline &quot;Monetize your software&quot; sits below the logo, with a white &quot;Get Started&quot; pill button beneath.
+
+## Motion spec
+Pattern: staggered de-blur reveal, ~2s.
+- Logo: the globe starts blurred (radius ~12px) and slightly scaled up (1.15), sharpening and settling to scale 1 over 700ms (ease-out).
+- Gradient: the blue-orange field rises from the bottom (translateY 30% -&gt; 0, 900ms, ease-out) while cross-fading in, film grain shimmering continuously.
+- Headline: fades in blurred (radius 8px) and sharpens (600ms, +300ms delay after logo).
+- Button: &quot;Get Started&quot; de-blurs and fades in last (500ms, +500ms delay), scaling 0.94 -&gt; 1.
+
+## Calibration
+- Every element enters through blur, not a plain fade - the de-blur is the signature.
+- The gradient stays soft and out of focus; no hard horizon line.
+
+## Reduced motion
+All elements appear with a single 300ms cross-fade; gradient static.
+
+## Don&#x27;t miss
+- The grain texture is visible and alive, not a flat smooth gradient.
+- The logo is a thin-line globe - meridian curves, not a solid circle.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered de-blur reveal, ~2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/polar-splash-intro-animation">original interaction</a> by Polar. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Polar's splash intro - over a black screen, the globe logo de-blurs into focus, a grainy blue-to-orange gradient washes up from the bottom, the \"Monetize your software\" headline and a \"Get Started\" pill follow in a staggered de-blur sequence.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen. Center: the Polar globe mark (white outline sphere with vertical meridians). Lower half: a grainy atmospheric gradient - deep blue upper region dissolving into warm orange-red at the bottom edge. Serif headline \"Monetize your software\" sits below the logo, with a white \"Get Started\" pill button beneath.\n\n## Motion spec\nPattern: staggered de-blur reveal, ~2s.\n- Logo: the globe starts blurred (radius ~12px) and slightly scaled up (1.15), sharpening and settling to scale 1 over 700ms (ease-out).\n- Gradient: the blue-orange field rises from the bottom (translateY 30% -> 0, 900ms, ease-out) while cross-fading in, film grain shimmering continuously.\n- Headline: fades in blurred (radius 8px) and sharpens (600ms, +300ms delay after logo).\n- Button: \"Get Started\" de-blurs and fades in last (500ms, +500ms delay), scaling 0.94 -> 1.\n\n## Calibration\n- Every element enters through blur, not a plain fade - the de-blur is the signature.\n- The gradient stays soft and out of focus; no hard horizon line.\n\n## Reduced motion\nAll elements appear with a single 300ms cross-fade; gradient static.\n\n## Don't miss\n- The grain texture is visible and alive, not a flat smooth gradient.\n- The logo is a thin-line globe - meridian curves, not a solid circle."</script>
+</body></html>

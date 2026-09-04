@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opal Gem Wiggle Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Opal Gem Wiggle Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opal-gem-wiggle-interaction"><b>Opal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-gem-wiggle-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-gem-wiggle-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Opal&#x27;s gem wiggle - on the &quot;UNWAVERING GEM&quot; detail screen, tapping the locked pill button makes both the button and the floating 3D rock wiggle horizontally in a firm &quot;not yet&quot; shake.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67067bdc5d11d5a0fec75d01/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67067bdc5d11d5a0fec75d01/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opal-gem-wiggle-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Opal&#x27;s gem wiggle - on the &quot;UNWAVERING GEM&quot; detail screen, tapping the locked pill button makes both the button and the floating 3D rock wiggle horizontally in a firm &quot;not yet&quot; shake.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark gem detail screen: &quot;UNWAVERING GEM&quot; title with &quot;Earn Opal Pro&quot; subline, a large floating grey 3D rock center-screen, requirement copy at the bottom, and a white &quot;Locked&quot; pill button with a lock icon.
+
+## Motion spec
+Pattern: horizontal shake as negative feedback.
+- Tap the Locked button: the button depresses (scale 0.97, 80ms) and immediately wiggles (translateX keyframes 0 -&gt; -8 -&gt; +8 -&gt; -5 -&gt; +5 -&gt; 0px, 400ms, ease-out between keys) with a haptic warning buzz.
+- The 3D rock mirrors the shake one beat later (~80ms delay): same translateX wiggle at 60% amplitude plus a slight counter-rotation (rotateZ -4deg -&gt; +4deg -&gt; 0), like the rock is stubbornly saying no.
+- The lock icon in the button jiggles with the shake (rotate +/-8deg, same keyframes).
+- Nothing else moves - the refusal is the whole response, no toast, no modal.
+
+## Calibration
+- The wiggle decays - three direction changes maximum, each smaller.
+- Rock and button never move in the same frame exactly - the delay makes it feel connected, not synchronized.
+
+## Reduced motion
+Single small button nudge (4px); rock stays still.
+
+## Don&#x27;t miss
+- The rock&#x27;s floor shadow shifts with the wiggle - the shadow is part of the object.
+- The button returns to its exact resting position - no drift after the shake.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal shake as negative feedback.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opal-gem-wiggle-interaction">original interaction</a> by Opal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Opal's gem wiggle - on the \"UNWAVERING GEM\" detail screen, tapping the locked pill button makes both the button and the floating 3D rock wiggle horizontally in a firm \"not yet\" shake.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark gem detail screen: \"UNWAVERING GEM\" title with \"Earn Opal Pro\" subline, a large floating grey 3D rock center-screen, requirement copy at the bottom, and a white \"Locked\" pill button with a lock icon.\n\n## Motion spec\nPattern: horizontal shake as negative feedback.\n- Tap the Locked button: the button depresses (scale 0.97, 80ms) and immediately wiggles (translateX keyframes 0 -> -8 -> +8 -> -5 -> +5 -> 0px, 400ms, ease-out between keys) with a haptic warning buzz.\n- The 3D rock mirrors the shake one beat later (~80ms delay): same translateX wiggle at 60% amplitude plus a slight counter-rotation (rotateZ -4deg -> +4deg -> 0), like the rock is stubbornly saying no.\n- The lock icon in the button jiggles with the shake (rotate +/-8deg, same keyframes).\n- Nothing else moves - the refusal is the whole response, no toast, no modal.\n\n## Calibration\n- The wiggle decays - three direction changes maximum, each smaller.\n- Rock and button never move in the same frame exactly - the delay makes it feel connected, not synchronized.\n\n## Reduced motion\nSingle small button nudge (4px); rock stays still.\n\n## Don't miss\n- The rock's floor shadow shifts with the wiggle - the shadow is part of the object.\n- The button returns to its exact resting position - no drift after the shake."</script>
+</body></html>

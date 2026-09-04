@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED 3D Card Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED 3D Card Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-3d-card-swipe-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-3d-card-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-3d-card-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s 3D card carousel - promo cards sit in a perspective stack and a horizontal swipe rotates the front card away while the next card swings into place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab4ee6c592aacedb2b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab4ee6c592aacedb2b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-3d-card-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s 3D card carousel - promo cards sit in a perspective stack and a horizontal swipe rotates the front card away while the next card swings into place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen with a &quot;1 of 2&quot; progress pill at top. Center stage: a stack of promo cards (&quot;DEAL OF THE DAY&quot;, &quot;make a high score &amp; WIN 100&quot;, &quot;win 1000 worth of free fuel&quot;, &quot;invite a friend to CRED &amp; win 200&quot;), each with an illustration and a CTA button. Cards behind peek out at the edges with perspective tilt.
+
+## Motion spec
+Pattern: 3D swipe carousel, ~700ms per swipe.
+- At rest, the front card faces the viewer; cards behind are scaled to 0.92, pushed back in Z, tilted -6deg and +6deg at the left and right edges, and dimmed 30%.
+- On drag, the front card follows the finger (translateX + rotateY up to 25deg), the stack behind shifting forward in anticipation.
+- On release past threshold, the front card swings off in the drag direction (300ms, ease-in, continuing its rotation) as the next card swings into the front (spring stiffness 300 damping 22, rotation settling from its edge tilt to 0).
+- Below threshold, the card springs back to center (stiffness 350 damping 20).
+- The progress pill updates as the new card lands.
+
+## Calibration
+- Rotation and translation stay coupled to the finger - no autoplay feel.
+- Edge cards tilt toward center, bookending the front card.
+
+## Reduced motion
+Cards crossfade instead of rotating.
+
+## Don&#x27;t miss
+- The front card&#x27;s CTA button stays crisp while the card rotates - no blur tricks.
+- The depth is real: back cards are smaller, dimmer, and offset, not just translated.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D swipe carousel, ~700ms per swipe.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-3d-card-swipe-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's 3D card carousel - promo cards sit in a perspective stack and a horizontal swipe rotates the front card away while the next card swings into place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen with a \"1 of 2\" progress pill at top. Center stage: a stack of promo cards (\"DEAL OF THE DAY\", \"make a high score & WIN 100\", \"win 1000 worth of free fuel\", \"invite a friend to CRED & win 200\"), each with an illustration and a CTA button. Cards behind peek out at the edges with perspective tilt.\n\n## Motion spec\nPattern: 3D swipe carousel, ~700ms per swipe.\n- At rest, the front card faces the viewer; cards behind are scaled to 0.92, pushed back in Z, tilted -6deg and +6deg at the left and right edges, and dimmed 30%.\n- On drag, the front card follows the finger (translateX + rotateY up to 25deg), the stack behind shifting forward in anticipation.\n- On release past threshold, the front card swings off in the drag direction (300ms, ease-in, continuing its rotation) as the next card swings into the front (spring stiffness 300 damping 22, rotation settling from its edge tilt to 0).\n- Below threshold, the card springs back to center (stiffness 350 damping 20).\n- The progress pill updates as the new card lands.\n\n## Calibration\n- Rotation and translation stay coupled to the finger - no autoplay feel.\n- Edge cards tilt toward center, bookending the front card.\n\n## Reduced motion\nCards crossfade instead of rotating.\n\n## Don't miss\n- The front card's CTA button stays crisp while the card rotates - no blur tricks.\n- The depth is real: back cards are smaller, dimmer, and offset, not just translated."</script>
+</body></html>

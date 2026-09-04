@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Switching Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Switching Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-switching-splash"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-switching-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-switching-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Airbnb&#x27;s mode-switch interstitial - a 3D house illustration spins and sinks into a circular hole in the page, then a beach island rises in its place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc371d29849d7bd776/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc371d29849d7bd776/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-switching-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Airbnb&#x27;s mode-switch interstitial - a 3D house illustration spins and sinks into a circular hole in the page, then a beach island rises in its place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Plain white screen. Center: a small isometric 3D diorama - first a house, then a beach island with palm trees. Between them, a circular hole opens in the white surface. A caption below reads &quot;Switching to traveling&quot;.
+
+## Motion spec
+Pattern: spin-sink swap diorama.
+- The current diorama (house) spins 360 degrees around its vertical axis (700ms, ease-in) while shrinking, then drops into a circular hole that opens beneath it - the hole&#x27;s rim curls like paper (scale 0 to 1, 250ms) with a soft inner shadow.
+- The house sinks fully below the surface (translateY +60px, scale to 0.3, 350ms, ease-in) and the hole flashes closed.
+- The hole reopens and the new diorama (beach island) rises from below (translateY -60px to 0, scale 0.3 to 1, spring ~300/22 with gentle overshoot), spinning the last 120 degrees into place.
+- The hole seals under the island, leaving its soft drop shadow; the caption &quot;Switching to traveling&quot; crossfades in sync with the swap (300ms).
+- Total sequence ~1.8s, then the destination screen fades up.
+
+## Calibration
+- Sink and rise share one hole - it never closes fully between them, just pulses.
+- Spin direction matches between sink and rise (both clockwise) for continuity.
+
+## Reduced motion
+Dioramas crossfade without spin or hole.
+
+## Don&#x27;t miss
+- The hole is a real circular mask with a curled rim and shadow - a plain scale-down loses the &quot;into the page&quot; depth.
+- The island bobs once on landing (translateY +-3px, 400ms) like it floated up.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spin-sink swap diorama.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-switching-splash">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Airbnb's mode-switch interstitial - a 3D house illustration spins and sinks into a circular hole in the page, then a beach island rises in its place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPlain white screen. Center: a small isometric 3D diorama - first a house, then a beach island with palm trees. Between them, a circular hole opens in the white surface. A caption below reads \"Switching to traveling\".\n\n## Motion spec\nPattern: spin-sink swap diorama.\n- The current diorama (house) spins 360 degrees around its vertical axis (700ms, ease-in) while shrinking, then drops into a circular hole that opens beneath it - the hole's rim curls like paper (scale 0 to 1, 250ms) with a soft inner shadow.\n- The house sinks fully below the surface (translateY +60px, scale to 0.3, 350ms, ease-in) and the hole flashes closed.\n- The hole reopens and the new diorama (beach island) rises from below (translateY -60px to 0, scale 0.3 to 1, spring ~300/22 with gentle overshoot), spinning the last 120 degrees into place.\n- The hole seals under the island, leaving its soft drop shadow; the caption \"Switching to traveling\" crossfades in sync with the swap (300ms).\n- Total sequence ~1.8s, then the destination screen fades up.\n\n## Calibration\n- Sink and rise share one hole - it never closes fully between them, just pulses.\n- Spin direction matches between sink and rise (both clockwise) for continuity.\n\n## Reduced motion\nDioramas crossfade without spin or hole.\n\n## Don't miss\n- The hole is a real circular mask with a curled rim and shadow - a plain scale-down loses the \"into the page\" depth.\n- The island bobs once on landing (translateY +-3px, 400ms) like it floated up."</script>
+</body></html>

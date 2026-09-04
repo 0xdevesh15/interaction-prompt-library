@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wabi App Detail Top Sheet Swipe Down Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Wabi App Detail Top Sheet Swipe Down Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/wabi-app-detail-top-sheet-swipe-down-morph-interaction"><b>Wabi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wabi-app-detail-top-sheet-swipe-down-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wabi-app-detail-top-sheet-swipe-down-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Wabi&#x27;s app detail collapse - scrolling the detail page morphs the large circular app icon header into a compact circle pinned at the top, freeing the list (A Short History of Nearly Everything) to fill the viewport.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c93c7ed780e097d16d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c93c7ed780e097d16d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-wabi-app-detail-top-sheet-swipe-down-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Wabi&#x27;s app detail collapse - scrolling the detail page morphs the large circular app icon header into a compact circle pinned at the top, freeing the list (A Short History of Nearly Everything) to fill the viewport.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light detail page: back chevron, big circular app icon, &quot;Non-fiction summaries&quot; title, stats chips, Remix / Save buttons, a tab row, and the content list (book rows with covers) over a green &quot;Generate Now&quot; bottom button. Collapsed state: the icon is a small circle centered in the top bar; title and meta are gone; the list occupies the freed space.
+
+## Motion spec
+Pattern: scroll-linked header morph, gesture-driven.
+- Scroll: from offset 0 to ~120px the icon shrinks (100% -&gt; 36px) and drifts to the top-center while the title, stats, and buttons fade + collapse (all tied 1:1 to scroll position).
+- Pin: past the threshold the compact icon snaps into the nav bar (spring ~320/22) with a hairline divider fading in.
+- Reverse: scrolling back to top reverses every step at the same 1:1 rate - the header blooms back.
+- Overshoot: a fast fling past the threshold gives the compact icon a 4px dip-and-settle (spring ~300/18).
+
+## Calibration
+- The morph is interpolable at every scroll offset - half-scrolled shows a half-shrunk icon.
+- &quot;Generate Now&quot; never moves; only the header region transforms.
+
+## Reduced motion
+Header swaps between expanded and compact with a 200ms fade at the threshold.
+
+## Don&#x27;t miss
+- The icon is the only element that survives the collapse - everything else dissolves.
+- The compact icon lands exactly in the nav bar&#x27;s center, not beside the chevron.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-linked header morph, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/wabi-app-detail-top-sheet-swipe-down-morph-interaction">original interaction</a> by Wabi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Wabi's app detail collapse - scrolling the detail page morphs the large circular app icon header into a compact circle pinned at the top, freeing the list (A Short History of Nearly Everything) to fill the viewport.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight detail page: back chevron, big circular app icon, \"Non-fiction summaries\" title, stats chips, Remix / Save buttons, a tab row, and the content list (book rows with covers) over a green \"Generate Now\" bottom button. Collapsed state: the icon is a small circle centered in the top bar; title and meta are gone; the list occupies the freed space.\n\n## Motion spec\nPattern: scroll-linked header morph, gesture-driven.\n- Scroll: from offset 0 to ~120px the icon shrinks (100% -> 36px) and drifts to the top-center while the title, stats, and buttons fade + collapse (all tied 1:1 to scroll position).\n- Pin: past the threshold the compact icon snaps into the nav bar (spring ~320/22) with a hairline divider fading in.\n- Reverse: scrolling back to top reverses every step at the same 1:1 rate - the header blooms back.\n- Overshoot: a fast fling past the threshold gives the compact icon a 4px dip-and-settle (spring ~300/18).\n\n## Calibration\n- The morph is interpolable at every scroll offset - half-scrolled shows a half-shrunk icon.\n- \"Generate Now\" never moves; only the header region transforms.\n\n## Reduced motion\nHeader swaps between expanded and compact with a 200ms fade at the threshold.\n\n## Don't miss\n- The icon is the only element that survives the collapse - everything else dissolves.\n- The compact icon lands exactly in the nav bar's center, not beside the chevron."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cosmos Theme Switcher Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Cosmos Theme Switcher Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cosmos-theme-switcher-interaction"><b>Cosmos</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cosmos-theme-switcher-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cosmos-theme-switcher-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Cosmos&#x27;s appearance picker - tapping Light, System, or Dark flips the entire screen between themes with a wipe that sweeps from the control, preview grid included.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d53727e2653946cbffdac0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d53727e2653946cbffdac0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cosmos-theme-switcher-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Cosmos&#x27;s appearance picker - tapping Light, System, or Dark flips the entire screen between themes with a wipe that sweeps from the control, preview grid included.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Select your appearance&quot; screen with a back arrow and gear icon: a two-column photo-grid preview of the app mid-screen, a Light / System / Dark segmented control under it, and a Confirm button pinned at the bottom. Everything - background, preview chrome, grid cells, controls - exists in both light and dark variants.
+
+## Motion spec
+Pattern: whole-screen theme wipe driven by the segmented control.
+- Tap a segment: the new theme wipes across the screen as a diagonal sweep starting from the control (300ms, ease-in-out) - background, text, the preview grid&#x27;s chrome, and the grid images&#x27; tone all flip inside the same moving mask edge.
+- The selected pill slides its fill under the thumb (200ms, spring ~400/22) leading the wipe by a beat.
+- The preview grid&#x27;s photos crossfade to their theme-graded variants with a slight stagger top-to-bottom (40ms per row) inside the wipe.
+- Confirm stays constant in layout; only its colors flip.
+
+## Calibration
+- The wipe edge is a clean diagonal line, not a blur - you can watch the theme boundary travel.
+- System mode animates to whichever theme the OS reports, with the same wipe.
+
+## Reduced motion
+Whole-screen crossfade (200ms); no directional wipe.
+
+## Don&#x27;t miss
+- The preview grid is a live miniature of the app, not a static image - its tab bar and cards flip theme too.
+- The wipe passes over the status bar last; status bar icons switch style at the end of the sweep.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">whole-screen theme wipe driven by the segmented control.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cosmos-theme-switcher-interaction">original interaction</a> by Cosmos. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Cosmos's appearance picker - tapping Light, System, or Dark flips the entire screen between themes with a wipe that sweeps from the control, preview grid included.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Select your appearance\" screen with a back arrow and gear icon: a two-column photo-grid preview of the app mid-screen, a Light / System / Dark segmented control under it, and a Confirm button pinned at the bottom. Everything - background, preview chrome, grid cells, controls - exists in both light and dark variants.\n\n## Motion spec\nPattern: whole-screen theme wipe driven by the segmented control.\n- Tap a segment: the new theme wipes across the screen as a diagonal sweep starting from the control (300ms, ease-in-out) - background, text, the preview grid's chrome, and the grid images' tone all flip inside the same moving mask edge.\n- The selected pill slides its fill under the thumb (200ms, spring ~400/22) leading the wipe by a beat.\n- The preview grid's photos crossfade to their theme-graded variants with a slight stagger top-to-bottom (40ms per row) inside the wipe.\n- Confirm stays constant in layout; only its colors flip.\n\n## Calibration\n- The wipe edge is a clean diagonal line, not a blur - you can watch the theme boundary travel.\n- System mode animates to whichever theme the OS reports, with the same wipe.\n\n## Reduced motion\nWhole-screen crossfade (200ms); no directional wipe.\n\n## Don't miss\n- The preview grid is a live miniature of the app, not a static image - its tab bar and cards flip theme too.\n- The wipe passes over the status bar last; status bar icons switch style at the end of the sweep."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLKJCK Busted Sequence Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BLKJCK Busted Sequence Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/blkjck-busted-sequence-animation"><b>Blkjck</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blkjck-busted-sequence-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blkjck-busted-sequence-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BLKJCK&#x27;s bust sequence - the busting card flips in, the total ticks past 21, and &quot;BUSTED&quot; stamps across the table with a wiggle as the chip count drains.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f78169b1868c97566e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f78169b1868c97566e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-blkjck-busted-sequence-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BLKJCK&#x27;s bust sequence - the busting card flips in, the total ticks past 21, and &quot;BUSTED&quot; stamps across the table with a wiggle as the chip count drains.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pink blackjack table: chip balance and logo header, dealer&#x27;s cards up top, the player&#x27;s hand with its total below, action buttons at the bottom.
+
+## Motion spec
+Pattern: bust reveal sequence, ~1.5s.
+- The final card slides into the hand and flips face-up (300ms: slide in on ease-out, half-flip at settle).
+- The hand total ticks upward rapidly to its bust value (~400ms, ease-out), turning red as it crosses 21.
+- &quot;BUSTED&quot; stamps in at center (scale 1.5 to 1, spring stiffness 350 damping 13) and wiggles (+-3deg, two cycles of 180ms) while the action buttons collapse into a single Done button (250ms layout spring).
+- The header chip counter ticks down by the bet in sync with the stamp.
+- Done slides the verdict out (200ms) and resets the table.
+
+## Calibration
+- The stamp lands exactly when the total lands - the number finishing is the trigger beat.
+- The wiggle is small and horizontal-rotational; no translation shake.
+
+## Reduced motion
+Card fades in, total sets, BUSTED fades in without stamp.
+
+## Don&#x27;t miss
+- The dealer&#x27;s cards also finish revealing in the background of the stamp - the table completes its state even though the hand is dead.
+- The bet deduction and the BUSTED stamp are the same beat; a delayed drain reads as a separate penalty.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bust reveal sequence, ~1.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/blkjck-busted-sequence-animation">original interaction</a> by Blkjck. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BLKJCK's bust sequence - the busting card flips in, the total ticks past 21, and \"BUSTED\" stamps across the table with a wiggle as the chip count drains.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPink blackjack table: chip balance and logo header, dealer's cards up top, the player's hand with its total below, action buttons at the bottom.\n\n## Motion spec\nPattern: bust reveal sequence, ~1.5s.\n- The final card slides into the hand and flips face-up (300ms: slide in on ease-out, half-flip at settle).\n- The hand total ticks upward rapidly to its bust value (~400ms, ease-out), turning red as it crosses 21.\n- \"BUSTED\" stamps in at center (scale 1.5 to 1, spring stiffness 350 damping 13) and wiggles (+-3deg, two cycles of 180ms) while the action buttons collapse into a single Done button (250ms layout spring).\n- The header chip counter ticks down by the bet in sync with the stamp.\n- Done slides the verdict out (200ms) and resets the table.\n\n## Calibration\n- The stamp lands exactly when the total lands - the number finishing is the trigger beat.\n- The wiggle is small and horizontal-rotational; no translation shake.\n\n## Reduced motion\nCard fades in, total sets, BUSTED fades in without stamp.\n\n## Don't miss\n- The dealer's cards also finish revealing in the background of the stamp - the table completes its state even though the hand is dead.\n- The bet deduction and the BUSTED stamp are the same beat; a delayed drain reads as a separate penalty."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World App Worldcoin Graph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>World App Worldcoin Graph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/world-app-worldcoin-graph-interaction"><b>World</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/world-app-worldcoin-graph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/world-app-worldcoin-graph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: World App&#x27;s price-graph scrubbing - dragging across the Worldcoin chart plants a tracking dot and vertical guide on the curve with a floating tooltip pill that follows the finger and updates price and timestamp in real time.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734b940eea627f1950084a3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734b940eea627f1950084a3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-world-app-worldcoin-graph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: World App&#x27;s price-graph scrubbing - dragging across the Worldcoin chart plants a tracking dot and vertical guide on the curve with a floating tooltip pill that follows the finger and updates price and timestamp in real time.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The white Worldcoin wallet: balance (&quot;0.00&quot;), the price block (&quot;Rs186&quot; with a green &quot;+5.83%&quot;), a full-width line chart with a soft gradient fill, &quot;Claim your share&quot; row, and Buy/Send buttons at the bottom. During scrubbing a small floating pill shows the price (&quot;Rs183&quot;, &quot;Rs176&quot;) with the date/time under it.
+
+## Motion spec
+Pattern: chart scrub with floating tooltip.
+- Touch down on the chart: the resting UI eases back (chart fill dims, header price fades 150ms) and the scrub state fades in: a dot lands on the curve under the finger, a hairline vertical guide extends through the chart, and the tooltip pill appears above the touch point (scale 0.8 -&gt; 1, spring ~420/22).
+- Drag: the dot rides the curve exactly (interpolated to the line, not the raw touch Y), the guide tracks the finger&#x27;s X 1:1, and the pill follows horizontally - clamped at screen edges by flipping its anchor side.
+- The pill&#x27;s price and timestamp update live as it moves; the price change percent chip tints green/red by the scrubbed point vs. the range start.
+- Release: the pill, dot, and guide fade out together (200ms) and the resting chart fades back.
+
+## Calibration
+- The dot snaps to the line&#x27;s Y at the finger&#x27;s X - never floats off the curve.
+- The pill leads slightly above the finger so the number is never covered.
+
+## Reduced motion
+Scrub states swap without fades; pill appears static above the touch.
+
+## Don&#x27;t miss
+- The timestamp in the pill is as prominent as the price - it&#x27;s a lookup tool.
+- The chart line under the scrubbing finger subtly brightens to the left of the guide (the &quot;past&quot; side).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">chart scrub with floating tooltip.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/world-app-worldcoin-graph-interaction">original interaction</a> by World. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: World App's price-graph scrubbing - dragging across the Worldcoin chart plants a tracking dot and vertical guide on the curve with a floating tooltip pill that follows the finger and updates price and timestamp in real time.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe white Worldcoin wallet: balance (\"0.00\"), the price block (\"Rs186\" with a green \"+5.83%\"), a full-width line chart with a soft gradient fill, \"Claim your share\" row, and Buy/Send buttons at the bottom. During scrubbing a small floating pill shows the price (\"Rs183\", \"Rs176\") with the date/time under it.\n\n## Motion spec\nPattern: chart scrub with floating tooltip.\n- Touch down on the chart: the resting UI eases back (chart fill dims, header price fades 150ms) and the scrub state fades in: a dot lands on the curve under the finger, a hairline vertical guide extends through the chart, and the tooltip pill appears above the touch point (scale 0.8 -> 1, spring ~420/22).\n- Drag: the dot rides the curve exactly (interpolated to the line, not the raw touch Y), the guide tracks the finger's X 1:1, and the pill follows horizontally - clamped at screen edges by flipping its anchor side.\n- The pill's price and timestamp update live as it moves; the price change percent chip tints green/red by the scrubbed point vs. the range start.\n- Release: the pill, dot, and guide fade out together (200ms) and the resting chart fades back.\n\n## Calibration\n- The dot snaps to the line's Y at the finger's X - never floats off the curve.\n- The pill leads slightly above the finger so the number is never covered.\n\n## Reduced motion\nScrub states swap without fades; pill appears static above the touch.\n\n## Don't miss\n- The timestamp in the pill is as prominent as the price - it's a lookup tool.\n- The chart line under the scrubbing finger subtly brightens to the left of the guide (the \"past\" side)."</script>
+</body></html>

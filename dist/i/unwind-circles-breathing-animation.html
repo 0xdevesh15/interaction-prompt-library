@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unwind Circles Breathing Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Unwind Circles Breathing Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/unwind-circles-breathing-animation"><b>Unwind</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/unwind-circles-breathing-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/unwind-circles-breathing-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Unwind&#x27;s breathing guide - over a desert-dune scene, concentric circles expand and contract in a slow rhythm, rippling like rings to pace the user&#x27;s breathing.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756fb51d60f7be9e2782a4f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756fb51d60f7be9e2782a4f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-unwind-circles-breathing-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Unwind&#x27;s breathing guide - over a desert-dune scene, concentric circles expand and contract in a slow rhythm, rippling like rings to pace the user&#x27;s breathing.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Unwind&#x27;s &quot;Breathing Animation&quot; screen: a warm yellow sky over dark desert dunes with a small tent silhouette, page dots and a &quot;Use &#x27;Breathe Circles&#x27;&quot; button at the bottom, and a back chevron top-left. Floating in the sky, a set of concentric circles in deep orange - they bloom outward from a tight core to a wide ring and fall back, looping.
+
+## Motion spec
+Pattern: concentric breathing loop, ~8s per breath.
+- Inhale (~4s): the circles expand from center (scale 0.6 to 1.4, ease-in-out), outer rings lagging inner ones by ~120ms each, creating a ripple; opacity deepens as they grow.
+- A brief hold at full expansion (~1s), rings softly pulsing (plus/minus 2 percent scale).
+- Exhale (~4s): the rings contract back (ease-in-out), inner rings leading, fading lighter as they shrink into the core.
+- The desert scene, page dots, and button stay perfectly still - only the circles breathe.
+
+## Calibration
+- The lag between rings is the ripple - without it the circles read as one disc scaling.
+- Expansion is smooth sinusoidal motion, no springs, no bounce.
+
+## Reduced motion
+A single circle slowly fades between two sizes with &quot;breathe in / out&quot; text.
+
+## Don&#x27;t miss
+- The circles sit in the sky like a sun - centered above the dune horizon.
+- The loop never stops or resets visibly; exhale flows into inhale.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">concentric breathing loop, ~8s per breath.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/unwind-circles-breathing-animation">original interaction</a> by Unwind. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Unwind's breathing guide - over a desert-dune scene, concentric circles expand and contract in a slow rhythm, rippling like rings to pace the user's breathing.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nUnwind's \"Breathing Animation\" screen: a warm yellow sky over dark desert dunes with a small tent silhouette, page dots and a \"Use 'Breathe Circles'\" button at the bottom, and a back chevron top-left. Floating in the sky, a set of concentric circles in deep orange - they bloom outward from a tight core to a wide ring and fall back, looping.\n\n## Motion spec\nPattern: concentric breathing loop, ~8s per breath.\n- Inhale (~4s): the circles expand from center (scale 0.6 to 1.4, ease-in-out), outer rings lagging inner ones by ~120ms each, creating a ripple; opacity deepens as they grow.\n- A brief hold at full expansion (~1s), rings softly pulsing (plus/minus 2 percent scale).\n- Exhale (~4s): the rings contract back (ease-in-out), inner rings leading, fading lighter as they shrink into the core.\n- The desert scene, page dots, and button stay perfectly still - only the circles breathe.\n\n## Calibration\n- The lag between rings is the ripple - without it the circles read as one disc scaling.\n- Expansion is smooth sinusoidal motion, no springs, no bounce.\n\n## Reduced motion\nA single circle slowly fades between two sizes with \"breathe in / out\" text.\n\n## Don't miss\n- The circles sit in the sky like a sun - centered above the dune horizon.\n- The loop never stops or resets visibly; exhale flows into inhale."</script>
+</body></html>

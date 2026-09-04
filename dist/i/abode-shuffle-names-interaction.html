@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abode Shuffle Names Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Abode Shuffle Names Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/abode-shuffle-names-interaction"><b>Abode</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/abode-shuffle-names-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/abode-shuffle-names-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Abode&#x27;s &quot;Name your Abode&quot; shuffle - two floating name pills (Best/Lads, Hyper/Clique, Insane/Besties...) drift on the white screen, and tapping the refresh icon makes them scatter with a spin and spring back in as a fresh pair of name cards.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8f2ddf3c0da1588ca7d3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8f2ddf3c0da1588ca7d3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-abode-shuffle-names-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Abode&#x27;s &quot;Name your Abode&quot; shuffle - two floating name pills (Best/Lads, Hyper/Clique, Insane/Besties...) drift on the white screen, and tapping the refresh icon makes them scatter with a spin and spring back in as a fresh pair of name cards.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White &quot;Name your Abode&quot; screen with a back chevron and the subhead &quot;Swipe the cards to find your perfect name&quot;. Two name pills float at loose, slightly rotated positions mid-screen. Bottom: a &quot;Choose your own&quot; field with a refresh/shuffle icon and a blue Next button.
+
+## Motion spec
+Pattern: tap-to-shuffle card swap with spin-out, spring-in.
+- Idle: the two pills drift slowly (translateX/Y +/-6pt, 4s sine, phase-offset) at slight rotations (+/-4deg).
+- Tap refresh: the current pills spin out in opposite directions (rotate +/-120deg, scale -&gt; 0.3, fly off 40pt, 250ms ease-in).
+- The new pair springs in from the same exit edges (scale 0.4 -&gt; 1.05 -&gt; 1.0, spring ~300/15, rotate from +/-45deg to their resting tilt, 120ms stagger).
+- The refresh icon itself spins 180deg on each tap (300ms ease-out).
+- Each new pair lands at a fresh random-ish offset within a safe zone, never overlapping the caption or buttons.
+
+## Calibration
+- Exit and entrance are fast and springy - the shuffle should feel like a slot-machine flick.
+- The two pills never share the same resting tilt or drift phase.
+
+## Reduced motion
+Old pills fade out and new ones fade in (200ms) without spin or travel.
+
+## Don&#x27;t miss
+- The pills keep their slight hand-placed rotation after landing - nothing snaps to axis.
+- The refresh icon&#x27;s spin direction alternates each tap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-to-shuffle card swap with spin-out, spring-in.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/abode-shuffle-names-interaction">original interaction</a> by Abode. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Abode's \"Name your Abode\" shuffle - two floating name pills (Best/Lads, Hyper/Clique, Insane/Besties...) drift on the white screen, and tapping the refresh icon makes them scatter with a spin and spring back in as a fresh pair of name cards.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite \"Name your Abode\" screen with a back chevron and the subhead \"Swipe the cards to find your perfect name\". Two name pills float at loose, slightly rotated positions mid-screen. Bottom: a \"Choose your own\" field with a refresh/shuffle icon and a blue Next button.\n\n## Motion spec\nPattern: tap-to-shuffle card swap with spin-out, spring-in.\n- Idle: the two pills drift slowly (translateX/Y +/-6pt, 4s sine, phase-offset) at slight rotations (+/-4deg).\n- Tap refresh: the current pills spin out in opposite directions (rotate +/-120deg, scale -> 0.3, fly off 40pt, 250ms ease-in).\n- The new pair springs in from the same exit edges (scale 0.4 -> 1.05 -> 1.0, spring ~300/15, rotate from +/-45deg to their resting tilt, 120ms stagger).\n- The refresh icon itself spins 180deg on each tap (300ms ease-out).\n- Each new pair lands at a fresh random-ish offset within a safe zone, never overlapping the caption or buttons.\n\n## Calibration\n- Exit and entrance are fast and springy - the shuffle should feel like a slot-machine flick.\n- The two pills never share the same resting tilt or drift phase.\n\n## Reduced motion\nOld pills fade out and new ones fade in (200ms) without spin or travel.\n\n## Don't miss\n- The pills keep their slight hand-placed rotation after landing - nothing snaps to axis.\n- The refresh icon's spin direction alternates each tap."</script>
+</body></html>

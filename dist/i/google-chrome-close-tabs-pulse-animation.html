@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Chrome Close Tabs Pulse Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Google Chrome Close Tabs Pulse Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/google-chrome-close-tabs-pulse-animation"><b>Google</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-chrome-close-tabs-pulse-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-chrome-close-tabs-pulse-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Chrome mobile&#x27;s close-incognito-tabs moment - the tab-switcher count icon emits a soft blue pulse, then the view slides horizontally from the incognito empty state to the regular tab list.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c83c7ed780e097d138/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c83c7ed780e097d138/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-google-chrome-close-tabs-pulse-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Chrome mobile&#x27;s close-incognito-tabs moment - the tab-switcher count icon emits a soft blue pulse, then the view slides horizontally from the incognito empty state to the regular tab list.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark tab switcher: top bar with the incognito icon, tab-count pill, and overflow menu; the incognito empty state (incognito glyph, &quot;Continue in Incognito&quot; blue button, &quot;Close Incognito tabs&quot; text button). The regular side holds a grid of tab thumbnails with Edit and Done bar buttons.
+
+## Motion spec
+Pattern: icon pulse + horizontal view slide, ~700ms.
+- Close tap: &quot;Close Incognito tabs&quot; triggers a blue radial pulse on the tab-count pill (scale 1 -&gt; 1.35 -&gt; 1, 350ms, with a soft blue halo fading over 400ms).
+- View slide: the whole switcher slides horizontally (incognito view exits left, regular tab grid enters from the right, 400ms, ease-in-out); the top bar&#x27;s active segment moves with it.
+- Grid settle: the tab thumbnails fade/scale in (0.95 -&gt; 1, 200ms, 50ms stagger) as the slide lands.
+
+## Calibration
+- One pulse only - repeating it reads as a notification badge.
+- The pulse fires before the slide starts (100ms lead), so the eye catches where the count changed.
+
+## Reduced motion
+No pulse; the two views cross-fade (200ms) without the horizontal slide.
+
+## Don&#x27;t miss
+- Direction matters: incognito to regular moves left-to-right content-wise (regular enters from the right).
+- The tab count in the pill updates as the slide completes, not before.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">icon pulse + horizontal view slide, ~700ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/google-chrome-close-tabs-pulse-animation">original interaction</a> by Google. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Chrome mobile's close-incognito-tabs moment - the tab-switcher count icon emits a soft blue pulse, then the view slides horizontally from the incognito empty state to the regular tab list.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark tab switcher: top bar with the incognito icon, tab-count pill, and overflow menu; the incognito empty state (incognito glyph, \"Continue in Incognito\" blue button, \"Close Incognito tabs\" text button). The regular side holds a grid of tab thumbnails with Edit and Done bar buttons.\n\n## Motion spec\nPattern: icon pulse + horizontal view slide, ~700ms.\n- Close tap: \"Close Incognito tabs\" triggers a blue radial pulse on the tab-count pill (scale 1 -> 1.35 -> 1, 350ms, with a soft blue halo fading over 400ms).\n- View slide: the whole switcher slides horizontally (incognito view exits left, regular tab grid enters from the right, 400ms, ease-in-out); the top bar's active segment moves with it.\n- Grid settle: the tab thumbnails fade/scale in (0.95 -> 1, 200ms, 50ms stagger) as the slide lands.\n\n## Calibration\n- One pulse only - repeating it reads as a notification badge.\n- The pulse fires before the slide starts (100ms lead), so the eye catches where the count changed.\n\n## Reduced motion\nNo pulse; the two views cross-fade (200ms) without the horizontal slide.\n\n## Don't miss\n- Direction matters: incognito to regular moves left-to-right content-wise (regular enters from the right).\n- The tab count in the pill updates as the slide completes, not before."</script>
+</body></html>

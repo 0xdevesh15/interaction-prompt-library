@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mist Messy Switch Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mist Messy Switch Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mist-messy-switch-interaction"><b>Mist</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mist-messy-switch-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mist-messy-switch-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Mist&#x27;s messy switch - tapping the switch flips the CRT from the warm yellow smiley to a deadpan purple &quot;messy&quot; face (criss-cross X eyes, flat straight mouth) through a burst of glitch frames, while confused copy types out underneath.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9ece962df230143606f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9ece962df230143606f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mist-messy-switch-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Mist&#x27;s messy switch - tapping the switch flips the CRT from the warm yellow smiley to a deadpan purple &quot;messy&quot; face (criss-cross X eyes, flat straight mouth) through a burst of glitch frames, while confused copy types out underneath.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark console body: CRT screen with a big pixel face, control cluster below (purple knob, wide red button, colored pill keys, red power dot). Resting state is the yellow happy face; toggled state is the purple X-eyed face.
+
+## Motion spec
+Pattern: state flip with multi-frame glitch.
+- Tap: the screen tears through 3-4 glitch frames (~90ms total) - horizontal band displacement (+/-10px), RGB split, one inverted-luminance frame - then lands on the purple messy face.
+- The face swap is instant per frame; the transition&#x27;s texture comes from the glitch burst, not a crossfade.
+- The purple face holds a flat, unimpressed expression: X-shaped eyes and a straight horizontal mouth, with a slow CRT flicker (luminance jitter 2%, 120ms).
+- Copy types out character by character (30ms/char, monospace, blinking block cursor): &quot;DOES NOT COMPUTE? I TRIED. I TRIED. CONFUSED LIKE A CALCULATOR DIVIDING BY ZERO&quot;.
+- Switching back replays the glitch burst and restores the yellow smiley.
+
+## Calibration
+- The glitch burst runs the same duration in both directions - the console has one &quot;channel change&quot; sound and feel.
+- The X eyes are chunky 2x2-block pixel X&#x27;s, not thin strokes - they read at arm&#x27;s length.
+
+## Reduced motion
+Face and text appear without glitch frames or typing.
+
+## Don&#x27;t miss
+- Yellow (warm mustard) and purple (deep violet) are the two states&#x27; whole palettes - no gradients between them.
+- The mouth is perfectly straight and slightly off-center - asymmetry is the joke.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">state flip with multi-frame glitch.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mist-messy-switch-interaction">original interaction</a> by Mist. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Mist's messy switch - tapping the switch flips the CRT from the warm yellow smiley to a deadpan purple \"messy\" face (criss-cross X eyes, flat straight mouth) through a burst of glitch frames, while confused copy types out underneath.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark console body: CRT screen with a big pixel face, control cluster below (purple knob, wide red button, colored pill keys, red power dot). Resting state is the yellow happy face; toggled state is the purple X-eyed face.\n\n## Motion spec\nPattern: state flip with multi-frame glitch.\n- Tap: the screen tears through 3-4 glitch frames (~90ms total) - horizontal band displacement (+/-10px), RGB split, one inverted-luminance frame - then lands on the purple messy face.\n- The face swap is instant per frame; the transition's texture comes from the glitch burst, not a crossfade.\n- The purple face holds a flat, unimpressed expression: X-shaped eyes and a straight horizontal mouth, with a slow CRT flicker (luminance jitter 2%, 120ms).\n- Copy types out character by character (30ms/char, monospace, blinking block cursor): \"DOES NOT COMPUTE? I TRIED. I TRIED. CONFUSED LIKE A CALCULATOR DIVIDING BY ZERO\".\n- Switching back replays the glitch burst and restores the yellow smiley.\n\n## Calibration\n- The glitch burst runs the same duration in both directions - the console has one \"channel change\" sound and feel.\n- The X eyes are chunky 2x2-block pixel X's, not thin strokes - they read at arm's length.\n\n## Reduced motion\nFace and text appear without glitch frames or typing.\n\n## Don't miss\n- Yellow (warm mustard) and purple (deep violet) are the two states' whole palettes - no gradients between them.\n- The mouth is perfectly straight and slightly off-center - asymmetry is the joke."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Usage Value Prop Pop Carousel Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Usage Value Prop Pop Carousel Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/usage-value-prop-pop-carousel-scroll-interaction"><b>Usage</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/usage-value-prop-pop-carousel-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/usage-value-prop-pop-carousel-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Usage&#x27;s &quot;All-new Usage&quot; onboarding - a paged carousel of feature cards whose purple illustrations pop in, ending with a smooth slide into the app&#x27;s feature list.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343d0003bcee22ddd07487/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343d0003bcee22ddd07487/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-usage-value-prop-pop-carousel-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Usage&#x27;s &quot;All-new Usage&quot; onboarding - a paged carousel of feature cards whose purple illustrations pop in, ending with a smooth slide into the app&#x27;s feature list.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Usage onboarding, white: the app icon and &quot;All-new Usage&quot; title pinned at top, &quot;Many features. Both familiar and new.&quot; subtitle, then a paged card area (feature icon + name + one-liner + a purple illustration: Activity waveform, History bar chart, Configurations pills, Cross-platform cloud, Widgets preview), page dots, and a purple Continue button. Final state: the app&#x27;s own feature list (History, Configurations, iCloud Sync, Widgets, rating row).
+
+## Motion spec
+Pattern: paged value-prop carousel with pop-in illustrations.
+- Entry: icon, title, subtitle fade up (300ms, 80ms apart); the first card&#x27;s illustration pops (scale 0.7 -&gt; 1, spring ~420/15).
+- Swipe or Continue pages the carousel: the current illustration scales down and fades left (200ms) while the next enters from the right at 0.8 scale and pops to 1 (spring ~400/16); the feature icon/name/description crossfade with a 12px rise (200ms).
+- Page dots advance with a stretch (active dot 8 -&gt; 20px, 200ms).
+- The pinned title block never moves during paging - only the card area swaps.
+- On the last page, Continue triggers the transition: the whole onboarding slides up and out (300ms, ease-in) as the app&#x27;s feature list slides in from below (350ms, ease-out), the title&#x27;s &quot;All-new&quot; treatment crossfading to the plain &quot;Usage PRO&quot; header.
+
+## Calibration
+- Illustrations are the only purple elements besides the button and active dot.
+- Exactly one pop per page - the spring must fully settle before the page is interactive.
+
+## Reduced motion
+Pages crossfade (250ms) at fixed scale; the final transition is a simple fade.
+
+## Don&#x27;t miss
+- Descriptions stay two lines max so the card never reflows mid-transition.
+- The Continue label stays constant - no &quot;Next&quot;/&quot;Done&quot; churn.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">paged value-prop carousel with pop-in illustrations.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/usage-value-prop-pop-carousel-scroll-interaction">original interaction</a> by Usage. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Usage's \"All-new Usage\" onboarding - a paged carousel of feature cards whose purple illustrations pop in, ending with a smooth slide into the app's feature list.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nUsage onboarding, white: the app icon and \"All-new Usage\" title pinned at top, \"Many features. Both familiar and new.\" subtitle, then a paged card area (feature icon + name + one-liner + a purple illustration: Activity waveform, History bar chart, Configurations pills, Cross-platform cloud, Widgets preview), page dots, and a purple Continue button. Final state: the app's own feature list (History, Configurations, iCloud Sync, Widgets, rating row).\n\n## Motion spec\nPattern: paged value-prop carousel with pop-in illustrations.\n- Entry: icon, title, subtitle fade up (300ms, 80ms apart); the first card's illustration pops (scale 0.7 -> 1, spring ~420/15).\n- Swipe or Continue pages the carousel: the current illustration scales down and fades left (200ms) while the next enters from the right at 0.8 scale and pops to 1 (spring ~400/16); the feature icon/name/description crossfade with a 12px rise (200ms).\n- Page dots advance with a stretch (active dot 8 -> 20px, 200ms).\n- The pinned title block never moves during paging - only the card area swaps.\n- On the last page, Continue triggers the transition: the whole onboarding slides up and out (300ms, ease-in) as the app's feature list slides in from below (350ms, ease-out), the title's \"All-new\" treatment crossfading to the plain \"Usage PRO\" header.\n\n## Calibration\n- Illustrations are the only purple elements besides the button and active dot.\n- Exactly one pop per page - the spring must fully settle before the page is interactive.\n\n## Reduced motion\nPages crossfade (250ms) at fixed scale; the final transition is a simple fade.\n\n## Don't miss\n- Descriptions stay two lines max so the card never reflows mid-transition.\n- The Continue label stays constant - no \"Next\"/\"Done\" churn."</script>
+</body></html>

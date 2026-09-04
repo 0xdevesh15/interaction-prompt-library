@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Chess Checkmate King Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Chess Checkmate King Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-chess-checkmate-king-pop-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-chess-checkmate-king-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-chess-checkmate-king-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo Chess&#x27;s puzzle-success beat - on a chess puzzle screen, the correct rook move resolves with a particle burst on the captured piece, a springy green ring check highlight on the king, and a green &quot;Nice!&quot; banner that slides up with a continue button while captured pieces shower as confetti.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6873141b0e3615485c3fbdc6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6873141b0e3615485c3fbdc6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-chess-checkmate-king-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo Chess&#x27;s puzzle-success beat - on a chess puzzle screen, the correct rook move resolves with a particle burst on the captured piece, a springy green ring check highlight on the king, and a green &quot;Nice!&quot; banner that slides up with a continue button while captured pieces shower as confetti.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light chess screen. Top: close X, a purple progress bar, a heart/gem counter. Coach avatar with the prompt &quot;See if your rook can remove a defender and give check.&quot; Center: an 8x8 board mid-puzzle with white and black pieces. Bottom: a gem row and a gray &quot;SHOW HINT&quot; button. On success: a green banner with a check icon and &quot;Nice!&quot; plus a green CONTINUE button covers the bottom sheet.
+
+## Motion spec
+Pattern: puzzle success with particle capture and banner reveal.
+- The rook slides along its file to the target square (200ms, ease-out).
+- Capture: the taken piece bursts into ~12 small pixel particles that spray outward (gravity pull, 350ms life, fade to 0).
+- Check: a green ring draws around the enemy king (stroke draw, 200ms) and the king pops with a spring scale (1.0 -&gt; 1.25 -&gt; 1.0, ~400/15).
+- The king does a two-shake wobble (rotate -8deg -&gt; 8deg -&gt; 0, 200ms).
+- Banner: the green &quot;Nice!&quot; sheet slides up from the bottom (280ms, ease-out) while the header progress bar fills its next segment (300ms, ease-out, delayed 100ms).
+- Victory confetti: 4-6 tiny chess-piece silhouettes burst from the banner and drift down with rotation (700ms, staggered 60ms).
+
+## Calibration
+- Sequence is causal: move -&gt; capture burst -&gt; king ring/pop -&gt; banner. Each starts as the previous resolves.
+- Keep the banner Duolingo green (#58CC02) with white text.
+
+## Reduced motion
+Capture becomes a 150ms fade-out of the piece; king highlights with a static green ring (no pop); banner fades in over 200ms; no confetti.
+
+## Don&#x27;t miss
+- The capture particles are chunky pixel squares, not round confetti.
+- The progress bar advances only after the banner lands - the reward reads as earned.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">puzzle success with particle capture and banner reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-chess-checkmate-king-pop-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo Chess's puzzle-success beat - on a chess puzzle screen, the correct rook move resolves with a particle burst on the captured piece, a springy green ring check highlight on the king, and a green \"Nice!\" banner that slides up with a continue button while captured pieces shower as confetti.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight chess screen. Top: close X, a purple progress bar, a heart/gem counter. Coach avatar with the prompt \"See if your rook can remove a defender and give check.\" Center: an 8x8 board mid-puzzle with white and black pieces. Bottom: a gem row and a gray \"SHOW HINT\" button. On success: a green banner with a check icon and \"Nice!\" plus a green CONTINUE button covers the bottom sheet.\n\n## Motion spec\nPattern: puzzle success with particle capture and banner reveal.\n- The rook slides along its file to the target square (200ms, ease-out).\n- Capture: the taken piece bursts into ~12 small pixel particles that spray outward (gravity pull, 350ms life, fade to 0).\n- Check: a green ring draws around the enemy king (stroke draw, 200ms) and the king pops with a spring scale (1.0 -> 1.25 -> 1.0, ~400/15).\n- The king does a two-shake wobble (rotate -8deg -> 8deg -> 0, 200ms).\n- Banner: the green \"Nice!\" sheet slides up from the bottom (280ms, ease-out) while the header progress bar fills its next segment (300ms, ease-out, delayed 100ms).\n- Victory confetti: 4-6 tiny chess-piece silhouettes burst from the banner and drift down with rotation (700ms, staggered 60ms).\n\n## Calibration\n- Sequence is causal: move -> capture burst -> king ring/pop -> banner. Each starts as the previous resolves.\n- Keep the banner Duolingo green (#58CC02) with white text.\n\n## Reduced motion\nCapture becomes a 150ms fade-out of the piece; king highlights with a static green ring (no pop); banner fades in over 200ms; no confetti.\n\n## Don't miss\n- The capture particles are chunky pixel squares, not round confetti.\n- The progress bar advances only after the banner lands - the reward reads as earned."</script>
+</body></html>

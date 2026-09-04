@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Gemini Voice Picker Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Google Gemini Voice Picker Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/google-gemini-voice-picker-interaction"><b>Google</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-gemini-voice-picker-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-gemini-voice-picker-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Gemini&#x27;s voice picker - a swipeable card stack for choosing Gemini&#x27;s voice (Nova &quot;Calm, Mid-range voice&quot;, Pegasus &quot;Engaged, Deeper voice&quot;, Vega &quot;Bright, Higher voice&quot;), where swiping slides the current voice card aside to reveal the next, each with its own reactive ambient waveform, plus a Start button to confirm.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67386d5df82ccc4efa02180d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67386d5df82ccc4efa02180d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-google-gemini-voice-picker-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Gemini&#x27;s voice picker - a swipeable card stack for choosing Gemini&#x27;s voice (Nova &quot;Calm, Mid-range voice&quot;, Pegasus &quot;Engaged, Deeper voice&quot;, Vega &quot;Bright, Higher voice&quot;), where swiping slides the current voice card aside to reveal the next, each with its own reactive ambient waveform, plus a Start button to confirm.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen, X close top-left, &quot;Choose a voice for Gemini&quot; header. Centered voice name with descriptor, ambient blue/purple waveform band at bottom, Start pill beneath it. Preceded by a &quot;Go Live with Gemini&quot; info sheet.
+
+## Motion spec
+Pattern: horizontal swipe pager with per-page ambience.
+- Swipe: the current voice block (name + descriptor + waveform) tracks the finger 1:1 horizontally; the next voice slides in from the opposite edge, waveform tint shifting with position.
+- Release past 40%: the outgoing block exits (translateX + fade to 0.3 opacity, spring ~360/26, 320ms) and the incoming block settles center with a small overshoot; the waveform band crossfades to the new voice&#x27;s hue on the same spring.
+- Swipe back reverses identically; the pager wraps around the voice list.
+- The waveform keeps breathing through the whole gesture (undulation never pauses, only tints).
+- Tap Start: the picker slides down and out (spring ~340/24, 350ms) and the Live session screen rises in its place.
+
+## Calibration
+- Each voice has a distinct waveform character - Pegasus sits lower/slower, Vega higher/faster.
+- Voice name and descriptor swap as a unit - no independent fades between them.
+
+## Reduced motion
+Voice blocks crossfade (250ms); waveform tint fades.
+
+## Don&#x27;t miss
+- The waveform band is part of the card - it swipes with the name, not a fixed background.
+- The descriptor (&quot;Calm, Mid-range voice&quot;) is set in a lighter weight directly under the name.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal swipe pager with per-page ambience.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/google-gemini-voice-picker-interaction">original interaction</a> by Google. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Gemini's voice picker - a swipeable card stack for choosing Gemini's voice (Nova \"Calm, Mid-range voice\", Pegasus \"Engaged, Deeper voice\", Vega \"Bright, Higher voice\"), where swiping slides the current voice card aside to reveal the next, each with its own reactive ambient waveform, plus a Start button to confirm.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen, X close top-left, \"Choose a voice for Gemini\" header. Centered voice name with descriptor, ambient blue/purple waveform band at bottom, Start pill beneath it. Preceded by a \"Go Live with Gemini\" info sheet.\n\n## Motion spec\nPattern: horizontal swipe pager with per-page ambience.\n- Swipe: the current voice block (name + descriptor + waveform) tracks the finger 1:1 horizontally; the next voice slides in from the opposite edge, waveform tint shifting with position.\n- Release past 40%: the outgoing block exits (translateX + fade to 0.3 opacity, spring ~360/26, 320ms) and the incoming block settles center with a small overshoot; the waveform band crossfades to the new voice's hue on the same spring.\n- Swipe back reverses identically; the pager wraps around the voice list.\n- The waveform keeps breathing through the whole gesture (undulation never pauses, only tints).\n- Tap Start: the picker slides down and out (spring ~340/24, 350ms) and the Live session screen rises in its place.\n\n## Calibration\n- Each voice has a distinct waveform character - Pegasus sits lower/slower, Vega higher/faster.\n- Voice name and descriptor swap as a unit - no independent fades between them.\n\n## Reduced motion\nVoice blocks crossfade (250ms); waveform tint fades.\n\n## Don't miss\n- The waveform band is part of the card - it swipes with the name, not a fixed background.\n- The descriptor (\"Calm, Mid-range voice\") is set in a lighter weight directly under the name."</script>
+</body></html>

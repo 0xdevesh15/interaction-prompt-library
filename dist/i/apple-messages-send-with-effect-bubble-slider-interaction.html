@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Messages Send With Effect Bubble Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Messages Send With Effect Bubble Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-messages-send-with-effect-bubble-slider-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-messages-send-with-effect-bubble-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-messages-send-with-effect-bubble-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Messages&#x27; bubble effect slider - a vertical slider at the right edge of the &quot;Send with effect&quot; screen previews each bubble effect live as you drag through its stops, the message bubble acting out Slam, Loud, Gentle, and Invisible Ink with springy transitions.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67693b0ba080a6ad1607bb3a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67693b0ba080a6ad1607bb3a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-messages-send-with-effect-bubble-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Messages&#x27; bubble effect slider - a vertical slider at the right edge of the &quot;Send with effect&quot; screen previews each bubble effect live as you drag through its stops, the message bubble acting out Slam, Loud, Gentle, and Invisible Ink with springy transitions.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Messages &quot;Send with effect&quot; screen on the Bubble tab: the blurred conversation behind, the composed message bubble center-right, and a slim vertical slider pinned to the right edge with a draggable dot and labeled stops (Slam, Loud, Gentle, Invisible Ink). Dragging the dot previews the effect on the bubble in place.
+
+## Motion spec
+Pattern: effect scrubber slider, gesture-driven.
+- The slider dot tracks the drag 1:1 vertically; on release it snaps to the nearest stop (spring stiffness 400 damping 22).
+- Each stop triggers its preview on the bubble, interruptible at any point:
+  - Slam: the bubble hurls in large from the right and slams into place (300ms, ease-in) with a screen shake (plus/minus 4px, 200ms) and a dust ripple.
+  - Loud: the bubble appears huge and settles to normal size with a wobble (spring stiffness 250 damping 10, 600ms).
+  - Gentle: the bubble appears tiny and grows softly to normal (500ms, ease-out).
+  - Invisible Ink: the bubble dissolves into shimmering particles that re-coalesce (800ms).
+- The active stop&#x27;s label highlights; haptic-style tick per stop passed.
+
+## Calibration
+- Previews replay in place on the same bubble - the conversation behind never changes.
+- Snapping is snappy but soft: no hard stops, always a small overshoot.
+
+## Reduced motion
+Bubble crossfades between effect states.
+
+## Don&#x27;t miss
+- The slider is vertical at the right edge, thin and unobtrusive.
+- Dragging back and forth re-triggers previews each time a stop is crossed - it is a scrubber, not a one-shot menu.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">effect scrubber slider, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-messages-send-with-effect-bubble-slider-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Messages' bubble effect slider - a vertical slider at the right edge of the \"Send with effect\" screen previews each bubble effect live as you drag through its stops, the message bubble acting out Slam, Loud, Gentle, and Invisible Ink with springy transitions.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Messages \"Send with effect\" screen on the Bubble tab: the blurred conversation behind, the composed message bubble center-right, and a slim vertical slider pinned to the right edge with a draggable dot and labeled stops (Slam, Loud, Gentle, Invisible Ink). Dragging the dot previews the effect on the bubble in place.\n\n## Motion spec\nPattern: effect scrubber slider, gesture-driven.\n- The slider dot tracks the drag 1:1 vertically; on release it snaps to the nearest stop (spring stiffness 400 damping 22).\n- Each stop triggers its preview on the bubble, interruptible at any point:\n  - Slam: the bubble hurls in large from the right and slams into place (300ms, ease-in) with a screen shake (plus/minus 4px, 200ms) and a dust ripple.\n  - Loud: the bubble appears huge and settles to normal size with a wobble (spring stiffness 250 damping 10, 600ms).\n  - Gentle: the bubble appears tiny and grows softly to normal (500ms, ease-out).\n  - Invisible Ink: the bubble dissolves into shimmering particles that re-coalesce (800ms).\n- The active stop's label highlights; haptic-style tick per stop passed.\n\n## Calibration\n- Previews replay in place on the same bubble - the conversation behind never changes.\n- Snapping is snappy but soft: no hard stops, always a small overshoot.\n\n## Reduced motion\nBubble crossfades between effect states.\n\n## Don't miss\n- The slider is vertical at the right edge, thin and unobtrusive.\n- Dragging back and forth re-triggers previews each time a stop is crossed - it is a scrubber, not a one-shot menu."</script>
+</body></html>

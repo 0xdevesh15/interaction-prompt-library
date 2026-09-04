@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revolut Donate Heart Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Revolut Donate Heart Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/revolut-donate-heart-animation"><b>Revolut</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-donate-heart-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-donate-heart-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Revolut&#x27;s donate screen - a 3D heart built from dozens of spheres loops through assembling into a heart, exploding outward, and gathering back, above the &quot;DONATE WITH A TAP&quot; donation sheet.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc202b33c1c85777a298/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc202b33c1c85777a298/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-revolut-donate-heart-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Revolut&#x27;s donate screen - a 3D heart built from dozens of spheres loops through assembling into a heart, exploding outward, and gathering back, above the &quot;DONATE WITH A TAP&quot; donation sheet.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White sheet: X top-left, &quot;DONATE WITH A TAP&quot; headline, a large central stage where a heart shape is formed by roughly 40 shaded spheres (white, Revolut blue, purple) of varying sizes, then three donation option rows and a dark &quot;Donate now&quot; button.
+
+## Motion spec
+Pattern: particle assemble/explode loop, ~4s cycle.
+- Assembled: the spheres hold a heart silhouette with a gentle idle bob (each sphere +-4px, randomized 2-3s periods, phase-offset).
+- Explode: the spheres scatter outward (500ms, ease-out) with slight individual rotations, spreading to fill the stage loosely.
+- Gather: they fly back to their heart positions (700ms, ease-in-out) with per-sphere delay up to 150ms, so the heart re-forms unevenly.
+- Depth: spheres scale and shade by z-depth (near spheres up to 1.6x the far ones) and drift slowly toward/away from the camera on idle.
+
+## Calibration
+- The heart reads clearly at rest: two lobes, a point, no gaps larger than one sphere.
+- Spheres never overlap the headline or the option rows - the stage is bounded.
+
+## Reduced motion
+The heart is static, fully assembled.
+
+## Don&#x27;t miss
+- The scatter is volumetric - spheres spread in depth as well as x/y.
+- Reassembly is staggered, not simultaneous; the heart &quot;clicks&quot; together piece by piece.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">particle assemble/explode loop, ~4s cycle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/revolut-donate-heart-animation">original interaction</a> by Revolut. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Revolut's donate screen - a 3D heart built from dozens of spheres loops through assembling into a heart, exploding outward, and gathering back, above the \"DONATE WITH A TAP\" donation sheet.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite sheet: X top-left, \"DONATE WITH A TAP\" headline, a large central stage where a heart shape is formed by roughly 40 shaded spheres (white, Revolut blue, purple) of varying sizes, then three donation option rows and a dark \"Donate now\" button.\n\n## Motion spec\nPattern: particle assemble/explode loop, ~4s cycle.\n- Assembled: the spheres hold a heart silhouette with a gentle idle bob (each sphere +-4px, randomized 2-3s periods, phase-offset).\n- Explode: the spheres scatter outward (500ms, ease-out) with slight individual rotations, spreading to fill the stage loosely.\n- Gather: they fly back to their heart positions (700ms, ease-in-out) with per-sphere delay up to 150ms, so the heart re-forms unevenly.\n- Depth: spheres scale and shade by z-depth (near spheres up to 1.6x the far ones) and drift slowly toward/away from the camera on idle.\n\n## Calibration\n- The heart reads clearly at rest: two lobes, a point, no gaps larger than one sphere.\n- Spheres never overlap the headline or the option rows - the stage is bounded.\n\n## Reduced motion\nThe heart is static, fully assembled.\n\n## Don't miss\n- The scatter is volumetric - spheres spread in depth as well as x/y.\n- Reassembly is staggered, not simultaneous; the heart \"clicks\" together piece by piece."</script>
+</body></html>

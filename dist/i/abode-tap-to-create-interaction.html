@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abode Tap to Create Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Abode Tap to Create Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/abode-tap-to-create-interaction"><b>Abode</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/abode-tap-to-create-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/abode-tap-to-create-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Abode&#x27;s tap-to-create onboarding - a blue blob mascot sits center screen over &quot;Tap Abode to create an abode&quot;, and each tap scales it up step by step with coaching captions (&quot;Almost there...&quot;, &quot;Keep tapping...&quot;) until it fills the whole screen with its blue body, then reveals the &quot;Name your Abode&quot; step with name chips and a Next button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8f2ddf3c0da1588ca7d9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8f2ddf3c0da1588ca7d9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-abode-tap-to-create-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Abode&#x27;s tap-to-create onboarding - a blue blob mascot sits center screen over &quot;Tap Abode to create an abode&quot;, and each tap scales it up step by step with coaching captions (&quot;Almost there...&quot;, &quot;Keep tapping...&quot;) until it fills the whole screen with its blue body, then reveals the &quot;Name your Abode&quot; step with name chips and a Next button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen. Center: a rounded blue blob character with two white oval eyes. Below: the caption &quot;Tap Abode to create an abode&quot;, a &quot;Use Referral Code&quot; link, and a small progress pill. Later captions: &quot;Almost there...&quot;, &quot;Keep tapping...&quot;. Final state: the blob&#x27;s blue fills the screen (eyes huge at the top), then a white &quot;Name your Abode&quot; screen with name suggestion chips (Best, Lads) and a blue Next button.
+
+## Motion spec
+Pattern: tap-driven progressive scale-up to full-screen fill.
+- Each tap: the blob scales up a step (1.0 -&gt; 1.5 -&gt; 2.2 -&gt; 3.2, spring ~300/16 per tap, slight squash on tap-down scale 0.95).
+- At step two the caption swaps to &quot;Almost there...&quot; (crossfade 150ms); at step three to &quot;Keep tapping...&quot;.
+- Final tap: the blob scales past the screen edges (scale -&gt; 8, 400ms ease-in), its eyes staying visible until they pass the top edge, so the blue body becomes the background.
+- The blue holds 300ms, then slides up like a curtain (400ms ease-in-out) revealing the &quot;Name your Abode&quot; screen.
+- Name chips fade up staggered (200ms, 80ms apart); the Next button slides up last (250ms).
+
+## Calibration
+- Every tap gives immediate squash feedback even before the scale step.
+- The full-screen blue moment must read as &quot;you went inside the blob&quot;, not a color cut.
+
+## Reduced motion
+Taps still advance steps, but the blob crossfades between sizes; the reveal is a simple fade.
+
+## Don&#x27;t miss
+- The eyes scale with the blob - they grow comically large before exiting the frame.
+- The progress pill at the bottom fills with each tap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-driven progressive scale-up to full-screen fill.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/abode-tap-to-create-interaction">original interaction</a> by Abode. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Abode's tap-to-create onboarding - a blue blob mascot sits center screen over \"Tap Abode to create an abode\", and each tap scales it up step by step with coaching captions (\"Almost there...\", \"Keep tapping...\") until it fills the whole screen with its blue body, then reveals the \"Name your Abode\" step with name chips and a Next button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen. Center: a rounded blue blob character with two white oval eyes. Below: the caption \"Tap Abode to create an abode\", a \"Use Referral Code\" link, and a small progress pill. Later captions: \"Almost there...\", \"Keep tapping...\". Final state: the blob's blue fills the screen (eyes huge at the top), then a white \"Name your Abode\" screen with name suggestion chips (Best, Lads) and a blue Next button.\n\n## Motion spec\nPattern: tap-driven progressive scale-up to full-screen fill.\n- Each tap: the blob scales up a step (1.0 -> 1.5 -> 2.2 -> 3.2, spring ~300/16 per tap, slight squash on tap-down scale 0.95).\n- At step two the caption swaps to \"Almost there...\" (crossfade 150ms); at step three to \"Keep tapping...\".\n- Final tap: the blob scales past the screen edges (scale -> 8, 400ms ease-in), its eyes staying visible until they pass the top edge, so the blue body becomes the background.\n- The blue holds 300ms, then slides up like a curtain (400ms ease-in-out) revealing the \"Name your Abode\" screen.\n- Name chips fade up staggered (200ms, 80ms apart); the Next button slides up last (250ms).\n\n## Calibration\n- Every tap gives immediate squash feedback even before the scale step.\n- The full-screen blue moment must read as \"you went inside the blob\", not a color cut.\n\n## Reduced motion\nTaps still advance steps, but the blob crossfades between sizes; the reveal is a simple fade.\n\n## Don't miss\n- The eyes scale with the blob - they grow comically large before exiting the frame.\n- The progress pill at the bottom fills with each tap."</script>
+</body></html>

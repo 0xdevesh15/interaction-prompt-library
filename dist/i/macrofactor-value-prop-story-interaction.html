@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MacroFactor Value Prop Story Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>MacroFactor Value Prop Story Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/macrofactor-value-prop-story-interaction"><b>Macrofactor</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/macrofactor-value-prop-story-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/macrofactor-value-prop-story-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: MacroFactor&#x27;s story-style onboarding - swipe horizontally through full-screen value-prop pages (&quot;Meet your new diet sidekick&quot;, Food &amp; Science, Goals, Storing Food, Adjustments, Calibrated Nutrition), each with an animated vector illustration, staggered text, and a dotted progress bar that tracks position.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ea4b9952d7ba4583713a2a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ea4b9952d7ba4583713a2a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-macrofactor-value-prop-story-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: MacroFactor&#x27;s story-style onboarding - swipe horizontally through full-screen value-prop pages (&quot;Meet your new diet sidekick&quot;, Food &amp; Science, Goals, Storing Food, Adjustments, Calibrated Nutrition), each with an animated vector illustration, staggered text, and a dotted progress bar that tracks position.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Off-white full-screen pages: small top bar, a centered characterful vector illustration (flaming pot, paper-plane rocket, fridge, lemon character with orange), headline + paragraph below, and a custom bottom progress control - a row of dots with a label naming the current page.
+
+## Motion spec
+Pattern: swipeable story pager with per-page illustration animation.
+- Horizontal drag moves pages 1:1 with the finger; adjacent page peeks at the edge (24px). Release past 30% or with velocity snaps to the next page (spring ~300/28, ~350ms); otherwise snaps back.
+- On each page landing: illustration animates its signature loop (pot flames flicker, rocket tilts and thrusts, lemon rocks side to side - 2-3s loops), headline rises 10px + fades (250ms), paragraph follows 100ms later.
+- The progress bar: current dot stretches into a pill (width 8px -&gt; 24px, spring ~350/26) and the page label crossfades (200ms) on every snap.
+- Illustrations exit/enter with a slight parallax (illustration moves at 0.8x page speed during drags).
+
+## Calibration
+- Exactly one page settles at a time - no free scroll between stories.
+- Label text (&quot;Food &amp; Science&quot;, &quot;Goals&quot;, ...) is part of the progress control, not the page.
+
+## Reduced motion
+Pages crossfade; illustration loops stop after first play.
+
+## Don&#x27;t miss
+- The illustration style is consistent flat vector with one accent color per page.
+- The first page is a logo moment (&quot;M&quot; mark + &quot;Meet your new diet sidekick&quot;) before content pages begin.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipeable story pager with per-page illustration animation.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/macrofactor-value-prop-story-interaction">original interaction</a> by Macrofactor. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: MacroFactor's story-style onboarding - swipe horizontally through full-screen value-prop pages (\"Meet your new diet sidekick\", Food & Science, Goals, Storing Food, Adjustments, Calibrated Nutrition), each with an animated vector illustration, staggered text, and a dotted progress bar that tracks position.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOff-white full-screen pages: small top bar, a centered characterful vector illustration (flaming pot, paper-plane rocket, fridge, lemon character with orange), headline + paragraph below, and a custom bottom progress control - a row of dots with a label naming the current page.\n\n## Motion spec\nPattern: swipeable story pager with per-page illustration animation.\n- Horizontal drag moves pages 1:1 with the finger; adjacent page peeks at the edge (24px). Release past 30% or with velocity snaps to the next page (spring ~300/28, ~350ms); otherwise snaps back.\n- On each page landing: illustration animates its signature loop (pot flames flicker, rocket tilts and thrusts, lemon rocks side to side - 2-3s loops), headline rises 10px + fades (250ms), paragraph follows 100ms later.\n- The progress bar: current dot stretches into a pill (width 8px -> 24px, spring ~350/26) and the page label crossfades (200ms) on every snap.\n- Illustrations exit/enter with a slight parallax (illustration moves at 0.8x page speed during drags).\n\n## Calibration\n- Exactly one page settles at a time - no free scroll between stories.\n- Label text (\"Food & Science\", \"Goals\", ...) is part of the progress control, not the page.\n\n## Reduced motion\nPages crossfade; illustration loops stop after first play.\n\n## Don't miss\n- The illustration style is consistent flat vector with one accent color per page.\n- The first page is a logo moment (\"M\" mark + \"Meet your new diet sidekick\") before content pages begin."</script>
+</body></html>

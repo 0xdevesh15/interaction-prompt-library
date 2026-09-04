@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLKJCK Winner Sequence Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BLKJCK Winner Sequence Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/blkjck-winner-sequence-animation"><b>Blkjck</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blkjck-winner-sequence-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blkjck-winner-sequence-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BLKJCK&#x27;s win sequence - cards reveal, &quot;WINNER&quot; rises with a floating score badge, and a high-score modal springs in over the table.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f78169b1868c975671/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f78169b1868c975671/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-blkjck-winner-sequence-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BLKJCK&#x27;s win sequence - cards reveal, &quot;WINNER&quot; rises with a floating score badge, and a high-score modal springs in over the table.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pink blackjack table in its settled state: revealed dealer hand with total, player hand with total, &quot;WINNER&quot; verdict with a &quot;+N&quot; chip badge, Done button, then a High Score modal card.
+
+## Motion spec
+Pattern: win reveal with score modal, ~2s.
+- The dealer&#x27;s hole card flips face-up (300ms) and both totals tick to their final values (~400ms, ease-out).
+- &quot;WINNER&quot; rises from below and fades in (350ms, 24px rise, ease-out) as a small &quot;+N&quot; badge pops beside it (scale 0.5 to 1, spring stiffness 380 damping 14).
+- The header balance rolls up by the winnings on the same beat.
+- After ~800ms the High Score modal springs up from the bottom (spring stiffness 260 damping 18), the table dimming behind it (250ms), its stats (best round, biggest win, biggest loss) fading in with 80ms stagger.
+- Dismissing the modal drops it back down (250ms, ease-in) and undims the table.
+
+## Calibration
+- The verdict, badge, and balance roll are one simultaneous beat - sequencing them reads as three separate events.
+- The modal&#x27;s spring has a soft overshoot; a plain sheet slide reads as system chrome.
+
+## Reduced motion
+Verdict fades in; modal fades in without spring.
+
+## Don&#x27;t miss
+- The &quot;+N&quot; badge is the exact chips won - it is a counter, not decoration.
+- The table stays fully readable behind the dim; the modal informs, it does not erase the win.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">win reveal with score modal, ~2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/blkjck-winner-sequence-animation">original interaction</a> by Blkjck. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BLKJCK's win sequence - cards reveal, \"WINNER\" rises with a floating score badge, and a high-score modal springs in over the table.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPink blackjack table in its settled state: revealed dealer hand with total, player hand with total, \"WINNER\" verdict with a \"+N\" chip badge, Done button, then a High Score modal card.\n\n## Motion spec\nPattern: win reveal with score modal, ~2s.\n- The dealer's hole card flips face-up (300ms) and both totals tick to their final values (~400ms, ease-out).\n- \"WINNER\" rises from below and fades in (350ms, 24px rise, ease-out) as a small \"+N\" badge pops beside it (scale 0.5 to 1, spring stiffness 380 damping 14).\n- The header balance rolls up by the winnings on the same beat.\n- After ~800ms the High Score modal springs up from the bottom (spring stiffness 260 damping 18), the table dimming behind it (250ms), its stats (best round, biggest win, biggest loss) fading in with 80ms stagger.\n- Dismissing the modal drops it back down (250ms, ease-in) and undims the table.\n\n## Calibration\n- The verdict, badge, and balance roll are one simultaneous beat - sequencing them reads as three separate events.\n- The modal's spring has a soft overshoot; a plain sheet slide reads as system chrome.\n\n## Reduced motion\nVerdict fades in; modal fades in without spring.\n\n## Don't miss\n- The \"+N\" badge is the exact chips won - it is a counter, not decoration.\n- The table stays fully readable behind the dim; the modal informs, it does not erase the win."</script>
+</body></html>

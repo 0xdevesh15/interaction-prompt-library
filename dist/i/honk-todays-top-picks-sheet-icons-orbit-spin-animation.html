@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Today&#x27;s Top Picks Sheet Icons Orbit Spin Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Today&#x27;s Top Picks Sheet Icons Orbit Spin Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-todays-top-picks-sheet-icons-orbit-spin-animation"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-todays-top-picks-sheet-icons-orbit-spin-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-todays-top-picks-sheet-icons-orbit-spin-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Honk&#x27;s Today&#x27;s Top Picks loader - a sheet rises with a pulsing star badge, interest icons orbit it in widening circles, then the sheet resolves into a swipeable stack of profile cards.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b741ead5e2ea454fe8f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b741ead5e2ea454fe8f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-todays-top-picks-sheet-icons-orbit-spin-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Honk&#x27;s Today&#x27;s Top Picks loader - a sheet rises with a pulsing star badge, interest icons orbit it in widening circles, then the sheet resolves into a swipeable stack of profile cards.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Discover screen (&quot;Today&#x27;s Top Picks&quot;, Explore Interests chips, &quot;Find New People&quot; button) -&gt; a white sheet with a purple header rises: a purple circle-star badge at center with &quot;Doing some magic...&quot; text. Interest icons (tennis ball, car, music note, basketball, palette) orbit the badge. Then the sheet resolves to the &quot;Today&#x27;s Top Picks&quot; card stack: profile cards (Alex, 17, Rugby, &quot;Likes You&quot;, purple Chat button) swiping sideways to the next pick (Taylor).
+
+## Motion spec
+Pattern: orbiting-icon loader resolving into a card stack.
+- Sheet slides up (spring ~300/24, 350ms); the badge scales in (0.6 -&gt; 1, spring ~340/15) with a rotating arc segment sweeping its ring (1.2s per revolution).
+- Icons spawn one by one (scale 0 -&gt; 1, 80ms stagger) and orbit the badge on 2-3 concentric circular paths (radii ~70/110/150pt, angular speeds 0.8-1.4 rad/s, alternating directions), each icon gently counter-rotating to stay upright.
+- Orbit runs ~2.5s, then icons spiral inward into the badge (radius -&gt; 0 over 400ms, accelerating) and the badge pulses (scale 1 -&gt; 1.15 -&gt; 1, 200ms).
+- The loader crossfades to the picks stack (300ms): the top profile card scales up from 0.95 with a slight tilt settling to 0 (spring ~280/20).
+- Swiping the card: it follows the finger with rotation proportional to drag X (+-10deg), flings off-screen on release past threshold (velocity-based), the next card scaling up from 0.95 -&gt; 1 underneath (spring ~300/20).
+
+## Calibration
+- Icons stay upright while orbiting - position rotates, glyph does not.
+- The inward spiral is the transition cue: loader to results in one continuous move.
+
+## Reduced motion
+Icons fade in around the badge (static ring), then crossfade to the card stack.
+
+## Don&#x27;t miss
+- The purple header and star badge carry brand color through every phase.
+- Card stack depth: exactly one next card visible behind the top card.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orbiting-icon loader resolving into a card stack.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-todays-top-picks-sheet-icons-orbit-spin-animation">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Honk's Today's Top Picks loader - a sheet rises with a pulsing star badge, interest icons orbit it in widening circles, then the sheet resolves into a swipeable stack of profile cards.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDiscover screen (\"Today's Top Picks\", Explore Interests chips, \"Find New People\" button) -> a white sheet with a purple header rises: a purple circle-star badge at center with \"Doing some magic...\" text. Interest icons (tennis ball, car, music note, basketball, palette) orbit the badge. Then the sheet resolves to the \"Today's Top Picks\" card stack: profile cards (Alex, 17, Rugby, \"Likes You\", purple Chat button) swiping sideways to the next pick (Taylor).\n\n## Motion spec\nPattern: orbiting-icon loader resolving into a card stack.\n- Sheet slides up (spring ~300/24, 350ms); the badge scales in (0.6 -> 1, spring ~340/15) with a rotating arc segment sweeping its ring (1.2s per revolution).\n- Icons spawn one by one (scale 0 -> 1, 80ms stagger) and orbit the badge on 2-3 concentric circular paths (radii ~70/110/150pt, angular speeds 0.8-1.4 rad/s, alternating directions), each icon gently counter-rotating to stay upright.\n- Orbit runs ~2.5s, then icons spiral inward into the badge (radius -> 0 over 400ms, accelerating) and the badge pulses (scale 1 -> 1.15 -> 1, 200ms).\n- The loader crossfades to the picks stack (300ms): the top profile card scales up from 0.95 with a slight tilt settling to 0 (spring ~280/20).\n- Swiping the card: it follows the finger with rotation proportional to drag X (+-10deg), flings off-screen on release past threshold (velocity-based), the next card scaling up from 0.95 -> 1 underneath (spring ~300/20).\n\n## Calibration\n- Icons stay upright while orbiting - position rotates, glyph does not.\n- The inward spiral is the transition cue: loader to results in one continuous move.\n\n## Reduced motion\nIcons fade in around the badge (static ring), then crossfade to the card stack.\n\n## Don't miss\n- The purple header and star badge carry brand color through every phase.\n- Card stack depth: exactly one next card visible behind the top card."</script>
+</body></html>

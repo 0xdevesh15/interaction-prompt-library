@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Unlimited Heart Sparkle Drop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Unlimited Heart Sparkle Drop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-unlimited-heart-sparkle-drop-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-unlimited-heart-sparkle-drop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-unlimited-heart-sparkle-drop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s Unlimited Hearts paywall idle - on the dark Super upsell screen, colorful droplets fall in loops through a pill-shaped glass container that holds the blinking owl under an infinity heart, while the CTA stack stays static below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687498c714683753e673dbaf/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687498c714683753e673dbaf/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-unlimited-heart-sparkle-drop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s Unlimited Hearts paywall idle - on the dark Super upsell screen, colorful droplets fall in loops through a pill-shaped glass container that holds the blinking owl under an infinity heart, while the CTA stack stays static below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark navy paywall. SUPER wordmark top-right, headline &quot;Learn faster with Unlimited Hearts on Super&quot;. Center: a tall pill-shaped container with cloud shapes at its base; inside, the owl mascot (gradient green-blue-purple) sits under an infinity-heart icon, with droplets (green, blue, pink, purple) falling around it. Bottom: &quot;Cancel anytime; no penalties or fees&quot;, a purple &quot;TRY SUPER FOR Rs 0.00&quot; button, and a NO THANKS link.
+
+## Motion spec
+Pattern: looping ambient paywall idle.
+- Droplets spawn at the top of the pill and fall (gravity, ~1.2s travel), each fading as it reaches the clouds; 4-6 in flight at once, staggered ~250ms, colors cycling.
+- The owl blinks every ~3s (lids 80ms down, 80ms up) and bobs gently (translateY +/-3pt, 2s sine).
+- The infinity heart pulses softly (scale 1.0 -&gt; 1.08 -&gt; 1.0, 1.6s, in phase with the bob).
+- Small star sparkles twinkle at random points inside the pill (scale 0 -&gt; 1 -&gt; 0, 800ms, random 1-3s gaps).
+- Clouds drift sideways slowly (+/-6pt, 6s sine).
+- All UI text and buttons remain static.
+
+## Calibration
+- Everything loops with no seam; phases are offset so droplets, blink, and pulse never synchronize.
+- Motion lives strictly inside the pill container - nothing outside it moves.
+
+## Reduced motion
+Static composition: owl, heart, and two frozen droplets; no loops.
+
+## Don&#x27;t miss
+- Droplets fade out into the clouds rather than clipping at the pill&#x27;s edge.
+- The pill&#x27;s glass edge has a subtle highlight that stays fixed while contents move.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping ambient paywall idle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-unlimited-heart-sparkle-drop-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's Unlimited Hearts paywall idle - on the dark Super upsell screen, colorful droplets fall in loops through a pill-shaped glass container that holds the blinking owl under an infinity heart, while the CTA stack stays static below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark navy paywall. SUPER wordmark top-right, headline \"Learn faster with Unlimited Hearts on Super\". Center: a tall pill-shaped container with cloud shapes at its base; inside, the owl mascot (gradient green-blue-purple) sits under an infinity-heart icon, with droplets (green, blue, pink, purple) falling around it. Bottom: \"Cancel anytime; no penalties or fees\", a purple \"TRY SUPER FOR Rs 0.00\" button, and a NO THANKS link.\n\n## Motion spec\nPattern: looping ambient paywall idle.\n- Droplets spawn at the top of the pill and fall (gravity, ~1.2s travel), each fading as it reaches the clouds; 4-6 in flight at once, staggered ~250ms, colors cycling.\n- The owl blinks every ~3s (lids 80ms down, 80ms up) and bobs gently (translateY +/-3pt, 2s sine).\n- The infinity heart pulses softly (scale 1.0 -> 1.08 -> 1.0, 1.6s, in phase with the bob).\n- Small star sparkles twinkle at random points inside the pill (scale 0 -> 1 -> 0, 800ms, random 1-3s gaps).\n- Clouds drift sideways slowly (+/-6pt, 6s sine).\n- All UI text and buttons remain static.\n\n## Calibration\n- Everything loops with no seam; phases are offset so droplets, blink, and pulse never synchronize.\n- Motion lives strictly inside the pill container - nothing outside it moves.\n\n## Reduced motion\nStatic composition: owl, heart, and two frozen droplets; no loops.\n\n## Don't miss\n- Droplets fade out into the clouds rather than clipping at the pill's edge.\n- The pill's glass edge has a subtle highlight that stays fixed while contents move."</script>
+</body></html>

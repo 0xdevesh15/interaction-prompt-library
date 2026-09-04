@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oura Ring Connect Charger Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Oura Ring Connect Charger Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/oura-ring-connect-charger-animation"><b>Oura</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/oura-ring-connect-charger-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/oura-ring-connect-charger-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Oura&#x27;s connect-charger onboarding - a photoreal 3D ring charger rotates slowly on black and crossfades between charger models while the ring hovers into place above the pad.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220aba0085952b3e9058/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a36220aba0085952b3e9058/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-oura-ring-connect-charger-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Oura&#x27;s connect-charger onboarding - a photoreal 3D ring charger rotates slowly on black and crossfades between charger models while the ring hovers into place above the pad.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark pairing screen: &quot;Connect your Oura Ring&quot; title with instructions top-left, the 3D charger render center-stage on pure black, a white &quot;Connect&quot; button, and a &quot;No Oura Ring yet?&quot; text link at the bottom.
+
+## Motion spec
+Pattern: rotating 3D hardware showcase with model crossfades.
+- The charger idles with a slow turntable rotation (one revolution ~10s, linear) and a faint blue status LED that breathes (opacity 0.3 -&gt; 1, 2.5s).
+- Every ~3s the render crossfades to the next charger model (300ms dissolve) at the same rotation phase so the swap reads as a morph, not a cut.
+- On the square-charger variant, the ring floats above the pad with a gentle hover (+/- 4px, 2.5s, ease-in-out) and a soft cast shadow that scales with height.
+- Title, button, and link stay static throughout.
+
+## Calibration
+- Lighting is studio-dark: a single key light tracing metal edges as the model turns.
+- Crossfades keep size and position identical between models - only the hardware changes.
+
+## Reduced motion
+Static three-quarter render; model swaps fade without rotation.
+
+## Don&#x27;t miss
+- The LED glow is the only color accent on the hardware - keep it small and cool.
+- The ring never touches the pad during the hover loop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rotating 3D hardware showcase with model crossfades.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/oura-ring-connect-charger-animation">original interaction</a> by Oura. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Oura's connect-charger onboarding - a photoreal 3D ring charger rotates slowly on black and crossfades between charger models while the ring hovers into place above the pad.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark pairing screen: \"Connect your Oura Ring\" title with instructions top-left, the 3D charger render center-stage on pure black, a white \"Connect\" button, and a \"No Oura Ring yet?\" text link at the bottom.\n\n## Motion spec\nPattern: rotating 3D hardware showcase with model crossfades.\n- The charger idles with a slow turntable rotation (one revolution ~10s, linear) and a faint blue status LED that breathes (opacity 0.3 -> 1, 2.5s).\n- Every ~3s the render crossfades to the next charger model (300ms dissolve) at the same rotation phase so the swap reads as a morph, not a cut.\n- On the square-charger variant, the ring floats above the pad with a gentle hover (+/- 4px, 2.5s, ease-in-out) and a soft cast shadow that scales with height.\n- Title, button, and link stay static throughout.\n\n## Calibration\n- Lighting is studio-dark: a single key light tracing metal edges as the model turns.\n- Crossfades keep size and position identical between models - only the hardware changes.\n\n## Reduced motion\nStatic three-quarter render; model swaps fade without rotation.\n\n## Don't miss\n- The LED glow is the only color accent on the hardware - keep it small and cool.\n- The ring never touches the pad during the hover loop."</script>
+</body></html>

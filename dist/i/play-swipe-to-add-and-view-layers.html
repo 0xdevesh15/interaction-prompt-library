@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Play Swipe to Add and View Layers - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Play Swipe to Add and View Layers</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/play-swipe-to-add-and-view-layers"><b>Play</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/play-swipe-to-add-and-view-layers">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/play-swipe-to-add-and-view-layers">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Play&#x27;s edge-swipe panels - swiping from the right edge scales the canvas down and slides in the Add panel (element library) or Layers panel with a springy, tactile transition.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd29672bd0f1452cb72/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd29672bd0f1452cb72/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-play-swipe-to-add-and-view-layers.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Play&#x27;s edge-swipe panels - swiping from the right edge scales the canvas down and slides in the Add panel (element library) or Layers panel with a springy, tactile transition.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The editor canvas (white page on a dark workspace). Right-edge swipe reveals a dark panel: the &quot;Add&quot; library listing elements with small icons (Text, Image, Video, SF Symbol, Rive, Stack, Stack V, Stack H, Page Loader, Spacer, Slider, Switch, Segmented, Stepper, Text Field, Picker, Color Well, Line, Curved Line, Area, Bar, Plot, Map, Camera, Web View). A second panel, &quot;Layers&quot;, lists the page&#x27;s layer tree.
+
+## Motion spec
+Pattern: edge-swipe panel with canvas scale-down.
+- Drag from the right edge: the canvas scales down toward ~0.7 and shifts left 1:1 with the finger while the panel slides in from the right, coupled to the same gesture.
+- Release past ~35% travel: the panel commits - canvas and panel settle with a spring (stiffness ~300, damping ~26); below threshold everything springs back.
+- Panel rows stagger in from the right as it opens (30ms apart, 200ms).
+- Swiping the edge again (or a segmented toggle) swaps Add to Layers: panels crossfade-slide horizontally (250ms) without the canvas moving.
+- Close: drag the canvas right or tap it - panel slides out, canvas springs back to 1.0.
+
+## Calibration
+- The gesture is coupled throughout - the canvas never jumps independently of the finger.
+- The spring settle should have a light, single overshoot; heavy bounce feels toy-like against a pro tool.
+
+## Reduced motion
+Panels slide over a static canvas; no scale-down.
+
+## Don&#x27;t miss
+- The library list is long and scrollable - the panel, not the canvas, owns vertical scrolling while open.
+- The canvas stays interactive-preview crisp while scaled; do not blur it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">edge-swipe panel with canvas scale-down.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/play-swipe-to-add-and-view-layers">original interaction</a> by Play. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Play's edge-swipe panels - swiping from the right edge scales the canvas down and slides in the Add panel (element library) or Layers panel with a springy, tactile transition.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe editor canvas (white page on a dark workspace). Right-edge swipe reveals a dark panel: the \"Add\" library listing elements with small icons (Text, Image, Video, SF Symbol, Rive, Stack, Stack V, Stack H, Page Loader, Spacer, Slider, Switch, Segmented, Stepper, Text Field, Picker, Color Well, Line, Curved Line, Area, Bar, Plot, Map, Camera, Web View). A second panel, \"Layers\", lists the page's layer tree.\n\n## Motion spec\nPattern: edge-swipe panel with canvas scale-down.\n- Drag from the right edge: the canvas scales down toward ~0.7 and shifts left 1:1 with the finger while the panel slides in from the right, coupled to the same gesture.\n- Release past ~35% travel: the panel commits - canvas and panel settle with a spring (stiffness ~300, damping ~26); below threshold everything springs back.\n- Panel rows stagger in from the right as it opens (30ms apart, 200ms).\n- Swiping the edge again (or a segmented toggle) swaps Add to Layers: panels crossfade-slide horizontally (250ms) without the canvas moving.\n- Close: drag the canvas right or tap it - panel slides out, canvas springs back to 1.0.\n\n## Calibration\n- The gesture is coupled throughout - the canvas never jumps independently of the finger.\n- The spring settle should have a light, single overshoot; heavy bounce feels toy-like against a pro tool.\n\n## Reduced motion\nPanels slide over a static canvas; no scale-down.\n\n## Don't miss\n- The library list is long and scrollable - the panel, not the canvas, owns vertical scrolling while open.\n- The canvas stays interactive-preview crisp while scaled; do not blur it."</script>
+</body></html>

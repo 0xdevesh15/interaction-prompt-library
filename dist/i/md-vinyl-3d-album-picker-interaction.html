@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MD Vinyl 3D Album Picker Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>MD Vinyl 3D Album Picker Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/md-vinyl-3d-album-picker-interaction"><b>Md</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/md-vinyl-3d-album-picker-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/md-vinyl-3d-album-picker-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: MD Vinyl&#x27;s onboarding - a 3D cover-flow of album covers that morphs into a vinyl player: the picked cover flips away, the record slides out, and the tonearm swings in so you can drop the stylus.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68ade0910a8c57042dc5d473/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68ade0910a8c57042dc5d473/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-md-vinyl-3d-album-picker-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: MD Vinyl&#x27;s onboarding - a 3D cover-flow of album covers that morphs into a vinyl player: the picked cover flips away, the record slides out, and the tonearm swings in so you can drop the stylus.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen with a skeuomorphic 3D stack of album covers in cover-flow perspective (&quot;Your music, reimagined as records. Pick an album to start.&quot;). Player state: the Dark Side of the Moon vinyl on a turntable with a tonearm and the prompt &quot;Gently place the stylus on the vinyl to start the music.&quot;, then &quot;A fresh way to browse, play, and enjoy your music - all in MD Vinyl&quot; with a Continue button.
+
+## Motion spec
+Pattern: skeuomorphic morph to turntable, ~1.2s.
+- Pick: the chosen cover scales up and flips 90deg away (500ms, ease-in-out) as a black vinyl disc slides out from behind it (450ms, ease-out) and drops onto the platter.
+- Tonearm: the arm swings in from the right edge (rotate ~35deg, spring ~260/20, 600ms) and hovers over the disc.
+- Stylus drop: on tap, the arm lowers to the record surface (300ms, ease-in) and the disc starts spinning (ramp 0 -&gt; 33rpm over 800ms) with light streaks playing across the grooves.
+- Continue: the copy block fades up 14px (300ms) once the record spins.
+
+## Calibration
+- Cover-flow covers tilt in 3D (roughly 60deg) with real perspective and reflections.
+- The prism artwork renders on the spinning label - it rotates with the disc.
+
+## Reduced motion
+The cover crossfades to the player view; the disc spins at constant speed.
+
+## Don&#x27;t miss
+- The vinyl emerges from inside the cover - sleeve and disc are two separate objects.
+- The tonearm has mass: it eases in, settles, and only then accepts the drop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">skeuomorphic morph to turntable, ~1.2s.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/md-vinyl-3d-album-picker-interaction">original interaction</a> by Md. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: MD Vinyl's onboarding - a 3D cover-flow of album covers that morphs into a vinyl player: the picked cover flips away, the record slides out, and the tonearm swings in so you can drop the stylus.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen with a skeuomorphic 3D stack of album covers in cover-flow perspective (\"Your music, reimagined as records. Pick an album to start.\"). Player state: the Dark Side of the Moon vinyl on a turntable with a tonearm and the prompt \"Gently place the stylus on the vinyl to start the music.\", then \"A fresh way to browse, play, and enjoy your music - all in MD Vinyl\" with a Continue button.\n\n## Motion spec\nPattern: skeuomorphic morph to turntable, ~1.2s.\n- Pick: the chosen cover scales up and flips 90deg away (500ms, ease-in-out) as a black vinyl disc slides out from behind it (450ms, ease-out) and drops onto the platter.\n- Tonearm: the arm swings in from the right edge (rotate ~35deg, spring ~260/20, 600ms) and hovers over the disc.\n- Stylus drop: on tap, the arm lowers to the record surface (300ms, ease-in) and the disc starts spinning (ramp 0 -> 33rpm over 800ms) with light streaks playing across the grooves.\n- Continue: the copy block fades up 14px (300ms) once the record spins.\n\n## Calibration\n- Cover-flow covers tilt in 3D (roughly 60deg) with real perspective and reflections.\n- The prism artwork renders on the spinning label - it rotates with the disc.\n\n## Reduced motion\nThe cover crossfades to the player view; the disc spins at constant speed.\n\n## Don't miss\n- The vinyl emerges from inside the cover - sleeve and disc are two separate objects.\n- The tonearm has mass: it eases in, settles, and only then accepts the drop."</script>
+</body></html>

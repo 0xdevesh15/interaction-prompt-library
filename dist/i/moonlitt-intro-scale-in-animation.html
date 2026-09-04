@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moonlitt Intro Scale In Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Moonlitt Intro Scale In Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/moonlitt-intro-scale-in-animation"><b>Moonlitt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/moonlitt-intro-scale-in-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/moonlitt-intro-scale-in-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Moonlitt&#x27;s intro - after &quot;Let&#x27;s go&quot;, a detailed moon illustration springs from a tiny crescent to full size, then a glass card fades in behind it with the phase name and a Continue button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e00015586c4a5a5e05bdfd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e00015586c4a5a5e05bdfd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-moonlitt-intro-scale-in-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Moonlitt&#x27;s intro - after &quot;Let&#x27;s go&quot;, a detailed moon illustration springs from a tiny crescent to full size, then a glass card fades in behind it with the phase name and a Continue button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark navy welcome screen (&quot;Welcome to Moonlitt&quot;, &quot;Let&#x27;s go&quot; button). On tap: the copy clears and a small moon appears at center, growing into a large detailed moon (waxing gibbous, crater texture). A rounded card materializes behind/below it: the moon sits in the card&#x27;s upper half, &quot;Waxing Gibbous&quot; label beneath, subcopy &quot;The moon grows fuller, spreading its light across the sky&quot;, and a &quot;Continue&quot; button at the bottom.
+
+## Motion spec
+Pattern: spring scale-in with staggered card reveal.
+- Tap &quot;Let&#x27;s go&quot;: welcome copy fades and slides up 10pt (250ms); a pinpoint glow appears at center (100ms).
+- The moon scales from 0.15 -&gt; 1.0 (spring ~240/14, 700ms) with a visible overshoot (~1.06), its phase shading sweeping from crescent to the current phase as it grows.
+- A soft halo blooms behind the moon (radius 0 -&gt; 60pt, opacity 0.5, 500ms, starting at 60% through the scale).
+- The card fades in and rises 20pt (400ms, ease-out), the moon settling into the card&#x27;s top area; the phase label types/fades in (250ms), then subcopy (200ms), then the Continue button pops (scale 0.9 -&gt; 1, spring ~340/16).
+- The whole composition idles with the halo breathing (opacity 0.4 -&gt; 0.6, 3s).
+
+## Calibration
+- The moon&#x27;s growth is the hero beat - nothing else moves until it lands.
+- Card is translucent dark glass (blur + 12% white), corners ~24pt.
+
+## Reduced motion
+Moon fades in at full size (300ms); card follows (250ms).
+
+## Don&#x27;t miss
+- The phase sweep during scale ties growth to the moon metaphor - a static texture scaling up loses it.
+- Continue is the only actionable element; it waits for the full sequence before enabling.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring scale-in with staggered card reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/moonlitt-intro-scale-in-animation">original interaction</a> by Moonlitt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Moonlitt's intro - after \"Let's go\", a detailed moon illustration springs from a tiny crescent to full size, then a glass card fades in behind it with the phase name and a Continue button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark navy welcome screen (\"Welcome to Moonlitt\", \"Let's go\" button). On tap: the copy clears and a small moon appears at center, growing into a large detailed moon (waxing gibbous, crater texture). A rounded card materializes behind/below it: the moon sits in the card's upper half, \"Waxing Gibbous\" label beneath, subcopy \"The moon grows fuller, spreading its light across the sky\", and a \"Continue\" button at the bottom.\n\n## Motion spec\nPattern: spring scale-in with staggered card reveal.\n- Tap \"Let's go\": welcome copy fades and slides up 10pt (250ms); a pinpoint glow appears at center (100ms).\n- The moon scales from 0.15 -> 1.0 (spring ~240/14, 700ms) with a visible overshoot (~1.06), its phase shading sweeping from crescent to the current phase as it grows.\n- A soft halo blooms behind the moon (radius 0 -> 60pt, opacity 0.5, 500ms, starting at 60% through the scale).\n- The card fades in and rises 20pt (400ms, ease-out), the moon settling into the card's top area; the phase label types/fades in (250ms), then subcopy (200ms), then the Continue button pops (scale 0.9 -> 1, spring ~340/16).\n- The whole composition idles with the halo breathing (opacity 0.4 -> 0.6, 3s).\n\n## Calibration\n- The moon's growth is the hero beat - nothing else moves until it lands.\n- Card is translucent dark glass (blur + 12% white), corners ~24pt.\n\n## Reduced motion\nMoon fades in at full size (300ms); card follows (250ms).\n\n## Don't miss\n- The phase sweep during scale ties growth to the moon metaphor - a static texture scaling up loses it.\n- Continue is the only actionable element; it waits for the full sequence before enabling."</script>
+</body></html>

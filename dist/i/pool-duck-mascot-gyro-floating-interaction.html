@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pool Duck Mascot Gyro Floating Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Pool Duck Mascot Gyro Floating Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/pool-duck-mascot-gyro-floating-interaction"><b>Pool</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pool-duck-mascot-gyro-floating-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pool-duck-mascot-gyro-floating-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Pool&#x27;s invite passcode screen - a tiny orange rubber duck floats across the watery blue keypad screen, drifting and sliding in response to device tilt.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538e179cd218090c8cd91/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538e179cd218090c8cd91/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-pool-duck-mascot-gyro-floating-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Pool&#x27;s invite passcode screen - a tiny orange rubber duck floats across the watery blue keypad screen, drifting and sliding in response to device tilt.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Invite screen on a rippling blue water gradient: &quot;Pool is invite-only&quot; serif title with subcopy, a row of passcode dots, a bubble-style numeric keypad, a legal line, and a Sign in link. The orange duck starts small near the keypad.
+
+## Motion spec
+Pattern: gyroscope-driven floating mascot with water physics.
+- The duck drifts freely: tilting the phone accelerates it in the tilt direction (gravity ~300px/s2), with water drag easing it to a stop (velocity decay ~0.92 per frame).
+- It bob-rotates with movement (rotateZ up to +/- 15 degrees against velocity) and leaves a faint wake ripple that expands and fades (scale 1 -&gt; 2.2, opacity 0.4 -&gt; 0, 800ms).
+- On hitting a screen edge it bounces softly (velocity * -0.5) with a squash (scaleY 0.9 for 120ms).
+- Idle: it treads water near its last position (+/- 4px bob, 2s).
+- Keypad bubbles also jiggle faintly with tilt (+/- 2px), subordinate to the duck.
+
+## Calibration
+- The duck is small (about a keypad key&#x27;s width) and bright orange - a toy in a pool.
+- Physics must feel wet: slow acceleration, long glides, soft bounces.
+
+## Reduced motion
+Duck bobs in place; no tilt response.
+
+## Don&#x27;t miss
+- The duck never occludes the passcode dots or title - it swims under the UI layer.
+- The water background keeps rippling independently of the duck.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gyroscope-driven floating mascot with water physics.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/pool-duck-mascot-gyro-floating-interaction">original interaction</a> by Pool. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Pool's invite passcode screen - a tiny orange rubber duck floats across the watery blue keypad screen, drifting and sliding in response to device tilt.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nInvite screen on a rippling blue water gradient: \"Pool is invite-only\" serif title with subcopy, a row of passcode dots, a bubble-style numeric keypad, a legal line, and a Sign in link. The orange duck starts small near the keypad.\n\n## Motion spec\nPattern: gyroscope-driven floating mascot with water physics.\n- The duck drifts freely: tilting the phone accelerates it in the tilt direction (gravity ~300px/s2), with water drag easing it to a stop (velocity decay ~0.92 per frame).\n- It bob-rotates with movement (rotateZ up to +/- 15 degrees against velocity) and leaves a faint wake ripple that expands and fades (scale 1 -> 2.2, opacity 0.4 -> 0, 800ms).\n- On hitting a screen edge it bounces softly (velocity * -0.5) with a squash (scaleY 0.9 for 120ms).\n- Idle: it treads water near its last position (+/- 4px bob, 2s).\n- Keypad bubbles also jiggle faintly with tilt (+/- 2px), subordinate to the duck.\n\n## Calibration\n- The duck is small (about a keypad key's width) and bright orange - a toy in a pool.\n- Physics must feel wet: slow acceleration, long glides, soft bounces.\n\n## Reduced motion\nDuck bobs in place; no tilt response.\n\n## Don't miss\n- The duck never occludes the passcode dots or title - it swims under the UI layer.\n- The water background keeps rippling independently of the duck."</script>
+</body></html>

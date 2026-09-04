@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Scenes Circular Filter Menu Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Scenes Circular Filter Menu Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-scenes-circular-filter-menu-interaction"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-scenes-circular-filter-menu-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-scenes-circular-filter-menu-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Swiggy Scenes&#x27; circular filter menu - a bottom pill fans out into an arc of vibe chips (Booze?, Rooftop?, Candle lit?, Date Night...), and picking one filters the scene grid with a staggered repopulate.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8d0eec3d879bf573054e4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8d0eec3d879bf573054e4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-scenes-circular-filter-menu-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Swiggy Scenes&#x27; circular filter menu - a bottom pill fans out into an arc of vibe chips (Booze?, Rooftop?, Candle lit?, Date Night...), and picking one filters the scene grid with a staggered repopulate.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Swiggy Scenes, dark: &quot;BRUNCH&quot; header with search/sort icons, a two-column grid of scene cards (Girls Only Soiree, French Brunch, Sunday Brunch), and a pill button bottom-center. Opened: chips fanned along a bottom arc around a round close/confirm button. Filtered: a red-tinted active chip, a &quot;WHEN IS THE PLAN?&quot; chip row under the header (Today&#x27;s, Weekend, This Week&#x27;s, Next Weekend), and a grid that can empty to &quot;No matches found yet&quot; with a small illustration.
+
+## Motion spec
+Pattern: radial fan-out filter menu from a bottom anchor.
+- Tap the pill: chips spring out along a semicircular arc (rotate from the bottom-center pivot, each chip swinging to its angle with spring ~350/18, 50ms stagger, slight overshoot); the pill morphs into the round close button (label collapses, 200ms).
+- Chips land tilted along the arc&#x27;s tangent, not level.
+- Tap a chip: it fills with its accent color (200ms), the unchosen chips swing back in (reverse stagger), and the grid fades out (150ms) then repopulates card-by-card (scale 0.92 -&gt; 1 + fade, 60ms stagger).
+- On an empty result, the grid yields to the &quot;No matches found yet&quot; placeholder, which fades up (250ms) with its illustration bobbing gently (translateY +/-4px, 1.6s loop).
+- With a filter active, the &quot;WHEN IS THE PLAN?&quot; chip row slides in under the header (translateY -12 -&gt; 0, 250ms).
+
+## Calibration
+- The arc is shallow - a friendly fan, not a wheel; chips stay legible with at most +/-20 degrees of tilt.
+- The active filter chip keeps its accent fill and sits slightly raised in the collapsed pill state.
+
+## Reduced motion
+Chips fade in along the arc without rotation; grid crossfades (200ms) without per-card stagger.
+
+## Don&#x27;t miss
+- The fan opens around the center button - the pivot stays fixed, so the motion feels like a hand fan.
+- Empty state keeps the arc open; filtering never traps the user on a dead screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">radial fan-out filter menu from a bottom anchor.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-scenes-circular-filter-menu-interaction">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Swiggy Scenes' circular filter menu - a bottom pill fans out into an arc of vibe chips (Booze?, Rooftop?, Candle lit?, Date Night...), and picking one filters the scene grid with a staggered repopulate.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSwiggy Scenes, dark: \"BRUNCH\" header with search/sort icons, a two-column grid of scene cards (Girls Only Soiree, French Brunch, Sunday Brunch), and a pill button bottom-center. Opened: chips fanned along a bottom arc around a round close/confirm button. Filtered: a red-tinted active chip, a \"WHEN IS THE PLAN?\" chip row under the header (Today's, Weekend, This Week's, Next Weekend), and a grid that can empty to \"No matches found yet\" with a small illustration.\n\n## Motion spec\nPattern: radial fan-out filter menu from a bottom anchor.\n- Tap the pill: chips spring out along a semicircular arc (rotate from the bottom-center pivot, each chip swinging to its angle with spring ~350/18, 50ms stagger, slight overshoot); the pill morphs into the round close button (label collapses, 200ms).\n- Chips land tilted along the arc's tangent, not level.\n- Tap a chip: it fills with its accent color (200ms), the unchosen chips swing back in (reverse stagger), and the grid fades out (150ms) then repopulates card-by-card (scale 0.92 -> 1 + fade, 60ms stagger).\n- On an empty result, the grid yields to the \"No matches found yet\" placeholder, which fades up (250ms) with its illustration bobbing gently (translateY +/-4px, 1.6s loop).\n- With a filter active, the \"WHEN IS THE PLAN?\" chip row slides in under the header (translateY -12 -> 0, 250ms).\n\n## Calibration\n- The arc is shallow - a friendly fan, not a wheel; chips stay legible with at most +/-20 degrees of tilt.\n- The active filter chip keeps its accent fill and sits slightly raised in the collapsed pill state.\n\n## Reduced motion\nChips fade in along the arc without rotation; grid crossfades (200ms) without per-card stagger.\n\n## Don't miss\n- The fan opens around the center button - the pivot stays fixed, so the motion feels like a hand fan.\n- Empty state keeps the arc open; filtering never traps the user on a dead screen."</script>
+</body></html>

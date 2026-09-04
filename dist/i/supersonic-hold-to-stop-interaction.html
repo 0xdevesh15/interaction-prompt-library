@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supersonic Hold to Stop Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Supersonic Hold to Stop Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/supersonic-hold-to-stop-interaction"><b>Supersonic</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/supersonic-hold-to-stop-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/supersonic-hold-to-stop-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Supersonic&#x27;s hold-to-stop - on the paused run screen (&quot;PAUSED&quot;, elapsed time, resume and stop buttons), pressing and holding the stop control fills a progress ring with &quot;Hold to stop run&quot; copy, then transitions to the dark runs dashboard.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38038210ca5ef7c8ca152/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38038210ca5ef7c8ca152/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-supersonic-hold-to-stop-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Supersonic&#x27;s hold-to-stop - on the paused run screen (&quot;PAUSED&quot;, elapsed time, resume and stop buttons), pressing and holding the stop control fills a progress ring with &quot;Hold to stop run&quot; copy, then transitions to the dark runs dashboard.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark paused screen: faint &quot;PAUSED&quot; watermark, timer, a green play (resume) button and an outlined stop button at the bottom. Dashboard: &quot;My Runs&quot; header, a purple gradient month card (&quot;AUG&quot;, distance, step count &quot;108,525&quot;), a green &quot;Start Run&quot; pill, recent run rows, bottom nav.
+
+## Motion spec
+Pattern: hold-to-confirm ring with guarded completion.
+- Touch down on stop: the button&#x27;s ring begins filling clockwise (linear, 1.2s to full) and &quot;Hold to stop run&quot; fades in beneath the timer; the button scales down 0.95 under the finger.
+- Release early: the ring drains backward along its own path (250ms, ease-out) and the hint text fades - an abort you can see.
+- Ring completes: it flashes solid, the stop icon morphs to a check (180ms), a haptic thud lands, and the whole paused screen slides down and away (350ms ease-in).
+- The dashboard rises in beneath it (translateY 24 -&gt; 0 + fade, 300ms), the month card&#x27;s stats ticking up (steps counting 0 -&gt; 108,525 over 800ms, digit roll) and its gradient slowly shifting hue (8s loop).
+- The new run appears in the list with a single row highlight pulse.
+
+## Calibration
+- 1.2s hold - long enough to prevent accidents mid-run, short enough to not feel locked out.
+- The drain-on-release is the safety affordance made visible.
+
+## Reduced motion
+Hold shows a determinate bar; transition is a fade; no counting tick.
+
+## Don&#x27;t miss
+- Resume stays one-tap - only DESTRUCTIVE stop is gated by the hold.
+- The ring fills from the button itself - the control and the progress are one object.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">hold-to-confirm ring with guarded completion.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/supersonic-hold-to-stop-interaction">original interaction</a> by Supersonic. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Supersonic's hold-to-stop - on the paused run screen (\"PAUSED\", elapsed time, resume and stop buttons), pressing and holding the stop control fills a progress ring with \"Hold to stop run\" copy, then transitions to the dark runs dashboard.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark paused screen: faint \"PAUSED\" watermark, timer, a green play (resume) button and an outlined stop button at the bottom. Dashboard: \"My Runs\" header, a purple gradient month card (\"AUG\", distance, step count \"108,525\"), a green \"Start Run\" pill, recent run rows, bottom nav.\n\n## Motion spec\nPattern: hold-to-confirm ring with guarded completion.\n- Touch down on stop: the button's ring begins filling clockwise (linear, 1.2s to full) and \"Hold to stop run\" fades in beneath the timer; the button scales down 0.95 under the finger.\n- Release early: the ring drains backward along its own path (250ms, ease-out) and the hint text fades - an abort you can see.\n- Ring completes: it flashes solid, the stop icon morphs to a check (180ms), a haptic thud lands, and the whole paused screen slides down and away (350ms ease-in).\n- The dashboard rises in beneath it (translateY 24 -> 0 + fade, 300ms), the month card's stats ticking up (steps counting 0 -> 108,525 over 800ms, digit roll) and its gradient slowly shifting hue (8s loop).\n- The new run appears in the list with a single row highlight pulse.\n\n## Calibration\n- 1.2s hold - long enough to prevent accidents mid-run, short enough to not feel locked out.\n- The drain-on-release is the safety affordance made visible.\n\n## Reduced motion\nHold shows a determinate bar; transition is a fade; no counting tick.\n\n## Don't miss\n- Resume stays one-tap - only DESTRUCTIVE stop is gated by the hold.\n- The ring fills from the button itself - the control and the progress are one object."</script>
+</body></html>

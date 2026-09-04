@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Search Gradient Transition on Button Tap Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Arc Search Gradient Transition on Button Tap Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/arc-search-gradient-transition-on-button-tap-interaction"><b>Arc</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-gradient-transition-on-button-tap-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-gradient-transition-on-button-tap-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Arc Search&#x27;s onboarding - tapping &quot;Let&#x27;s Go&quot; morphs the full-bleed gradient from blue-purple to red-pink while &quot;Get what you want twice as fast.&quot; staggers out and &quot;Search quickly and privately.&quot; staggers in, the button morphing into &quot;Set as Default Browser&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc2039020d76d55e02a1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc2039020d76d55e02a1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-arc-search-gradient-transition-on-button-tap-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Arc Search&#x27;s onboarding - tapping &quot;Let&#x27;s Go&quot; morphs the full-bleed gradient from blue-purple to red-pink while &quot;Get what you want twice as fast.&quot; staggers out and &quot;Search quickly and privately.&quot; staggers in, the button morphing into &quot;Set as Default Browser&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen mesh gradient (blue, purple, red blobs) with a small star logo top-center, a big bold headline lower-left, and a dark pill button. Step two: the gradient turns red-pink, headline &quot;Search quickly and privately.&quot; with a subline (&quot;Use Browse for Me to summarize...&quot;), a blue &quot;Set as Default Browser&quot; button, and &quot;Skip&quot;.
+
+## Motion spec
+Pattern: gradient-morph step transition, ~700ms.
+- Tap: the button&#x27;s label crossfades (150ms) as its fill morphs dark -&gt; blue (250ms).
+- Gradient: the mesh blobs drift and re-hue continuously (blue-purple -&gt; red-pink over 600ms, ease-in-out), always in motion (idle drift 20s loop).
+- Text: the old headline blurs and sinks 12px out (250ms); the new one rises 12px in de-blurring word by word (60ms stagger, 300ms); the subline fades in +150ms.
+- Reversal: Skip uses the same transition toward the next step; &quot;Open Settings&quot; morphs the button again (label + width, 250ms).
+
+## Calibration
+- The gradient never stops moving, even mid-transition.
+- The button&#x27;s width animates with the label change - no layout jump.
+
+## Reduced motion
+Gradient crossfades hues (400ms) without drift; text crossfades without blur.
+
+## Don&#x27;t miss
+- Text leaves through blur, not just fade - the de-blur on entry is the signature.
+- Logo stays pinned through every step.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gradient-morph step transition, ~700ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/arc-search-gradient-transition-on-button-tap-interaction">original interaction</a> by Arc. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Arc Search's onboarding - tapping \"Let's Go\" morphs the full-bleed gradient from blue-purple to red-pink while \"Get what you want twice as fast.\" staggers out and \"Search quickly and privately.\" staggers in, the button morphing into \"Set as Default Browser\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen mesh gradient (blue, purple, red blobs) with a small star logo top-center, a big bold headline lower-left, and a dark pill button. Step two: the gradient turns red-pink, headline \"Search quickly and privately.\" with a subline (\"Use Browse for Me to summarize...\"), a blue \"Set as Default Browser\" button, and \"Skip\".\n\n## Motion spec\nPattern: gradient-morph step transition, ~700ms.\n- Tap: the button's label crossfades (150ms) as its fill morphs dark -> blue (250ms).\n- Gradient: the mesh blobs drift and re-hue continuously (blue-purple -> red-pink over 600ms, ease-in-out), always in motion (idle drift 20s loop).\n- Text: the old headline blurs and sinks 12px out (250ms); the new one rises 12px in de-blurring word by word (60ms stagger, 300ms); the subline fades in +150ms.\n- Reversal: Skip uses the same transition toward the next step; \"Open Settings\" morphs the button again (label + width, 250ms).\n\n## Calibration\n- The gradient never stops moving, even mid-transition.\n- The button's width animates with the label change - no layout jump.\n\n## Reduced motion\nGradient crossfades hues (400ms) without drift; text crossfades without blur.\n\n## Don't miss\n- Text leaves through blur, not just fade - the de-blur on entry is the signature.\n- Logo stays pinned through every step."</script>
+</body></html>

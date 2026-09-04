@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Invitation Open Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Invitation Open Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-invitation-open-interaction"><b>Monopoly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-invitation-open-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-invitation-open-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monopoly Go&#x27;s invitation - over the dimmed board, a glowing blue envelope sits under &quot;YOU GOT AN INVITATION!&quot;; tapping it pops the flap, the letter slides up out of the envelope with a bright flash, and the Tycoon Club invitation card springs in with a GO TO CLUB! button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670921bd6ef193b227eb881c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670921bd6ef193b227eb881c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-invitation-open-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monopoly Go&#x27;s invitation - over the dimmed board, a glowing blue envelope sits under &quot;YOU GOT AN INVITATION!&quot;; tapping it pops the flap, the letter slides up out of the envelope with a bright flash, and the Tycoon Club invitation card springs in with a GO TO CLUB! button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The board behind is dimmed to near-black. Center stage: &quot;YOU GOT AN INVITATION!&quot; headline and a closed blue envelope with a light burst behind it and &quot;Tap to open&quot; microcopy. The reveal is a white invitation card with the Mr. Monopoly Tycoon Club illustration, invite copy, and a green GO TO CLUB! button.
+
+## Motion spec
+Pattern: staged tap-to-open envelope sequence.
+- Idle: the envelope breathes (scale 1 -&gt; 1.04, 1.6s loop) with a radial light burst pulsing behind it (opacity 20% -&gt; 35%).
+- Tap: the envelope hops once (translateY -12px, 180ms, ease-out) and the flap springs open (rotateX 0 -&gt; -160deg, 300ms, spring ~280/20).
+- The letter card slides up out of the envelope (translateY from inside -&gt; -40% above, 400ms, ease-out) while a bright white flash blooms (opacity 0 -&gt; 90% -&gt; 0, 350ms) at the envelope mouth.
+- Flash peak: the invitation card pops in center-screen (scale 0.6 -&gt; 1, spring ~320/18, 400ms with a visible overshoot wobble) as the envelope sinks and fades (translateY +30px, opacity -&gt; 0, 300ms).
+- The card settles with one small bounce; GO TO CLUB! glows with a subtle shine sweep every 2.5s.
+
+## Calibration
+- The flash and the card pop share their peak frame - the flash hides the swap.
+- The card&#x27;s entrance is the only springy moment - envelope motions are simple eases.
+
+## Reduced motion
+Envelope opens without hop; card appears with a simple fade.
+
+## Don&#x27;t miss
+- The envelope&#x27;s glow burst rotates slowly (~20s per revolution) even at idle.
+- The card art bursts past its own top edge - Mr. Monopoly&#x27;s confetti overlaps the card boundary.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staged tap-to-open envelope sequence.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-invitation-open-interaction">original interaction</a> by Monopoly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monopoly Go's invitation - over the dimmed board, a glowing blue envelope sits under \"YOU GOT AN INVITATION!\"; tapping it pops the flap, the letter slides up out of the envelope with a bright flash, and the Tycoon Club invitation card springs in with a GO TO CLUB! button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe board behind is dimmed to near-black. Center stage: \"YOU GOT AN INVITATION!\" headline and a closed blue envelope with a light burst behind it and \"Tap to open\" microcopy. The reveal is a white invitation card with the Mr. Monopoly Tycoon Club illustration, invite copy, and a green GO TO CLUB! button.\n\n## Motion spec\nPattern: staged tap-to-open envelope sequence.\n- Idle: the envelope breathes (scale 1 -> 1.04, 1.6s loop) with a radial light burst pulsing behind it (opacity 20% -> 35%).\n- Tap: the envelope hops once (translateY -12px, 180ms, ease-out) and the flap springs open (rotateX 0 -> -160deg, 300ms, spring ~280/20).\n- The letter card slides up out of the envelope (translateY from inside -> -40% above, 400ms, ease-out) while a bright white flash blooms (opacity 0 -> 90% -> 0, 350ms) at the envelope mouth.\n- Flash peak: the invitation card pops in center-screen (scale 0.6 -> 1, spring ~320/18, 400ms with a visible overshoot wobble) as the envelope sinks and fades (translateY +30px, opacity -> 0, 300ms).\n- The card settles with one small bounce; GO TO CLUB! glows with a subtle shine sweep every 2.5s.\n\n## Calibration\n- The flash and the card pop share their peak frame - the flash hides the swap.\n- The card's entrance is the only springy moment - envelope motions are simple eases.\n\n## Reduced motion\nEnvelope opens without hop; card appears with a simple fade.\n\n## Don't miss\n- The envelope's glow burst rotates slowly (~20s per revolution) even at idle.\n- The card art bursts past its own top edge - Mr. Monopoly's confetti overlaps the card boundary."</script>
+</body></html>

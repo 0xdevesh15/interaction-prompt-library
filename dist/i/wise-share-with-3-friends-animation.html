@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wise Share with 3 Friends Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Wise Share with 3 Friends Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/wise-share-with-3-friends-animation"><b>Wise</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wise-share-with-3-friends-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wise-share-with-3-friends-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Wise&#x27;s referral loop - on the &quot;SHARE WISE AND EARN THB 2,000&quot; screen, the center icon cycles through a morphing sequence: gift box to friend avatars to a paper plane to a money bag.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68858d5f73359ab611580635/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68858d5f73359ab611580635/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-wise-share-with-3-friends-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Wise&#x27;s referral loop - on the &quot;SHARE WISE AND EARN THB 2,000&quot; screen, the center icon cycles through a morphing sequence: gift box to friend avatars to a paper plane to a money bag.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark-green referral screen: the headline and reward copy up top, a referral link field with copy button and a Share Wise button at the bottom, and a center stage where the looping icon animation plays.
+
+## Motion spec
+Pattern: looping four-stage icon morph, ~1.2s per stage.
+- Gift: a gift box in a green circle fades/scales in (scale 0.8 -&gt; 1 + fade, 250ms).
+- Avatars: the circle morphs into a row of three overlapping friend avatars (each pops in 0.6 -&gt; 1, spring ~420/18, staggered 80ms) and a green check badge pops on the last one (spring ~460/16).
+- Plane: the avatars collapse into a person tile plus a paper-plane tile; the plane launches (translate up-right ~30px with a slight rotate, 350ms, ease-out).
+- Money bag: the plane resolves into a money-bag icon in the green circle (scale 0.7 -&gt; 1 + fade, 300ms), holds, then the loop restarts with a quick fade (200ms).
+
+## Calibration
+- Each stage is fully readable before morphing - no mid-morph ambiguity.
+- The green circle is the visual anchor; stage changes re-form around it.
+
+## Reduced motion
+Static gift icon; no loop.
+
+## Don&#x27;t miss
+- The loop never stops while the screen is visible.
+- Copy, link field, and button are static - all motion is in the center stage.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping four-stage icon morph, ~1.2s per stage.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/wise-share-with-3-friends-animation">original interaction</a> by Wise. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Wise's referral loop - on the \"SHARE WISE AND EARN THB 2,000\" screen, the center icon cycles through a morphing sequence: gift box to friend avatars to a paper plane to a money bag.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark-green referral screen: the headline and reward copy up top, a referral link field with copy button and a Share Wise button at the bottom, and a center stage where the looping icon animation plays.\n\n## Motion spec\nPattern: looping four-stage icon morph, ~1.2s per stage.\n- Gift: a gift box in a green circle fades/scales in (scale 0.8 -> 1 + fade, 250ms).\n- Avatars: the circle morphs into a row of three overlapping friend avatars (each pops in 0.6 -> 1, spring ~420/18, staggered 80ms) and a green check badge pops on the last one (spring ~460/16).\n- Plane: the avatars collapse into a person tile plus a paper-plane tile; the plane launches (translate up-right ~30px with a slight rotate, 350ms, ease-out).\n- Money bag: the plane resolves into a money-bag icon in the green circle (scale 0.7 -> 1 + fade, 300ms), holds, then the loop restarts with a quick fade (200ms).\n\n## Calibration\n- Each stage is fully readable before morphing - no mid-morph ambiguity.\n- The green circle is the visual anchor; stage changes re-form around it.\n\n## Reduced motion\nStatic gift icon; no loop.\n\n## Don't miss\n- The loop never stops while the screen is visible.\n- Copy, link field, and button are static - all motion is in the center stage."</script>
+</body></html>

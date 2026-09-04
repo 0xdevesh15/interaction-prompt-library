@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Citymapper Scroll to View Hidden Art - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Citymapper Scroll to View Hidden Art</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/citymapper-scroll-to-view-hidden-art"><b>Citymapper</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/citymapper-scroll-to-view-hidden-art">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/citymapper-scroll-to-view-hidden-art">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Citymapper&#x27;s hidden-art empty state - a bright green out-of-coverage screen where scrolling up pulls a tall line-art world into view: characters, a train, a bus, a whale, and a rocket, all in white outline on green.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd06371d29849d7bda67/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd06371d29849d7bda67/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-citymapper-scroll-to-view-hidden-art.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Citymapper&#x27;s hidden-art empty state - a bright green out-of-coverage screen where scrolling up pulls a tall line-art world into view: characters, a train, a bus, a whale, and a rocket, all in white outline on green.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Solid bright green screen. Top: a CO2-savings pill and back button. Bottom (pinned): a blue banner reading &quot;You&#x27;re outside our coverage - See all cities&quot;. Between them, initially empty green. Scrolling up reveals a continuous vertical line-art illustration: two little characters waving at the top, a tram, a bus, a whale, small houses, and a rocket near the bottom, all drawn in thin white strokes.
+
+## Motion spec
+Pattern: scroll-driven reveal of a tall hidden illustration.
+- The artwork is a single tall canvas (~2.5x viewport height) that tracks the scroll 1:1 - scrolling up slides the scene down past the viewport, revealing lower layers.
+- Subtle parallax: background hills move at ~0.6x scroll speed, foreground figures at 1.0x, giving the flat line art depth.
+- Small live touches: the characters&#x27; arms wave on a loop (small rotation, 1s), the whale spouts a puff every ~3s, the rocket idles with a faint exhaust flicker.
+- Overscroll at the bottom rubbers back (spring stiffness ~300, damping ~24).
+- The blue banner never scrolls - it is pinned above the artwork at all times.
+
+## Calibration
+- The illustration must feel discovered, not presented - nothing visible beyond the banner until the first scroll.
+- Keep the parallax split subtle; large speed differences make flat line art look layered like paper diorama.
+
+## Reduced motion
+Artwork scrolls without parallax; ambient loops (wave, spout, exhaust) are disabled.
+
+## Don&#x27;t miss
+- Everything is white line on the same green - no fills, no second color until the blue banner.
+- The scene is bottom-heavy: the biggest surprises (whale, rocket) sit deepest, rewarding a full scroll.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-driven reveal of a tall hidden illustration.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/citymapper-scroll-to-view-hidden-art">original interaction</a> by Citymapper. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Citymapper's hidden-art empty state - a bright green out-of-coverage screen where scrolling up pulls a tall line-art world into view: characters, a train, a bus, a whale, and a rocket, all in white outline on green.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSolid bright green screen. Top: a CO2-savings pill and back button. Bottom (pinned): a blue banner reading \"You're outside our coverage - See all cities\". Between them, initially empty green. Scrolling up reveals a continuous vertical line-art illustration: two little characters waving at the top, a tram, a bus, a whale, small houses, and a rocket near the bottom, all drawn in thin white strokes.\n\n## Motion spec\nPattern: scroll-driven reveal of a tall hidden illustration.\n- The artwork is a single tall canvas (~2.5x viewport height) that tracks the scroll 1:1 - scrolling up slides the scene down past the viewport, revealing lower layers.\n- Subtle parallax: background hills move at ~0.6x scroll speed, foreground figures at 1.0x, giving the flat line art depth.\n- Small live touches: the characters' arms wave on a loop (small rotation, 1s), the whale spouts a puff every ~3s, the rocket idles with a faint exhaust flicker.\n- Overscroll at the bottom rubbers back (spring stiffness ~300, damping ~24).\n- The blue banner never scrolls - it is pinned above the artwork at all times.\n\n## Calibration\n- The illustration must feel discovered, not presented - nothing visible beyond the banner until the first scroll.\n- Keep the parallax split subtle; large speed differences make flat line art look layered like paper diorama.\n\n## Reduced motion\nArtwork scrolls without parallax; ambient loops (wave, spout, exhaust) are disabled.\n\n## Don't miss\n- Everything is white line on the same green - no fills, no second color until the blue banner.\n- The scene is bottom-heavy: the biggest surprises (whale, rocket) sit deepest, rewarding a full scroll."</script>
+</body></html>

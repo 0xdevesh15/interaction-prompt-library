@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Scrubbing Graph Arrow Direction Up Down Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Scrubbing Graph Arrow Direction Up Down Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-scrubbing-graph-arrow-direction-up-down-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-scrubbing-graph-arrow-direction-up-down-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-scrubbing-graph-arrow-direction-up-down-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s graph scrubbing - dragging a finger across the Polygon detail chart moves a scrubber ring along the purple line, the header price rolling to each point&#x27;s value while the percent-change arrow slides up or down into place with its color, and a timestamp floats at the touch point.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895646410daa283ff14de/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895646410daa283ff14de/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-scrubbing-graph-arrow-direction-up-down-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s graph scrubbing - dragging a finger across the Polygon detail chart moves a scrubber ring along the purple line, the header price rolling to each point&#x27;s value while the percent-change arrow slides up or down into place with its color, and a timestamp floats at the touch point.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light Polygon detail: logo, &quot;Polygon $0.89&quot; header with percent change and arrow (red down / green up), purple line chart, timeframe tabs, Balance row (14.272 / $12.70), &quot;Powered by You&quot;, Description, purple Swap / Send pills. While scrubbing: a ring on the line with a filled dot, a floating timestamp label (&quot;Sep 17, 11:00am&quot;) above the touch, and live-updating header values.
+
+## Motion spec
+Pattern: touch-tracked scrubber with direction-aware arrow transitions.
+- Touch down: the chart dims slightly (opacity 0.85), the scrubber ring appears at the nearest point (scale 0 -&gt; 1, spring ~340/18, 150ms), and the timestamp label fades in above the finger (150ms).
+- Drag: the scrubber tracks the finger&#x27;s x, snapping to the line&#x27;s y (per-frame lerp); the price rolls digits to the scrubbed value (100ms per update), e.g. $0.89 -&gt; $1.25 -&gt; $0.78.
+- Direction flips: when the scrubbed percent changes sign, the arrow exits vertically (old arrow slides down-out for a rise, up-out for a drop, 150ms) while the new arrow slides in from the opposite side (spring ~320/18, 200ms), color crossfading red &lt;-&gt; green; the percent digits roll.
+- Release: the scrubber shrinks out (150ms), the chart restores full opacity, and the header eases back to the live price (digit roll 200ms).
+
+## Calibration
+- The scrubber never leaves the line - x follows the finger, y follows the series.
+- Arrow and percent move as one unit; the arrow leads the color change.
+
+## Reduced motion
+Values and arrows crossfade (150ms); the scrubber appears without spring.
+
+## Don&#x27;t miss
+- The timestamp floats above the touch offset, not centered on the chart.
+- The chart&#x27;s timeframe tabs stay visible but inactive during the scrub.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">touch-tracked scrubber with direction-aware arrow transitions.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-scrubbing-graph-arrow-direction-up-down-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's graph scrubbing - dragging a finger across the Polygon detail chart moves a scrubber ring along the purple line, the header price rolling to each point's value while the percent-change arrow slides up or down into place with its color, and a timestamp floats at the touch point.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight Polygon detail: logo, \"Polygon $0.89\" header with percent change and arrow (red down / green up), purple line chart, timeframe tabs, Balance row (14.272 / $12.70), \"Powered by You\", Description, purple Swap / Send pills. While scrubbing: a ring on the line with a filled dot, a floating timestamp label (\"Sep 17, 11:00am\") above the touch, and live-updating header values.\n\n## Motion spec\nPattern: touch-tracked scrubber with direction-aware arrow transitions.\n- Touch down: the chart dims slightly (opacity 0.85), the scrubber ring appears at the nearest point (scale 0 -> 1, spring ~340/18, 150ms), and the timestamp label fades in above the finger (150ms).\n- Drag: the scrubber tracks the finger's x, snapping to the line's y (per-frame lerp); the price rolls digits to the scrubbed value (100ms per update), e.g. $0.89 -> $1.25 -> $0.78.\n- Direction flips: when the scrubbed percent changes sign, the arrow exits vertically (old arrow slides down-out for a rise, up-out for a drop, 150ms) while the new arrow slides in from the opposite side (spring ~320/18, 200ms), color crossfading red <-> green; the percent digits roll.\n- Release: the scrubber shrinks out (150ms), the chart restores full opacity, and the header eases back to the live price (digit roll 200ms).\n\n## Calibration\n- The scrubber never leaves the line - x follows the finger, y follows the series.\n- Arrow and percent move as one unit; the arrow leads the color change.\n\n## Reduced motion\nValues and arrows crossfade (150ms); the scrubber appears without spring.\n\n## Don't miss\n- The timestamp floats above the touch offset, not centered on the chart.\n- The chart's timeframe tabs stay visible but inactive during the scrub."</script>
+</body></html>

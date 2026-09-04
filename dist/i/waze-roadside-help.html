@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waze Roadside Help - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Waze Roadside Help</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/waze-roadside-help"><b>Waze</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waze-roadside-help">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waze-roadside-help">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Waze&#x27;s roadside-help flow - the report grid expands full-screen, a brief spinner bridges the gap, and the dedicated help screen springs in with its two assistance options.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd299f86c96258d426d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd299f86c96258d426d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-waze-roadside-help.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Waze&#x27;s roadside-help flow - the report grid expands full-screen, a brief spinner bridges the gap, and the dedicated help screen springs in with its two assistance options.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;What do you see?&quot; as a full-screen dark grid (Traffic, Police, Crash, Hazard, Closure, Blocked lane, Map issue, Bad weather, Gas prices, Roadside help, Map chat, Place). The destination: a &quot;Roadside help&quot; screen - large red tire icon, two options (Fellow Wazers, Road assistance), safety disclaimer text, and a bottom bar (heart icon + blue Request pill).
+
+## Motion spec
+Pattern: sheet-to-screen transition with a loading bridge.
+- Tap Roadside help: the tapped icon pulses (scale 1.15 and back, 200ms, haptic) while the grid&#x27;s other icons fall away (translateY 24px + fade, 200ms, staggered 25ms top-down).
+- The sheet expands to full screen (corner radius 24 to 0, height spring ~340/26); during the expansion the content crossfades to a centered loading spinner (a teal arc rotating at 1rev/900ms on a dark chip).
+- The spinner holds only as long as content loads (300-800ms), then arcs shut (stroke contracts, 150ms) as the Roadside help screen&#x27;s elements spring in: red icon pops (scale 0.6 to 1, spring ~400/18), title fades up, then the two option icons stagger in (translateY 16px + fade, 220ms, 80ms apart), each with a subtle settle bounce.
+- The bottom bar slides up last (translateY 100% to 0, 250ms) with Request enabling in blue.
+- Choosing an option highlights it (icon gains a light ring, 150ms) and Request pulses once (scale 1.04, 150ms).
+- Back: the screen contracts into the grid, icons rising back into place in reverse stagger.
+
+## Calibration
+- Keep the whole flow dark-mode (near-black surfaces, blue accent); the red icon is the only warm element.
+- The spinner bridge must feel intentional: minimum display 300ms so it never flickers.
+
+## Reduced motion
+Simple crossfade between grid and help screen; spinner omitted.
+
+## Don&#x27;t miss
+- The disclaimer text is small and low-contrast gray - present but quiet.
+- The two options are icon-first with tiny labels; no list rows or chevrons.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet-to-screen transition with a loading bridge.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/waze-roadside-help">original interaction</a> by Waze. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Waze's roadside-help flow - the report grid expands full-screen, a brief spinner bridges the gap, and the dedicated help screen springs in with its two assistance options.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"What do you see?\" as a full-screen dark grid (Traffic, Police, Crash, Hazard, Closure, Blocked lane, Map issue, Bad weather, Gas prices, Roadside help, Map chat, Place). The destination: a \"Roadside help\" screen - large red tire icon, two options (Fellow Wazers, Road assistance), safety disclaimer text, and a bottom bar (heart icon + blue Request pill).\n\n## Motion spec\nPattern: sheet-to-screen transition with a loading bridge.\n- Tap Roadside help: the tapped icon pulses (scale 1.15 and back, 200ms, haptic) while the grid's other icons fall away (translateY 24px + fade, 200ms, staggered 25ms top-down).\n- The sheet expands to full screen (corner radius 24 to 0, height spring ~340/26); during the expansion the content crossfades to a centered loading spinner (a teal arc rotating at 1rev/900ms on a dark chip).\n- The spinner holds only as long as content loads (300-800ms), then arcs shut (stroke contracts, 150ms) as the Roadside help screen's elements spring in: red icon pops (scale 0.6 to 1, spring ~400/18), title fades up, then the two option icons stagger in (translateY 16px + fade, 220ms, 80ms apart), each with a subtle settle bounce.\n- The bottom bar slides up last (translateY 100% to 0, 250ms) with Request enabling in blue.\n- Choosing an option highlights it (icon gains a light ring, 150ms) and Request pulses once (scale 1.04, 150ms).\n- Back: the screen contracts into the grid, icons rising back into place in reverse stagger.\n\n## Calibration\n- Keep the whole flow dark-mode (near-black surfaces, blue accent); the red icon is the only warm element.\n- The spinner bridge must feel intentional: minimum display 300ms so it never flickers.\n\n## Reduced motion\nSimple crossfade between grid and help screen; spinner omitted.\n\n## Don't miss\n- The disclaimer text is small and low-contrast gray - present but quiet.\n- The two options are icon-first with tiny labels; no list rows or chevrons."</script>
+</body></html>

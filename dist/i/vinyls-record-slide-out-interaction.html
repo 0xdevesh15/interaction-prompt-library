@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vinyls Record Slide Out Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Vinyls Record Slide Out Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/vinyls-record-slide-out-interaction"><b>Vinyls</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/vinyls-record-slide-out-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/vinyls-record-slide-out-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Vinyls&#x27; record carousel - swiping &quot;Your recent Vinyls&quot; slides each centered sleeve&#x27;s black record out of its jacket to the right, spinning, and tucks it back in as the sleeve leaves focus.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68c5fadcafc186e5e84/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68c5fadcafc186e5e84/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-vinyls-record-slide-out-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Vinyls&#x27; record carousel - swiping &quot;Your recent Vinyls&quot; slides each centered sleeve&#x27;s black record out of its jacket to the right, spinning, and tucks it back in as the sleeve leaves focus.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light screen: &quot;Your recent Vinyls&quot; header with a Shuffle All pill, the horizontal sleeve carousel (album jackets, adjacent sleeves peeking), then &quot;What the world is listening&quot; filter chips, a &quot;Popular Today&quot; album grid, a &quot;Shortcuts&quot; row, and the tab bar with the red center action button.
+
+## Motion spec
+Pattern: focus-driven record slide-out, gesture-driven.
+- Scroll: sleeves move 1:1 with the drag and snap to center (spring ~340/24).
+- Slide-out: as a sleeve approaches center (0.5 -&gt; 0 offset), its record eases out to the right (60% of its diameter exposed at full focus, tied 1:1 to offset) and begins rotating (33rpm visual, ~1.8s/rev).
+- Tuck: leaving center reverses the slide (same 1:1 mapping) and the spin decays (800ms ease-out) rather than stopping dead.
+- Focus: the centered sleeve lifts with a shadow grow (200ms); side sleeves scale 0.92 and dim 8%.
+
+## Calibration
+- Record exposure is position-driven - half-focused shows half-exposed vinyl.
+- The record spins only when at least 30% exposed.
+
+## Reduced motion
+Record pops out at focus without spin (150ms); no rotation.
+
+## Don&#x27;t miss
+- The record is black with a tiny label dot - the groove sheen catches light as it spins.
+- The sleeve&#x27;s right edge stays open; the record never overlaps the next sleeve.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">focus-driven record slide-out, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/vinyls-record-slide-out-interaction">original interaction</a> by Vinyls. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Vinyls' record carousel - swiping \"Your recent Vinyls\" slides each centered sleeve's black record out of its jacket to the right, spinning, and tucks it back in as the sleeve leaves focus.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen: \"Your recent Vinyls\" header with a Shuffle All pill, the horizontal sleeve carousel (album jackets, adjacent sleeves peeking), then \"What the world is listening\" filter chips, a \"Popular Today\" album grid, a \"Shortcuts\" row, and the tab bar with the red center action button.\n\n## Motion spec\nPattern: focus-driven record slide-out, gesture-driven.\n- Scroll: sleeves move 1:1 with the drag and snap to center (spring ~340/24).\n- Slide-out: as a sleeve approaches center (0.5 -> 0 offset), its record eases out to the right (60% of its diameter exposed at full focus, tied 1:1 to offset) and begins rotating (33rpm visual, ~1.8s/rev).\n- Tuck: leaving center reverses the slide (same 1:1 mapping) and the spin decays (800ms ease-out) rather than stopping dead.\n- Focus: the centered sleeve lifts with a shadow grow (200ms); side sleeves scale 0.92 and dim 8%.\n\n## Calibration\n- Record exposure is position-driven - half-focused shows half-exposed vinyl.\n- The record spins only when at least 30% exposed.\n\n## Reduced motion\nRecord pops out at focus without spin (150ms); no rotation.\n\n## Don't miss\n- The record is black with a tiny label dot - the groove sheen catches light as it spins.\n- The sleeve's right edge stays open; the record never overlaps the next sleeve."</script>
+</body></html>

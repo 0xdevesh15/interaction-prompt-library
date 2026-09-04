@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corner Map Getting Ready Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Corner Map Getting Ready Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/corner-map-getting-ready-animation"><b>Corner</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/corner-map-getting-ready-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/corner-map-getting-ready-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Corner&#x27;s map-warming onboarding - a full-bleed city map loads in stages (&quot;getting your map ready...&quot;, &quot;adding spots you saved...&quot;, &quot;your friends places...&quot;, &quot;new and trending spots&quot;, &quot;curating places for you...&quot;) as markers drop, ending in a blue glow and a &quot;your map is ready!&quot; pill that becomes the CTA.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/693434747d19d070282a0609/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/693434747d19d070282a0609/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-corner-map-getting-ready-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Corner&#x27;s map-warming onboarding - a full-bleed city map loads in stages (&quot;getting your map ready...&quot;, &quot;adding spots you saved...&quot;, &quot;your friends places...&quot;, &quot;new and trending spots&quot;, &quot;curating places for you...&quot;) as markers drop, ending in a blue glow and a &quot;your map is ready!&quot; pill that becomes the CTA.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Corner onboarding: a full-bleed light-style city map (Bengaluru streets, green parks, blue lakes). Bottom: a floating white pill holding the current status line and a blue progress bar. Map content: black circular pins with labels, then colorful category chips (food, events) clustered near the center.
+
+## Motion spec
+Pattern: staged marker drops with a progress pill morphing into the CTA.
+- Stage 1 &quot;getting your map ready...&quot; (progress ~15%): the map fades in and gently settles (scale 1.05 -&gt; 1, 800ms).
+- Stage 2 &quot;adding spots you saved...&quot; (~35%): black pins drop onto their spots one by one (fall 40px with a soft bounce, spring ~400/20, 120ms apart), labels fading in beside them.
+- Stage 3 &quot;your friends places...&quot; (~55%): a second wave of pins drops in a new cluster, same physics.
+- Stage 4 &quot;new and trending spots&quot; (~75%): colorful category chips pop in (scale 0 -&gt; 1, spring ~450/16, staggered 60ms).
+- Stage 5 &quot;curating places for you...&quot; (~90%): the map drifts slightly to center the densest cluster (300ms ease).
+- Finale: a blue gradient glow floods in from the screen edges (500ms), the progress bar completes, and the pill&#x27;s text crossfades to &quot;your map is ready!&quot; (250ms) as the bar morphs into a full-width blue CTA button (width + height expansion, 350ms, ease-out).
+
+## Calibration
+- The status text swaps exactly on its stage&#x27;s progress threshold - never early.
+- Pin drops are the only bouncy element; the pill morphs with smooth eases, no bounce.
+
+## Reduced motion
+Pins fade in at position; the pill crossfades to the CTA without morphing.
+
+## Don&#x27;t miss
+- The pill stays pinned bottom-center through every stage - only its contents and final shape change.
+- The blue finale glow comes from the edges inward, leaving the map readable underneath.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staged marker drops with a progress pill morphing into the CTA.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/corner-map-getting-ready-animation">original interaction</a> by Corner. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Corner's map-warming onboarding - a full-bleed city map loads in stages (\"getting your map ready...\", \"adding spots you saved...\", \"your friends places...\", \"new and trending spots\", \"curating places for you...\") as markers drop, ending in a blue glow and a \"your map is ready!\" pill that becomes the CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCorner onboarding: a full-bleed light-style city map (Bengaluru streets, green parks, blue lakes). Bottom: a floating white pill holding the current status line and a blue progress bar. Map content: black circular pins with labels, then colorful category chips (food, events) clustered near the center.\n\n## Motion spec\nPattern: staged marker drops with a progress pill morphing into the CTA.\n- Stage 1 \"getting your map ready...\" (progress ~15%): the map fades in and gently settles (scale 1.05 -> 1, 800ms).\n- Stage 2 \"adding spots you saved...\" (~35%): black pins drop onto their spots one by one (fall 40px with a soft bounce, spring ~400/20, 120ms apart), labels fading in beside them.\n- Stage 3 \"your friends places...\" (~55%): a second wave of pins drops in a new cluster, same physics.\n- Stage 4 \"new and trending spots\" (~75%): colorful category chips pop in (scale 0 -> 1, spring ~450/16, staggered 60ms).\n- Stage 5 \"curating places for you...\" (~90%): the map drifts slightly to center the densest cluster (300ms ease).\n- Finale: a blue gradient glow floods in from the screen edges (500ms), the progress bar completes, and the pill's text crossfades to \"your map is ready!\" (250ms) as the bar morphs into a full-width blue CTA button (width + height expansion, 350ms, ease-out).\n\n## Calibration\n- The status text swaps exactly on its stage's progress threshold - never early.\n- Pin drops are the only bouncy element; the pill morphs with smooth eases, no bounce.\n\n## Reduced motion\nPins fade in at position; the pill crossfades to the CTA without morphing.\n\n## Don't miss\n- The pill stays pinned bottom-center through every stage - only its contents and final shape change.\n- The blue finale glow comes from the edges inward, leaving the map readable underneath."</script>
+</body></html>

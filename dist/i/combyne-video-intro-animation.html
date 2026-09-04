@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Combyne Video Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Combyne Video Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/combyne-video-intro-animation"><b>Combyne</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/combyne-video-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/combyne-video-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Combyne&#x27;s onboarding intro - a fast multi-step sequence from the gradient logo splash through feature pages (&quot;Create your dream outfit&quot;, &quot;Get Instant Feedback&quot;, &quot;Be Inspired&quot;, &quot;Compete in challenges&quot;) with collage imagery, floating heart reactions, and staggered text reveals.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c8b7ac8e3f1418093d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c8b7ac8e3f1418093d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-combyne-video-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Combyne&#x27;s onboarding intro - a fast multi-step sequence from the gradient logo splash through feature pages (&quot;Create your dream outfit&quot;, &quot;Get Instant Feedback&quot;, &quot;Be Inspired&quot;, &quot;Compete in challenges&quot;) with collage imagery, floating heart reactions, and staggered text reveals.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Step 0: full-screen orange-purple gradient with the white combyne logo. Step 1: full-bleed model photo. Step 2: outfit-collage page (green blouse, editorial cutouts) with &quot;Create your dream outfit&quot;. Step 3: same collage with &quot;Get Instant Feedback&quot; as red hearts float up over it. Step 4: a dense inspiration feed (&quot;Be Inspired&quot;). Step 5: challenge page with a &quot;Fashion Trends&quot; group card, a live challenge card, and &quot;Compete in challenges&quot;.
+
+## Motion spec
+Pattern: multi-step onboarding with staggered reveals and particle reactions, ~7s.
+- Splash: logo scales/fades in (spring ~320/16), then the gradient wipes up into the photo (500ms, ease-in-out).
+- Page advances: each step slides up over the last (400ms, ease-out); photos get a slight Ken Burns drift (scale 1 -&gt; 1.06 over their dwell).
+- Text: headlines reveal word by word (80ms stagger, slide-up + fade, ease-out).
+- Reactions: on the feedback step, hearts emit from the bottom (1 every 90ms, ~14 total), drifting up with sway and fading over 1.2s.
+- Final step: group card slides in from the top, challenge card from the bottom (springs ~300/20), headline last.
+
+## Calibration
+- Keep each step&#x27;s dwell short (~1s); this is a hype reel, not a tutorial.
+- Hearts originate from the collage area, not the screen corners.
+
+## Reduced motion
+Steps cross-fade (250ms); headlines appear whole; no hearts.
+
+## Don&#x27;t miss
+- The gradient splash uses the brand&#x27;s orange-to-purple sweep with the white logo centered.
+- Headlines are large, left-aligned, sentence case: &quot;Create your dream outfit&quot;, &quot;Get Instant Feedback&quot;, &quot;Be Inspired&quot;, &quot;Compete in challenges&quot;.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">multi-step onboarding with staggered reveals and particle reactions, ~7s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/combyne-video-intro-animation">original interaction</a> by Combyne. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Combyne's onboarding intro - a fast multi-step sequence from the gradient logo splash through feature pages (\"Create your dream outfit\", \"Get Instant Feedback\", \"Be Inspired\", \"Compete in challenges\") with collage imagery, floating heart reactions, and staggered text reveals.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nStep 0: full-screen orange-purple gradient with the white combyne logo. Step 1: full-bleed model photo. Step 2: outfit-collage page (green blouse, editorial cutouts) with \"Create your dream outfit\". Step 3: same collage with \"Get Instant Feedback\" as red hearts float up over it. Step 4: a dense inspiration feed (\"Be Inspired\"). Step 5: challenge page with a \"Fashion Trends\" group card, a live challenge card, and \"Compete in challenges\".\n\n## Motion spec\nPattern: multi-step onboarding with staggered reveals and particle reactions, ~7s.\n- Splash: logo scales/fades in (spring ~320/16), then the gradient wipes up into the photo (500ms, ease-in-out).\n- Page advances: each step slides up over the last (400ms, ease-out); photos get a slight Ken Burns drift (scale 1 -> 1.06 over their dwell).\n- Text: headlines reveal word by word (80ms stagger, slide-up + fade, ease-out).\n- Reactions: on the feedback step, hearts emit from the bottom (1 every 90ms, ~14 total), drifting up with sway and fading over 1.2s.\n- Final step: group card slides in from the top, challenge card from the bottom (springs ~300/20), headline last.\n\n## Calibration\n- Keep each step's dwell short (~1s); this is a hype reel, not a tutorial.\n- Hearts originate from the collage area, not the screen corners.\n\n## Reduced motion\nSteps cross-fade (250ms); headlines appear whole; no hearts.\n\n## Don't miss\n- The gradient splash uses the brand's orange-to-purple sweep with the white logo centered.\n- Headlines are large, left-aligned, sentence case: \"Create your dream outfit\", \"Get Instant Feedback\", \"Be Inspired\", \"Compete in challenges\"."</script>
+</body></html>

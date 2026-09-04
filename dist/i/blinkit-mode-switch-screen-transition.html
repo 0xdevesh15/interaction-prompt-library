@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blinkit Mode Switch Screen Transition - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Blinkit Mode Switch Screen Transition</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/blinkit-mode-switch-screen-transition"><b>Blinkit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blinkit-mode-switch-screen-transition">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blinkit-mode-switch-screen-transition">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Blinkit&#x27;s mode switch - toggling between single and couple modes re-themes the entire home screen (pink &quot;It&#x27;s Rose Day!&quot; vs dark &quot;Love is in the air.&quot;) while heart particles rain down over the whole app.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb4148dc35fae3b8a53c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb4148dc35fae3b8a53c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-blinkit-mode-switch-screen-transition.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Blinkit&#x27;s mode switch - toggling between single and couple modes re-themes the entire home screen (pink &quot;It&#x27;s Rose Day!&quot; vs dark &quot;Love is in the air.&quot;) while heart particles rain down over the whole app.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Grocery home: delivery header (&quot;Delivery in 8 minutes&quot;, location), search bar, category icon row, promo grid of themed cards, a &quot;FLAMES / Play now&quot; game banner, bottom section (&quot;Single &amp; Satisfied&quot; copy), tab bar. Mode A: pink/rose theme. Mode B: dark moody theme with the same layout re-skinned.
+
+## Motion spec
+Pattern: full-app theme crossfade + particle rain, ~1.5s.
+- Toggle tap: the theme crossfades section by section from top to bottom (each region 300ms fade, staggered 80ms downward) - header, search, categories, promo grid, banner.
+- 20-30 heart particles (pinks and reds, 6-14px) spawn across the top edge and fall with sway (sinusoidal +-20px) and slow rotation, fading near the bottom; they overlay all content.
+- Promo card artwork and copy swap inside the same card frames (no layout shift).
+- The toggle control itself flips state with a 150ms spring thumb slide.
+- Tab bar crossfades last, with the rest of the chrome.
+
+## Calibration
+- The stagger sweeps top-to-bottom once; random section order reads as flicker.
+- Hearts fall for the whole transition and stop within 300ms of the theme settling - lingering rain feels like a bug.
+
+## Reduced motion
+Single global crossfade (300ms), no stagger, no particles.
+
+## Don&#x27;t miss
+- Layout never shifts - every card, label, and button stays pixel-fixed; only colors, artwork, and copy change.
+- The particle layer ignores safe areas (falls over the notch and home indicator) but never blocks touches.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-app theme crossfade + particle rain, ~1.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/blinkit-mode-switch-screen-transition">original interaction</a> by Blinkit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Blinkit's mode switch - toggling between single and couple modes re-themes the entire home screen (pink \"It's Rose Day!\" vs dark \"Love is in the air.\") while heart particles rain down over the whole app.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nGrocery home: delivery header (\"Delivery in 8 minutes\", location), search bar, category icon row, promo grid of themed cards, a \"FLAMES / Play now\" game banner, bottom section (\"Single & Satisfied\" copy), tab bar. Mode A: pink/rose theme. Mode B: dark moody theme with the same layout re-skinned.\n\n## Motion spec\nPattern: full-app theme crossfade + particle rain, ~1.5s.\n- Toggle tap: the theme crossfades section by section from top to bottom (each region 300ms fade, staggered 80ms downward) - header, search, categories, promo grid, banner.\n- 20-30 heart particles (pinks and reds, 6-14px) spawn across the top edge and fall with sway (sinusoidal +-20px) and slow rotation, fading near the bottom; they overlay all content.\n- Promo card artwork and copy swap inside the same card frames (no layout shift).\n- The toggle control itself flips state with a 150ms spring thumb slide.\n- Tab bar crossfades last, with the rest of the chrome.\n\n## Calibration\n- The stagger sweeps top-to-bottom once; random section order reads as flicker.\n- Hearts fall for the whole transition and stop within 300ms of the theme settling - lingering rain feels like a bug.\n\n## Reduced motion\nSingle global crossfade (300ms), no stagger, no particles.\n\n## Don't miss\n- Layout never shifts - every card, label, and button stays pixel-fixed; only colors, artwork, and copy change.\n- The particle layer ignores safe areas (falls over the notch and home indicator) but never blocks touches."</script>
+</body></html>

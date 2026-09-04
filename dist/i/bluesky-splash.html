@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bluesky Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bluesky Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bluesky-splash"><b>Bluesky</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bluesky-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bluesky-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Bluesky&#x27;s splash-to-onboarding morph - the full-bleed blue splash collapses into the white onboarding screen as the butterfly logo shrinks and re-colors into place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775733e78796e577ca46dc5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775733e78796e577ca46dc5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bluesky-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Bluesky&#x27;s splash-to-onboarding morph - the full-bleed blue splash collapses into the white onboarding screen as the butterfly logo shrinks and re-colors into place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Splash: full-bleed Bluesky blue with a small white butterfly centered and &quot;Bluesky&quot; tiny at the bottom. Onboarding: white screen with the blue butterfly, &quot;Bluesky / What&#x27;s up?&quot; headline, and Create account / Sign in buttons with a language row.
+
+## Motion spec
+Pattern: background color collapse with logo recolor, ~900ms.
+- The splash holds ~600ms with the white butterfly pulsing once (scale 1 to 1.08 and back, 500ms).
+- The blue background then wipes upward, collapsing like a rising blind (450ms, ease-in-out), revealing white from the bottom.
+- In the same motion the butterfly shrinks and moves up to its onboarding slot (450ms matched transform) while crossfading from white to brand blue at the midpoint.
+- The headline fades in under the logo (300ms, 8px rise), then the buttons slide up and fade in with a 80ms stagger (300ms, ease-out), the language row last.
+- No element jumps: the logo is one continuous object across the two screens.
+
+## Calibration
+- The wipe and the logo travel are the same duration and curve - the logo rides the color boundary.
+- The white-to-blue recolor happens mid-flight; recoloring before the move reads as two logos.
+
+## Reduced motion
+Splash crossfades to the onboarding screen.
+
+## Don&#x27;t miss
+- The splash&#x27;s tiny bottom &quot;Bluesky&quot; fades out as the wipe starts - it must not survive into the onboarding layout.
+- The wipe direction is bottom-up; the onboarding content then feels revealed, not pushed.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">background color collapse with logo recolor, ~900ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bluesky-splash">original interaction</a> by Bluesky. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Bluesky's splash-to-onboarding morph - the full-bleed blue splash collapses into the white onboarding screen as the butterfly logo shrinks and re-colors into place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSplash: full-bleed Bluesky blue with a small white butterfly centered and \"Bluesky\" tiny at the bottom. Onboarding: white screen with the blue butterfly, \"Bluesky / What's up?\" headline, and Create account / Sign in buttons with a language row.\n\n## Motion spec\nPattern: background color collapse with logo recolor, ~900ms.\n- The splash holds ~600ms with the white butterfly pulsing once (scale 1 to 1.08 and back, 500ms).\n- The blue background then wipes upward, collapsing like a rising blind (450ms, ease-in-out), revealing white from the bottom.\n- In the same motion the butterfly shrinks and moves up to its onboarding slot (450ms matched transform) while crossfading from white to brand blue at the midpoint.\n- The headline fades in under the logo (300ms, 8px rise), then the buttons slide up and fade in with a 80ms stagger (300ms, ease-out), the language row last.\n- No element jumps: the logo is one continuous object across the two screens.\n\n## Calibration\n- The wipe and the logo travel are the same duration and curve - the logo rides the color boundary.\n- The white-to-blue recolor happens mid-flight; recoloring before the move reads as two logos.\n\n## Reduced motion\nSplash crossfades to the onboarding screen.\n\n## Don't miss\n- The splash's tiny bottom \"Bluesky\" fades out as the wipe starts - it must not survive into the onboarding layout.\n- The wipe direction is bottom-up; the onboarding content then feels revealed, not pushed."</script>
+</body></html>

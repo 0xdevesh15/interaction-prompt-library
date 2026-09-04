@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Riveo Video Effects Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Riveo Video Effects Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/riveo-video-effects-slider-interaction"><b>Riveo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/riveo-video-effects-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/riveo-video-effects-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Riveo&#x27;s video adjustment panel - an editor panel of horizontal dial sliders (Contrast, Brightness, Saturation, and more) that slide up over the toolbar, scrub precisely with tick feedback, and collapse away with a smooth slide.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676813eb2fbe90b354d2afb4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676813eb2fbe90b354d2afb4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-riveo-video-effects-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Riveo&#x27;s video adjustment panel - an editor panel of horizontal dial sliders (Contrast, Brightness, Saturation, and more) that slide up over the toolbar, scrub precisely with tick feedback, and collapse away with a smooth slide.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Riveo&#x27;s dark editor: video preview on top with a &quot;Double tap to edit&quot; overlay and crop handles, transport controls, and a purple timeline track. Tapping Adjust Colors opens a panel above the bottom toolbar: rows of labeled horizontal dial sliders (Contrast, Brightness, Saturation, Exposure, Vibrance, Temperature, Tint), each a track with tick marks, a colored position indicator, and a numeric readout at right.
+
+## Motion spec
+Pattern: sliding adjustment panel with dial scrubbing, gesture-driven.
+- The panel slides up over the toolbar (spring stiffness 320 damping 26), slider rows staggering in 40ms apart.
+- Dragging a dial scrubs the value 1:1 with tick-level granularity; the indicator snaps to ticks with light resistance, the readout updates live, and the video preview adjusts in real time.
+- Flicks carry momentum (300ms decel) and settle on the nearest tick (spring stiffness 500 damping 28).
+- Scrolling the panel vertically reveals the next group of sliders (smooth scroll, rows keep their horizontal scrub independently).
+- Tapping the toolbar again collapses the panel: it slides down (250ms, ease-in) and the toolbar icons fade back.
+
+## Calibration
+- Each dial&#x27;s zero sits at center with negative values left, positive right; the readout formats to two decimals.
+- Only one control moves at a time - touching a dial locks the panel&#x27;s vertical scroll.
+
+## Reduced motion
+Panel fades in and out.
+
+## Don&#x27;t miss
+- The panel pushes the toolbar out of the way rather than covering it - a coordinated vertical slide.
+- The video preview never relayouts when the panel opens; only the lower half changes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sliding adjustment panel with dial scrubbing, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/riveo-video-effects-slider-interaction">original interaction</a> by Riveo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Riveo's video adjustment panel - an editor panel of horizontal dial sliders (Contrast, Brightness, Saturation, and more) that slide up over the toolbar, scrub precisely with tick feedback, and collapse away with a smooth slide.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRiveo's dark editor: video preview on top with a \"Double tap to edit\" overlay and crop handles, transport controls, and a purple timeline track. Tapping Adjust Colors opens a panel above the bottom toolbar: rows of labeled horizontal dial sliders (Contrast, Brightness, Saturation, Exposure, Vibrance, Temperature, Tint), each a track with tick marks, a colored position indicator, and a numeric readout at right.\n\n## Motion spec\nPattern: sliding adjustment panel with dial scrubbing, gesture-driven.\n- The panel slides up over the toolbar (spring stiffness 320 damping 26), slider rows staggering in 40ms apart.\n- Dragging a dial scrubs the value 1:1 with tick-level granularity; the indicator snaps to ticks with light resistance, the readout updates live, and the video preview adjusts in real time.\n- Flicks carry momentum (300ms decel) and settle on the nearest tick (spring stiffness 500 damping 28).\n- Scrolling the panel vertically reveals the next group of sliders (smooth scroll, rows keep their horizontal scrub independently).\n- Tapping the toolbar again collapses the panel: it slides down (250ms, ease-in) and the toolbar icons fade back.\n\n## Calibration\n- Each dial's zero sits at center with negative values left, positive right; the readout formats to two decimals.\n- Only one control moves at a time - touching a dial locks the panel's vertical scroll.\n\n## Reduced motion\nPanel fades in and out.\n\n## Don't miss\n- The panel pushes the toolbar out of the way rather than covering it - a coordinated vertical slide.\n- The video preview never relayouts when the panel opens; only the lower half changes."</script>
+</body></html>

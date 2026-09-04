@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brilliant Swipe Levels Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Brilliant Swipe Levels Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/brilliant-swipe-levels-interaction"><b>Brilliant</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-swipe-levels-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-swipe-levels-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Brilliant&#x27;s course carousel - swiping horizontally between course pages (Solving Equations, Science Puzzles, Logic, Thinking in Code, Mathematical Thinking) re-themes the whole page: the 3D illustration, LEVEL badge, lesson list preview, page dots, and Start button all shift to each course&#x27;s accent color.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f4f3c99376d4fef315c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f4f3c99376d4fef315c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-brilliant-swipe-levels-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Brilliant&#x27;s course carousel - swiping horizontally between course pages (Solving Equations, Science Puzzles, Logic, Thinking in Code, Mathematical Thinking) re-themes the whole page: the 3D illustration, LEVEL badge, lesson list preview, page dots, and Start button all shift to each course&#x27;s accent color.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light screen: course title + LEVEL 1 badge, a centered 3D illustration (balance scale, lightbulb puzzle piece, magnifier with check, code editor blocks, easel), a lesson list preview (two rows with Koji-avatar icons), page dots, a full-width Start button, and the bottom tab bar.
+
+## Motion spec
+Pattern: horizontal carousel with full-page re-theme.
+- Swipe: pages track the finger 1:1 with neighbor pages peeking; release snaps to the nearest page (spring ~320/22, velocity-aware).
+- Illustration swap: the outgoing 3D illustration slides with the page while the incoming one scales 0.9 -&gt; 1 with a soft overshoot (spring ~300/16).
+- Re-theme: accent color (badge, list highlights, page dot, Start button fill) cross-fades to the new course&#x27;s hue (300ms) - blue, amber, purple, indigo variants.
+- Content: lesson rows and title cross-fade/slide (200ms) after the page settles.
+
+## Calibration
+- The re-theme follows the swipe in progress, not after - tint interpolates with drag position.
+- Keep the tab bar neutral; only the content area re-colors.
+
+## Reduced motion
+Swipe snaps without tracking (250ms ease-out); theme switches with a 200ms fade.
+
+## Don&#x27;t miss
+- Each course has its own 3D illustration style; they never share artwork.
+- The Start button color is the loudest accent - it must match the current course exactly.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal carousel with full-page re-theme.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/brilliant-swipe-levels-interaction">original interaction</a> by Brilliant. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Brilliant's course carousel - swiping horizontally between course pages (Solving Equations, Science Puzzles, Logic, Thinking in Code, Mathematical Thinking) re-themes the whole page: the 3D illustration, LEVEL badge, lesson list preview, page dots, and Start button all shift to each course's accent color.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen: course title + LEVEL 1 badge, a centered 3D illustration (balance scale, lightbulb puzzle piece, magnifier with check, code editor blocks, easel), a lesson list preview (two rows with Koji-avatar icons), page dots, a full-width Start button, and the bottom tab bar.\n\n## Motion spec\nPattern: horizontal carousel with full-page re-theme.\n- Swipe: pages track the finger 1:1 with neighbor pages peeking; release snaps to the nearest page (spring ~320/22, velocity-aware).\n- Illustration swap: the outgoing 3D illustration slides with the page while the incoming one scales 0.9 -> 1 with a soft overshoot (spring ~300/16).\n- Re-theme: accent color (badge, list highlights, page dot, Start button fill) cross-fades to the new course's hue (300ms) - blue, amber, purple, indigo variants.\n- Content: lesson rows and title cross-fade/slide (200ms) after the page settles.\n\n## Calibration\n- The re-theme follows the swipe in progress, not after - tint interpolates with drag position.\n- Keep the tab bar neutral; only the content area re-colors.\n\n## Reduced motion\nSwipe snaps without tracking (250ms ease-out); theme switches with a 200ms fade.\n\n## Don't miss\n- Each course has its own 3D illustration style; they never share artwork.\n- The Start button color is the loudest accent - it must match the current course exactly."</script>
+</body></html>

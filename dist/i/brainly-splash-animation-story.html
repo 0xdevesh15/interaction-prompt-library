@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brainly Splash Animation Story - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Brainly Splash Animation Story</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/brainly-splash-animation-story"><b>Brainly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brainly-splash-animation-story">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brainly-splash-animation-story">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Brainly&#x27;s onboarding carousel - auto-advancing pastel story pages starring the Ginny AI mascot, with sliding illustrations and a pinned join CTA.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8636c61d73e2622c61881/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8636c61d73e2622c61881/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-brainly-splash-animation-story.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Brainly&#x27;s onboarding carousel - auto-advancing pastel story pages starring the Ginny AI mascot, with sliding illustrations and a pinned join CTA.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A full-screen paged carousel over shifting pastel backgrounds (pink, lavender, light blue, cream, mint): &quot;Hi! I&#x27;m Ginny&quot; with the blue blob mascot, &quot;Scan to Solve anything instantly&quot; with a phone mock, &quot;Step-by-step expert solutions&quot; with book illustrations, &quot;The community is ready to help you&quot; with chat bubbles, and &quot;Personalized, live expert help&quot;. A purple &quot;JOIN FOR FREE&quot; button, LOG IN link, and page dots stay pinned at the bottom.
+
+## Motion spec
+Pattern: auto-advancing story carousel with per-page character animation.
+- Pages auto-advance every ~3s (horizontal slide, 350ms ease-out); swiping takes over 1:1 with snap (spring ~340/26) and resets the timer.
+- Background color crossfades to each page&#x27;s pastel (400ms) slightly ahead of the content slide.
+- Ginny mascot page: the mascot bobs (translateY +-6px, 1.6s sine loop) with its lightbulb flashing (scale 1 to 1.15 + glow, 800ms loop); speech-card illustrations slide in from alternating sides (300ms, ease-out).
+- Scan page: the phone mock rises (translateY 24px to 0, 350ms) while a scan frame sweeps over its screen (a line traveling top to bottom, 1.2s, repeating once).
+- Solutions page: book and tip cards pop in (scale 0.8 to 1, spring ~420/22, 80ms stagger).
+- Community page: chat bubbles alternate in from left/right (250ms each) like a conversation being typed.
+- Page dots: active dot stretches to a pill (width 8px to 20px, 200ms) and fills purple; it also acts as the auto-advance progress, filling over the 3s.
+
+## Calibration
+- Auto-advance pauses while the user touches the carousel and for 5s after a manual swipe.
+- Mascot bob and page timer run on independent clocks; bobbing never restarts on page change.
+
+## Reduced motion
+No auto-advance; pages crossfade on tap of dots.
+
+## Don&#x27;t miss
+- The CTA area never moves - only the story content pages.
+- Each page&#x27;s pastel is full-bleed; there are no card containers around the illustrations.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-advancing story carousel with per-page character animation.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/brainly-splash-animation-story">original interaction</a> by Brainly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Brainly's onboarding carousel - auto-advancing pastel story pages starring the Ginny AI mascot, with sliding illustrations and a pinned join CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA full-screen paged carousel over shifting pastel backgrounds (pink, lavender, light blue, cream, mint): \"Hi! I'm Ginny\" with the blue blob mascot, \"Scan to Solve anything instantly\" with a phone mock, \"Step-by-step expert solutions\" with book illustrations, \"The community is ready to help you\" with chat bubbles, and \"Personalized, live expert help\". A purple \"JOIN FOR FREE\" button, LOG IN link, and page dots stay pinned at the bottom.\n\n## Motion spec\nPattern: auto-advancing story carousel with per-page character animation.\n- Pages auto-advance every ~3s (horizontal slide, 350ms ease-out); swiping takes over 1:1 with snap (spring ~340/26) and resets the timer.\n- Background color crossfades to each page's pastel (400ms) slightly ahead of the content slide.\n- Ginny mascot page: the mascot bobs (translateY +-6px, 1.6s sine loop) with its lightbulb flashing (scale 1 to 1.15 + glow, 800ms loop); speech-card illustrations slide in from alternating sides (300ms, ease-out).\n- Scan page: the phone mock rises (translateY 24px to 0, 350ms) while a scan frame sweeps over its screen (a line traveling top to bottom, 1.2s, repeating once).\n- Solutions page: book and tip cards pop in (scale 0.8 to 1, spring ~420/22, 80ms stagger).\n- Community page: chat bubbles alternate in from left/right (250ms each) like a conversation being typed.\n- Page dots: active dot stretches to a pill (width 8px to 20px, 200ms) and fills purple; it also acts as the auto-advance progress, filling over the 3s.\n\n## Calibration\n- Auto-advance pauses while the user touches the carousel and for 5s after a manual swipe.\n- Mascot bob and page timer run on independent clocks; bobbing never restarts on page change.\n\n## Reduced motion\nNo auto-advance; pages crossfade on tap of dots.\n\n## Don't miss\n- The CTA area never moves - only the story content pages.\n- Each page's pastel is full-bleed; there are no card containers around the illustrations."</script>
+</body></html>

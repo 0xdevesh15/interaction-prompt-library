@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Letter Flow Drag Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Letter Flow Drag Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/letter-flow-drag-interaction"><b>Letter</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/letter-flow-drag-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/letter-flow-drag-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Letter Flow&#x27;s word puzzle - letters sit on dark rounded tiles; dragging a tile makes it stretch and squish like liquid, neighbors slide aside to make room, the background hue shifts with progress, and solving the word (GREEN) triggers a confetti celebration.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f4524b6b5c1015ac111686/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f4524b6b5c1015ac111686/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-letter-flow-drag-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Letter Flow&#x27;s word puzzle - letters sit on dark rounded tiles; dragging a tile makes it stretch and squish like liquid, neighbors slide aside to make room, the background hue shifts with progress, and solving the word (GREEN) triggers a confetti celebration.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Landscape game screen: &quot;Level 1: Guess the Color.&quot; top-left, home and options buttons top-right, and a centered row of dark pill-shaped letter tiles (R G E N E scrambled) with the hint &quot;Drag letters to rearrange them.&quot;. The background gradient shifts hue (violet -&gt; rose -&gt; green) as the arrangement nears the solution.
+
+## Motion spec
+Pattern: liquid drag-and-drop sorting with reactive background.
+- Pickup: the grabbed tile lifts (scale 1.08, shadow deepens, 120ms) and follows the finger 1:1 with a slight lag-stretch in the drag direction (squash-and-stretch, max 8%).
+- Reflow: tiles between old and new positions slide aside with springs (~380/22, 250ms) as the dragged tile passes their centers.
+- Drop: the tile settles into its slot with a soft bounce (scale 1.05 -&gt; 1, 180ms); the whole row does a tiny settle jiggle.
+- Reactive background: the gradient hue interpolates toward green as correctly placed letters increase (continuous, mapped to progress).
+- Solve: when the word completes, tiles do a sequential jump (60ms stagger, spring ~360/16) and confetti bursts from the row (50+ pieces, gravity + flutter, ~1.5s).
+
+## Calibration
+- The dragged tile renders above siblings; z-order restores on drop.
+- Background hue is progress-driven, not time-driven - undoing a letter cools it back down.
+
+## Reduced motion
+Tiles swap positions with 150ms fades; solve state fades in without confetti.
+
+## Don&#x27;t miss
+- Tiles are squishy throughout the drag - rigid movement kills the liquid feel.
+- The level label and hint stay fixed; only tiles and background react.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">liquid drag-and-drop sorting with reactive background.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/letter-flow-drag-interaction">original interaction</a> by Letter. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Letter Flow's word puzzle - letters sit on dark rounded tiles; dragging a tile makes it stretch and squish like liquid, neighbors slide aside to make room, the background hue shifts with progress, and solving the word (GREEN) triggers a confetti celebration.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLandscape game screen: \"Level 1: Guess the Color.\" top-left, home and options buttons top-right, and a centered row of dark pill-shaped letter tiles (R G E N E scrambled) with the hint \"Drag letters to rearrange them.\". The background gradient shifts hue (violet -> rose -> green) as the arrangement nears the solution.\n\n## Motion spec\nPattern: liquid drag-and-drop sorting with reactive background.\n- Pickup: the grabbed tile lifts (scale 1.08, shadow deepens, 120ms) and follows the finger 1:1 with a slight lag-stretch in the drag direction (squash-and-stretch, max 8%).\n- Reflow: tiles between old and new positions slide aside with springs (~380/22, 250ms) as the dragged tile passes their centers.\n- Drop: the tile settles into its slot with a soft bounce (scale 1.05 -> 1, 180ms); the whole row does a tiny settle jiggle.\n- Reactive background: the gradient hue interpolates toward green as correctly placed letters increase (continuous, mapped to progress).\n- Solve: when the word completes, tiles do a sequential jump (60ms stagger, spring ~360/16) and confetti bursts from the row (50+ pieces, gravity + flutter, ~1.5s).\n\n## Calibration\n- The dragged tile renders above siblings; z-order restores on drop.\n- Background hue is progress-driven, not time-driven - undoing a letter cools it back down.\n\n## Reduced motion\nTiles swap positions with 150ms fades; solve state fades in without confetti.\n\n## Don't miss\n- Tiles are squishy throughout the drag - rigid movement kills the liquid feel.\n- The level label and hint stay fixed; only tiles and background react."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Boring Vibes Stops at Timer Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Not Boring Vibes Stops at Timer Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/not-boring-vibes-stops-at-timer-slider"><b>Not Boring</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-vibes-stops-at-timer-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-vibes-stops-at-timer-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Not Boring Vibes&#x27; sleep timer - a &quot;SET A TIMER&quot; sheet rises over the cloudscape with a bold vertical wheel picker of durations, and dismisses with a swift downward slide, leaving a countdown chip on the sleep button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8e21ea093f143602fc91d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8e21ea093f143602fc91d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-not-boring-vibes-stops-at-timer-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Not Boring Vibes&#x27; sleep timer - a &quot;SET A TIMER&quot; sheet rises over the cloudscape with a bold vertical wheel picker of durations, and dismisses with a swift downward slide, leaving a countdown chip on the sleep button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The night cloudscape. The sheet: black, covering most of the screen, cloudscape visible as a strip at top; condensed &quot;SET A TIMER&quot; title with the line &quot;Vibes stop playing when the timer ends&quot;; a vertical wheel picker (1 MIN through 3 HR in mixed units, center value large and white, neighbors dimmed); an outlined &quot;SET TIMER&quot; pill at the bottom.
+
+## Motion spec
+Pattern: rising sheet with inertial wheel picker.
+- Tap the timer control: the sheet slides up (spring stiffness ~300, damping ~30), the cloudscape compressing to a top strip.
+- The wheel spins with vertical drag, inertial on release, snapping to the nearest value (spring stiffness ~400, damping ~28); the settled value scales up and whitens, neighbors dimming to ~30% opacity with a slight blur illusion via size.
+- Each snap tick fires a subtle haptic-style pulse.
+- Tap SET TIMER: the button flashes (100ms), the sheet slides down fast (250ms, ease-in), and the sleep button gains a small countdown chip (e.g. &quot;00:44&quot;) that fades in (200ms).
+- Reopening the sheet restores the wheel at the active value.
+
+## Calibration
+- Wheel values span minutes into hours with mixed formatting (&quot;25 MIN&quot;, &quot;1 HR&quot;, &quot;2HR 30MIN&quot;) - keep the unit typography compact.
+- The dismiss is faster than the entrance; setting a timer should feel like flicking something away.
+
+## Reduced motion
+Sheet fades in and out; wheel snaps without inertia.
+
+## Don&#x27;t miss
+- The selected value is dramatically larger and brighter than its neighbors - the wheel reads at arm&#x27;s length.
+- The countdown chip appears on the sleep button itself, not as a separate banner.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rising sheet with inertial wheel picker.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/not-boring-vibes-stops-at-timer-slider">original interaction</a> by Not Boring. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Not Boring Vibes' sleep timer - a \"SET A TIMER\" sheet rises over the cloudscape with a bold vertical wheel picker of durations, and dismisses with a swift downward slide, leaving a countdown chip on the sleep button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe night cloudscape. The sheet: black, covering most of the screen, cloudscape visible as a strip at top; condensed \"SET A TIMER\" title with the line \"Vibes stop playing when the timer ends\"; a vertical wheel picker (1 MIN through 3 HR in mixed units, center value large and white, neighbors dimmed); an outlined \"SET TIMER\" pill at the bottom.\n\n## Motion spec\nPattern: rising sheet with inertial wheel picker.\n- Tap the timer control: the sheet slides up (spring stiffness ~300, damping ~30), the cloudscape compressing to a top strip.\n- The wheel spins with vertical drag, inertial on release, snapping to the nearest value (spring stiffness ~400, damping ~28); the settled value scales up and whitens, neighbors dimming to ~30% opacity with a slight blur illusion via size.\n- Each snap tick fires a subtle haptic-style pulse.\n- Tap SET TIMER: the button flashes (100ms), the sheet slides down fast (250ms, ease-in), and the sleep button gains a small countdown chip (e.g. \"00:44\") that fades in (200ms).\n- Reopening the sheet restores the wheel at the active value.\n\n## Calibration\n- Wheel values span minutes into hours with mixed formatting (\"25 MIN\", \"1 HR\", \"2HR 30MIN\") - keep the unit typography compact.\n- The dismiss is faster than the entrance; setting a timer should feel like flicking something away.\n\n## Reduced motion\nSheet fades in and out; wheel snaps without inertia.\n\n## Don't miss\n- The selected value is dramatically larger and brighter than its neighbors - the wheel reads at arm's length.\n- The countdown chip appears on the sleep button itself, not as a separate banner."</script>
+</body></html>

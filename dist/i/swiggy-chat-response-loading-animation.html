@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Chat Response Loading Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Chat Response Loading Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-chat-response-loading-animation"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-chat-response-loading-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-chat-response-loading-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Swiggy Q&#x27;s response loading - while the answer cooks, the gradient Q ring spins at the top and a line of playful kitchen status text cycles below the user&#x27;s question bubble.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a6e2653946cb0007d2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a6e2653946cb0007d2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-chat-response-loading-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Swiggy Q&#x27;s response loading - while the answer cooks, the gradient Q ring spins at the top and a line of playful kitchen status text cycles below the user&#x27;s question bubble.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Q chat sheet, dark plum: back button, the Q gradient ring top-center, the user&#x27;s question in a pill bubble (&quot;What type is RCB Bar &amp; Cafe?&quot;), and a small italic grey status line underneath where the answer will land. The keyboard has just dismissed.
+
+## Motion spec
+Pattern: rotating status phrases under a spinning brand ring.
+- The Q ring&#x27;s gradient rotates continuously (2.4s revolution) and the ring breathes (scale 1 -&gt; 1.05 -&gt; 1, 2.4s).
+- The status line cycles through kitchen phrases - &quot;Sprinkling a few ideas...&quot;, &quot;Cooking up something...&quot;, &quot;Cooking this just right...&quot;, &quot;Just adding final garnish...&quot; - each holding ~1.4s, swapping with a vertical roll (old text rolls up and fades, new rolls in from below, 250ms).
+- The user&#x27;s bubble does a one-time settle when sent (scale 0.96 -&gt; 1, 200ms) and stays pinned.
+- When the answer arrives, the status line fades out (150ms) and the answer bubble types in; the ring slows to rest over 600ms.
+
+## Calibration
+- Status text is small, italic, 50% opacity - a whisper, not a headline.
+- Phrase order always moves forward through the kitchen metaphor; no repeats until the list is exhausted.
+
+## Reduced motion
+Ring static; status phrases crossfade (300ms).
+
+## Don&#x27;t miss
+- The ellipsis animates (dots cycle 1-2-3, 400ms per step) on every phrase.
+- The ring never stops mid-gradient-rotation when the answer lands - it completes its current revolution before easing out.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rotating status phrases under a spinning brand ring.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-chat-response-loading-animation">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Swiggy Q's response loading - while the answer cooks, the gradient Q ring spins at the top and a line of playful kitchen status text cycles below the user's question bubble.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nQ chat sheet, dark plum: back button, the Q gradient ring top-center, the user's question in a pill bubble (\"What type is RCB Bar & Cafe?\"), and a small italic grey status line underneath where the answer will land. The keyboard has just dismissed.\n\n## Motion spec\nPattern: rotating status phrases under a spinning brand ring.\n- The Q ring's gradient rotates continuously (2.4s revolution) and the ring breathes (scale 1 -> 1.05 -> 1, 2.4s).\n- The status line cycles through kitchen phrases - \"Sprinkling a few ideas...\", \"Cooking up something...\", \"Cooking this just right...\", \"Just adding final garnish...\" - each holding ~1.4s, swapping with a vertical roll (old text rolls up and fades, new rolls in from below, 250ms).\n- The user's bubble does a one-time settle when sent (scale 0.96 -> 1, 200ms) and stays pinned.\n- When the answer arrives, the status line fades out (150ms) and the answer bubble types in; the ring slows to rest over 600ms.\n\n## Calibration\n- Status text is small, italic, 50% opacity - a whisper, not a headline.\n- Phrase order always moves forward through the kitchen metaphor; no repeats until the list is exhausted.\n\n## Reduced motion\nRing static; status phrases crossfade (300ms).\n\n## Don't miss\n- The ellipsis animates (dots cycle 1-2-3, 400ms per step) on every phrase.\n- The ring never stops mid-gradient-rotation when the answer lands - it completes its current revolution before easing out."</script>
+</body></html>

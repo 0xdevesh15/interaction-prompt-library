@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Custom Amount Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Custom Amount Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-custom-amount-slider-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-custom-amount-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-custom-amount-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s custom amount slider - dragging along a horizontal ruler of tick marks scrubs the payment amount (₹1,000 up to ₹2,00,000 and back), the counter updating live with tick feedback and rupee formatting.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68cfc80bd135bd85920/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68cfc80bd135bd85920/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-custom-amount-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s custom amount slider - dragging along a horizontal ruler of tick marks scrubs the payment amount (₹1,000 up to ₹2,00,000 and back), the counter updating live with tick feedback and rupee formatting.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White payment sheet: CRED Bank header card, &quot;choose autopay preference&quot; section with radio options (custom amount selected), then a large centered amount readout (₹1,000 ... ₹2,00,000), a horizontal ruler strip of vertical tick marks (minor/major heights) beneath it, a &quot;before due date&quot; reminder row, and an Apply button with stepper chips.
+
+## Motion spec
+Pattern: ruler scrub slider with live counter, continuous while dragging.
+- Scrub: dragging horizontally moves the ruler under a fixed center marker 1:1 with the finger; ticks passing the center snap softly (magnetism within 4pt) with a tick haptic per major step.
+- Counter: the amount updates live, rupee-formatted (Indian digit grouping: ₹1,62,500), digits rolling vertically on change (120ms).
+- Fling: release throws the ruler with decaying momentum (friction ~0.94) until it settles centered on the nearest tick (spring ~380/26, ~300ms).
+- Range feel: at the min/max ends the ruler resists with a rubber-band stretch (0.35x past the edge) and springs back.
+
+## Calibration
+- Tick density maps to value steps; major ticks at round thousands with taller strokes.
+- The counter never lags the ruler - value derives from ruler position, not a timer.
+
+## Reduced motion
+Ruler moves without momentum; counter cross-fades (100ms).
+
+## Don&#x27;t miss
+- Indian digit grouping throughout (₹2,00,000, not ₹200,000).
+- The ruler readout anchors at the top center - ticks move, the marker stays.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ruler scrub slider with live counter, continuous while dragging.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-custom-amount-slider-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's custom amount slider - dragging along a horizontal ruler of tick marks scrubs the payment amount (\u20b91,000 up to \u20b92,00,000 and back), the counter updating live with tick feedback and rupee formatting.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite payment sheet: CRED Bank header card, \"choose autopay preference\" section with radio options (custom amount selected), then a large centered amount readout (\u20b91,000 ... \u20b92,00,000), a horizontal ruler strip of vertical tick marks (minor/major heights) beneath it, a \"before due date\" reminder row, and an Apply button with stepper chips.\n\n## Motion spec\nPattern: ruler scrub slider with live counter, continuous while dragging.\n- Scrub: dragging horizontally moves the ruler under a fixed center marker 1:1 with the finger; ticks passing the center snap softly (magnetism within 4pt) with a tick haptic per major step.\n- Counter: the amount updates live, rupee-formatted (Indian digit grouping: \u20b91,62,500), digits rolling vertically on change (120ms).\n- Fling: release throws the ruler with decaying momentum (friction ~0.94) until it settles centered on the nearest tick (spring ~380/26, ~300ms).\n- Range feel: at the min/max ends the ruler resists with a rubber-band stretch (0.35x past the edge) and springs back.\n\n## Calibration\n- Tick density maps to value steps; major ticks at round thousands with taller strokes.\n- The counter never lags the ruler - value derives from ruler position, not a timer.\n\n## Reduced motion\nRuler moves without momentum; counter cross-fades (100ms).\n\n## Don't miss\n- Indian digit grouping throughout (\u20b92,00,000, not \u20b9200,000).\n- The ruler readout anchors at the top center - ticks move, the marker stays."</script>
+</body></html>

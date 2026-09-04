@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Heart Rate Pulse Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Heart Rate Pulse Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-heart-rate-pulse-animation"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-heart-rate-pulse-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-heart-rate-pulse-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the Apple Watch Heart Rate measuring state - a dark red heart beats in the center, then flushes bright red as concentric heart-shaped waves pulse outward from it while the state switches from &quot;Measuring... -- BPM&quot; to &quot;Current 71 BPM&quot; with a live-updating value.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712ac5e350c08ef72ea7cf1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712ac5e350c08ef72ea7cf1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-heart-rate-pulse-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the Apple Watch Heart Rate measuring state - a dark red heart beats in the center, then flushes bright red as concentric heart-shaped waves pulse outward from it while the state switches from &quot;Measuring... -- BPM&quot; to &quot;Current 71 BPM&quot; with a live-updating value.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Apple Watch Heart Rate app: time top-right, faint tick column right edge, centered heart, status text below (&quot;Measuring...&quot; -&gt; &quot;Current&quot;), BPM value with the last reading underneath (&quot;61 BPM, 1m ago&quot;).
+
+## Motion spec
+Pattern: heartbeat-synced pulse waves.
+- Measuring: the heart is dark red and beats gently (scale 1 -&gt; 1.08 -&gt; 1, double-thump lub-dub per cycle, ~1s period); &quot;-- BPM&quot; shows below.
+- Lock-on: the heart flushes bright red (color tween 300ms) as the label switches to &quot;Current&quot; and the BPM value fades in.
+- Each beat emits a heart-shaped (not circular) wave that expands from the heart&#x27;s edge to beyond the screen (scale 1 -&gt; 3, fade to 0, ~1.2s, ease-out); waves spawn per beat, layering 2-3 deep.
+- BPM value updates with readings (crossfade 200ms); the wave rate follows the measured rate.
+
+## Calibration
+- The waves are heart-shaped outlines tinted red, blurred slightly at large scale - they read as ripples of the heart itself.
+- The lub-dub is asymmetric: first thump stronger (1.08), second softer (1.04).
+
+## Reduced motion
+Heart glows steady; BPM fades in; no expanding waves.
+
+## Don&#x27;t miss
+- The state change (dark/measuring -&gt; bright/current) is the core moment - tie it to the first reading, not a timer.
+- The previous-reading line (&quot;61 BPM, 1m ago&quot;) never animates.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">heartbeat-synced pulse waves.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-heart-rate-pulse-animation">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the Apple Watch Heart Rate measuring state - a dark red heart beats in the center, then flushes bright red as concentric heart-shaped waves pulse outward from it while the state switches from \"Measuring... -- BPM\" to \"Current 71 BPM\" with a live-updating value.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nApple Watch Heart Rate app: time top-right, faint tick column right edge, centered heart, status text below (\"Measuring...\" -> \"Current\"), BPM value with the last reading underneath (\"61 BPM, 1m ago\").\n\n## Motion spec\nPattern: heartbeat-synced pulse waves.\n- Measuring: the heart is dark red and beats gently (scale 1 -> 1.08 -> 1, double-thump lub-dub per cycle, ~1s period); \"-- BPM\" shows below.\n- Lock-on: the heart flushes bright red (color tween 300ms) as the label switches to \"Current\" and the BPM value fades in.\n- Each beat emits a heart-shaped (not circular) wave that expands from the heart's edge to beyond the screen (scale 1 -> 3, fade to 0, ~1.2s, ease-out); waves spawn per beat, layering 2-3 deep.\n- BPM value updates with readings (crossfade 200ms); the wave rate follows the measured rate.\n\n## Calibration\n- The waves are heart-shaped outlines tinted red, blurred slightly at large scale - they read as ripples of the heart itself.\n- The lub-dub is asymmetric: first thump stronger (1.08), second softer (1.04).\n\n## Reduced motion\nHeart glows steady; BPM fades in; no expanding waves.\n\n## Don't miss\n- The state change (dark/measuring -> bright/current) is the core moment - tie it to the first reading, not a timer.\n- The previous-reading line (\"61 BPM, 1m ago\") never animates."</script>
+</body></html>

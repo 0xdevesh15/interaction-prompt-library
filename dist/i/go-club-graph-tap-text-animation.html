@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GO Club Graph Tap Text Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>GO Club Graph Tap Text Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/go-club-graph-tap-text-animation"><b>Go</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/go-club-graph-tap-text-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/go-club-graph-tap-text-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: GO Club&#x27;s stats dashboard - tapping a bar in the steps bar chart highlights it and rolls the stats below (steps, distance, kcal, streak) to the day&#x27;s values with a motion-blurred vertical odometer transition.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb408f8d12020de77d45/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb408f8d12020de77d45/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-go-club-graph-tap-text-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: GO Club&#x27;s stats dashboard - tapping a bar in the steps bar chart highlights it and rolls the stats below (steps, distance, kcal, streak) to the day&#x27;s values with a motion-blurred vertical odometer transition.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark fitness dashboard: top half is a vivid blue bar chart (a week+ of step bars on a gradient panel); bottom half is the stats block - two toggle icons, a huge step count (&quot;2,500 Steps&quot;), a row (&quot;1.68km&quot;, &quot;579kcal&quot;, &quot;4&quot; with icons), and a Steps pill button.
+
+## Motion spec
+Pattern: odometer stat swap on selection, ~500ms.
+- Bar tap: the tapped bar brightens to near-white and lifts slightly (scale 1 -&gt; 1.05 on Y, 150ms); the previously selected bar returns to default.
+- The step count rolls: digits travel vertically like an odometer with a heavy motion blur during travel (translateY + blur, 350ms, ease-out), landing sharp on the new value.
+- Distance, kcal, and streak values roll the same way, staggered 40ms after the main count.
+- The chart&#x27;s other bars and all chrome stay static.
+
+## Calibration
+- Blur lives only during digit travel; text must be crisp at rest in both states.
+- Rolling direction reflects value change (up for increase, down for decrease) when possible - a wrong-direction roll feels arbitrary.
+
+## Reduced motion
+Values crossfade (200ms); bar highlight unchanged.
+
+## Don&#x27;t miss
+- The highlight and the roll are simultaneous - highlighting first and rolling later reads as two separate responses.
+- All four stats roll together; a lone count updating while the rest jump-cut breaks the instrument feel.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">odometer stat swap on selection, ~500ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/go-club-graph-tap-text-animation">original interaction</a> by Go. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: GO Club's stats dashboard - tapping a bar in the steps bar chart highlights it and rolls the stats below (steps, distance, kcal, streak) to the day's values with a motion-blurred vertical odometer transition.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark fitness dashboard: top half is a vivid blue bar chart (a week+ of step bars on a gradient panel); bottom half is the stats block - two toggle icons, a huge step count (\"2,500 Steps\"), a row (\"1.68km\", \"579kcal\", \"4\" with icons), and a Steps pill button.\n\n## Motion spec\nPattern: odometer stat swap on selection, ~500ms.\n- Bar tap: the tapped bar brightens to near-white and lifts slightly (scale 1 -> 1.05 on Y, 150ms); the previously selected bar returns to default.\n- The step count rolls: digits travel vertically like an odometer with a heavy motion blur during travel (translateY + blur, 350ms, ease-out), landing sharp on the new value.\n- Distance, kcal, and streak values roll the same way, staggered 40ms after the main count.\n- The chart's other bars and all chrome stay static.\n\n## Calibration\n- Blur lives only during digit travel; text must be crisp at rest in both states.\n- Rolling direction reflects value change (up for increase, down for decrease) when possible - a wrong-direction roll feels arbitrary.\n\n## Reduced motion\nValues crossfade (200ms); bar highlight unchanged.\n\n## Don't miss\n- The highlight and the roll are simultaneous - highlighting first and rolling later reads as two separate responses.\n- All four stats roll together; a lone count updating while the rest jump-cut breaks the instrument feel."</script>
+</body></html>

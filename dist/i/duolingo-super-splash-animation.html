@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Super Splash Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Super Splash Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-super-splash-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-super-splash-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-super-splash-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s Super splash - on a deep purple gradient, a flat white owl silhouette morphs and springs into the glowing gradient-filled Super owl, with small sparkles popping around it, before the splash fades into the app.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687498c80e3615485c49b319/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687498c80e3615485c49b319/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-super-splash-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s Super splash - on a deep purple gradient, a flat white owl silhouette morphs and springs into the glowing gradient-filled Super owl, with small sparkles popping around it, before the splash fades into the app.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen dark purple gradient with the SUPER duolingo wordmark low-center. Center stage: the owl mark, starting as a flat white silhouette (first shown as the classic green owl on green in the brand flash, then cut to the purple stage). End state: the Super owl fully rendered - gradient body (green to blue to purple), glowing edges, pink feet.
+
+## Motion spec
+Pattern: silhouette-to-mascot morph reveal.
+- The white silhouette scales up slightly (0.9 -&gt; 1.0, 250ms ease-out) with a soft white glow.
+- The morph: the silhouette ripples (edge wobble, 200ms) then fills with the gradient body from the center outward (400ms, ease-in-out), the fill boundary glowing.
+- On fill completion the owl springs (scale 1.0 -&gt; 1.12 -&gt; 1.0, spring ~340/16) and two sparkles pop beside the head (scale 0 -&gt; 1 -&gt; 0, 300ms, staggered 120ms).
+- The owl&#x27;s eyes blink once (lids close 80ms, open 80ms) 300ms after the spring.
+- Wordmark fades in (200ms) with the fill; exit: whole splash crossfades to the app home (350ms).
+
+## Calibration
+- The fill is a center-outward gradient reveal, not a color crossfade - the shape visibly becomes the mascot.
+- One blink, one spring; the mascot idles still afterward.
+
+## Reduced motion
+Silhouette crossfades to the full mascot over 250ms; no spring, sparkles, or blink.
+
+## Don&#x27;t miss
+- The glow travels with the fill boundary during the morph.
+- The wordmark never moves - only the owl transforms.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">silhouette-to-mascot morph reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-super-splash-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's Super splash - on a deep purple gradient, a flat white owl silhouette morphs and springs into the glowing gradient-filled Super owl, with small sparkles popping around it, before the splash fades into the app.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen dark purple gradient with the SUPER duolingo wordmark low-center. Center stage: the owl mark, starting as a flat white silhouette (first shown as the classic green owl on green in the brand flash, then cut to the purple stage). End state: the Super owl fully rendered - gradient body (green to blue to purple), glowing edges, pink feet.\n\n## Motion spec\nPattern: silhouette-to-mascot morph reveal.\n- The white silhouette scales up slightly (0.9 -> 1.0, 250ms ease-out) with a soft white glow.\n- The morph: the silhouette ripples (edge wobble, 200ms) then fills with the gradient body from the center outward (400ms, ease-in-out), the fill boundary glowing.\n- On fill completion the owl springs (scale 1.0 -> 1.12 -> 1.0, spring ~340/16) and two sparkles pop beside the head (scale 0 -> 1 -> 0, 300ms, staggered 120ms).\n- The owl's eyes blink once (lids close 80ms, open 80ms) 300ms after the spring.\n- Wordmark fades in (200ms) with the fill; exit: whole splash crossfades to the app home (350ms).\n\n## Calibration\n- The fill is a center-outward gradient reveal, not a color crossfade - the shape visibly becomes the mascot.\n- One blink, one spring; the mascot idles still afterward.\n\n## Reduced motion\nSilhouette crossfades to the full mascot over 250ms; no spring, sparkles, or blink.\n\n## Don't miss\n- The glow travels with the fill boundary during the morph.\n- The wordmark never moves - only the owl transforms."</script>
+</body></html>

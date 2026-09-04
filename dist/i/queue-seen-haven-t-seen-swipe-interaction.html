@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queue Seen Haven&#x27;t Seen Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Queue Seen Haven&#x27;t Seen Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/queue-seen-haven-t-seen-swipe-interaction"><b>Queue</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-seen-haven-t-seen-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-seen-haven-t-seen-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Queue&#x27;s seen-it swipe game - flick poster cards right (&quot;Seen it&quot;) or left (&quot;Haven&#x27;t seen&quot;) against a countdown ring; seen titles pile up at bottom-right, and at zero a confetti recap lists what you added.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e32b33c1c8577c04cc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e32b33c1c8577c04cc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-queue-seen-haven-t-seen-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Queue&#x27;s seen-it swipe game - flick poster cards right (&quot;Seen it&quot;) or left (&quot;Haven&#x27;t seen&quot;) against a countdown ring; seen titles pile up at bottom-right, and at zero a confetti recap lists what you added.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen: top bar with &quot;&lt; Haven&#x27;t seen&quot; and &quot;Seen it &gt;&quot;, a centered poster card with title and year, a bottom-left circular countdown (&quot;25&quot; down to &quot;0&quot;) with &quot;Keep swiping!&quot; label, and a bottom-right pile where seen posters collect. End: &quot;4 Titles Added!&quot; recap with confetti, added-title rows with Review buttons, and a pink Continue button.
+
+## Motion spec
+Pattern: physics card-flick with collection pile, gesture-driven.
+- Drag: the card follows 1:1, rotating with horizontal velocity (+-15deg); edge labels glow as you near a threshold.
+- Flick: release past threshold launches the card off-screen (flick velocity, 300ms); a right flick&#x27;s poster shrinks and arcs into the bottom-right pile (400ms, ease-in) stacking with slight random rotation (+-8deg).
+- Deal: the next card scales up from the deck (0.95 -&gt; 1, 200ms) as the previous exits; the countdown ticks each card.
+- Finale: at zero the last card exits, confetti falls (2s, gravity + flutter), and the recap sheet slides up (spring ~340/24) with rows cascading (50ms stagger).
+
+## Calibration
+- The pile shows the last ~3 seen posters fanned; count beyond that keeps stacking underneath.
+- Timer counts cards, not seconds.
+
+## Reduced motion
+Cards slide off without rotation; confetti replaced by a static sparkle; recap fades in.
+
+## Don&#x27;t miss
+- The arc into the pile is what makes right-swipes feel collected - keep it distinct from the left exit.
+- The recap numbers must match the seen pile exactly.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">physics card-flick with collection pile, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/queue-seen-haven-t-seen-swipe-interaction">original interaction</a> by Queue. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Queue's seen-it swipe game - flick poster cards right (\"Seen it\") or left (\"Haven't seen\") against a countdown ring; seen titles pile up at bottom-right, and at zero a confetti recap lists what you added.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen: top bar with \"< Haven't seen\" and \"Seen it >\", a centered poster card with title and year, a bottom-left circular countdown (\"25\" down to \"0\") with \"Keep swiping!\" label, and a bottom-right pile where seen posters collect. End: \"4 Titles Added!\" recap with confetti, added-title rows with Review buttons, and a pink Continue button.\n\n## Motion spec\nPattern: physics card-flick with collection pile, gesture-driven.\n- Drag: the card follows 1:1, rotating with horizontal velocity (+-15deg); edge labels glow as you near a threshold.\n- Flick: release past threshold launches the card off-screen (flick velocity, 300ms); a right flick's poster shrinks and arcs into the bottom-right pile (400ms, ease-in) stacking with slight random rotation (+-8deg).\n- Deal: the next card scales up from the deck (0.95 -> 1, 200ms) as the previous exits; the countdown ticks each card.\n- Finale: at zero the last card exits, confetti falls (2s, gravity + flutter), and the recap sheet slides up (spring ~340/24) with rows cascading (50ms stagger).\n\n## Calibration\n- The pile shows the last ~3 seen posters fanned; count beyond that keeps stacking underneath.\n- Timer counts cards, not seconds.\n\n## Reduced motion\nCards slide off without rotation; confetti replaced by a static sparkle; recap fades in.\n\n## Don't miss\n- The arc into the pile is what makes right-swipes feel collected - keep it distinct from the left exit.\n- The recap numbers must match the seen pile exactly."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>‎Urban Company Campaign Banner Text Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>‎Urban Company Campaign Banner Text Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/urban-company-campaign-banner-text-animation"><b>Urban</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/urban-company-campaign-banner-text-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/urban-company-campaign-banner-text-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Urban Company&#x27;s campaign banner - the headline cycles between offers, an icon drops between the words and pushes them apart, and an &quot;APP EXCLUSIVE&quot; ticker marquees underneath without stopping.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a6e2653946cb0007dd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a6e2653946cb0007dd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-urban-company-campaign-banner-text-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Urban Company&#x27;s campaign banner - the headline cycles between offers, an icon drops between the words and pushes them apart, and an &quot;APP EXCLUSIVE&quot; ticker marquees underneath without stopping.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Urban Company product page (Native M2 water purifier): orange gradient campaign banner under the header - big serif headline (&quot;FREE GIFTS&quot; / &quot;PRODUCT EXCHANGE&quot;), subline (&quot;Worth Rs 1,799 on all orders&quot; / &quot;Get up to Rs 1,200 off&quot;), a dashed ticker strip repeating &quot;UC APP EXCLUSIVE&quot; below; the product carousel (&quot;Same-day delivery&quot; section) sits under the banner, static.
+
+## Motion spec
+Pattern: cycling offer headlines with icon-driven word split.
+- The ticker scrolls left continuously (linear, ~40px/s), seamless loop, never pauses.
+- Every ~2.5s the headline swaps: current words split apart (translateX +/-20px, fade out, 200ms) as the new words arrive from the center (reverse, 200ms).
+- On the &quot;FREE GIFTS&quot; beat, a small gift-box icon drops between FREE and GIFTS (translateY -16 -&gt; 0, spring ~350/15 with a bounce) and the two words spring apart to make room (translateX to their slots, 250ms).
+- The subline crossfades (200ms) a beat after the headline lands.
+- The orange gradient background shifts hue subtly across cycles (orange to deep red and back, 5s).
+
+## Calibration
+- The banner is a single contained unit - the icon drop never overflows its rounded bounds.
+- Serif display type, generous tracking; the icon matches the type&#x27;s cap height.
+
+## Reduced motion
+Headlines crossfade (250ms); icon fades in place; ticker scrolls at half speed or holds static.
+
+## Don&#x27;t miss
+- The word split is symmetric - both words move equally, so the headline stays optically centered.
+- The ticker text is clipped to its strip; no bleed into the subline above.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cycling offer headlines with icon-driven word split.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/urban-company-campaign-banner-text-animation">original interaction</a> by Urban. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Urban Company's campaign banner - the headline cycles between offers, an icon drops between the words and pushes them apart, and an \"APP EXCLUSIVE\" ticker marquees underneath without stopping.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nUrban Company product page (Native M2 water purifier): orange gradient campaign banner under the header - big serif headline (\"FREE GIFTS\" / \"PRODUCT EXCHANGE\"), subline (\"Worth Rs 1,799 on all orders\" / \"Get up to Rs 1,200 off\"), a dashed ticker strip repeating \"UC APP EXCLUSIVE\" below; the product carousel (\"Same-day delivery\" section) sits under the banner, static.\n\n## Motion spec\nPattern: cycling offer headlines with icon-driven word split.\n- The ticker scrolls left continuously (linear, ~40px/s), seamless loop, never pauses.\n- Every ~2.5s the headline swaps: current words split apart (translateX +/-20px, fade out, 200ms) as the new words arrive from the center (reverse, 200ms).\n- On the \"FREE GIFTS\" beat, a small gift-box icon drops between FREE and GIFTS (translateY -16 -> 0, spring ~350/15 with a bounce) and the two words spring apart to make room (translateX to their slots, 250ms).\n- The subline crossfades (200ms) a beat after the headline lands.\n- The orange gradient background shifts hue subtly across cycles (orange to deep red and back, 5s).\n\n## Calibration\n- The banner is a single contained unit - the icon drop never overflows its rounded bounds.\n- Serif display type, generous tracking; the icon matches the type's cap height.\n\n## Reduced motion\nHeadlines crossfade (250ms); icon fades in place; ticker scrolls at half speed or holds static.\n\n## Don't miss\n- The word split is symmetric - both words move equally, so the headline stays optically centered.\n- The ticker text is clipped to its strip; no bleed into the subline above."</script>
+</body></html>

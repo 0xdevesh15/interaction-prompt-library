@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queue Podcast Timeline Scroll - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Queue Podcast Timeline Scroll</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/queue-podcast-timeline-scroll"><b>Queue</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-podcast-timeline-scroll">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-podcast-timeline-scroll">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Queue&#x27;s podcast timeline - a horizontal year scrubber at the top snaps to a year, and the rich article below (&quot;It&#x27;s called Podcasting&quot;) slides up and fades in with its images, quotes, and source cards.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734e7a9ba34cfe064c862b1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734e7a9ba34cfe064c862b1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-queue-podcast-timeline-scroll.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Queue&#x27;s podcast timeline - a horizontal year scrubber at the top snaps to a year, and the rich article below (&quot;It&#x27;s called Podcasting&quot;) slides up and fades in with its images, quotes, and source cards.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Top: a horizontal timeline strip of year labels with tick marks. Below: a scrolling article - serif headline (&quot;It&#x27;s called Podcasting&quot;), embedded images (a presentation photo, an iPod-era screenshot), a pull-quote card, an &quot;Open Source&quot; link card with the RSS icon, and an &quot;Article Sources&quot; list (Wikipedia Article, Ed Radio, Youtube Video rows with icons).
+
+## Motion spec
+Pattern: snap scrubber + content swap.
+- Drag the timeline: years scroll horizontally with momentum; on release it snaps the nearest year to the center marker (spring ~400/22, 250ms); the centered year grows (scale 1 -&gt; 1.2) and darkens while others sit grey.
+- On snap, the article below swaps: the old content slides down and fades (180ms, ease-in) as the new year&#x27;s article slides up 40px and fades in (300ms, ease-out, 60ms overlap gap).
+- Inside the article, elements cascade lightly on entry: headline, then image, then body (50ms steps).
+- Article scrolling itself is standard vertical scroll; the timeline stays pinned at top.
+- Tapping a far year scrolls the strip to center it, then the same snap + content swap runs.
+
+## Calibration
+- Snap is crisp - the strip never rests between years.
+- The content swap waits for the snap to start, not finish - total latency under 400ms from release.
+
+## Reduced motion
+Content crossfades; the strip snaps without spring overshoot.
+
+## Don&#x27;t miss
+- Source-list rows show small service icons (Wikipedia globe, RSS, YouTube) - they read as citation cards, not plain links.
+- The year marker above the strip is a fixed tick - the years move under it, never the reverse.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">snap scrubber + content swap.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/queue-podcast-timeline-scroll">original interaction</a> by Queue. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Queue's podcast timeline - a horizontal year scrubber at the top snaps to a year, and the rich article below (\"It's called Podcasting\") slides up and fades in with its images, quotes, and source cards.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTop: a horizontal timeline strip of year labels with tick marks. Below: a scrolling article - serif headline (\"It's called Podcasting\"), embedded images (a presentation photo, an iPod-era screenshot), a pull-quote card, an \"Open Source\" link card with the RSS icon, and an \"Article Sources\" list (Wikipedia Article, Ed Radio, Youtube Video rows with icons).\n\n## Motion spec\nPattern: snap scrubber + content swap.\n- Drag the timeline: years scroll horizontally with momentum; on release it snaps the nearest year to the center marker (spring ~400/22, 250ms); the centered year grows (scale 1 -> 1.2) and darkens while others sit grey.\n- On snap, the article below swaps: the old content slides down and fades (180ms, ease-in) as the new year's article slides up 40px and fades in (300ms, ease-out, 60ms overlap gap).\n- Inside the article, elements cascade lightly on entry: headline, then image, then body (50ms steps).\n- Article scrolling itself is standard vertical scroll; the timeline stays pinned at top.\n- Tapping a far year scrolls the strip to center it, then the same snap + content swap runs.\n\n## Calibration\n- Snap is crisp - the strip never rests between years.\n- The content swap waits for the snap to start, not finish - total latency under 400ms from release.\n\n## Reduced motion\nContent crossfades; the strip snaps without spring overshoot.\n\n## Don't miss\n- Source-list rows show small service icons (Wikipedia globe, RSS, YouTube) - they read as citation cards, not plain links.\n- The year marker above the strip is a fixed tick - the years move under it, never the reverse."</script>
+</body></html>

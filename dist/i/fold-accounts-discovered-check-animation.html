@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fold Accounts Discovered Check Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fold Accounts Discovered Check Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fold-accounts-discovered-check-animation"><b>Fold</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-accounts-discovered-check-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-accounts-discovered-check-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Fold&#x27;s discovery-to-success animation - an abstract shield made of vertical dashed bars pulses while &quot;Discovering your Bank accounts&quot;, then the bars explode into drifting particles and resolve into a thin hand-drawn circle with a checkmark.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38ad153c6551dedd74135/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38ad153c6551dedd74135/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fold-accounts-discovered-check-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Fold&#x27;s discovery-to-success animation - an abstract shield made of vertical dashed bars pulses while &quot;Discovering your Bank accounts&quot;, then the bars explode into drifting particles and resolve into a thin hand-drawn circle with a checkmark.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen, small logo top-center, status text (&quot;Discovering your Bank accounts&quot; + &quot;This may take a while&quot;) at bottom. Center: a shield/pin shape built from rows of short vertical black dashes. End state: a thin circle outline with a check inside, faint particle specks around it.
+
+## Motion spec
+Pattern: loading glyph explosion into a drawn success mark.
+- Loading: the dash rows ripple - each column&#x27;s bars oscillate in length/opacity in a wave sweeping downward (1.2s loop, 60ms column offset) - the shield breathes.
+- On success: the dashes detonate - each dash becomes a particle flung outward along a radial path (600ms, ease-out, random +-15deg spread) with trailing fade, the shield dissolving from the center out.
+- Immediately after the burst: the circle draws itself (stroke, 500ms, starts at 12 o&#x27;clock, slight wobble like a hand-drawn line) and the check strokes in right after (250ms), both in thin gray-green.
+- A few leftover particles drift down slowly (2s, gravity) as the success mark settles with a tiny scale breathe (1 -&gt; 1.03 -&gt; 1).
+- Status text crossfades to the success copy as the circle begins.
+
+## Calibration
+- The explosion is the transition - no spinner-to-check cut; the loader literally becomes the confetti.
+- The drawn line is thin and imperfect - the human wobble is the style.
+
+## Reduced motion
+Shield fades; circle and check fade in drawn-state.
+
+## Don&#x27;t miss
+- Particle paths radiate from the shield&#x27;s own geometry - chaos with a memory of order.
+- The check never bounces or pops - it&#x27;s drawn, then still.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">loading glyph explosion into a drawn success mark.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fold-accounts-discovered-check-animation">original interaction</a> by Fold. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Fold's discovery-to-success animation - an abstract shield made of vertical dashed bars pulses while \"Discovering your Bank accounts\", then the bars explode into drifting particles and resolve into a thin hand-drawn circle with a checkmark.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen, small logo top-center, status text (\"Discovering your Bank accounts\" + \"This may take a while\") at bottom. Center: a shield/pin shape built from rows of short vertical black dashes. End state: a thin circle outline with a check inside, faint particle specks around it.\n\n## Motion spec\nPattern: loading glyph explosion into a drawn success mark.\n- Loading: the dash rows ripple - each column's bars oscillate in length/opacity in a wave sweeping downward (1.2s loop, 60ms column offset) - the shield breathes.\n- On success: the dashes detonate - each dash becomes a particle flung outward along a radial path (600ms, ease-out, random +-15deg spread) with trailing fade, the shield dissolving from the center out.\n- Immediately after the burst: the circle draws itself (stroke, 500ms, starts at 12 o'clock, slight wobble like a hand-drawn line) and the check strokes in right after (250ms), both in thin gray-green.\n- A few leftover particles drift down slowly (2s, gravity) as the success mark settles with a tiny scale breathe (1 -> 1.03 -> 1).\n- Status text crossfades to the success copy as the circle begins.\n\n## Calibration\n- The explosion is the transition - no spinner-to-check cut; the loader literally becomes the confetti.\n- The drawn line is thin and imperfect - the human wobble is the style.\n\n## Reduced motion\nShield fades; circle and check fade in drawn-state.\n\n## Don't miss\n- Particle paths radiate from the shield's own geometry - chaos with a memory of order.\n- The check never bounces or pops - it's drawn, then still."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk True or False Game Shake for Feedback Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk True or False Game Shake for Feedback Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-true-or-false-game-shake-for-feedback-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-true-or-false-game-shake-for-feedback-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-true-or-false-game-shake-for-feedback-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s True or False shake feedback - a wrong pick shakes both avatars horizontally, stamps &quot;Missed that one!&quot;, and highlights the chosen card while the next round springs in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af5c00d01d537450a8a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af5c00d01d537450a8a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-true-or-false-game-shake-for-feedback-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s True or False shake feedback - a wrong pick shakes both avatars horizontally, stamps &quot;Missed that one!&quot;, and highlights the chosen card while the next round springs in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Blue game screen: two player avatars with score badges at top, a statement card (&quot;Steel is an alloy of Iron and Carbon.&quot;), and two big answer buttons - True (check) and False (x). Feedback states: &quot;Welcome to Trivia!&quot;, &quot;Round 1 of 5&quot;, &quot;Missed that one!&quot;, then &quot;Round 2 of 5&quot; with a new statement (&quot;Kiznaiver is an adaptation of a manga.&quot;).
+
+## Motion spec
+Pattern: horizontal avatar shake as wrong-answer feedback.
+- Round entrance: statement card slides up (spring ~300/22, 300ms); True/False buttons rise with a 60ms stagger; round label crossfades.
+- Tap an answer: the button compresses (scale 0.95, 100ms), then both answers lock and the player&#x27;s avatar slides onto the chosen button (spring ~340/16).
+- Wrong verdict: both avatars shake horizontally (translateX +-10pt, 4 cycles, 300ms, decaying), the header text swaps to &quot;Missed that one!&quot; (slide-fade, 200ms), and the correct button pulses (scale 1 -&gt; 1.06 -&gt; 1 twice).
+- Right verdict: no shake - the chosen button scales up (1 -&gt; 1.1 -&gt; 1, spring ~340/14) and the score badge pops (1 -&gt; 1.35 -&gt; 1, spring ~340/13).
+- Advance: the statement card slides left and fades (250ms) as the next statement slides in from the right (spring ~300/22); buttons reset with a fade (200ms).
+
+## Calibration
+- The shake is on the avatars, not the card - it reads as the players reacting, not UI chrome.
+- Keep True/False buttons large and symmetric; the chosen one gets the avatar stamp and the verdict color.
+
+## Reduced motion
+Avatars flash once (opacity dip, 200ms) instead of shaking; verdict text fades in.
+
+## Don&#x27;t miss
+- Statement text wraps inside the card exactly as shown; long statements shrink the type, never the card.
+- Score badges only move on correct answers - no motion on a miss beyond the shake.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal avatar shake as wrong-answer feedback.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-true-or-false-game-shake-for-feedback-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's True or False shake feedback - a wrong pick shakes both avatars horizontally, stamps \"Missed that one!\", and highlights the chosen card while the next round springs in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlue game screen: two player avatars with score badges at top, a statement card (\"Steel is an alloy of Iron and Carbon.\"), and two big answer buttons - True (check) and False (x). Feedback states: \"Welcome to Trivia!\", \"Round 1 of 5\", \"Missed that one!\", then \"Round 2 of 5\" with a new statement (\"Kiznaiver is an adaptation of a manga.\").\n\n## Motion spec\nPattern: horizontal avatar shake as wrong-answer feedback.\n- Round entrance: statement card slides up (spring ~300/22, 300ms); True/False buttons rise with a 60ms stagger; round label crossfades.\n- Tap an answer: the button compresses (scale 0.95, 100ms), then both answers lock and the player's avatar slides onto the chosen button (spring ~340/16).\n- Wrong verdict: both avatars shake horizontally (translateX +-10pt, 4 cycles, 300ms, decaying), the header text swaps to \"Missed that one!\" (slide-fade, 200ms), and the correct button pulses (scale 1 -> 1.06 -> 1 twice).\n- Right verdict: no shake - the chosen button scales up (1 -> 1.1 -> 1, spring ~340/14) and the score badge pops (1 -> 1.35 -> 1, spring ~340/13).\n- Advance: the statement card slides left and fades (250ms) as the next statement slides in from the right (spring ~300/22); buttons reset with a fade (200ms).\n\n## Calibration\n- The shake is on the avatars, not the card - it reads as the players reacting, not UI chrome.\n- Keep True/False buttons large and symmetric; the chosen one gets the avatar stamp and the verdict color.\n\n## Reduced motion\nAvatars flash once (opacity dip, 200ms) instead of shaking; verdict text fades in.\n\n## Don't miss\n- Statement text wraps inside the card exactly as shown; long statements shrink the type, never the card.\n- Score badges only move on correct answers - no motion on a miss beyond the shake."</script>
+</body></html>

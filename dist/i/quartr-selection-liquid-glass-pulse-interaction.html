@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quartr Selection Liquid Glass Pulse Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Quartr Selection Liquid Glass Pulse Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/quartr-selection-liquid-glass-pulse-interaction"><b>Quartr</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/quartr-selection-liquid-glass-pulse-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/quartr-selection-liquid-glass-pulse-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Quartr&#x27;s notification preferences - circular toggles on a glassmorphic sheet that pulse with an organic, liquid scale-and-spring when tapped, row by row.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/693436eb7d19d070282a3596/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/693436eb7d19d070282a3596/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-quartr-selection-liquid-glass-pulse-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Quartr&#x27;s notification preferences - circular toggles on a glassmorphic sheet that pulse with an organic, liquid scale-and-spring when tapped, row by row.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Quartr preferences sheet, dark glass: header copy (&quot;Below, select which content you want to be notified about&quot;), an &quot;Audio&quot; section (Live events, Recordings) and a &quot;Documents&quot; section (Transcripts, Slides, Reports, Press releases) - each row an icon, label, and a circular checkbox at right - plus a white &quot;Save&quot; button at the bottom.
+
+## Motion spec
+Pattern: liquid-glass pulse on selection toggles.
+- Tap a row&#x27;s circle: the circle squashes (scale 0.85) then springs to a filled checked state (spring ~550/14, one visible overshoot to ~1.2) with the checkmark drawing in (stroke draw, 150ms).
+- The row&#x27;s glass background ripples with the toggle: brightness lifts ~8% and back (250ms), like a pulse traveling through the card.
+- The whole row does a barely-there scale breath (1 -&gt; 1.015 -&gt; 1, 200ms) - organic, never mechanical.
+- Untoggling reverses with the same spring but the checkmark fades instead of drawing (120ms).
+- Rows respond to taps anywhere on the row, but the liquid pulse centers on the circle.
+- The Save button brightens from 60% to full opacity the moment any selection changes (200ms) - a quiet dirty-state signal.
+
+## Calibration
+- Checked = filled light circle with a dark check; unchecked = thin grey ring. No middle states.
+- Multiple rows can be toggled rapidly - each pulse is independent and never cancels another.
+
+## Reduced motion
+Circle fills and checkmark appear with a 150ms crossfade; no squash, ripple, or breath.
+
+## Don&#x27;t miss
+- The glass rows keep their blur and hairline borders through every pulse.
+- Section headers (Audio / Documents) are static labels - they never animate.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">liquid-glass pulse on selection toggles.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/quartr-selection-liquid-glass-pulse-interaction">original interaction</a> by Quartr. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Quartr's notification preferences - circular toggles on a glassmorphic sheet that pulse with an organic, liquid scale-and-spring when tapped, row by row.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nQuartr preferences sheet, dark glass: header copy (\"Below, select which content you want to be notified about\"), an \"Audio\" section (Live events, Recordings) and a \"Documents\" section (Transcripts, Slides, Reports, Press releases) - each row an icon, label, and a circular checkbox at right - plus a white \"Save\" button at the bottom.\n\n## Motion spec\nPattern: liquid-glass pulse on selection toggles.\n- Tap a row's circle: the circle squashes (scale 0.85) then springs to a filled checked state (spring ~550/14, one visible overshoot to ~1.2) with the checkmark drawing in (stroke draw, 150ms).\n- The row's glass background ripples with the toggle: brightness lifts ~8% and back (250ms), like a pulse traveling through the card.\n- The whole row does a barely-there scale breath (1 -> 1.015 -> 1, 200ms) - organic, never mechanical.\n- Untoggling reverses with the same spring but the checkmark fades instead of drawing (120ms).\n- Rows respond to taps anywhere on the row, but the liquid pulse centers on the circle.\n- The Save button brightens from 60% to full opacity the moment any selection changes (200ms) - a quiet dirty-state signal.\n\n## Calibration\n- Checked = filled light circle with a dark check; unchecked = thin grey ring. No middle states.\n- Multiple rows can be toggled rapidly - each pulse is independent and never cancels another.\n\n## Reduced motion\nCircle fills and checkmark appear with a 150ms crossfade; no squash, ripple, or breath.\n\n## Don't miss\n- The glass rows keep their blur and hairline borders through every pulse.\n- Section headers (Audio / Documents) are static labels - they never animate."</script>
+</body></html>

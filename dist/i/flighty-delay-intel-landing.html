@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flighty Delay Intel Landing - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flighty Delay Intel Landing</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flighty-delay-intel-landing"><b>Flighty</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-delay-intel-landing">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-delay-intel-landing">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Flighty&#x27;s Delay Intel landing page - a smooth vertical scroll through a media-rich dark marketing page where headline sections and product screenshots hand off to each other in a continuous cinematic flow.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be490c131e88d4acae24de/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be490c131e88d4acae24de/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flighty-delay-intel-landing.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Flighty&#x27;s Delay Intel landing page - a smooth vertical scroll through a media-rich dark marketing page where headline sections and product screenshots hand off to each other in a continuous cinematic flow.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark landing page opening with &quot;Introducing Exclusive Delay Intel&quot; over a glowing magenta-blue gradient and an embedded phone screenshot (a delay alert card). Scrolling reveals stacked sections: &quot;See why you&#x27;re delayed. Finally.&quot; with the alert screenshot; &quot;Delay predictions. Long before airlines admit it.&quot;; &quot;Traffic and weather delays. From the tower.&quot; over a purple tower shot; &quot;Live delay trends at your airports.&quot; over a bright sky-blue panel with a delay arc; &quot;And Much More...&quot; as a checklist.
+
+## Motion spec
+Pattern: scroll-driven section handoffs with pinned media.
+- Sections flow on normal vertical scroll with momentum; each section&#x27;s headline block and its screenshot travel at slightly different rates (screenshot at ~0.9x scroll speed) for a soft parallax.
+- Incoming section titles fade up (translateY 20px to 0, opacity, 400ms, ease-out) as they enter the lower third of the viewport.
+- Screenshots scale subtly from 0.96 to 1.0 as they approach center, then hold - a focus pull.
+- The background gradient hue drifts between sections (magenta to indigo to sky blue), crossfading over ~600ms of scroll travel.
+- The final checklist section staggers its rows in (60ms apart, 250ms fade-up) on entry.
+
+## Calibration
+- Parallax stays under 10% differential - this is polish, not a ride.
+- Each headline must fully settle before its section&#x27;s screenshot reaches center; overlapping arrivals read as jank.
+
+## Reduced motion
+No parallax or scale; sections fade in whole at the viewport edge.
+
+## Don&#x27;t miss
+- Screenshots are real product UI (delay card, tower view, trends arc) - crisp and unblurred, they carry the pitch.
+- The sky-blue trends panel is the page&#x27;s one bright break - let it be noticeably lighter than the rest.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-driven section handoffs with pinned media.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flighty-delay-intel-landing">original interaction</a> by Flighty. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Flighty's Delay Intel landing page - a smooth vertical scroll through a media-rich dark marketing page where headline sections and product screenshots hand off to each other in a continuous cinematic flow.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark landing page opening with \"Introducing Exclusive Delay Intel\" over a glowing magenta-blue gradient and an embedded phone screenshot (a delay alert card). Scrolling reveals stacked sections: \"See why you're delayed. Finally.\" with the alert screenshot; \"Delay predictions. Long before airlines admit it.\"; \"Traffic and weather delays. From the tower.\" over a purple tower shot; \"Live delay trends at your airports.\" over a bright sky-blue panel with a delay arc; \"And Much More...\" as a checklist.\n\n## Motion spec\nPattern: scroll-driven section handoffs with pinned media.\n- Sections flow on normal vertical scroll with momentum; each section's headline block and its screenshot travel at slightly different rates (screenshot at ~0.9x scroll speed) for a soft parallax.\n- Incoming section titles fade up (translateY 20px to 0, opacity, 400ms, ease-out) as they enter the lower third of the viewport.\n- Screenshots scale subtly from 0.96 to 1.0 as they approach center, then hold - a focus pull.\n- The background gradient hue drifts between sections (magenta to indigo to sky blue), crossfading over ~600ms of scroll travel.\n- The final checklist section staggers its rows in (60ms apart, 250ms fade-up) on entry.\n\n## Calibration\n- Parallax stays under 10% differential - this is polish, not a ride.\n- Each headline must fully settle before its section's screenshot reaches center; overlapping arrivals read as jank.\n\n## Reduced motion\nNo parallax or scale; sections fade in whole at the viewport edge.\n\n## Don't miss\n- Screenshots are real product UI (delay card, tower view, trends arc) - crisp and unblurred, they carry the pitch.\n- The sky-blue trends panel is the page's one bright break - let it be noticeably lighter than the rest."</script>
+</body></html>

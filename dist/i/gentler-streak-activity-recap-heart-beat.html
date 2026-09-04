@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Activity Recap Heart Beat - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Activity Recap Heart Beat</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-activity-recap-heart-beat"><b>Gentler</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-activity-recap-heart-beat">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-activity-recap-heart-beat">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Gentler Streak&#x27;s heart recap - a zone bar chart staggers up with its bpm readout, then the scene washes to a full-bleed blue card where the heart mascot beats over the year&#x27;s totals.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ffebaf936951f1cbe4131/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ffebaf936951f1cbe4131/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-activity-recap-heart-beat.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Gentler Streak&#x27;s heart recap - a zone bar chart staggers up with its bpm readout, then the scene washes to a full-bleed blue card where the heart mascot beats over the year&#x27;s totals.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Two beats. First: &quot;YOUR HEART MOSTLY BEAT IN - Zone 1&quot; with a small bar chart of colored zone bars and &quot;AVERAGE ACTIVITY HEART RATE - 128 bpm&quot; over a white-to-blue banded background. Second: full-blue screen with a 3D heart mascot wearing a sweatband, and copy: &quot;It beat 6,61,747 times and pumped 44,999 liters of blood during your activities.&quot;
+
+## Motion spec
+Pattern: staggered chart then full-bleed wash, ~2.5s.
+- Background bands slide in (pink over white over blue, 300ms each, bottom-up stagger).
+- The zone bars rise from the chart baseline with a 80ms stagger (each 300ms, ease-out), their zone labels fading in as each bar lands; &quot;Zone 1&quot; and the bpm readout fade up with the chart.
+- Transition: the blue bottom band expands upward to flood the screen (400ms, ease-in-out), carrying the old content off the top.
+- The heart mascot pops in (scale 0.5 to 1, spring stiffness 340 damping 13) and starts beating (scale 1 to 1.12 and back, 900ms loop with a two-thump rhythm).
+- The copy lines fade and rise beneath it (250ms each, 120ms stagger), the big numbers rolling up to their totals (800ms, ease-out).
+
+## Calibration
+- The heart&#x27;s beat is a lub-dub - two quick swells per cycle, not a single pulse.
+- The blue flood originates from the existing blue band - the background itself becomes the next scene.
+
+## Reduced motion
+Scenes crossfade; heart static.
+
+## Don&#x27;t miss
+- The sweatband on the heart - it is the joke that this heart worked out.
+- The numbers use the Indian digit grouping as displayed (6,61,747) - match the source formatting.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered chart then full-bleed wash, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-activity-recap-heart-beat">original interaction</a> by Gentler. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Gentler Streak's heart recap - a zone bar chart staggers up with its bpm readout, then the scene washes to a full-bleed blue card where the heart mascot beats over the year's totals.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTwo beats. First: \"YOUR HEART MOSTLY BEAT IN - Zone 1\" with a small bar chart of colored zone bars and \"AVERAGE ACTIVITY HEART RATE - 128 bpm\" over a white-to-blue banded background. Second: full-blue screen with a 3D heart mascot wearing a sweatband, and copy: \"It beat 6,61,747 times and pumped 44,999 liters of blood during your activities.\"\n\n## Motion spec\nPattern: staggered chart then full-bleed wash, ~2.5s.\n- Background bands slide in (pink over white over blue, 300ms each, bottom-up stagger).\n- The zone bars rise from the chart baseline with a 80ms stagger (each 300ms, ease-out), their zone labels fading in as each bar lands; \"Zone 1\" and the bpm readout fade up with the chart.\n- Transition: the blue bottom band expands upward to flood the screen (400ms, ease-in-out), carrying the old content off the top.\n- The heart mascot pops in (scale 0.5 to 1, spring stiffness 340 damping 13) and starts beating (scale 1 to 1.12 and back, 900ms loop with a two-thump rhythm).\n- The copy lines fade and rise beneath it (250ms each, 120ms stagger), the big numbers rolling up to their totals (800ms, ease-out).\n\n## Calibration\n- The heart's beat is a lub-dub - two quick swells per cycle, not a single pulse.\n- The blue flood originates from the existing blue band - the background itself becomes the next scene.\n\n## Reduced motion\nScenes crossfade; heart static.\n\n## Don't miss\n- The sweatband on the heart - it is the joke that this heart worked out.\n- The numbers use the Indian digit grouping as displayed (6,61,747) - match the source formatting."</script>
+</body></html>

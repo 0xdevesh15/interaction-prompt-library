@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Chess Incorrect Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Chess Incorrect Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-chess-incorrect-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-chess-incorrect-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-chess-incorrect-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo Chess&#x27;s wrong-move feedback - on the dark puzzle screen, an incorrect move snaps the piece back, the coach avatar slumps disappointed, and a red &quot;Oops, that&#x27;s not correct&quot; sheet springs up from the bottom with a TRY AGAIN button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868e9862f7f889f3d1ced13/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868e9862f7f889f3d1ced13/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-chess-incorrect-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo Chess&#x27;s wrong-move feedback - on the dark puzzle screen, an incorrect move snaps the piece back, the coach avatar slumps disappointed, and a red &quot;Oops, that&#x27;s not correct&quot; sheet springs up from the bottom with a TRY AGAIN button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark chess puzzle screen. Header: close X, purple progress bar, gem counter. Coach avatar with the bubble &quot;Let&#x27;s review some checkmates with your rooks.&quot; Center: dark chessboard with pieces. Bottom: gem row and input area. Error state: red sheet with an X-circle icon, &quot;Oops, that&#x27;s not correct&quot;, and a red TRY AGAIN button.
+
+## Motion spec
+Pattern: error sheet with mascot disappointment.
+- On the wrong drop: the piece snaps back to its origin square (spring ~380/22, 200ms) and the target square flashes red (150ms).
+- The board gives a short horizontal shake (translateX +/-4pt, 2 cycles, 160ms).
+- The coach avatar droops (translateY +4pt, brows drop, 250ms ease-out) and its bubble stays put.
+- The red sheet slides up with a spring (~300/18, overshoot ~6pt, 350ms); the X-circle icon pops (scale 0 -&gt; 1.1 -&gt; 1.0, 180ms).
+- TRY AGAIN press: button compresses (scale 0.95, 100ms), the sheet slides back down (250ms ease-in), and the coach perks back up (200ms).
+
+## Calibration
+- Red is reserved for the sheet and the square flash - the rest of the screen keeps its dark calm.
+- The spring on the sheet is soft; errors should feel recoverable, not alarming.
+
+## Reduced motion
+Piece snaps back instantly; no shake; sheet fades in over 200ms.
+
+## Don&#x27;t miss
+- The coach&#x27;s disappointment is posture, not a face swap - a small droop sells it.
+- The progress bar does not regress on an error.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">error sheet with mascot disappointment.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-chess-incorrect-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo Chess's wrong-move feedback - on the dark puzzle screen, an incorrect move snaps the piece back, the coach avatar slumps disappointed, and a red \"Oops, that's not correct\" sheet springs up from the bottom with a TRY AGAIN button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark chess puzzle screen. Header: close X, purple progress bar, gem counter. Coach avatar with the bubble \"Let's review some checkmates with your rooks.\" Center: dark chessboard with pieces. Bottom: gem row and input area. Error state: red sheet with an X-circle icon, \"Oops, that's not correct\", and a red TRY AGAIN button.\n\n## Motion spec\nPattern: error sheet with mascot disappointment.\n- On the wrong drop: the piece snaps back to its origin square (spring ~380/22, 200ms) and the target square flashes red (150ms).\n- The board gives a short horizontal shake (translateX +/-4pt, 2 cycles, 160ms).\n- The coach avatar droops (translateY +4pt, brows drop, 250ms ease-out) and its bubble stays put.\n- The red sheet slides up with a spring (~300/18, overshoot ~6pt, 350ms); the X-circle icon pops (scale 0 -> 1.1 -> 1.0, 180ms).\n- TRY AGAIN press: button compresses (scale 0.95, 100ms), the sheet slides back down (250ms ease-in), and the coach perks back up (200ms).\n\n## Calibration\n- Red is reserved for the sheet and the square flash - the rest of the screen keeps its dark calm.\n- The spring on the sheet is soft; errors should feel recoverable, not alarming.\n\n## Reduced motion\nPiece snaps back instantly; no shake; sheet fades in over 200ms.\n\n## Don't miss\n- The coach's disappointment is posture, not a face swap - a small droop sells it.\n- The progress bar does not regress on an error."</script>
+</body></html>

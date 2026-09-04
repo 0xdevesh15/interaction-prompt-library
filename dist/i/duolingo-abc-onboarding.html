@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo ABC Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo ABC Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-abc-onboarding"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-abc-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-abc-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo ABC&#x27;s onboarding flow - an age-entry screen with a numeric keypad and a growing green progress bar, a character-picker grid of monster avatars, and a &quot;We recommend starting at...&quot; screen with a horizontally swipeable carousel of illustrated buildings whose names swap into the blue start button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56e9f12271a7827f5307d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56e9f12271a7827f5307d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-abc-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo ABC&#x27;s onboarding flow - an age-entry screen with a numeric keypad and a growing green progress bar, a character-picker grid of monster avatars, and a &quot;We recommend starting at...&quot; screen with a horizontally swipeable carousel of illustrated buildings whose names swap into the blue start button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screens with a top progress bar (green fill grows per step) and back chevron. Age screen: &quot;How old is Jr?&quot; with an Age field and numeric keypad. Character screen: &quot;Choose a character for Jr&quot; over a 4-column grid of round monster avatars. Recommendation screen: &quot;We recommend starting at the schoolhouse!&quot; with a large building illustration and a blue &quot;START AT THE SCHOOLHOUSE&quot; button.
+
+## Motion spec
+Pattern: stepped onboarding with a swappable-place carousel.
+- Keypad entry: each digit pops into the Age field (scale 1.2 -&gt; 1, spring ~450/20); the progress bar extends per step (spring ~320/22).
+- Screen changes slide horizontally (spring ~330/24), title and content staggering in (60ms apart).
+- Character grid: avatars pop in randomly ordered (scale 0.6 -&gt; 1, spring ~380/18, 50ms apart); tapping one gives it a green ring (scale ring from 1.2 -&gt; 1) and a happy wiggle (rotate +-6deg, 2 cycles).
+- The building carousel: swiping crossfades the illustration (300ms) while the button&#x27;s label flips to the new place (&quot;START AT THE POST OFFICE&quot;, vertical roll, 250ms); a link under the title offers the other starting point.
+- The blue start button breathes faintly (scale 1 -&gt; 1.015, 2.4s) until pressed.
+
+## Calibration
+- Progress bar only ever grows during forward moves; going back shrinks it honestly.
+- The recommendation&#x27;s button label is a real template bound to the carousel - never static text.
+
+## Reduced motion
+Crossfades everywhere; carousel switches without roll.
+
+## Don&#x27;t miss
+- The carousel changes the CTA&#x27;s destination, not just the picture - label and action stay bound.
+- Monster avatars are tappable personalities, not a radio list - each reacts.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stepped onboarding with a swappable-place carousel.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-abc-onboarding">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo ABC's onboarding flow - an age-entry screen with a numeric keypad and a growing green progress bar, a character-picker grid of monster avatars, and a \"We recommend starting at...\" screen with a horizontally swipeable carousel of illustrated buildings whose names swap into the blue start button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screens with a top progress bar (green fill grows per step) and back chevron. Age screen: \"How old is Jr?\" with an Age field and numeric keypad. Character screen: \"Choose a character for Jr\" over a 4-column grid of round monster avatars. Recommendation screen: \"We recommend starting at the schoolhouse!\" with a large building illustration and a blue \"START AT THE SCHOOLHOUSE\" button.\n\n## Motion spec\nPattern: stepped onboarding with a swappable-place carousel.\n- Keypad entry: each digit pops into the Age field (scale 1.2 -> 1, spring ~450/20); the progress bar extends per step (spring ~320/22).\n- Screen changes slide horizontally (spring ~330/24), title and content staggering in (60ms apart).\n- Character grid: avatars pop in randomly ordered (scale 0.6 -> 1, spring ~380/18, 50ms apart); tapping one gives it a green ring (scale ring from 1.2 -> 1) and a happy wiggle (rotate +-6deg, 2 cycles).\n- The building carousel: swiping crossfades the illustration (300ms) while the button's label flips to the new place (\"START AT THE POST OFFICE\", vertical roll, 250ms); a link under the title offers the other starting point.\n- The blue start button breathes faintly (scale 1 -> 1.015, 2.4s) until pressed.\n\n## Calibration\n- Progress bar only ever grows during forward moves; going back shrinks it honestly.\n- The recommendation's button label is a real template bound to the carousel - never static text.\n\n## Reduced motion\nCrossfades everywhere; carousel switches without roll.\n\n## Don't miss\n- The carousel changes the CTA's destination, not just the picture - label and action stay bound.\n- Monster avatars are tappable personalities, not a radio list - each reacts."</script>
+</body></html>

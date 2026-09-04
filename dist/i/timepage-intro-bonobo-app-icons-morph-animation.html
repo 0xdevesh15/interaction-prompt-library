@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Timepage Intro Bonobo App Icons Morph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Timepage Intro Bonobo App Icons Morph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/timepage-intro-bonobo-app-icons-morph-animation"><b>Timepage</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/timepage-intro-bonobo-app-icons-morph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/timepage-intro-bonobo-app-icons-morph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Timepage&#x27;s onboarding - the app icon morphs continuously through the Bonobo family icons (Timepage, a clock, a red-dotted icon, and back) while the sign-up buttons sit still below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adce2a0a8c57042dc4553a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adce2a0a8c57042dc4553a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-timepage-intro-bonobo-app-icons-morph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Timepage&#x27;s onboarding - the app icon morphs continuously through the Bonobo family icons (Timepage, a clock, a red-dotted icon, and back) while the sign-up buttons sit still below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black onboarding screen: a single rounded-square app icon centered in the upper half, a white &quot;I&#x27;m new&quot; pill and a dark &quot;I have an account already&quot; pill at the bottom.
+
+## Motion spec
+Pattern: looping icon morph, ~1.8s per transition.
+- Hold: each icon rests for 900ms.
+- Morph: the icon&#x27;s internal shapes crossfade and reshape into the next icon (500ms, ease-in-out) - the teal-striped Timepage icon&#x27;s elements slide and recolor into the cream clock face, then into the red/black dotted icon, then the purple check, looping.
+- The icon&#x27;s container squashes 2% at mid-morph (scale 0.98 -&gt; 1, spring ~380/20) for weight.
+- Buttons are static throughout; only the icon animates.
+
+## Calibration
+- The morph happens inside the icon bounds - the rounded-square silhouette never changes.
+- Transitions are shape crossfades with matched geometry, not whole-icon fades.
+
+## Reduced motion
+Whole-icon crossfade (300ms) on the same 1.8s cycle.
+
+## Don&#x27;t miss
+- The loop returns to the first icon seamlessly.
+- The slight squash at mid-morph is the only container motion.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping icon morph, ~1.8s per transition.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/timepage-intro-bonobo-app-icons-morph-animation">original interaction</a> by Timepage. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Timepage's onboarding - the app icon morphs continuously through the Bonobo family icons (Timepage, a clock, a red-dotted icon, and back) while the sign-up buttons sit still below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack onboarding screen: a single rounded-square app icon centered in the upper half, a white \"I'm new\" pill and a dark \"I have an account already\" pill at the bottom.\n\n## Motion spec\nPattern: looping icon morph, ~1.8s per transition.\n- Hold: each icon rests for 900ms.\n- Morph: the icon's internal shapes crossfade and reshape into the next icon (500ms, ease-in-out) - the teal-striped Timepage icon's elements slide and recolor into the cream clock face, then into the red/black dotted icon, then the purple check, looping.\n- The icon's container squashes 2% at mid-morph (scale 0.98 -> 1, spring ~380/20) for weight.\n- Buttons are static throughout; only the icon animates.\n\n## Calibration\n- The morph happens inside the icon bounds - the rounded-square silhouette never changes.\n- Transitions are shape crossfades with matched geometry, not whole-icon fades.\n\n## Reduced motion\nWhole-icon crossfade (300ms) on the same 1.8s cycle.\n\n## Don't miss\n- The loop returns to the first icon seamlessly.\n- The slight squash at mid-morph is the only container motion."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airchat Reply Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airchat Reply Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airchat-reply-sheet"><b>Airchat</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airchat-reply-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airchat-reply-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airchat&#x27;s voice-reply sheet - tapping reply on a post slides up a springy sheet addressed to the author, with a record prompt bubble and a mic button, over the dimmed feed.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd299f86c96258d426f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd299f86c96258d426f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airchat-reply-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airchat&#x27;s voice-reply sheet - tapping reply on a post slides up a springy sheet addressed to the author, with a record prompt bubble and a mic button, over the dimmed feed.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark feed of voice posts. Sheet: &quot;To &lt;author&gt;&quot; header with an X close, a grayed transcript-input row, a large blue bubble reading &quot;Tap the microphone to record...&quot;, a small icon row under it (photo, GIF, waveform), and a round blue mic button centered at the bottom. The feed behind dims.
+
+## Motion spec
+Pattern: spring bottom sheet for voice capture.
+- Scrim fades to ~40% black (200ms); the sheet slides up with a spring (stiffness ~300, damping ~28, one soft overshoot, ~400ms).
+- Sheet content staggers: header first (opacity, 150ms), then the blue record bubble pops (scale 0.8 to 1.0, spring stiffness ~340, damping ~20), then the mic button fades in.
+- Tapping the mic pulses it (scale 1.0 to 1.15 and back, 300ms) and the bubble text swaps to a recording state with a live waveform line animating inside.
+- X or swipe-down dismisses: sheet slides down (300ms, ease-in), scrim fades.
+
+## Calibration
+- The mic button is the only primary action - keep it visually louder than everything else on the sheet.
+- The sheet must feel attached to the post being answered: the header names the author.
+
+## Reduced motion
+Sheet and scrim fade in place (200ms); no spring, no pop.
+
+## Don&#x27;t miss
+- The record prompt is a chat-style bubble, not a label - the reply reads as a conversation from the first pixel.
+- The input row starts disabled; voice is the input, text is secondary.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring bottom sheet for voice capture.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airchat-reply-sheet">original interaction</a> by Airchat. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airchat's voice-reply sheet - tapping reply on a post slides up a springy sheet addressed to the author, with a record prompt bubble and a mic button, over the dimmed feed.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark feed of voice posts. Sheet: \"To <author>\" header with an X close, a grayed transcript-input row, a large blue bubble reading \"Tap the microphone to record...\", a small icon row under it (photo, GIF, waveform), and a round blue mic button centered at the bottom. The feed behind dims.\n\n## Motion spec\nPattern: spring bottom sheet for voice capture.\n- Scrim fades to ~40% black (200ms); the sheet slides up with a spring (stiffness ~300, damping ~28, one soft overshoot, ~400ms).\n- Sheet content staggers: header first (opacity, 150ms), then the blue record bubble pops (scale 0.8 to 1.0, spring stiffness ~340, damping ~20), then the mic button fades in.\n- Tapping the mic pulses it (scale 1.0 to 1.15 and back, 300ms) and the bubble text swaps to a recording state with a live waveform line animating inside.\n- X or swipe-down dismisses: sheet slides down (300ms, ease-in), scrim fades.\n\n## Calibration\n- The mic button is the only primary action - keep it visually louder than everything else on the sheet.\n- The sheet must feel attached to the post being answered: the header names the author.\n\n## Reduced motion\nSheet and scrim fade in place (200ms); no spring, no pop.\n\n## Don't miss\n- The record prompt is a chat-style bubble, not a label - the reply reads as a conversation from the first pixel.\n- The input row starts disabled; voice is the input, text is secondary."</script>
+</body></html>

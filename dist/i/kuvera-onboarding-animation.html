@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kuvera Onboarding Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Kuvera Onboarding Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/kuvera-onboarding-animation"><b>Kuvera</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/kuvera-onboarding-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/kuvera-onboarding-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Kuvera&#x27;s onboarding pager - soft gradient pages where each benefit line arrives first, then a miniature product card rises from the bottom to prove it, paging through wealth view, investment patterns, and insights.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d5316315722ddd136ee9ed/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d5316315722ddd136ee9ed/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-kuvera-onboarding-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Kuvera&#x27;s onboarding pager - soft gradient pages where each benefit line arrives first, then a miniature product card rises from the bottom to prove it, paging through wealth view, investment patterns, and insights.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light grey pages with a soft diagonal gradient: &quot;WELCOME TO KUVERA / Rishi&quot; greeting, then pager pages - &quot;Grow your wealth with the right judgment&quot;, &quot;Get a unified view of your wealth&quot; (portfolio card showing Rs 80,94,000), &quot;Know your investment patterns&quot; (three gauge cards: Discipline, Allocation, Performance), &quot;Strengthen your portfolio with insights&quot; (insights card) - with a round dark next-arrow button bottom-center.
+
+## Motion spec
+Pattern: staged onboarding pager with rising product-proof cards.
+- Each page: the headline sets first (fade + rise 16px, 300ms), then the mini product card rises from the bottom edge (translateY 80 -&gt; 0, spring ~280/16) with a soft shadow blooming under it.
+- Card content is alive: the portfolio number counts up (700ms), the gauge needles sweep to their values (500ms, ease-out, 80ms stagger across the three gauges).
+- Paging: swipe or next-arrow slides the card down and out (250ms) while the next page&#x27;s headline enters (200ms) and its card rises; the gradient background hue shifts slightly per page.
+- The next button pulses subtly (scale 1 -&gt; 1.06, 1.2s) when a page&#x27;s animations complete.
+
+## Calibration
+- The mini card is a faithful shrunken product screen - crisp text, real numbers - not an illustration.
+- One motion at a time: headline, then card, then in-card motion. Never overlapping.
+
+## Reduced motion
+Pages crossfade (250ms); cards appear at rest with final values.
+
+## Don&#x27;t miss
+- The card&#x27;s shadow arrives after the card lands, not during the rise.
+- Gauges sweep clockwise from the same zero baseline and hold - no needle wobble at rest.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staged onboarding pager with rising product-proof cards.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/kuvera-onboarding-animation">original interaction</a> by Kuvera. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Kuvera's onboarding pager - soft gradient pages where each benefit line arrives first, then a miniature product card rises from the bottom to prove it, paging through wealth view, investment patterns, and insights.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight grey pages with a soft diagonal gradient: \"WELCOME TO KUVERA / Rishi\" greeting, then pager pages - \"Grow your wealth with the right judgment\", \"Get a unified view of your wealth\" (portfolio card showing Rs 80,94,000), \"Know your investment patterns\" (three gauge cards: Discipline, Allocation, Performance), \"Strengthen your portfolio with insights\" (insights card) - with a round dark next-arrow button bottom-center.\n\n## Motion spec\nPattern: staged onboarding pager with rising product-proof cards.\n- Each page: the headline sets first (fade + rise 16px, 300ms), then the mini product card rises from the bottom edge (translateY 80 -> 0, spring ~280/16) with a soft shadow blooming under it.\n- Card content is alive: the portfolio number counts up (700ms), the gauge needles sweep to their values (500ms, ease-out, 80ms stagger across the three gauges).\n- Paging: swipe or next-arrow slides the card down and out (250ms) while the next page's headline enters (200ms) and its card rises; the gradient background hue shifts slightly per page.\n- The next button pulses subtly (scale 1 -> 1.06, 1.2s) when a page's animations complete.\n\n## Calibration\n- The mini card is a faithful shrunken product screen - crisp text, real numbers - not an illustration.\n- One motion at a time: headline, then card, then in-card motion. Never overlapping.\n\n## Reduced motion\nPages crossfade (250ms); cards appear at rest with final values.\n\n## Don't miss\n- The card's shadow arrives after the card lands, not during the rise.\n- Gauges sweep clockwise from the same zero baseline and hold - no needle wobble at rest."</script>
+</body></html>

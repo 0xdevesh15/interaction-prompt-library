@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edits Resolution Menu Tab Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Edits Resolution Menu Tab Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/edits-resolution-menu-tab-interaction"><b>Edits</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/edits-resolution-menu-tab-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/edits-resolution-menu-tab-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the Edits camera resolution menu - tapping the format badge opens a settings menu with springy segmented control rows (Resolution: HD / 2K / 4K, Frame Rate: 24 / 30 / 60, Color: SDR / HDR); each selection animates a highlight pill, and the menu collapses back into the compact status badge beside the record button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe3258c48a3ebad12eaa/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe3258c48a3ebad12eaa/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-edits-resolution-menu-tab-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the Edits camera resolution menu - tapping the format badge opens a settings menu with springy segmented control rows (Resolution: HD / 2K / 4K, Frame Rate: 24 / 30 / 60, Color: SDR / HDR); each selection animates a highlight pill, and the menu collapses back into the compact status badge beside the record button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark camera UI: left tool rail, pink record button at bottom center, and a small &quot;HD 60&quot; style badge to its right. The opened menu: a dark rounded panel above the record button with three labeled rows - Resolution (HD, 2K, 4K), Frame Rate (24, 30, 60), Color (SDR, HDR) - each a segmented control with a white highlight pill on the active segment.
+
+## Motion spec
+Pattern: expanding settings panel with segmented pill springs.
+- Tap the badge: the menu expands from it (scale 0.6 -&gt; 1 anchored at the badge, spring ~320/18, opacity in 150ms), rows staggering in (60ms apart, translateY 8pt -&gt; 0).
+- Tap a segment: the white highlight pill slides to it (spring ~340/16, slight overshoot) and the label inverts (black on white).
+- Different rows can change independently; the badge text updates live (&quot;4K 60&quot;, &quot;2K 30&quot;, &quot;HD 24&quot;) with a digit roll (150ms).
+- Tap outside or the badge again: the menu collapses back into the badge (scale -&gt; 0.6, spring ~320/20, rows fading out first, 120ms).
+
+## Calibration
+- The pill slide is the tactile star - quick with a small bounce, never sluggish.
+- The panel stays pinned above the record button through all state changes.
+
+## Reduced motion
+Menu and pill crossfade between states (180ms).
+
+## Don&#x27;t miss
+- The badge reflects the menu&#x27;s choices immediately, even mid-collapse.
+- Only one pill per row moves; the other rows stay put.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">expanding settings panel with segmented pill springs.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/edits-resolution-menu-tab-interaction">original interaction</a> by Edits. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the Edits camera resolution menu - tapping the format badge opens a settings menu with springy segmented control rows (Resolution: HD / 2K / 4K, Frame Rate: 24 / 30 / 60, Color: SDR / HDR); each selection animates a highlight pill, and the menu collapses back into the compact status badge beside the record button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark camera UI: left tool rail, pink record button at bottom center, and a small \"HD 60\" style badge to its right. The opened menu: a dark rounded panel above the record button with three labeled rows - Resolution (HD, 2K, 4K), Frame Rate (24, 30, 60), Color (SDR, HDR) - each a segmented control with a white highlight pill on the active segment.\n\n## Motion spec\nPattern: expanding settings panel with segmented pill springs.\n- Tap the badge: the menu expands from it (scale 0.6 -> 1 anchored at the badge, spring ~320/18, opacity in 150ms), rows staggering in (60ms apart, translateY 8pt -> 0).\n- Tap a segment: the white highlight pill slides to it (spring ~340/16, slight overshoot) and the label inverts (black on white).\n- Different rows can change independently; the badge text updates live (\"4K 60\", \"2K 30\", \"HD 24\") with a digit roll (150ms).\n- Tap outside or the badge again: the menu collapses back into the badge (scale -> 0.6, spring ~320/20, rows fading out first, 120ms).\n\n## Calibration\n- The pill slide is the tactile star - quick with a small bounce, never sluggish.\n- The panel stays pinned above the record button through all state changes.\n\n## Reduced motion\nMenu and pill crossfade between states (180ms).\n\n## Don't miss\n- The badge reflects the menu's choices immediately, even mid-collapse.\n- Only one pill per row moves; the other rows stay put."</script>
+</body></html>

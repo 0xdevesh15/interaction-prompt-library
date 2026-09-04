@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Co-Star Globe Zoom Out Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Co-Star Globe Zoom Out Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/co-star-globe-zoom-out-animation"><b>Co</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/co-star-globe-zoom-out-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/co-star-globe-zoom-out-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Co-Star&#x27;s cinematic zoom-out - from a street-level aerial view the camera pulls back through city and region to the whole Earth on black, shrinking to a dot that lands back on the white page.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980ce2e282b61e5db5b0a37/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980ce2e282b61e5db5b0a37/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-co-star-globe-zoom-out-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Co-Star&#x27;s cinematic zoom-out - from a street-level aerial view the camera pulls back through city and region to the whole Earth on black, shrinking to a dot that lands back on the white page.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Co-Star, monochrome: the sequence runs street aerial -&gt; city grid -&gt; region -&gt; full globe on black -&gt; globe shrinking to a tiny dot -&gt; the dot becoming the small globe icon on the white reading page (dense serif paragraph, close button).
+
+## Motion spec
+Pattern: continuous exponential zoom-out from street to planet.
+- The zoom is one uninterrupted exponential pull-back over ~4s: street-level aerial imagery scales away, crossfading between altitude levels (street -&gt; city -&gt; region -&gt; limb of the planet) so scale never visibly jumps.
+- The frame darkens as altitude increases: streets sit on near-white, the globe floats on pure black (exposure tween synced to altitude).
+- The globe keeps shrinking past comfort - down to a ~24px sphere, then a 6px dot at screen center (the last 1.2s is just shrink on black).
+- The dot crossfades into the white page&#x27;s inline globe glyph (200ms) as the page fades up around it (300ms) - the cosmic dot becomes the page&#x27;s own icon.
+- Total one-shot sequence; no loop, no user control.
+
+## Calibration
+- Everything is grayscale - Co-Star&#x27;s monochrome discipline never breaks.
+- Zoom easing: linear in log-space (constant rate of scale change) - the hallmark of a proper powers-of-ten pull.
+
+## Reduced motion
+Cut directly from the first aerial frame to the white page with a 400ms crossfade.
+
+## Don&#x27;t miss
+- The pull-back never pauses at any altitude - no staged stops.
+- The final dot must be centered exactly where the page&#x27;s globe glyph sits - the handoff position is the trick.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous exponential zoom-out from street to planet.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/co-star-globe-zoom-out-animation">original interaction</a> by Co. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Co-Star's cinematic zoom-out - from a street-level aerial view the camera pulls back through city and region to the whole Earth on black, shrinking to a dot that lands back on the white page.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCo-Star, monochrome: the sequence runs street aerial -> city grid -> region -> full globe on black -> globe shrinking to a tiny dot -> the dot becoming the small globe icon on the white reading page (dense serif paragraph, close button).\n\n## Motion spec\nPattern: continuous exponential zoom-out from street to planet.\n- The zoom is one uninterrupted exponential pull-back over ~4s: street-level aerial imagery scales away, crossfading between altitude levels (street -> city -> region -> limb of the planet) so scale never visibly jumps.\n- The frame darkens as altitude increases: streets sit on near-white, the globe floats on pure black (exposure tween synced to altitude).\n- The globe keeps shrinking past comfort - down to a ~24px sphere, then a 6px dot at screen center (the last 1.2s is just shrink on black).\n- The dot crossfades into the white page's inline globe glyph (200ms) as the page fades up around it (300ms) - the cosmic dot becomes the page's own icon.\n- Total one-shot sequence; no loop, no user control.\n\n## Calibration\n- Everything is grayscale - Co-Star's monochrome discipline never breaks.\n- Zoom easing: linear in log-space (constant rate of scale change) - the hallmark of a proper powers-of-ten pull.\n\n## Reduced motion\nCut directly from the first aerial frame to the white page with a 400ms crossfade.\n\n## Don't miss\n- The pull-back never pauses at any altitude - no staged stops.\n- The final dot must be centered exactly where the page's globe glyph sits - the handoff position is the trick."</script>
+</body></html>

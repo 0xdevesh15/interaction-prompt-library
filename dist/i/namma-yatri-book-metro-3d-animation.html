@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Namma Yatri Book Metro 3D Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Namma Yatri Book Metro 3D Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/namma-yatri-book-metro-3d-animation"><b>Namma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/namma-yatri-book-metro-3d-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/namma-yatri-book-metro-3d-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Namma Yatri&#x27;s metro booking - a 3D isometric station scene (platform, benches, signage) where a white metro train glides in from the left and docks at the platform above the &quot;Book Metro&quot; bottom sheet.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc7243b21a129d11084b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc7243b21a129d11084b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-namma-yatri-book-metro-3d-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Namma Yatri&#x27;s metro booking - a 3D isometric station scene (platform, benches, signage) where a white metro train glides in from the left and docks at the platform above the &quot;Book Metro&quot; bottom sheet.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Upper two-thirds: an isometric 3D station - tiled platform with a yellow safety line, bench, hanging signs, pillars. A white metro train with dark windows slides along the track. Bottom sheet: &quot;Book Metro&quot; header, &quot;Source station&quot; row (filled), swap icon, &quot;Destination station&quot; row (&quot;Enter Destination Station&quot;).
+
+## Motion spec
+Pattern: train arrival loop, ~2s.
+- Arrival: the train enters from the left at constant speed (500px/s), decelerating (ease-out, last 40% of travel) to a precise stop with doors at the platform markers.
+- Idle: the train sits 1.2s with a subtle body settle (2px vertical, 300ms) and interior lights flicking on.
+- Loop: the train departs right (accelerating, ease-in, 900ms) and the cycle repeats after a beat.
+- Sheet: static and interactive throughout; dragging it up expands over the scene, the 3D view panning up slightly to compensate (200ms).
+
+## Calibration
+- The train stops at the same spot every loop - no drift between cycles.
+- The scene&#x27;s shadows move with the train (baked light, soft shadow under the cars).
+
+## Reduced motion
+The train fades in already docked; no loop.
+
+## Don&#x27;t miss
+- Deceleration is the realism cue - no constant-speed stop.
+- The sheet never animates with the train; the two planes stay independent.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">train arrival loop, ~2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/namma-yatri-book-metro-3d-animation">original interaction</a> by Namma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Namma Yatri's metro booking - a 3D isometric station scene (platform, benches, signage) where a white metro train glides in from the left and docks at the platform above the \"Book Metro\" bottom sheet.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nUpper two-thirds: an isometric 3D station - tiled platform with a yellow safety line, bench, hanging signs, pillars. A white metro train with dark windows slides along the track. Bottom sheet: \"Book Metro\" header, \"Source station\" row (filled), swap icon, \"Destination station\" row (\"Enter Destination Station\").\n\n## Motion spec\nPattern: train arrival loop, ~2s.\n- Arrival: the train enters from the left at constant speed (500px/s), decelerating (ease-out, last 40% of travel) to a precise stop with doors at the platform markers.\n- Idle: the train sits 1.2s with a subtle body settle (2px vertical, 300ms) and interior lights flicking on.\n- Loop: the train departs right (accelerating, ease-in, 900ms) and the cycle repeats after a beat.\n- Sheet: static and interactive throughout; dragging it up expands over the scene, the 3D view panning up slightly to compensate (200ms).\n\n## Calibration\n- The train stops at the same spot every loop - no drift between cycles.\n- The scene's shadows move with the train (baked light, soft shadow under the cars).\n\n## Reduced motion\nThe train fades in already docked; no loop.\n\n## Don't miss\n- Deceleration is the realism cue - no constant-speed stop.\n- The sheet never animates with the train; the two planes stay independent."</script>
+</body></html>

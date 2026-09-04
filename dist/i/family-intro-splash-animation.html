@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Intro Splash Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Intro Splash Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-intro-splash-animation"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-intro-splash-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-intro-splash-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Family&#x27;s onboarding splash - 3D coins tumble down a white screen, then a dense burst of cute character illustrations cascades in to fill the top two-thirds while the headline and buttons stagger into place below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a97da9e5458a034933958a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a97da9e5458a034933958a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-intro-splash-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Family&#x27;s onboarding splash - 3D coins tumble down a white screen, then a dense burst of cute character illustrations cascades in to fill the top two-thirds while the headline and buttons stagger into place below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen. Cast: gold 3D coins, a blue sheep-like mascot, hearts, gems, stars, rockets, blob characters (green, red, yellow). Bottom block: &quot;Your crypto. Your control.&quot; headline, subcopy, blue &quot;Create a New Wallet&quot; button, &quot;Add an Existing Wallet&quot; text action, fine print.
+
+## Motion spec
+Pattern: cascading illustration burst + staggered UI, ~2.5s.
+- 3-4 coins fall from the top with gravity, rotating on their axes, bouncing once (500ms).
+- The illustration cast bursts in from the top and sides (spring ~240/16), 30ms stagger, each landing at a fixed tilt in a dense collage that fills the upper two-thirds; the sheep mascot lands dead center last with a slightly bigger scale.
+- Headline types in... no - headline slides up and fades (300ms), subcopy 100ms later.
+- Buttons stagger in bottom-up (Create first, 150ms later Add Existing), spring ~350/22.
+- Fine print fades in last (200ms).
+
+## Calibration
+- The collage is dense but never covers the headline block - the lower third stays clean.
+- Each illustration has a fixed final tilt; they settle, they don&#x27;t keep floating.
+
+## Reduced motion
+Collage fades in fully composed (400ms); UI fades in after.
+
+## Don&#x27;t miss
+- Coins arrive before the characters - they&#x27;re the overture. Merging the two entrances flattens the sequence.
+- The blue mascot is the hero: center, largest, last. Demoting it breaks the brand moment.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cascading illustration burst + staggered UI, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-intro-splash-animation">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Family's onboarding splash - 3D coins tumble down a white screen, then a dense burst of cute character illustrations cascades in to fill the top two-thirds while the headline and buttons stagger into place below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen. Cast: gold 3D coins, a blue sheep-like mascot, hearts, gems, stars, rockets, blob characters (green, red, yellow). Bottom block: \"Your crypto. Your control.\" headline, subcopy, blue \"Create a New Wallet\" button, \"Add an Existing Wallet\" text action, fine print.\n\n## Motion spec\nPattern: cascading illustration burst + staggered UI, ~2.5s.\n- 3-4 coins fall from the top with gravity, rotating on their axes, bouncing once (500ms).\n- The illustration cast bursts in from the top and sides (spring ~240/16), 30ms stagger, each landing at a fixed tilt in a dense collage that fills the upper two-thirds; the sheep mascot lands dead center last with a slightly bigger scale.\n- Headline types in... no - headline slides up and fades (300ms), subcopy 100ms later.\n- Buttons stagger in bottom-up (Create first, 150ms later Add Existing), spring ~350/22.\n- Fine print fades in last (200ms).\n\n## Calibration\n- The collage is dense but never covers the headline block - the lower third stays clean.\n- Each illustration has a fixed final tilt; they settle, they don't keep floating.\n\n## Reduced motion\nCollage fades in fully composed (400ms); UI fades in after.\n\n## Don't miss\n- Coins arrive before the characters - they're the overture. Merging the two entrances flattens the sequence.\n- The blue mascot is the hero: center, largest, last. Demoting it breaks the brand moment."</script>
+</body></html>

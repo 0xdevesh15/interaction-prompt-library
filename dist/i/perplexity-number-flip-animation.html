@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perplexity Number Flip Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Perplexity Number Flip Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/perplexity-number-flip-animation"><b>Perplexity</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-number-flip-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-number-flip-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Perplexity&#x27;s campaign counter - a split-flap digit flip on the &quot;QUESTIONS USED&quot; tally inside a full-screen Champions Trophy Giveaway view, which then collapses seamlessly into a compact banner on the home screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd982f3b0964930ee2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd982f3b0964930ee2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-perplexity-number-flip-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Perplexity&#x27;s campaign counter - a split-flap digit flip on the &quot;QUESTIONS USED&quot; tally inside a full-screen Champions Trophy Giveaway view, which then collapses seamlessly into a compact banner on the home screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen dark-olive campaign view: Perplexity wordmark top center over huge condensed caps &quot;CHAMPIONS TROPHY GIVEAWAY&quot;, a small &quot;QUESTIONS USED&quot; label, a large &quot;1/10&quot; counter, fine-print terms below, a close X top-left and a progress bar at the very top. Home: light Perplexity start screen (&quot;Where knowledge begins&quot;, Ask anything bar, bottom nav) where the campaign becomes a compact dark banner card above the input.
+
+## Motion spec
+Pattern: split-flap digit flip plus a fullscreen-to-banner collapse.
+- Counter increment: the changed digit flips like a split-flap - the old digit&#x27;s top half tips down (rotateX 0 -&gt; -90deg, 150ms, ease-in), the new digit&#x27;s bottom half completes (rotateX 90 -&gt; 0, 150ms, ease-out), with a 1px seam shadow at the midpoint; &quot;1/10&quot; becomes &quot;2/10&quot;.
+- A subtle tick haptic and a brief digit glow (10% brightness flash, 100ms) land on the settled number.
+- Collapse: the full-screen view shrinks toward the banner slot (scale + translate matched to the banner&#x27;s rect, spring ~280/22, 500ms), its title and counter reflowing into the banner&#x27;s compact layout (elements crossfade to their small variants at 60% of the way).
+- The top progress bar slides up and out first (200ms), the X fades.
+- On home, the banner settles with a soft shadow (shadow fades in over 300ms).
+
+## Calibration
+- Only the changing digit flips; the &quot;/10&quot; stays rock still.
+- The collapse must be one continuous transform - the campaign never disappears and reappears.
+
+## Reduced motion
+Counter crossfades (200ms); collapse becomes a 250ms fade to the banner.
+
+## Don&#x27;t miss
+- Keep the condensed caps type and dark-olive color identical in both layouts.
+- The banner is tappable later - the collapse ends in a real, interactive card, not an image.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">split-flap digit flip plus a fullscreen-to-banner collapse.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/perplexity-number-flip-animation">original interaction</a> by Perplexity. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Perplexity's campaign counter - a split-flap digit flip on the \"QUESTIONS USED\" tally inside a full-screen Champions Trophy Giveaway view, which then collapses seamlessly into a compact banner on the home screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen dark-olive campaign view: Perplexity wordmark top center over huge condensed caps \"CHAMPIONS TROPHY GIVEAWAY\", a small \"QUESTIONS USED\" label, a large \"1/10\" counter, fine-print terms below, a close X top-left and a progress bar at the very top. Home: light Perplexity start screen (\"Where knowledge begins\", Ask anything bar, bottom nav) where the campaign becomes a compact dark banner card above the input.\n\n## Motion spec\nPattern: split-flap digit flip plus a fullscreen-to-banner collapse.\n- Counter increment: the changed digit flips like a split-flap - the old digit's top half tips down (rotateX 0 -> -90deg, 150ms, ease-in), the new digit's bottom half completes (rotateX 90 -> 0, 150ms, ease-out), with a 1px seam shadow at the midpoint; \"1/10\" becomes \"2/10\".\n- A subtle tick haptic and a brief digit glow (10% brightness flash, 100ms) land on the settled number.\n- Collapse: the full-screen view shrinks toward the banner slot (scale + translate matched to the banner's rect, spring ~280/22, 500ms), its title and counter reflowing into the banner's compact layout (elements crossfade to their small variants at 60% of the way).\n- The top progress bar slides up and out first (200ms), the X fades.\n- On home, the banner settles with a soft shadow (shadow fades in over 300ms).\n\n## Calibration\n- Only the changing digit flips; the \"/10\" stays rock still.\n- The collapse must be one continuous transform - the campaign never disappears and reappears.\n\n## Reduced motion\nCounter crossfades (200ms); collapse becomes a 250ms fade to the banner.\n\n## Don't miss\n- Keep the condensed caps type and dark-olive color identical in both layouts.\n- The banner is tappable later - the collapse ends in a real, interactive card, not an image."</script>
+</body></html>

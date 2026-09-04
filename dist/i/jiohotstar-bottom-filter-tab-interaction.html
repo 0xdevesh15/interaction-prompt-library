@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JioHotstar Bottom Filter Tab Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>JioHotstar Bottom Filter Tab Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/jiohotstar-bottom-filter-tab-interaction"><b>Jiohotstar</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jiohotstar-bottom-filter-tab-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jiohotstar-bottom-filter-tab-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: JioHotstar&#x27;s floating filter pill - TV and Movies chips in a pill above the tab bar re-filter the whole home page, dimming and swapping the hero and rails, with an X to clear back to everything.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5293a549438044fd44d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5293a549438044fd44d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-jiohotstar-bottom-filter-tab-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: JioHotstar&#x27;s floating filter pill - TV and Movies chips in a pill above the tab bar re-filter the whole home page, dimming and swapping the hero and rails, with an X to clear back to everything.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+JioHotstar home, dark: full-bleed hero (Sonic / Elio / ViR: The Robot Boy) with + and play buttons, content rails below (&quot;Popular in Kids&quot;, &quot;Indian Legends&quot;, &quot;Desi Heroes&quot;), the standard bottom tab bar, and a floating pill just above it holding &quot;TV&quot; and &quot;Movies&quot; chips (plus an X once a filter is active).
+
+## Motion spec
+Pattern: floating filter pill driving a whole-page content swap.
+- Tap a chip: it fills purple (150ms, spring ~400/20), the pill extends to reveal the X (width spring, 200ms), and the page dims to 40% with a slight blur (250ms) as a loading shimmer passes once over the rails.
+- The hero crossfades to filtered content (300ms) with the title lockup sliding up 12px as it lands; rails rebuild with posters fading in row by row (60ms stagger per row, top to bottom).
+- Selecting the other chip repeats the swap; tapping the active chip or the X clears it - the pill collapses back (X slides out, 200ms) and the page restores with the same dim-and-rebuild in reverse order.
+
+## Calibration
+- The pill floats above the tab bar, never fused to it - soft shadow, clear gap.
+- Dim-and-rebuild is fast enough to read as filtering, not navigation - total swap under 700ms.
+
+## Reduced motion
+Chip fills instantly; page crossfades without dim or stagger (250ms).
+
+## Don&#x27;t miss
+- The hero&#x27;s + and play buttons stay put through the crossfade - only the artwork and title swap.
+- The X appears only when a filter is active, and it leaves before the pill finishes collapsing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">floating filter pill driving a whole-page content swap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/jiohotstar-bottom-filter-tab-interaction">original interaction</a> by Jiohotstar. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: JioHotstar's floating filter pill - TV and Movies chips in a pill above the tab bar re-filter the whole home page, dimming and swapping the hero and rails, with an X to clear back to everything.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nJioHotstar home, dark: full-bleed hero (Sonic / Elio / ViR: The Robot Boy) with + and play buttons, content rails below (\"Popular in Kids\", \"Indian Legends\", \"Desi Heroes\"), the standard bottom tab bar, and a floating pill just above it holding \"TV\" and \"Movies\" chips (plus an X once a filter is active).\n\n## Motion spec\nPattern: floating filter pill driving a whole-page content swap.\n- Tap a chip: it fills purple (150ms, spring ~400/20), the pill extends to reveal the X (width spring, 200ms), and the page dims to 40% with a slight blur (250ms) as a loading shimmer passes once over the rails.\n- The hero crossfades to filtered content (300ms) with the title lockup sliding up 12px as it lands; rails rebuild with posters fading in row by row (60ms stagger per row, top to bottom).\n- Selecting the other chip repeats the swap; tapping the active chip or the X clears it - the pill collapses back (X slides out, 200ms) and the page restores with the same dim-and-rebuild in reverse order.\n\n## Calibration\n- The pill floats above the tab bar, never fused to it - soft shadow, clear gap.\n- Dim-and-rebuild is fast enough to read as filtering, not navigation - total swap under 700ms.\n\n## Reduced motion\nChip fills instantly; page crossfades without dim or stagger (250ms).\n\n## Don't miss\n- The hero's + and play buttons stay put through the crossfade - only the artwork and title swap.\n- The X appears only when a filter is active, and it leaves before the pill finishes collapsing."</script>
+</body></html>

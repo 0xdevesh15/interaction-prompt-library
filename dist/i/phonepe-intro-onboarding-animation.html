@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PhonePe Intro Onboarding Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>PhonePe Intro Onboarding Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/phonepe-intro-onboarding-animation"><b>Phonepe</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/phonepe-intro-onboarding-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/phonepe-intro-onboarding-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: PhonePe&#x27;s &quot;new look&quot; intro - a purple-on-white onboarding where feature cards assemble in staggers, icons morph between categories, and pages transition with springy slides, ending on a Payments made simple screen with Play Again and Explore Now.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd94b3dc09c7fe3881/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd94b3dc09c7fe3881/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-phonepe-intro-onboarding-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: PhonePe&#x27;s &quot;new look&quot; intro - a purple-on-white onboarding where feature cards assemble in staggers, icons morph between categories, and pages transition with springy slides, ending on a Payments made simple screen with Play Again and Explore Now.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screens with a close X top-right and page dots bottom. Page 1: &quot;Welcome!&quot; in purple, then a phone mock illustration with &quot;A fresh new look, with everything you need - right at your fingertips&quot; and a purple &quot;Let&#x27;s begin&quot; button. Page 2: &quot;All bills in one place&quot; with a Recharge &amp; bills card. Page 3: &quot;One stop for all finances&quot; with category cards (Recharge &amp; bills, Travel &amp; stays). Page 4: a 2x2 grid - Loans, Insurance, Savings, Mutual Funds. Page 5: &quot;Effortless and effective&quot; with an Alerts bell. Page 6: &quot;Payments made simple&quot; over an app screenshot with &quot;Play Again&quot; (outlined) and &quot;Explore Now&quot; (purple) buttons.
+
+## Motion spec
+Pattern: springy staggered card assembly with icon morphs across paged onboarding.
+- &quot;Welcome!&quot; scales in (spring ~320/16, scale 0.7 -&gt; 1) then slides up as the phone illustration rises (spring ~300/20) and Let&#x27;s begin fades in.
+- Page transitions: content slides left/right with the swipe (1:1 tracking) and springs to settle (~300/22); page dots slide with a stretch on the active dot.
+- Each page&#x27;s cards assemble with a 70ms stagger: rise 24pt + fade + slight rotation (-3deg -&gt; 0, spring ~320/16).
+- Between pages 2-4, the category icons morph: the old card&#x27;s icon shrinks to a dot and the new icon grows from it (scale crossfade with a shared-element arc path, 350ms).
+- The Alerts bell on page 5 rings on entry (rotate -12deg -&gt; 12deg -&gt; 0, 500ms, 2 wobbles).
+- Final page: the app screenshot slides up (spring ~280/20), buttons stagger in 100ms apart; Explore Now pulses once (scale 1 -&gt; 1.04 -&gt; 1, 400ms).
+
+## Calibration
+- Purple is the only accent: headers, active dot, primary buttons, icon highlights.
+- Staggers are always 70-100ms - never a single blob fade.
+
+## Reduced motion
+Pages and cards crossfade (250ms); no icon morph travel.
+
+## Don&#x27;t miss
+- The icon-morph continuity between category pages - icons are born from the previous icon.
+- &quot;Play Again&quot; restarts the sequence from page 1 with the same choreography.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy staggered card assembly with icon morphs across paged onboarding.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/phonepe-intro-onboarding-animation">original interaction</a> by Phonepe. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: PhonePe's \"new look\" intro - a purple-on-white onboarding where feature cards assemble in staggers, icons morph between categories, and pages transition with springy slides, ending on a Payments made simple screen with Play Again and Explore Now.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screens with a close X top-right and page dots bottom. Page 1: \"Welcome!\" in purple, then a phone mock illustration with \"A fresh new look, with everything you need - right at your fingertips\" and a purple \"Let's begin\" button. Page 2: \"All bills in one place\" with a Recharge & bills card. Page 3: \"One stop for all finances\" with category cards (Recharge & bills, Travel & stays). Page 4: a 2x2 grid - Loans, Insurance, Savings, Mutual Funds. Page 5: \"Effortless and effective\" with an Alerts bell. Page 6: \"Payments made simple\" over an app screenshot with \"Play Again\" (outlined) and \"Explore Now\" (purple) buttons.\n\n## Motion spec\nPattern: springy staggered card assembly with icon morphs across paged onboarding.\n- \"Welcome!\" scales in (spring ~320/16, scale 0.7 -> 1) then slides up as the phone illustration rises (spring ~300/20) and Let's begin fades in.\n- Page transitions: content slides left/right with the swipe (1:1 tracking) and springs to settle (~300/22); page dots slide with a stretch on the active dot.\n- Each page's cards assemble with a 70ms stagger: rise 24pt + fade + slight rotation (-3deg -> 0, spring ~320/16).\n- Between pages 2-4, the category icons morph: the old card's icon shrinks to a dot and the new icon grows from it (scale crossfade with a shared-element arc path, 350ms).\n- The Alerts bell on page 5 rings on entry (rotate -12deg -> 12deg -> 0, 500ms, 2 wobbles).\n- Final page: the app screenshot slides up (spring ~280/20), buttons stagger in 100ms apart; Explore Now pulses once (scale 1 -> 1.04 -> 1, 400ms).\n\n## Calibration\n- Purple is the only accent: headers, active dot, primary buttons, icon highlights.\n- Staggers are always 70-100ms - never a single blob fade.\n\n## Reduced motion\nPages and cards crossfade (250ms); no icon morph travel.\n\n## Don't miss\n- The icon-morph continuity between category pages - icons are born from the previous icon.\n- \"Play Again\" restarts the sequence from page 1 with the same choreography."</script>
+</body></html>

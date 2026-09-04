@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Licious Out for Delivery Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Licious Out for Delivery Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/licious-out-for-delivery-animation"><b>Licious</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/licious-out-for-delivery-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/licious-out-for-delivery-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Licious&#x27; out-for-delivery status - a looping illustration of a scooter rider bobbing through falling rain, wheels spinning, while a clock ticks the delivery window down.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb03c8169b1868c98554f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb03c8169b1868c98554f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-licious-out-for-delivery-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Licious&#x27; out-for-delivery status - a looping illustration of a scooter rider bobbing through falling rain, wheels spinning, while a clock ticks the delivery window down.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Order tracking screen: order ID header, &quot;Arriving by today, 10:06 AM - 10:26 AM&quot; window, the delivery illustration card, a status line, and the rider&#x27;s contact row. Motion lives in the illustration.
+
+## Motion spec
+Pattern: delivery scene loop, ~2s.
+- The scooter and rider bob as if riding over bumps (+-4px vertical, ~500ms cycle, ease-in-out); both wheels spin continuously (~700ms per turn).
+- Rain streaks fall across the whole card at a slight slant (~15deg), each drop traveling in ~700ms, spawning staggered so the fall is constant.
+- The rider&#x27;s box and scarf flutter subtly; small speed lines flicker behind the scooter.
+- The clock hand on the card&#x27;s edge ticks forward once per second with a tiny overshoot (spring stiffness 400 damping 12).
+
+## Calibration
+- The bob and the wheel spin are on different periods - synced motion reads as a toy.
+- Rain falls behind the scooter, never over the rider&#x27;s face.
+
+## Reduced motion
+Static illustration; the clock still ticks.
+
+## Don&#x27;t miss
+- The scooter stays pinned to its ground line - only the suspension bob moves, the wheels never leave the road.
+- The loop is seamless; there is no visible reset frame.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">delivery scene loop, ~2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/licious-out-for-delivery-animation">original interaction</a> by Licious. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Licious' out-for-delivery status - a looping illustration of a scooter rider bobbing through falling rain, wheels spinning, while a clock ticks the delivery window down.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOrder tracking screen: order ID header, \"Arriving by today, 10:06 AM - 10:26 AM\" window, the delivery illustration card, a status line, and the rider's contact row. Motion lives in the illustration.\n\n## Motion spec\nPattern: delivery scene loop, ~2s.\n- The scooter and rider bob as if riding over bumps (+-4px vertical, ~500ms cycle, ease-in-out); both wheels spin continuously (~700ms per turn).\n- Rain streaks fall across the whole card at a slight slant (~15deg), each drop traveling in ~700ms, spawning staggered so the fall is constant.\n- The rider's box and scarf flutter subtly; small speed lines flicker behind the scooter.\n- The clock hand on the card's edge ticks forward once per second with a tiny overshoot (spring stiffness 400 damping 12).\n\n## Calibration\n- The bob and the wheel spin are on different periods - synced motion reads as a toy.\n- Rain falls behind the scooter, never over the rider's face.\n\n## Reduced motion\nStatic illustration; the clock still ticks.\n\n## Don't miss\n- The scooter stays pinned to its ground line - only the suspension bob moves, the wheels never leave the road.\n- The loop is seamless; there is no visible reset frame."</script>
+</body></html>

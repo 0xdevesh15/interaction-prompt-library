@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClearPro Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ClearPro Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/clearpro-splash"><b>Clearpro</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clearpro-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clearpro-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: ClearPro&#x27;s splash - on black, a shield outline draws itself, the wordmark types in, and a green checkmark strokes into the shield to complete the logo.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd0661d73e2622b354a1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd0661d73e2622b354a1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-clearpro-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: ClearPro&#x27;s splash - on black, a shield outline draws itself, the wordmark types in, and a green checkmark strokes into the shield to complete the logo.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pure black screen. At center, the ClearPro shield: a rounded inverted-shield outline that draws in, the &quot;clearpro&quot; lowercase wordmark below it, and finally a green checkmark drawing inside the shield. A small lens-flare sparkle accents the shield&#x27;s upper edge.
+
+## Motion spec
+Pattern: sequential line-drawing logo build.
+- Shield outline (0-800ms): the stroke draws clockwise from the top (stroke-dashoffset animation, 800ms, ease-in-out), a bright comet head traveling with the draw point and a soft glow trailing it.
+- Wordmark (500-1100ms): &quot;clearpro&quot; letters fade in left to right (40ms per letter, opacity 0 to 1 with a 2px upward drift), overlapping the shield&#x27;s draw tail.
+- Checkmark (1100-1700ms): the green check strokes in - down-stroke then up-stroke (each 250ms, ease-out), with a green glow bloom at completion (shadow radius 0 to 18px and back to 8px, 400ms) and a sparkle burst at the shield&#x27;s top-left edge (4-point star scaling 0 to 1 to 0, 350ms).
+- Hold (1700ms+): the completed logo breathes once (scale 1 to 1.02 to 1, 500ms), then the whole splash crossfades to the app (400ms).
+
+## Calibration
+- The check is the payoff: saturated green, thicker stroke than the shield outline, slightly overshooting the shield&#x27;s vertical center.
+- Total sequence ~2.2s; skippable on tap after the wordmark completes.
+
+## Reduced motion
+Logo fades in fully formed.
+
+## Don&#x27;t miss
+- Everything is stroke-drawn, not opacity-faded shapes - the drawing order (shield, wordmark, check) is the story.
+- The sparkle is a single small accent; don&#x27;t scatter particles.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential line-drawing logo build.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/clearpro-splash">original interaction</a> by Clearpro. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: ClearPro's splash - on black, a shield outline draws itself, the wordmark types in, and a green checkmark strokes into the shield to complete the logo.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPure black screen. At center, the ClearPro shield: a rounded inverted-shield outline that draws in, the \"clearpro\" lowercase wordmark below it, and finally a green checkmark drawing inside the shield. A small lens-flare sparkle accents the shield's upper edge.\n\n## Motion spec\nPattern: sequential line-drawing logo build.\n- Shield outline (0-800ms): the stroke draws clockwise from the top (stroke-dashoffset animation, 800ms, ease-in-out), a bright comet head traveling with the draw point and a soft glow trailing it.\n- Wordmark (500-1100ms): \"clearpro\" letters fade in left to right (40ms per letter, opacity 0 to 1 with a 2px upward drift), overlapping the shield's draw tail.\n- Checkmark (1100-1700ms): the green check strokes in - down-stroke then up-stroke (each 250ms, ease-out), with a green glow bloom at completion (shadow radius 0 to 18px and back to 8px, 400ms) and a sparkle burst at the shield's top-left edge (4-point star scaling 0 to 1 to 0, 350ms).\n- Hold (1700ms+): the completed logo breathes once (scale 1 to 1.02 to 1, 500ms), then the whole splash crossfades to the app (400ms).\n\n## Calibration\n- The check is the payoff: saturated green, thicker stroke than the shield outline, slightly overshooting the shield's vertical center.\n- Total sequence ~2.2s; skippable on tap after the wordmark completes.\n\n## Reduced motion\nLogo fades in fully formed.\n\n## Don't miss\n- Everything is stroke-drawn, not opacity-faded shapes - the drawing order (shield, wordmark, check) is the story.\n- The sparkle is a single small accent; don't scatter particles."</script>
+</body></html>

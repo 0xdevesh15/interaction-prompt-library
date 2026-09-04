@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Peaks Onboarding Wave Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Peaks Onboarding Wave Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/peaks-onboarding-wave-animation"><b>Peaks</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/peaks-onboarding-wave-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/peaks-onboarding-wave-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Peaks&#x27; circadian onboarding - a wave graph in the top panel morphs from a faint outline into a glowing gradient energy curve as copy pages advance, with emoji markers popping along the wave.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687314050e3615485c3fbd38/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687314050e3615485c3fbd38/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-peaks-onboarding-wave-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Peaks&#x27; circadian onboarding - a wave graph in the top panel morphs from a faint outline into a glowing gradient energy curve as copy pages advance, with emoji markers popping along the wave.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light lavender-gray top panel holding a smooth two-hump wave line with small square endpoint markers; white bottom area with centered copy and a &quot;Tap to continue&quot; link. Page 1: &quot;Energy in your body rises and falls.&quot; Page 2: &quot;This cycle controls when you feel (lightning) energetic or (sleepy) tired.&quot; Page 3: &quot;Sync with your rhythm to sleep better, feel more energized, and be more productive.&quot;
+
+## Motion spec
+Pattern: tap-advanced onboarding where a wave graph progressively comes alive.
+- Initial state: the wave is a thin gray outline at 30% opacity.
+- Page 1 (tap): the wave draws itself left to right (stroke trim, 900ms, ease-in-out) and its gradient fills in (yellow at peaks -&gt; teal-green at troughs, opacity to 100%, 600ms).
+- Page 2 (tap): emoji markers pop onto the curve at its peaks and troughs (lightning at peaks, sleepy face at troughs; scale 0 -&gt; 1.2 -&gt; 1, spring ~340/13, staggered 120ms left to right) with soft glow dots behind them.
+- Page 3 (tap): the wave settles into a gentle idle undulation (the whole path breathes, amplitude +-6%, 4s loop) while the copy crossfades (250ms per page change, old text up and out, new text up and in).
+- Copy changes are the only bottom-area motion; &quot;Tap to continue&quot; pulses subtly (opacity 0.6 -&gt; 1, 2s).
+
+## Calibration
+- The wave&#x27;s shape (two humps, endpoints marked) never changes - only its color, glow, and ornamentation evolve.
+- Emoji land exactly on the curve&#x27;s local maxima and minima.
+
+## Reduced motion
+Wave states crossfade (300ms) per tap; no draw-on, no pop springs.
+
+## Don&#x27;t miss
+- The top panel and bottom copy are independent layers: panel animates, bottom swaps.
+- Keep the endpoint square markers visible in every state - they frame the wave.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-advanced onboarding where a wave graph progressively comes alive.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/peaks-onboarding-wave-animation">original interaction</a> by Peaks. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Peaks' circadian onboarding - a wave graph in the top panel morphs from a faint outline into a glowing gradient energy curve as copy pages advance, with emoji markers popping along the wave.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight lavender-gray top panel holding a smooth two-hump wave line with small square endpoint markers; white bottom area with centered copy and a \"Tap to continue\" link. Page 1: \"Energy in your body rises and falls.\" Page 2: \"This cycle controls when you feel (lightning) energetic or (sleepy) tired.\" Page 3: \"Sync with your rhythm to sleep better, feel more energized, and be more productive.\"\n\n## Motion spec\nPattern: tap-advanced onboarding where a wave graph progressively comes alive.\n- Initial state: the wave is a thin gray outline at 30% opacity.\n- Page 1 (tap): the wave draws itself left to right (stroke trim, 900ms, ease-in-out) and its gradient fills in (yellow at peaks -> teal-green at troughs, opacity to 100%, 600ms).\n- Page 2 (tap): emoji markers pop onto the curve at its peaks and troughs (lightning at peaks, sleepy face at troughs; scale 0 -> 1.2 -> 1, spring ~340/13, staggered 120ms left to right) with soft glow dots behind them.\n- Page 3 (tap): the wave settles into a gentle idle undulation (the whole path breathes, amplitude +-6%, 4s loop) while the copy crossfades (250ms per page change, old text up and out, new text up and in).\n- Copy changes are the only bottom-area motion; \"Tap to continue\" pulses subtly (opacity 0.6 -> 1, 2s).\n\n## Calibration\n- The wave's shape (two humps, endpoints marked) never changes - only its color, glow, and ornamentation evolve.\n- Emoji land exactly on the curve's local maxima and minima.\n\n## Reduced motion\nWave states crossfade (300ms) per tap; no draw-on, no pop springs.\n\n## Don't miss\n- The top panel and bottom copy are independent layers: panel animates, bottom swaps.\n- Keep the endpoint square markers visible in every state - they frame the wave."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Perfect Lesson Slow Clap - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Perfect Lesson Slow Clap</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-perfect-lesson-slow-clap"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-perfect-lesson-slow-clap">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-perfect-lesson-slow-clap">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s perfect lesson celebration - Lily and Duo cheer center-screen as three reward cards pop in with a stagger and sparkle bursts fire around the characters.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b2195ec7d0ca132d5e960/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b2195ec7d0ca132d5e960/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-perfect-lesson-slow-clap.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s perfect lesson celebration - Lily and Duo cheer center-screen as three reward cards pop in with a stagger and sparkle bursts fire around the characters.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white lesson-complete screen: &quot;Perfect lesson!&quot; with &quot;Take a bow!&quot; beneath it, Lily (purple hair) standing beside an excited Duo who jumps at her side. Below the headline, three reward chips in a row: a yellow XP card (+19), a green &quot;100%&quot; accuracy card, and a blue timer card (2:01). A blue &quot;CLAIM XP&quot; button sits at the bottom. Sparkle particles flash around the characters.
+
+## Motion spec
+Pattern: staggered reward reveal with character celebration, ~2s total.
+- The headline fades up first (300ms), then the characters spring in (scale 0.8 to 1, spring stiffness 340 damping 18), Duo bouncing beside Lily with a double-hop (two 150ms arcs).
+- The three reward cards pop in left to right (spring stiffness 400 damping 20, 150ms stagger), each with a slight overshoot.
+- Sparkle bursts (4-point stars, yellow and white) flash around the characters at 400ms intervals, each living 300ms.
+- Duo keeps a celebratory idle: small hops and wing flaps on a 1.2s loop while Lily bows her head once.
+- The CLAIM XP button fades up last (200ms).
+
+## Calibration
+- The stagger order is fixed: headline, characters, cards, button.
+- Sparkles are sparse flashes, not a particle storm.
+
+## Reduced motion
+All elements fade in together; characters static.
+
+## Don&#x27;t miss
+- Duo&#x27;s excitement is motion - hops and flaps - while Lily&#x27;s is a single bow.
+- The reward cards are three distinct colors with distinct icons.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered reward reveal with character celebration, ~2s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-perfect-lesson-slow-clap">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's perfect lesson celebration - Lily and Duo cheer center-screen as three reward cards pop in with a stagger and sparkle bursts fire around the characters.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white lesson-complete screen: \"Perfect lesson!\" with \"Take a bow!\" beneath it, Lily (purple hair) standing beside an excited Duo who jumps at her side. Below the headline, three reward chips in a row: a yellow XP card (+19), a green \"100%\" accuracy card, and a blue timer card (2:01). A blue \"CLAIM XP\" button sits at the bottom. Sparkle particles flash around the characters.\n\n## Motion spec\nPattern: staggered reward reveal with character celebration, ~2s total.\n- The headline fades up first (300ms), then the characters spring in (scale 0.8 to 1, spring stiffness 340 damping 18), Duo bouncing beside Lily with a double-hop (two 150ms arcs).\n- The three reward cards pop in left to right (spring stiffness 400 damping 20, 150ms stagger), each with a slight overshoot.\n- Sparkle bursts (4-point stars, yellow and white) flash around the characters at 400ms intervals, each living 300ms.\n- Duo keeps a celebratory idle: small hops and wing flaps on a 1.2s loop while Lily bows her head once.\n- The CLAIM XP button fades up last (200ms).\n\n## Calibration\n- The stagger order is fixed: headline, characters, cards, button.\n- Sparkles are sparse flashes, not a particle storm.\n\n## Reduced motion\nAll elements fade in together; characters static.\n\n## Don't miss\n- Duo's excitement is motion - hops and flaps - while Lily's is a single bow.\n- The reward cards are three distinct colors with distinct icons."</script>
+</body></html>

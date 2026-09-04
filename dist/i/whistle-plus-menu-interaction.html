@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Whistle Plus Menu Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Whistle Plus Menu Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/whistle-plus-menu-interaction"><b>Whistle</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/whistle-plus-menu-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/whistle-plus-menu-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Whistle&#x27;s plus menu - tapping the blue + in the tab bar blurs the Today screen and springs up four quick actions (&quot;Create for me&quot;, &quot;Create from scratch&quot;, &quot;Templates&quot;, &quot;Recent Workouts&quot;) staggered from the button; tapping anywhere collapses them back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cdd32b33c1c85777b30d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cdd32b33c1c85777b30d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-whistle-plus-menu-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Whistle&#x27;s plus menu - tapping the blue + in the tab bar blurs the Today screen and springs up four quick actions (&quot;Create for me&quot;, &quot;Create from scratch&quot;, &quot;Templates&quot;, &quot;Recent Workouts&quot;) staggered from the button; tapping anywhere collapses them back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light Today screen: week strip, an illustration card (&quot;No Workouts&quot; with &quot;+ Add Workout&quot;), and a tab bar with a central blue + button. Open state: the whole screen blurs (20px) and dims; four rows float above the +, each a colored circular icon (purple sparkles, blue pencil, orange grid, yellow clock) with a label.
+
+## Motion spec
+Pattern: staggered FAB menu, ~450ms.
+- Open: the + rotates 45deg into an X (250ms, spring ~380/20) as the background blurs (250ms) and scales to 0.97.
+- Items: each row springs up from the +&#x27;s center (spring ~340/20, 350ms), 60ms apart, bottom item first, rising ~56px per slot with a fade.
+- Close: rows collapse in reverse order (40ms stagger) back into the button, which rotates back; the blur clears (250ms).
+- Tap a row: the row flashes (120ms), the menu collapses, and the destination pushes in.
+
+## Calibration
+- Rows rise from the button, not from the screen edge - the origin point is the +.
+- The blur and the first row start together.
+
+## Reduced motion
+The menu fades in as a group (250ms) over a dim without blur.
+
+## Don&#x27;t miss
+- Bottom-first stagger is the natural reading order here - do not reverse it.
+- The + stays in the tab bar; the menu floats above it, not over a sheet.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered FAB menu, ~450ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/whistle-plus-menu-interaction">original interaction</a> by Whistle. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Whistle's plus menu - tapping the blue + in the tab bar blurs the Today screen and springs up four quick actions (\"Create for me\", \"Create from scratch\", \"Templates\", \"Recent Workouts\") staggered from the button; tapping anywhere collapses them back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight Today screen: week strip, an illustration card (\"No Workouts\" with \"+ Add Workout\"), and a tab bar with a central blue + button. Open state: the whole screen blurs (20px) and dims; four rows float above the +, each a colored circular icon (purple sparkles, blue pencil, orange grid, yellow clock) with a label.\n\n## Motion spec\nPattern: staggered FAB menu, ~450ms.\n- Open: the + rotates 45deg into an X (250ms, spring ~380/20) as the background blurs (250ms) and scales to 0.97.\n- Items: each row springs up from the +'s center (spring ~340/20, 350ms), 60ms apart, bottom item first, rising ~56px per slot with a fade.\n- Close: rows collapse in reverse order (40ms stagger) back into the button, which rotates back; the blur clears (250ms).\n- Tap a row: the row flashes (120ms), the menu collapses, and the destination pushes in.\n\n## Calibration\n- Rows rise from the button, not from the screen edge - the origin point is the +.\n- The blur and the first row start together.\n\n## Reduced motion\nThe menu fades in as a group (250ms) over a dim without blur.\n\n## Don't miss\n- Bottom-first stagger is the natural reading order here - do not reverse it.\n- The + stays in the tab bar; the menu floats above it, not over a sheet."</script>
+</body></html>

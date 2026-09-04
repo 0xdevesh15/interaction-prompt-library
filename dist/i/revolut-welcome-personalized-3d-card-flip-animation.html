@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revolut Welcome Personalized 3D Card Flip Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Revolut Welcome Personalized 3D Card Flip Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/revolut-welcome-personalized-3d-card-flip-animation"><b>Revolut</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-welcome-personalized-3d-card-flip-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-welcome-personalized-3d-card-flip-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Revolut&#x27;s &quot;Make it yours&quot; showcase - a 3D card draws a doodle onto its face, then flips through a series of personalized designs while the login buttons stay pinned below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756da9d63a84726545f3296/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756da9d63a84726545f3296/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-revolut-welcome-personalized-3d-card-flip-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Revolut&#x27;s &quot;Make it yours&quot; showcase - a 3D card draws a doodle onto its face, then flips through a series of personalized designs while the login buttons stay pinned below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Revolut&#x27;s dark welcome screen: &quot;MAKE IT YOURS&quot; headline with the sub-line &quot;Personalization fees may apply&quot;, and two bottom buttons (&quot;Log in to Revolut&quot;, &quot;Create a new account&quot;). Center stage, a 3D card in perspective: it begins plain yellow, a black doodle (sun, squiggles, &quot;HELLO&quot; text) draws itself onto the face, then the card flips edge-on and re-emerges as new designs - a purple patterned card, then inflatable-style art cards with a &quot;£190&quot; readout.
+
+## Motion spec
+Pattern: card doodle and flip cycle, ~6s loop.
+- The plain card rotates slowly in 3D (plus/minus 15 degrees on Y, 4s sway) showing real thickness and edge.
+- The doodle draws on stroke by stroke (2s, like a marker), each element appearing in sequence on the card face.
+- The card flips: rotating edge-on (300ms, ease-in), the face vanishing at the edge-on moment, then rotating back out with a new design (300ms, ease-out) - a full 180-degree flip through the edge.
+- Each design holds ~2s with the slow sway before flipping to the next; the last frame flips back to plain and the loop restarts.
+- Headline and buttons never move.
+
+## Calibration
+- The flip must pass through a true edge-on state - a skew fake reads wrong at this size.
+- Designs fill the card face completely; card geometry (rounded corners, chip) stays constant.
+
+## Reduced motion
+Designs crossfade; doodle appears complete.
+
+## Don&#x27;t miss
+- The doodle draws onto the perspective-tilted face - strokes follow the card&#x27;s surface.
+- The card casts a soft shadow that shifts with its rotation.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card doodle and flip cycle, ~6s loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/revolut-welcome-personalized-3d-card-flip-animation">original interaction</a> by Revolut. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Revolut's \"Make it yours\" showcase - a 3D card draws a doodle onto its face, then flips through a series of personalized designs while the login buttons stay pinned below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRevolut's dark welcome screen: \"MAKE IT YOURS\" headline with the sub-line \"Personalization fees may apply\", and two bottom buttons (\"Log in to Revolut\", \"Create a new account\"). Center stage, a 3D card in perspective: it begins plain yellow, a black doodle (sun, squiggles, \"HELLO\" text) draws itself onto the face, then the card flips edge-on and re-emerges as new designs - a purple patterned card, then inflatable-style art cards with a \"\u00a3190\" readout.\n\n## Motion spec\nPattern: card doodle and flip cycle, ~6s loop.\n- The plain card rotates slowly in 3D (plus/minus 15 degrees on Y, 4s sway) showing real thickness and edge.\n- The doodle draws on stroke by stroke (2s, like a marker), each element appearing in sequence on the card face.\n- The card flips: rotating edge-on (300ms, ease-in), the face vanishing at the edge-on moment, then rotating back out with a new design (300ms, ease-out) - a full 180-degree flip through the edge.\n- Each design holds ~2s with the slow sway before flipping to the next; the last frame flips back to plain and the loop restarts.\n- Headline and buttons never move.\n\n## Calibration\n- The flip must pass through a true edge-on state - a skew fake reads wrong at this size.\n- Designs fill the card face completely; card geometry (rounded corners, chip) stays constant.\n\n## Reduced motion\nDesigns crossfade; doodle appears complete.\n\n## Don't miss\n- The doodle draws onto the perspective-tilted face - strokes follow the card's surface.\n- The card casts a soft shadow that shifts with its rotation."</script>
+</body></html>

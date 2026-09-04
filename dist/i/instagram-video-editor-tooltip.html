@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Video Editor Tooltip - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Video Editor Tooltip</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-video-editor-tooltip"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-video-editor-tooltip">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-video-editor-tooltip">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Instagram&#x27;s video-editor coach mark - a dark overlay card with an animated hand-drag illustration teaching &quot;Hold and drag to change preview size,&quot; which fades and scales away when dismissed.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b59e08225b7b88f7928341/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b59e08225b7b88f7928341/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-video-editor-tooltip.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Instagram&#x27;s video-editor coach mark - a dark overlay card with an animated hand-drag illustration teaching &quot;Hold and drag to change preview size,&quot; which fades and scales away when dismissed.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The video editor: gray preview stage top, timeline strip and tool rows below, all dimmed. Centered over the stage: a coach-mark card with a looping gesture illustration - a hand pointer holding and dragging on a mini phone frame while a yellow fill shows the preview resizing - plus the caption &quot;Hold and drag to change preview size&quot; and a Skip button.
+
+## Motion spec
+Pattern: looping gesture-demo coach mark.
+- The card fades in and scales from 0.92 to 1.0 (250ms, ease-out) when the editor first opens.
+- The illustration loops continuously (~1.6s per loop): the hand presses (small scale dip), drags horizontally, the mini preview&#x27;s yellow area resizes 1:1 with the drag, then a 300ms pause and the loop restarts.
+- The editor chrome behind stays dimmed and inert while the card is up.
+- Dismiss (Skip or tap the card): the card scales to 0.9 and fades out (200ms, ease-in), and the editor undims at the same time.
+
+## Calibration
+- The loop&#x27;s pause at the end is what makes it readable; without it the gesture blurs into noise.
+- The yellow resize fill must track the hand 1:1 - lagging breaks the teaching moment.
+
+## Reduced motion
+Show the illustration&#x27;s end state statically; card dismissal is a plain fade.
+
+## Don&#x27;t miss
+- The coach mark is one card: illustration, caption, and Skip move together.
+- Undim the editor with the dismissal, not after - the user should land on a ready editor.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping gesture-demo coach mark.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-video-editor-tooltip">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Instagram's video-editor coach mark - a dark overlay card with an animated hand-drag illustration teaching \"Hold and drag to change preview size,\" which fades and scales away when dismissed.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe video editor: gray preview stage top, timeline strip and tool rows below, all dimmed. Centered over the stage: a coach-mark card with a looping gesture illustration - a hand pointer holding and dragging on a mini phone frame while a yellow fill shows the preview resizing - plus the caption \"Hold and drag to change preview size\" and a Skip button.\n\n## Motion spec\nPattern: looping gesture-demo coach mark.\n- The card fades in and scales from 0.92 to 1.0 (250ms, ease-out) when the editor first opens.\n- The illustration loops continuously (~1.6s per loop): the hand presses (small scale dip), drags horizontally, the mini preview's yellow area resizes 1:1 with the drag, then a 300ms pause and the loop restarts.\n- The editor chrome behind stays dimmed and inert while the card is up.\n- Dismiss (Skip or tap the card): the card scales to 0.9 and fades out (200ms, ease-in), and the editor undims at the same time.\n\n## Calibration\n- The loop's pause at the end is what makes it readable; without it the gesture blurs into noise.\n- The yellow resize fill must track the hand 1:1 - lagging breaks the teaching moment.\n\n## Reduced motion\nShow the illustration's end state statically; card dismissal is a plain fade.\n\n## Don't miss\n- The coach mark is one card: illustration, caption, and Skip move together.\n- Undim the editor with the dismissal, not after - the user should land on a ready editor."</script>
+</body></html>

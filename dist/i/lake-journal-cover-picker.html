@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lake Journal Cover Picker - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lake Journal Cover Picker</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lake-journal-cover-picker"><b>Lake</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lake-journal-cover-picker">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lake-journal-cover-picker">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Lake&#x27;s journal cover picker - a &quot;First things first. Choose a cover.&quot; screen where a centered journal preview crossfades fluidly between artwork covers as you swipe the horizontal color-dot picker beneath it, the selected dot ring-highlighting in sync.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e65d11d5a0fec069fa/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e65d11d5a0fec069fa/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lake-journal-cover-picker.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Lake&#x27;s journal cover picker - a &quot;First things first. Choose a cover.&quot; screen where a centered journal preview crossfades fluidly between artwork covers as you swipe the horizontal color-dot picker beneath it, the selected dot ring-highlighting in sync.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Off-white screen: title &quot;First things first. Choose a cover.&quot;, centered journal book preview (standing cover with soft drop shadow), a horizontal row of circular color/artwork swatches below it, and a dark Next pill button. Preceded by the store&#x27;s &quot;Coloring Journal&quot; product card.
+
+## Motion spec
+Pattern: swipe picker with artwork crossfade.
+- Swipe the swatch row: it scrolls with momentum and decelerates (standard scroll physics), snapping to center the nearest swatch (spring ~360/28, 300ms).
+- The centered swatch gets a ring outline (scale 1 -&gt; 1.15 with the ring, 200ms) and the journal preview crossfades to its artwork (350ms ease-out) with a slight cover tilt (+/-4deg rotateY during the swap) like the book is being turned.
+- Tap a swatch: the row scrolls it to center (spring ~360/28, 350ms) and the same crossfade plays.
+- The journal shadow shifts subtly with the tilt (offset follows rotateY).
+
+## Calibration
+- The crossfade is artwork-only - the book&#x27;s white page edges and shadow stay constant, grounding the swap.
+- Selection ring color matches the artwork&#x27;s dominant hue.
+
+## Reduced motion
+Artwork swaps with a 250ms fade, no tilt.
+
+## Don&#x27;t miss
+- The book preview is a 3/4 standing render, not a flat square - keep the spine edge visible.
+- Swatches are circular crops of the actual artwork, not flat color chips.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe picker with artwork crossfade.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lake-journal-cover-picker">original interaction</a> by Lake. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Lake's journal cover picker - a \"First things first. Choose a cover.\" screen where a centered journal preview crossfades fluidly between artwork covers as you swipe the horizontal color-dot picker beneath it, the selected dot ring-highlighting in sync.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOff-white screen: title \"First things first. Choose a cover.\", centered journal book preview (standing cover with soft drop shadow), a horizontal row of circular color/artwork swatches below it, and a dark Next pill button. Preceded by the store's \"Coloring Journal\" product card.\n\n## Motion spec\nPattern: swipe picker with artwork crossfade.\n- Swipe the swatch row: it scrolls with momentum and decelerates (standard scroll physics), snapping to center the nearest swatch (spring ~360/28, 300ms).\n- The centered swatch gets a ring outline (scale 1 -> 1.15 with the ring, 200ms) and the journal preview crossfades to its artwork (350ms ease-out) with a slight cover tilt (+/-4deg rotateY during the swap) like the book is being turned.\n- Tap a swatch: the row scrolls it to center (spring ~360/28, 350ms) and the same crossfade plays.\n- The journal shadow shifts subtly with the tilt (offset follows rotateY).\n\n## Calibration\n- The crossfade is artwork-only - the book's white page edges and shadow stay constant, grounding the swap.\n- Selection ring color matches the artwork's dominant hue.\n\n## Reduced motion\nArtwork swaps with a 250ms fade, no tilt.\n\n## Don't miss\n- The book preview is a 3/4 standing render, not a flat square - keep the spine edge visible.\n- Swatches are circular crops of the actual artwork, not flat color chips."</script>
+</body></html>

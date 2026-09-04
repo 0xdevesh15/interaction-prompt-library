@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>uCal Swipe to Switch Time Day Week Month Year Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>uCal Swipe to Switch Time Day Week Month Year Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ucal-swipe-to-switch-time-day-week-month-year-interaction"><b>Ucal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ucal-swipe-to-switch-time-day-week-month-year-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ucal-swipe-to-switch-time-day-week-month-year-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: uCal&#x27;s scale switch - scrubbing spins the concentric time track while the central indicator morphs shape and the whole dial rescales between days, weeks, months, and years.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f244f2a68b6428c817a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f244f2a68b6428c817a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ucal-swipe-to-switch-time-day-week-month-year-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: uCal&#x27;s scale switch - scrubbing spins the concentric time track while the central indicator morphs shape and the whole dial rescales between days, weeks, months, and years.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen with the concentric U-track dial: nested thin rings forming a vertical stadium shape around a dark core. The central indicator is a small blue circle (clock glyph when at day scale, a plain dot at coarser scales). Header shows the focused date (&quot;2 Oct 2025&quot;, &quot;Friday, 3 Oct 2025&quot;, &quot;6 Jan 2026&quot;...); bottom row names the scale (Days, Weeks, Months) around &quot;Sync Calendar&quot;.
+
+## Motion spec
+Pattern: dial rotation with indicator morph and scale rescale.
+- Horizontal or curved drags rotate the dial: ring markings sweep through the bottom read point with 1:1 angular tracking and momentum on release (friction ~0.92/frame), easing to rest.
+- The indicator morphs with scale: a full clock circle at Days/Hours (ring + hand) that collapses to a plain dot at Months/Years (scale + stroke fade, 250ms, spring ~320/20).
+- Switching scales rescales the dial&#x27;s line density: rings compress or expand radially (300ms ease-in-out) as tick labels fade and re-render (200ms).
+- The header date updates continuously during scrub, and its precision follows the scale (weekday + time at day scale, date only at month scale).
+
+## Calibration
+- Ring rotation is perfectly concentric - all rings share one center; no wobble.
+- The indicator sits dead-center at the dial&#x27;s bottom and never travels; time flows through it.
+
+## Reduced motion
+Rotation moves in discrete steps; indicator swaps shape without morph.
+
+## Don&#x27;t miss
+- The dial&#x27;s rings are hairlines on black - the entire UI is line weight, glow, and motion.
+- Scale label and header always agree; there is no transient state where they disagree.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">dial rotation with indicator morph and scale rescale.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ucal-swipe-to-switch-time-day-week-month-year-interaction">original interaction</a> by Ucal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: uCal's scale switch - scrubbing spins the concentric time track while the central indicator morphs shape and the whole dial rescales between days, weeks, months, and years.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen with the concentric U-track dial: nested thin rings forming a vertical stadium shape around a dark core. The central indicator is a small blue circle (clock glyph when at day scale, a plain dot at coarser scales). Header shows the focused date (\"2 Oct 2025\", \"Friday, 3 Oct 2025\", \"6 Jan 2026\"...); bottom row names the scale (Days, Weeks, Months) around \"Sync Calendar\".\n\n## Motion spec\nPattern: dial rotation with indicator morph and scale rescale.\n- Horizontal or curved drags rotate the dial: ring markings sweep through the bottom read point with 1:1 angular tracking and momentum on release (friction ~0.92/frame), easing to rest.\n- The indicator morphs with scale: a full clock circle at Days/Hours (ring + hand) that collapses to a plain dot at Months/Years (scale + stroke fade, 250ms, spring ~320/20).\n- Switching scales rescales the dial's line density: rings compress or expand radially (300ms ease-in-out) as tick labels fade and re-render (200ms).\n- The header date updates continuously during scrub, and its precision follows the scale (weekday + time at day scale, date only at month scale).\n\n## Calibration\n- Ring rotation is perfectly concentric - all rings share one center; no wobble.\n- The indicator sits dead-center at the dial's bottom and never travels; time flows through it.\n\n## Reduced motion\nRotation moves in discrete steps; indicator swaps shape without morph.\n\n## Don't miss\n- The dial's rings are hairlines on black - the entire UI is line weight, glow, and motion.\n- Scale label and header always agree; there is no transient state where they disagree."</script>
+</body></html>

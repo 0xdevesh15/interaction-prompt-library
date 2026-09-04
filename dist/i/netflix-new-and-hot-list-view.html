@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Netflix New and Hot List View - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Netflix New and Hot List View</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/netflix-new-and-hot-list-view"><b>Netflix</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/netflix-new-and-hot-list-view">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/netflix-new-and-hot-list-view">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Netflix&#x27;s New &amp; Hot tabs - a horizontal pill tab bar that scrolls to center the tapped pill while the content list crossfades to the selected category.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb39225b7b88f78c6abd/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb39225b7b88f78c6abd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-netflix-new-and-hot-list-view.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Netflix&#x27;s New &amp; Hot tabs - a horizontal pill tab bar that scrolls to center the tapped pill while the content list crossfades to the selected category.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The &quot;New &amp; Hot&quot; screen: under the header, a horizontal scrolling row of pills - Coming Soon, Everyone&#x27;s Watching, Top 10 TV Shows, Top 10 Movies. The selected pill is white with dark text; others are dark with light text. Below, a vertical list of title cards (or ranked rows with big numerals for Top 10).
+
+## Motion spec
+Pattern: center-scrolling pill tabs with content swap.
+- Tap a pill: the bar scrolls horizontally so the tapped pill lands at center (300ms, ease-out), the white selected style sliding from the old pill to the new one (background and text color crossfade, 200ms).
+- Pills maintain momentum scrolling with rubber-band edges; selection scroll and user scroll compose - tapping during a manual scroll still centers.
+- The list below crossfades to the new category (250ms) with a slight upward drift (12px); ranked categories reveal their large outline numerals with a 40ms-per-row stagger.
+- The header and tab bar stay pinned during content swaps.
+
+## Calibration
+- Centering must account for pills at the bar&#x27;s edges - first/last pills center as far as the scroll allows without overshooting the rubber band.
+- Only the tapped pill&#x27;s style changes; hovering/adjacent pills stay put.
+
+## Reduced motion
+Instant scroll and crossfade.
+
+## Don&#x27;t miss
+- The white pill is a true pill (full-radius ends), sized to its label with even padding.
+- Top 10 rows use oversized outlined numerals beside each card - that ranking typography is the category&#x27;s signature.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">center-scrolling pill tabs with content swap.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/netflix-new-and-hot-list-view">original interaction</a> by Netflix. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Netflix's New & Hot tabs - a horizontal pill tab bar that scrolls to center the tapped pill while the content list crossfades to the selected category.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe \"New & Hot\" screen: under the header, a horizontal scrolling row of pills - Coming Soon, Everyone's Watching, Top 10 TV Shows, Top 10 Movies. The selected pill is white with dark text; others are dark with light text. Below, a vertical list of title cards (or ranked rows with big numerals for Top 10).\n\n## Motion spec\nPattern: center-scrolling pill tabs with content swap.\n- Tap a pill: the bar scrolls horizontally so the tapped pill lands at center (300ms, ease-out), the white selected style sliding from the old pill to the new one (background and text color crossfade, 200ms).\n- Pills maintain momentum scrolling with rubber-band edges; selection scroll and user scroll compose - tapping during a manual scroll still centers.\n- The list below crossfades to the new category (250ms) with a slight upward drift (12px); ranked categories reveal their large outline numerals with a 40ms-per-row stagger.\n- The header and tab bar stay pinned during content swaps.\n\n## Calibration\n- Centering must account for pills at the bar's edges - first/last pills center as far as the scroll allows without overshooting the rubber band.\n- Only the tapped pill's style changes; hovering/adjacent pills stay put.\n\n## Reduced motion\nInstant scroll and crossfade.\n\n## Don't miss\n- The white pill is a true pill (full-radius ends), sized to its label with even padding.\n- Top 10 rows use oversized outlined numerals beside each card - that ranking typography is the category's signature."</script>
+</body></html>

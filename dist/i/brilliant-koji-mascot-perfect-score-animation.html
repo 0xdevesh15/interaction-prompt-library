@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brilliant Koji Mascot Perfect Score Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Brilliant Koji Mascot Perfect Score Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/brilliant-koji-mascot-perfect-score-animation"><b>Brilliant</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-koji-mascot-perfect-score-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-koji-mascot-perfect-score-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Brilliant&#x27;s perfect-score success screen - the green Koji mascot materializes over its shadow with a purple dumbbell orbiting it, &quot;Perfect!&quot; and the subline fade in, and the XP row counts up to 55 with a sparkle.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69171d11df9720847e0ac83f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69171d11df9720847e0ac83f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-brilliant-koji-mascot-perfect-score-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Brilliant&#x27;s perfect-score success screen - the green Koji mascot materializes over its shadow with a purple dumbbell orbiting it, &quot;Perfect!&quot; and the subline fade in, and the XP row counts up to 55 with a sparkle.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen. Center: the green blob-shaped Koji mascot floating above a dark oval shadow, a small purple dumbbell circling it. Below: &quot;Perfect!&quot; headline, &quot;Let&#x27;s keep this momentum going.&quot; subline, the &quot;TOTAL XP 55&quot; row with a lightning bolt, and a full-width Continue button.
+
+## Motion spec
+Pattern: mascot entrance + orbiting prop + count-up, ~2s.
+- Entrance: Koji scales in from 0 with a bounce (spring ~260/14, overshoot to ~1.12) while its shadow grows beneath it (scale 0.5 -&gt; 1, 400ms).
+- Orbit: the dumbbell circles Koji continuously (~2.4s per loop, slight z-depth scale shift as it passes behind).
+- Text: &quot;Perfect!&quot; slides up 12px and fades in (300ms, +250ms delay), the subline following (250ms, +150ms).
+- XP: the total counts 0 -&gt; 55 (700ms, ease-out) with a sparkle burst on landing; the bolt icon pops (scale 1 -&gt; 1.2 -&gt; 1, 200ms).
+- Idle: Koji bobs gently (translateY -6px, 1.6s alternate) above the shadow, which scales inversely.
+
+## Calibration
+- The dumbbell passes behind the mascot at the top of its orbit - layer it, don&#x27;t just circle in front.
+- Count-up uses tabular digits so the row doesn&#x27;t jitter.
+
+## Reduced motion
+Mascot, text, and final XP appear with a single 250ms fade; dumbbell parked.
+
+## Don&#x27;t miss
+- Koji is a soft 3D blob with a highlight and small face - flat 2D loses the character.
+- The shadow sells the float - it must scale and fade with the bob.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">mascot entrance + orbiting prop + count-up, ~2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/brilliant-koji-mascot-perfect-score-animation">original interaction</a> by Brilliant. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Brilliant's perfect-score success screen - the green Koji mascot materializes over its shadow with a purple dumbbell orbiting it, \"Perfect!\" and the subline fade in, and the XP row counts up to 55 with a sparkle.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen. Center: the green blob-shaped Koji mascot floating above a dark oval shadow, a small purple dumbbell circling it. Below: \"Perfect!\" headline, \"Let's keep this momentum going.\" subline, the \"TOTAL XP 55\" row with a lightning bolt, and a full-width Continue button.\n\n## Motion spec\nPattern: mascot entrance + orbiting prop + count-up, ~2s.\n- Entrance: Koji scales in from 0 with a bounce (spring ~260/14, overshoot to ~1.12) while its shadow grows beneath it (scale 0.5 -> 1, 400ms).\n- Orbit: the dumbbell circles Koji continuously (~2.4s per loop, slight z-depth scale shift as it passes behind).\n- Text: \"Perfect!\" slides up 12px and fades in (300ms, +250ms delay), the subline following (250ms, +150ms).\n- XP: the total counts 0 -> 55 (700ms, ease-out) with a sparkle burst on landing; the bolt icon pops (scale 1 -> 1.2 -> 1, 200ms).\n- Idle: Koji bobs gently (translateY -6px, 1.6s alternate) above the shadow, which scales inversely.\n\n## Calibration\n- The dumbbell passes behind the mascot at the top of its orbit - layer it, don't just circle in front.\n- Count-up uses tabular digits so the row doesn't jitter.\n\n## Reduced motion\nMascot, text, and final XP appear with a single 250ms fade; dumbbell parked.\n\n## Don't miss\n- Koji is a soft 3D blob with a highlight and small face - flat 2D loses the character.\n- The shadow sells the float - it must scale and fade with the bob."</script>
+</body></html>

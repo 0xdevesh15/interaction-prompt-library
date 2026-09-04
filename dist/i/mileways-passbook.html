@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mileways Passbook - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mileways Passbook</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mileways-passbook"><b>Mileways</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mileways-passbook">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mileways-passbook">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Mileways&#x27; Milepass card - tap the pass and it flips horizontally in 3D, revealing a skeuomorphic boarding-pass back covered in travel stamps.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb1e371d29849d7bcae8/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb1e371d29849d7bcae8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mileways-passbook.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Mileways&#x27; Milepass card - tap the pass and it flips horizontally in 3D, revealing a skeuomorphic boarding-pass back covered in travel stamps.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The profile screen carries a Milepass entry; opening it shows the pass full-width: a deep blue front (&quot;Milepass&quot; wordmark, member chip) above the Stamp Collection tabs. Flipping reveals the back: a pale cream boarding pass with perforated edge, flight details, and an angled ink stamp.
+
+## Motion spec
+Pattern: 3D card flip.
+- Tap the card: it rotates around its vertical axis (rotateY 0 to 180deg, 600ms, ease-in-out with a slight anticipation: -6deg wind-up over 100ms).
+- Perspective stays on (camera distance ~1000px) so the near edge bulges as it turns; a soft shadow sweeps across the face as it passes 90deg.
+- Mid-flip (90deg) the face swaps front to back; each face is its own layer with backface-visibility hidden.
+- Landing: a small overshoot (182deg settling to 180, spring ~300/22) plus a light haptic; the card&#x27;s elevation shadow softens as it settles.
+- Tap again flips back with the same choreography mirrored.
+- The Stamp Collection tabs beneath stay put; only the card flips.
+
+## Calibration
+- The flip pivot is the card&#x27;s horizontal center line, not the screen&#x27;s.
+- Keep the flip under 700ms total - it should feel like handling a physical pass, not a page turn.
+
+## Reduced motion
+Crossfade between front and back faces.
+
+## Don&#x27;t miss
+- The back face is deliberately analog: cream paper, dashed perforation, ink stamp - it contrasts the flat blue front.
+- The stamp on the back sits at a slight angle (~8deg), like it was hand-stamped.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D card flip.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mileways-passbook">original interaction</a> by Mileways. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Mileways' Milepass card - tap the pass and it flips horizontally in 3D, revealing a skeuomorphic boarding-pass back covered in travel stamps.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe profile screen carries a Milepass entry; opening it shows the pass full-width: a deep blue front (\"Milepass\" wordmark, member chip) above the Stamp Collection tabs. Flipping reveals the back: a pale cream boarding pass with perforated edge, flight details, and an angled ink stamp.\n\n## Motion spec\nPattern: 3D card flip.\n- Tap the card: it rotates around its vertical axis (rotateY 0 to 180deg, 600ms, ease-in-out with a slight anticipation: -6deg wind-up over 100ms).\n- Perspective stays on (camera distance ~1000px) so the near edge bulges as it turns; a soft shadow sweeps across the face as it passes 90deg.\n- Mid-flip (90deg) the face swaps front to back; each face is its own layer with backface-visibility hidden.\n- Landing: a small overshoot (182deg settling to 180, spring ~300/22) plus a light haptic; the card's elevation shadow softens as it settles.\n- Tap again flips back with the same choreography mirrored.\n- The Stamp Collection tabs beneath stay put; only the card flips.\n\n## Calibration\n- The flip pivot is the card's horizontal center line, not the screen's.\n- Keep the flip under 700ms total - it should feel like handling a physical pass, not a page turn.\n\n## Reduced motion\nCrossfade between front and back faces.\n\n## Don't miss\n- The back face is deliberately analog: cream paper, dashed perforation, ink stamp - it contrasts the flat blue front.\n- The stamp on the back sits at a slight angle (~8deg), like it was hand-stamped."</script>
+</body></html>

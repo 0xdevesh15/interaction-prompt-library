@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Threads End Scroll to Swipe Back Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Threads End Scroll to Swipe Back Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/threads-end-scroll-to-swipe-back-interaction"><b>Threads</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/threads-end-scroll-to-swipe-back-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/threads-end-scroll-to-swipe-back-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Threads&#x27; pull-to-go-back at the end of a thread - scrolling past the last post reveals a circular arrow indicator that rotates as you pull, and releasing past the threshold pops back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2eddae9610ba04ea939ad/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2eddae9610ba04ea939ad/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-threads-end-scroll-to-swipe-back-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Threads&#x27; pull-to-go-back at the end of a thread - scrolling past the last post reveals a circular arrow indicator that rotates as you pull, and releasing past the threshold pops back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Threads post detail, white: the full thread (author row, post text, link card, action row) with the reply composer pinned above the keyboard. At the very bottom of the scroll: a circular back-arrow indicator that only appears in the overscroll zone.
+
+## Motion spec
+Pattern: overscroll pull-to-back with a rotating arrow gauge.
+- At the scroll end, continued pulling drags the content down with rubber-band resistance (0.4x damping) and reveals the circular indicator rising from the bottom edge (position tied to pull distance).
+- The arrow inside the circle rotates with pull progress: 0 -&gt; 180 degrees mapped to 0 -&gt; 100% of threshold, so the chevron winds up as you pull.
+- The circle&#x27;s fill/track darkens with the same progress; at 100% the arrow completes its turn and the circle pulses once (scale 1 -&gt; 1.1 -&gt; 1, 200ms) - armed.
+- Release armed: the view pops off the stack (content slides right, 250ms, ease-in) and the indicator finishes its rotation as it exits.
+- Release below threshold: content springs back (spring ~300/18) and the indicator sinks back off-screen, unwinding its rotation.
+
+## Calibration
+- The indicator is centered horizontally and modest (~44px) - a gauge, not a banner.
+- Rotation and travel are both scrubbed 1:1 by pull distance - no autonomous motion until release.
+
+## Reduced motion
+Indicator fades in (200ms); back navigation happens at threshold without rotation.
+
+## Don&#x27;t miss
+- The indicator is only reachable by overscroll at the thread&#x27;s end - it never appears mid-scroll.
+- The arrow&#x27;s rotation direction reads as &quot;winding back&quot; - clockwise as you pull.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">overscroll pull-to-back with a rotating arrow gauge.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/threads-end-scroll-to-swipe-back-interaction">original interaction</a> by Threads. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Threads' pull-to-go-back at the end of a thread - scrolling past the last post reveals a circular arrow indicator that rotates as you pull, and releasing past the threshold pops back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThreads post detail, white: the full thread (author row, post text, link card, action row) with the reply composer pinned above the keyboard. At the very bottom of the scroll: a circular back-arrow indicator that only appears in the overscroll zone.\n\n## Motion spec\nPattern: overscroll pull-to-back with a rotating arrow gauge.\n- At the scroll end, continued pulling drags the content down with rubber-band resistance (0.4x damping) and reveals the circular indicator rising from the bottom edge (position tied to pull distance).\n- The arrow inside the circle rotates with pull progress: 0 -> 180 degrees mapped to 0 -> 100% of threshold, so the chevron winds up as you pull.\n- The circle's fill/track darkens with the same progress; at 100% the arrow completes its turn and the circle pulses once (scale 1 -> 1.1 -> 1, 200ms) - armed.\n- Release armed: the view pops off the stack (content slides right, 250ms, ease-in) and the indicator finishes its rotation as it exits.\n- Release below threshold: content springs back (spring ~300/18) and the indicator sinks back off-screen, unwinding its rotation.\n\n## Calibration\n- The indicator is centered horizontally and modest (~44px) - a gauge, not a banner.\n- Rotation and travel are both scrubbed 1:1 by pull distance - no autonomous motion until release.\n\n## Reduced motion\nIndicator fades in (200ms); back navigation happens at threshold without rotation.\n\n## Don't miss\n- The indicator is only reachable by overscroll at the thread's end - it never appears mid-scroll.\n- The arrow's rotation direction reads as \"winding back\" - clockwise as you pull."</script>
+</body></html>

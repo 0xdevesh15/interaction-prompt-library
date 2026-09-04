@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Podcasts Playback Speed Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Podcasts Playback Speed Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-podcasts-playback-speed-slider-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-podcasts-playback-speed-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-podcasts-playback-speed-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Podcasts&#x27; playback speed control - the popover opens with discrete speed presets, and dragging across it morphs the buttons into a continuous dial slider that scrubs from 0.5x to 3x with live readout.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f4524b558b404636062a14/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f4524b558b404636062a14/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-podcasts-playback-speed-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Podcasts&#x27; playback speed control - the popover opens with discrete speed presets, and dragging across it morphs the buttons into a continuous dial slider that scrubs from 0.5x to 3x with live readout.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark blue podcast player: episode art top, an &quot;Enhance Dialogue&quot; popover card with the playback speed row (&quot;Adjust Playback Speed&quot;), and transport controls below (speed button showing the current value, skip-15, play, skip-30, timer). The speed button label updates live (0.5x, 1.1x, 2.2x, 3x).
+
+## Motion spec
+Pattern: discrete-to-continuous control morph, gesture-driven.
+- Open: the popover slides up over the dimmed player (300ms, ease-out), showing preset buttons (0.5, 1, 1.5, 2) with the current one highlighted.
+- Morph: touching and dragging horizontally stretches the preset row into a continuous dial - the discrete labels spread apart and fade (200ms) as tick marks fade in between them, the row becoming a scrubbable track.
+- Scrub: dragging moves a fill/indicator under the finger 1:1; the speed value updates live with one-decimal precision, easing between snap points (magnetism at 0.5x steps) with tick haptics.
+- Commit: release settles the indicator on the nearest value (spring ~400/24), the dial morphs back to its compact state (200ms), and the player&#x27;s speed button cross-fades to the new label (150ms).
+
+## Calibration
+- The morph is driven by the drag, not a mode switch - presets and dial are two states of one control.
+- Value changes are continuous during scrub (1.1x, 2.2x), not limited to presets.
+
+## Reduced motion
+Presets swap to a static slider with 150ms fades; no morph.
+
+## Don&#x27;t miss
+- The speed button in the transport bar always mirrors the committed value.
+- The popover keeps its Enhance Dialogue row visible above the speed control.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">discrete-to-continuous control morph, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-podcasts-playback-speed-slider-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Podcasts' playback speed control - the popover opens with discrete speed presets, and dragging across it morphs the buttons into a continuous dial slider that scrubs from 0.5x to 3x with live readout.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark blue podcast player: episode art top, an \"Enhance Dialogue\" popover card with the playback speed row (\"Adjust Playback Speed\"), and transport controls below (speed button showing the current value, skip-15, play, skip-30, timer). The speed button label updates live (0.5x, 1.1x, 2.2x, 3x).\n\n## Motion spec\nPattern: discrete-to-continuous control morph, gesture-driven.\n- Open: the popover slides up over the dimmed player (300ms, ease-out), showing preset buttons (0.5, 1, 1.5, 2) with the current one highlighted.\n- Morph: touching and dragging horizontally stretches the preset row into a continuous dial - the discrete labels spread apart and fade (200ms) as tick marks fade in between them, the row becoming a scrubbable track.\n- Scrub: dragging moves a fill/indicator under the finger 1:1; the speed value updates live with one-decimal precision, easing between snap points (magnetism at 0.5x steps) with tick haptics.\n- Commit: release settles the indicator on the nearest value (spring ~400/24), the dial morphs back to its compact state (200ms), and the player's speed button cross-fades to the new label (150ms).\n\n## Calibration\n- The morph is driven by the drag, not a mode switch - presets and dial are two states of one control.\n- Value changes are continuous during scrub (1.1x, 2.2x), not limited to presets.\n\n## Reduced motion\nPresets swap to a static slider with 150ms fades; no morph.\n\n## Don't miss\n- The speed button in the transport bar always mirrors the committed value.\n- The popover keeps its Enhance Dialogue row visible above the speed control."</script>
+</body></html>

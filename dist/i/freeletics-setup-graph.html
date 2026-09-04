@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Freeletics Setup Graph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Freeletics Setup Graph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/freeletics-setup-graph"><b>Freeletics</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/freeletics-setup-graph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/freeletics-setup-graph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Freeletics&#x27; AI onboarding graph - &quot;Your AI Coach is designing your plan...&quot; while a weight-over-time chart draws itself line by line, each milestone label fading in as its line completes, ending on a Next button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf4ea83f9ae8767d8f4ca0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf4ea83f9ae8767d8f4ca0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-freeletics-setup-graph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Freeletics&#x27; AI onboarding graph - &quot;Your AI Coach is designing your plan...&quot; while a weight-over-time chart draws itself line by line, each milestone label fading in as its line completes, ending on a Next button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: left-aligned headline &quot;Your AI Coach is designing your plan...&quot;, a large minimal line chart (Weight vs Time axes, thin gray grid), labels like &quot;Develop your fitness routine&quot;, &quot;Burn fat, tone weight&quot;, &quot;Hit your personal goals&quot; along the lines, a blue Next button rising at the end.
+
+## Motion spec
+Pattern: sequential self-drawing chart.
+- Axes draw first (400ms, stroke-on, origin to edges), then the headline fades up.
+- Line 1 (the main declining weight curve) draws left-to-right over ~1.4s with an ease-in-out stroke reveal; its label fades in as the stroke passes beneath it.
+- Lines 2 and 3 follow (each ~1.1s, 300ms apart), slightly different curves, each label fading with its stroke; earlier lines dim to ~50% as the newest draws so the eye follows the active pen.
+- End state: small end-dot markers pop on each line terminus (scale 0 -&gt; 1, spring ~380/18), the full label set is lit, and Next slides up (300ms, ease-out).
+
+## Calibration
+- One active line at a time - sequential drawing is the &quot;AI thinking&quot; theater.
+- Hairline strokes (1.5px), no fills; the chart stays airy.
+
+## Reduced motion
+Chart fades in fully drawn; labels appear together.
+
+## Don&#x27;t miss
+- The stroke reveal follows the curve&#x27;s actual path (trim-path style), not a horizontal mask.
+- Ellipsis in the headline animates (three dots cycling, 900ms) while drawing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential self-drawing chart.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/freeletics-setup-graph">original interaction</a> by Freeletics. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Freeletics' AI onboarding graph - \"Your AI Coach is designing your plan...\" while a weight-over-time chart draws itself line by line, each milestone label fading in as its line completes, ending on a Next button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: left-aligned headline \"Your AI Coach is designing your plan...\", a large minimal line chart (Weight vs Time axes, thin gray grid), labels like \"Develop your fitness routine\", \"Burn fat, tone weight\", \"Hit your personal goals\" along the lines, a blue Next button rising at the end.\n\n## Motion spec\nPattern: sequential self-drawing chart.\n- Axes draw first (400ms, stroke-on, origin to edges), then the headline fades up.\n- Line 1 (the main declining weight curve) draws left-to-right over ~1.4s with an ease-in-out stroke reveal; its label fades in as the stroke passes beneath it.\n- Lines 2 and 3 follow (each ~1.1s, 300ms apart), slightly different curves, each label fading with its stroke; earlier lines dim to ~50% as the newest draws so the eye follows the active pen.\n- End state: small end-dot markers pop on each line terminus (scale 0 -> 1, spring ~380/18), the full label set is lit, and Next slides up (300ms, ease-out).\n\n## Calibration\n- One active line at a time - sequential drawing is the \"AI thinking\" theater.\n- Hairline strokes (1.5px), no fills; the chart stays airy.\n\n## Reduced motion\nChart fades in fully drawn; labels appear together.\n\n## Don't miss\n- The stroke reveal follows the curve's actual path (trim-path style), not a horizontal mask.\n- Ellipsis in the headline animates (three dots cycling, 900ms) while drawing."</script>
+</body></html>

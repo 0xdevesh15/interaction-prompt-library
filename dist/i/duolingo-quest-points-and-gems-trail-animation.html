@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Quest Points and Gems Trail Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Quest Points and Gems Trail Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-quest-points-and-gems-trail-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-quest-points-and-gems-trail-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-quest-points-and-gems-trail-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s quest reward collection - on the dark quests screen, completing a quest sends a gem flying along a curved trail up to the top-right counter, which ticks up as the quest&#x27;s progress bar fills purple and its chest icon flips to unlocked, ending with a CONTINUE button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6874997a14683753e673e22a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6874997a14683753e673e22a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-quest-points-and-gems-trail-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s quest reward collection - on the dark quests screen, completing a quest sends a gem flying along a curved trail up to the top-right counter, which ticks up as the quest&#x27;s progress bar fills purple and its chest icon flips to unlocked, ending with a CONTINUE button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark charcoal quests screen. Header &quot;+1 Quest Point!&quot; in pink. A stack of quest rows, each with a title (&quot;Complete 2 lessons&quot;, &quot;Spend 10 minutes learning&quot;, &quot;Score 80% or higher in 5 lessons&quot;), a progress bar with a chest icon at its end, and a friend-quest row (&quot;Zari&#x27;s Movie Binge&quot;) with avatar. Top-right: a blue gem counter. Bottom: blue CONTINUE button appears at the end.
+
+## Motion spec
+Pattern: reward collection with flying particle trail and counter increment.
+- Trigger: the completed quest&#x27;s row gets a blue selection outline (120ms) and its bar fills to full (400ms ease-out, purple).
+- The chest icon at the bar&#x27;s end pops open (scale 1.0 -&gt; 1.3 -&gt; 1.0, 200ms, lid color shift).
+- A gem particle launches from the chest and flies to the top-right counter along a bezier arc (500ms, ease-in), trailing 2-3 fading echo gems (80ms behind each other).
+- On arrival the counter pill pulses (scale 1.0 -&gt; 1.15 -&gt; 1.0, 150ms) and its number ticks up with a vertical digit roll (200ms).
+- The header &quot;+1 Quest Point!&quot; fades in with the flight (200ms).
+- CONTINUE slides up from the bottom (280ms ease-out) once the counter settles.
+
+## Calibration
+- The gem flight path is the connective tissue - it must visibly leave the chest and land on the counter, not teleport.
+- Only the rewarded quest animates; other rows hold still.
+
+## Reduced motion
+No flight: the bar fills, the counter crossfades to its new value, and the header fades in; CONTINUE appears without travel.
+
+## Don&#x27;t miss
+- The trail gems echo the main gem with decreasing opacity, giving the arc a comet tail.
+- The friend-quest row stays static - it is context, not part of the reward.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">reward collection with flying particle trail and counter increment.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-quest-points-and-gems-trail-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's quest reward collection - on the dark quests screen, completing a quest sends a gem flying along a curved trail up to the top-right counter, which ticks up as the quest's progress bar fills purple and its chest icon flips to unlocked, ending with a CONTINUE button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark charcoal quests screen. Header \"+1 Quest Point!\" in pink. A stack of quest rows, each with a title (\"Complete 2 lessons\", \"Spend 10 minutes learning\", \"Score 80% or higher in 5 lessons\"), a progress bar with a chest icon at its end, and a friend-quest row (\"Zari's Movie Binge\") with avatar. Top-right: a blue gem counter. Bottom: blue CONTINUE button appears at the end.\n\n## Motion spec\nPattern: reward collection with flying particle trail and counter increment.\n- Trigger: the completed quest's row gets a blue selection outline (120ms) and its bar fills to full (400ms ease-out, purple).\n- The chest icon at the bar's end pops open (scale 1.0 -> 1.3 -> 1.0, 200ms, lid color shift).\n- A gem particle launches from the chest and flies to the top-right counter along a bezier arc (500ms, ease-in), trailing 2-3 fading echo gems (80ms behind each other).\n- On arrival the counter pill pulses (scale 1.0 -> 1.15 -> 1.0, 150ms) and its number ticks up with a vertical digit roll (200ms).\n- The header \"+1 Quest Point!\" fades in with the flight (200ms).\n- CONTINUE slides up from the bottom (280ms ease-out) once the counter settles.\n\n## Calibration\n- The gem flight path is the connective tissue - it must visibly leave the chest and land on the counter, not teleport.\n- Only the rewarded quest animates; other rows hold still.\n\n## Reduced motion\nNo flight: the bar fills, the counter crossfades to its new value, and the header fades in; CONTINUE appears without travel.\n\n## Don't miss\n- The trail gems echo the main gem with decreasing opacity, giving the arc a comet tail.\n- The friend-quest row stays static - it is context, not part of the reward."</script>
+</body></html>

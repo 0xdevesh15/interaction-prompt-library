@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShutEye Smart Alarm Graph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ShutEye Smart Alarm Graph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shuteye-smart-alarm-graph-animation"><b>Shuteye</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuteye-smart-alarm-graph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuteye-smart-alarm-graph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: ShutEye&#x27;s smart alarm pitch - a sleep-cycle wave graph draws in, then alarm markers pop onto the curve with stage tooltips (&quot;Light Sleep&quot;, &quot;Awake&quot;) explaining the wake window.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc260e52b107930542e0a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc260e52b107930542e0a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shuteye-smart-alarm-graph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: ShutEye&#x27;s smart alarm pitch - a sleep-cycle wave graph draws in, then alarm markers pop onto the curve with stage tooltips (&quot;Light Sleep&quot;, &quot;Awake&quot;) explaining the wake window.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark blue onboarding page: a sleep-cycle graph (a smooth wave crossing Awake / Light / Deep stages across the night), the headline &quot;Try Smart Alarm?&quot;, copy explaining the tracker wakes you in the lightest stage between 08:00-08:30, a &quot;Yes!&quot; button, and a &quot;No, I prefer a fixed time&quot; link. Marker pins with stage labels sit on the curve.
+
+## Motion spec
+Pattern: graph draw with staggered marker pop-ins, ~2.5s.
+- The graph&#x27;s wave draws left to right (1.2s, ease-in-out), stage bands fading in behind it (300ms).
+- The first marker pin drops onto the curve (spring stiffness 380 damping 16) and its orange tooltip pops beside it (scale 0.6 to 1, 200ms).
+- A second marker follows 300ms later with the same drop-and-pop, then a blue &quot;Light Sleep&quot; tooltip marker on the curve&#x27;s rising edge.
+- The headline, copy, and buttons fade up in turn (250ms each) after the markers settle.
+
+## Calibration
+- Markers land exactly on the curve, pins pointing down to their sample points.
+- The tooltips&#x27; stagger reads left to right, following the night.
+
+## Reduced motion
+Graph and markers appear static.
+
+## Don&#x27;t miss
+- The wake-window markers sit on the rising (lightening) slope near the right edge - that is the whole pitch.
+- Tooltip chips are filled and colored (orange, blue) with small pointer tails.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">graph draw with staggered marker pop-ins, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shuteye-smart-alarm-graph-animation">original interaction</a> by Shuteye. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: ShutEye's smart alarm pitch - a sleep-cycle wave graph draws in, then alarm markers pop onto the curve with stage tooltips (\"Light Sleep\", \"Awake\") explaining the wake window.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark blue onboarding page: a sleep-cycle graph (a smooth wave crossing Awake / Light / Deep stages across the night), the headline \"Try Smart Alarm?\", copy explaining the tracker wakes you in the lightest stage between 08:00-08:30, a \"Yes!\" button, and a \"No, I prefer a fixed time\" link. Marker pins with stage labels sit on the curve.\n\n## Motion spec\nPattern: graph draw with staggered marker pop-ins, ~2.5s.\n- The graph's wave draws left to right (1.2s, ease-in-out), stage bands fading in behind it (300ms).\n- The first marker pin drops onto the curve (spring stiffness 380 damping 16) and its orange tooltip pops beside it (scale 0.6 to 1, 200ms).\n- A second marker follows 300ms later with the same drop-and-pop, then a blue \"Light Sleep\" tooltip marker on the curve's rising edge.\n- The headline, copy, and buttons fade up in turn (250ms each) after the markers settle.\n\n## Calibration\n- Markers land exactly on the curve, pins pointing down to their sample points.\n- The tooltips' stagger reads left to right, following the night.\n\n## Reduced motion\nGraph and markers appear static.\n\n## Don't miss\n- The wake-window markers sit on the rising (lightening) slope near the right edge - that is the whole pitch.\n- Tooltip chips are filled and colored (orange, blue) with small pointer tails."</script>
+</body></html>

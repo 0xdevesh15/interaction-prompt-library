@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finma Account Numbers Flip Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Finma Account Numbers Flip Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/finma-account-numbers-flip-animation"><b>Finma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-account-numbers-flip-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-account-numbers-flip-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Finma&#x27;s account stats flip - on the dark Accounts screen, opening Bank of America expands its card into a detail page where the big stats (&quot;Total Spent $15,513&quot;, &quot;Total Income $34,237&quot;) roll into place digit by digit like a split-flap ticker, followed by the monthly grid and balance.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f283a3162ff378ad3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f283a3162ff378ad3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-finma-account-numbers-flip-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Finma&#x27;s account stats flip - on the dark Accounts screen, opening Bank of America expands its card into a detail page where the big stats (&quot;Total Spent $15,513&quot;, &quot;Total Income $34,237&quot;) roll into place digit by digit like a split-flap ticker, followed by the monthly grid and balance.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark &quot;Accounts&quot; screen: Bank section (Bank of America blue card, orange card), Credit Card section (red &quot;$950&quot;, dark &quot;$1,400&quot;, blue &quot;$2,400&quot;, gray &quot;$520&quot; cards), bottom nav. Bank of America detail: logo, &quot;Bank of America&quot; title, &quot;Edit Account / Edit Photo&quot; actions, two big stats (&quot;Total Spent $15,513&quot; white, &quot;Total Income $34,237&quot; white), &quot;Last 12 Months&quot; grid (&quot;$1,939/mo&quot;, &quot;$4,280/mo&quot;, &quot;$1,100&quot;, &quot;$5,500&quot;), &quot;Balances $45,000&quot; with a date, and a small green line graph.
+
+## Motion spec
+Pattern: vertical rolling ticker digits with staged section reveals.
+- Tap the card: it expands to full width (spring ~300/20, 300ms) and pushes to the detail layout, sibling cards collapsing away (200ms).
+- Each big stat: digits roll vertically into place like a flip ticker - each digit column cycles through values (fast spin 400ms, decelerating ease-out) and locks with a small bounce (translateY overshoot 2pt, spring ~340/18); columns stagger 40ms left to right.
+- The Last 12 Months grid fades in cell by cell (30ms stagger), its numbers rolling shorter spins (250ms).
+- &quot;Balances $45,000&quot; rolls last (300ms) as the green graph draws (stroke trim, 500ms).
+- Back: the sections reverse out (150ms) and the card returns to the list (spring ~300/20).
+
+## Calibration
+- Digit columns roll downward for increases and upward for decreases.
+- Commas are static; only digits flip.
+
+## Reduced motion
+Numbers crossfade in (200ms); no rolling.
+
+## Don&#x27;t miss
+- The two hero stats roll simultaneously, not sequentially.
+- The line graph is small, green, and secondary - it draws after the numbers.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vertical rolling ticker digits with staged section reveals.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/finma-account-numbers-flip-animation">original interaction</a> by Finma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Finma's account stats flip - on the dark Accounts screen, opening Bank of America expands its card into a detail page where the big stats (\"Total Spent $15,513\", \"Total Income $34,237\") roll into place digit by digit like a split-flap ticker, followed by the monthly grid and balance.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark \"Accounts\" screen: Bank section (Bank of America blue card, orange card), Credit Card section (red \"$950\", dark \"$1,400\", blue \"$2,400\", gray \"$520\" cards), bottom nav. Bank of America detail: logo, \"Bank of America\" title, \"Edit Account / Edit Photo\" actions, two big stats (\"Total Spent $15,513\" white, \"Total Income $34,237\" white), \"Last 12 Months\" grid (\"$1,939/mo\", \"$4,280/mo\", \"$1,100\", \"$5,500\"), \"Balances $45,000\" with a date, and a small green line graph.\n\n## Motion spec\nPattern: vertical rolling ticker digits with staged section reveals.\n- Tap the card: it expands to full width (spring ~300/20, 300ms) and pushes to the detail layout, sibling cards collapsing away (200ms).\n- Each big stat: digits roll vertically into place like a flip ticker - each digit column cycles through values (fast spin 400ms, decelerating ease-out) and locks with a small bounce (translateY overshoot 2pt, spring ~340/18); columns stagger 40ms left to right.\n- The Last 12 Months grid fades in cell by cell (30ms stagger), its numbers rolling shorter spins (250ms).\n- \"Balances $45,000\" rolls last (300ms) as the green graph draws (stroke trim, 500ms).\n- Back: the sections reverse out (150ms) and the card returns to the list (spring ~300/20).\n\n## Calibration\n- Digit columns roll downward for increases and upward for decreases.\n- Commas are static; only digits flip.\n\n## Reduced motion\nNumbers crossfade in (200ms); no rolling.\n\n## Don't miss\n- The two hero stats roll simultaneously, not sequentially.\n- The line graph is small, green, and secondary - it draws after the numbers."</script>
+</body></html>

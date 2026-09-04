@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toss 3D Face ID Morph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Toss 3D Face ID Morph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/toss-3d-face-id-morph-animation"><b>Toss</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/toss-3d-face-id-morph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/toss-3d-face-id-morph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Toss&#x27;s face-ID splash - the blue logo morphs into a rotating 3D crystal, then into a scanning face silhouette ringed by a loader, and the Face ID smile glyph forms inside the ring before the home screen reveals.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f313c7ed780e0979f01/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f313c7ed780e0979f01/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-toss-3d-face-id-morph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Toss&#x27;s face-ID splash - the blue logo morphs into a rotating 3D crystal, then into a scanning face silhouette ringed by a loader, and the Face ID smile glyph forms inside the ring before the home screen reveals.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen throughout. Sequence: the blue Toss leaf logo center; a glossy 3D blue crystal rotating in place; Korean tagline at bottom; a dark face silhouette head with the crystal glowing inside; a blue circular scan ring with orbiting dots; the ring containing a Face ID smile glyph; finally the dark home screen (balance card, phone mockup, bottom tabs).
+
+## Motion spec
+Pattern: sequenced 3D morph splash, ~3.5s total.
+- Logo-to-crystal: the leaf logo scales down and folds into the rotating 3D crystal (600ms, ease-in-out, continuous slow rotation ~30deg/s).
+- Crystal-to-face: the crystal drifts down into the face silhouette as the head fades up around it (500ms, ease-out); the tagline fades in below (250ms).
+- Scan: the blue ring draws around the head (stroke sweep, 600ms) with two orbiting dots (1 rev/s); the head dims as the Face ID smile glyph strokes in inside the ring (400ms).
+- Reveal: the ring scales up and fades (300ms) while the home screen slides up from 8% below (400ms, ease-out).
+
+## Calibration
+- One continuous camera - every element shares center stage, nothing jumps position.
+- The blue glow is the only light source; everything else stays near-black.
+
+## Reduced motion
+Logo crossfades through the three states (250ms each) to the home screen.
+
+## Don&#x27;t miss
+- The orbiting dots during the scan are offset ~120deg, not opposite.
+- The tagline stays visible across the crystal, face, and scan states.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequenced 3D morph splash, ~3.5s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/toss-3d-face-id-morph-animation">original interaction</a> by Toss. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Toss's face-ID splash - the blue logo morphs into a rotating 3D crystal, then into a scanning face silhouette ringed by a loader, and the Face ID smile glyph forms inside the ring before the home screen reveals.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen throughout. Sequence: the blue Toss leaf logo center; a glossy 3D blue crystal rotating in place; Korean tagline at bottom; a dark face silhouette head with the crystal glowing inside; a blue circular scan ring with orbiting dots; the ring containing a Face ID smile glyph; finally the dark home screen (balance card, phone mockup, bottom tabs).\n\n## Motion spec\nPattern: sequenced 3D morph splash, ~3.5s total.\n- Logo-to-crystal: the leaf logo scales down and folds into the rotating 3D crystal (600ms, ease-in-out, continuous slow rotation ~30deg/s).\n- Crystal-to-face: the crystal drifts down into the face silhouette as the head fades up around it (500ms, ease-out); the tagline fades in below (250ms).\n- Scan: the blue ring draws around the head (stroke sweep, 600ms) with two orbiting dots (1 rev/s); the head dims as the Face ID smile glyph strokes in inside the ring (400ms).\n- Reveal: the ring scales up and fades (300ms) while the home screen slides up from 8% below (400ms, ease-out).\n\n## Calibration\n- One continuous camera - every element shares center stage, nothing jumps position.\n- The blue glow is the only light source; everything else stays near-black.\n\n## Reduced motion\nLogo crossfades through the three states (250ms each) to the home screen.\n\n## Don't miss\n- The orbiting dots during the scan are offset ~120deg, not opposite.\n- The tagline stays visible across the crystal, face, and scan states."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram Emoji Menu - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Telegram Emoji Menu</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/telegram-emoji-menu"><b>Telegram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-emoji-menu">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-emoji-menu">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Telegram&#x27;s expandable reaction bar - the long-press emoji row carries a chevron that springs the compact bar open into a full scrolling emoji grid, rows cascading in, then collapses back to the row on selection or dismiss.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1dbb153c6551dedd28efb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1dbb153c6551dedd28efb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-telegram-emoji-menu.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Telegram&#x27;s expandable reaction bar - the long-press emoji row carries a chevron that springs the compact bar open into a full scrolling emoji grid, rows cascading in, then collapses back to the row on selection or dismiss.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark chat, long-press state on an image message: a floating bar with ~7 large emoji and a down-chevron at its right end, the context menu beneath. Expanded: the bar becomes a tall rounded panel - a grid of dozens of emoji (faces, hearts, gestures, objects) over the dimmed chat.
+
+## Motion spec
+Pattern: bar-to-grid springy expansion.
+- Tap the chevron: the bar&#x27;s container expands downward and wider (height/width spring ~320/20, one soft overshoot) while the first row of emoji stays pinned - the bar STRETCHES into the grid, no swap.
+- New rows cascade in top-to-bottom (fade + 10px rise, 220ms, 35ms per row), each emoji micro-popping (scale 0.85 -&gt; 1, spring ~440/20).
+- The chevron rotates 180deg during expansion (300ms) - it becomes the collapse control.
+- Scrolling the grid: standard physics inside the expanded panel; the pinned top row stays as quick reactions.
+- Selection or tap-outside: the grid contracts back to the single row (spring ~360/24), rows exiting bottom-first in reverse cascade; the chevron rotates home.
+
+## Calibration
+- The first row&#x27;s emoji never move during the morph - spatial continuity anchors the expansion.
+- Grid emoji are the same size as bar emoji - the expansion is about MORE, not bigger.
+
+## Reduced motion
+Panel fades between bar and grid states; no cascade.
+
+## Don&#x27;t miss
+- It&#x27;s a container morph: one surface growing, not a new sheet appearing.
+- The reverse cascade on collapse - symmetry makes the widget feel engineered.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bar-to-grid springy expansion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/telegram-emoji-menu">original interaction</a> by Telegram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Telegram's expandable reaction bar - the long-press emoji row carries a chevron that springs the compact bar open into a full scrolling emoji grid, rows cascading in, then collapses back to the row on selection or dismiss.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark chat, long-press state on an image message: a floating bar with ~7 large emoji and a down-chevron at its right end, the context menu beneath. Expanded: the bar becomes a tall rounded panel - a grid of dozens of emoji (faces, hearts, gestures, objects) over the dimmed chat.\n\n## Motion spec\nPattern: bar-to-grid springy expansion.\n- Tap the chevron: the bar's container expands downward and wider (height/width spring ~320/20, one soft overshoot) while the first row of emoji stays pinned - the bar STRETCHES into the grid, no swap.\n- New rows cascade in top-to-bottom (fade + 10px rise, 220ms, 35ms per row), each emoji micro-popping (scale 0.85 -> 1, spring ~440/20).\n- The chevron rotates 180deg during expansion (300ms) - it becomes the collapse control.\n- Scrolling the grid: standard physics inside the expanded panel; the pinned top row stays as quick reactions.\n- Selection or tap-outside: the grid contracts back to the single row (spring ~360/24), rows exiting bottom-first in reverse cascade; the chevron rotates home.\n\n## Calibration\n- The first row's emoji never move during the morph - spatial continuity anchors the expansion.\n- Grid emoji are the same size as bar emoji - the expansion is about MORE, not bigger.\n\n## Reduced motion\nPanel fades between bar and grid states; no cascade.\n\n## Don't miss\n- It's a container morph: one surface growing, not a new sheet appearing.\n- The reverse cascade on collapse - symmetry makes the widget feel engineered."</script>
+</body></html>

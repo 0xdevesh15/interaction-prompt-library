@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Outsiders Sleep Consistency Graph Slide Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>The Outsiders Sleep Consistency Graph Slide Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/the-outsiders-sleep-consistency-graph-slide-interaction"><b>The</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/the-outsiders-sleep-consistency-graph-slide-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/the-outsiders-sleep-consistency-graph-slide-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: The Outsiders&#x27; sleep consistency graph - scrubbing the blue bar chart snaps a tooltip from day to day with a spring, highlighting each bar and reading its sleep window (&quot;11:03 - 07:39&quot;) as you cross it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f080a7558b404636cac37b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f080a7558b404636cac37b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-the-outsiders-sleep-consistency-graph-slide-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: The Outsiders&#x27; sleep consistency graph - scrubbing the blue bar chart snaps a tooltip from day to day with a spring, highlighting each bar and reading its sleep window (&quot;11:03 - 07:39&quot;) as you cross it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark purple Sleep screen: &quot;Overview&quot; with Consistency tab active, stats &quot;00:34&quot; and &quot;29&quot;, a dense bar chart of blue-to-cyan vertical bars (one per day) over week labels, and the bottom tab bar. Scrub state: one bar highlighted brighter, a tooltip pill above it showing the day&#x27;s sleep window, and a small marker below the axis.
+
+## Motion spec
+Pattern: snapping bar scrub, gesture-driven.
+- Scrub: dragging moves a highlight cursor 1:1; as it crosses each bar&#x27;s midpoint the selection snaps to that bar (spring ~420/22, visible overshoot) with haptic.
+- Highlight: the selected bar brightens to cyan (120ms); the previous selection returns to base blue.
+- Tooltip: the pill above re-centers over the selected bar (spring with the same snap) and swaps its value with a quick fade (100ms).
+- Axis: the week labels stay static; only the selection moves.
+
+## Calibration
+- The snap is per-bar - the finger can rest between bars and the selection still owns the nearest one.
+- The tooltip never overlaps the top edge; it clamps inside the chart.
+
+## Reduced motion
+Tap selects a bar with a 150ms highlight fade; no spring snap.
+
+## Don&#x27;t miss
+- The tooltip shows the full sleep window (start - end), not a duration.
+- Bars are blue by default, cyan when selected - no outline change.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">snapping bar scrub, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/the-outsiders-sleep-consistency-graph-slide-interaction">original interaction</a> by The. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: The Outsiders' sleep consistency graph - scrubbing the blue bar chart snaps a tooltip from day to day with a spring, highlighting each bar and reading its sleep window (\"11:03 - 07:39\") as you cross it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark purple Sleep screen: \"Overview\" with Consistency tab active, stats \"00:34\" and \"29\", a dense bar chart of blue-to-cyan vertical bars (one per day) over week labels, and the bottom tab bar. Scrub state: one bar highlighted brighter, a tooltip pill above it showing the day's sleep window, and a small marker below the axis.\n\n## Motion spec\nPattern: snapping bar scrub, gesture-driven.\n- Scrub: dragging moves a highlight cursor 1:1; as it crosses each bar's midpoint the selection snaps to that bar (spring ~420/22, visible overshoot) with haptic.\n- Highlight: the selected bar brightens to cyan (120ms); the previous selection returns to base blue.\n- Tooltip: the pill above re-centers over the selected bar (spring with the same snap) and swaps its value with a quick fade (100ms).\n- Axis: the week labels stay static; only the selection moves.\n\n## Calibration\n- The snap is per-bar - the finger can rest between bars and the selection still owns the nearest one.\n- The tooltip never overlaps the top edge; it clamps inside the chart.\n\n## Reduced motion\nTap selects a bar with a 150ms highlight fade; no spring snap.\n\n## Don't miss\n- The tooltip shows the full sleep window (start - end), not a duration.\n- Bars are blue by default, cyan when selected - no outline change."</script>
+</body></html>

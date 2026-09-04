@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remy AI Bedroom Items Sheet Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Remy AI Bedroom Items Sheet Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/remy-ai-bedroom-items-sheet-swipe-interaction"><b>Remy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/remy-ai-bedroom-items-sheet-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/remy-ai-bedroom-items-sheet-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Remy AI&#x27;s bedroom item carousel - swiping the bottom sheet&#x27;s card sideways cycles through bedroom objects, and each swipe lights the matching item up in the isometric room above.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc3885c466f600fe842e6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc3885c466f600fe842e6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-remy-ai-bedroom-items-sheet-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Remy AI&#x27;s bedroom item carousel - swiping the bottom sheet&#x27;s card sideways cycles through bedroom objects, and each swipe lights the matching item up in the isometric room above.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark isometric bedroom illustration (dim blue linework) above a bottom sheet carrying one item card at a time: HARD COPY BOOK, COMFORTABLE PILLOW, HUMIDIFIER, PROPER VENTILATION, BLACKOUT CURTAINS, AIR CONDITIONER, LIGHT ALARM CLOCK, EARPLUGS, EYE MASK - each with a description, attribute chips, and an &quot;I have it&quot; button.
+
+## Motion spec
+Pattern: synced card carousel and scene highlight, gesture-driven.
+- The card tracks the horizontal swipe 1:1, the next card peeking in from the edge.
+- On release, the carousel settles to the nearest card (spring stiffness 300 damping 24) with light momentum.
+- As the active card changes, the corresponding object in the room crossfades from linework to a lit solid render (350ms) while the previously lit object returns to linework; the rest of the room stays dim.
+- Card content (title, copy, chips) crossfades with the swipe (200ms), never sliding with the card shell.
+
+## Calibration
+- The highlight change is tied to card position, not to snap completion - it begins as the next card passes 50%.
+- Sheet height and room framing never change; only the card and the lit object move.
+
+## Reduced motion
+Cards crossfade; highlight swaps without transition.
+
+## Don&#x27;t miss
+- The lit object renders in white solid against the blue linework room.
+- Page position is communicated only by the cards&#x27; edges - no dots or indicators.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">synced card carousel and scene highlight, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/remy-ai-bedroom-items-sheet-swipe-interaction">original interaction</a> by Remy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Remy AI's bedroom item carousel - swiping the bottom sheet's card sideways cycles through bedroom objects, and each swipe lights the matching item up in the isometric room above.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark isometric bedroom illustration (dim blue linework) above a bottom sheet carrying one item card at a time: HARD COPY BOOK, COMFORTABLE PILLOW, HUMIDIFIER, PROPER VENTILATION, BLACKOUT CURTAINS, AIR CONDITIONER, LIGHT ALARM CLOCK, EARPLUGS, EYE MASK - each with a description, attribute chips, and an \"I have it\" button.\n\n## Motion spec\nPattern: synced card carousel and scene highlight, gesture-driven.\n- The card tracks the horizontal swipe 1:1, the next card peeking in from the edge.\n- On release, the carousel settles to the nearest card (spring stiffness 300 damping 24) with light momentum.\n- As the active card changes, the corresponding object in the room crossfades from linework to a lit solid render (350ms) while the previously lit object returns to linework; the rest of the room stays dim.\n- Card content (title, copy, chips) crossfades with the swipe (200ms), never sliding with the card shell.\n\n## Calibration\n- The highlight change is tied to card position, not to snap completion - it begins as the next card passes 50%.\n- Sheet height and room framing never change; only the card and the lit object move.\n\n## Reduced motion\nCards crossfade; highlight swaps without transition.\n\n## Don't miss\n- The lit object renders in white solid against the blue linework room.\n- Page position is communicated only by the cards' edges - no dots or indicators."</script>
+</body></html>

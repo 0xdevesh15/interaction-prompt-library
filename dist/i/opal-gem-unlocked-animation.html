@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opal Gem Unlocked Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Opal Gem Unlocked Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opal-gem-unlocked-animation"><b>Opal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-gem-unlocked-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-gem-unlocked-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Opal&#x27;s gem unlock - on the dark &quot;Gem Unlocked&quot; screen, a floating grey rock hangs over its reflection; a tap cracks it, fiery orange-green light bursts from the fissures, the shell shatters away in shards, and a glowing opal gem is revealed under the &quot;SKILLED GEM&quot; title with an Apply Theme button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670666de5d11d5a0fec6fe0a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670666de5d11d5a0fec6fe0a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opal-gem-unlocked-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Opal&#x27;s gem unlock - on the dark &quot;Gem Unlocked&quot; screen, a floating grey rock hangs over its reflection; a tap cracks it, fiery orange-green light bursts from the fissures, the shell shatters away in shards, and a glowing opal gem is revealed under the &quot;SKILLED GEM&quot; title with an Apply Theme button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Near-black screen, X close top-left, &quot;Gem Unlocked&quot; header, and a 3D rock floating center with a soft floor reflection beneath it. Final state: the revealed gem (translucent opal with green-gold fire), &quot;SKILLED GEM&quot; title, one-line description, and a gradient Apply Theme button (yellow -&gt; green) with a Share link.
+
+## Motion spec
+Pattern: staged shatter reveal.
+- Idle: the rock bobs gently (translateY +/-6px, 3s loop) with a slow rotation (~12s per revolution); the reflection mirrors it, blurred.
+- Tap: the rock shakes in place (rotate +/-3deg, 3 frames, 150ms) and glowing cracks spider across it (crack lines draw on over 300ms, orange emissive).
+- The cracks flash bright (luminance spike, 120ms) and the shell bursts: ~8-10 shards fly outward (each on its own arc, 500-700ms, gravity pull, fading over the last 200ms).
+- The gem is revealed with a light bloom from its core (radial glow scale 0 -&gt; 1, 400ms, ease-out), then settles into a slow spin with inner fire flickering (emissive noise, subtle).
+- Title and button fade/slide in after the gem lands (translateY 12px -&gt; 0, opacity 0 -&gt; 1, 300ms, staggered 100ms).
+
+## Calibration
+- One tap, one full sequence (~1.5s to the settled gem) - no multi-tap gating.
+- Shards fly in 3D with perspective - near shards larger and faster.
+
+## Reduced motion
+Rock fades, gem fades in; no shard flight.
+
+## Don&#x27;t miss
+- The floor reflection updates through every stage - rock, cracking, shards, gem.
+- The gem&#x27;s fire is green-gold on the inside only; the outer shell stays dead grey until it shatters.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staged shatter reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opal-gem-unlocked-animation">original interaction</a> by Opal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Opal's gem unlock - on the dark \"Gem Unlocked\" screen, a floating grey rock hangs over its reflection; a tap cracks it, fiery orange-green light bursts from the fissures, the shell shatters away in shards, and a glowing opal gem is revealed under the \"SKILLED GEM\" title with an Apply Theme button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNear-black screen, X close top-left, \"Gem Unlocked\" header, and a 3D rock floating center with a soft floor reflection beneath it. Final state: the revealed gem (translucent opal with green-gold fire), \"SKILLED GEM\" title, one-line description, and a gradient Apply Theme button (yellow -> green) with a Share link.\n\n## Motion spec\nPattern: staged shatter reveal.\n- Idle: the rock bobs gently (translateY +/-6px, 3s loop) with a slow rotation (~12s per revolution); the reflection mirrors it, blurred.\n- Tap: the rock shakes in place (rotate +/-3deg, 3 frames, 150ms) and glowing cracks spider across it (crack lines draw on over 300ms, orange emissive).\n- The cracks flash bright (luminance spike, 120ms) and the shell bursts: ~8-10 shards fly outward (each on its own arc, 500-700ms, gravity pull, fading over the last 200ms).\n- The gem is revealed with a light bloom from its core (radial glow scale 0 -> 1, 400ms, ease-out), then settles into a slow spin with inner fire flickering (emissive noise, subtle).\n- Title and button fade/slide in after the gem lands (translateY 12px -> 0, opacity 0 -> 1, 300ms, staggered 100ms).\n\n## Calibration\n- One tap, one full sequence (~1.5s to the settled gem) - no multi-tap gating.\n- Shards fly in 3D with perspective - near shards larger and faster.\n\n## Reduced motion\nRock fades, gem fades in; no shard flight.\n\n## Don't miss\n- The floor reflection updates through every stage - rock, cracking, shards, gem.\n- The gem's fire is green-gold on the inside only; the outer shell stays dead grey until it shatters."</script>
+</body></html>

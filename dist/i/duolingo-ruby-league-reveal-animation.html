@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Ruby League Reveal Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Ruby League Reveal Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-ruby-league-reveal-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-ruby-league-reveal-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-ruby-league-reveal-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s Ruby League promotion reveal - from the weekly-results screen the view pushes into a dark stage where the blue trophy slides aside and the ruby trophy bursts into center with gem shards flying, then looping sparkles twinkle behind the &quot;You moved up to the Ruby League!&quot; line and blue CONTINUE button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313c90e3615485c3fbbc5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313c90e3615485c3fbbc5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-ruby-league-reveal-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s Ruby League promotion reveal - from the weekly-results screen the view pushes into a dark stage where the blue trophy slides aside and the ruby trophy bursts into center with gem shards flying, then looping sparkles twinkle behind the &quot;You moved up to the Ruby League!&quot; line and blue CONTINUE button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark charcoal screens. Screen 1: &quot;Congratulations! You finished #1 last week.&quot; with gold/blue/gray trophy icons and a top-5 leaderboard list, blue CONTINUE. Screen 2 (the reveal): centered ruby-red league trophy on a pedestal, the previous blue trophy shrunk and dimmed to its left, a gray silhouette trophy further right; headline &quot;You moved up to the Ruby League!&quot;, blue CONTINUE button, tab bar.
+
+## Motion spec
+Pattern: trophy reveal with shard explosion and looping sparkles.
+- Push transition in (300ms ease-in-out).
+- The blue trophy slides left and shrinks (scale 1.0 -&gt; 0.6, 350ms, ease-in-out) while the ruby trophy scales in at center (0 -&gt; 1.15 -&gt; 1.0, spring ~320/16, ~450ms).
+- On the ruby trophy&#x27;s landing, ~10 gem shards explode outward (radial, 500ms life, gravity, staggered 25ms) in red/pink tones.
+- Headline fades up (200ms, delayed to the landing); CONTINUE slides up (250ms ease-out) after.
+- Loop: 5-6 white star sparkles twinkle around the trophy (scale 0 -&gt; 1 -&gt; 0, 900ms each, random offsets, infinite).
+
+## Calibration
+- The shard burst fires exactly on the spring&#x27;s settle frame - the trophy lands and shatters attention outward.
+- Sparkles loop forever but stay behind the trophy (z-order), never over the headline.
+
+## Reduced motion
+Ruby trophy crossfades in at center; headline and button fade in; no shards, no sparkle loop.
+
+## Don&#x27;t miss
+- The old blue trophy stays on stage, demoted - the hierarchy of trophies tells the promotion story.
+- The shard palette matches the ruby trophy (reds/pinks), not generic confetti colors.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">trophy reveal with shard explosion and looping sparkles.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-ruby-league-reveal-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's Ruby League promotion reveal - from the weekly-results screen the view pushes into a dark stage where the blue trophy slides aside and the ruby trophy bursts into center with gem shards flying, then looping sparkles twinkle behind the \"You moved up to the Ruby League!\" line and blue CONTINUE button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark charcoal screens. Screen 1: \"Congratulations! You finished #1 last week.\" with gold/blue/gray trophy icons and a top-5 leaderboard list, blue CONTINUE. Screen 2 (the reveal): centered ruby-red league trophy on a pedestal, the previous blue trophy shrunk and dimmed to its left, a gray silhouette trophy further right; headline \"You moved up to the Ruby League!\", blue CONTINUE button, tab bar.\n\n## Motion spec\nPattern: trophy reveal with shard explosion and looping sparkles.\n- Push transition in (300ms ease-in-out).\n- The blue trophy slides left and shrinks (scale 1.0 -> 0.6, 350ms, ease-in-out) while the ruby trophy scales in at center (0 -> 1.15 -> 1.0, spring ~320/16, ~450ms).\n- On the ruby trophy's landing, ~10 gem shards explode outward (radial, 500ms life, gravity, staggered 25ms) in red/pink tones.\n- Headline fades up (200ms, delayed to the landing); CONTINUE slides up (250ms ease-out) after.\n- Loop: 5-6 white star sparkles twinkle around the trophy (scale 0 -> 1 -> 0, 900ms each, random offsets, infinite).\n\n## Calibration\n- The shard burst fires exactly on the spring's settle frame - the trophy lands and shatters attention outward.\n- Sparkles loop forever but stay behind the trophy (z-order), never over the headline.\n\n## Reduced motion\nRuby trophy crossfades in at center; headline and button fade in; no shards, no sparkle loop.\n\n## Don't miss\n- The old blue trophy stays on stage, demoted - the hierarchy of trophies tells the promotion story.\n- The shard palette matches the ruby trophy (reds/pinks), not generic confetti colors."</script>
+</body></html>

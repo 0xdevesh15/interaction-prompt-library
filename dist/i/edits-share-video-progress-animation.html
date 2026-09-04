@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edits Share Video Progress Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Edits Share Video Progress Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/edits-share-video-progress-animation"><b>Edits</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/edits-share-video-progress-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/edits-share-video-progress-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Instagram Edits&#x27; export progress - a gradient border draws itself around the video preview as the percentage counts up, then the screen hands off to a &quot;Choose where to share&quot; sheet.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68bc6ff847f9ad0c0dd2d65d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68bc6ff847f9ad0c0dd2d65d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-edits-share-video-progress-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Instagram Edits&#x27; export progress - a gradient border draws itself around the video preview as the percentage counts up, then the screen hands off to a &quot;Choose where to share&quot; sheet.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark export screen: an X to cancel, a centered video preview (portrait clip of a red phone), the percentage readout (&quot;13.3%&quot; ... &quot;98.4%&quot;) and the warning &quot;Please don&#x27;t close the app or lock your screen. You can continue using Edits while your video exports.&quot; Final state: &quot;Choose where to share&quot; with the finished preview and a row of share targets (Instagram, Facebook, Messages, WhatsApp, Download, Copy).
+
+## Motion spec
+Pattern: progress ring around a rounded rect, export-length.
+- The border: a 3px gradient stroke (orange -&gt; pink -&gt; purple) traces the preview&#x27;s rounded-rect perimeter, its drawn length matching export percent; the head of the stroke is brightest and the gradient rotates slowly as it draws.
+- Percent: the number counts up in sync (monotonic, no easing jumps).
+- Completion: the stroke closes the loop and flashes once (opacity 1 -&gt; 0.4 -&gt; 1, 250ms), then the preview lifts 20px while the share sheet slides up (spring ~320/26, 400ms).
+- Share icons pop in left to right (spring ~420/18, 35ms stagger).
+
+## Calibration
+- Stroke progress is tied to real export progress - never a timed fake.
+- The preview keeps playing the first frame; only the border animates during export.
+
+## Reduced motion
+A simple progress bar replaces the tracing border.
+
+## Don&#x27;t miss
+- The gradient travels around the corners smoothly - no segmented per-side fill.
+- The share sheet arrives only after the loop fully closes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">progress ring around a rounded rect, export-length.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/edits-share-video-progress-animation">original interaction</a> by Edits. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Instagram Edits' export progress - a gradient border draws itself around the video preview as the percentage counts up, then the screen hands off to a \"Choose where to share\" sheet.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark export screen: an X to cancel, a centered video preview (portrait clip of a red phone), the percentage readout (\"13.3%\" ... \"98.4%\") and the warning \"Please don't close the app or lock your screen. You can continue using Edits while your video exports.\" Final state: \"Choose where to share\" with the finished preview and a row of share targets (Instagram, Facebook, Messages, WhatsApp, Download, Copy).\n\n## Motion spec\nPattern: progress ring around a rounded rect, export-length.\n- The border: a 3px gradient stroke (orange -> pink -> purple) traces the preview's rounded-rect perimeter, its drawn length matching export percent; the head of the stroke is brightest and the gradient rotates slowly as it draws.\n- Percent: the number counts up in sync (monotonic, no easing jumps).\n- Completion: the stroke closes the loop and flashes once (opacity 1 -> 0.4 -> 1, 250ms), then the preview lifts 20px while the share sheet slides up (spring ~320/26, 400ms).\n- Share icons pop in left to right (spring ~420/18, 35ms stagger).\n\n## Calibration\n- Stroke progress is tied to real export progress - never a timed fake.\n- The preview keeps playing the first frame; only the border animates during export.\n\n## Reduced motion\nA simple progress bar replaces the tracing border.\n\n## Don't miss\n- The gradient travels around the corners smoothly - no segmented per-side fill.\n- The share sheet arrives only after the loop fully closes."</script>
+</body></html>

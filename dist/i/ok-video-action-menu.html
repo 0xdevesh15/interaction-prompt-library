@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OK Video Action Menu - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>OK Video Action Menu</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ok-video-action-menu"><b>Ok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ok-video-action-menu">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ok-video-action-menu">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: OK Video&#x27;s action menu - tapping the segmented progress bar at the top of the camera interface expands it downward into a dark status panel of clip details, then it collapses back into the thin bar.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c8690f02fa2363eacff099/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c8690f02fa2363eacff099/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ok-video-action-menu.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: OK Video&#x27;s action menu - tapping the segmented progress bar at the top of the camera interface expands it downward into a dark status panel of clip details, then it collapses back into the thin bar.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Camera viewfinder with a thin segmented progress bar pinned top (white segments per clip, the latest in red with an x). The expanded state: a dark panel hanging from the top showing clip rows with durations and per-row actions.
+
+## Motion spec
+Pattern: top-bar-to-panel shared-element expansion.
+- Tap the progress bar: the bar morphs into the panel - its segments stretch horizontally into the panel&#x27;s top edge (250ms, ease-out) while the panel body slides down from beneath it (spring ~330/24, slight overshoot).
+- Clip rows stagger in top-down (fade + 8px drop, 180ms, 50ms apart) as the panel opens; the viewfinder behind dims 15%.
+- The panel&#x27;s own close: rows stagger out bottom-up (120ms), the panel slides up and compresses back into the thin segmented bar (220ms, ease-in), segments snapping back to their clip widths.
+- Total round trip under 2s for a quick peek.
+
+## Calibration
+- The shared element is real: the bar IS the panel&#x27;s collapsed state, not a separate view that fades in.
+- Panel corners round to 14px as it grows; the bar&#x27;s are 3px - interpolate, don&#x27;t snap.
+
+## Reduced motion
+Panel crossfades over the bar.
+
+## Don&#x27;t miss
+- The expansion reads as the bar unfolding - anchor the top edge to the bar&#x27;s exact frame.
+- The red current-clip segment stays visible as the panel&#x27;s top hairline.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">top-bar-to-panel shared-element expansion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ok-video-action-menu">original interaction</a> by Ok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: OK Video's action menu - tapping the segmented progress bar at the top of the camera interface expands it downward into a dark status panel of clip details, then it collapses back into the thin bar.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCamera viewfinder with a thin segmented progress bar pinned top (white segments per clip, the latest in red with an x). The expanded state: a dark panel hanging from the top showing clip rows with durations and per-row actions.\n\n## Motion spec\nPattern: top-bar-to-panel shared-element expansion.\n- Tap the progress bar: the bar morphs into the panel - its segments stretch horizontally into the panel's top edge (250ms, ease-out) while the panel body slides down from beneath it (spring ~330/24, slight overshoot).\n- Clip rows stagger in top-down (fade + 8px drop, 180ms, 50ms apart) as the panel opens; the viewfinder behind dims 15%.\n- The panel's own close: rows stagger out bottom-up (120ms), the panel slides up and compresses back into the thin segmented bar (220ms, ease-in), segments snapping back to their clip widths.\n- Total round trip under 2s for a quick peek.\n\n## Calibration\n- The shared element is real: the bar IS the panel's collapsed state, not a separate view that fades in.\n- Panel corners round to 14px as it grows; the bar's are 3px - interpolate, don't snap.\n\n## Reduced motion\nPanel crossfades over the bar.\n\n## Don't miss\n- The expansion reads as the bar unfolding - anchor the top edge to the bar's exact frame.\n- The red current-clip segment stays visible as the panel's top hairline."</script>
+</body></html>

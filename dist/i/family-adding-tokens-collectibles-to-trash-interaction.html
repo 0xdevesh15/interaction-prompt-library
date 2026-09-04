@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Adding Tokens Collectibles to Trash Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Adding Tokens Collectibles to Trash Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-adding-tokens-collectibles-to-trash-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-adding-tokens-collectibles-to-trash-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-adding-tokens-collectibles-to-trash-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s collectibles trash flow - in the &quot;Froggy Friends&quot; grid, entering select mode checks frog cards, and confirming &quot;Trash Collectibles&quot; drops the selected cards physically into an illustrated trash can with springy physics, the can wobbling as they land, before the grid returns with the items gone.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895f3fc386bd77fdc7805/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895f3fc386bd77fdc7805/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-adding-tokens-collectibles-to-trash-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s collectibles trash flow - in the &quot;Froggy Friends&quot; grid, entering select mode checks frog cards, and confirming &quot;Trash Collectibles&quot; drops the selected cards physically into an illustrated trash can with springy physics, the can wobbling as they land, before the grid returns with the items gone.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Wallet collectibles screen (&quot;Benji&quot;, &quot;Froggy Friends&quot; grid of frog NFT cards). Select mode: white check circles on cards, &quot;Select All&quot; right. The trash sheet: &quot;Trash Collectibles&quot; title, subcopy, a white illustrated trash can, a red &quot;Trash 3 Collectibles&quot; button, &quot;Cancel&quot; below. End: the grid re-renders with remaining frogs and the next section (&quot;mint.fun base&quot;) sliding up.
+
+## Motion spec
+Pattern: skeuomorphic card drop into a trash can.
+- Select mode: cards shrink slightly (scale 0.96) and check circles pop in (spring ~340/16, 40ms stagger per card); selected cards get a white border and check (120ms).
+- Confirm: the sheet appears and the selected frog cards lift off the grid (scale 1 -&gt; 0.9, 150ms), arc toward the trash can (translate along a curve, 450ms ease-in, 60ms stagger between cards), shrinking as they fall (scale -&gt; 0.3).
+- Each card tips over the rim and drops in; the can wobbles per landing (rotate +/-5deg, spring ~300/14) with a soft puff at the rim.
+- The red button&#x27;s count decrements as cards land (&quot;Trash 2...&quot;, &quot;Trash 1...&quot;), then the sheet fades (250ms) and the grid reflows (remaining cards sliding into gaps, spring ~300/20).
+
+## Calibration
+- Cards drop one at a time - the rhythm of repeated wobbles is the comedy.
+- The can is white and minimal, not cartoonish; motion carries the playfulness.
+
+## Reduced motion
+Selected cards fade out (200ms); the grid reflows without arcs.
+
+## Don&#x27;t miss
+- Cards rotate slightly (10-15deg) as they arc, like tossed paper.
+- The last card gets a slightly bigger wobble - a finishing beat.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">skeuomorphic card drop into a trash can.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-adding-tokens-collectibles-to-trash-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's collectibles trash flow - in the \"Froggy Friends\" grid, entering select mode checks frog cards, and confirming \"Trash Collectibles\" drops the selected cards physically into an illustrated trash can with springy physics, the can wobbling as they land, before the grid returns with the items gone.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWallet collectibles screen (\"Benji\", \"Froggy Friends\" grid of frog NFT cards). Select mode: white check circles on cards, \"Select All\" right. The trash sheet: \"Trash Collectibles\" title, subcopy, a white illustrated trash can, a red \"Trash 3 Collectibles\" button, \"Cancel\" below. End: the grid re-renders with remaining frogs and the next section (\"mint.fun base\") sliding up.\n\n## Motion spec\nPattern: skeuomorphic card drop into a trash can.\n- Select mode: cards shrink slightly (scale 0.96) and check circles pop in (spring ~340/16, 40ms stagger per card); selected cards get a white border and check (120ms).\n- Confirm: the sheet appears and the selected frog cards lift off the grid (scale 1 -> 0.9, 150ms), arc toward the trash can (translate along a curve, 450ms ease-in, 60ms stagger between cards), shrinking as they fall (scale -> 0.3).\n- Each card tips over the rim and drops in; the can wobbles per landing (rotate +/-5deg, spring ~300/14) with a soft puff at the rim.\n- The red button's count decrements as cards land (\"Trash 2...\", \"Trash 1...\"), then the sheet fades (250ms) and the grid reflows (remaining cards sliding into gaps, spring ~300/20).\n\n## Calibration\n- Cards drop one at a time - the rhythm of repeated wobbles is the comedy.\n- The can is white and minimal, not cartoonish; motion carries the playfulness.\n\n## Reduced motion\nSelected cards fade out (200ms); the grid reflows without arcs.\n\n## Don't miss\n- Cards rotate slightly (10-15deg) as they arc, like tossed paper.\n- The last card gets a slightly bigger wobble - a finishing beat."</script>
+</body></html>

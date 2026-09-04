@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notion AI Sheet Intro Action Trail Transition - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Notion AI Sheet Intro Action Trail Transition</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/notion-ai-sheet-intro-action-trail-transition"><b>Notion</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/notion-ai-sheet-intro-action-trail-transition">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/notion-ai-sheet-intro-action-trail-transition">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this transition 1:1: Notion AI&#x27;s intro sheet - a vertical ticker of AI action pills auto-scrolls above a &quot;Meet the new Notion AI&quot; bottom sheet, streaming capabilities upward in an endless loop.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23dd7ce6c42e74b495e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23dd7ce6c42e74b495e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-notion-ai-sheet-intro-action-trail-transition.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this transition 1:1: Notion AI&#x27;s intro sheet - a vertical ticker of AI action pills auto-scrolls above a &quot;Meet the new Notion AI&quot; bottom sheet, streaming capabilities upward in an endless loop.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A Notion page behind (sidebar: Twitter, Tasks, Untitled) dimmed under a scrim. A bottom sheet: the Notion AI wand logo, an auto-scrolling column of action pills (&quot;Improve writing&quot;, &quot;Find in Google Drive&quot;, &quot;Find in Slack&quot;, &quot;Ask a question&quot;, &quot;Find key points in&quot;, &quot;Brainstorm ideas&quot;, &quot;Get help with code&quot;, &quot;Make a diagram&quot;, &quot;Make a table&quot;, &quot;Translate&quot;, &quot;Draft an agenda&quot;...), then the title &quot;Meet the new Notion AI&quot;, the subtitle &quot;One AI tool that does it all. Search, generate, analyze, and chat-right inside Notion.&quot;, a black &quot;Try it&quot; button, and a &quot;Learn more&quot; link.
+
+## Motion spec
+Pattern: auto-scrolling vertical ticker of capability pills.
+- The sheet rises on entry (spring ~300/24, from 90% height), scrim fading to 40% (300ms).
+- The pill column scrolls upward continuously at 28pt/s in a seamless loop (content duplicated for wraparound), each pill a small rounded chip with an icon and label.
+- Pills fade to 0 over the top and bottom 24pt of the ticker window (gradient mask).
+- Every ~2.2s the ticker eases to a subtle pause on a pill (120ms ease-out, holds 400ms, eases back to speed over 300ms) so individual actions are readable.
+- The wand logo idles with a tiny sparkle (scale 1 -&gt; 1.06 -&gt; 1, 2.8s loop).
+- Try it presses with a 0.96 scale; tapping it dismisses the sheet down (spring ~320/26) and fades the ticker first (150ms).
+
+## Calibration
+- The loop must be seamless: identical spacing at the wrap point, no jump.
+- Ticker speed is constant enough to read: 28pt/s, never accelerating past 40pt/s after a pause.
+
+## Reduced motion
+Ticker is static, showing 4 stacked pills; a slow crossfade swaps the set every 3s.
+
+## Don&#x27;t miss
+- Pills are real Notion AI actions with their icons - keep the copy verbatim.
+- The ticker sits between the logo and the title, visually feeding the &quot;does it all&quot; claim.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-scrolling vertical ticker of capability pills.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/notion-ai-sheet-intro-action-trail-transition">original interaction</a> by Notion. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this transition 1:1: Notion AI's intro sheet - a vertical ticker of AI action pills auto-scrolls above a \"Meet the new Notion AI\" bottom sheet, streaming capabilities upward in an endless loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA Notion page behind (sidebar: Twitter, Tasks, Untitled) dimmed under a scrim. A bottom sheet: the Notion AI wand logo, an auto-scrolling column of action pills (\"Improve writing\", \"Find in Google Drive\", \"Find in Slack\", \"Ask a question\", \"Find key points in\", \"Brainstorm ideas\", \"Get help with code\", \"Make a diagram\", \"Make a table\", \"Translate\", \"Draft an agenda\"...), then the title \"Meet the new Notion AI\", the subtitle \"One AI tool that does it all. Search, generate, analyze, and chat-right inside Notion.\", a black \"Try it\" button, and a \"Learn more\" link.\n\n## Motion spec\nPattern: auto-scrolling vertical ticker of capability pills.\n- The sheet rises on entry (spring ~300/24, from 90% height), scrim fading to 40% (300ms).\n- The pill column scrolls upward continuously at 28pt/s in a seamless loop (content duplicated for wraparound), each pill a small rounded chip with an icon and label.\n- Pills fade to 0 over the top and bottom 24pt of the ticker window (gradient mask).\n- Every ~2.2s the ticker eases to a subtle pause on a pill (120ms ease-out, holds 400ms, eases back to speed over 300ms) so individual actions are readable.\n- The wand logo idles with a tiny sparkle (scale 1 -> 1.06 -> 1, 2.8s loop).\n- Try it presses with a 0.96 scale; tapping it dismisses the sheet down (spring ~320/26) and fades the ticker first (150ms).\n\n## Calibration\n- The loop must be seamless: identical spacing at the wrap point, no jump.\n- Ticker speed is constant enough to read: 28pt/s, never accelerating past 40pt/s after a pause.\n\n## Reduced motion\nTicker is static, showing 4 stacked pills; a slow crossfade swaps the set every 3s.\n\n## Don't miss\n- Pills are real Notion AI actions with their icons - keep the copy verbatim.\n- The ticker sits between the logo and the title, visually feeding the \"does it all\" claim."</script>
+</body></html>

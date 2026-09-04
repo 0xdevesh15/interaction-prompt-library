@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Endel Premium Screen Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Endel Premium Screen Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/endel-premium-screen-animation"><b>Endel</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/endel-premium-screen-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/endel-premium-screen-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Endel&#x27;s premium paywall - behind the &quot;70% off 1 Year / 3 Months of Endel Premium&quot; offer text, a layered illustration of soft flower/petal shapes in orange, red, and magenta over a purple sky slowly rotates, pulses, and drifts, creating a calm ambient loop.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67173398f6cc61d7e4f2ed3e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67173398f6cc61d7e4f2ed3e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-endel-premium-screen-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Endel&#x27;s premium paywall - behind the &quot;70% off 1 Year / 3 Months of Endel Premium&quot; offer text, a layered illustration of soft flower/petal shapes in orange, red, and magenta over a purple sky slowly rotates, pulses, and drifts, creating a calm ambient loop.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-bleed paywall: purple-to-magenta gradient sky, layered translucent petal/mound shapes (orange front, deeper red and magenta layers behind) filling the lower half, &quot;PREMIUM&quot; tag and the offer headline with subline at top, close X top-right.
+
+## Motion spec
+Pattern: slow ambient rotation and pulse of layered illustration.
+- Each petal layer rotates gently around its own center (rotation +/-3deg, 6-9s per cycle, ease-in-out, layers phase-offset so they never align).
+- The front layer breathes (scale 1 -&gt; 1.03 -&gt; 1, 7s loop) while rear layers drift horizontally a few pixels (translateX +/-8px, 8s, counter-phase).
+- The purple sky gradient shifts hue subtly (top color cycles a few degrees, 12s loop).
+- The text block and close button stay perfectly still - the calm comes from the illustration only.
+
+## Calibration
+- All motion is slow (6s+) and small (a few degrees, a few pixels) - nothing should feel like it &quot;moved&quot;, only that it is alive.
+- Layers are translucent; overlaps blend into new colors as they drift.
+
+## Reduced motion
+Static illustration; no rotation, pulse, or gradient shift.
+
+## Don&#x27;t miss
+- The layers never sync - constant phase offset keeps the composition from ever repeating.
+- The offer text is locked in place; readability is never compromised by the motion.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slow ambient rotation and pulse of layered illustration.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/endel-premium-screen-animation">original interaction</a> by Endel. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Endel's premium paywall - behind the \"70% off 1 Year / 3 Months of Endel Premium\" offer text, a layered illustration of soft flower/petal shapes in orange, red, and magenta over a purple sky slowly rotates, pulses, and drifts, creating a calm ambient loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-bleed paywall: purple-to-magenta gradient sky, layered translucent petal/mound shapes (orange front, deeper red and magenta layers behind) filling the lower half, \"PREMIUM\" tag and the offer headline with subline at top, close X top-right.\n\n## Motion spec\nPattern: slow ambient rotation and pulse of layered illustration.\n- Each petal layer rotates gently around its own center (rotation +/-3deg, 6-9s per cycle, ease-in-out, layers phase-offset so they never align).\n- The front layer breathes (scale 1 -> 1.03 -> 1, 7s loop) while rear layers drift horizontally a few pixels (translateX +/-8px, 8s, counter-phase).\n- The purple sky gradient shifts hue subtly (top color cycles a few degrees, 12s loop).\n- The text block and close button stay perfectly still - the calm comes from the illustration only.\n\n## Calibration\n- All motion is slow (6s+) and small (a few degrees, a few pixels) - nothing should feel like it \"moved\", only that it is alive.\n- Layers are translucent; overlaps blend into new colors as they drift.\n\n## Reduced motion\nStatic illustration; no rotation, pulse, or gradient shift.\n\n## Don't miss\n- The layers never sync - constant phase offset keeps the composition from ever repeating.\n- The offer text is locked in place; readability is never compromised by the motion."</script>
+</body></html>

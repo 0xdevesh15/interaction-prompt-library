@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo 10 Day Streak Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo 10 Day Streak Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-10-day-streak-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-10-day-streak-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-10-day-streak-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s 10-day streak celebration - on a white screen, a flat orange capsule morphs into the lit streak flame behind a burst ring, the counter rolls 9 to 10, the weekday progress bar fills, and a blue CONTINUE button slides up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868eaf52f7f889f3d1cf833/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868eaf52f7f889f3d1cf833/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-10-day-streak-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s 10-day streak celebration - on a white screen, a flat orange capsule morphs into the lit streak flame behind a burst ring, the counter rolls 9 to 10, the weekday progress bar fills, and a blue CONTINUE button slides up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen. Center: streak flame above a large counter and &quot;day streak&quot; label. Below: a weekday progress bar (day labels Su-Sa, yellow-orange fill), the caption &quot;Complete a lesson every day to build your streak&quot;, and a blue CONTINUE button.
+
+## Motion spec
+Pattern: milestone counter reveal with morphing flame.
+- A flat orange capsule sits where the flame will be; it stretches upward and morphs into the flame silhouette (300ms, ease-in-out) while a thin burst ring expands behind it (scale 0.5 -&gt; 1.5, 350ms, fade out) with 4 spark dots.
+- Counter: rolls 9 -&gt; 10 with a vertical digit slide (250ms) and scale pulse (1.0 -&gt; 1.2 -&gt; 1.0, 300ms).
+- Flame does a small hop (translateY -10pt, spring ~340/18).
+- Progress bar: track fades in (150ms), fill sweeps to the 10-day mark (600ms, ease-out), passing day labels that brighten as the fill crosses them.
+- Caption fades up (200ms); CONTINUE slides up from below (280ms, ease-out) last.
+
+## Calibration
+- Morph, ring, and counter roll land together in the first half second; the rest staggers after.
+- White background throughout - no color wash for this milestone.
+
+## Reduced motion
+Flame crossfades in, counter sets to 10, bar fills over 300ms, button fades in.
+
+## Don&#x27;t miss
+- The capsule-to-flame morph is the signature - do not start from a finished flame.
+- Day labels sit under the track and brighten only as the fill passes them.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">milestone counter reveal with morphing flame.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-10-day-streak-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's 10-day streak celebration - on a white screen, a flat orange capsule morphs into the lit streak flame behind a burst ring, the counter rolls 9 to 10, the weekday progress bar fills, and a blue CONTINUE button slides up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen. Center: streak flame above a large counter and \"day streak\" label. Below: a weekday progress bar (day labels Su-Sa, yellow-orange fill), the caption \"Complete a lesson every day to build your streak\", and a blue CONTINUE button.\n\n## Motion spec\nPattern: milestone counter reveal with morphing flame.\n- A flat orange capsule sits where the flame will be; it stretches upward and morphs into the flame silhouette (300ms, ease-in-out) while a thin burst ring expands behind it (scale 0.5 -> 1.5, 350ms, fade out) with 4 spark dots.\n- Counter: rolls 9 -> 10 with a vertical digit slide (250ms) and scale pulse (1.0 -> 1.2 -> 1.0, 300ms).\n- Flame does a small hop (translateY -10pt, spring ~340/18).\n- Progress bar: track fades in (150ms), fill sweeps to the 10-day mark (600ms, ease-out), passing day labels that brighten as the fill crosses them.\n- Caption fades up (200ms); CONTINUE slides up from below (280ms, ease-out) last.\n\n## Calibration\n- Morph, ring, and counter roll land together in the first half second; the rest staggers after.\n- White background throughout - no color wash for this milestone.\n\n## Reduced motion\nFlame crossfades in, counter sets to 10, bar fills over 300ms, button fades in.\n\n## Don't miss\n- The capsule-to-flame morph is the signature - do not start from a finished flame.\n- Day labels sit under the track and brighten only as the fill passes them."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alyx Intro Value Prop Card Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Alyx Intro Value Prop Card Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/alyx-intro-value-prop-card-animation"><b>Alyx</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alyx-intro-value-prop-card-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alyx-intro-value-prop-card-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Alyx&#x27;s welcome screen - six colorful value-prop cards fade in and unblur in a stagger, then each card runs its own tiny loop (a rotating aura ring, a drawing mood graph), with a purple &quot;Coooool -&gt;&quot; button below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69874d3e924a60df4b1d26dc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69874d3e924a60df4b1d26dc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-alyx-intro-value-prop-card-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Alyx&#x27;s welcome screen - six colorful value-prop cards fade in and unblur in a stagger, then each card runs its own tiny loop (a rotating aura ring, a drawing mood graph), with a purple &quot;Coooool -&gt;&quot; button below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Alyx intro, white: &quot;Welcome to Alyx&quot; + subcopy; a 2x3 grid of rounded cards - purple streak counter, green aura ring, red checklist, blue dose chip, gold medal, pink mood graph - and a wide purple &quot;Coooool -&gt;&quot; button near the bottom.
+
+## Motion spec
+Pattern: staggered unblur grid entrance with per-card micro-loops.
+- Title and subcopy fade up first (translateY 10 -&gt; 0, 300ms).
+- Cards enter in reading order, 90ms apart: each goes from blur 12px + opacity 0 + scale 0.92 to sharp, full, 1 over 350ms (ease-out) - a focus pull, not a bounce.
+- Once landed, each card runs its own ambient loop: the aura ring rotates slowly (8s per turn), the mood graph line draws itself over 1.2s and holds then redraws, the checklist&#x27;s items tick on one by one, the streak counter&#x27;s flame flickers (scale 1 -&gt; 1.06, 500ms), the medal glints (highlight sweep every 3s), the dose chip&#x27;s value pulses once every 4s.
+- The button fades up last (250ms) and its arrow nudges right every 2s (translateX 0 -&gt; 4 -&gt; 0, 400ms).
+
+## Calibration
+- Cards are saturated but flat - the depth comes from the blur entrance, not shadows.
+- The micro-loops are asynchronous - no two cards hit their beat on the same frame.
+
+## Reduced motion
+Cards fade in staggered (200ms each); loops disabled; button static.
+
+## Don&#x27;t miss
+- The unblur must resolve fully - cards end tack sharp at opacity 1.
+- The button&#x27;s playful label (&quot;Coooool -&gt;&quot;) is part of the voice - keep it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered unblur grid entrance with per-card micro-loops.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/alyx-intro-value-prop-card-animation">original interaction</a> by Alyx. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Alyx's welcome screen - six colorful value-prop cards fade in and unblur in a stagger, then each card runs its own tiny loop (a rotating aura ring, a drawing mood graph), with a purple \"Coooool ->\" button below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAlyx intro, white: \"Welcome to Alyx\" + subcopy; a 2x3 grid of rounded cards - purple streak counter, green aura ring, red checklist, blue dose chip, gold medal, pink mood graph - and a wide purple \"Coooool ->\" button near the bottom.\n\n## Motion spec\nPattern: staggered unblur grid entrance with per-card micro-loops.\n- Title and subcopy fade up first (translateY 10 -> 0, 300ms).\n- Cards enter in reading order, 90ms apart: each goes from blur 12px + opacity 0 + scale 0.92 to sharp, full, 1 over 350ms (ease-out) - a focus pull, not a bounce.\n- Once landed, each card runs its own ambient loop: the aura ring rotates slowly (8s per turn), the mood graph line draws itself over 1.2s and holds then redraws, the checklist's items tick on one by one, the streak counter's flame flickers (scale 1 -> 1.06, 500ms), the medal glints (highlight sweep every 3s), the dose chip's value pulses once every 4s.\n- The button fades up last (250ms) and its arrow nudges right every 2s (translateX 0 -> 4 -> 0, 400ms).\n\n## Calibration\n- Cards are saturated but flat - the depth comes from the blur entrance, not shadows.\n- The micro-loops are asynchronous - no two cards hit their beat on the same frame.\n\n## Reduced motion\nCards fade in staggered (200ms each); loops disabled; button static.\n\n## Don't miss\n- The unblur must resolve fully - cards end tack sharp at opacity 1.\n- The button's playful label (\"Coooool ->\") is part of the voice - keep it."</script>
+</body></html>

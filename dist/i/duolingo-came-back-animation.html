@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Came Back Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Came Back Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-came-back-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-came-back-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-came-back-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s welcome-back - on a white screen, the Duo owl wakes up as a blob, spins in the air, and lands as the full mascot with sparkles and confetti, over the message &quot;Am I dreaming? rishi, you came back!&quot; with a blue &quot;LET&#x27;S GO!&quot; button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd94b3dc09c7fe3883/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd94b3dc09c7fe3883/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-came-back-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s welcome-back - on a white screen, the Duo owl wakes up as a blob, spins in the air, and lands as the full mascot with sparkles and confetti, over the message &quot;Am I dreaming? rishi, you came back!&quot; with a blue &quot;LET&#x27;S GO!&quot; button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen. Center: the Duo owl animation stage - starting as a small sleeping green blob with eyes closed. Message below: &quot;Am I dreaming? rishi, you came back!&quot; Blue &quot;LET&#x27;S GO!&quot; button pinned at the bottom.
+
+## Motion spec
+Pattern: mascot wake-up spin with confetti landing.
+- The blob sleeps (gentle squash breathing, scaleY 1 -&gt; 0.95, 1.6s, two cycles) then its eyes pop open.
+- It launches upward (translateY -60pt, 350ms ease-out) tucking into a spinning ball shape (rotation 720deg over 500ms, squash on launch, stretch at apex).
+- At the apex it unfolds back into the full owl - wings out, eyes sparkling (star pupils) - and drops to the ground (300ms ease-in) with a landing squash (scaleY 0.8 -&gt; 1, spring ~340/14).
+- Confetti and sparkle stars burst on landing (10-12 pieces, radial 450ms, gravity fall) in blue, green, and yellow.
+- Idle: the owl bounces in place happily (translateY -6pt hops, 900ms, wings flapping each hop).
+
+## Calibration
+- The spin is the payoff - fast, one clean double rotation, no wobble.
+- The message and button stay static; all motion is the mascot.
+
+## Reduced motion
+The owl fades from sleeping to celebrating pose with a small sparkle (250ms).
+
+## Don&#x27;t miss
+- The eyes get star sparkles exactly at the unfold - that is the delight beat.
+- The landing shadow scales with the drop to ground the character.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">mascot wake-up spin with confetti landing.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-came-back-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's welcome-back - on a white screen, the Duo owl wakes up as a blob, spins in the air, and lands as the full mascot with sparkles and confetti, over the message \"Am I dreaming? rishi, you came back!\" with a blue \"LET'S GO!\" button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen. Center: the Duo owl animation stage - starting as a small sleeping green blob with eyes closed. Message below: \"Am I dreaming? rishi, you came back!\" Blue \"LET'S GO!\" button pinned at the bottom.\n\n## Motion spec\nPattern: mascot wake-up spin with confetti landing.\n- The blob sleeps (gentle squash breathing, scaleY 1 -> 0.95, 1.6s, two cycles) then its eyes pop open.\n- It launches upward (translateY -60pt, 350ms ease-out) tucking into a spinning ball shape (rotation 720deg over 500ms, squash on launch, stretch at apex).\n- At the apex it unfolds back into the full owl - wings out, eyes sparkling (star pupils) - and drops to the ground (300ms ease-in) with a landing squash (scaleY 0.8 -> 1, spring ~340/14).\n- Confetti and sparkle stars burst on landing (10-12 pieces, radial 450ms, gravity fall) in blue, green, and yellow.\n- Idle: the owl bounces in place happily (translateY -6pt hops, 900ms, wings flapping each hop).\n\n## Calibration\n- The spin is the payoff - fast, one clean double rotation, no wobble.\n- The message and button stay static; all motion is the mascot.\n\n## Reduced motion\nThe owl fades from sleeping to celebrating pose with a small sparkle (250ms).\n\n## Don't miss\n- The eyes get star sparkles exactly at the unfold - that is the delight beat.\n- The landing shadow scales with the drop to ground the character."</script>
+</body></html>

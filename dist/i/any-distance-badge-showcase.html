@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Any Distance Badge Showcase - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Any Distance Badge Showcase</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/any-distance-badge-showcase"><b>Any Distance</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/any-distance-badge-showcase">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/any-distance-badge-showcase">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Any Distance&#x27;s achievement medal - a 3D capsule medal with a gold numeral floats on a dark &quot;DAY 1&quot; screen, and flicking it sends it spinning with real inertia that decays over several seconds.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4d20e61d73e2622b3e554/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4d20e61d73e2622b3e554/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-any-distance-badge-showcase.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Any Distance&#x27;s achievement medal - a 3D capsule medal with a gold numeral floats on a dark &quot;DAY 1&quot; screen, and flicking it sends it spinning with real inertia that decays over several seconds.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Near-black screen with faint star specks. Top bar: achievement label, Done action, small info icon. Center: a dark 3D capsule medal standing upright, gold &quot;1&quot; embossed on its face, lit from above with a soft glow. Below: &quot;DAY 1&quot; title, a one-line caption, a &quot;Wear Your Medal&quot; row, and a full-width Share button.
+
+## Motion spec
+Pattern: flickable 3D medal with inertial spin.
+- Idle: the medal sways gently (rotationY +-8deg, 3s sine) with a slow light sweep across its face.
+- A horizontal flick applies angular velocity proportional to the flick speed (rotationY around the medal&#x27;s vertical axis); the spin decays exponentially (friction ~0.92 per frame at 60fps) over 3 to 5 seconds.
+- During spin the medal is a true 3D object: it foreshortens edge-on and the gold face catches light once per revolution (specular highlight sweep).
+- Dragging without flicking rotates the medal 1:1 with the finger and holds on release.
+- A fast flick can also tilt the capsule (rotationX +-10deg) which settles back with a spring (stiffness ~120, damping ~10).
+
+## Calibration
+- Inertia decay is the toy: too fast feels stiff, too slow feels like a fidget spinner - 3 to 5 seconds to rest is the pocket.
+- The face must be readable at rest; clamp the idle sway so the numeral never turns away fully.
+
+## Reduced motion
+Medal is static; flick rotates it 90deg with a 300ms ease instead of a free spin.
+
+## Don&#x27;t miss
+- The medal is a capsule (rounded-top slab), not a coin - its silhouette at edge-on is a thin rounded bar.
+- The star specks in the background drift almost imperceptibly (parallax against the medal).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">flickable 3D medal with inertial spin.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/any-distance-badge-showcase">original interaction</a> by Any Distance. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Any Distance's achievement medal - a 3D capsule medal with a gold numeral floats on a dark \"DAY 1\" screen, and flicking it sends it spinning with real inertia that decays over several seconds.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNear-black screen with faint star specks. Top bar: achievement label, Done action, small info icon. Center: a dark 3D capsule medal standing upright, gold \"1\" embossed on its face, lit from above with a soft glow. Below: \"DAY 1\" title, a one-line caption, a \"Wear Your Medal\" row, and a full-width Share button.\n\n## Motion spec\nPattern: flickable 3D medal with inertial spin.\n- Idle: the medal sways gently (rotationY +-8deg, 3s sine) with a slow light sweep across its face.\n- A horizontal flick applies angular velocity proportional to the flick speed (rotationY around the medal's vertical axis); the spin decays exponentially (friction ~0.92 per frame at 60fps) over 3 to 5 seconds.\n- During spin the medal is a true 3D object: it foreshortens edge-on and the gold face catches light once per revolution (specular highlight sweep).\n- Dragging without flicking rotates the medal 1:1 with the finger and holds on release.\n- A fast flick can also tilt the capsule (rotationX +-10deg) which settles back with a spring (stiffness ~120, damping ~10).\n\n## Calibration\n- Inertia decay is the toy: too fast feels stiff, too slow feels like a fidget spinner - 3 to 5 seconds to rest is the pocket.\n- The face must be readable at rest; clamp the idle sway so the numeral never turns away fully.\n\n## Reduced motion\nMedal is static; flick rotates it 90deg with a 300ms ease instead of a free spin.\n\n## Don't miss\n- The medal is a capsule (rounded-top slab), not a coin - its silhouette at edge-on is a thin rounded bar.\n- The star specks in the background drift almost imperceptibly (parallax against the medal)."</script>
+</body></html>

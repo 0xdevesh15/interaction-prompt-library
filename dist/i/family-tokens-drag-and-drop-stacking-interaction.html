@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Tokens Drag and Drop Stacking Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Tokens Drag and Drop Stacking Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-tokens-drag-and-drop-stacking-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-tokens-drag-and-drop-stacking-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-tokens-drag-and-drop-stacking-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s token list reordering - entering edit mode on the light Benji token list reveals drag handles, and dragging rows (Aave to the top, Ethereum down) lifts them with a blue highlight while neighbors spring-shift out of the way; Done commits the new order.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895d72f7f889f3d1b47b9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895d72f7f889f3d1b47b9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-tokens-drag-and-drop-stacking-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s token list reordering - entering edit mode on the light Benji token list reveals drag handles, and dragging rows (Aave to the top, Ethereum down) lifts them with a blue highlight while neighbors spring-shift out of the way; Done commits the new order.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light wallet home: Benji header, &quot;Tokens $589.00&quot;, rows (Ethereum $352.95, Tether $33.76, Aave $119.29, Optimism $2.92, Polygon $12.68, Alongside Crypto Market $7.36, Bridged USDC $0.02, WETH $8.85, Worldcoin $6.95, The Doge NFT, Wrapped Fantom $0.18, ai_jane $0.00). Edit mode: &quot;Custom&quot; header with Done, drag handles at each row&#x27;s right edge, rows slightly compressed. Final order shows Aave first.
+
+## Motion spec
+Pattern: spring-loaded drag reorder with edit-mode transition.
+- Enter edit: the header crossfades to &quot;Custom / Done&quot; (200ms), handles slide in from the right (200ms, 20ms row stagger), and rows ease inward (scale 0.98, 200ms).
+- Touch and hold a row: the row lifts (scale 1.02, shadow grows, 150ms) with a light-blue highlight fill (100ms).
+- Drag: the row tracks the finger; neighbors it passes shift aside (translateY spring ~300/20, 200ms), opening a gap that follows the dragged row.
+- Drop: the row snaps into the gap (spring ~320/18, 250ms) with a settle bounce; neighbors close ranks (spring ~300/22).
+- Tap Done: handles slide out (150ms), the header restores (200ms), rows ease back to full size, and the list stands in the new order.
+
+## Calibration
+- Only vertical motion - rows never drift horizontally while dragged.
+- The dragged row renders above siblings (z-raised) with its shadow.
+
+## Reduced motion
+Reorder animates as fades between old and new positions (200ms).
+
+## Don&#x27;t miss
+- The highlight is a light blue fill on the whole row, not just the handle.
+- Fiat values and logos stay visible on every row during the shuffle.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring-loaded drag reorder with edit-mode transition.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-tokens-drag-and-drop-stacking-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's token list reordering - entering edit mode on the light Benji token list reveals drag handles, and dragging rows (Aave to the top, Ethereum down) lifts them with a blue highlight while neighbors spring-shift out of the way; Done commits the new order.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight wallet home: Benji header, \"Tokens $589.00\", rows (Ethereum $352.95, Tether $33.76, Aave $119.29, Optimism $2.92, Polygon $12.68, Alongside Crypto Market $7.36, Bridged USDC $0.02, WETH $8.85, Worldcoin $6.95, The Doge NFT, Wrapped Fantom $0.18, ai_jane $0.00). Edit mode: \"Custom\" header with Done, drag handles at each row's right edge, rows slightly compressed. Final order shows Aave first.\n\n## Motion spec\nPattern: spring-loaded drag reorder with edit-mode transition.\n- Enter edit: the header crossfades to \"Custom / Done\" (200ms), handles slide in from the right (200ms, 20ms row stagger), and rows ease inward (scale 0.98, 200ms).\n- Touch and hold a row: the row lifts (scale 1.02, shadow grows, 150ms) with a light-blue highlight fill (100ms).\n- Drag: the row tracks the finger; neighbors it passes shift aside (translateY spring ~300/20, 200ms), opening a gap that follows the dragged row.\n- Drop: the row snaps into the gap (spring ~320/18, 250ms) with a settle bounce; neighbors close ranks (spring ~300/22).\n- Tap Done: handles slide out (150ms), the header restores (200ms), rows ease back to full size, and the list stands in the new order.\n\n## Calibration\n- Only vertical motion - rows never drift horizontally while dragged.\n- The dragged row renders above siblings (z-raised) with its shadow.\n\n## Reduced motion\nReorder animates as fades between old and new positions (200ms).\n\n## Don't miss\n- The highlight is a light blue fill on the whole row, not just the handle.\n- Fiat values and logos stay visible on every row during the shuffle."</script>
+</body></html>

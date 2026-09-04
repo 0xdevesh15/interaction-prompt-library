@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Wallet Creation Onboarding Sheets Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Wallet Creation Onboarding Sheets Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-wallet-creation-onboarding-sheets-morph-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-wallet-creation-onboarding-sheets-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-wallet-creation-onboarding-sheets-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s wallet creation onboarding - from &quot;Accept Terms&quot; (four purple checkboxes, &quot;I Understand, Continue&quot;) through a &quot;Creating Your Wallet&quot; interstitial to &quot;Your wallet is ready&quot; (purple card), then a sequence of purple-art education sheets (&quot;Before you continue...&quot;, &quot;Ok, but what is a &#x27;Secret Recovery Phrase&#x27;?&quot;, &quot;So yeah, don&#x27;t share...&quot;, &quot;One last important thing...&quot;) ending on the 12-word &quot;Your Secret Recovery Phrase&quot; reveal with iCloud / Manual Backup choices.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686896532f7f889f3d1b4983/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686896532f7f889f3d1b4983/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-wallet-creation-onboarding-sheets-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s wallet creation onboarding - from &quot;Accept Terms&quot; (four purple checkboxes, &quot;I Understand, Continue&quot;) through a &quot;Creating Your Wallet&quot; interstitial to &quot;Your wallet is ready&quot; (purple card), then a sequence of purple-art education sheets (&quot;Before you continue...&quot;, &quot;Ok, but what is a &#x27;Secret Recovery Phrase&#x27;?&quot;, &quot;So yeah, don&#x27;t share...&quot;, &quot;One last important thing...&quot;) ending on the 12-word &quot;Your Secret Recovery Phrase&quot; reveal with iCloud / Manual Backup choices.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light flow, purple brand. Screens: &quot;Accept Terms&quot; (4 checked checkbox rows, purple &quot;I Understand, Continue&quot;); &quot;Creating Your Wallet&quot; (&quot;Doing some cryptographic magic...&quot; spinner beat); &quot;Your wallet is ready&quot; (purple wallet card &quot;test / 0 ETH / 0x6119...8b37&quot;, &quot;Save On Device&quot; tag); three education sheets with purple art blocks (shield, word list, lock, eye-off) and black Continue; &quot;Your Secret Recovery Phrase&quot; (purple card with 12 numbered words, &quot;iCloud Backup&quot; recommended option, &quot;Manual Backup&quot; with warning glyph).
+
+## Motion spec
+Pattern: staggered sheet sequence with a 3D card flip.
+- Checkboxes: each tap pops the check (scale 1 -&gt; 1.15 -&gt; 1, spring ~340/14, purple fill 150ms); Continue enables only when all four are checked (gray -&gt; purple, 200ms).
+- Continue: the sheet slides up (spring ~300/20); the creating interstitial crossfades in (200ms) with its status text shimmering (opacity loop 1s).
+- Ready: the purple wallet card flips in (rotateY 90 -&gt; 0, 500ms, ease-out) with a shadow sweep, the title fading above it.
+- Education sheets: each Continue pushes the next sheet (slide left, 300ms); the purple art block flips between illustrations (rotateY, 400ms) while body text staggers in (50ms lines).
+- The phrase reveal: the word card scales in (0.9 -&gt; 1, spring ~320/18) and the 12 words cascade (30ms each, opacity + 4pt rise); backup options slide up last (200ms).
+
+## Calibration
+- Purple is the only brand color; Continue buttons are black on the education sheets, purple on terms.
+- The 3D flips are reserved for the art/card surfaces.
+
+## Reduced motion
+All screens crossfade (250ms); no flips or cascades.
+
+## Don&#x27;t miss
+- &quot;iCloud Backup&quot; carries a &quot;Recommended&quot; treatment over &quot;Manual Backup&quot;.
+- The wallet card&#x27;s address (0x6119...8b37) and &quot;0 ETH&quot; show on the ready beat.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered sheet sequence with a 3D card flip.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-wallet-creation-onboarding-sheets-morph-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's wallet creation onboarding - from \"Accept Terms\" (four purple checkboxes, \"I Understand, Continue\") through a \"Creating Your Wallet\" interstitial to \"Your wallet is ready\" (purple card), then a sequence of purple-art education sheets (\"Before you continue...\", \"Ok, but what is a 'Secret Recovery Phrase'?\", \"So yeah, don't share...\", \"One last important thing...\") ending on the 12-word \"Your Secret Recovery Phrase\" reveal with iCloud / Manual Backup choices.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight flow, purple brand. Screens: \"Accept Terms\" (4 checked checkbox rows, purple \"I Understand, Continue\"); \"Creating Your Wallet\" (\"Doing some cryptographic magic...\" spinner beat); \"Your wallet is ready\" (purple wallet card \"test / 0 ETH / 0x6119...8b37\", \"Save On Device\" tag); three education sheets with purple art blocks (shield, word list, lock, eye-off) and black Continue; \"Your Secret Recovery Phrase\" (purple card with 12 numbered words, \"iCloud Backup\" recommended option, \"Manual Backup\" with warning glyph).\n\n## Motion spec\nPattern: staggered sheet sequence with a 3D card flip.\n- Checkboxes: each tap pops the check (scale 1 -> 1.15 -> 1, spring ~340/14, purple fill 150ms); Continue enables only when all four are checked (gray -> purple, 200ms).\n- Continue: the sheet slides up (spring ~300/20); the creating interstitial crossfades in (200ms) with its status text shimmering (opacity loop 1s).\n- Ready: the purple wallet card flips in (rotateY 90 -> 0, 500ms, ease-out) with a shadow sweep, the title fading above it.\n- Education sheets: each Continue pushes the next sheet (slide left, 300ms); the purple art block flips between illustrations (rotateY, 400ms) while body text staggers in (50ms lines).\n- The phrase reveal: the word card scales in (0.9 -> 1, spring ~320/18) and the 12 words cascade (30ms each, opacity + 4pt rise); backup options slide up last (200ms).\n\n## Calibration\n- Purple is the only brand color; Continue buttons are black on the education sheets, purple on terms.\n- The 3D flips are reserved for the art/card surfaces.\n\n## Reduced motion\nAll screens crossfade (250ms); no flips or cascades.\n\n## Don't miss\n- \"iCloud Backup\" carries a \"Recommended\" treatment over \"Manual Backup\".\n- The wallet card's address (0x6119...8b37) and \"0 ETH\" show on the ready beat."</script>
+</body></html>

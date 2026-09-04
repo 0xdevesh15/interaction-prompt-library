@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nike Run Club Distance Input Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Nike Run Club Distance Input Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/nike-run-club-distance-input-sheet"><b>Nike Run Club</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-run-club-distance-input-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-run-club-distance-input-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Nike Run Club&#x27;s distance input - tapping &quot;Pick a distance&quot; slides up a bottom sheet with a huge italic readout and custom numeric keypad; saving writes the value back into the challenge form.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c17ba2210ca5ef7c86afaf/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c17ba2210ca5ef7c86afaf/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-nike-run-club-distance-input-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Nike Run Club&#x27;s distance input - tapping &quot;Pick a distance&quot; slides up a bottom sheet with a huge italic readout and custom numeric keypad; saving writes the value back into the challenge form.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Create a challenge&quot; form (challenge art carousel at top, name field, Pick a distance and Select dates rows). The sheet: white, nearly full-height, titled &quot;Pick a distance&quot; with an X; center stage is a giant black italic &quot;00&quot; over a &quot;Km&quot; unit label; a minimal numeric keypad (1-9, 0, backspace) in light type; a full-width black &quot;Save&quot; button pinned at the bottom.
+
+## Motion spec
+Pattern: bottom-sheet numeric entry with live readout.
+- Tap the row: the sheet slides up over the form (spring stiffness ~300, damping ~30) - no bounce past the top edge.
+- Each keypad tap appends a digit: the new digit slides in from the right of the readout (120ms) and the whole number recenters; the digit key flashes (100ms).
+- Backspace drops the last digit with the same slide reversed.
+- Save enables (fills solid black) once the value is non-zero; tap Save: the sheet slides down (300ms, ease-in) and the form&#x27;s &quot;Pick a distance&quot; row crossfades to &quot;25 km&quot; with its accessory updating (200ms).
+
+## Calibration
+- The readout is the sheet&#x27;s hero - keypad digits stay small and quiet so the number owns the screen.
+- Slide-up covers the form but leaves a sliver of context (or dimmed scrim); a full-screen takeover loses the &quot;sheet&quot; feel.
+
+## Reduced motion
+Sheet fades in; digits update without slide.
+
+## Don&#x27;t miss
+- The readout is italic condensed - the slant is the brand&#x27;s motion voice.
+- Save returns the value into the exact row that opened the sheet.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bottom-sheet numeric entry with live readout.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/nike-run-club-distance-input-sheet">original interaction</a> by Nike Run Club. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Nike Run Club's distance input - tapping \"Pick a distance\" slides up a bottom sheet with a huge italic readout and custom numeric keypad; saving writes the value back into the challenge form.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Create a challenge\" form (challenge art carousel at top, name field, Pick a distance and Select dates rows). The sheet: white, nearly full-height, titled \"Pick a distance\" with an X; center stage is a giant black italic \"00\" over a \"Km\" unit label; a minimal numeric keypad (1-9, 0, backspace) in light type; a full-width black \"Save\" button pinned at the bottom.\n\n## Motion spec\nPattern: bottom-sheet numeric entry with live readout.\n- Tap the row: the sheet slides up over the form (spring stiffness ~300, damping ~30) - no bounce past the top edge.\n- Each keypad tap appends a digit: the new digit slides in from the right of the readout (120ms) and the whole number recenters; the digit key flashes (100ms).\n- Backspace drops the last digit with the same slide reversed.\n- Save enables (fills solid black) once the value is non-zero; tap Save: the sheet slides down (300ms, ease-in) and the form's \"Pick a distance\" row crossfades to \"25 km\" with its accessory updating (200ms).\n\n## Calibration\n- The readout is the sheet's hero - keypad digits stay small and quiet so the number owns the screen.\n- Slide-up covers the form but leaves a sliver of context (or dimmed scrim); a full-screen takeover loses the \"sheet\" feel.\n\n## Reduced motion\nSheet fades in; digits update without slide.\n\n## Don't miss\n- The readout is italic condensed - the slant is the brand's motion voice.\n- Save returns the value into the exact row that opened the sheet."</script>
+</body></html>

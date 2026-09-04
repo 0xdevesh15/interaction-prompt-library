@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlys Infinity Scroll Story Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Atlys Infinity Scroll Story Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/atlys-infinity-scroll-story-animation"><b>Atlys</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/atlys-infinity-scroll-story-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/atlys-infinity-scroll-story-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Atlys&#x27; scroll-driven onboarding story - a 3D passport that page-flips through visa stamps as you scroll, moving through chapters: &quot;you&#x27;ve the world&#x27;s strongest passport now&quot;, &quot;all your visas, delivered in 5 days&quot;, &quot;we partnered with governments&quot;, ending on &quot;it&#x27;s not magic, it&#x27;s just how we do visas now&quot; with a CTA.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6933fc5e491e9c48bfacc19c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6933fc5e491e9c48bfacc19c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-atlys-infinity-scroll-story-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Atlys&#x27; scroll-driven onboarding story - a 3D passport that page-flips through visa stamps as you scroll, moving through chapters: &quot;you&#x27;ve the world&#x27;s strongest passport now&quot;, &quot;all your visas, delivered in 5 days&quot;, &quot;we partnered with governments&quot;, ending on &quot;it&#x27;s not magic, it&#x27;s just how we do visas now&quot; with a CTA.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Near-black screen with small centered serif copy per chapter. Hero object: a 3D passport (embossed cover, gold crest) that opens to cream inner pages stamped with colorful visa marks (UK, UAE-style circular stamps). Later chapters show a gold &quot;Golden Visa&quot; card and a minimal government-building glyph. Final page: copy above a row of page dots and a wide CTA button.
+
+## Motion spec
+Pattern: scroll-scrubbed 3D page-flip story.
+- Scroll binding: story progress maps 1:1 to scroll; each chapter occupies roughly one viewport of scroll distance.
+- Page flip: the passport&#x27;s right page rotates around the spine (-0 -&gt; -180deg, scrubbed) with paper curl and a soft shadow sweeping the left page; each flip reveals the next stamped spread.
+- Passport entrance: cover rises from center and tilts from flat to a 15-20deg three-quarter view (600ms, ease-out) on chapter 1.
+- Chapter copy: fades/slides up (250ms) as its chapter becomes active, previous copy fades out.
+- Chapter transitions: the passport scales down and slides off as props swap (gold card scales in, spring ~280/18); the building glyph draws in with a 400ms stroke fade.
+- Finale: passport returns small above the copy, page dots fill sequentially, CTA fades in last (300ms).
+
+## Calibration
+- The flip must be scrubbed by scroll position, not triggered - free-running flips remove the tactile feel.
+- Keep the background near-black throughout; the paper and stamps carry the color.
+
+## Reduced motion
+Chapters cross-fade (250ms); the passport swaps between static spreads without the flip.
+
+## Don&#x27;t miss
+- Visa stamps look hand-stamped (slight rotation, ink texture), not printed flat.
+- Copy voice is lowercase and confident; keep the exact phrasing style.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-scrubbed 3D page-flip story.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/atlys-infinity-scroll-story-animation">original interaction</a> by Atlys. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Atlys' scroll-driven onboarding story - a 3D passport that page-flips through visa stamps as you scroll, moving through chapters: \"you've the world's strongest passport now\", \"all your visas, delivered in 5 days\", \"we partnered with governments\", ending on \"it's not magic, it's just how we do visas now\" with a CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNear-black screen with small centered serif copy per chapter. Hero object: a 3D passport (embossed cover, gold crest) that opens to cream inner pages stamped with colorful visa marks (UK, UAE-style circular stamps). Later chapters show a gold \"Golden Visa\" card and a minimal government-building glyph. Final page: copy above a row of page dots and a wide CTA button.\n\n## Motion spec\nPattern: scroll-scrubbed 3D page-flip story.\n- Scroll binding: story progress maps 1:1 to scroll; each chapter occupies roughly one viewport of scroll distance.\n- Page flip: the passport's right page rotates around the spine (-0 -> -180deg, scrubbed) with paper curl and a soft shadow sweeping the left page; each flip reveals the next stamped spread.\n- Passport entrance: cover rises from center and tilts from flat to a 15-20deg three-quarter view (600ms, ease-out) on chapter 1.\n- Chapter copy: fades/slides up (250ms) as its chapter becomes active, previous copy fades out.\n- Chapter transitions: the passport scales down and slides off as props swap (gold card scales in, spring ~280/18); the building glyph draws in with a 400ms stroke fade.\n- Finale: passport returns small above the copy, page dots fill sequentially, CTA fades in last (300ms).\n\n## Calibration\n- The flip must be scrubbed by scroll position, not triggered - free-running flips remove the tactile feel.\n- Keep the background near-black throughout; the paper and stamps carry the color.\n\n## Reduced motion\nChapters cross-fade (250ms); the passport swaps between static spreads without the flip.\n\n## Don't miss\n- Visa stamps look hand-stamped (slight rotation, ink texture), not printed flat.\n- Copy voice is lowercase and confident; keep the exact phrasing style."</script>
+</body></html>

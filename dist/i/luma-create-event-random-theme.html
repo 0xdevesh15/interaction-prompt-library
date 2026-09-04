@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luma Create Event Random Theme - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Luma Create Event Random Theme</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/luma-create-event-random-theme"><b>Luma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/luma-create-event-random-theme">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/luma-create-event-random-theme">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Luma&#x27;s event theme randomizer - tapping the dice icon on the Create Event artwork card swaps the card art and re-tints the entire screen background to the new theme&#x27;s palette.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb1861d73e2622b34580/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb1861d73e2622b34580/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-luma-create-event-random-theme.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Luma&#x27;s event theme randomizer - tapping the dice icon on the Create Event artwork card swaps the card art and re-tints the entire screen background to the new theme&#x27;s palette.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The dark &quot;Create Event&quot; form: an artwork card at top (&quot;YOU ARE INVITED&quot; poster) with a small dice/random button on its corner, form fields below. Tapping the dice cycles the card through generated themes (sunset gradient, purple-orange swirl...) while the whole screen&#x27;s background and field chrome wash to a matching tone.
+
+## Motion spec
+Pattern: dice-tap theme swap with full-screen color wash.
+- Tap the dice: the dice icon spins (rotate 360deg, 300ms, ease-out) with a quick scale bounce (0.85 to 1, spring ~400/24).
+- The card artwork crossfades to the next theme (250ms) with a slight vertical drift (8px) - the new art slides in as the old slides out.
+- Simultaneously the screen background and surfaces crossfade to a color sampled from the new artwork (350ms, ease-in-out), so the card and chrome always feel cut from the same cloth.
+- Text and field values stay fixed - only color and artwork change.
+- Repeated taps chain smoothly; each tap re-triggers the spin and wash without waiting for the previous to finish.
+
+## Calibration
+- The background tint is a muted derivative of the artwork&#x27;s dominant hue - never full saturation, or the form becomes unreadable.
+- The card keeps its corner radius and shadow through the swap; only the artwork layer transitions.
+
+## Reduced motion
+Artwork and background crossfade instantly; no dice spin.
+
+## Don&#x27;t miss
+- The dice button lives on the card&#x27;s corner, half-overlapping the artwork - it is part of the card, not the form.
+- The wash covers background, fields, and header together; partial retinting looks broken.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">dice-tap theme swap with full-screen color wash.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/luma-create-event-random-theme">original interaction</a> by Luma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Luma's event theme randomizer - tapping the dice icon on the Create Event artwork card swaps the card art and re-tints the entire screen background to the new theme's palette.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe dark \"Create Event\" form: an artwork card at top (\"YOU ARE INVITED\" poster) with a small dice/random button on its corner, form fields below. Tapping the dice cycles the card through generated themes (sunset gradient, purple-orange swirl...) while the whole screen's background and field chrome wash to a matching tone.\n\n## Motion spec\nPattern: dice-tap theme swap with full-screen color wash.\n- Tap the dice: the dice icon spins (rotate 360deg, 300ms, ease-out) with a quick scale bounce (0.85 to 1, spring ~400/24).\n- The card artwork crossfades to the next theme (250ms) with a slight vertical drift (8px) - the new art slides in as the old slides out.\n- Simultaneously the screen background and surfaces crossfade to a color sampled from the new artwork (350ms, ease-in-out), so the card and chrome always feel cut from the same cloth.\n- Text and field values stay fixed - only color and artwork change.\n- Repeated taps chain smoothly; each tap re-triggers the spin and wash without waiting for the previous to finish.\n\n## Calibration\n- The background tint is a muted derivative of the artwork's dominant hue - never full saturation, or the form becomes unreadable.\n- The card keeps its corner radius and shadow through the swap; only the artwork layer transitions.\n\n## Reduced motion\nArtwork and background crossfade instantly; no dice spin.\n\n## Don't miss\n- The dice button lives on the card's corner, half-overlapping the artwork - it is part of the card, not the form.\n- The wash covers background, fields, and header together; partial retinting looks broken."</script>
+</body></html>

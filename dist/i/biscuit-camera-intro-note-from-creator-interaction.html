@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biscuit Camera Intro Note from Creator Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Biscuit Camera Intro Note from Creator Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/biscuit-camera-intro-note-from-creator-interaction"><b>Biscuit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/biscuit-camera-intro-note-from-creator-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/biscuit-camera-intro-note-from-creator-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Biscuit Camera&#x27;s creator-note intro - scrolling the welcome letter vertically drives a horizontal strip of sample photos at the top, the gallery translating in the opposite direction as you read.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/698750634db88a967f4cba2b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/698750634db88a967f4cba2b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-biscuit-camera-intro-note-from-creator-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Biscuit Camera&#x27;s creator-note intro - scrolling the welcome letter vertically drives a horizontal strip of sample photos at the top, the gallery translating in the opposite direction as you read.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Biscuit Camera intro, near-black: a horizontal gallery strip across the top (sample photos in rounded frames, slightly overlapping), then the letter - &quot;Welcome to Biscuit Camera!&quot; and several warm paragraphs from the creator, signed - with a dark &quot;Get started&quot; button pinned at the bottom.
+
+## Motion spec
+Pattern: vertical scroll driving counter-directional horizontal gallery.
+- The letter scrolls normally (1:1 vertical); the gallery strip translates horizontally opposite the scroll direction (scroll down -&gt; gallery slides left) at ~0.6x the scroll speed, with soft momentum after flings.
+- Gallery photos are layered at slight offsets - a shallow parallax: nearer frames move ~10% faster than far ones, and each frame has a resting tilt of +/-2 degrees.
+- As the letter&#x27;s paragraphs pass the gallery, they fade in (opacity tied to viewport entry, 200ms window) - the text assembles as you read.
+- At scroll end the gallery settles with a spring (~300/20) and the signature line is the last element to fade in (300ms).
+- &quot;Get started&quot; stays pinned and static throughout - only its opacity fades in once on first paint.
+
+## Calibration
+- The counter-motion is gentle - the gallery should feel coupled to the scroll, not racing it.
+- Photos are warm and filmic against the dark ground - the strip is the app&#x27;s pitch.
+
+## Reduced motion
+Gallery stays fixed; paragraphs fade in on entry (200ms).
+
+## Don&#x27;t miss
+- The gallery never fully leaves the screen while scrolling - it bleeds off one edge only at the letter&#x27;s end.
+- Frame tilts are resting states, not animated - the charm is the collage, not motion.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vertical scroll driving counter-directional horizontal gallery.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/biscuit-camera-intro-note-from-creator-interaction">original interaction</a> by Biscuit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Biscuit Camera's creator-note intro - scrolling the welcome letter vertically drives a horizontal strip of sample photos at the top, the gallery translating in the opposite direction as you read.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBiscuit Camera intro, near-black: a horizontal gallery strip across the top (sample photos in rounded frames, slightly overlapping), then the letter - \"Welcome to Biscuit Camera!\" and several warm paragraphs from the creator, signed - with a dark \"Get started\" button pinned at the bottom.\n\n## Motion spec\nPattern: vertical scroll driving counter-directional horizontal gallery.\n- The letter scrolls normally (1:1 vertical); the gallery strip translates horizontally opposite the scroll direction (scroll down -> gallery slides left) at ~0.6x the scroll speed, with soft momentum after flings.\n- Gallery photos are layered at slight offsets - a shallow parallax: nearer frames move ~10% faster than far ones, and each frame has a resting tilt of +/-2 degrees.\n- As the letter's paragraphs pass the gallery, they fade in (opacity tied to viewport entry, 200ms window) - the text assembles as you read.\n- At scroll end the gallery settles with a spring (~300/20) and the signature line is the last element to fade in (300ms).\n- \"Get started\" stays pinned and static throughout - only its opacity fades in once on first paint.\n\n## Calibration\n- The counter-motion is gentle - the gallery should feel coupled to the scroll, not racing it.\n- Photos are warm and filmic against the dark ground - the strip is the app's pitch.\n\n## Reduced motion\nGallery stays fixed; paragraphs fade in on entry (200ms).\n\n## Don't miss\n- The gallery never fully leaves the screen while scrolling - it bleeds off one edge only at the letter's end.\n- Frame tilts are resting states, not animated - the charm is the collage, not motion."</script>
+</body></html>

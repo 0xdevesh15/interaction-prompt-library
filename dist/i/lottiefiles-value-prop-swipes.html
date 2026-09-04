@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LottieFiles Value Prop Swipes - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>LottieFiles Value Prop Swipes</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lottiefiles-value-prop-swipes"><b>Lottiefiles</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lottiefiles-value-prop-swipes">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lottiefiles-value-prop-swipes">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: LottieFiles&#x27; value-prop onboarding - each page is a full-bleed saturated background (mint green, cyan blue, amber yellow, white) with a floating phone mock running a live feature preview (animation grid, AR-style camera sticker, sticker picker, private library) while the page color, copy, and device content swipe as one.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721178cad85c0894404b626/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721178cad85c0894404b626/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lottiefiles-value-prop-swipes.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: LottieFiles&#x27; value-prop onboarding - each page is a full-bleed saturated background (mint green, cyan blue, amber yellow, white) with a floating phone mock running a live feature preview (animation grid, AR-style camera sticker, sticker picker, private library) while the page color, copy, and device content swipe as one.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen colored pages: LottieFiles logo + feature title + one-line copy top-left, X close top-right, a large phone mock tilted slightly and bleeding off the bottom edge showing the feature, Back / Next pills at the bottom.
+
+## Motion spec
+Pattern: paged carousel with background color flood and device-content parallax.
+- Swipe: background color interpolates continuously between the two pages&#x27; hues with drag position; copy slides horizontally with the finger 1:1.
+- The phone mock moves at ~0.7x drag speed (parallax against the copy) and rotates a few degrees into the turn (rotateZ +/-4deg, spring ~340/24 on release).
+- Release past halfway: page completes on a spring (~360/26, 380ms) - color flood finishes, new copy settles, device swings upright with a small overshoot.
+- Inside the device mock, the feature preview keeps animating (grid items pop, sticker bounces) - the mock is a live scene, not a screenshot.
+- Page dots / Back-Next update on settle; Back is hidden on page one.
+
+## Calibration
+- Color, copy, device rotation, and device parallax all read from one drag-progress value.
+- Each page&#x27;s background is fully saturated and flat - no gradients, letting the white device frame pop.
+
+## Reduced motion
+Pages crossfade (300ms); device stays upright.
+
+## Don&#x27;t miss
+- The device bleeds off the bottom edge - it is cropped by the screen, never fully contained.
+- The final page (white background, Log in / Get started buttons) breaks the color pattern deliberately.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">paged carousel with background color flood and device-content parallax.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lottiefiles-value-prop-swipes">original interaction</a> by Lottiefiles. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: LottieFiles' value-prop onboarding - each page is a full-bleed saturated background (mint green, cyan blue, amber yellow, white) with a floating phone mock running a live feature preview (animation grid, AR-style camera sticker, sticker picker, private library) while the page color, copy, and device content swipe as one.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen colored pages: LottieFiles logo + feature title + one-line copy top-left, X close top-right, a large phone mock tilted slightly and bleeding off the bottom edge showing the feature, Back / Next pills at the bottom.\n\n## Motion spec\nPattern: paged carousel with background color flood and device-content parallax.\n- Swipe: background color interpolates continuously between the two pages' hues with drag position; copy slides horizontally with the finger 1:1.\n- The phone mock moves at ~0.7x drag speed (parallax against the copy) and rotates a few degrees into the turn (rotateZ +/-4deg, spring ~340/24 on release).\n- Release past halfway: page completes on a spring (~360/26, 380ms) - color flood finishes, new copy settles, device swings upright with a small overshoot.\n- Inside the device mock, the feature preview keeps animating (grid items pop, sticker bounces) - the mock is a live scene, not a screenshot.\n- Page dots / Back-Next update on settle; Back is hidden on page one.\n\n## Calibration\n- Color, copy, device rotation, and device parallax all read from one drag-progress value.\n- Each page's background is fully saturated and flat - no gradients, letting the white device frame pop.\n\n## Reduced motion\nPages crossfade (300ms); device stays upright.\n\n## Don't miss\n- The device bleeds off the bottom edge - it is cropped by the screen, never fully contained.\n- The final page (white background, Log in / Get started buttons) breaks the color pattern deliberately."</script>
+</body></html>

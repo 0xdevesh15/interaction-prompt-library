@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Button Loader Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Button Loader Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-button-loader-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-button-loader-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-button-loader-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s button loader - inside a black OTP-verify button, the label is replaced by five dots that stretch into vertical colored bars and dance like an equalizer, then collapse back to dots, looping while the request runs.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/673b2a5f3a973567982f4d43/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/673b2a5f3a973567982f4d43/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-button-loader-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s button loader - inside a black OTP-verify button, the label is replaced by five dots that stretch into vertical colored bars and dance like an equalizer, then collapse back to dots, looping while the request runs.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White OTP screen (&quot;you are just one otp away from setting up your wallet&quot;, four boxed digits &quot;2 0 0 8&quot;, &quot;didn&#x27;t receive OTP? Try Again in N secs&quot;). Bottom: a full-width black button whose label area hosts the loader.
+
+## Motion spec
+Pattern: equalizer loading loop inside a button.
+- Five small dots (white, yellow, green, blue, red - CRED accent colors) sit in a centered row.
+- Each dot stretches vertically into a rounded bar (~4px wide, 8 -&gt; 22px tall) and back, staggered left to right (~80ms apart), wave period ~700ms.
+- Every second pass, the bars tilt slightly (~10deg) mid-stretch, adding a playful wobble, then straighten.
+- The button itself never changes size; the loader lives entirely inside its label area.
+
+## Calibration
+- The wave reads as one traveling pulse - keep the stagger uniform and the bars&#x27; min height never below the dot size.
+- Colors follow CRED&#x27;s fixed dot order; do not randomize per loop.
+
+## Reduced motion
+Three dots pulse opacity in sequence (600ms loop), no stretching.
+
+## Don&#x27;t miss
+- The loader replaces the button label in place - the black button does not resize or change color.
+- Bars are rounded-end capsules, not rectangles.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">equalizer loading loop inside a button.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-button-loader-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's button loader - inside a black OTP-verify button, the label is replaced by five dots that stretch into vertical colored bars and dance like an equalizer, then collapse back to dots, looping while the request runs.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite OTP screen (\"you are just one otp away from setting up your wallet\", four boxed digits \"2 0 0 8\", \"didn't receive OTP? Try Again in N secs\"). Bottom: a full-width black button whose label area hosts the loader.\n\n## Motion spec\nPattern: equalizer loading loop inside a button.\n- Five small dots (white, yellow, green, blue, red - CRED accent colors) sit in a centered row.\n- Each dot stretches vertically into a rounded bar (~4px wide, 8 -> 22px tall) and back, staggered left to right (~80ms apart), wave period ~700ms.\n- Every second pass, the bars tilt slightly (~10deg) mid-stretch, adding a playful wobble, then straighten.\n- The button itself never changes size; the loader lives entirely inside its label area.\n\n## Calibration\n- The wave reads as one traveling pulse - keep the stagger uniform and the bars' min height never below the dot size.\n- Colors follow CRED's fixed dot order; do not randomize per loop.\n\n## Reduced motion\nThree dots pulse opacity in sequence (600ms loop), no stretching.\n\n## Don't miss\n- The loader replaces the button label in place - the black button does not resize or change color.\n- Bars are rounded-end capsules, not rectangles."</script>
+</body></html>

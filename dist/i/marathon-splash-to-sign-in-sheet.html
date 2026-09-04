@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marathon Splash to Sign In Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Marathon Splash to Sign In Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/marathon-splash-to-sign-in-sheet"><b>Marathon</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/marathon-splash-to-sign-in-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/marathon-splash-to-sign-in-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Marathon&#x27;s splash-to-sign-in - the dark splash (&quot;Upgrade your TV experience.&quot; with the green TV glyph and Get started button) dims as a white bottom sheet slides up with a subtle spring, carrying Continue with Apple / Continue with Google and the privacy terms line.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67173398c180cd70accaa942/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67173398c180cd70accaa942/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-marathon-splash-to-sign-in-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Marathon&#x27;s splash-to-sign-in - the dark splash (&quot;Upgrade your TV experience.&quot; with the green TV glyph and Get started button) dims as a white bottom sheet slides up with a subtle spring, carrying Continue with Apple / Continue with Google and the privacy terms line.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Splash: near-black screen, green TV icon above the two-line pitch (&quot;experience.&quot; in green), Get started pill at the bottom. Sheet: white rounded-top card with &quot;Get started&quot; title, terms line, and two sign-in buttons (Apple black, Google white-outlined).
+
+## Motion spec
+Pattern: spring bottom sheet over dimming splash.
+- Tap Get started: the splash dims to 40% (300ms) as the sheet slides up from the bottom (spring ~320/26, 450ms, a single soft overshoot past its rest position).
+- The sheet&#x27;s contents stagger in after the sheet lands: title, terms, buttons (fade + rise 8px, 200ms, 60ms apart).
+- The splash&#x27;s TV glyph and copy stay visible but dimmed above the sheet - the context never leaves.
+- Swipe down on the sheet (or tap the dim): it slides away on the same spring and the splash un-dims.
+- The sheet&#x27;s corner radius (20px) stays constant through the motion.
+
+## Calibration
+- One overshoot only - a sheet that bounces twice feels broken.
+- The dim and the slide start together; neither waits for the other.
+
+## Reduced motion
+Sheet fades in at rest position (250ms); splash dims without motion.
+
+## Don&#x27;t miss
+- &quot;experience.&quot; is the only green word on the splash - the accent echoes the TV glyph.
+- The Apple button is black-on-white inside the white sheet - full contrast, standard sign-in ordering (Apple first).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring bottom sheet over dimming splash.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/marathon-splash-to-sign-in-sheet">original interaction</a> by Marathon. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Marathon's splash-to-sign-in - the dark splash (\"Upgrade your TV experience.\" with the green TV glyph and Get started button) dims as a white bottom sheet slides up with a subtle spring, carrying Continue with Apple / Continue with Google and the privacy terms line.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSplash: near-black screen, green TV icon above the two-line pitch (\"experience.\" in green), Get started pill at the bottom. Sheet: white rounded-top card with \"Get started\" title, terms line, and two sign-in buttons (Apple black, Google white-outlined).\n\n## Motion spec\nPattern: spring bottom sheet over dimming splash.\n- Tap Get started: the splash dims to 40% (300ms) as the sheet slides up from the bottom (spring ~320/26, 450ms, a single soft overshoot past its rest position).\n- The sheet's contents stagger in after the sheet lands: title, terms, buttons (fade + rise 8px, 200ms, 60ms apart).\n- The splash's TV glyph and copy stay visible but dimmed above the sheet - the context never leaves.\n- Swipe down on the sheet (or tap the dim): it slides away on the same spring and the splash un-dims.\n- The sheet's corner radius (20px) stays constant through the motion.\n\n## Calibration\n- One overshoot only - a sheet that bounces twice feels broken.\n- The dim and the slide start together; neither waits for the other.\n\n## Reduced motion\nSheet fades in at rest position (250ms); splash dims without motion.\n\n## Don't miss\n- \"experience.\" is the only green word on the splash - the accent echoes the TV glyph.\n- The Apple button is black-on-white inside the white sheet - full contrast, standard sign-in ordering (Apple first)."</script>
+</body></html>

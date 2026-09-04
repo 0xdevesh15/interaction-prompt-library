@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ben Journal Intro Hello Widget Scale Blur Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Ben Journal Intro Hello Widget Scale Blur Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ben-journal-intro-hello-widget-scale-blur-animation"><b>Ben</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ben-journal-intro-hello-widget-scale-blur-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ben-journal-intro-hello-widget-scale-blur-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Ben Journal&#x27;s intro - a handwritten &quot;hello&quot; draws itself over the sunset sky while three journal widgets spring in from blurred and tiny to sharp and full-size.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343a3503bcee22ddd040bf/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343a3503bcee22ddd040bf/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ben-journal-intro-hello-widget-scale-blur-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Ben Journal&#x27;s intro - a handwritten &quot;hello&quot; draws itself over the sunset sky while three journal widgets spring in from blurred and tiny to sharp and full-size.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Ben Journal intro over the sunset-cloud sky: a cursive &quot;hello&quot; handwritten at top; below, a scattered arrangement of three journal widgets - a yellow note card, a photo card, and a red-topped tape card - slightly tilted and overlapping; a minimal toolbar (audio wave, plus, dots) at the very bottom.
+
+## Motion spec
+Pattern: blur-to-sharp spring widget entrance with a handwritten text reveal.
+- The sky fades in first (600ms).
+- &quot;hello&quot; writes itself left to right as a cursive stroke draw (900ms total, easing like real handwriting - fast on strokes, pausing at joins), with a thin pen trail.
+- Each widget enters blurred and small: scale 0.4 -&gt; 1 with spring ~380/16 (a friendly overshoot) while blur 12px -&gt; 0 over the same 400ms - the note card first, the photo card 150ms later, the tape card 150ms after that, each landing at its own slight rotation (+/-4deg).
+- After the entrance, &quot;hello&quot; plays a beat: the letters drift apart slightly and the final &quot;o&quot; drops a few pixels and swings (500ms) before everything settles.
+- The toolbar fades in last (300ms).
+- Idle state: the widgets float almost imperceptibly (translateY +/-3px, 3s, phase-offset per card).
+
+## Calibration
+- Blur and scale resolve together - a widget is never sharp while small or blurry at full size.
+- The widgets&#x27; overlap order is fixed: photo behind, note left-front, tape right-front.
+
+## Reduced motion
+&quot;hello&quot; fades in fully written; widgets fade in sharp at final size.
+
+## Don&#x27;t miss
+- The handwriting is a real stroke draw, not a per-letter fade.
+- Widgets keep their paper texture and hairline shadows through the blur.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">blur-to-sharp spring widget entrance with a handwritten text reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ben-journal-intro-hello-widget-scale-blur-animation">original interaction</a> by Ben. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Ben Journal's intro - a handwritten \"hello\" draws itself over the sunset sky while three journal widgets spring in from blurred and tiny to sharp and full-size.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBen Journal intro over the sunset-cloud sky: a cursive \"hello\" handwritten at top; below, a scattered arrangement of three journal widgets - a yellow note card, a photo card, and a red-topped tape card - slightly tilted and overlapping; a minimal toolbar (audio wave, plus, dots) at the very bottom.\n\n## Motion spec\nPattern: blur-to-sharp spring widget entrance with a handwritten text reveal.\n- The sky fades in first (600ms).\n- \"hello\" writes itself left to right as a cursive stroke draw (900ms total, easing like real handwriting - fast on strokes, pausing at joins), with a thin pen trail.\n- Each widget enters blurred and small: scale 0.4 -> 1 with spring ~380/16 (a friendly overshoot) while blur 12px -> 0 over the same 400ms - the note card first, the photo card 150ms later, the tape card 150ms after that, each landing at its own slight rotation (+/-4deg).\n- After the entrance, \"hello\" plays a beat: the letters drift apart slightly and the final \"o\" drops a few pixels and swings (500ms) before everything settles.\n- The toolbar fades in last (300ms).\n- Idle state: the widgets float almost imperceptibly (translateY +/-3px, 3s, phase-offset per card).\n\n## Calibration\n- Blur and scale resolve together - a widget is never sharp while small or blurry at full size.\n- The widgets' overlap order is fixed: photo behind, note left-front, tape right-front.\n\n## Reduced motion\n\"hello\" fades in fully written; widgets fade in sharp at final size.\n\n## Don't miss\n- The handwriting is a real stroke draw, not a per-letter fade.\n- Widgets keep their paper texture and hairline shadows through the blur."</script>
+</body></html>

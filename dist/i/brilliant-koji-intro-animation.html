@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brilliant Koji Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Brilliant Koji Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/brilliant-koji-intro-animation"><b>Brilliant</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-koji-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-koji-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Brilliant&#x27;s Koji intro - the mascot materializes from a glowing blob and introduces itself through springy speech-bubble tooltips that swap in sequence.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec024f936951f1cb7db32/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec024f936951f1cb7db32/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-brilliant-koji-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Brilliant&#x27;s Koji intro - the mascot materializes from a glowing blob and introduces itself through springy speech-bubble tooltips that swap in sequence.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Minimal onboarding screen with a progress bar: a green blob that resolves into the cube mascot with a face, cream speech-bubble tooltips above it (&quot;Hi, I&#x27;m Koji.&quot; then &quot;Let&#x27;s build a learning path just for you.&quot;), and a dark Continue button.
+
+## Motion spec
+Pattern: morphing reveal with tooltip swap, ~2.5s.
+- A soft green blob with glowing edges settles at center (400ms, ease-out), then morphs - corners tightening into the cube, the face fading in (500ms, ease-in-out).
+- The first tooltip pops in above the mascot (spring stiffness 420 damping 15, slight overshoot), anchored with its little tail pointing down at the cube.
+- The mascot idles with a small bob (+-4px, 2.5s) while the tooltip holds.
+- The first tooltip scales away (150ms, ease-in) and the second, larger tooltip pops in on the same spring, the mascot doing a small attentive tilt (+-4deg) as it swaps.
+- Continue is static below.
+
+## Calibration
+- The morph is continuous - the blob never cuts to the cube.
+- Tooltip tails track the mascot&#x27;s bob so the anchor never detaches.
+
+## Reduced motion
+Mascot and final tooltip fade in.
+
+## Don&#x27;t miss
+- The tooltip is cream with rounded corners and a visible tail - not a plain label.
+- The mascot&#x27;s face (eyes, small mouth) arrives with the morph, not after it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">morphing reveal with tooltip swap, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/brilliant-koji-intro-animation">original interaction</a> by Brilliant. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Brilliant's Koji intro - the mascot materializes from a glowing blob and introduces itself through springy speech-bubble tooltips that swap in sequence.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMinimal onboarding screen with a progress bar: a green blob that resolves into the cube mascot with a face, cream speech-bubble tooltips above it (\"Hi, I'm Koji.\" then \"Let's build a learning path just for you.\"), and a dark Continue button.\n\n## Motion spec\nPattern: morphing reveal with tooltip swap, ~2.5s.\n- A soft green blob with glowing edges settles at center (400ms, ease-out), then morphs - corners tightening into the cube, the face fading in (500ms, ease-in-out).\n- The first tooltip pops in above the mascot (spring stiffness 420 damping 15, slight overshoot), anchored with its little tail pointing down at the cube.\n- The mascot idles with a small bob (+-4px, 2.5s) while the tooltip holds.\n- The first tooltip scales away (150ms, ease-in) and the second, larger tooltip pops in on the same spring, the mascot doing a small attentive tilt (+-4deg) as it swaps.\n- Continue is static below.\n\n## Calibration\n- The morph is continuous - the blob never cuts to the cube.\n- Tooltip tails track the mascot's bob so the anchor never detaches.\n\n## Reduced motion\nMascot and final tooltip fade in.\n\n## Don't miss\n- The tooltip is cream with rounded corners and a visible tail - not a plain label.\n- The mascot's face (eyes, small mouth) arrives with the morph, not after it."</script>
+</body></html>

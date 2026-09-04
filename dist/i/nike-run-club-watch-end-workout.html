@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nike Run Club Watch End Workout - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Nike Run Club Watch End Workout</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/nike-run-club-watch-end-workout"><b>Nike</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-run-club-watch-end-workout">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-run-club-watch-end-workout">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Nike Run Club&#x27;s watch end-of-workout flow - from the live metrics screen to the Paused state (stop square + green play), a bold &quot;CRUSHED IT. HUNGRY FOR MORE?&quot; interstitial, then a scrollable Post Run summary with stat grid, splits, and Done.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2cdea98a6ede244a8ef79/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2cdea98a6ede244a8ef79/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-nike-run-club-watch-end-workout.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Nike Run Club&#x27;s watch end-of-workout flow - from the live metrics screen to the Paused state (stop square + green play), a bold &quot;CRUSHED IT. HUNGRY FOR MORE?&quot; interstitial, then a scrollable Post Run summary with stat grid, splits, and Done.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black watch screens: live run (19:17 Time, 1.76 Kilometres, 101 BPM in volt green); Paused (gray stop circle, green play circle, 1.76 km + 10&#x27;56&quot; Avg. Pace); interstitial (&quot;CRUSHED IT.&quot; in green italic, &quot;HUNGRY FOR MORE?&quot; in white italic); Post Run summary (giant 1.76 Kilometres, grid: Avg. Pace 10&#x27;56&quot;, Time 19:20, Calories 131, Elevation Gain --m, Heart Rate 118 bpm, Cadence 124; SPLITS list &quot;1 - 9&#x27;37&quot;&quot;; Done button).
+
+## Motion spec
+Pattern: horizontal swipe pager + staggered summary build.
+- Swipe right on live metrics: the Paused screen slides in (300ms ease-in-out, paging); swipe back returns.
+- Tap the stop square: it pulses (scale 0.9 -&gt; 1, 120ms), then the interstitial slams in: &quot;CRUSHED IT.&quot; scales 1.3 -&gt; 1 with a hard spring (~500/22, ~300ms), &quot;HUNGRY FOR MORE?&quot; follows 150ms later rising 12px + fading.
+- Interstitial holds ~1.2s, then wipes up to reveal the summary: the 1.76 headline counts up from 0 (600ms), stat-grid values fade in row by row (120ms stagger).
+- Crown/drag scrolls the summary smoothly; SPLITS rows slide in from the right as they enter the viewport (60ms stagger); Done sits at the end, pulsing subtly.
+- Tap Done: the whole stack fades to black (300ms) and exits to the watch face.
+
+## Calibration
+- Green is reserved for live/active elements; the summary is white-on-black with green only in the interstitial.
+- Page dots track the live/paused pager position.
+
+## Reduced motion
+Screens crossfade; the headline renders without count-up.
+
+## Don&#x27;t miss
+- &quot;CRUSHED IT.&quot; is green and &quot;HUNGRY FOR MORE?&quot; is white - two-tone, both italic.
+- The splits list uses inset rounded rows, visually distinct from the flat stat grid.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal swipe pager + staggered summary build.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/nike-run-club-watch-end-workout">original interaction</a> by Nike. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Nike Run Club's watch end-of-workout flow - from the live metrics screen to the Paused state (stop square + green play), a bold \"CRUSHED IT. HUNGRY FOR MORE?\" interstitial, then a scrollable Post Run summary with stat grid, splits, and Done.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack watch screens: live run (19:17 Time, 1.76 Kilometres, 101 BPM in volt green); Paused (gray stop circle, green play circle, 1.76 km + 10'56\" Avg. Pace); interstitial (\"CRUSHED IT.\" in green italic, \"HUNGRY FOR MORE?\" in white italic); Post Run summary (giant 1.76 Kilometres, grid: Avg. Pace 10'56\", Time 19:20, Calories 131, Elevation Gain --m, Heart Rate 118 bpm, Cadence 124; SPLITS list \"1 - 9'37\"\"; Done button).\n\n## Motion spec\nPattern: horizontal swipe pager + staggered summary build.\n- Swipe right on live metrics: the Paused screen slides in (300ms ease-in-out, paging); swipe back returns.\n- Tap the stop square: it pulses (scale 0.9 -> 1, 120ms), then the interstitial slams in: \"CRUSHED IT.\" scales 1.3 -> 1 with a hard spring (~500/22, ~300ms), \"HUNGRY FOR MORE?\" follows 150ms later rising 12px + fading.\n- Interstitial holds ~1.2s, then wipes up to reveal the summary: the 1.76 headline counts up from 0 (600ms), stat-grid values fade in row by row (120ms stagger).\n- Crown/drag scrolls the summary smoothly; SPLITS rows slide in from the right as they enter the viewport (60ms stagger); Done sits at the end, pulsing subtly.\n- Tap Done: the whole stack fades to black (300ms) and exits to the watch face.\n\n## Calibration\n- Green is reserved for live/active elements; the summary is white-on-black with green only in the interstitial.\n- Page dots track the live/paused pager position.\n\n## Reduced motion\nScreens crossfade; the headline renders without count-up.\n\n## Don't miss\n- \"CRUSHED IT.\" is green and \"HUNGRY FOR MORE?\" is white - two-tone, both italic.\n- The splits list uses inset rounded rows, visually distinct from the flat stat grid."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sudoku Level Picker Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sudoku Level Picker Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sudoku-level-picker-interaction"><b>Sudoku</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sudoku-level-picker-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sudoku-level-picker-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Sudoku a Day&#x27;s level picker - an accordion list where tapping a level expands its white detail card while the previously open level collapses back to a dark row.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8753df3c0da1588c712c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8753df3c0da1588c712c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sudoku-level-picker-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Sudoku a Day&#x27;s level picker - an accordion list where tapping a level expands its white detail card while the previously open level collapses back to a dark row.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen with the dot wordmark, &quot;Select your level&quot; title, and subtitle. A vertical list of five rows: Easy, Medium, Hard, Expert, Master - each a dark card with a small square icon, name, and a radio circle. The selected row expands into a white card with a two-line description (Easy: &quot;More initial numbers and basic techniques. Great for beginners&quot;, Medium: &quot;Balanced difficulty requiring some strategy and experience&quot;, Hard: &quot;Advanced techniques needed. Tests strategic thinking&quot;, Expert: &quot;Challenging puzzles requiring deep analysis and tactics&quot;, Master: &quot;The ultimate Sudoku challenge for true masters. Extreme difficulty&quot;). Continue button pinned at bottom.
+
+## Motion spec
+Pattern: accordion expansion with a single open item.
+- Tapping a collapsed row expands it: the card animates its height open (spring ~340/28) as the background flips dark -&gt; white (200ms) and the description fades in over the last 60% of the expansion (180ms).
+- The previously expanded row collapses in the same beat (spring ~340/30, white -&gt; dark 200ms), so exactly one card is open at a time.
+- Rows below the expanding card slide down with it; rows above never move.
+- The radio circle fills on the expanded card (scale 0.5 -&gt; 1, spring ~400/20, 100ms delay).
+
+## Calibration
+- Expansion and collapse run in parallel, not sequentially - the list&#x27;s total height breathes smoothly.
+- The description wraps inside the card&#x27;s fixed width; the card grows only vertically.
+
+## Reduced motion
+Cards swap expanded/collapsed with a 200ms crossfade, no height travel.
+
+## Don&#x27;t miss
+- The expanded card is white with dark text; collapsed rows are dark gray with light text.
+- Continue stays pinned; the list never pushes it off screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">accordion expansion with a single open item.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sudoku-level-picker-interaction">original interaction</a> by Sudoku. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Sudoku a Day's level picker - an accordion list where tapping a level expands its white detail card while the previously open level collapses back to a dark row.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen with the dot wordmark, \"Select your level\" title, and subtitle. A vertical list of five rows: Easy, Medium, Hard, Expert, Master - each a dark card with a small square icon, name, and a radio circle. The selected row expands into a white card with a two-line description (Easy: \"More initial numbers and basic techniques. Great for beginners\", Medium: \"Balanced difficulty requiring some strategy and experience\", Hard: \"Advanced techniques needed. Tests strategic thinking\", Expert: \"Challenging puzzles requiring deep analysis and tactics\", Master: \"The ultimate Sudoku challenge for true masters. Extreme difficulty\"). Continue button pinned at bottom.\n\n## Motion spec\nPattern: accordion expansion with a single open item.\n- Tapping a collapsed row expands it: the card animates its height open (spring ~340/28) as the background flips dark -> white (200ms) and the description fades in over the last 60% of the expansion (180ms).\n- The previously expanded row collapses in the same beat (spring ~340/30, white -> dark 200ms), so exactly one card is open at a time.\n- Rows below the expanding card slide down with it; rows above never move.\n- The radio circle fills on the expanded card (scale 0.5 -> 1, spring ~400/20, 100ms delay).\n\n## Calibration\n- Expansion and collapse run in parallel, not sequentially - the list's total height breathes smoothly.\n- The description wraps inside the card's fixed width; the card grows only vertically.\n\n## Reduced motion\nCards swap expanded/collapsed with a 200ms crossfade, no height travel.\n\n## Don't miss\n- The expanded card is white with dark text; collapsed rows are dark gray with light text.\n- Continue stays pinned; the list never pushes it off screen."</script>
+</body></html>

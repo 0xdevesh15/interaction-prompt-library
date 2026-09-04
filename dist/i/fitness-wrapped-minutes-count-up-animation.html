@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fitness Wrapped Minutes Count Up Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fitness Wrapped Minutes Count Up Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fitness-wrapped-minutes-count-up-animation"><b>Fitness</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fitness-wrapped-minutes-count-up-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fitness-wrapped-minutes-count-up-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: a fitness wrapped recap card - a giant neon-green minutes count rolls up in a blurred ticker animation, lands sharp, then supporting lines fade in below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676813eba080a6ad1602fbd2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676813eba080a6ad1602fbd2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fitness-wrapped-minutes-count-up-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: a fitness wrapped recap card - a giant neon-green minutes count rolls up in a blurred ticker animation, lands sharp, then supporting lines fade in below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark story-style card with a faint green radial glow and a close X at top right. Header text reads &quot;This year, you worked out a lot.&quot; Below it, a huge neon-green number ticks up through a motion blur (&quot;3,947&quot;, &quot;5,179&quot; mid-roll) and lands sharp on &quot;5,151&quot;. Then &quot;minutes to be exact.&quot; fades in, followed by &quot;That&#x27;s an average of 14 minutes per day. Way to go!&quot;
+
+## Motion spec
+Pattern: blurred count-up ticker, ~3s total.
+- The header fades in first (300ms).
+- The counter rolls from 0 to 5,151 over 1.6s (ease-out): digits churn with a vertical motion blur proportional to roll speed, tightening to full sharpness as it decelerates into the final value.
+- On landing, the number settles (scale 1.03 to 1, 150ms).
+- &quot;minutes to be exact.&quot; fades in 200ms later (300ms fade, 8px rise), the average line 250ms after that.
+
+## Calibration
+- Blur tracks digit velocity: strongest mid-roll, zero at rest.
+- Commas appear live during the roll as digits are added - the formatting is never wrong mid-count.
+
+## Reduced motion
+Number fades in at its final value.
+
+## Don&#x27;t miss
+- The two supporting lines arrive in strict sequence, never together.
+- The green glow behind the number stays constant - the animation is in the digits, not the background.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">blurred count-up ticker, ~3s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fitness-wrapped-minutes-count-up-animation">original interaction</a> by Fitness. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: a fitness wrapped recap card - a giant neon-green minutes count rolls up in a blurred ticker animation, lands sharp, then supporting lines fade in below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark story-style card with a faint green radial glow and a close X at top right. Header text reads \"This year, you worked out a lot.\" Below it, a huge neon-green number ticks up through a motion blur (\"3,947\", \"5,179\" mid-roll) and lands sharp on \"5,151\". Then \"minutes to be exact.\" fades in, followed by \"That's an average of 14 minutes per day. Way to go!\"\n\n## Motion spec\nPattern: blurred count-up ticker, ~3s total.\n- The header fades in first (300ms).\n- The counter rolls from 0 to 5,151 over 1.6s (ease-out): digits churn with a vertical motion blur proportional to roll speed, tightening to full sharpness as it decelerates into the final value.\n- On landing, the number settles (scale 1.03 to 1, 150ms).\n- \"minutes to be exact.\" fades in 200ms later (300ms fade, 8px rise), the average line 250ms after that.\n\n## Calibration\n- Blur tracks digit velocity: strongest mid-roll, zero at rest.\n- Commas appear live during the roll as digits are added - the formatting is never wrong mid-count.\n\n## Reduced motion\nNumber fades in at its final value.\n\n## Don't miss\n- The two supporting lines arrive in strict sequence, never together.\n- The green glow behind the number stays constant - the animation is in the digits, not the background."</script>
+</body></html>

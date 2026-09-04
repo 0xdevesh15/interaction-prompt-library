@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flighty Connection Assistant Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flighty Connection Assistant Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flighty-connection-assistant-sheet"><b>Flighty</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-connection-assistant-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-connection-assistant-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Flighty&#x27;s connection assistant sheet - expanding the &quot;Relaxed Connection&quot; bottom sheet collapses the flight-leg summary (Terminal 2 arrive / Terminal 1 depart rows) into the detailed assistant view: the MCT explainer paragraph slides in and a gradient connection-timeline bar (with &quot;This is if min. That&#x27;s bad.&quot; and &quot;This is the MCT&quot; annotations plus a scrubber handle) fades and rises into place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/672f62aceaffeddcdf50f246/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/672f62aceaffeddcdf50f246/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flighty-connection-assistant-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Flighty&#x27;s connection assistant sheet - expanding the &quot;Relaxed Connection&quot; bottom sheet collapses the flight-leg summary (Terminal 2 arrive / Terminal 1 depart rows) into the detailed assistant view: the MCT explainer paragraph slides in and a gradient connection-timeline bar (with &quot;This is if min. That&#x27;s bad.&quot; and &quot;This is the MCT&quot; annotations plus a scrubber handle) fades and rises into place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White bottom sheet (&quot;BLR - HYD&quot; route header, X close): &quot;Relaxed Connection&quot; title, subline about minimum connection time, a horizontal gradient timeline bar (red -&gt; orange -&gt; green zones, RELAXED label, &quot;3h 45m AT BLR&quot; tag), and either the terminal-leg summary (collapsed) or the MCT explainer with annotated timeline (expanded).
+
+## Motion spec
+Pattern: sheet content swap with slide, fade, and height change.
+- Tap to expand: the sheet grows taller (spring ~340/26, 350ms) while the terminal-leg rows slide down and fade out (200ms).
+- The explainer paragraph fades in line-settled from the top (opacity + translateY -8px, 250ms, starting 100ms in).
+- The annotated timeline slides up into place (translateY 16px + fade, spring ~360/24, 300ms): the scrubber handle pops onto the bar (scale 0.6 -&gt; 1, spring ~420/24, 200ms) and the annotation labels (&quot;This is if min...&quot;, &quot;This is the MCT&quot;) fade in with 60ms stagger.
+- Collapsing reverses the sequence: annotations fade, timeline slides down, leg rows return.
+
+## Calibration
+- The sheet is top-anchored at its grabber - growth pushes content down, the header never moves.
+- The timeline bar is the shared element across both states - it stays visible and transforms (plain bar -&gt; annotated bar) rather than crossfading.
+
+## Reduced motion
+Content crossfades (250ms); height changes without spring.
+
+## Don&#x27;t miss
+- The timeline&#x27;s gradient zones (red/orange/green) stay identical between states - only the annotations are added.
+- The scrubber handle marks the user&#x27;s actual connection time - it lands on the same value in both states.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet content swap with slide, fade, and height change.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flighty-connection-assistant-sheet">original interaction</a> by Flighty. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Flighty's connection assistant sheet - expanding the \"Relaxed Connection\" bottom sheet collapses the flight-leg summary (Terminal 2 arrive / Terminal 1 depart rows) into the detailed assistant view: the MCT explainer paragraph slides in and a gradient connection-timeline bar (with \"This is if min. That's bad.\" and \"This is the MCT\" annotations plus a scrubber handle) fades and rises into place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite bottom sheet (\"BLR - HYD\" route header, X close): \"Relaxed Connection\" title, subline about minimum connection time, a horizontal gradient timeline bar (red -> orange -> green zones, RELAXED label, \"3h 45m AT BLR\" tag), and either the terminal-leg summary (collapsed) or the MCT explainer with annotated timeline (expanded).\n\n## Motion spec\nPattern: sheet content swap with slide, fade, and height change.\n- Tap to expand: the sheet grows taller (spring ~340/26, 350ms) while the terminal-leg rows slide down and fade out (200ms).\n- The explainer paragraph fades in line-settled from the top (opacity + translateY -8px, 250ms, starting 100ms in).\n- The annotated timeline slides up into place (translateY 16px + fade, spring ~360/24, 300ms): the scrubber handle pops onto the bar (scale 0.6 -> 1, spring ~420/24, 200ms) and the annotation labels (\"This is if min...\", \"This is the MCT\") fade in with 60ms stagger.\n- Collapsing reverses the sequence: annotations fade, timeline slides down, leg rows return.\n\n## Calibration\n- The sheet is top-anchored at its grabber - growth pushes content down, the header never moves.\n- The timeline bar is the shared element across both states - it stays visible and transforms (plain bar -> annotated bar) rather than crossfading.\n\n## Reduced motion\nContent crossfades (250ms); height changes without spring.\n\n## Don't miss\n- The timeline's gradient zones (red/orange/green) stay identical between states - only the annotations are added.\n- The scrubber handle marks the user's actual connection time - it lands on the same value in both states."</script>
+</body></html>

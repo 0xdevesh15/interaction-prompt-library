@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Timepage Rain Alert Umbrella Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Timepage Rain Alert Umbrella Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/timepage-rain-alert-umbrella-animation"><b>Timepage</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/timepage-rain-alert-umbrella-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/timepage-rain-alert-umbrella-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Timepage&#x27;s rain alerts screen - a teal umbrella illustration morphs through states as the &quot;ALERT FOR&quot; threshold picker slides between Any Rain, Moderate Rain, Only Heavy Rain, and Off.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68b82a35d333b2a7f187dc72/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68b82a35d333b2a7f187dc72/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-timepage-rain-alert-umbrella-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Timepage&#x27;s rain alerts screen - a teal umbrella illustration morphs through states as the &quot;ALERT FOR&quot; threshold picker slides between Any Rain, Moderate Rain, Only Heavy Rain, and Off.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black settings screen: &quot;RAIN ALERTS&quot; with &quot;Be notified about rain and severe weather&quot;, a teal line-drawn umbrella center stage, a threshold picker with &lt; &gt; chevrons (&quot;ALERT FOR ANY RAIN&quot;), and two controls below - a &quot;15 MINUTES NOTICE&quot; arc dial and a &quot;SEVERE ALERTS&quot; stepped triangle.
+
+## Motion spec
+Pattern: illustration morph driven by picker state, ~450ms per step.
+- Picker: tapping a chevron slides the label out sideways and the next in (250ms, ease-out) with a fade.
+- Umbrella morph: ANY RAIN opens the umbrella with two raindrops; MODERATE adds more drops; ONLY HEAVY RAIN shows a dense cluster of drops bouncing off the canopy (drops fall 400ms, staggered, loop); ALERT OFF closes the umbrella to a thin cane (the canopy folds down, 350ms, ease-in-out).
+- Drops: each drop falls past the canopy and fades (600ms), looping while the state holds.
+
+## Calibration
+- The umbrella is a single illustration that morphs - closed cane to open canopy is one continuous shape change.
+- The picker label and the morph stay in lockstep; the morph starts with the slide.
+
+## Reduced motion
+The umbrella swaps states with a 200ms crossfade.
+
+## Don&#x27;t miss
+- Raindrops only exist in rain states - none linger into ALERT OFF.
+- The closed state reads as a cane, not a shrunken open umbrella.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">illustration morph driven by picker state, ~450ms per step.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/timepage-rain-alert-umbrella-animation">original interaction</a> by Timepage. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Timepage's rain alerts screen - a teal umbrella illustration morphs through states as the \"ALERT FOR\" threshold picker slides between Any Rain, Moderate Rain, Only Heavy Rain, and Off.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack settings screen: \"RAIN ALERTS\" with \"Be notified about rain and severe weather\", a teal line-drawn umbrella center stage, a threshold picker with < > chevrons (\"ALERT FOR ANY RAIN\"), and two controls below - a \"15 MINUTES NOTICE\" arc dial and a \"SEVERE ALERTS\" stepped triangle.\n\n## Motion spec\nPattern: illustration morph driven by picker state, ~450ms per step.\n- Picker: tapping a chevron slides the label out sideways and the next in (250ms, ease-out) with a fade.\n- Umbrella morph: ANY RAIN opens the umbrella with two raindrops; MODERATE adds more drops; ONLY HEAVY RAIN shows a dense cluster of drops bouncing off the canopy (drops fall 400ms, staggered, loop); ALERT OFF closes the umbrella to a thin cane (the canopy folds down, 350ms, ease-in-out).\n- Drops: each drop falls past the canopy and fades (600ms), looping while the state holds.\n\n## Calibration\n- The umbrella is a single illustration that morphs - closed cane to open canopy is one continuous shape change.\n- The picker label and the morph stay in lockstep; the morph starts with the slide.\n\n## Reduced motion\nThe umbrella swaps states with a 200ms crossfade.\n\n## Don't miss\n- Raindrops only exist in rain states - none linger into ALERT OFF.\n- The closed state reads as a cane, not a shrunken open umbrella."</script>
+</body></html>

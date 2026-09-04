@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Transfer Options Sheet Checkbox Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Transfer Options Sheet Checkbox Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-transfer-options-sheet-checkbox-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-transfer-options-sheet-checkbox-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-transfer-options-sheet-checkbox-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s ENS transfer options - on the dark &quot;Confirm transaction to James&quot; screen for the benjitaylor.eth collectible, the &quot;Transfer Options&quot; sheet offers three springy checkboxes (point ENS to recipient, clear profile info, transfer full control), and confirming returns to the screen with the fee updated and Confirm enabled.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d1fc386bd77fdc73bd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d1fc386bd77fdc73bd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-transfer-options-sheet-checkbox-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s ENS transfer options - on the dark &quot;Confirm transaction to James&quot; screen for the benjitaylor.eth collectible, the &quot;Transfer Options&quot; sheet offers three springy checkboxes (point ENS to recipient, clear profile info, transfer full control), and confirming returns to the screen with the fee updated and Confirm enabled.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark confirm screen: green James avatar, &quot;Confirm transaction to James&quot;, Collectible row (&quot;benjitaylor.eth&quot; ENS card), &quot;Options&quot; pill, fee &quot;$3.29 Normal&quot;, white Continue. Sheet: &quot;Transfer Options&quot; - &quot;ENS Configuration&quot; section with three checkbox rows: &quot;Point the ENS name to the recipient&#x27;s wallet address&quot;, &quot;Clear all profile information associated with the ENS name&quot;, &quot;Transfer full control of the ENS name to the recipient&quot; - plus Continue. Final screen state: fee &quot;$10.21 Suggested&quot;, white Confirm pill.
+
+## Motion spec
+Pattern: springy checkbox sheet with dynamic button state.
+- Tap Options: the sheet slides up (spring ~300/20) over the dimmed confirm screen (scrim 45%).
+- Tap a checkbox: the box draws its check (stroke trim 150ms) with a spring pop (scale 1 -&gt; 1.15 -&gt; 1, spring ~340/14) and fills blue; unchecking reverses (check trims out, 150ms).
+- Continue tracks validity: light/white at rest, its label and state crossfade (200ms) as selections change.
+- Tap Continue: the sheet slides down (250ms), the confirm screen&#x27;s fee row rolls to the new value (&quot;$3.29 Normal&quot; -&gt; &quot;$10.21 Suggested&quot;, digit roll 250ms), and Continue morphs into Confirm (label crossfade, arrow glyph drawing in, 200ms).
+
+## Calibration
+- Each checkbox animates independently - rapid taps chain without canceling earlier springs.
+- The ENS card keeps its art visible behind the scrim.
+
+## Reduced motion
+Checks fade in (150ms); no pops.
+
+## Don&#x27;t miss
+- The fee rises when options are selected - the sheet&#x27;s choices visibly cost more gas.
+- The three options are cumulative checkboxes, not a radio group.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy checkbox sheet with dynamic button state.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-transfer-options-sheet-checkbox-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's ENS transfer options - on the dark \"Confirm transaction to James\" screen for the benjitaylor.eth collectible, the \"Transfer Options\" sheet offers three springy checkboxes (point ENS to recipient, clear profile info, transfer full control), and confirming returns to the screen with the fee updated and Confirm enabled.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark confirm screen: green James avatar, \"Confirm transaction to James\", Collectible row (\"benjitaylor.eth\" ENS card), \"Options\" pill, fee \"$3.29 Normal\", white Continue. Sheet: \"Transfer Options\" - \"ENS Configuration\" section with three checkbox rows: \"Point the ENS name to the recipient's wallet address\", \"Clear all profile information associated with the ENS name\", \"Transfer full control of the ENS name to the recipient\" - plus Continue. Final screen state: fee \"$10.21 Suggested\", white Confirm pill.\n\n## Motion spec\nPattern: springy checkbox sheet with dynamic button state.\n- Tap Options: the sheet slides up (spring ~300/20) over the dimmed confirm screen (scrim 45%).\n- Tap a checkbox: the box draws its check (stroke trim 150ms) with a spring pop (scale 1 -> 1.15 -> 1, spring ~340/14) and fills blue; unchecking reverses (check trims out, 150ms).\n- Continue tracks validity: light/white at rest, its label and state crossfade (200ms) as selections change.\n- Tap Continue: the sheet slides down (250ms), the confirm screen's fee row rolls to the new value (\"$3.29 Normal\" -> \"$10.21 Suggested\", digit roll 250ms), and Continue morphs into Confirm (label crossfade, arrow glyph drawing in, 200ms).\n\n## Calibration\n- Each checkbox animates independently - rapid taps chain without canceling earlier springs.\n- The ENS card keeps its art visible behind the scrim.\n\n## Reduced motion\nChecks fade in (150ms); no pops.\n\n## Don't miss\n- The fee rises when options are selected - the sheet's choices visibly cost more gas.\n- The three options are cumulative checkboxes, not a radio group."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FirstClub Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>FirstClub Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/firstclub-splash"><b>Firstclub</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/firstclub-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/firstclub-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: FirstClub&#x27;s splash - on a deep green screen a single red dot appears, morphs into the red-and-white &quot;F&quot; monogram, and expands into the full &quot;FIRSTCLUB&quot; wordmark with its tagline.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e71523e76d5c62e6f6b1ee/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e71523e76d5c62e6f6b1ee/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-firstclub-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: FirstClub&#x27;s splash - on a deep green screen a single red dot appears, morphs into the red-and-white &quot;F&quot; monogram, and expands into the full &quot;FIRSTCLUB&quot; wordmark with its tagline.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Deep forest-green screen, otherwise empty: a tiny red dot at center, then the &quot;F&quot; monogram (white letterform with a red accent), then the &quot;FIRSTCLUB&quot; wordmark in white serif caps with the tagline &quot;Curated Store. Delivered Daily.&quot; in small type below.
+
+## Motion spec
+Pattern: logo build, ~1.8s total.
+- Dot: the red dot fades in and holds (250ms), then scales up (0.4 -&gt; 1, spring ~360/20, 300ms).
+- Morph: the dot stretches into the F&#x27;s red accent stroke (250ms, ease-in-out) as the white letterform draws on around it (stroke reveal, 300ms).
+- Wordmark: the F splits outward - letters of FIRSTCLUB slide in from both sides to meet at center (300ms, ease-out, 25ms stagger per letter), the F shrinking into place as the first glyph.
+- Tagline: the small tagline fades in below (250ms, +150ms), letter-spacing easing from +0.2em to normal.
+
+## Calibration
+- One accent color: red appears only in the dot and the F&#x27;s accent - nothing else.
+- The whole sequence is centered; nothing moves off-axis.
+
+## Reduced motion
+Dot crossfades to the finished wordmark (300ms); tagline fades.
+
+## Don&#x27;t miss
+- The dot-to-logo morph is continuous - the dot is the seed of the F, not a separate loader.
+- The background is a flat deep green with no texture or gradient.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo build, ~1.8s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/firstclub-splash">original interaction</a> by Firstclub. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: FirstClub's splash - on a deep green screen a single red dot appears, morphs into the red-and-white \"F\" monogram, and expands into the full \"FIRSTCLUB\" wordmark with its tagline.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDeep forest-green screen, otherwise empty: a tiny red dot at center, then the \"F\" monogram (white letterform with a red accent), then the \"FIRSTCLUB\" wordmark in white serif caps with the tagline \"Curated Store. Delivered Daily.\" in small type below.\n\n## Motion spec\nPattern: logo build, ~1.8s total.\n- Dot: the red dot fades in and holds (250ms), then scales up (0.4 -> 1, spring ~360/20, 300ms).\n- Morph: the dot stretches into the F's red accent stroke (250ms, ease-in-out) as the white letterform draws on around it (stroke reveal, 300ms).\n- Wordmark: the F splits outward - letters of FIRSTCLUB slide in from both sides to meet at center (300ms, ease-out, 25ms stagger per letter), the F shrinking into place as the first glyph.\n- Tagline: the small tagline fades in below (250ms, +150ms), letter-spacing easing from +0.2em to normal.\n\n## Calibration\n- One accent color: red appears only in the dot and the F's accent - nothing else.\n- The whole sequence is centered; nothing moves off-axis.\n\n## Reduced motion\nDot crossfades to the finished wordmark (300ms); tagline fades.\n\n## Don't miss\n- The dot-to-logo morph is continuous - the dot is the seed of the F, not a separate loader.\n- The background is a flat deep green with no texture or gradient."</script>
+</body></html>

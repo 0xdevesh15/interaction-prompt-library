@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Share Profile Card Popup - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Share Profile Card Popup</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-share-profile-card-popup"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-share-profile-card-popup">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-share-profile-card-popup">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Instagram&#x27;s share-profile card - a double-sided card popup (front: Instagram-gradient card with QR code and username; back: white card with the profile&#x27;s 60-style logo mark and bio) that flips between faces and tilts in 3D with springy physics when dragged.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5350c08ef72ea68df/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5350c08ef72ea68df/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-share-profile-card-popup.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Instagram&#x27;s share-profile card - a double-sided card popup (front: Instagram-gradient card with QR code and username; back: white card with the profile&#x27;s 60-style logo mark and bio) that flips between faces and tilts in 3D with springy physics when dragged.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dimmed blurred profile behind a centered rounded card. Front face: purple-pink-orange gradient, centered QR in a white rounded square, username below. Back face: white card, large circular logo, name, handle, and one-line bio. Bottom row of share actions; X close and edit icons top.
+
+## Motion spec
+Pattern: 3D flip card with drag tilt.
+- Entry: the card scales up from 0.8 with a spring (stiffness ~300, damping ~20, slight overshoot, 450ms) while the backdrop blurs in (250ms).
+- Drag: the card tilts toward the finger in 3D (rotateX/rotateY up to +/-18deg, direct touch mapping with a soft perspective, ~1000px), like holding a physical card by its corner.
+- Release: the tilt springs back to flat (spring ~260/18, visible wobble, ~600ms).
+- Tap (or horizontal fling): the card flips 180deg around Y (spring ~280/22, 700ms), faces swapping at 90deg; a subtle scale dip (1 -&gt; 0.94 -&gt; 1) rides the flip.
+- The gradient face keeps a soft inner shadow that shifts with tilt for depth.
+
+## Calibration
+- The release wobble is the signature - under-damped enough to oscillate twice.
+- Both faces are fully rendered (no mirror-image flash) - content swaps at the flip&#x27;s edge-on moment.
+
+## Reduced motion
+Flip becomes a 300ms crossfade; tilt disabled.
+
+## Don&#x27;t miss
+- The QR face gradient is Instagram&#x27;s purple -&gt; pink -&gt; orange diagonal.
+- The card casts a moving shadow on the backdrop that follows the tilt direction.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D flip card with drag tilt.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-share-profile-card-popup">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Instagram's share-profile card - a double-sided card popup (front: Instagram-gradient card with QR code and username; back: white card with the profile's 60-style logo mark and bio) that flips between faces and tilts in 3D with springy physics when dragged.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDimmed blurred profile behind a centered rounded card. Front face: purple-pink-orange gradient, centered QR in a white rounded square, username below. Back face: white card, large circular logo, name, handle, and one-line bio. Bottom row of share actions; X close and edit icons top.\n\n## Motion spec\nPattern: 3D flip card with drag tilt.\n- Entry: the card scales up from 0.8 with a spring (stiffness ~300, damping ~20, slight overshoot, 450ms) while the backdrop blurs in (250ms).\n- Drag: the card tilts toward the finger in 3D (rotateX/rotateY up to +/-18deg, direct touch mapping with a soft perspective, ~1000px), like holding a physical card by its corner.\n- Release: the tilt springs back to flat (spring ~260/18, visible wobble, ~600ms).\n- Tap (or horizontal fling): the card flips 180deg around Y (spring ~280/22, 700ms), faces swapping at 90deg; a subtle scale dip (1 -> 0.94 -> 1) rides the flip.\n- The gradient face keeps a soft inner shadow that shifts with tilt for depth.\n\n## Calibration\n- The release wobble is the signature - under-damped enough to oscillate twice.\n- Both faces are fully rendered (no mirror-image flash) - content swaps at the flip's edge-on moment.\n\n## Reduced motion\nFlip becomes a 300ms crossfade; tilt disabled.\n\n## Don't miss\n- The QR face gradient is Instagram's purple -> pink -> orange diagonal.\n- The card casts a moving shadow on the backdrop that follows the tilt direction."</script>
+</body></html>

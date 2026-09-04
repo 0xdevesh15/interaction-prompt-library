@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Duo Pop from Mascot Head Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Duo Pop from Mascot Head Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-duo-pop-from-mascot-head-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-duo-pop-from-mascot-head-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-duo-pop-from-mascot-head-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo Chess&#x27; Duo cameo - solve the puzzle and Duo the owl pops up from behind Oscar&#x27;s head with a springy bounce, then retreats as Oscar takes the frame back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6942314f616d7c8c6a869582/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6942314f616d7c8c6a869582/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-duo-pop-from-mascot-head-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo Chess&#x27; Duo cameo - solve the puzzle and Duo the owl pops up from behind Oscar&#x27;s head with a springy bounce, then retreats as Oscar takes the frame back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Duolingo Chess, near-black: &quot;NEW CONCEPT&quot; purple tag, &quot;Solve the puzzle&quot; title, Oscar top-left with his instruction bubble (&quot;Now, capture my rook with your knight.&quot;), the green progress bar, and the board with a hint arrow showing the knight&#x27;s capture path. Post-solve bubble: &quot;Having the advantage means your pieces dominate and win quickly.&quot;
+
+## Motion spec
+Pattern: springy Duo pop-up from behind the mascot&#x27;s head.
+- The lesson starts with the hint arrow drawing its path on the board (stroke draw, 500ms) and a green ring pulsing on the target square (1s loop).
+- On the correct capture: the captured piece slides off (200ms), then Duo pops from behind Oscar&#x27;s head - scale 0 -&gt; 1.15 -&gt; 1 with spring ~400/12 (a clear overshoot), rising 24px and tilting in 6deg, wings half-spread.
+- Duo holds for ~900ms with a happy head-bob (two quick 4px dips), then ducks back down behind Oscar (scale 1 -&gt; 0 with a 150ms ease-in, 20px drop).
+- Oscar then slides back to center-left (250ms) and his bubble crossfades to the explanation (&quot;Having the advantage...&quot;) with &quot;advantage&quot; highlighted in purple (200ms).
+- The progress bar fills its segment during Duo&#x27;s pop (green wipe, 350ms).
+
+## Calibration
+- Duo must emerge from behind Oscar - masked by Oscar&#x27;s head layer, never appearing beside him.
+- The pop is fast and the hold short - a cameo, not a takeover.
+
+## Reduced motion
+Duo fades in above Oscar (250ms) without the spring or bob.
+
+## Don&#x27;t miss
+- The purple &quot;NEW CONCEPT&quot; tag matches the purple word-highlight in the explanation bubble.
+- Duo&#x27;s green is the same green as the progress fill - Duolingo&#x27;s exact brand green.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy Duo pop-up from behind the mascot&#x27;s head.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-duo-pop-from-mascot-head-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo Chess' Duo cameo - solve the puzzle and Duo the owl pops up from behind Oscar's head with a springy bounce, then retreats as Oscar takes the frame back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDuolingo Chess, near-black: \"NEW CONCEPT\" purple tag, \"Solve the puzzle\" title, Oscar top-left with his instruction bubble (\"Now, capture my rook with your knight.\"), the green progress bar, and the board with a hint arrow showing the knight's capture path. Post-solve bubble: \"Having the advantage means your pieces dominate and win quickly.\"\n\n## Motion spec\nPattern: springy Duo pop-up from behind the mascot's head.\n- The lesson starts with the hint arrow drawing its path on the board (stroke draw, 500ms) and a green ring pulsing on the target square (1s loop).\n- On the correct capture: the captured piece slides off (200ms), then Duo pops from behind Oscar's head - scale 0 -> 1.15 -> 1 with spring ~400/12 (a clear overshoot), rising 24px and tilting in 6deg, wings half-spread.\n- Duo holds for ~900ms with a happy head-bob (two quick 4px dips), then ducks back down behind Oscar (scale 1 -> 0 with a 150ms ease-in, 20px drop).\n- Oscar then slides back to center-left (250ms) and his bubble crossfades to the explanation (\"Having the advantage...\") with \"advantage\" highlighted in purple (200ms).\n- The progress bar fills its segment during Duo's pop (green wipe, 350ms).\n\n## Calibration\n- Duo must emerge from behind Oscar - masked by Oscar's head layer, never appearing beside him.\n- The pop is fast and the hold short - a cameo, not a takeover.\n\n## Reduced motion\nDuo fades in above Oscar (250ms) without the spring or bob.\n\n## Don't miss\n- The purple \"NEW CONCEPT\" tag matches the purple word-highlight in the explanation bubble.\n- Duo's green is the same green as the progress fill - Duolingo's exact brand green."</script>
+</body></html>

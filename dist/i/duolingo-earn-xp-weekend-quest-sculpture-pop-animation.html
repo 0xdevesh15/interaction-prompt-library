@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Earn XP Weekend Quest Sculpture Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Earn XP Weekend Quest Sculpture Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-earn-xp-weekend-quest-sculpture-pop-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-earn-xp-weekend-quest-sculpture-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-earn-xp-weekend-quest-sculpture-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s Weekend Quest card - the stone Duo sculpture spring-bounces on its pedestal while star sparks and bubble particles burst around it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3de8621936ee01364e86/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3de8621936ee01364e86/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-earn-xp-weekend-quest-sculpture-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s Weekend Quest card - the stone Duo sculpture spring-bounces on its pedestal while star sparks and bubble particles burst around it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark screen with a single quest card: a green-framed scene holding a light-blue stone Duo sculpture on a pedestal, a pink progress bar (&quot;18/350&quot;) across the card&#x27;s bottom edge, the copy &quot;Last day! Earn 26 more XP to finish this Weekend Quest.&quot;, and a blue &quot;I CAN DO IT&quot; button.
+
+## Motion spec
+Pattern: spring-loaded sculpture bounce with a star and bubble particle burst.
+- On appearance the card fades up (12px rise, 300ms) and the sculpture immediately does a squash-and-stretch bounce: squash (scaleY 1 -&gt; 0.85, 120ms), then spring launch (scale 0.85 -&gt; 1.1 -&gt; 1, spring ~380/11, ~500ms) with a 20px hop off the pedestal and back.
+- At the bounce apex, particles burst: 6-8 white/green bubbles and 4-point star sparks radiate outward (~80px) with slight rotation, fading over 600ms with 30ms stagger.
+- The sculpture settles with two small wobbles (rotate +/-3deg, spring decay) and then idles with a gentle breathing bob (3px, 2.4s loop).
+- A sparkle glints off the sculpture&#x27;s head every ~3s (small star flare, scale 0 -&gt; 1 -&gt; 0, 300ms).
+- The progress bar and copy stay still - all life is in the sculpture scene.
+
+## Calibration
+- The bounce has real squash - no rigid translation hops.
+- Particles stay inside the card&#x27;s green frame (masked); they never spill over the copy.
+
+## Reduced motion
+The sculpture fades in with one small rise (8px, 200ms); no particles.
+
+## Don&#x27;t miss
+- The pink progress bar sits exactly on the card&#x27;s bottom border - part of the frame, not a separate bar.
+- The sculpture is matte stone-blue with simple carved features - it reads as a statue, not the live mascot.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring-loaded sculpture bounce with a star and bubble particle burst.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-earn-xp-weekend-quest-sculpture-pop-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's Weekend Quest card - the stone Duo sculpture spring-bounces on its pedestal while star sparks and bubble particles burst around it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark screen with a single quest card: a green-framed scene holding a light-blue stone Duo sculpture on a pedestal, a pink progress bar (\"18/350\") across the card's bottom edge, the copy \"Last day! Earn 26 more XP to finish this Weekend Quest.\", and a blue \"I CAN DO IT\" button.\n\n## Motion spec\nPattern: spring-loaded sculpture bounce with a star and bubble particle burst.\n- On appearance the card fades up (12px rise, 300ms) and the sculpture immediately does a squash-and-stretch bounce: squash (scaleY 1 -> 0.85, 120ms), then spring launch (scale 0.85 -> 1.1 -> 1, spring ~380/11, ~500ms) with a 20px hop off the pedestal and back.\n- At the bounce apex, particles burst: 6-8 white/green bubbles and 4-point star sparks radiate outward (~80px) with slight rotation, fading over 600ms with 30ms stagger.\n- The sculpture settles with two small wobbles (rotate +/-3deg, spring decay) and then idles with a gentle breathing bob (3px, 2.4s loop).\n- A sparkle glints off the sculpture's head every ~3s (small star flare, scale 0 -> 1 -> 0, 300ms).\n- The progress bar and copy stay still - all life is in the sculpture scene.\n\n## Calibration\n- The bounce has real squash - no rigid translation hops.\n- Particles stay inside the card's green frame (masked); they never spill over the copy.\n\n## Reduced motion\nThe sculpture fades in with one small rise (8px, 200ms); no particles.\n\n## Don't miss\n- The pink progress bar sits exactly on the card's bottom border - part of the frame, not a separate bar.\n- The sculpture is matte stone-blue with simple carved features - it reads as a statue, not the live mascot."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Add Wallet Button Text Transformations - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Add Wallet Button Text Transformations</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-add-wallet-button-text-transformations"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-add-wallet-button-text-transformations">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-add-wallet-button-text-transformations">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s add-wallet flow - on the &quot;Add Wallets&quot; screen with a numeric keypad, entering wallet indices morphs the CTA&#x27;s text (&quot;Add 1 Wallet&quot; -&gt; &quot;Add 2 Wallets&quot;) with a springy character swap, a shimmer sweep marks the loading state, and the flow transitions to a &quot;2 Wallets Added&quot; summary with wallet rows and an &quot;Import 2 Wallets&quot; button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868961d2f7f889f3d1b48e5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868961d2f7f889f3d1b48e5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-add-wallet-button-text-transformations.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s add-wallet flow - on the &quot;Add Wallets&quot; screen with a numeric keypad, entering wallet indices morphs the CTA&#x27;s text (&quot;Add 1 Wallet&quot; -&gt; &quot;Add 2 Wallets&quot;) with a springy character swap, a shimmer sweep marks the loading state, and the flow transitions to a &quot;2 Wallets Added&quot; summary with wallet rows and an &quot;Import 2 Wallets&quot; button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light &quot;Add Wallets&quot; screen: header, subcopy &quot;Enter a specific number from this wallet index to import&quot;, an input row showing the derived address (&quot;0x5557...b4e9&quot;) with a green &quot;ETH&quot; tag, and a numeric keypad (1-9, 0, delete). The green CTA at the bottom updates its count. Final screen: &quot;2 Wallets Added&quot; with address rows (0x5557...b4e9, 0x30ee...ff6e, each with checkmark), &quot;Unselect All&quot;, &quot;Add Specific Wallet&quot;, and a green &quot;Import 2 Wallets&quot; button.
+
+## Motion spec
+Pattern: keypad-driven CTA text transform with shimmer loading.
+- Each keypad tap: the digit enters the input with a pop (scale 1.2 -&gt; 1, 150ms), the derived address row shimmers (shine sweep left to right, 500ms) and resolves to the new address.
+- The CTA text transforms: the count word slides up and out (translateY -8pt, opacity 0, 150ms) as the new count slides in from below (spring ~340/16); the button width eases to fit (200ms).
+- Adding a second wallet: a new input row pushes in below (translateY 12pt -&gt; 0, spring ~300/18), the CTA morphing to &quot;Add 2 Wallets&quot;.
+- Transition to the summary: the keypad slides down (250ms), the summary rows stagger in (80ms apart), each checkmark drawing on (stroke 200ms).
+- &quot;Import 2 Wallets&quot; pulses once on arrival (scale 1 -&gt; 1.03 -&gt; 1, 300ms).
+
+## Calibration
+- The CTA text transform is the signature - a vertical slot-machine swap, not a crossfade.
+- The address shimmer reads as derivation progress, not a skeleton loader.
+
+## Reduced motion
+Text swaps and row inserts crossfade (200ms); no shimmer.
+
+## Don&#x27;t miss
+- The keypad&#x27;s delete key removes the last digit with the same pop in reverse.
+- The green CTA is disabled (50% opacity) until at least one valid index is entered.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">keypad-driven CTA text transform with shimmer loading.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-add-wallet-button-text-transformations">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's add-wallet flow - on the \"Add Wallets\" screen with a numeric keypad, entering wallet indices morphs the CTA's text (\"Add 1 Wallet\" -> \"Add 2 Wallets\") with a springy character swap, a shimmer sweep marks the loading state, and the flow transitions to a \"2 Wallets Added\" summary with wallet rows and an \"Import 2 Wallets\" button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight \"Add Wallets\" screen: header, subcopy \"Enter a specific number from this wallet index to import\", an input row showing the derived address (\"0x5557...b4e9\") with a green \"ETH\" tag, and a numeric keypad (1-9, 0, delete). The green CTA at the bottom updates its count. Final screen: \"2 Wallets Added\" with address rows (0x5557...b4e9, 0x30ee...ff6e, each with checkmark), \"Unselect All\", \"Add Specific Wallet\", and a green \"Import 2 Wallets\" button.\n\n## Motion spec\nPattern: keypad-driven CTA text transform with shimmer loading.\n- Each keypad tap: the digit enters the input with a pop (scale 1.2 -> 1, 150ms), the derived address row shimmers (shine sweep left to right, 500ms) and resolves to the new address.\n- The CTA text transforms: the count word slides up and out (translateY -8pt, opacity 0, 150ms) as the new count slides in from below (spring ~340/16); the button width eases to fit (200ms).\n- Adding a second wallet: a new input row pushes in below (translateY 12pt -> 0, spring ~300/18), the CTA morphing to \"Add 2 Wallets\".\n- Transition to the summary: the keypad slides down (250ms), the summary rows stagger in (80ms apart), each checkmark drawing on (stroke 200ms).\n- \"Import 2 Wallets\" pulses once on arrival (scale 1 -> 1.03 -> 1, 300ms).\n\n## Calibration\n- The CTA text transform is the signature - a vertical slot-machine swap, not a crossfade.\n- The address shimmer reads as derivation progress, not a skeleton loader.\n\n## Reduced motion\nText swaps and row inserts crossfade (200ms); no shimmer.\n\n## Don't miss\n- The keypad's delete key removes the last digit with the same pop in reverse.\n- The green CTA is disabled (50% opacity) until at least one valid index is entered."</script>
+</body></html>

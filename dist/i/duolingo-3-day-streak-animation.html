@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo 3 Day Streak Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo 3 Day Streak Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-3-day-streak-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-3-day-streak-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-3-day-streak-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s 3-day streak celebration - Duo the owl appears above a bouncing orange &quot;3&quot;, gets sucked into a transformation, and the whole screen floods orange as Duo re-emerges as a flaming phoenix with sunglasses, wings spread, over &quot;3 day streak!&quot;, followed by the week strip and share button rising in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177fad85c0894404b46b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177fad85c0894404b46b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-3-day-streak-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s 3-day streak celebration - Duo the owl appears above a bouncing orange &quot;3&quot;, gets sucked into a transformation, and the whole screen floods orange as Duo re-emerges as a flaming phoenix with sunglasses, wings spread, over &quot;3 day streak!&quot;, followed by the week strip and share button rising in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen that floods orange. Cast: Duo (green owl) over the digit &quot;3&quot; and &quot;day streak!&quot; label; transformed Duo (orange phoenix with shades, wing-flame silhouette); week strip and &quot;SHARE TO STORY&quot; button below.
+
+## Motion spec
+Pattern: mascot metamorphosis with background flood.
+- Duo bounces in above the digit (spring ~340/18, 400ms); the &quot;3&quot; rolls in with its own bounce (spring ~320/18, staggered 150ms); &quot;day streak!&quot; fades in.
+- Transformation: Duo compresses (squash 0.8, 150ms) and rockets upward off-screen; a radial orange flood wipes the background from center (circle expand, ~500ms).
+- Phoenix Duo slams back in from above (spring ~280/16, big overshoot, 450ms) with wings spread; the digit and label return tinted white-on-orange.
+- Week strip slides up with the third dot popping (scale 0 -&gt; 1.3 -&gt; 1, 300ms); the share button and a secondary button rise last (spring ~340/22).
+- Idle: phoenix wings flap subtly (rotate +/-4deg, 900ms loop).
+
+## Calibration
+- The background flood originates from Duo&#x27;s exit point - the mascot causes the color change.
+- White text on orange for the transformed state; keep the digit huge.
+
+## Reduced motion
+Duo crossfades to phoenix; background fades to orange (300ms); UI fades in staggered.
+
+## Don&#x27;t miss
+- The phoenix wears sunglasses - it is a character beat, not a plain flame.
+- The transformation has exactly one exit and one re-entry - no intermediate morph frames.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">mascot metamorphosis with background flood.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-3-day-streak-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's 3-day streak celebration - Duo the owl appears above a bouncing orange \"3\", gets sucked into a transformation, and the whole screen floods orange as Duo re-emerges as a flaming phoenix with sunglasses, wings spread, over \"3 day streak!\", followed by the week strip and share button rising in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen that floods orange. Cast: Duo (green owl) over the digit \"3\" and \"day streak!\" label; transformed Duo (orange phoenix with shades, wing-flame silhouette); week strip and \"SHARE TO STORY\" button below.\n\n## Motion spec\nPattern: mascot metamorphosis with background flood.\n- Duo bounces in above the digit (spring ~340/18, 400ms); the \"3\" rolls in with its own bounce (spring ~320/18, staggered 150ms); \"day streak!\" fades in.\n- Transformation: Duo compresses (squash 0.8, 150ms) and rockets upward off-screen; a radial orange flood wipes the background from center (circle expand, ~500ms).\n- Phoenix Duo slams back in from above (spring ~280/16, big overshoot, 450ms) with wings spread; the digit and label return tinted white-on-orange.\n- Week strip slides up with the third dot popping (scale 0 -> 1.3 -> 1, 300ms); the share button and a secondary button rise last (spring ~340/22).\n- Idle: phoenix wings flap subtly (rotate +/-4deg, 900ms loop).\n\n## Calibration\n- The background flood originates from Duo's exit point - the mascot causes the color change.\n- White text on orange for the transformed state; keep the digit huge.\n\n## Reduced motion\nDuo crossfades to phoenix; background fades to orange (300ms); UI fades in staggered.\n\n## Don't miss\n- The phoenix wears sunglasses - it is a character beat, not a plain flame.\n- The transformation has exactly one exit and one re-entry - no intermediate morph frames."</script>
+</body></html>

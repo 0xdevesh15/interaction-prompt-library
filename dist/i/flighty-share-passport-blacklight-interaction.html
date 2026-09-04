@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flighty Share Passport Blacklight Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flighty Share Passport Blacklight Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flighty-share-passport-blacklight-interaction"><b>Flighty</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-share-passport-blacklight-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-share-passport-blacklight-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Flighty&#x27;s share-passport blacklight - tapping the Blacklight option on the &quot;Your All-Time Passport&quot; share card sweeps a UV-style transformation across the screen: the background drops to deep purple-black and the passport card&#x27;s map and stats fluoresce in neon purple, pink, and blue, like a passport under airport security light.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712ad1fbf3ce1dd7e363ef2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712ad1fbf3ce1dd7e363ef2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flighty-share-passport-blacklight-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Flighty&#x27;s share-passport blacklight - tapping the Blacklight option on the &quot;Your All-Time Passport&quot; share card sweeps a UV-style transformation across the screen: the background drops to deep purple-black and the passport card&#x27;s map and stats fluoresce in neon purple, pink, and blue, like a passport under airport security light.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Share preview screen: &quot;Your All-Time Passport&quot; header, the passport card (world map, &quot;33 flights&quot;, distance/duration stats, stamps), a Blacklight toggle button, and style thumbnails along the bottom.
+
+## Motion spec
+Pattern: glowing blacklight theme sweep.
+- Tap Blacklight: a dark wave sweeps over the screen from top to bottom (~450ms, ease-in-out) - the background fades to deep purple-black first, the card following a beat later.
+- On the card, the map&#x27;s continents ignite in neon pink/purple and flight paths glow blue (opacity + saturation ramp, 400ms, starting as the wave passes), as if UV-reactive ink is lighting up.
+- The stats and labels shift to glowing light-on-dark values (200ms crossfade); hidden UV details (extra stamps, route arcs) fade in that were invisible in the light theme.
+- The Blacklight button fills purple (150ms) to show the active state.
+- Tapping again (or another style) reverses the sweep: colors drain bottom-to-top back to the light passport (450ms).
+
+## Calibration
+- The sweep direction matters: darken top-down, restore bottom-up.
+- The card&#x27;s glow colors are fluorescent - high saturation against the dark ground, edges slightly soft like real UV ink.
+
+## Reduced motion
+Theme crossfades (300ms) without the directional sweep.
+
+## Don&#x27;t miss
+- The light-theme card must look like a real passport first - the blacklight reveal only works against that baseline.
+- The bottom style thumbnails stay legible in both themes - they dim but never vanish.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">glowing blacklight theme sweep.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flighty-share-passport-blacklight-interaction">original interaction</a> by Flighty. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Flighty's share-passport blacklight - tapping the Blacklight option on the \"Your All-Time Passport\" share card sweeps a UV-style transformation across the screen: the background drops to deep purple-black and the passport card's map and stats fluoresce in neon purple, pink, and blue, like a passport under airport security light.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nShare preview screen: \"Your All-Time Passport\" header, the passport card (world map, \"33 flights\", distance/duration stats, stamps), a Blacklight toggle button, and style thumbnails along the bottom.\n\n## Motion spec\nPattern: glowing blacklight theme sweep.\n- Tap Blacklight: a dark wave sweeps over the screen from top to bottom (~450ms, ease-in-out) - the background fades to deep purple-black first, the card following a beat later.\n- On the card, the map's continents ignite in neon pink/purple and flight paths glow blue (opacity + saturation ramp, 400ms, starting as the wave passes), as if UV-reactive ink is lighting up.\n- The stats and labels shift to glowing light-on-dark values (200ms crossfade); hidden UV details (extra stamps, route arcs) fade in that were invisible in the light theme.\n- The Blacklight button fills purple (150ms) to show the active state.\n- Tapping again (or another style) reverses the sweep: colors drain bottom-to-top back to the light passport (450ms).\n\n## Calibration\n- The sweep direction matters: darken top-down, restore bottom-up.\n- The card's glow colors are fluorescent - high saturation against the dark ground, edges slightly soft like real UV ink.\n\n## Reduced motion\nTheme crossfades (300ms) without the directional sweep.\n\n## Don't miss\n- The light-theme card must look like a real passport first - the blacklight reveal only works against that baseline.\n- The bottom style thumbnails stay legible in both themes - they dim but never vanish."</script>
+</body></html>

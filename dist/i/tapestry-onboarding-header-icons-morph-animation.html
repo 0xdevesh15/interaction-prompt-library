@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tapestry Onboarding Header Icons Morph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tapestry Onboarding Header Icons Morph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tapestry-onboarding-header-icons-morph-animation"><b>Tapestry</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tapestry-onboarding-header-icons-morph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tapestry-onboarding-header-icons-morph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Tapestry&#x27;s onboarding header - abstract woven colored lines gather and morph into stacked source cards (RSS, Mastodon, YouTube), then into connector icons above a button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cdb4ffc582b7d20c5e18/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cdb4ffc582b7d20c5e18/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tapestry-onboarding-header-icons-morph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Tapestry&#x27;s onboarding header - abstract woven colored lines gather and morph into stacked source cards (RSS, Mastodon, YouTube), then into connector icons above a button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Tapestry onboarding, near-black with a purple bottom sheet (&quot;Welcome to Tapestry&quot; + copy + Skip / Next + page dots). The header area holds the animation: first a weave of curved colored strokes (blue, pink, green, red, orange), then three stacked rounded cards (red RSS, purple social, orange YouTube), then connector icons (teal wireframe globe, green C-circle) over a blue button.
+
+## Motion spec
+Pattern: vector morph from woven lines to source cards to connector icons.
+- The weave enters as loose strokes that settle into an interlaced bundle (each stroke draws on, 400ms, 60ms stagger), gently undulating (stroke control points oscillate +/-6px, 3s loop).
+- On Next, each stroke straightens and slides to its target card position, thickening and rounding into a filled card (morph over 450ms, ease-in-out): blue/pink/green strokes land as the card stack while red and orange strokes settle last into their cards.
+- Card faces then fade their glyphs in (RSS waves, play button, text lines) over 250ms, 80ms apart top to bottom.
+- Next step: the cards shrink and orbit inward (scale -&gt; 0.4, 350ms) and crossfade into the connector icons, which pop with a spring (~380/15) - globe first, then the C icon 120ms later; the blue button fades up beneath them (250ms).
+- Every transition is a true shape morph where possible - strokes become cards, not one image swapping for another.
+
+## Calibration
+- Palette is fixed per source: red = RSS, purple = social, orange = YouTube, teal/green = connectors.
+- The purple sheet and its text only crossfade between steps (250ms) - the header owns the show.
+
+## Reduced motion
+Header states crossfade (300ms); no stroke morphing.
+
+## Don&#x27;t miss
+- The weave must read as threads crossing over/under each other - preserve the interlace during undulation.
+- Page dots advance with each morph; Skip stays put.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vector morph from woven lines to source cards to connector icons.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tapestry-onboarding-header-icons-morph-animation">original interaction</a> by Tapestry. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Tapestry's onboarding header - abstract woven colored lines gather and morph into stacked source cards (RSS, Mastodon, YouTube), then into connector icons above a button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTapestry onboarding, near-black with a purple bottom sheet (\"Welcome to Tapestry\" + copy + Skip / Next + page dots). The header area holds the animation: first a weave of curved colored strokes (blue, pink, green, red, orange), then three stacked rounded cards (red RSS, purple social, orange YouTube), then connector icons (teal wireframe globe, green C-circle) over a blue button.\n\n## Motion spec\nPattern: vector morph from woven lines to source cards to connector icons.\n- The weave enters as loose strokes that settle into an interlaced bundle (each stroke draws on, 400ms, 60ms stagger), gently undulating (stroke control points oscillate +/-6px, 3s loop).\n- On Next, each stroke straightens and slides to its target card position, thickening and rounding into a filled card (morph over 450ms, ease-in-out): blue/pink/green strokes land as the card stack while red and orange strokes settle last into their cards.\n- Card faces then fade their glyphs in (RSS waves, play button, text lines) over 250ms, 80ms apart top to bottom.\n- Next step: the cards shrink and orbit inward (scale -> 0.4, 350ms) and crossfade into the connector icons, which pop with a spring (~380/15) - globe first, then the C icon 120ms later; the blue button fades up beneath them (250ms).\n- Every transition is a true shape morph where possible - strokes become cards, not one image swapping for another.\n\n## Calibration\n- Palette is fixed per source: red = RSS, purple = social, orange = YouTube, teal/green = connectors.\n- The purple sheet and its text only crossfade between steps (250ms) - the header owns the show.\n\n## Reduced motion\nHeader states crossfade (300ms); no stroke morphing.\n\n## Don't miss\n- The weave must read as threads crossing over/under each other - preserve the interlace during undulation.\n- Page dots advance with each morph; Skip stays put."</script>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slack Swipe Cards to Read Unread Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Slack Swipe Cards to Read Unread Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/slack-swipe-cards-to-read-unread-interaction"><b>Slack</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/slack-swipe-cards-to-read-unread-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/slack-swipe-cards-to-read-unread-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Slack&#x27;s unread triage - full-screen message cards you fling right to Mark as Read or left to Keep Unread, the stack behind sliding up as the counter ticks down.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4dfa63dde702a6fe38ccc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4dfa63dde702a6fe38ccc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-slack-swipe-cards-to-read-unread-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Slack&#x27;s unread triage - full-screen message cards you fling right to Mark as Read or left to Keep Unread, the stack behind sliding up as the counter ticks down.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A stack of full-screen message cards (channel name, &quot;N Left&quot; counter + Undo at top, full message body, Keep Unread and Mark as Read buttons at the bottom). The next card peeks behind the top one.
+
+## Motion spec
+Pattern: swipe-to-dismiss card stack, gesture-driven.
+- Drag the top card: it follows the finger with rotation proportional to x-offset (~1deg per 24px), and a stamp fades in - green &quot;Mark as Read&quot; check when dragged right, blue &quot;Keep Unread&quot; when dragged left (alpha ramps over the first 120px).
+- Release past the threshold (~35% of width): the card flings off in that direction with its current velocity + gravity, rotating further as it leaves.
+- Release before threshold: card springs back to center (~350/22), stamp fading out.
+- The next card scales 0.95 -&gt; 1 and slides up into place (spring ~300/20) as the dismissed card exits; the counter decrements when the exit starts.
+- The bottom buttons trigger the same flings (taps animate as a medium-velocity throw) so gesture and button paths never diverge.
+- Undo in the header recalls the last card: it slides back in from its exit side and the counter restores.
+
+## Calibration
+- The stamp appears under the card&#x27;s rotation, not over it... visually it rides on the card as a stamped badge, tilting with it.
+- Fling velocity is inherited from the gesture; a canned exit speed on a fast flick feels disconnected.
+
+## Reduced motion
+Cards slide off without rotation (200ms); stamps crossfade.
+
+## Don&#x27;t miss
+- The counter and Undo are part of the card flow - the counter ticks on exit, not on release, so rapid swipes stay truthful.
+- The peeking card behind must move up in the same gesture that dismisses the top one.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-to-dismiss card stack, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/slack-swipe-cards-to-read-unread-interaction">original interaction</a> by Slack. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Slack's unread triage - full-screen message cards you fling right to Mark as Read or left to Keep Unread, the stack behind sliding up as the counter ticks down.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA stack of full-screen message cards (channel name, \"N Left\" counter + Undo at top, full message body, Keep Unread and Mark as Read buttons at the bottom). The next card peeks behind the top one.\n\n## Motion spec\nPattern: swipe-to-dismiss card stack, gesture-driven.\n- Drag the top card: it follows the finger with rotation proportional to x-offset (~1deg per 24px), and a stamp fades in - green \"Mark as Read\" check when dragged right, blue \"Keep Unread\" when dragged left (alpha ramps over the first 120px).\n- Release past the threshold (~35% of width): the card flings off in that direction with its current velocity + gravity, rotating further as it leaves.\n- Release before threshold: card springs back to center (~350/22), stamp fading out.\n- The next card scales 0.95 -> 1 and slides up into place (spring ~300/20) as the dismissed card exits; the counter decrements when the exit starts.\n- The bottom buttons trigger the same flings (taps animate as a medium-velocity throw) so gesture and button paths never diverge.\n- Undo in the header recalls the last card: it slides back in from its exit side and the counter restores.\n\n## Calibration\n- The stamp appears under the card's rotation, not over it... visually it rides on the card as a stamped badge, tilting with it.\n- Fling velocity is inherited from the gesture; a canned exit speed on a fast flick feels disconnected.\n\n## Reduced motion\nCards slide off without rotation (200ms); stamps crossfade.\n\n## Don't miss\n- The counter and Undo are part of the card flow - the counter ticks on exit, not on release, so rapid swipes stay truthful.\n- The peeking card behind must move up in the same gesture that dismisses the top one."</script>
+</body></html>

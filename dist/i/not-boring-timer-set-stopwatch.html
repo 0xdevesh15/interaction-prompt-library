@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Boring Timer Set Stopwatch - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Not Boring Timer Set Stopwatch</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/not-boring-timer-set-stopwatch"><b>Not</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-timer-set-stopwatch">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-timer-set-stopwatch">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: (Not Boring) Timer&#x27;s setting drum - after a &quot;PLAY WITH TIME&quot; start card, hours/minutes set via a 3D cylinder of deeply extruded monochrome digits you spin with momentum, with &quot;TAP TO START&quot;, then a notify-permission beat and a giant countdown display.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad3d7d61b8c65031096b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad3d7d61b8c65031096b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-not-boring-timer-set-stopwatch.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: (Not Boring) Timer&#x27;s setting drum - after a &quot;PLAY WITH TIME&quot; start card, hours/minutes set via a 3D cylinder of deeply extruded monochrome digits you spin with momentum, with &quot;TAP TO START&quot;, then a notify-permission beat and a giant countdown display.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black throughout. Start card: &quot;PLAY WITH TIME&quot; in tall condensed type. Setting view: a full-screen drum of extruded digits curving away at top and bottom (cylinder shading), the center row crisp, &quot;TAP TO START&quot; small at the bottom. Notify screen: a bell with a red slash, &quot;NOTIFY ME&quot;, &quot;TURN ON&quot; pill. Countdown: one gigantic white &quot;18&quot; with the date beneath.
+
+## Motion spec
+Pattern: 3D drum scroll with momentum and snap.
+- Drag the drum: digits rotate around the cylinder&#x27;s x-axis 1:1 with the finger, depth-shaded (center bright, poles fading to black) with real perspective foreshortening.
+- Fling: momentum with deceleration ~0.92/frame, then snap to the nearest digit (spring ~280/16 - the drum &quot;clunks&quot; into place with a subtle scale bump and a tick haptic per passing digit).
+- The selected digit brightens and extrudes deepest; neighbors recede - focus is done with light, not boxes.
+- TAP TO START: the drum&#x27;s digits scatter off-axis (rotate + fade, 300ms) and the notify sheet rises (spring ~340/22).
+- Countdown entry: the giant digits scale in from 1.3 (spring ~300/14) and tick each second with a quick flip (top half folds 120ms) - a split-flap nod.
+
+## Calibration
+- The cylinder must shade continuously - faceted steps would break the drum illusion.
+- Snap is non-negotiable - the drum never rests between digits.
+
+## Reduced motion
+Drum scrolls flat without rotation or momentum; countdown changes without flip.
+
+## Don&#x27;t miss
+- Extrusion is the identity: digits are carved blocks, their shadows doing half the work.
+- Haptics per digit - you should be able to set this with your eyes closed.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D drum scroll with momentum and snap.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/not-boring-timer-set-stopwatch">original interaction</a> by Not. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: (Not Boring) Timer's setting drum - after a \"PLAY WITH TIME\" start card, hours/minutes set via a 3D cylinder of deeply extruded monochrome digits you spin with momentum, with \"TAP TO START\", then a notify-permission beat and a giant countdown display.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack throughout. Start card: \"PLAY WITH TIME\" in tall condensed type. Setting view: a full-screen drum of extruded digits curving away at top and bottom (cylinder shading), the center row crisp, \"TAP TO START\" small at the bottom. Notify screen: a bell with a red slash, \"NOTIFY ME\", \"TURN ON\" pill. Countdown: one gigantic white \"18\" with the date beneath.\n\n## Motion spec\nPattern: 3D drum scroll with momentum and snap.\n- Drag the drum: digits rotate around the cylinder's x-axis 1:1 with the finger, depth-shaded (center bright, poles fading to black) with real perspective foreshortening.\n- Fling: momentum with deceleration ~0.92/frame, then snap to the nearest digit (spring ~280/16 - the drum \"clunks\" into place with a subtle scale bump and a tick haptic per passing digit).\n- The selected digit brightens and extrudes deepest; neighbors recede - focus is done with light, not boxes.\n- TAP TO START: the drum's digits scatter off-axis (rotate + fade, 300ms) and the notify sheet rises (spring ~340/22).\n- Countdown entry: the giant digits scale in from 1.3 (spring ~300/14) and tick each second with a quick flip (top half folds 120ms) - a split-flap nod.\n\n## Calibration\n- The cylinder must shade continuously - faceted steps would break the drum illusion.\n- Snap is non-negotiable - the drum never rests between digits.\n\n## Reduced motion\nDrum scrolls flat without rotation or momentum; countdown changes without flip.\n\n## Don't miss\n- Extrusion is the identity: digits are carved blocks, their shadows doing half the work.\n- Haptics per digit - you should be able to set this with your eyes closed."</script>
+</body></html>

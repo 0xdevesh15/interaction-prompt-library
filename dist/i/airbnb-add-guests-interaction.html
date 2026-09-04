@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Add Guests Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Add Guests Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-add-guests-interaction"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-add-guests-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-add-guests-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airbnb&#x27;s guest picker - a giant stepper count where a row of 3D clay characters springs in or out one by one as guests are added or removed.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc225b7b88f78c7541/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc225b7b88f78c7541/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-add-guests-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airbnb&#x27;s guest picker - a giant stepper count where a row of 3D clay characters springs in or out one by one as guests are added or removed.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White &quot;Guests&quot; sheet (&quot;Add up to 6 people, including yourself&quot;). Center stage: a lineup of small 3D clay people above an oversized count numeral flanked by circular - and + steppers. Category label (Adults) under the count, Back/Next bar at the bottom.
+
+## Motion spec
+Pattern: per-unit character pop stepper.
+- Tap +: the count numeral rolls up one digit (vertical roll, 200ms, ease-out) and a new clay character springs into the lineup from below (translateY 24px to 0, scale 0.5 to 1, spring ~420/20 with a cheerful overshoot), the existing characters shuffling aside to make room (spring ~380/26).
+- Tap -: the rightmost character crouches and drops out (scale to 0.7, translateY down 20px, fade, 250ms, ease-in) while the rest close ranks; the numeral rolls down.
+- Characters are varied (different outfits/skin tones) and land in a fixed per-index order - the same guest always looks the same.
+- Steppers: disabled state at min/max fades to 30% opacity; tap gives a radial press dip (scale 0.9, 120ms spring back).
+- The characters idle with a subtle sway (+-2deg rotation, phase-offset 3s loops) after any change settles.
+
+## Calibration
+- The character pop is the reward - full spring overshoot; the numeral roll is secondary and faster.
+- Lineup recenters after each change so the group stays balanced over the numeral.
+
+## Reduced motion
+Characters fade in place; numeral crossfades.
+
+## Don&#x27;t miss
+- Characters spring from below with squash on landing - flat fades kill the playfulness.
+- The count and the lineup always match; no frame shows 3 people under a &quot;4&quot;.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">per-unit character pop stepper.</div></div><div><div class="k">Content type</div><div class="v">interactive gesture</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-add-guests-interaction">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airbnb's guest picker - a giant stepper count where a row of 3D clay characters springs in or out one by one as guests are added or removed.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite \"Guests\" sheet (\"Add up to 6 people, including yourself\"). Center stage: a lineup of small 3D clay people above an oversized count numeral flanked by circular - and + steppers. Category label (Adults) under the count, Back/Next bar at the bottom.\n\n## Motion spec\nPattern: per-unit character pop stepper.\n- Tap +: the count numeral rolls up one digit (vertical roll, 200ms, ease-out) and a new clay character springs into the lineup from below (translateY 24px to 0, scale 0.5 to 1, spring ~420/20 with a cheerful overshoot), the existing characters shuffling aside to make room (spring ~380/26).\n- Tap -: the rightmost character crouches and drops out (scale to 0.7, translateY down 20px, fade, 250ms, ease-in) while the rest close ranks; the numeral rolls down.\n- Characters are varied (different outfits/skin tones) and land in a fixed per-index order - the same guest always looks the same.\n- Steppers: disabled state at min/max fades to 30% opacity; tap gives a radial press dip (scale 0.9, 120ms spring back).\n- The characters idle with a subtle sway (+-2deg rotation, phase-offset 3s loops) after any change settles.\n\n## Calibration\n- The character pop is the reward - full spring overshoot; the numeral roll is secondary and faster.\n- Lineup recenters after each change so the group stays balanced over the numeral.\n\n## Reduced motion\nCharacters fade in place; numeral crossfades.\n\n## Don't miss\n- Characters spring from below with squash on landing - flat fades kill the playfulness.\n- The count and the lineup always match; no frame shows 3 people under a \"4\"."</script>
+</body></html>

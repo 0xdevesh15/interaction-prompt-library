@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Streak Unfreeze Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Streak Unfreeze Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-streak-unfreeze-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-streak-unfreeze-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-streak-unfreeze-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s streak-unfreeze moment. A frozen streak flame is shattered by an explosive ice-particle burst, then the screen settles into a dark-themed streak summary: large orange flame icon above a bold orange streak count (&quot;312&quot;), with small colored confetti squares scattered around. Note: the source video for this shot is unavailable (Gumlet 403 on all renditions), so this spec is reconstructed from the official shot description and the poster frame - timing values are calibrated estimates, not measurements.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><img class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff3c3d879bf57303c62/thumbnail-1-0.png" alt=""></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-streak-unfreeze-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s streak-unfreeze moment. A frozen streak flame is shattered by an explosive ice-particle burst, then the screen settles into a dark-themed streak summary: large orange flame icon above a bold orange streak count (&quot;312&quot;), with small colored confetti squares scattered around. Note: the source video for this shot is unavailable (Gumlet 403 on all renditions), so this spec is reconstructed from the official shot description and the poster frame - timing values are calibrated estimates, not measurements.
+
+## Integration
+Any view layer works: render the burst and confetti with your framework&#x27;s particle or sprite system (or a Lottie/Rive asset), and drive the flame transition with a single timeline; keep the summary screen as ordinary declarative UI that the animation hands off to.
+
+## Scene
+- Full-screen dark surface (near-black blue-green, #0B1215 family) filling the device frame.
+- Center stage, vertically stacked: streak flame icon (Duolingo orange #FF9600 with lighter #FFC800 inner flame) above the streak count in large bold rounded numerals, same orange.
+- Around the flame: 8-12 small confetti squares (approx 14-20pt), scattered asymmetrically - light blue, orange, yellow - each at a random rotation.
+- Start state: the flame is encased in ice (desaturated, blue-white frost shell, sharp crystalline shards around the silhouette).
+
+## Motion spec
+1. Ice burst (t=0): the frost shell fractures into 20-40 ice particles that explode outward from the flame&#x27;s center, radial velocity high at center and falling off with distance; particles spin and fade out over ~500-700ms. (estimated)
+2. Flame ignite (overlapping, starts ~100ms in): the flame crossfades from frozen desaturation to full orange with a quick scale punch (1.0 -&gt; 1.15 -&gt; 1.0, spring, ~300ms). (estimated)
+3. Summary settle: streak count fades/slides up into place under the flame (~250ms, ease-out). (estimated)
+4. Confetti: the colored squares pop in with individual stagger (30-50ms apart), slight overshoot scale, then hold static. (estimated)
+- Total sequence ~1.2-1.5s, single play, no loop.
+
+## Calibration
+- Particles must read as ice: cool blue-white palette, angular shapes, fast initial burst with gravity pull-down after ~300ms.
+- The emotional beat is the contrast: frozen/stuck -&gt; violently freed -&gt; warm flame. Keep the burst snappy; do not ease it gently.
+- Count uses a heavy rounded geometric sans (Duolingo uses Feather Bold / custom rounded face).
+
+## Reduced motion
+Skip the particle burst and spring punches; crossfade frozen flame to warm flame over 200ms and fade in the count and confetti without motion.
+
+## Don&#x27;t miss
+- The burst originates from the flame silhouette itself, not the screen center.
+- Confetti squares are rotated at varied angles and sit at mixed distances from the flame - not a symmetric ring.
+- Status bar and device chrome stay untouched; the animation is purely in-content.
+</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">particle burst on state change, choreographed entrance on content load.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-streak-unfreeze-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's streak-unfreeze moment. A frozen streak flame is shattered by an explosive ice-particle burst, then the screen settles into a dark-themed streak summary: large orange flame icon above a bold orange streak count (\"312\"), with small colored confetti squares scattered around. Note: the source video for this shot is unavailable (Gumlet 403 on all renditions), so this spec is reconstructed from the official shot description and the poster frame - timing values are calibrated estimates, not measurements.\n\n## Integration\nAny view layer works: render the burst and confetti with your framework's particle or sprite system (or a Lottie/Rive asset), and drive the flame transition with a single timeline; keep the summary screen as ordinary declarative UI that the animation hands off to.\n\n## Scene\n- Full-screen dark surface (near-black blue-green, #0B1215 family) filling the device frame.\n- Center stage, vertically stacked: streak flame icon (Duolingo orange #FF9600 with lighter #FFC800 inner flame) above the streak count in large bold rounded numerals, same orange.\n- Around the flame: 8-12 small confetti squares (approx 14-20pt), scattered asymmetrically - light blue, orange, yellow - each at a random rotation.\n- Start state: the flame is encased in ice (desaturated, blue-white frost shell, sharp crystalline shards around the silhouette).\n\n## Motion spec\n1. Ice burst (t=0): the frost shell fractures into 20-40 ice particles that explode outward from the flame's center, radial velocity high at center and falling off with distance; particles spin and fade out over ~500-700ms. (estimated)\n2. Flame ignite (overlapping, starts ~100ms in): the flame crossfades from frozen desaturation to full orange with a quick scale punch (1.0 -> 1.15 -> 1.0, spring, ~300ms). (estimated)\n3. Summary settle: streak count fades/slides up into place under the flame (~250ms, ease-out). (estimated)\n4. Confetti: the colored squares pop in with individual stagger (30-50ms apart), slight overshoot scale, then hold static. (estimated)\n- Total sequence ~1.2-1.5s, single play, no loop.\n\n## Calibration\n- Particles must read as ice: cool blue-white palette, angular shapes, fast initial burst with gravity pull-down after ~300ms.\n- The emotional beat is the contrast: frozen/stuck -> violently freed -> warm flame. Keep the burst snappy; do not ease it gently.\n- Count uses a heavy rounded geometric sans (Duolingo uses Feather Bold / custom rounded face).\n\n## Reduced motion\nSkip the particle burst and spring punches; crossfade frozen flame to warm flame over 200ms and fade in the count and confetti without motion.\n\n## Don't miss\n- The burst originates from the flame silhouette itself, not the screen center.\n- Confetti squares are rotated at varied angles and sit at mixed distances from the flame - not a symmetric ring.\n- Status bar and device chrome stay untouched; the animation is purely in-content.\n"</script>
+</body></html>

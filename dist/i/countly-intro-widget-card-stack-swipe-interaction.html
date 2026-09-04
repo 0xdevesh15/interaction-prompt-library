@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Countly Intro Widget Card Stack Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Countly Intro Widget Card Stack Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/countly-intro-widget-card-stack-swipe-interaction"><b>Countly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/countly-intro-widget-card-stack-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/countly-intro-widget-card-stack-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Countly&#x27;s intro card stack - swiping the top metric card off the stack flies it away and floods the full-screen background with the next card&#x27;s brand color, revealing the next stat card (&quot;two hundred nineteen followers&quot;, &quot;five thousand thirty two MRR&quot;, &quot;one thousand fifty three stars&quot;, &quot;ten thousand eight hundred subscribers&quot;).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756d5a65222d1a7afdc2fa3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756d5a65222d1a7afdc2fa3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-countly-intro-widget-card-stack-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Countly&#x27;s intro card stack - swiping the top metric card off the stack flies it away and floods the full-screen background with the next card&#x27;s brand color, revealing the next stat card (&quot;two hundred nineteen followers&quot;, &quot;five thousand thirty two MRR&quot;, &quot;one thousand fifty three stars&quot;, &quot;ten thousand eight hundred subscribers&quot;).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen intro page: bold black headline &quot;Thanks for being an early adopter&quot; with a small subline, a white stat card (spelled-out metric in bold lowercase, small close X, &quot;Sign in to X&quot; button below it) floating center-lower. The entire background is a flat brand color (blue, pink/red, green, red, gray) that changes per card.
+
+## Motion spec
+Pattern: swipe-away card stack with full-bleed background color transition.
+- Horizontal drag on the top card tracks 1:1 with rotation (rotate up to ~12deg toward the drag direction).
+- Release past ~35% width: the card flies off-screen (velocity-based, ~300ms) while the background crossfades to the next card&#x27;s brand color (~400ms, ease-in-out).
+- The next card rises from the stack (scale 0.95 -&gt; 1, translateY 12px -&gt; 0, spring ~280/22) as the color flood completes.
+- Flick under threshold: card springs back to center (spring ~320/24).
+- Headline stays fixed; only the card and background color change per step.
+
+## Calibration
+- The background color change rides with the card&#x27;s exit - color should already be shifting as the old card leaves.
+- Spelled-out number words are the design; keep them lowercase and bold.
+
+## Reduced motion
+Card crossfades out, background crossfades color (250ms), no rotation or fly-off.
+
+## Don&#x27;t miss
+- Each stat card pairs with one specific background color - the pairing is the brand moment.
+- The &quot;Sign in to X&quot; button sits below the card and persists across swipes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-away card stack with full-bleed background color transition.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/countly-intro-widget-card-stack-swipe-interaction">original interaction</a> by Countly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Countly's intro card stack - swiping the top metric card off the stack flies it away and floods the full-screen background with the next card's brand color, revealing the next stat card (\"two hundred nineteen followers\", \"five thousand thirty two MRR\", \"one thousand fifty three stars\", \"ten thousand eight hundred subscribers\").\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen intro page: bold black headline \"Thanks for being an early adopter\" with a small subline, a white stat card (spelled-out metric in bold lowercase, small close X, \"Sign in to X\" button below it) floating center-lower. The entire background is a flat brand color (blue, pink/red, green, red, gray) that changes per card.\n\n## Motion spec\nPattern: swipe-away card stack with full-bleed background color transition.\n- Horizontal drag on the top card tracks 1:1 with rotation (rotate up to ~12deg toward the drag direction).\n- Release past ~35% width: the card flies off-screen (velocity-based, ~300ms) while the background crossfades to the next card's brand color (~400ms, ease-in-out).\n- The next card rises from the stack (scale 0.95 -> 1, translateY 12px -> 0, spring ~280/22) as the color flood completes.\n- Flick under threshold: card springs back to center (spring ~320/24).\n- Headline stays fixed; only the card and background color change per step.\n\n## Calibration\n- The background color change rides with the card's exit - color should already be shifting as the old card leaves.\n- Spelled-out number words are the design; keep them lowercase and bold.\n\n## Reduced motion\nCard crossfades out, background crossfades color (250ms), no rotation or fly-off.\n\n## Don't miss\n- Each stat card pairs with one specific background color - the pairing is the brand moment.\n- The \"Sign in to X\" button sits below the card and persists across swipes."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nike Run Club Watch Start Workout Timer - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Nike Run Club Watch Start Workout Timer</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/nike-run-club-watch-start-workout-timer"><b>Nike</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-run-club-watch-start-workout-timer">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-run-club-watch-start-workout-timer">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Nike Run Club&#x27;s watch workout start - tapping the big green START circle launches a full-screen 3-2-1 countdown in giant green numerals, then cuts to the live workout dashboard (Time, Kilometres, BPM) as the timer starts ticking.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2d4316624f474442d5c0f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2d4316624f474442d5c0f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-nike-run-club-watch-start-workout-timer.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Nike Run Club&#x27;s watch workout start - tapping the big green START circle launches a full-screen 3-2-1 countdown in giant green numerals, then cuts to the live workout dashboard (Time, Kilometres, BPM) as the timer starts ticking.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black watch screens: &quot;Run&quot; header, green START circle with &quot;Indoor Run&quot; below and page dots; countdown: huge green 3, 2, 1 filling the screen; dashboard: &quot;00:00 Time / 0.00 Kilometres / -- BPM&quot; in green, with the session clock top-left.
+
+## Motion spec
+Pattern: tap-to-countdown-to-dashboard chain.
+- Tap START: the circle contracts (scale 0.92, 100ms) with haptic, then expands to fill the screen (scale -&gt; 3x, 250ms ease-in) becoming the countdown background wipe.
+- Countdown: each numeral slams in (scale 1.4 -&gt; 1, spring ~500/20, ~300ms), holds ~600ms, then exits by scaling down + fading (150ms); a haptic thump per numeral.
+- After &quot;1&quot;: the dashboard rises into place (translateY 20px -&gt; 0 + fade, 250ms) as the timer starts at 00:00 and begins ticking.
+- The dashboard digits tick with a soft per-second flash (opacity 1 -&gt; 0.7 -&gt; 1, 300ms); BPM shows &quot;--&quot; until data arrives.
+
+## Calibration
+- Countdown timing is exactly 1s per numeral; the workout clock starts at the dashboard&#x27;s first frame, not after its entrance.
+- Green (#23F0A0-ish volt) is the only color on black throughout.
+
+## Reduced motion
+Numerals crossfade; dashboard fades in.
+
+## Don&#x27;t miss
+- The START circle&#x27;s expansion is the transition - no separate cut to the countdown.
+- Page dots under START indicate multiple workout types; they disappear during countdown.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-to-countdown-to-dashboard chain.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/nike-run-club-watch-start-workout-timer">original interaction</a> by Nike. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Nike Run Club's watch workout start - tapping the big green START circle launches a full-screen 3-2-1 countdown in giant green numerals, then cuts to the live workout dashboard (Time, Kilometres, BPM) as the timer starts ticking.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack watch screens: \"Run\" header, green START circle with \"Indoor Run\" below and page dots; countdown: huge green 3, 2, 1 filling the screen; dashboard: \"00:00 Time / 0.00 Kilometres / -- BPM\" in green, with the session clock top-left.\n\n## Motion spec\nPattern: tap-to-countdown-to-dashboard chain.\n- Tap START: the circle contracts (scale 0.92, 100ms) with haptic, then expands to fill the screen (scale -> 3x, 250ms ease-in) becoming the countdown background wipe.\n- Countdown: each numeral slams in (scale 1.4 -> 1, spring ~500/20, ~300ms), holds ~600ms, then exits by scaling down + fading (150ms); a haptic thump per numeral.\n- After \"1\": the dashboard rises into place (translateY 20px -> 0 + fade, 250ms) as the timer starts at 00:00 and begins ticking.\n- The dashboard digits tick with a soft per-second flash (opacity 1 -> 0.7 -> 1, 300ms); BPM shows \"--\" until data arrives.\n\n## Calibration\n- Countdown timing is exactly 1s per numeral; the workout clock starts at the dashboard's first frame, not after its entrance.\n- Green (#23F0A0-ish volt) is the only color on black throughout.\n\n## Reduced motion\nNumerals crossfade; dashboard fades in.\n\n## Don't miss\n- The START circle's expansion is the transition - no separate cut to the countdown.\n- Page dots under START indicate multiple workout types; they disappear during countdown."</script>
+</body></html>

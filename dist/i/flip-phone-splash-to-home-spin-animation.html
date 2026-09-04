@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flip Phone Splash to Home Spin Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flip Phone Splash to Home Spin Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flip-phone-splash-to-home-spin-animation"><b>Flip</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flip-phone-splash-to-home-spin-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flip-phone-splash-to-home-spin-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Flip Phone&#x27;s launch - the FLIP PHONE wordmark spins through a mirrored 3D flip on the black splash while scaling up, then the home screen fades and slides in around it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694c0d18b122cbf1763cc7fd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694c0d18b122cbf1763cc7fd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flip-phone-splash-to-home-spin-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Flip Phone&#x27;s launch - the FLIP PHONE wordmark spins through a mirrored 3D flip on the black splash while scaling up, then the home screen fades and slides in around it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Splash: a black screen holding the small centered FLIP PHONE wordmark (white text with the purple orbit glyph). Home: a dark screen with the large FLIP PHONE wordmark at top, a &quot;Total focus time&quot; card reading &quot;0m&quot;, and a bottom tab bar - all revealed around the logo&#x27;s final position.
+
+## Motion spec
+Pattern: splash logo 3D flip with scale-up into the home reveal.
+- The wordmark spins on its horizontal axis (rotateX 0 -&gt; 360deg, 700ms, ease-in-out), passing through the mirrored/edge-on states - the &quot;flip&quot; is literal, text legibly upside down and mirrored mid-spin.
+- Through the spin the logo scales up (0.6 -&gt; 1.8) toward its home position, the scale easing out as the rotation completes.
+- As the flip lands, the home UI materializes around it: the focus-time card slides up from the bottom (translateY 40 -&gt; 0, spring ~320/20, ~400ms), the tab bar fades up (250ms, 100ms later), the &quot;0m&quot; counts a settle beat.
+- The background stays pure black splash-to-home - the transition is the logo&#x27;s, not the screen&#x27;s.
+- Total launch sequence under 1.4s; the logo never disappears between splash and home.
+
+## Calibration
+- The mirrored frames must read as mirrored type, not a blur - keep the spin crisp with perspective (~800px) so the 3D reads.
+- The logo&#x27;s home scale lands once - no secondary bounce after the flip completes.
+
+## Reduced motion
+Cross-fade the wordmark from small to home size (300ms); home UI fades in without slides.
+
+## Don&#x27;t miss
+- The purple orbit glyph stays glued to the wordmark through the flip - it does not lag or lead.
+- The &quot;0m&quot; empty state is the real home - no demo numbers on first launch.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">splash logo 3D flip with scale-up into the home reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flip-phone-splash-to-home-spin-animation">original interaction</a> by Flip. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Flip Phone's launch - the FLIP PHONE wordmark spins through a mirrored 3D flip on the black splash while scaling up, then the home screen fades and slides in around it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSplash: a black screen holding the small centered FLIP PHONE wordmark (white text with the purple orbit glyph). Home: a dark screen with the large FLIP PHONE wordmark at top, a \"Total focus time\" card reading \"0m\", and a bottom tab bar - all revealed around the logo's final position.\n\n## Motion spec\nPattern: splash logo 3D flip with scale-up into the home reveal.\n- The wordmark spins on its horizontal axis (rotateX 0 -> 360deg, 700ms, ease-in-out), passing through the mirrored/edge-on states - the \"flip\" is literal, text legibly upside down and mirrored mid-spin.\n- Through the spin the logo scales up (0.6 -> 1.8) toward its home position, the scale easing out as the rotation completes.\n- As the flip lands, the home UI materializes around it: the focus-time card slides up from the bottom (translateY 40 -> 0, spring ~320/20, ~400ms), the tab bar fades up (250ms, 100ms later), the \"0m\" counts a settle beat.\n- The background stays pure black splash-to-home - the transition is the logo's, not the screen's.\n- Total launch sequence under 1.4s; the logo never disappears between splash and home.\n\n## Calibration\n- The mirrored frames must read as mirrored type, not a blur - keep the spin crisp with perspective (~800px) so the 3D reads.\n- The logo's home scale lands once - no secondary bounce after the flip completes.\n\n## Reduced motion\nCross-fade the wordmark from small to home size (300ms); home UI fades in without slides.\n\n## Don't miss\n- The purple orbit glyph stays glued to the wordmark through the flip - it does not lag or lead.\n- The \"0m\" empty state is the real home - no demo numbers on first launch."</script>
+</body></html>

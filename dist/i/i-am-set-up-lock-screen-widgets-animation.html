@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I am Set Up Lock Screen Widgets Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>I am Set Up Lock Screen Widgets Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/i-am-set-up-lock-screen-widgets-animation"><b>I</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/i-am-set-up-lock-screen-widgets-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/i-am-set-up-lock-screen-widgets-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: I am&#x27;s Lock Screen widget setup - small widget cards fly onto a Lock Screen mock one after another with springy staggers, landing in their slots around the big clock.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6841ce930f8d7a05183ccdd8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6841ce930f8d7a05183ccdd8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-i-am-set-up-lock-screen-widgets-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: I am&#x27;s Lock Screen widget setup - small widget cards fly onto a Lock Screen mock one after another with springy staggers, landing in their slots around the big clock.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Onboarding screen: headline &quot;Get affirmations without unlocking your phone&quot;, subcopy &quot;Set up widgets to see them on your phone&#x27;s Lock Screen&quot;, a Lock Screen illustration (top widget slot reading &quot;Your affirmation&quot;, a large 9:41 clock), and a dark &quot;Got it!&quot; button. Small widget cards labeled &quot;Your affirmation will go here&quot; animate into the slot positions.
+
+## Motion spec
+Pattern: staggered spring landings on a Lock Screen mock.
+- The Lock Screen mock fades in and rises 20pt (400ms, ease-out).
+- The top widget card slides down from above the mock into the top slot (spring ~280/18, 500ms) - slight overshoot settling into place.
+- The bottom widget cards (two small rounded cards) fly in from the lower-left and lower-right (spring ~280/16, 60ms apart), each with a slight rotation (+-6deg) that settles to 0 on landing.
+- Each landing fires a tiny scale bounce on the target slot (1 -&gt; 1.05 -&gt; 1, 200ms) and a soft opacity flash.
+- The sequence loops with a 1.2s pause: cards dissolve (fade 300ms) and the mock resets for the next pass.
+
+## Calibration
+- Cards land exactly on the Lock Screen widget slots - the demo is instructional, alignment is the message.
+- Stagger timing is tight (60-100ms) so the cascade reads as one gesture, not separate events.
+
+## Reduced motion
+Cards fade into their slots (300ms) with no travel.
+
+## Don&#x27;t miss
+- The 9:41 clock and wallpaper stay static; only the widgets move.
+- Keep the cards legible during flight - no motion blur, no scaling below 0.6.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered spring landings on a Lock Screen mock.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/i-am-set-up-lock-screen-widgets-animation">original interaction</a> by I. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: I am's Lock Screen widget setup - small widget cards fly onto a Lock Screen mock one after another with springy staggers, landing in their slots around the big clock.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOnboarding screen: headline \"Get affirmations without unlocking your phone\", subcopy \"Set up widgets to see them on your phone's Lock Screen\", a Lock Screen illustration (top widget slot reading \"Your affirmation\", a large 9:41 clock), and a dark \"Got it!\" button. Small widget cards labeled \"Your affirmation will go here\" animate into the slot positions.\n\n## Motion spec\nPattern: staggered spring landings on a Lock Screen mock.\n- The Lock Screen mock fades in and rises 20pt (400ms, ease-out).\n- The top widget card slides down from above the mock into the top slot (spring ~280/18, 500ms) - slight overshoot settling into place.\n- The bottom widget cards (two small rounded cards) fly in from the lower-left and lower-right (spring ~280/16, 60ms apart), each with a slight rotation (+-6deg) that settles to 0 on landing.\n- Each landing fires a tiny scale bounce on the target slot (1 -> 1.05 -> 1, 200ms) and a soft opacity flash.\n- The sequence loops with a 1.2s pause: cards dissolve (fade 300ms) and the mock resets for the next pass.\n\n## Calibration\n- Cards land exactly on the Lock Screen widget slots - the demo is instructional, alignment is the message.\n- Stagger timing is tight (60-100ms) so the cascade reads as one gesture, not separate events.\n\n## Reduced motion\nCards fade into their slots (300ms) with no travel.\n\n## Don't miss\n- The 9:41 clock and wallpaper stay static; only the widgets move.\n- Keep the cards legible during flight - no motion blur, no scaling below 0.6."</script>
+</body></html>

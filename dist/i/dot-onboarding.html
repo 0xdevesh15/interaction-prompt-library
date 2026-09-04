@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dot Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Dot Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/dot-onboarding"><b>Dot</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dot-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dot-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Dot&#x27;s onboarding handoff - the letter card shrinks, rotates, and vanishes as the screen sinks to black, where two pills orbit each other while &quot;Dot is reflecting on your letter...&quot;</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd0f371d29849d7bdaf4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd0f371d29849d7bdaf4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-dot-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Dot&#x27;s onboarding handoff - the letter card shrinks, rotates, and vanishes as the screen sinks to black, where two pills orbit each other while &quot;Dot is reflecting on your letter...&quot;
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The final onboarding page (&quot;One more thing&quot;, a white letter card over a pink gradient background, &quot;Start your journey&quot; button). On commit, the card shrinks away, the screen goes black, and a loading state shows two small rounded pills rotating around a shared center under the caption &quot;Dot is reflecting on your letter...&quot;, before fading to the next (light) screen.
+
+## Motion spec
+Pattern: shrink-away transition + orbiting-pill loader.
+- Exit (0-600ms): the letter card scales 1 to 0.1 while rotating 15deg and drifting up-right (500ms, ease-in), fading out in the last 150ms; simultaneously the pink gradient darkens to black (600ms) and the title/button fade first (250ms).
+- Loader (600ms+): two pills (one cream, one dusty pink, ~24x10px) orbit a shared center 180deg apart (1 revolution per 1.4s, linear) while each also tumbles (rotating to stay tangent to the orbit); they periodically pass close, stretching slightly toward each other (scaleX 1 to 1.15 at closest approach).
+- The caption &quot;Dot is reflecting on your letter...&quot; fades in 200ms after the loader starts and idles with a soft opacity pulse (0.7 to 1, 1.8s).
+- Exit: pills spiral inward to a point (400ms, accelerating) and the whole screen crossfades to the light next screen (400ms).
+
+## Calibration
+- The orbit is hypnotic, not frantic: keep revolutions &gt;= 1.2s.
+- The two pills are never identical in color - the pairing is the brand mark.
+
+## Reduced motion
+Card fades out; loader is two static pills with a pulsing caption.
+
+## Don&#x27;t miss
+- The card&#x27;s rotation during shrink gives the exit its personality - a straight scale-down is wrong.
+- Background goes fully black for the reflecting state; the pink is gone.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shrink-away transition + orbiting-pill loader.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/dot-onboarding">original interaction</a> by Dot. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Dot's onboarding handoff - the letter card shrinks, rotates, and vanishes as the screen sinks to black, where two pills orbit each other while \"Dot is reflecting on your letter...\"\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe final onboarding page (\"One more thing\", a white letter card over a pink gradient background, \"Start your journey\" button). On commit, the card shrinks away, the screen goes black, and a loading state shows two small rounded pills rotating around a shared center under the caption \"Dot is reflecting on your letter...\", before fading to the next (light) screen.\n\n## Motion spec\nPattern: shrink-away transition + orbiting-pill loader.\n- Exit (0-600ms): the letter card scales 1 to 0.1 while rotating 15deg and drifting up-right (500ms, ease-in), fading out in the last 150ms; simultaneously the pink gradient darkens to black (600ms) and the title/button fade first (250ms).\n- Loader (600ms+): two pills (one cream, one dusty pink, ~24x10px) orbit a shared center 180deg apart (1 revolution per 1.4s, linear) while each also tumbles (rotating to stay tangent to the orbit); they periodically pass close, stretching slightly toward each other (scaleX 1 to 1.15 at closest approach).\n- The caption \"Dot is reflecting on your letter...\" fades in 200ms after the loader starts and idles with a soft opacity pulse (0.7 to 1, 1.8s).\n- Exit: pills spiral inward to a point (400ms, accelerating) and the whole screen crossfades to the light next screen (400ms).\n\n## Calibration\n- The orbit is hypnotic, not frantic: keep revolutions >= 1.2s.\n- The two pills are never identical in color - the pairing is the brand mark.\n\n## Reduced motion\nCard fades out; loader is two static pills with a pulsing caption.\n\n## Don't miss\n- The card's rotation during shrink gives the exit its personality - a straight scale-down is wrong.\n- Background goes fully black for the reflecting state; the pink is gone."</script>
+</body></html>

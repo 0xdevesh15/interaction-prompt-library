@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amie Calendar View Picker Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Amie Calendar View Picker Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/amie-calendar-view-picker-sheet"><b>Amie</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/amie-calendar-view-picker-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/amie-calendar-view-picker-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Amie&#x27;s view-picker sheet - a dark bottom sheet rises over the calendar with a &quot;Choose view&quot; section showing Daily and Weekly preview thumbnails; tapping one highlights it with a blue outline and the sheet collapses, the calendar behind switching views.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56cd7652c129409801e68/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56cd7652c129409801e68/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-amie-calendar-view-picker-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Amie&#x27;s view-picker sheet - a dark bottom sheet rises over the calendar with a &quot;Choose view&quot; section showing Daily and Weekly preview thumbnails; tapping one highlights it with a blue outline and the sheet collapses, the calendar behind switching views.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark calendar app. The sheet: &quot;Show calendars&quot; section (&quot;You&#x27;re not following any contacts yet&quot;, a + button) and &quot;Choose view&quot; with two miniature calendar previews - a wide Daily strip and a dense Weekly grid - each captioned below.
+
+## Motion spec
+Pattern: thumbnail-picker sheet with instant apply.
+- Entry: the sheet springs up (spring ~330/22, slight overshoot) covering ~60% of the screen; the calendar behind dims 45% and pushes up slightly (scale 0.98).
+- The two thumbnails stagger in (fade + 10px rise, 200ms, 80ms apart).
+- Tap a thumbnail: its border ignites blue with a soft outer glow (200ms), the thumbnail does a tiny press dip (scale 0.97, 120ms), and after a 150ms beat the sheet slides back down (spring ~340/24) while the calendar behind crossfades to the chosen layout (250ms).
+- The selection persists - reopening the sheet shows the current view already outlined.
+- Backdrop tap or drag-down dismisses without changing the view (sheet tracks the drag 1:1).
+
+## Calibration
+- The previews are miniature but REAL layouts - colored event blocks in each, not gray wireframes.
+- Apply-on-tap, no confirm button - the sheet&#x27;s job is one tap.
+
+## Reduced motion
+Sheet fades; view crossfades.
+
+## Don&#x27;t miss
+- The blue outline is the only selection chrome - no checkmarks or radios.
+- The calendar morphs behind the closing sheet, so the change reads as a consequence, not a coincidence.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">thumbnail-picker sheet with instant apply.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/amie-calendar-view-picker-sheet">original interaction</a> by Amie. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Amie's view-picker sheet - a dark bottom sheet rises over the calendar with a \"Choose view\" section showing Daily and Weekly preview thumbnails; tapping one highlights it with a blue outline and the sheet collapses, the calendar behind switching views.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark calendar app. The sheet: \"Show calendars\" section (\"You're not following any contacts yet\", a + button) and \"Choose view\" with two miniature calendar previews - a wide Daily strip and a dense Weekly grid - each captioned below.\n\n## Motion spec\nPattern: thumbnail-picker sheet with instant apply.\n- Entry: the sheet springs up (spring ~330/22, slight overshoot) covering ~60% of the screen; the calendar behind dims 45% and pushes up slightly (scale 0.98).\n- The two thumbnails stagger in (fade + 10px rise, 200ms, 80ms apart).\n- Tap a thumbnail: its border ignites blue with a soft outer glow (200ms), the thumbnail does a tiny press dip (scale 0.97, 120ms), and after a 150ms beat the sheet slides back down (spring ~340/24) while the calendar behind crossfades to the chosen layout (250ms).\n- The selection persists - reopening the sheet shows the current view already outlined.\n- Backdrop tap or drag-down dismisses without changing the view (sheet tracks the drag 1:1).\n\n## Calibration\n- The previews are miniature but REAL layouts - colored event blocks in each, not gray wireframes.\n- Apply-on-tap, no confirm button - the sheet's job is one tap.\n\n## Reduced motion\nSheet fades; view crossfades.\n\n## Don't miss\n- The blue outline is the only selection chrome - no checkmarks or radios.\n- The calendar morphs behind the closing sheet, so the change reads as a consequence, not a coincidence."</script>
+</body></html>

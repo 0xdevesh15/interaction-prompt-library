@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avec How to Card Left Right Wrong Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Avec How to Card Left Right Wrong Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/avec-how-to-card-left-right-wrong-swipe-interaction"><b>Avec</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/avec-how-to-card-left-right-wrong-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/avec-how-to-card-left-right-wrong-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Avec&#x27;s swipe tutorial - an onboarding email card teaches left/right actions; a wrong-direction swipe pulls a red &quot;The other way!&quot; warning card over the screen, and a correct swipe flicks the card away with rotation.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a119742a2314e1a9986374e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a119742a2314e1a9986374e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-avec-how-to-card-left-right-wrong-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Avec&#x27;s swipe tutorial - an onboarding email card teaches left/right actions; a wrong-direction swipe pulls a red &quot;The other way!&quot; warning card over the screen, and a correct swipe flicks the card away with rotation.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;How to use Avec&quot; sheet: an email card center (&quot;Later - If you aren&#x27;t ready to handle an email now, mark it Later&quot;) with a hint line and two action pills (Later, Done) below, over a faint inbox backdrop. Later steps reveal a detail card (&quot;When you mark an email as done&quot; with Archive / Keep in inbox options).
+
+## Motion spec
+Pattern: tutorial card swipe with a wrong-way warning overlay.
+- Drag moves the card 1:1 with slight rotateZ (up to +/- 8 degrees).
+- Swiping the wrong way: a full red card slides in from the drag side (&quot;The other way!&quot; with a redirect arrow, spring ~300/16), holds 900ms, then slides back out - the email card never leaves.
+- Swiping the right way: the card flicks off with spin (rotate to +/- 20 degrees as it exits, 300ms, velocity-inherited) and the next card slides up from behind (scale 0.95 -&gt; 1, translate 16px -&gt; 0, 250ms).
+- Action pills highlight on approach (fill tween, 150ms) as the card crosses their threshold.
+
+## Calibration
+- The warning is cheeky, not punishing: fast in, patient hold, clean exit.
+- The card&#x27;s rotation pivot sits at the bottom corner opposite the swipe.
+
+## Reduced motion
+Warning fades in/out (200ms); cards slide without spin.
+
+## Don&#x27;t miss
+- The red card covers the stage fully - it is a card, not a toast.
+- After the final card, the sheet settles on the detail view with a gentle fade-up.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tutorial card swipe with a wrong-way warning overlay.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/avec-how-to-card-left-right-wrong-swipe-interaction">original interaction</a> by Avec. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Avec's swipe tutorial - an onboarding email card teaches left/right actions; a wrong-direction swipe pulls a red \"The other way!\" warning card over the screen, and a correct swipe flicks the card away with rotation.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"How to use Avec\" sheet: an email card center (\"Later - If you aren't ready to handle an email now, mark it Later\") with a hint line and two action pills (Later, Done) below, over a faint inbox backdrop. Later steps reveal a detail card (\"When you mark an email as done\" with Archive / Keep in inbox options).\n\n## Motion spec\nPattern: tutorial card swipe with a wrong-way warning overlay.\n- Drag moves the card 1:1 with slight rotateZ (up to +/- 8 degrees).\n- Swiping the wrong way: a full red card slides in from the drag side (\"The other way!\" with a redirect arrow, spring ~300/16), holds 900ms, then slides back out - the email card never leaves.\n- Swiping the right way: the card flicks off with spin (rotate to +/- 20 degrees as it exits, 300ms, velocity-inherited) and the next card slides up from behind (scale 0.95 -> 1, translate 16px -> 0, 250ms).\n- Action pills highlight on approach (fill tween, 150ms) as the card crosses their threshold.\n\n## Calibration\n- The warning is cheeky, not punishing: fast in, patient hold, clean exit.\n- The card's rotation pivot sits at the bottom corner opposite the swipe.\n\n## Reduced motion\nWarning fades in/out (200ms); cards slide without spin.\n\n## Don't miss\n- The red card covers the stage fully - it is a card, not a toast.\n- After the final card, the sheet settles on the detail view with a gentle fade-up."</script>
+</body></html>

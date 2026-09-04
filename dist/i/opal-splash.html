@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opal Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Opal Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opal-splash"><b>Opal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Opal&#x27;s splash - on black, a small white ring appears, circular brand text draws on around it (&quot;THE FOCUS JOURNEY...&quot;), the emblem holds and then page-curls away into the main dashboard with its glowing gem and Block Now button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554f18e315822e1d8ee7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554f18e315822e1d8ee7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opal-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Opal&#x27;s splash - on black, a small white ring appears, circular brand text draws on around it (&quot;THE FOCUS JOURNEY...&quot;), the emblem holds and then page-curls away into the main dashboard with its glowing gem and Block Now button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pure black splash with the white Opal emblem at center: a small ring, then a laurel of circular text around it (&quot;THE FOCUS JOURNEY&quot; repeated around the circumference). Destination: the Opal home dashboard (glowing gem, &quot;59m 31s&quot; timer, stats bars, green Block Now button).
+
+## Motion spec
+Pattern: staged emblem build + page-curl exit.
+- The center ring draws on (stroke sweep 0 -&gt; 360deg, 300ms, ease-out).
+- The circular text ring materializes around it: characters fade in sequence clockwise (over ~600ms) while the ring scales 0.85 -&gt; 1 (spring ~300/20).
+- The emblem holds ~600ms with a faint slow rotation of the text ring (~20s per revolution).
+- Exit: the splash peels away with a page-curl from the bottom-right corner - the black page curls up like paper, revealing the dashboard beneath as the curl travels across the screen (~500ms, ease-in-out), with a soft shadow on the curl&#x27;s underside.
+- The dashboard is fully live the moment the curl completes.
+
+## Calibration
+- Total splash is ~1.5-2s - brand beat, not a loading wall.
+- The curl follows a fixed corner path; it is not finger-driven.
+
+## Reduced motion
+Splash crossfades to the dashboard, no curl.
+
+## Don&#x27;t miss
+- The circular text is real type on a circle path, with small laurel marks flanking the bottom.
+- The curl reveals the actual dashboard (fully rendered), not a placeholder.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staged emblem build + page-curl exit.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opal-splash">original interaction</a> by Opal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Opal's splash - on black, a small white ring appears, circular brand text draws on around it (\"THE FOCUS JOURNEY...\"), the emblem holds and then page-curls away into the main dashboard with its glowing gem and Block Now button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPure black splash with the white Opal emblem at center: a small ring, then a laurel of circular text around it (\"THE FOCUS JOURNEY\" repeated around the circumference). Destination: the Opal home dashboard (glowing gem, \"59m 31s\" timer, stats bars, green Block Now button).\n\n## Motion spec\nPattern: staged emblem build + page-curl exit.\n- The center ring draws on (stroke sweep 0 -> 360deg, 300ms, ease-out).\n- The circular text ring materializes around it: characters fade in sequence clockwise (over ~600ms) while the ring scales 0.85 -> 1 (spring ~300/20).\n- The emblem holds ~600ms with a faint slow rotation of the text ring (~20s per revolution).\n- Exit: the splash peels away with a page-curl from the bottom-right corner - the black page curls up like paper, revealing the dashboard beneath as the curl travels across the screen (~500ms, ease-in-out), with a soft shadow on the curl's underside.\n- The dashboard is fully live the moment the curl completes.\n\n## Calibration\n- Total splash is ~1.5-2s - brand beat, not a loading wall.\n- The curl follows a fixed corner path; it is not finger-driven.\n\n## Reduced motion\nSplash crossfades to the dashboard, no curl.\n\n## Don't miss\n- The circular text is real type on a circle path, with small laurel marks flanking the bottom.\n- The curl reveals the actual dashboard (fully rendered), not a placeholder."</script>
+</body></html>

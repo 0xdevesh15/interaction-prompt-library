@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Fitness Activity on Phone - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Fitness Activity on Phone</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-fitness-activity-on-phone"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-fitness-activity-on-phone">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-fitness-activity-on-phone">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Fitness workout metrics pager - horizontal swipes move between live metric layouts (heart rate stack, heart-rate zone bars, pace/elevation, elevation graph, speed ring, activity rings) with a springy snap, while the workout timer and control buttons stay pinned at the bottom.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9b2e962df2301435f5c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9b2e962df2301435f5c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-fitness-activity-on-phone.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Fitness workout metrics pager - horizontal swipes move between live metric layouts (heart rate stack, heart-rate zone bars, pace/elevation, elevation graph, speed ring, activity rings) with a springy snap, while the workout timer and control buttons stay pinned at the bottom.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black full-screen workout view. Large monospaced metric stack (heart rate &quot;130&quot; with red heart glyph, average speed &quot;5.2 KM/H&quot;, elevation &quot;11 M&quot;, distance &quot;15.06 KM&quot;), page dots, a green-accent elapsed timer (&quot;02:52:21&quot;) flanked by small ring icons, and a bottom row of three circular controls (water lock, pause, chevron). Alternate pages: heart-rate-zone bar chart, big pace/time stack, green elevation graph, gray speed ring, activity-rings summary.
+
+## Motion spec
+Pattern: horizontal paging between live metric layouts.
+- Swipe moves pages 1:1 with the finger; adjacent page edges are visible during the drag.
+- Release snaps to the nearest page (spring ~280/24, ~350ms, slight overshoot under 2%).
+- Page dots update on settle; the active dot expands (width 6px -&gt; 16px pill, 200ms).
+- Live values (heart rate, timer) tick on every page; the bottom control row and timer strip never participate in the page motion.
+
+## Calibration
+- The spring has a gentle, physical settle - no bounce beyond ~2% overshoot.
+- Pinned chrome (timer, controls) is the anchor: it must not translate or fade during swipes.
+
+## Reduced motion
+Crossfade between pages (200ms) on swipe, dots update without the width animation.
+
+## Don&#x27;t miss
+- Each metrics page keeps its own typography scale: the primary value is ~3x the secondary values.
+- The timer strip uses a green clock icon and monospaced digits that never reflow as seconds tick.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal paging between live metric layouts.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-fitness-activity-on-phone">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Fitness workout metrics pager - horizontal swipes move between live metric layouts (heart rate stack, heart-rate zone bars, pace/elevation, elevation graph, speed ring, activity rings) with a springy snap, while the workout timer and control buttons stay pinned at the bottom.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack full-screen workout view. Large monospaced metric stack (heart rate \"130\" with red heart glyph, average speed \"5.2 KM/H\", elevation \"11 M\", distance \"15.06 KM\"), page dots, a green-accent elapsed timer (\"02:52:21\") flanked by small ring icons, and a bottom row of three circular controls (water lock, pause, chevron). Alternate pages: heart-rate-zone bar chart, big pace/time stack, green elevation graph, gray speed ring, activity-rings summary.\n\n## Motion spec\nPattern: horizontal paging between live metric layouts.\n- Swipe moves pages 1:1 with the finger; adjacent page edges are visible during the drag.\n- Release snaps to the nearest page (spring ~280/24, ~350ms, slight overshoot under 2%).\n- Page dots update on settle; the active dot expands (width 6px -> 16px pill, 200ms).\n- Live values (heart rate, timer) tick on every page; the bottom control row and timer strip never participate in the page motion.\n\n## Calibration\n- The spring has a gentle, physical settle - no bounce beyond ~2% overshoot.\n- Pinned chrome (timer, controls) is the anchor: it must not translate or fade during swipes.\n\n## Reduced motion\nCrossfade between pages (200ms) on swipe, dots update without the width animation.\n\n## Don't miss\n- Each metrics page keeps its own typography scale: the primary value is ~3x the secondary values.\n- The timer strip uses a green clock icon and monospaced digits that never reflow as seconds tick."</script>
+</body></html>

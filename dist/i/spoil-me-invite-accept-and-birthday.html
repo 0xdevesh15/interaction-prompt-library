@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spoil Me Invite Accept and Birthday - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spoil Me Invite Accept and Birthday</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spoil-me-invite-accept-and-birthday"><b>Spoil Me</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spoil-me-invite-accept-and-birthday">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spoil-me-invite-accept-and-birthday">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Spoil Me&#x27;s invite onboarding - an elegant cream invite card (&quot;Congrats! @mog invited you to join Spoil.me&quot;) whose buttons fade on Accept, transitioning to a birthday picker with a springy confirm.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cbecbe06bd6fa02547/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cbecbe06bd6fa02547/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spoil-me-invite-accept-and-birthday.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Spoil Me&#x27;s invite onboarding - an elegant cream invite card (&quot;Congrats! @mog invited you to join Spoil.me&quot;) whose buttons fade on Accept, transitioning to a birthday picker with a springy confirm.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Warm cream screens in a serif face. Screen 1: &quot;Congrats!&quot; headline, inviter handle (&quot;@mog&quot;), &quot;invited you to join Spoil.me&quot;, with Dismiss and Accept pill buttons. Screen 2: a small party-hat glyph, &quot;When&#x27;s your birthday?&quot;, subline (&quot;We and your fans would love to send you birthday gifts!&quot;), day / month / year selector chips (14 / Aug / 1999), a Confirm pill, and a &quot;Your age is always private&quot; footnote.
+
+## Motion spec
+Pattern: soft crossfade flow with springy confirmations.
+- Tap Accept: the button row fades and slides down (200ms) as the whole invite block lifts and crossfades to the birthday screen (350ms, ease-out).
+- The birthday screen elements stagger in: hat glyph pops (scale 0.8 to 1.0, spring ~300/20), then headline, subline, chips, Confirm (60ms apart).
+- Tapping a chip opens its picker; the chosen value settles into the chip with a small bounce (spring ~400/22).
+- Tap Confirm: the button compresses (scale 0.96, 100ms) and releases, then the screen crossfades onward; the private-age footnote fades in last on the birthday screen (300ms delay).
+
+## Calibration
+- Everything is gentle: no hard cuts, no fast slams - this product sells warmth.
+- Chips are light beige with dark text; the Confirm pill is the only solid dark element.
+
+## Reduced motion
+Screens crossfade; chips update without bounce.
+
+## Don&#x27;t miss
+- The serif headline does the brand work - keep it large and loosely tracked.
+- The invite and birthday screens share the same centered composition so the crossfade reads as a continuation.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">soft crossfade flow with springy confirmations.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spoil-me-invite-accept-and-birthday">original interaction</a> by Spoil Me. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Spoil Me's invite onboarding - an elegant cream invite card (\"Congrats! @mog invited you to join Spoil.me\") whose buttons fade on Accept, transitioning to a birthday picker with a springy confirm.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWarm cream screens in a serif face. Screen 1: \"Congrats!\" headline, inviter handle (\"@mog\"), \"invited you to join Spoil.me\", with Dismiss and Accept pill buttons. Screen 2: a small party-hat glyph, \"When's your birthday?\", subline (\"We and your fans would love to send you birthday gifts!\"), day / month / year selector chips (14 / Aug / 1999), a Confirm pill, and a \"Your age is always private\" footnote.\n\n## Motion spec\nPattern: soft crossfade flow with springy confirmations.\n- Tap Accept: the button row fades and slides down (200ms) as the whole invite block lifts and crossfades to the birthday screen (350ms, ease-out).\n- The birthday screen elements stagger in: hat glyph pops (scale 0.8 to 1.0, spring ~300/20), then headline, subline, chips, Confirm (60ms apart).\n- Tapping a chip opens its picker; the chosen value settles into the chip with a small bounce (spring ~400/22).\n- Tap Confirm: the button compresses (scale 0.96, 100ms) and releases, then the screen crossfades onward; the private-age footnote fades in last on the birthday screen (300ms delay).\n\n## Calibration\n- Everything is gentle: no hard cuts, no fast slams - this product sells warmth.\n- Chips are light beige with dark text; the Confirm pill is the only solid dark element.\n\n## Reduced motion\nScreens crossfade; chips update without bounce.\n\n## Don't miss\n- The serif headline does the brand work - keep it large and loosely tracked.\n- The invite and birthday screens share the same centered composition so the crossfade reads as a continuation."</script>
+</body></html>

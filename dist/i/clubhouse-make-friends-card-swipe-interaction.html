@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clubhouse Make Friends Card Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Clubhouse Make Friends Card Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/clubhouse-make-friends-card-swipe-interaction"><b>Clubhouse</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clubhouse-make-friends-card-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clubhouse-make-friends-card-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Clubhouse&#x27;s &quot;make friends&quot; card stack - tapping the &quot;not now&quot; or &quot;add&quot; buttons sends the top profile card flying off with a springy rotation and a giant &quot;nah&quot; or &quot;add&quot; text stamp, revealing the next card underneath.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/672117867a536581868d420b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/672117867a536581868d420b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-clubhouse-make-friends-card-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Clubhouse&#x27;s &quot;make friends&quot; card stack - tapping the &quot;not now&quot; or &quot;add&quot; buttons sends the top profile card flying off with a springy rotation and a giant &quot;nah&quot; or &quot;add&quot; text stamp, revealing the next card underneath.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream &quot;make friends&quot; screen (subtitle &quot;add interesting people to bring your hallway to life&quot;). Center: a stack of profile cards (photo, name, handle, club line) with two circular buttons below: &quot;not now&quot; (pink) and &quot;add&quot; (blue). Tab bar at the bottom.
+
+## Motion spec
+Pattern: button-driven card swipe with verdict stamp.
+- Tap &quot;not now&quot;: the card tilts and flies off to the left, rotating ~-20deg while translating past the screen edge (~400ms, ease-in); a bold &quot;nah&quot; stamp scales in on the card mid-flight (scale 0.5 -&gt; 1.2 -&gt; 1.0, spring ~320/16) and fades near the edge.
+- Tap &quot;add&quot;: identical motion mirrored to the right with a blue &quot;add&quot; stamp.
+- Next card: starts slightly smaller and lower (~0.95 scale), springs up to full size and position (~380/20, ~400ms) as the top card leaves.
+- Stamps use heavy rounded type rotated with the card; they ride the card, not the screen.
+
+## Calibration
+- The exit rotation continues past release - the card spins as it leaves, not a flat slide.
+- Stamp appears only after the card starts moving, as a verdict on the action.
+
+## Reduced motion
+Card fades out sideways (200ms) with the stamp crossfading in place; next card fades up.
+
+## Don&#x27;t miss
+- Buttons are the trigger; the card flight mirrors a drag-flick but is fully choreographed.
+- The stamp text is oversized relative to the card - it should feel like a rubber-stamp verdict.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">button-driven card swipe with verdict stamp.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/clubhouse-make-friends-card-swipe-interaction">original interaction</a> by Clubhouse. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Clubhouse's \"make friends\" card stack - tapping the \"not now\" or \"add\" buttons sends the top profile card flying off with a springy rotation and a giant \"nah\" or \"add\" text stamp, revealing the next card underneath.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream \"make friends\" screen (subtitle \"add interesting people to bring your hallway to life\"). Center: a stack of profile cards (photo, name, handle, club line) with two circular buttons below: \"not now\" (pink) and \"add\" (blue). Tab bar at the bottom.\n\n## Motion spec\nPattern: button-driven card swipe with verdict stamp.\n- Tap \"not now\": the card tilts and flies off to the left, rotating ~-20deg while translating past the screen edge (~400ms, ease-in); a bold \"nah\" stamp scales in on the card mid-flight (scale 0.5 -> 1.2 -> 1.0, spring ~320/16) and fades near the edge.\n- Tap \"add\": identical motion mirrored to the right with a blue \"add\" stamp.\n- Next card: starts slightly smaller and lower (~0.95 scale), springs up to full size and position (~380/20, ~400ms) as the top card leaves.\n- Stamps use heavy rounded type rotated with the card; they ride the card, not the screen.\n\n## Calibration\n- The exit rotation continues past release - the card spins as it leaves, not a flat slide.\n- Stamp appears only after the card starts moving, as a verdict on the action.\n\n## Reduced motion\nCard fades out sideways (200ms) with the stamp crossfading in place; next card fades up.\n\n## Don't miss\n- Buttons are the trigger; the card flight mirrors a drag-flick but is fully choreographed.\n- The stamp text is oversized relative to the card - it should feel like a rubber-stamp verdict."</script>
+</body></html>

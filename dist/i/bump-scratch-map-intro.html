@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bump Scratch Map Intro - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bump Scratch Map Intro</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bump-scratch-map-intro"><b>Bump</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bump-scratch-map-intro">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bump-scratch-map-intro">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Bump&#x27;s scratch-map intro - a marker with a rainbow trail scratches a winding path across a purple-tinted city map, then the camera zooms out in stages from street level to the whole Earth, ending in a bold SCRATCH MAP title slam.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be46cb131e88d4acae1d8d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be46cb131e88d4acae1d8d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bump-scratch-map-intro.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Bump&#x27;s scratch-map intro - a marker with a rainbow trail scratches a winding path across a purple-tinted city map, then the camera zooms out in stages from street level to the whole Earth, ending in a bold SCRATCH MAP title slam.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A stylized map tinted deep purple with lighter roads and orange POI dots. A glowing arrowhead marker drags a rainbow ribbon trail, scratching a zigzag path through the streets (the scratched segment turns pale). As the camera zooms out, the map darkens into a blue Earth against black space, the scratched region glowing green. The sequence ends with &quot;SCRATCH MAP&quot; in heavy white block type over the globe.
+
+## Motion spec
+Pattern: multi-stage zoom-out from street scratch to global reveal.
+- The marker dashes along its zigzag path (~1s), the rainbow trail and pale scratched segment drawing behind it with a slight glow pulse.
+- First zoom: street level to city (exponential scale, ~600ms, ease-in) - the scratch path shrinks to a glowing squiggle.
+- Second zoom: city to continent to full Earth (~900ms, ease-in accelerating), the map flattening into a blue globe on black; the scratched area becomes a bright green patch.
+- Title slam: &quot;SCRATCH MAP&quot; scales from ~1.4 to 1.0 and lands over the globe (spring stiffness ~300, damping ~18) as the globe&#x27;s drift settles.
+
+## Calibration
+- Zooms accelerate (ease-in, never linear) - constant speed reads as a map pinch, not a launch.
+- Each stage should land just long enough to register before the next zoom (~200ms hold).
+
+## Reduced motion
+Cut directly from the scratched street view to the globe with the title fading in (300ms).
+
+## Don&#x27;t miss
+- The rainbow trail is the brand moment - saturated, glowing, and erased into a pale scratch behind the marker.
+- The title is huge, white, and slightly condensed; it owns the final frame.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">multi-stage zoom-out from street scratch to global reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bump-scratch-map-intro">original interaction</a> by Bump. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Bump's scratch-map intro - a marker with a rainbow trail scratches a winding path across a purple-tinted city map, then the camera zooms out in stages from street level to the whole Earth, ending in a bold SCRATCH MAP title slam.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA stylized map tinted deep purple with lighter roads and orange POI dots. A glowing arrowhead marker drags a rainbow ribbon trail, scratching a zigzag path through the streets (the scratched segment turns pale). As the camera zooms out, the map darkens into a blue Earth against black space, the scratched region glowing green. The sequence ends with \"SCRATCH MAP\" in heavy white block type over the globe.\n\n## Motion spec\nPattern: multi-stage zoom-out from street scratch to global reveal.\n- The marker dashes along its zigzag path (~1s), the rainbow trail and pale scratched segment drawing behind it with a slight glow pulse.\n- First zoom: street level to city (exponential scale, ~600ms, ease-in) - the scratch path shrinks to a glowing squiggle.\n- Second zoom: city to continent to full Earth (~900ms, ease-in accelerating), the map flattening into a blue globe on black; the scratched area becomes a bright green patch.\n- Title slam: \"SCRATCH MAP\" scales from ~1.4 to 1.0 and lands over the globe (spring stiffness ~300, damping ~18) as the globe's drift settles.\n\n## Calibration\n- Zooms accelerate (ease-in, never linear) - constant speed reads as a map pinch, not a launch.\n- Each stage should land just long enough to register before the next zoom (~200ms hold).\n\n## Reduced motion\nCut directly from the scratched street view to the globe with the title fading in (300ms).\n\n## Don't miss\n- The rainbow trail is the brand moment - saturated, glowing, and erased into a pale scratch behind the marker.\n- The title is huge, white, and slightly condensed; it owns the final frame."</script>
+</body></html>

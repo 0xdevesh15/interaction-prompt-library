@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OK Video Timer Action - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>OK Video Timer Action</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ok-video-timer-action"><b>Ok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ok-video-timer-action">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ok-video-timer-action">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: OK Video&#x27;s self-timer - tapping the timer chip row arms a countdown where giant numerals (3, 2, 1) appear center-screen with a depleting circular ring while all controls fade out, then recording starts with a pulsing red border.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c8690f02fa2363eacff09b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c8690f02fa2363eacff09b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ok-video-timer-action.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: OK Video&#x27;s self-timer - tapping the timer chip row arms a countdown where giant numerals (3, 2, 1) appear center-screen with a depleting circular ring while all controls fade out, then recording starts with a pulsing red border.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen camera viewfinder (gym bench scene). Bottom control bar (play, timer, flip, flash icons); a timer preset row (&quot;1s 3s 5s 10s&quot; chips) appears above it when the timer icon is tapped.
+
+## Motion spec
+Pattern: armed countdown with border-pulse recording state.
+- Tap a preset: the chip row collapses upward (200ms), the bottom controls and top icons fade out (250ms) leaving a clean viewfinder.
+- The countdown: &quot;3&quot; appears at 2x size and settles to 1x (spring ~280/20), a thin circular ring around it depleting clockwise over its 1s; &quot;2&quot; and &quot;1&quot; repeat identically, each replacing the last (150ms crossfade).
+- Between numerals the screen flashes the faintest white tick (opacity 0.06, 80ms) - a metronome you feel more than see.
+- Recording starts: the viewfinder gains a red border (6px inset stroke) that pulses (opacity 1 -&gt; 0.55 -&gt; 1, 1.2s sine), and the controls fade back in with red accents.
+
+## Calibration
+- Numerals are huge (~30% of screen height), white, medium weight - readable across the room.
+- The ring depletion is linear, synced exactly to the numeral&#x27;s second.
+
+## Reduced motion
+Numerals crossfade; border stays solid red.
+
+## Don&#x27;t miss
+- Every non-essential control disappears during countdown - the subject is the only UI.
+- The red border is the ONLY recording indicator at first - no record button press required after countdown.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">armed countdown with border-pulse recording state.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ok-video-timer-action">original interaction</a> by Ok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: OK Video's self-timer - tapping the timer chip row arms a countdown where giant numerals (3, 2, 1) appear center-screen with a depleting circular ring while all controls fade out, then recording starts with a pulsing red border.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen camera viewfinder (gym bench scene). Bottom control bar (play, timer, flip, flash icons); a timer preset row (\"1s 3s 5s 10s\" chips) appears above it when the timer icon is tapped.\n\n## Motion spec\nPattern: armed countdown with border-pulse recording state.\n- Tap a preset: the chip row collapses upward (200ms), the bottom controls and top icons fade out (250ms) leaving a clean viewfinder.\n- The countdown: \"3\" appears at 2x size and settles to 1x (spring ~280/20), a thin circular ring around it depleting clockwise over its 1s; \"2\" and \"1\" repeat identically, each replacing the last (150ms crossfade).\n- Between numerals the screen flashes the faintest white tick (opacity 0.06, 80ms) - a metronome you feel more than see.\n- Recording starts: the viewfinder gains a red border (6px inset stroke) that pulses (opacity 1 -> 0.55 -> 1, 1.2s sine), and the controls fade back in with red accents.\n\n## Calibration\n- Numerals are huge (~30% of screen height), white, medium weight - readable across the room.\n- The ring depletion is linear, synced exactly to the numeral's second.\n\n## Reduced motion\nNumerals crossfade; border stays solid red.\n\n## Don't miss\n- Every non-essential control disappears during countdown - the subject is the only UI.\n- The red border is the ONLY recording indicator at first - no record button press required after countdown."</script>
+</body></html>

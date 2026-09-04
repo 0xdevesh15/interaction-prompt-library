@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creme Scroll Recipe Steps Morph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Creme Scroll Recipe Steps Morph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/creme-scroll-recipe-steps-morph"><b>Creme</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/creme-scroll-recipe-steps-morph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/creme-scroll-recipe-steps-morph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Creme&#x27;s scroll-morphing step player - scrolling the dark recipe steps list drags a small video player between sections: it morphs size and position to dock beside whichever step is active, expanding for steps with video and tucking away for those without.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d434a84efec12c55a49301/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d434a84efec12c55a49301/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-creme-scroll-recipe-steps-morph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Creme&#x27;s scroll-morphing step player - scrolling the dark recipe steps list drags a small video player between sections: it morphs size and position to dock beside whichever step is active, expanding for steps with video and tucking away for those without.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark recipe page: section headers (&quot;Preparing the potatoes&quot;, &quot;Making the mayonnaise&quot;, &quot;Preparing the potato aioli&quot;, &quot;Assembling the garlic bread&quot;, &quot;Finishing the dish&quot;) with rounded step rows; a compact video player (hands whisking) appears embedded at the active step; the flow ends at &quot;Finishing the dish&quot; with a Next steps card and an orange &quot;Ask anything&quot; assistant card.
+
+## Motion spec
+Pattern: scroll-driven docking player.
+- Scroll: as a new step row enters the focus zone, the player detaches from the old step and glides to the new one (spring ~300/24), resizing to that step&#x27;s slot (full-width embed -&gt; compact corner) with matching corner-radius interpolation.
+- Steps without video collapse the player to a slim pill that sticks to the section header; steps with video re-expand it (spring ~280/22).
+- The player&#x27;s content crossfades to the new step&#x27;s clip (250ms) mid-flight.
+- Reaching &quot;Finishing the dish&quot;: the player docks away entirely and the Next steps + orange &quot;Ask anything&quot; cards rise in (stagger 120ms, spring ~320/26).
+
+## Calibration
+- The player is one continuous surface - scroll position drives its target slot, springs do the travel.
+- Scroll stays fully responsive; the player never hijacks the gesture.
+
+## Reduced motion
+Player crossfades between slots without travel.
+
+## Don&#x27;t miss
+- The player shrink-and-travel happens WHILE scrolling - it chases the active step rather than waiting for rest.
+- The orange assistant card is the only saturated color on the page - it owns the ending.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-driven docking player.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/creme-scroll-recipe-steps-morph">original interaction</a> by Creme. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Creme's scroll-morphing step player - scrolling the dark recipe steps list drags a small video player between sections: it morphs size and position to dock beside whichever step is active, expanding for steps with video and tucking away for those without.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark recipe page: section headers (\"Preparing the potatoes\", \"Making the mayonnaise\", \"Preparing the potato aioli\", \"Assembling the garlic bread\", \"Finishing the dish\") with rounded step rows; a compact video player (hands whisking) appears embedded at the active step; the flow ends at \"Finishing the dish\" with a Next steps card and an orange \"Ask anything\" assistant card.\n\n## Motion spec\nPattern: scroll-driven docking player.\n- Scroll: as a new step row enters the focus zone, the player detaches from the old step and glides to the new one (spring ~300/24), resizing to that step's slot (full-width embed -> compact corner) with matching corner-radius interpolation.\n- Steps without video collapse the player to a slim pill that sticks to the section header; steps with video re-expand it (spring ~280/22).\n- The player's content crossfades to the new step's clip (250ms) mid-flight.\n- Reaching \"Finishing the dish\": the player docks away entirely and the Next steps + orange \"Ask anything\" cards rise in (stagger 120ms, spring ~320/26).\n\n## Calibration\n- The player is one continuous surface - scroll position drives its target slot, springs do the travel.\n- Scroll stays fully responsive; the player never hijacks the gesture.\n\n## Reduced motion\nPlayer crossfades between slots without travel.\n\n## Don't miss\n- The player shrink-and-travel happens WHILE scrolling - it chases the active step rather than waiting for rest.\n- The orange assistant card is the only saturated color on the page - it owns the ending."</script>
+</body></html>

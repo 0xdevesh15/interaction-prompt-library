@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Button Tactile Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Button Tactile Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-button-tactile-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-button-tactile-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-button-tactile-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s tactile 3D button - pressing &quot;KEEP LEARNING&quot; physically compresses the button&#x27;s thick bottom edge, and the release springs the quit-warning sheet away.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b2195ec7d0ca132d5e959/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b2195ec7d0ca132d5e959/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-button-tactile-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s tactile 3D button - pressing &quot;KEEP LEARNING&quot; physically compresses the button&#x27;s thick bottom edge, and the release springs the quit-warning sheet away.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A Duolingo lesson dimmed under a quit-confirmation sheet: a sad Duo illustration, the copy &quot;Quit and you&#x27;ll lose all XP gained in this lesson!&quot;, a full-width blue &quot;KEEP LEARNING&quot; button with a darker blue bottom lip giving it 3D depth, and a red &quot;QUIT&quot; text button beneath.
+
+## Motion spec
+Pattern: tactile 3D press, ~600ms total.
+- On touch down, the button&#x27;s face slides down over its bottom lip (translate 4px, 80ms, ease-out) - the lip shrinks from 4px to 0, the face taking its place; the button reads as physically depressed.
+- Held, the state holds. Released, the face springs back up (spring stiffness 500 damping 26) with a barely-there overshoot.
+- The release fires the dismissal: the sheet slides down off-screen (spring stiffness 320 damping 30) and the dimmed lesson brightens back to full (200ms).
+- The QUIT button takes the same press feel minus the lip: a fast darken plus 2px press.
+
+## Calibration
+- The lip compression is the whole trick - the button face moves, the shadow-lip absorbs it.
+- No color change on the blue button; depth does the talking.
+
+## Reduced motion
+Button darkens on press; sheet fades out.
+
+## Don&#x27;t miss
+- The bottom lip is a separate darker strip that visibly compresses, not a shadow blur.
+- The sheet dismissal is springy, not a linear slide.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tactile 3D press, ~600ms total.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-button-tactile-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's tactile 3D button - pressing \"KEEP LEARNING\" physically compresses the button's thick bottom edge, and the release springs the quit-warning sheet away.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA Duolingo lesson dimmed under a quit-confirmation sheet: a sad Duo illustration, the copy \"Quit and you'll lose all XP gained in this lesson!\", a full-width blue \"KEEP LEARNING\" button with a darker blue bottom lip giving it 3D depth, and a red \"QUIT\" text button beneath.\n\n## Motion spec\nPattern: tactile 3D press, ~600ms total.\n- On touch down, the button's face slides down over its bottom lip (translate 4px, 80ms, ease-out) - the lip shrinks from 4px to 0, the face taking its place; the button reads as physically depressed.\n- Held, the state holds. Released, the face springs back up (spring stiffness 500 damping 26) with a barely-there overshoot.\n- The release fires the dismissal: the sheet slides down off-screen (spring stiffness 320 damping 30) and the dimmed lesson brightens back to full (200ms).\n- The QUIT button takes the same press feel minus the lip: a fast darken plus 2px press.\n\n## Calibration\n- The lip compression is the whole trick - the button face moves, the shadow-lip absorbs it.\n- No color change on the blue button; depth does the talking.\n\n## Reduced motion\nButton darkens on press; sheet fades out.\n\n## Don't miss\n- The bottom lip is a separate darker strip that visibly compresses, not a shadow blur.\n- The sheet dismissal is springy, not a linear slide."</script>
+</body></html>

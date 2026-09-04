@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Chat Theme Picker Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Chat Theme Picker Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-chat-theme-picker-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-chat-theme-picker-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-chat-theme-picker-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s chat theme picker - tapping a swatch in the color grid morphs the preview chat card to the theme&#x27;s colors, retints the screen&#x27;s top edge, and casts a matching ambient glow, with the theme name updating below the preview.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b523f5b603c870c1a48/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b523f5b603c870c1a48/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-chat-theme-picker-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s chat theme picker - tapping a swatch in the color grid morphs the preview chat card to the theme&#x27;s colors, retints the screen&#x27;s top edge, and casts a matching ambient glow, with the theme name updating below the preview.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Chat Theme&quot; screen: a chat preview card centered (mini conversation mockup), theme name beneath it (&quot;Standard&quot;, &quot;Winter&quot;, &quot;Galaxy&quot;, &quot;Electric Green&quot;, &quot;Emerald&quot;, &quot;Lettuce&quot;, &quot;Apricot&quot;), a 5-column grid of circular split-color swatches, and a blue &quot;Save&quot; button at the bottom. The status-bar area at the very top takes the selected theme&#x27;s color.
+
+## Motion spec
+Pattern: theme morph with ambient glow.
+- Tap a swatch: a selection ring draws around it (stroke trim, 200ms) and the swatch pops (scale 1 -&gt; 1.12 -&gt; 1, spring ~340/16).
+- The preview card crossfades its bubble and background colors to the theme (color lerp, 300ms, ease-in-out); the top status-bar strip retints with the same lerp.
+- An ambient glow in the theme&#x27;s color blooms behind/around the preview card (blur 30pt, opacity 0 -&gt; 0.4, 350ms) and settles at low intensity.
+- The theme name swaps with a vertical slide (old text up and out, new in from below, 200ms).
+- Save commits: the button pulses (scale 1.05, 150ms) and the sheet slides down.
+
+## Calibration
+- Every swatch is a two-tone circle (chat bubble color + background color split) - the preview must match both halves.
+- The glow follows the theme hue exactly, not a generic white bloom.
+
+## Reduced motion
+Colors swap instantly on tap; no glow.
+
+## Don&#x27;t miss
+- The preview card shows an actual mini conversation - bubbles and background both recolor.
+- The name label is centered and sentence case (&quot;Electric Green&quot;).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">theme morph with ambient glow.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-chat-theme-picker-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's chat theme picker - tapping a swatch in the color grid morphs the preview chat card to the theme's colors, retints the screen's top edge, and casts a matching ambient glow, with the theme name updating below the preview.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Chat Theme\" screen: a chat preview card centered (mini conversation mockup), theme name beneath it (\"Standard\", \"Winter\", \"Galaxy\", \"Electric Green\", \"Emerald\", \"Lettuce\", \"Apricot\"), a 5-column grid of circular split-color swatches, and a blue \"Save\" button at the bottom. The status-bar area at the very top takes the selected theme's color.\n\n## Motion spec\nPattern: theme morph with ambient glow.\n- Tap a swatch: a selection ring draws around it (stroke trim, 200ms) and the swatch pops (scale 1 -> 1.12 -> 1, spring ~340/16).\n- The preview card crossfades its bubble and background colors to the theme (color lerp, 300ms, ease-in-out); the top status-bar strip retints with the same lerp.\n- An ambient glow in the theme's color blooms behind/around the preview card (blur 30pt, opacity 0 -> 0.4, 350ms) and settles at low intensity.\n- The theme name swaps with a vertical slide (old text up and out, new in from below, 200ms).\n- Save commits: the button pulses (scale 1.05, 150ms) and the sheet slides down.\n\n## Calibration\n- Every swatch is a two-tone circle (chat bubble color + background color split) - the preview must match both halves.\n- The glow follows the theme hue exactly, not a generic white bloom.\n\n## Reduced motion\nColors swap instantly on tap; no glow.\n\n## Don't miss\n- The preview card shows an actual mini conversation - bubbles and background both recolor.\n- The name label is centered and sentence case (\"Electric Green\")."</script>
+</body></html>

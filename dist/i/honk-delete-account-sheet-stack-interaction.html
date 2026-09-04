@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Delete Account Sheet Stack Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Delete Account Sheet Stack Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-delete-account-sheet-stack-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-delete-account-sheet-stack-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-delete-account-sheet-stack-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s delete account flow - tapping Delete Account makes the settings view scale down and recede like a card in a stack while the confirmation sheet slides up over it, and dismissing the sheet springs the parent back to full size.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b4e3f5b603c870c1a0f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b4e3f5b603c870c1a0f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-delete-account-sheet-stack-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s delete account flow - tapping Delete Account makes the settings view scale down and recede like a card in a stack while the confirmation sheet slides up over it, and dismissing the sheet springs the parent back to full size.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Account&quot; settings (blue status-bar tint, list: Change Birthday, Blocked Users, Delete Account). The Delete Account sheet: full-height rounded card with red-tinted top area, &quot;Delete Account&quot; title, &quot;To delete your account, type the word DELETE in all caps&quot;, a text field, keyboard, and a disabled-looking &quot;Delete account&quot; button. A grabber sits at the sheet&#x27;s top.
+
+## Motion spec
+Pattern: card-stack modal - parent recedes, sheet covers.
+- Present: the parent view scales down (1 -&gt; 0.92) and rounds its corners (12pt), dimming slightly (200ms) - it recedes as a background card; simultaneously the sheet slides up from the bottom (spring ~300/26, 380ms) with its red header tint.
+- The keyboard rises with the sheet (synchronized, same spring).
+- Drag-to-dismiss: the sheet tracks the finger 1:1; release past 40% dismisses (sheet slides down 300ms), otherwise springs back (spring ~320/24).
+- Dismiss: the parent scales back to 1 with square corners as the sheet exits (paired 300ms animations); a brief spinner shows where the parent reloads.
+- The status bar tint follows the topmost card: blue for settings, red for the sheet.
+
+## Calibration
+- The parent must remain visible as a peek behind the sheet&#x27;s top - that peek is the stack metaphor.
+- Scale and corner radius animate together; neither alone sells the recede.
+
+## Reduced motion
+Sheet fades over a dimmed parent (250ms); no scaling.
+
+## Don&#x27;t miss
+- The confirmation copy requires typing DELETE in all caps - keep the field and the all-caps instruction.
+- The Delete account button stays subdued until the field matches.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card-stack modal - parent recedes, sheet covers.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-delete-account-sheet-stack-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's delete account flow - tapping Delete Account makes the settings view scale down and recede like a card in a stack while the confirmation sheet slides up over it, and dismissing the sheet springs the parent back to full size.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Account\" settings (blue status-bar tint, list: Change Birthday, Blocked Users, Delete Account). The Delete Account sheet: full-height rounded card with red-tinted top area, \"Delete Account\" title, \"To delete your account, type the word DELETE in all caps\", a text field, keyboard, and a disabled-looking \"Delete account\" button. A grabber sits at the sheet's top.\n\n## Motion spec\nPattern: card-stack modal - parent recedes, sheet covers.\n- Present: the parent view scales down (1 -> 0.92) and rounds its corners (12pt), dimming slightly (200ms) - it recedes as a background card; simultaneously the sheet slides up from the bottom (spring ~300/26, 380ms) with its red header tint.\n- The keyboard rises with the sheet (synchronized, same spring).\n- Drag-to-dismiss: the sheet tracks the finger 1:1; release past 40% dismisses (sheet slides down 300ms), otherwise springs back (spring ~320/24).\n- Dismiss: the parent scales back to 1 with square corners as the sheet exits (paired 300ms animations); a brief spinner shows where the parent reloads.\n- The status bar tint follows the topmost card: blue for settings, red for the sheet.\n\n## Calibration\n- The parent must remain visible as a peek behind the sheet's top - that peek is the stack metaphor.\n- Scale and corner radius animate together; neither alone sells the recede.\n\n## Reduced motion\nSheet fades over a dimmed parent (250ms); no scaling.\n\n## Don't miss\n- The confirmation copy requires typing DELETE in all caps - keep the field and the all-caps instruction.\n- The Delete account button stays subdued until the field matches."</script>
+</body></html>

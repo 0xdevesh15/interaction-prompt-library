@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halide Page Flip Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Halide Page Flip Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/halide-page-flip-onboarding"><b>Halide</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/halide-page-flip-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/halide-page-flip-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Halide&#x27;s onboarding - dark technical manual pages that turn with a tactile 3D page-flip, each spread showing a camera-UI diagram with a hand demonstrating the gesture.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be40a0131e88d4acae0b7b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be40a0131e88d4acae0b7b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-halide-page-flip-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Halide&#x27;s onboarding - dark technical manual pages that turn with a tactile 3D page-flip, each spread showing a camera-UI diagram with a hand demonstrating the gesture.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black manual-style pages. Cover: the Halide Mark II rainbow-ring logo with &quot;HALIDE MARK II CAMERA APPLICATION&quot; type. Interior spreads: line-drawn iPhone camera UI diagrams (white on dark gray) with a hand illustration mid-gesture, a page number top-right, a caption paragraph bottom-left, a Skip link bottom-center, and a Get Started button on the final page.
+
+## Motion spec
+Pattern: 3D page-flip paging.
+- Swipe left (or tap the right edge): the current page lifts at its right edge and rotates around the left spine (rotationY 0 to -180deg, driven 1:1 by the finger), its face darkening as it turns away (gradient shadow tracking the fold).
+- The page has thickness: mid-flip you see the page edge and a ghost of the next page&#x27;s content on the reverse.
+- Release past ~40% and the flip completes with a soft spring (stiffness ~220, damping ~24); release before and it springs back closed.
+- The next page sits static underneath, revealed progressively as the flip proceeds.
+- Page number and captions are printed on each page - they travel with the flip, not crossfaded.
+
+## Calibration
+- The fold shadow sells the paper: a flat rotation without shading reads as a carousel.
+- The spring finish should land flat against the spine with no bounce - paper settles, it does not trampoline.
+
+## Reduced motion
+Pages crossfade with a slight horizontal slide (200ms).
+
+## Don&#x27;t miss
+- The spine is the left edge for forward flips - never flip around the wrong edge.
+- The hand illustration points at the exact control the caption describes; keep the diagram, hand, and caption as one printed unit per page.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D page-flip paging.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/halide-page-flip-onboarding">original interaction</a> by Halide. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Halide's onboarding - dark technical manual pages that turn with a tactile 3D page-flip, each spread showing a camera-UI diagram with a hand demonstrating the gesture.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack manual-style pages. Cover: the Halide Mark II rainbow-ring logo with \"HALIDE MARK II CAMERA APPLICATION\" type. Interior spreads: line-drawn iPhone camera UI diagrams (white on dark gray) with a hand illustration mid-gesture, a page number top-right, a caption paragraph bottom-left, a Skip link bottom-center, and a Get Started button on the final page.\n\n## Motion spec\nPattern: 3D page-flip paging.\n- Swipe left (or tap the right edge): the current page lifts at its right edge and rotates around the left spine (rotationY 0 to -180deg, driven 1:1 by the finger), its face darkening as it turns away (gradient shadow tracking the fold).\n- The page has thickness: mid-flip you see the page edge and a ghost of the next page's content on the reverse.\n- Release past ~40% and the flip completes with a soft spring (stiffness ~220, damping ~24); release before and it springs back closed.\n- The next page sits static underneath, revealed progressively as the flip proceeds.\n- Page number and captions are printed on each page - they travel with the flip, not crossfaded.\n\n## Calibration\n- The fold shadow sells the paper: a flat rotation without shading reads as a carousel.\n- The spring finish should land flat against the spine with no bounce - paper settles, it does not trampoline.\n\n## Reduced motion\nPages crossfade with a slight horizontal slide (200ms).\n\n## Don't miss\n- The spine is the left edge for forward flips - never flip around the wrong edge.\n- The hand illustration points at the exact control the caption describes; keep the diagram, hand, and caption as one printed unit per page."</script>
+</body></html>

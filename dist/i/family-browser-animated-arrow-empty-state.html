@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Browser Animated Arrow Empty State - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Browser Animated Arrow Empty State</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-browser-animated-arrow-empty-state"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-browser-animated-arrow-empty-state">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-browser-animated-arrow-empty-state">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Family&#x27;s browser empty state - switching to the browser tab shows a &quot;Suggested&quot; dapp grid (Mirror, Zora, Foundation, OpenSea, Rarible, mint.fun, Endaoment, Party) over an empty history area, where a hand-drawn arrow sketches itself and curves down to point at the search bar, wiggling to hold attention.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895f1fc386bd77fdc77e4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895f1fc386bd77fdc77e4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-browser-animated-arrow-empty-state.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Family&#x27;s browser empty state - switching to the browser tab shows a &quot;Suggested&quot; dapp grid (Mirror, Zora, Foundation, OpenSea, Rarible, mint.fun, Endaoment, Party) over an empty history area, where a hand-drawn arrow sketches itself and curves down to point at the search bar, wiggling to hold attention.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Wallet screen (&quot;Benji&quot;, token list) with a bottom tab bar; the browser tab: a search/URL bar at top, a &quot;Suggested&quot; grid of eight dapp icons, and below it an empty area with faint placeholder text. A hand-drawn curved arrow appears in the empty area, pointing up at the search bar.
+
+## Motion spec
+Pattern: self-drawing guide arrow with idle wiggle.
+- On entering the tab: the suggested grid fades in with a stagger (40ms per icon, scale 0.8 -&gt; 1, spring ~340/18).
+- After 400ms, the arrow draws itself: stroke sweep from tail to head (700ms ease-out), a loose hand-drawn curve arcing from the empty area toward the search bar, arrowhead ticks drawing last (150ms).
+- The arrow then idles: a gentle wiggle (rotate +/-3deg, 2s sine) and a soft opacity breath (0.7 -&gt; 1, 2.4s).
+- The hint repeats every ~6s: the arrow redraws (erase 300ms, redraw 700ms) until the user taps the search bar, then it fades out for good (200ms).
+
+## Calibration
+- The arrow looks marker-drawn: slightly uneven stroke, round caps, no perfect geometry.
+- It points at the search bar specifically - its head lands just below the field.
+
+## Reduced motion
+The arrow fades in statically (200ms), no redraw loop.
+
+## Don&#x27;t miss
+- The dapp grid and the arrow are independent layers; scrolling the grid does not move the arrow.
+- The arrow never covers the placeholder text - it arcs around it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">self-drawing guide arrow with idle wiggle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-browser-animated-arrow-empty-state">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Family's browser empty state - switching to the browser tab shows a \"Suggested\" dapp grid (Mirror, Zora, Foundation, OpenSea, Rarible, mint.fun, Endaoment, Party) over an empty history area, where a hand-drawn arrow sketches itself and curves down to point at the search bar, wiggling to hold attention.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWallet screen (\"Benji\", token list) with a bottom tab bar; the browser tab: a search/URL bar at top, a \"Suggested\" grid of eight dapp icons, and below it an empty area with faint placeholder text. A hand-drawn curved arrow appears in the empty area, pointing up at the search bar.\n\n## Motion spec\nPattern: self-drawing guide arrow with idle wiggle.\n- On entering the tab: the suggested grid fades in with a stagger (40ms per icon, scale 0.8 -> 1, spring ~340/18).\n- After 400ms, the arrow draws itself: stroke sweep from tail to head (700ms ease-out), a loose hand-drawn curve arcing from the empty area toward the search bar, arrowhead ticks drawing last (150ms).\n- The arrow then idles: a gentle wiggle (rotate +/-3deg, 2s sine) and a soft opacity breath (0.7 -> 1, 2.4s).\n- The hint repeats every ~6s: the arrow redraws (erase 300ms, redraw 700ms) until the user taps the search bar, then it fades out for good (200ms).\n\n## Calibration\n- The arrow looks marker-drawn: slightly uneven stroke, round caps, no perfect geometry.\n- It points at the search bar specifically - its head lands just below the field.\n\n## Reduced motion\nThe arrow fades in statically (200ms), no redraw loop.\n\n## Don't miss\n- The dapp grid and the arrow are independent layers; scrolling the grid does not move the arrow.\n- The arrow never covers the placeholder text - it arcs around it."</script>
+</body></html>

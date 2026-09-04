@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FocusPomo Gyroscope - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>FocusPomo Gyroscope</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/focuspomo-gyroscope"><b>Focuspomo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/focuspomo-gyroscope">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/focuspomo-gyroscope">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: FocusPomo&#x27;s gyroscope timer screen - dozens of tiny orange and yellow tomato mascots fill the lower half of the timer screen (&quot;05:00 Focus&quot;, Start Focus button) and respond to device tilt with real physics: they roll, pile up, and bounce against the screen edges as the phone moves.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e7a0f24c4721fb10b3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e7a0f24c4721fb10b3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-focuspomo-gyroscope.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: FocusPomo&#x27;s gyroscope timer screen - dozens of tiny orange and yellow tomato mascots fill the lower half of the timer screen (&quot;05:00 Focus&quot;, Start Focus button) and respond to device tilt with real physics: they roll, pile up, and bounce against the screen edges as the phone moves.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Soft peach timer screen: big &quot;05:00&quot; with &quot;Focus&quot; label, a black &quot;Start Focus&quot; pill button, and a bed of small round tomato characters (orange and yellow, green stems, tiny faces) filling the bottom region like balls in a pit.
+
+## Motion spec
+Pattern: physics particle pit driven by the gyroscope.
+- Every tomato is a physics body: gravity follows the device&#x27;s tilt vector in real time, so tilting the phone pours the pile toward the low edge.
+- Tomatoes collide with each other and the screen bounds (restitution ~0.4, a soft bounce; friction keeps piles stable); they tumble and roll over one another, stacking in mounds.
+- A quick shake sends the whole pit bouncing; the pile re-settles within ~2s.
+- The timer text and Start Focus button are not physics bodies - tomatoes bounce off the button&#x27;s bounds as if it were solid.
+- Each tomato&#x27;s face rotates with its body as it rolls.
+
+## Calibration
+- The pile rests naturally at the bottom when the phone is level - no jitter at equilibrium (sleep threshold on the physics engine).
+- Tomato count is high (~60+) - the charm is the crowd, not individual sprites.
+
+## Reduced motion
+Static pile at the bottom; no tilt response.
+
+## Don&#x27;t miss
+- Gravity tracks the physical world, not the screen orientation - rotating the phone keeps the pile &quot;down&quot;.
+- Faces stay on the tomatoes as they roll - the sprites rotate with their bodies.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">physics particle pit driven by the gyroscope.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/focuspomo-gyroscope">original interaction</a> by Focuspomo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: FocusPomo's gyroscope timer screen - dozens of tiny orange and yellow tomato mascots fill the lower half of the timer screen (\"05:00 Focus\", Start Focus button) and respond to device tilt with real physics: they roll, pile up, and bounce against the screen edges as the phone moves.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSoft peach timer screen: big \"05:00\" with \"Focus\" label, a black \"Start Focus\" pill button, and a bed of small round tomato characters (orange and yellow, green stems, tiny faces) filling the bottom region like balls in a pit.\n\n## Motion spec\nPattern: physics particle pit driven by the gyroscope.\n- Every tomato is a physics body: gravity follows the device's tilt vector in real time, so tilting the phone pours the pile toward the low edge.\n- Tomatoes collide with each other and the screen bounds (restitution ~0.4, a soft bounce; friction keeps piles stable); they tumble and roll over one another, stacking in mounds.\n- A quick shake sends the whole pit bouncing; the pile re-settles within ~2s.\n- The timer text and Start Focus button are not physics bodies - tomatoes bounce off the button's bounds as if it were solid.\n- Each tomato's face rotates with its body as it rolls.\n\n## Calibration\n- The pile rests naturally at the bottom when the phone is level - no jitter at equilibrium (sleep threshold on the physics engine).\n- Tomato count is high (~60+) - the charm is the crowd, not individual sprites.\n\n## Reduced motion\nStatic pile at the bottom; no tilt response.\n\n## Don't miss\n- Gravity tracks the physical world, not the screen orientation - rotating the phone keeps the pile \"down\".\n- Faces stay on the tomatoes as they roll - the sprites rotate with their bodies."</script>
+</body></html>

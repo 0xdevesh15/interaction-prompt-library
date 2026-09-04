@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SoundCloud Splash to Login Screen - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>SoundCloud Splash to Login Screen</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/soundcloud-splash-to-login-screen"><b>Soundcloud</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/soundcloud-splash-to-login-screen">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/soundcloud-splash-to-login-screen">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: SoundCloud&#x27;s splash-to-login - the cloud logo holds on black, then an illustrated card rockets up from the bottom and the screen transforms into a neon line-art scene with a blue panel carrying &quot;Where artists &amp; fans connect.&quot;</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ea4b99ff4b1209fb8dd712/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ea4b99ff4b1209fb8dd712/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-soundcloud-splash-to-login-screen.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: SoundCloud&#x27;s splash-to-login - the cloud logo holds on black, then an illustrated card rockets up from the bottom and the screen transforms into a neon line-art scene with a blue panel carrying &quot;Where artists &amp; fans connect.&quot;
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Splash: black screen, small white SoundCloud cloud mark centered. Landing: dark background covered in neon line-art (speaker, waveforms in green/purple/orange), a big blue rounded panel bottom-half with the cloud glyph, &quot;Where artists &amp; fans connect.&quot; headline, white &quot;Create an account&quot; button, &quot;Log in&quot; below.
+
+## Motion spec
+Pattern: bottom-card takeover transition.
+- Splash logo fades to gray (300ms), then a coral/yellow illustrated card slides up from off-screen bottom (spring ~280/24, ~500ms) carrying the headline and CTA.
+- The card keeps rising and expands: its background color floods upward to fill the screen (500ms ease-in-out) while the neon line-art draws in behind (stroke draw-on, ~800ms, staggered per shape).
+- The panel settles into its final blue with the headline re-setting line by line (each line rises 8px + fades, 200ms, 60ms apart).
+- Buttons fade in last (Create an account, then Log in 100ms later, 250ms each).
+
+## Calibration
+- The card&#x27;s corner radius grows as it expands (24px -&gt; 40px at the top corners) so it reads as a sheet becoming a panel.
+- Line-art is decorative: draw-on happens once, no looping.
+
+## Reduced motion
+Splash crossfades to the final composed screen; line-art appears pre-drawn.
+
+## Don&#x27;t miss
+- The headline color flips during the flood (dark on coral -&gt; dark on blue) - animate the text color with the background.
+- The cloud glyph in the panel is white on blue, matching the splash mark&#x27;s shape.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bottom-card takeover transition.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/soundcloud-splash-to-login-screen">original interaction</a> by Soundcloud. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: SoundCloud's splash-to-login - the cloud logo holds on black, then an illustrated card rockets up from the bottom and the screen transforms into a neon line-art scene with a blue panel carrying \"Where artists & fans connect.\"\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSplash: black screen, small white SoundCloud cloud mark centered. Landing: dark background covered in neon line-art (speaker, waveforms in green/purple/orange), a big blue rounded panel bottom-half with the cloud glyph, \"Where artists & fans connect.\" headline, white \"Create an account\" button, \"Log in\" below.\n\n## Motion spec\nPattern: bottom-card takeover transition.\n- Splash logo fades to gray (300ms), then a coral/yellow illustrated card slides up from off-screen bottom (spring ~280/24, ~500ms) carrying the headline and CTA.\n- The card keeps rising and expands: its background color floods upward to fill the screen (500ms ease-in-out) while the neon line-art draws in behind (stroke draw-on, ~800ms, staggered per shape).\n- The panel settles into its final blue with the headline re-setting line by line (each line rises 8px + fades, 200ms, 60ms apart).\n- Buttons fade in last (Create an account, then Log in 100ms later, 250ms each).\n\n## Calibration\n- The card's corner radius grows as it expands (24px -> 40px at the top corners) so it reads as a sheet becoming a panel.\n- Line-art is decorative: draw-on happens once, no looping.\n\n## Reduced motion\nSplash crossfades to the final composed screen; line-art appears pre-drawn.\n\n## Don't miss\n- The headline color flips during the flood (dark on coral -> dark on blue) - animate the text color with the background.\n- The cloud glyph in the panel is white on blue, matching the splash mark's shape."</script>
+</body></html>

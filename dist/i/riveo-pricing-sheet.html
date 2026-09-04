@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Riveo Pricing Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Riveo Pricing Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/riveo-pricing-sheet"><b>Riveo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/riveo-pricing-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/riveo-pricing-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Riveo&#x27;s PRO pricing sheet - a looping montage of edit clips plays behind the purchase card, crossfading between footage (portrait, purple bokeh, golden hour) while the price, trial toggle, and Start Free Trial button stay still.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d12dab3f9ae8767d953eb0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d12dab3f9ae8767d953eb0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-riveo-pricing-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Riveo&#x27;s PRO pricing sheet - a looping montage of edit clips plays behind the purchase card, crossfading between footage (portrait, purple bokeh, golden hour) while the price, trial toggle, and Start Free Trial button stay still.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen sheet: RIVEO PRO pill top, a row of stars, &quot;Then Rs 1,900 per Year&quot; price block, a &quot;Try Plan for 7 Days&quot; toggle, a blue &quot;Start Free Trial&quot; button, an &quot;App Design Award&quot; laurel badge right, X top-left. Behind everything: softly graded video clips.
+
+## Motion spec
+Pattern: ambient footage crossfade under static commerce.
+- The background crossfades between clips every ~2s (700ms crossfade); each clip drifts slowly (scale 1.05 -&gt; 1.1 over its run) so the montage breathes.
+- The foreground dims the footage with a steady dark scrim (~55%) - scrim intensity never animates, so text contrast is constant through every clip change.
+- Sheet entrance: rises from the bottom (spring ~300/24) with the price block fading in last (200ms delay).
+- The toggle flips with a standard thumb spring; the price strikethrough/amount updates with a 200ms crossfade.
+
+## Calibration
+- All motion belongs to the background montage; commerce UI is a rock.
+- Clips are real app output (effects, grades) - the footage IS the pitch.
+
+## Reduced motion
+Static background frame; no clip rotation.
+
+## Don&#x27;t miss
+- The footage is portrait and full-bleed, edge to edge behind the button.
+- The laurel badge sits beside the price, quietly - proof without a modal.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient footage crossfade under static commerce.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/riveo-pricing-sheet">original interaction</a> by Riveo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Riveo's PRO pricing sheet - a looping montage of edit clips plays behind the purchase card, crossfading between footage (portrait, purple bokeh, golden hour) while the price, trial toggle, and Start Free Trial button stay still.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen sheet: RIVEO PRO pill top, a row of stars, \"Then Rs 1,900 per Year\" price block, a \"Try Plan for 7 Days\" toggle, a blue \"Start Free Trial\" button, an \"App Design Award\" laurel badge right, X top-left. Behind everything: softly graded video clips.\n\n## Motion spec\nPattern: ambient footage crossfade under static commerce.\n- The background crossfades between clips every ~2s (700ms crossfade); each clip drifts slowly (scale 1.05 -> 1.1 over its run) so the montage breathes.\n- The foreground dims the footage with a steady dark scrim (~55%) - scrim intensity never animates, so text contrast is constant through every clip change.\n- Sheet entrance: rises from the bottom (spring ~300/24) with the price block fading in last (200ms delay).\n- The toggle flips with a standard thumb spring; the price strikethrough/amount updates with a 200ms crossfade.\n\n## Calibration\n- All motion belongs to the background montage; commerce UI is a rock.\n- Clips are real app output (effects, grades) - the footage IS the pitch.\n\n## Reduced motion\nStatic background frame; no clip rotation.\n\n## Don't miss\n- The footage is portrait and full-bleed, edge to edge behind the button.\n- The laurel badge sits beside the price, quietly - proof without a modal."</script>
+</body></html>

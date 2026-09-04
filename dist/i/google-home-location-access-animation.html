@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Home Location Access Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Google Home Location Access Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/google-home-location-access-animation"><b>Google</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-home-location-access-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-home-location-access-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Google Home&#x27;s location-access illustration - a looping vector animation on the permission explainer screen: an expanding radar wave ripples out from a yellow location pin, a small beacon dot orbits the pin&#x27;s base, and the pin pulses gently.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67153c76b0f164c141e1b944/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67153c76b0f164c141e1b944/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-google-home-location-access-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Google Home&#x27;s location-access illustration - a looping vector animation on the permission explainer screen: an expanding radar wave ripples out from a yellow location pin, a small beacon dot orbits the pin&#x27;s base, and the pin pulses gently.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White explainer page: &quot;Location Access&quot; headline, body copy about nearby Wi-Fi and Bluetooth signals, centered illustration of a yellow map pin standing on a light-grey ground disc, blue Next button bottom-right.
+
+## Motion spec
+Pattern: looping illustration with radar ripple.
+- The pin pulses: scale 1 -&gt; 1.06 -&gt; 1 (1.6s ease-in-out loop), anchored at its tip on the ground disc.
+- A radar ring emits from the pin&#x27;s base: ring expands outward (scale 0.2 -&gt; 1.4) while fading (opacity 0.5 -&gt; 0), 2.4s loop; a second ring repeats offset by half the loop for a continuous ripple.
+- A small grey beacon dot orbits the ground disc (radius ~60% of disc radius, 4s linear loop), growing slightly as it passes the front (scale 0.8 -&gt; 1.1 -&gt; 0.8) to fake depth.
+- The ground disc breathes with the pulse (scale 1 -&gt; 1.02, same 1.6s loop).
+
+## Calibration
+- All loops are phase-locked to the pin pulse - the ripple starts at the pin&#x27;s scale peak.
+- Everything is flat vector with soft shadows; no gradients beyond the ring fade.
+
+## Reduced motion
+Static illustration: pin at rest, one faint ring, no orbit.
+
+## Don&#x27;t miss
+- The beacon orbit passes behind the pin at the back of the loop (z-order swap).
+- The ripple rings are ellipses matched to the disc&#x27;s perspective, not circles.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping illustration with radar ripple.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/google-home-location-access-animation">original interaction</a> by Google. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Google Home's location-access illustration - a looping vector animation on the permission explainer screen: an expanding radar wave ripples out from a yellow location pin, a small beacon dot orbits the pin's base, and the pin pulses gently.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite explainer page: \"Location Access\" headline, body copy about nearby Wi-Fi and Bluetooth signals, centered illustration of a yellow map pin standing on a light-grey ground disc, blue Next button bottom-right.\n\n## Motion spec\nPattern: looping illustration with radar ripple.\n- The pin pulses: scale 1 -> 1.06 -> 1 (1.6s ease-in-out loop), anchored at its tip on the ground disc.\n- A radar ring emits from the pin's base: ring expands outward (scale 0.2 -> 1.4) while fading (opacity 0.5 -> 0), 2.4s loop; a second ring repeats offset by half the loop for a continuous ripple.\n- A small grey beacon dot orbits the ground disc (radius ~60% of disc radius, 4s linear loop), growing slightly as it passes the front (scale 0.8 -> 1.1 -> 0.8) to fake depth.\n- The ground disc breathes with the pulse (scale 1 -> 1.02, same 1.6s loop).\n\n## Calibration\n- All loops are phase-locked to the pin pulse - the ripple starts at the pin's scale peak.\n- Everything is flat vector with soft shadows; no gradients beyond the ring fade.\n\n## Reduced motion\nStatic illustration: pin at rest, one faint ring, no orbit.\n\n## Don't miss\n- The beacon orbit passes behind the pin at the back of the loop (z-order swap).\n- The ripple rings are ellipses matched to the disc's perspective, not circles."</script>
+</body></html>

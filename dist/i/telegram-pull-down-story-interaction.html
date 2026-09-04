@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram Pull Down Story Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Telegram Pull Down Story Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/telegram-pull-down-story-interaction"><b>Telegram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-pull-down-story-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-pull-down-story-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Telegram&#x27;s elastic pull-down on the chat list - pulling down stretches the list and reveals a hidden stories row (&quot;My Story&quot; + contacts) whose circles grow with pull distance, then releasing past the threshold opens the story viewer.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e8130b6c7c0fc72fed4ea3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e8130b6c7c0fc72fed4ea3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-telegram-pull-down-story-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Telegram&#x27;s elastic pull-down on the chat list - pulling down stretches the list and reveals a hidden stories row (&quot;My Story&quot; + contacts) whose circles grow with pull distance, then releasing past the threshold opens the story viewer.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark chat list (Chats header, search, chat rows). Hidden above: a stories row with circular avatar rings (&quot;My Story&quot; with a + badge, Telegram&#x27;s own story). Story viewer: full-screen media with progress ticks, reply field, close.
+
+## Motion spec
+Pattern: elastic pull-to-reveal stories.
+- Pull down at rest: the chat list translates down 1:1 with rubber-band resistance (distance = 0.55x finger past 80px), revealing the stories row behind.
+- Story circles scale with pull depth: 0.4 -&gt; 1.0 across the first 120px of pull, each with a slight stagger (~30ms, left to right), and fade from 0.
+- A &quot;Pull down for stories&quot; hint arrow appears mid-pull (fade 150ms) and rotates 180deg once past the open threshold (~140px).
+- Release below threshold: everything springs back (spring ~280/24, ~350ms), circles shrinking as they leave.
+- Release past threshold: the row snaps fully open (spring ~300/22), then the first story expands from its circle into the full-screen viewer (shared-element zoom, ~400ms) with progress ticks staggering in at the top.
+- Close: the viewer zooms back into its circle (350ms) and the row collapses (300ms).
+
+## Calibration
+- Rubber-band resistance must be non-linear - past 140px it should feel like taffy.
+- The shared-element zoom originates from the exact story circle tapped/thresholded, not screen center.
+
+## Reduced motion
+Pull reveals the row without elasticity; story opens with a fade.
+
+## Don&#x27;t miss
+- &quot;My Story&quot; circle carries a + badge; contact circles carry gradient unread rings.
+- The chat list stays visible under the reveal - it slides, it doesn&#x27;t dim.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">elastic pull-to-reveal stories.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/telegram-pull-down-story-interaction">original interaction</a> by Telegram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Telegram's elastic pull-down on the chat list - pulling down stretches the list and reveals a hidden stories row (\"My Story\" + contacts) whose circles grow with pull distance, then releasing past the threshold opens the story viewer.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark chat list (Chats header, search, chat rows). Hidden above: a stories row with circular avatar rings (\"My Story\" with a + badge, Telegram's own story). Story viewer: full-screen media with progress ticks, reply field, close.\n\n## Motion spec\nPattern: elastic pull-to-reveal stories.\n- Pull down at rest: the chat list translates down 1:1 with rubber-band resistance (distance = 0.55x finger past 80px), revealing the stories row behind.\n- Story circles scale with pull depth: 0.4 -> 1.0 across the first 120px of pull, each with a slight stagger (~30ms, left to right), and fade from 0.\n- A \"Pull down for stories\" hint arrow appears mid-pull (fade 150ms) and rotates 180deg once past the open threshold (~140px).\n- Release below threshold: everything springs back (spring ~280/24, ~350ms), circles shrinking as they leave.\n- Release past threshold: the row snaps fully open (spring ~300/22), then the first story expands from its circle into the full-screen viewer (shared-element zoom, ~400ms) with progress ticks staggering in at the top.\n- Close: the viewer zooms back into its circle (350ms) and the row collapses (300ms).\n\n## Calibration\n- Rubber-band resistance must be non-linear - past 140px it should feel like taffy.\n- The shared-element zoom originates from the exact story circle tapped/thresholded, not screen center.\n\n## Reduced motion\nPull reveals the row without elasticity; story opens with a fade.\n\n## Don't miss\n- \"My Story\" circle carries a + badge; contact circles carry gradient unread rings.\n- The chat list stays visible under the reveal - it slides, it doesn't dim."</script>
+</body></html>

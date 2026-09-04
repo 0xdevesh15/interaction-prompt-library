@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple iCloud Storage Icon Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple iCloud Storage Icon Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-icloud-storage-icon-animation"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-icloud-storage-icon-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-icloud-storage-icon-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Apple&#x27;s iCloud &quot;Manage Storage&quot; screen - the blue iCloud cloud at the top animates into an orbit of app icons (Photos flower, Mail, Messages, Notes, backups) floating around it with spinning green sync arrows, while the &quot;Storage Full&quot; bar fills red with a breakdown legend (iCloud Photos 78%, Family 16%, Backups 4%, Messages 1%).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23dfc3856296413d1b5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23dfc3856296413d1b5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-icloud-storage-icon-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Apple&#x27;s iCloud &quot;Manage Storage&quot; screen - the blue iCloud cloud at the top animates into an orbit of app icons (Photos flower, Mail, Messages, Notes, backups) floating around it with spinning green sync arrows, while the &quot;Storage Full&quot; bar fills red with a breakdown legend (iCloud Photos 78%, Family 16%, Backups 4%, Messages 1%).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+iOS Manage Storage settings screen (iCloud+ back link, Manage Storage title). Top: a blue iCloud cloud icon that becomes the hub of an orbiting cluster of app icons with green sync arrows. Below: &quot;Storage Full&quot; label, a red storage bar (&quot;200 GB of 200 GB Used&quot;) with a colored segment legend, a warning block (&quot;Your iCloud Storage is Full... Add 200 GB for Rs 219.00/month&quot;), and Family Usage / Change Storage Plan rows.
+
+## Motion spec
+Pattern: orbital icon cluster around a hub with progress fill.
+- The cloud fades in and pulses once (scale 1 -&gt; 1.05 -&gt; 1, 400ms).
+- App icons emerge from behind the cloud one at a time (scale 0 -&gt; 1, spring ~300/18, 120ms stagger) and take orbit positions around it.
+- The cluster rotates slowly (full orbit about 12s, linear) while each icon counter-rotates to stay upright.
+- Two green circular sync arrows chase each other around the cluster (rotating 6s loop, opposite phase).
+- Individual icons occasionally drift outward and back (translateY +/-4pt, 3s sine, randomized phase).
+- The storage bar fills red from 0 to full (600ms ease-out) and the legend rows fade up staggered (150ms, 60ms apart).
+
+## Calibration
+- Orbital motion is slow and weightless - no springiness in the loop.
+- Icons stay upright at all times; only the orbit ring rotates.
+
+## Reduced motion
+The cluster appears fully formed and static; the bar fills without animation.
+
+## Don&#x27;t miss
+- The green sync arrows are the only saturated moving accent - keep them crisp.
+- The cloud stays centered and calm while everything orbits it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orbital icon cluster around a hub with progress fill.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-icloud-storage-icon-animation">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Apple's iCloud \"Manage Storage\" screen - the blue iCloud cloud at the top animates into an orbit of app icons (Photos flower, Mail, Messages, Notes, backups) floating around it with spinning green sync arrows, while the \"Storage Full\" bar fills red with a breakdown legend (iCloud Photos 78%, Family 16%, Backups 4%, Messages 1%).\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\niOS Manage Storage settings screen (iCloud+ back link, Manage Storage title). Top: a blue iCloud cloud icon that becomes the hub of an orbiting cluster of app icons with green sync arrows. Below: \"Storage Full\" label, a red storage bar (\"200 GB of 200 GB Used\") with a colored segment legend, a warning block (\"Your iCloud Storage is Full... Add 200 GB for Rs 219.00/month\"), and Family Usage / Change Storage Plan rows.\n\n## Motion spec\nPattern: orbital icon cluster around a hub with progress fill.\n- The cloud fades in and pulses once (scale 1 -> 1.05 -> 1, 400ms).\n- App icons emerge from behind the cloud one at a time (scale 0 -> 1, spring ~300/18, 120ms stagger) and take orbit positions around it.\n- The cluster rotates slowly (full orbit about 12s, linear) while each icon counter-rotates to stay upright.\n- Two green circular sync arrows chase each other around the cluster (rotating 6s loop, opposite phase).\n- Individual icons occasionally drift outward and back (translateY +/-4pt, 3s sine, randomized phase).\n- The storage bar fills red from 0 to full (600ms ease-out) and the legend rows fade up staggered (150ms, 60ms apart).\n\n## Calibration\n- Orbital motion is slow and weightless - no springiness in the loop.\n- Icons stay upright at all times; only the orbit ring rotates.\n\n## Reduced motion\nThe cluster appears fully formed and static; the bar fills without animation.\n\n## Don't miss\n- The green sync arrows are the only saturated moving accent - keep them crisp.\n- The cloud stays centered and calm while everything orbits it."</script>
+</body></html>

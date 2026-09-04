@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Days Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Days Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/days-splash"><b>Days</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/days-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/days-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the Days splash - the &quot;D&quot; logo scales down and fades on white, briefly inverting to a giant dark &quot;D&quot; fill, then the All events screen fades in as a 2-column grid of event cards (Kate&#x27;s Party, Basketball, Anniversary, Workout, Movie Night, Pool Party) staggers into place over &quot;Add your events&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6706666c5d11d5a0fec6fc05/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6706666c5d11d5a0fec6fc05/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-days-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the Days splash - the &quot;D&quot; logo scales down and fades on white, briefly inverting to a giant dark &quot;D&quot; fill, then the All events screen fades in as a 2-column grid of event cards (Kate&#x27;s Party, Basketball, Anniversary, Workout, Movie Night, Pool Party) staggers into place over &quot;Add your events&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White splash with the black &quot;D&quot;; a transitional giant &quot;D&quot; crop (dark fill); the All events grid screen with &quot;Add your events&quot; heading, subline, and &quot;Create new event&quot; button.
+
+## Motion spec
+Pattern: logo shrink-out with a grid stagger-in.
+- The &quot;D&quot; scales down (1 -&gt; 0.85) and fades (400ms), passing through a brief giant dark &quot;D&quot; flash (150ms) that covers the screen before clearing.
+- The All events screen fades in (250ms); the event cards stagger in row by row (each 90ms apart, 16px rise + fade, 300ms).
+- The heading, subline, and CTA fade in last (250ms).
+
+## Calibration
+- The dark &quot;D&quot; flash is a deliberate inversion beat, not a glitch - one quick pulse.
+- Cards fade with their photos; no separate image load-in.
+
+## Reduced motion
+Splash crossfades directly to the fully-formed grid (250ms).
+
+## Don&#x27;t miss
+- The grid cards show real event photos with names - this is populated content, not placeholders.
+- The giant &quot;D&quot; moment uses the same glyph as the small logo - continuity of mark.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo shrink-out with a grid stagger-in.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/days-splash">original interaction</a> by Days. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the Days splash - the \"D\" logo scales down and fades on white, briefly inverting to a giant dark \"D\" fill, then the All events screen fades in as a 2-column grid of event cards (Kate's Party, Basketball, Anniversary, Workout, Movie Night, Pool Party) staggers into place over \"Add your events\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite splash with the black \"D\"; a transitional giant \"D\" crop (dark fill); the All events grid screen with \"Add your events\" heading, subline, and \"Create new event\" button.\n\n## Motion spec\nPattern: logo shrink-out with a grid stagger-in.\n- The \"D\" scales down (1 -> 0.85) and fades (400ms), passing through a brief giant dark \"D\" flash (150ms) that covers the screen before clearing.\n- The All events screen fades in (250ms); the event cards stagger in row by row (each 90ms apart, 16px rise + fade, 300ms).\n- The heading, subline, and CTA fade in last (250ms).\n\n## Calibration\n- The dark \"D\" flash is a deliberate inversion beat, not a glitch - one quick pulse.\n- Cards fade with their photos; no separate image load-in.\n\n## Reduced motion\nSplash crossfades directly to the fully-formed grid (250ms).\n\n## Don't miss\n- The grid cards show real event photos with names - this is populated content, not placeholders.\n- The giant \"D\" moment uses the same glyph as the small logo - continuity of mark."</script>
+</body></html>

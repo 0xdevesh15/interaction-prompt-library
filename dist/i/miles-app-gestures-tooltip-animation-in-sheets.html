@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miles App Gestures Tooltip Animation in Sheets - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Miles App Gestures Tooltip Animation in Sheets</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/miles-app-gestures-tooltip-animation-in-sheets"><b>Miles</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/miles-app-gestures-tooltip-animation-in-sheets">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/miles-app-gestures-tooltip-animation-in-sheets">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Miles&#x27; gesture tooltip sheet - a &quot;Let&#x27;s get started&quot; bottom sheet plays a looping phone demo of app gestures (run summary, countdown, live stats, swipe gestures), then slides away on Done to reveal the dashboard.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756edca5222d1a7afdd5409/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756edca5222d1a7afdd5409/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-miles-app-gestures-tooltip-animation-in-sheets.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Miles&#x27; gesture tooltip sheet - a &quot;Let&#x27;s get started&quot; bottom sheet plays a looping phone demo of app gestures (run summary, countdown, live stats, swipe gestures), then slides away on Done to reveal the dashboard.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Miles&#x27; light dashboard (big &quot;0.00&quot; readout) dimmed behind a bottom sheet titled &quot;Let&#x27;s get started&quot; with the sub-line &quot;You can start a run by pressing pause on the screen&quot;. Inside the sheet, a small phone frame loops the gesture demos: a run summary with a bar chart, the dark countdown showing &quot;2&quot;, live stats reading &quot;4.00&quot;, and a swipe-gesture hint. A black &quot;Done&quot; button caps the sheet.
+
+## Motion spec
+Pattern: looping demo inside a dismissible sheet, gesture to close.
+- The demo phone loops its clips: each scene holds ~1.5s and crossfades to the next (300ms), endlessly repeating while the sheet is open.
+- The sheet itself sits at a fixed detent; the dashboard behind stays dimmed and static.
+- On Done, the sheet slides down off-screen (spring stiffness 340 damping 30), the dim lifting as it goes (300ms), and the dashboard takes full brightness - the &quot;0.00&quot; readout crisp.
+- Swiping the sheet down dismisses it identically, tracking the finger 1:1 with the spring finishing the exit.
+
+## Calibration
+- The demo is inset inside the sheet with rounded corners - a phone-in-a-sheet, clearly a preview.
+- Dismissal is one continuous motion; the sheet never jumps.
+
+## Reduced motion
+Demo scenes crossfade slowly; sheet fades out on Done.
+
+## Don&#x27;t miss
+- The demo loops - there is no end state until the user dismisses.
+- The dashboard behind is the real app, revealed not navigated to.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping demo inside a dismissible sheet, gesture to close.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/miles-app-gestures-tooltip-animation-in-sheets">original interaction</a> by Miles. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Miles' gesture tooltip sheet - a \"Let's get started\" bottom sheet plays a looping phone demo of app gestures (run summary, countdown, live stats, swipe gestures), then slides away on Done to reveal the dashboard.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMiles' light dashboard (big \"0.00\" readout) dimmed behind a bottom sheet titled \"Let's get started\" with the sub-line \"You can start a run by pressing pause on the screen\". Inside the sheet, a small phone frame loops the gesture demos: a run summary with a bar chart, the dark countdown showing \"2\", live stats reading \"4.00\", and a swipe-gesture hint. A black \"Done\" button caps the sheet.\n\n## Motion spec\nPattern: looping demo inside a dismissible sheet, gesture to close.\n- The demo phone loops its clips: each scene holds ~1.5s and crossfades to the next (300ms), endlessly repeating while the sheet is open.\n- The sheet itself sits at a fixed detent; the dashboard behind stays dimmed and static.\n- On Done, the sheet slides down off-screen (spring stiffness 340 damping 30), the dim lifting as it goes (300ms), and the dashboard takes full brightness - the \"0.00\" readout crisp.\n- Swiping the sheet down dismisses it identically, tracking the finger 1:1 with the spring finishing the exit.\n\n## Calibration\n- The demo is inset inside the sheet with rounded corners - a phone-in-a-sheet, clearly a preview.\n- Dismissal is one continuous motion; the sheet never jumps.\n\n## Reduced motion\nDemo scenes crossfade slowly; sheet fades out on Done.\n\n## Don't miss\n- The demo loops - there is no end state until the user dismisses.\n- The dashboard behind is the real app, revealed not navigated to."</script>
+</body></html>

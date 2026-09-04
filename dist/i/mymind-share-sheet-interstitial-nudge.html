@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mymind Share Sheet Interstitial Nudge - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mymind Share Sheet Interstitial Nudge</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mymind-share-sheet-interstitial-nudge"><b>Mymind</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mymind-share-sheet-interstitial-nudge">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mymind-share-sheet-interstitial-nudge">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: mymind&#x27;s share-extension confirmation - saving from the iOS share sheet fades in a full-screen warm gradient interstitial (&quot;Good find! It&#x27;s in your mind.&quot;) with a rotating badge and an &quot;Add Details&quot; pill, then dissolves back to the app.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ddc2cf07db27257dda7f95/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ddc2cf07db27257dda7f95/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mymind-share-sheet-interstitial-nudge.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: mymind&#x27;s share-extension confirmation - saving from the iOS share sheet fades in a full-screen warm gradient interstitial (&quot;Good find! It&#x27;s in your mind.&quot;) with a rotating badge and an &quot;Add Details&quot; pill, then dissolves back to the app.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+iOS share sheet (&quot;Mymind on 60fps&quot;, AirDrop/app row, action list) over Safari; behind it a blurred warm gradient (coral to orange to violet) rises. The interstitial: centered mymind flame/spinner glyph, &quot;Good find!&quot; serif headline, &quot;It&#x27;s in your mind.&quot; subline, outlined &quot;+ Add Details&quot; pill.
+
+## Motion spec
+Pattern: blurred gradient celebration interstitial.
+- On save: the share sheet slides away and the gradient fades in from black (350ms), already blurred (radius ~24px) and slightly scaled (1.05 -&gt; 1, 500ms) so it breathes in.
+- The flame glyph spins once (rotate 0 -&gt; 360, 700ms) as the copy fades up (headline then subline, stagger 120ms, rise 12px).
+- &quot;+ Add Details&quot; fades in last (200ms delay); the whole interstitial holds ~1.8s.
+- It dismisses by crossfading back to the underlying app (300ms), no slide.
+
+## Calibration
+- The gradient is the same warm field throughout - it never re-renders; blur and scale do the motion.
+- The interstitial fully covers the share sheet&#x27;s sheet area and the status bar region.
+
+## Reduced motion
+Simple fade in/out; glyph static.
+
+## Don&#x27;t miss
+- &quot;Add Details&quot; is an outline pill, white text, no fill - quiet next to the loud gradient.
+- The glyph spin is a single revolution, not a looping loader.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">blurred gradient celebration interstitial.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mymind-share-sheet-interstitial-nudge">original interaction</a> by Mymind. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: mymind's share-extension confirmation - saving from the iOS share sheet fades in a full-screen warm gradient interstitial (\"Good find! It's in your mind.\") with a rotating badge and an \"Add Details\" pill, then dissolves back to the app.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\niOS share sheet (\"Mymind on 60fps\", AirDrop/app row, action list) over Safari; behind it a blurred warm gradient (coral to orange to violet) rises. The interstitial: centered mymind flame/spinner glyph, \"Good find!\" serif headline, \"It's in your mind.\" subline, outlined \"+ Add Details\" pill.\n\n## Motion spec\nPattern: blurred gradient celebration interstitial.\n- On save: the share sheet slides away and the gradient fades in from black (350ms), already blurred (radius ~24px) and slightly scaled (1.05 -> 1, 500ms) so it breathes in.\n- The flame glyph spins once (rotate 0 -> 360, 700ms) as the copy fades up (headline then subline, stagger 120ms, rise 12px).\n- \"+ Add Details\" fades in last (200ms delay); the whole interstitial holds ~1.8s.\n- It dismisses by crossfading back to the underlying app (300ms), no slide.\n\n## Calibration\n- The gradient is the same warm field throughout - it never re-renders; blur and scale do the motion.\n- The interstitial fully covers the share sheet's sheet area and the status bar region.\n\n## Reduced motion\nSimple fade in/out; glyph static.\n\n## Don't miss\n- \"Add Details\" is an outline pill, white text, no fill - quiet next to the loud gradient.\n- The glyph spin is a single revolution, not a looping loader."</script>
+</body></html>

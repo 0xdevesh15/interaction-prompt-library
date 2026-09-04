@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>‎Quartr Scrub Timeline Chapter Text Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>‎Quartr Scrub Timeline Chapter Text Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/quartr-scrub-timeline-chapter-text-interaction"><b>Quartr</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/quartr-scrub-timeline-chapter-text-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/quartr-scrub-timeline-chapter-text-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Quartr&#x27;s chapter scrubber - drag across the call timeline and the chapter title under the scrubber crossfades and slides to whatever chapter your finger is in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934364c7d19d070282a287e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934364c7d19d070282a287e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-quartr-scrub-timeline-chapter-text-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Quartr&#x27;s chapter scrubber - drag across the call timeline and the chapter title under the scrubber crossfades and slides to whatever chapter your finger is in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark audio player for an earnings call (&quot;Q4 2025&quot;, company name, a &quot;Q&amp;A&quot; jump link): a timeline track carrying chapter tick marks and a round scrub handle, the current chapter label beneath it (&quot;44:28 - Q&amp;A, iPhone Constraints &amp; AI Impact &gt;&quot;), transport controls (replay/forward 15s, pause), speed and download rows, and the live transcript card (&quot;Operator: Our next question is from Krish Sankar with TD...&quot;).
+
+## Motion spec
+Pattern: scrub-linked chapter title crossfade with slide.
+- While dragging the handle, the chapter label updates live: when the handle crosses a chapter boundary, the old label slides down 10px and fades (150ms) while the new one slides up from 10px (200ms, ease-out) - a vertical swap, not a horizontal one.
+- The label always carries the chapter&#x27;s start timestamp (&quot;25:13 - Quarterly Outlook &amp; Guidance&quot;) with its chevron, and it tracks the handle&#x27;s time, not the playhead - scrubbing ahead shows future chapters.
+- Chapter ticks on the track highlight up to the handle position (white vs dim) 1:1 with the drag.
+- On release, playback seeks to the handle position: the handle springs a hair (scale 1 -&gt; 1.15 -&gt; 1, 180ms), the label holds, and the transcript card crossfades to the new position&#x27;s text (250ms).
+- During passive playback the label swaps with the same motion as chapters roll by - scrub and playback share one mechanism.
+
+## Calibration
+- The label swap is fast enough to feel synchronous with the finger (total under 250ms) - lag here reads as broken.
+- The handle stays a clean white dot - no time bubble; the chapter label does that job.
+
+## Reduced motion
+Label crossfades without the slide; transcript swaps without motion.
+
+## Don&#x27;t miss
+- The chapter label is tappable (its chevron jumps to the chapter list) - it is navigation, not decoration.
+- The transcript card keeps playing catch-up below - scrubbing the timeline re-anchors it too.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scrub-linked chapter title crossfade with slide.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/quartr-scrub-timeline-chapter-text-interaction">original interaction</a> by Quartr. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Quartr's chapter scrubber - drag across the call timeline and the chapter title under the scrubber crossfades and slides to whatever chapter your finger is in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark audio player for an earnings call (\"Q4 2025\", company name, a \"Q&A\" jump link): a timeline track carrying chapter tick marks and a round scrub handle, the current chapter label beneath it (\"44:28 - Q&A, iPhone Constraints & AI Impact >\"), transport controls (replay/forward 15s, pause), speed and download rows, and the live transcript card (\"Operator: Our next question is from Krish Sankar with TD...\").\n\n## Motion spec\nPattern: scrub-linked chapter title crossfade with slide.\n- While dragging the handle, the chapter label updates live: when the handle crosses a chapter boundary, the old label slides down 10px and fades (150ms) while the new one slides up from 10px (200ms, ease-out) - a vertical swap, not a horizontal one.\n- The label always carries the chapter's start timestamp (\"25:13 - Quarterly Outlook & Guidance\") with its chevron, and it tracks the handle's time, not the playhead - scrubbing ahead shows future chapters.\n- Chapter ticks on the track highlight up to the handle position (white vs dim) 1:1 with the drag.\n- On release, playback seeks to the handle position: the handle springs a hair (scale 1 -> 1.15 -> 1, 180ms), the label holds, and the transcript card crossfades to the new position's text (250ms).\n- During passive playback the label swaps with the same motion as chapters roll by - scrub and playback share one mechanism.\n\n## Calibration\n- The label swap is fast enough to feel synchronous with the finger (total under 250ms) - lag here reads as broken.\n- The handle stays a clean white dot - no time bubble; the chapter label does that job.\n\n## Reduced motion\nLabel crossfades without the slide; transcript swaps without motion.\n\n## Don't miss\n- The chapter label is tappable (its chevron jumps to the chapter list) - it is navigation, not decoration.\n- The transcript card keeps playing catch-up below - scrubbing the timeline re-anchors it too."</script>
+</body></html>

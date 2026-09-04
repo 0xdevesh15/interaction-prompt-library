@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Outlook Swipe Right Autocomplete Tooltip Sheet Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Outlook Swipe Right Autocomplete Tooltip Sheet Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/outlook-swipe-right-autocomplete-tooltip-sheet-animation"><b>Outlook</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/outlook-swipe-right-autocomplete-tooltip-sheet-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/outlook-swipe-right-autocomplete-tooltip-sheet-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Outlook&#x27;s Text Predictions teaching sheet - a bottom sheet that runs a looping self-playing demo: text types itself, a gray completion appears, a simulated finger swipes right, and the suggestion becomes real text.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e596c82041cdc380bb3a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e596c82041cdc380bb3a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-outlook-swipe-right-autocomplete-tooltip-sheet-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Outlook&#x27;s Text Predictions teaching sheet - a bottom sheet that runs a looping self-playing demo: text types itself, a gray completion appears, a simulated finger swipes right, and the suggestion becomes real text.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Bottom sheet: &quot;Text Predictions&quot; title, &quot;Swipe right to autocomplete your sentences&quot; subline, a mock compose field labeled Subject:, and a blue &quot;Got it&quot; button pinned below.
+
+## Motion spec
+Pattern: looping gesture simulation, ~3s per loop.
+- The demo text types itself character by character (&quot;Whats the best t&quot;, ~60ms per char) with a blinking caret.
+- The predicted completion fades in as gray ghost text continuing the sentence (&quot;ime to meet?&quot;, 250ms).
+- A translucent touch dot appears at the caret, drags right ~60px with a trailing arrow (350ms, ease-out), and on release the ghost text snaps to solid black (instant swap with a 100ms fade).
+- The completed sentence holds (~700ms), then the field clears (200ms fade) and the loop restarts.
+- Sheet, title, and button stay static throughout.
+
+## Calibration
+- Typing speed is brisk but human; machine-gun typing reads as a glitch.
+- The swipe is one smooth drag, not a jump - users are learning a gesture, so the finger&#x27;s path is the lesson.
+
+## Reduced motion
+Show the three states as a slow crossfade sequence instead of live typing and dragging.
+
+## Don&#x27;t miss
+- Ghost text must sit exactly where real text will land, same font metrics - a nudge on acceptance breaks trust in the feature.
+- The loop is seamless: no visible &quot;replay&quot; reset, just the field emptying.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping gesture simulation, ~3s per loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/outlook-swipe-right-autocomplete-tooltip-sheet-animation">original interaction</a> by Outlook. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Outlook's Text Predictions teaching sheet - a bottom sheet that runs a looping self-playing demo: text types itself, a gray completion appears, a simulated finger swipes right, and the suggestion becomes real text.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBottom sheet: \"Text Predictions\" title, \"Swipe right to autocomplete your sentences\" subline, a mock compose field labeled Subject:, and a blue \"Got it\" button pinned below.\n\n## Motion spec\nPattern: looping gesture simulation, ~3s per loop.\n- The demo text types itself character by character (\"Whats the best t\", ~60ms per char) with a blinking caret.\n- The predicted completion fades in as gray ghost text continuing the sentence (\"ime to meet?\", 250ms).\n- A translucent touch dot appears at the caret, drags right ~60px with a trailing arrow (350ms, ease-out), and on release the ghost text snaps to solid black (instant swap with a 100ms fade).\n- The completed sentence holds (~700ms), then the field clears (200ms fade) and the loop restarts.\n- Sheet, title, and button stay static throughout.\n\n## Calibration\n- Typing speed is brisk but human; machine-gun typing reads as a glitch.\n- The swipe is one smooth drag, not a jump - users are learning a gesture, so the finger's path is the lesson.\n\n## Reduced motion\nShow the three states as a slow crossfade sequence instead of live typing and dragging.\n\n## Don't miss\n- Ghost text must sit exactly where real text will land, same font metrics - a nudge on acceptance breaks trust in the feature.\n- The loop is seamless: no visible \"replay\" reset, just the field emptying."</script>
+</body></html>

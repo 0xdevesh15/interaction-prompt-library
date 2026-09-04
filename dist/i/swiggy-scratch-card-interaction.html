@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Scratch Card Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Scratch Card Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-scratch-card-interaction"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-scratch-card-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-scratch-card-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Swiggy&#x27;s scratch card - the user rubs a foil coating off a red gift card to reveal a reward, confetti bursts, and a claim card slides up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67bff6873e62e53909909434/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67bff6873e62e53909909434/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-scratch-card-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Swiggy&#x27;s scratch card - the user rubs a foil coating off a red gift card to reveal a reward, confetti bursts, and a claim card slides up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dimmed app background with a red rounded card at center: gift icon and &quot;SCRATCH HERE&quot; on the foil. Beneath the foil hides the reward: a white card with the brand logo, &quot;MYGLAMM Matte Lipstick...&quot; text, a code, and a &quot;Claim Now&quot; button, plus an &quot;I&#x27;ll use it later!&quot; link below.
+
+## Motion spec
+Pattern: touch-scratched foil reveal with confetti and a slide-up reward.
+- The card wobbles on entry (rotate +-2deg, 2 cycles, 600ms) to invite scratching.
+- Scratching tracks the finger 1:1: a ~40pt brush erases the foil (destination-out mask) with a soft edge, revealing the reward underneath in the rubbed path.
+- At 45% scratched, the rest of the foil dissolves (300ms fade with flaking particles) and the reward card pops (scale 0.94 -&gt; 1.02 -&gt; 1, spring ~300/16).
+- Confetti bursts from the card (70 pieces, gravity + rotation, 1.8s life, two staggered volleys 150ms apart).
+- The reward card then slides up slightly (spring ~320/26) as the &quot;Claim Now&quot; button and &quot;I&#x27;ll use it later!&quot; link fade in beneath it (250ms).
+
+## Calibration
+- The brush must feel tactile: erase radius follows touch pressure/size, no grid snapping.
+- Auto-reveal only past the threshold - half-scratched stays scratched.
+
+## Reduced motion
+Tap-to-reveal: foil fades away (300ms); confetti reduced to a single small burst.
+
+## Don&#x27;t miss
+- The foil is a matte red with the gift icon printed on it - scratched areas show the white card, not a gray rub.
+- Confetti colors pull from the reward brand, not generic rainbow only.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">touch-scratched foil reveal with confetti and a slide-up reward.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-scratch-card-interaction">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Swiggy's scratch card - the user rubs a foil coating off a red gift card to reveal a reward, confetti bursts, and a claim card slides up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDimmed app background with a red rounded card at center: gift icon and \"SCRATCH HERE\" on the foil. Beneath the foil hides the reward: a white card with the brand logo, \"MYGLAMM Matte Lipstick...\" text, a code, and a \"Claim Now\" button, plus an \"I'll use it later!\" link below.\n\n## Motion spec\nPattern: touch-scratched foil reveal with confetti and a slide-up reward.\n- The card wobbles on entry (rotate +-2deg, 2 cycles, 600ms) to invite scratching.\n- Scratching tracks the finger 1:1: a ~40pt brush erases the foil (destination-out mask) with a soft edge, revealing the reward underneath in the rubbed path.\n- At 45% scratched, the rest of the foil dissolves (300ms fade with flaking particles) and the reward card pops (scale 0.94 -> 1.02 -> 1, spring ~300/16).\n- Confetti bursts from the card (70 pieces, gravity + rotation, 1.8s life, two staggered volleys 150ms apart).\n- The reward card then slides up slightly (spring ~320/26) as the \"Claim Now\" button and \"I'll use it later!\" link fade in beneath it (250ms).\n\n## Calibration\n- The brush must feel tactile: erase radius follows touch pressure/size, no grid snapping.\n- Auto-reveal only past the threshold - half-scratched stays scratched.\n\n## Reduced motion\nTap-to-reveal: foil fades away (300ms); confetti reduced to a single small burst.\n\n## Don't miss\n- The foil is a matte red with the gift icon printed on it - scratched areas show the white card, not a gray rub.\n- Confetti colors pull from the reward brand, not generic rainbow only."</script>
+</body></html>

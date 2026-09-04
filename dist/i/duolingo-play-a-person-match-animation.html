@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Play a Person Match Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Play a Person Match Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-play-a-person-match-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-play-a-person-match-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-play-a-person-match-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo Chess matchmaking - tap Play a Person, the mascot idles while it searches, then the opponent and you slide in as player cards and the board deal plays out.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934346503bcee22ddcfcb6e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934346503bcee22ddcfcb6e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-play-a-person-match-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo Chess matchmaking - tap Play a Person, the mascot idles while it searches, then the opponent and you slide in as player cards and the board deal plays out.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Duolingo green lobby: the mustached mascot behind a chessboard, &quot;Play Chess&quot; with timed-match buttons (&quot;Play a Person 10|0&quot;, &quot;Play Oscar 10|0&quot;) and the bottom nav. Search state: the mascot alone with &quot;I&#x27;m finding you the perfect opponent...&quot; and Cancel. Match state: a dark screen with two player cards - opponent on top (red-lit portrait, name, Elo) and you below (name, Elo). Game state: the dark board with the opponent&#x27;s avatar top-center, your avatar bottom-center, clocks at 10:00, and pieces in the starting array.
+
+## Motion spec
+Pattern: matchmaking flow - idle search, sliding versus cards, board deal-in.
+- On tap, the lobby content slides down and out (250ms) and the search state rises in (300ms); the mascot idles with a bob (+/-6px, 2s loop) and a shifting gaze while the status text cycles an ellipsis.
+- When matched, the green wipes to dark (200ms) and the two versus cards slide in from opposite edges: opponent from the top, you from the bottom (translateY +/-60 -&gt; 0, spring ~320/18, 400ms), names and Elos fading in 120ms after each card lands.
+- The cards hold 700ms, then part (opponent up, you down, 300ms) as the board fades in between them.
+- Pieces deal onto the board rank by rank from the opponent&#x27;s side toward you (each rank 60ms apart, pieces dropping 12px into place, 200ms) as the clocks fade to 10:00.
+- The avatars dock to their board seats as the cards finish exiting - one continuous hand-off.
+
+## Calibration
+- The versus cards carry each player&#x27;s color wash (red for the opponent, your theme below) - the tint does the antagonism, no VS badge needed.
+- The search is cancellable until the cards land - Cancel collapses back to the lobby with the reverse slide.
+
+## Reduced motion
+Search fades to the cards (crossfade 250ms); pieces appear set without the deal.
+
+## Don&#x27;t miss
+- The Elo rides under each name with its small chart glyph - the stakes are visible before move one.
+- The board deal runs opponent-to-player - the game literally comes at you.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">matchmaking flow - idle search, sliding versus cards, board deal-in.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-play-a-person-match-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo Chess matchmaking - tap Play a Person, the mascot idles while it searches, then the opponent and you slide in as player cards and the board deal plays out.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDuolingo green lobby: the mustached mascot behind a chessboard, \"Play Chess\" with timed-match buttons (\"Play a Person 10|0\", \"Play Oscar 10|0\") and the bottom nav. Search state: the mascot alone with \"I'm finding you the perfect opponent...\" and Cancel. Match state: a dark screen with two player cards - opponent on top (red-lit portrait, name, Elo) and you below (name, Elo). Game state: the dark board with the opponent's avatar top-center, your avatar bottom-center, clocks at 10:00, and pieces in the starting array.\n\n## Motion spec\nPattern: matchmaking flow - idle search, sliding versus cards, board deal-in.\n- On tap, the lobby content slides down and out (250ms) and the search state rises in (300ms); the mascot idles with a bob (+/-6px, 2s loop) and a shifting gaze while the status text cycles an ellipsis.\n- When matched, the green wipes to dark (200ms) and the two versus cards slide in from opposite edges: opponent from the top, you from the bottom (translateY +/-60 -> 0, spring ~320/18, 400ms), names and Elos fading in 120ms after each card lands.\n- The cards hold 700ms, then part (opponent up, you down, 300ms) as the board fades in between them.\n- Pieces deal onto the board rank by rank from the opponent's side toward you (each rank 60ms apart, pieces dropping 12px into place, 200ms) as the clocks fade to 10:00.\n- The avatars dock to their board seats as the cards finish exiting - one continuous hand-off.\n\n## Calibration\n- The versus cards carry each player's color wash (red for the opponent, your theme below) - the tint does the antagonism, no VS badge needed.\n- The search is cancellable until the cards land - Cancel collapses back to the lobby with the reverse slide.\n\n## Reduced motion\nSearch fades to the cards (crossfade 250ms); pieces appear set without the deal.\n\n## Don't miss\n- The Elo rides under each name with its small chart glyph - the stakes are visible before move one.\n- The board deal runs opponent-to-player - the game literally comes at you."</script>
+</body></html>

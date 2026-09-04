@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnBar Drinks Counter Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BurnBar Drinks Counter Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/burnbar-drinks-counter-animation"><b>Burnbar</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/burnbar-drinks-counter-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/burnbar-drinks-counter-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BurnBar&#x27;s weekly recap - a cheeky loading bar (&quot;Pouring Drinks...&quot;, &quot;Finding Balance...&quot;), then your earned wine glasses revealed one icon at a time, then the &quot;How many did you enjoy?&quot; counter filling a glass grid.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff38835595b0e9e2d2e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff38835595b0e9e2d2e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-burnbar-drinks-counter-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BurnBar&#x27;s weekly recap - a cheeky loading bar (&quot;Pouring Drinks...&quot;, &quot;Finding Balance...&quot;), then your earned wine glasses revealed one icon at a time, then the &quot;How many did you enjoy?&quot; counter filling a glass grid.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A saturated blue field with red/orange accents. Loading: &quot;Pouring Drinks...&quot; over a thick progress bar, then &quot;Finding Balance...&quot;. Recap: &quot;Last week, you earned...&quot; with a big count (&quot;10&quot;), &quot;Wine Glasses&quot;, &quot;From 1,361 calories&quot;, rows of wine-glass icons (one dark/filled per earned glass, the rest pale), and a red Next button. Counter: &quot;How many did you enjoy?&quot; with - and + flanking a big number, a 3-row grid of glasses, and a &quot;See my balance&quot; button.
+
+## Motion spec
+Pattern: loading bar into staggered icon reveal into an interactive counter that fills a glass grid.
+- The loading bar fills in two characterful passes (&quot;Pouring Drinks...&quot; fills left to right in 900ms; the label swaps and the bar refills in 700ms) - the joke is the wait.
+- Recap reveal: the count rolls up (0 -&gt; 10, 700ms, ease-out), then the glass icons pop in one at a time (scale 0.6 -&gt; 1.15 -&gt; 1, spring ~400/14, 60ms apart, row by row) as filled dark glasses.
+- Counter: tapping +/- rolls the number (vertical digit flip, 200ms, direction by sign) and the grid updates live - glasses toggle filled/pale with a tiny pop (scale 1 -&gt; 1.2 -&gt; 1, 180ms) at the exact grid position matching the new count.
+- The grid fills in reading order; draining removes the most recent glass - the count and the grid can never disagree.
+- &quot;See my balance&quot; sits enabled throughout - the counter is honest self-report, not a gate.
+
+## Calibration
+- The palette is loud (blue field, red buttons) - the motion matches: quick pops, playful springs, no slow eases.
+- The loading copy swaps at least twice - one label is not a bit, two is a bit.
+
+## Reduced motion
+Bar fills without label swaps; icons and number fade in place.
+
+## Don&#x27;t miss
+- Earned glasses are dark-filled, unearned stay pale outlines - the grid is the tally, not decoration.
+- &quot;From N calories&quot; rides under the count - the app always ties drinks to burn.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">loading bar into staggered icon reveal into an interactive counter that fills a glass grid.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/burnbar-drinks-counter-animation">original interaction</a> by Burnbar. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BurnBar's weekly recap - a cheeky loading bar (\"Pouring Drinks...\", \"Finding Balance...\"), then your earned wine glasses revealed one icon at a time, then the \"How many did you enjoy?\" counter filling a glass grid.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA saturated blue field with red/orange accents. Loading: \"Pouring Drinks...\" over a thick progress bar, then \"Finding Balance...\". Recap: \"Last week, you earned...\" with a big count (\"10\"), \"Wine Glasses\", \"From 1,361 calories\", rows of wine-glass icons (one dark/filled per earned glass, the rest pale), and a red Next button. Counter: \"How many did you enjoy?\" with - and + flanking a big number, a 3-row grid of glasses, and a \"See my balance\" button.\n\n## Motion spec\nPattern: loading bar into staggered icon reveal into an interactive counter that fills a glass grid.\n- The loading bar fills in two characterful passes (\"Pouring Drinks...\" fills left to right in 900ms; the label swaps and the bar refills in 700ms) - the joke is the wait.\n- Recap reveal: the count rolls up (0 -> 10, 700ms, ease-out), then the glass icons pop in one at a time (scale 0.6 -> 1.15 -> 1, spring ~400/14, 60ms apart, row by row) as filled dark glasses.\n- Counter: tapping +/- rolls the number (vertical digit flip, 200ms, direction by sign) and the grid updates live - glasses toggle filled/pale with a tiny pop (scale 1 -> 1.2 -> 1, 180ms) at the exact grid position matching the new count.\n- The grid fills in reading order; draining removes the most recent glass - the count and the grid can never disagree.\n- \"See my balance\" sits enabled throughout - the counter is honest self-report, not a gate.\n\n## Calibration\n- The palette is loud (blue field, red buttons) - the motion matches: quick pops, playful springs, no slow eases.\n- The loading copy swaps at least twice - one label is not a bit, two is a bit.\n\n## Reduced motion\nBar fills without label swaps; icons and number fade in place.\n\n## Don't miss\n- Earned glasses are dark-filled, unearned stay pale outlines - the grid is the tally, not decoration.\n- \"From N calories\" rides under the count - the app always ties drinks to burn."</script>
+</body></html>

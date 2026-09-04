@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Books Menu Pop Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Books Menu Pop Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-books-menu-pop-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-books-menu-pop-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-books-menu-pop-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Books&#x27; reading-menu collapse - the expanded bottom menu (Contents, Search Book, Themes &amp; Settings plus a four-icon action row) folds back down into the single corner button that spawned it, rows collapsing in sequence.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509738ff6640815e7e85f8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509738ff6640815e7e85f8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-books-menu-pop-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Books&#x27; reading-menu collapse - the expanded bottom menu (Contents, Search Book, Themes &amp; Settings plus a four-icon action row) folds back down into the single corner button that spawned it, rows collapsing in sequence.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark reading screen (sepia/black page, page indicator &quot;1 of 1000&quot; near the bottom). Bottom-right corner holds a small menu button (list icon). Tapping it expands a floating dark card above the corner: three full-width rows (Contents - 0%, Search Book with magnifier, Themes &amp; Settings with AA) over a row of four circular icon buttons (share, play, text-size, bookmark).
+
+## Motion spec
+Pattern: stacked menu collapse into a corner button.
+- Collapse runs bottom-up: the four-icon row fades and scales down first (~150ms), then the three rows fold in sequence from bottom row to top (~120ms each, 60ms stagger), each shrinking toward the corner button&#x27;s anchor point.
+- Each row&#x27;s content fades as its container height collapses; the card&#x27;s corner radius grows slightly as it shrinks, ending as the small circular corner button.
+- The corner button&#x27;s icon crossfades from close state back to the list glyph (~150ms).
+- Expansion is the exact reverse: button morphs up into the card, rows pop open top-down with a slight spring (~320/24).
+
+## Calibration
+- Everything anchors to the bottom-right corner - rows scale toward that point, not toward their own centers.
+- Stagger is tight; the whole collapse finishes in ~400ms.
+
+## Reduced motion
+Whole card crossfades to the corner button (200ms), no sequencing.
+
+## Don&#x27;t miss
+- The page indicator (&quot;1 of 1000&quot;) stays visible behind the card; the menu overlays it.
+- The collapse order is bottom row first; expansion is top row first.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stacked menu collapse into a corner button.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-books-menu-pop-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Books' reading-menu collapse - the expanded bottom menu (Contents, Search Book, Themes & Settings plus a four-icon action row) folds back down into the single corner button that spawned it, rows collapsing in sequence.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark reading screen (sepia/black page, page indicator \"1 of 1000\" near the bottom). Bottom-right corner holds a small menu button (list icon). Tapping it expands a floating dark card above the corner: three full-width rows (Contents - 0%, Search Book with magnifier, Themes & Settings with AA) over a row of four circular icon buttons (share, play, text-size, bookmark).\n\n## Motion spec\nPattern: stacked menu collapse into a corner button.\n- Collapse runs bottom-up: the four-icon row fades and scales down first (~150ms), then the three rows fold in sequence from bottom row to top (~120ms each, 60ms stagger), each shrinking toward the corner button's anchor point.\n- Each row's content fades as its container height collapses; the card's corner radius grows slightly as it shrinks, ending as the small circular corner button.\n- The corner button's icon crossfades from close state back to the list glyph (~150ms).\n- Expansion is the exact reverse: button morphs up into the card, rows pop open top-down with a slight spring (~320/24).\n\n## Calibration\n- Everything anchors to the bottom-right corner - rows scale toward that point, not toward their own centers.\n- Stagger is tight; the whole collapse finishes in ~400ms.\n\n## Reduced motion\nWhole card crossfades to the corner button (200ms), no sequencing.\n\n## Don't miss\n- The page indicator (\"1 of 1000\") stays visible behind the card; the menu overlays it.\n- The collapse order is bottom row first; expansion is top row first."</script>
+</body></html>

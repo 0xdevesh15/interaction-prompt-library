@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remy AI Health Permission Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Remy AI Health Permission Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/remy-ai-health-permission-animation"><b>Remy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/remy-ai-health-permission-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/remy-ai-health-permission-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Remy AI&#x27;s Health permission flow - the mascot eyes fold into a shield, then an Apple Health sheet slides up and its category toggles flip on one by one before a &quot;Perfect!&quot; confirmation.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc3a4e52b107930543463/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc3a4e52b107930543463/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-remy-ai-health-permission-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Remy AI&#x27;s Health permission flow - the mascot eyes fold into a shield, then an Apple Health sheet slides up and its category toggles flip on one by one before a &quot;Perfect!&quot; confirmation.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark onboarding beat: reassurance copy (&quot;Don&#x27;t worry, this analysis happens right on your phone...&quot;) with a &quot;Start Apple Health analysis&quot; button. The mascot&#x27;s glowing eyes morph into a shield outline. An Apple Health permission sheet rises with the Health icon, a list of data categories with toggles, and a &quot;Turn on all categories&quot; button, ending on a glowing checkmark and &quot;Perfect!&quot;.
+
+## Motion spec
+Pattern: mascot morph to permission sheet with staggered toggles, ~3s.
+- The eyes pull together and unfold into a shield outline around themselves (600ms, ease-in-out), the reassurance copy fading in below.
+- On continue, the Health sheet slides up from the bottom (spring stiffness 280 damping 24), dimming the content behind.
+- The category rows stagger in (80ms apart, 250ms fade-rise), then their toggles flip on in sequence top to bottom (200ms per toggle, 120ms stagger), each snapping green with a small overshoot.
+- When all toggles are on, the sheet content crossfades to a centered glowing checkmark that pops (scale 0.5 to 1, stiffness 380 damping 15) with &quot;Perfect!&quot; fading up beneath (300ms).
+
+## Calibration
+- Toggles flip after the rows have settled - sheet first, then the cascade.
+- The checkmark glow is teal-green, matching the toggles.
+
+## Reduced motion
+Sheet fades in with toggles already on; confirmation fades.
+
+## Don&#x27;t miss
+- The shield keeps the two eyes visible inside it - the mascot becomes the privacy mark.
+- &quot;Turn on all categories&quot; stays pinned at the sheet&#x27;s bottom.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">mascot morph to permission sheet with staggered toggles, ~3s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/remy-ai-health-permission-animation">original interaction</a> by Remy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Remy AI's Health permission flow - the mascot eyes fold into a shield, then an Apple Health sheet slides up and its category toggles flip on one by one before a \"Perfect!\" confirmation.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark onboarding beat: reassurance copy (\"Don't worry, this analysis happens right on your phone...\") with a \"Start Apple Health analysis\" button. The mascot's glowing eyes morph into a shield outline. An Apple Health permission sheet rises with the Health icon, a list of data categories with toggles, and a \"Turn on all categories\" button, ending on a glowing checkmark and \"Perfect!\".\n\n## Motion spec\nPattern: mascot morph to permission sheet with staggered toggles, ~3s.\n- The eyes pull together and unfold into a shield outline around themselves (600ms, ease-in-out), the reassurance copy fading in below.\n- On continue, the Health sheet slides up from the bottom (spring stiffness 280 damping 24), dimming the content behind.\n- The category rows stagger in (80ms apart, 250ms fade-rise), then their toggles flip on in sequence top to bottom (200ms per toggle, 120ms stagger), each snapping green with a small overshoot.\n- When all toggles are on, the sheet content crossfades to a centered glowing checkmark that pops (scale 0.5 to 1, stiffness 380 damping 15) with \"Perfect!\" fading up beneath (300ms).\n\n## Calibration\n- Toggles flip after the rows have settled - sheet first, then the cascade.\n- The checkmark glow is teal-green, matching the toggles.\n\n## Reduced motion\nSheet fades in with toggles already on; confirmation fades.\n\n## Don't miss\n- The shield keeps the two eyes visible inside it - the mascot becomes the privacy mark.\n- \"Turn on all categories\" stays pinned at the sheet's bottom."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Lily Video Call Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Lily Video Call Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-lily-video-call-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-lily-video-call-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-lily-video-call-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s Lily video call - an incoming call screen with a slide-to-answer control, a simulated call where Lily animates and talks, then the call shrinks into a small card atop the Video Call subscription paywall.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b219570407b199f347ae8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b219570407b199f347ae8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-lily-video-call-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s Lily video call - an incoming call screen with a slide-to-answer control, a simulated call where Lily animates and talks, then the call shrinks into a small card atop the Video Call subscription paywall.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A full-screen purple &quot;Video Call - Lily&quot; incoming call: Lily&#x27;s illustrated face large at center, a &quot;SLIDE TO ANSWER&quot; slider at the bottom. Answering transitions into the call: Lily fills the screen, idling with blinks and head tilts, then talking with mouth and expression animation. Finally the call view shrinks into a small rounded floating card at the top of a dark paywall: &quot;Practice real world speaking with Video Call&quot;, a &quot;TRY FOR&quot; price button, and &quot;NO THANKS&quot;.
+
+## Motion spec
+Pattern: call answer to paywall shrink, gesture-driven start.
+- The incoming call pulses gently: Lily&#x27;s portrait breathes (scale 1 to 1.02, 2s) and the slider&#x27;s chevrons shimmer rightward (1.2s loop).
+- Sliding the control tracks 1:1; past 70 percent it completes (spring stiffness 350 damping 24), the chrome fading out as Lily&#x27;s view expands to full bleed (400ms, ease-out).
+- In-call, Lily idles with subtle motion (blink every 2 to 4s, small head sway) and talks in bursts (mouth shapes cycling, expression shifts).
+- On the paywall transition, the call view shrinks with rounded corners into a floating mini card (400ms, ease-in-out) that docks at the top of the paywall, its content still live, while the paywall text and buttons rise in below (stagger 100ms, 300ms).
+
+## Calibration
+- The shrink keeps the call alive in miniature - a picture-in-picture feel, not a screenshot.
+- The paywall&#x27;s offer buttons are static once landed; all charm is in the transitions.
+
+## Reduced motion
+Call and paywall crossfade.
+
+## Don&#x27;t miss
+- Lily&#x27;s illustration is 3D-ish character art with real expression changes, not a static avatar.
+- The mini call card keeps animating above the paywall.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">call answer to paywall shrink, gesture-driven start.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-lily-video-call-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's Lily video call - an incoming call screen with a slide-to-answer control, a simulated call where Lily animates and talks, then the call shrinks into a small card atop the Video Call subscription paywall.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA full-screen purple \"Video Call - Lily\" incoming call: Lily's illustrated face large at center, a \"SLIDE TO ANSWER\" slider at the bottom. Answering transitions into the call: Lily fills the screen, idling with blinks and head tilts, then talking with mouth and expression animation. Finally the call view shrinks into a small rounded floating card at the top of a dark paywall: \"Practice real world speaking with Video Call\", a \"TRY FOR\" price button, and \"NO THANKS\".\n\n## Motion spec\nPattern: call answer to paywall shrink, gesture-driven start.\n- The incoming call pulses gently: Lily's portrait breathes (scale 1 to 1.02, 2s) and the slider's chevrons shimmer rightward (1.2s loop).\n- Sliding the control tracks 1:1; past 70 percent it completes (spring stiffness 350 damping 24), the chrome fading out as Lily's view expands to full bleed (400ms, ease-out).\n- In-call, Lily idles with subtle motion (blink every 2 to 4s, small head sway) and talks in bursts (mouth shapes cycling, expression shifts).\n- On the paywall transition, the call view shrinks with rounded corners into a floating mini card (400ms, ease-in-out) that docks at the top of the paywall, its content still live, while the paywall text and buttons rise in below (stagger 100ms, 300ms).\n\n## Calibration\n- The shrink keeps the call alive in miniature - a picture-in-picture feel, not a screenshot.\n- The paywall's offer buttons are static once landed; all charm is in the transitions.\n\n## Reduced motion\nCall and paywall crossfade.\n\n## Don't miss\n- Lily's illustration is 3D-ish character art with real expression changes, not a static avatar.\n- The mini call card keeps animating above the paywall."</script>
+</body></html>

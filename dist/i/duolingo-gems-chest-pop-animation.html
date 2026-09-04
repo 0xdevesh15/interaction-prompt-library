@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Gems Chest Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Gems Chest Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-gems-chest-pop-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-gems-chest-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-gems-chest-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s league reward chest - on the dark screen, a golden treasure chest pops its lid with a spring, blue gems burst out with sparkle particles, and &quot;+60 gems&quot; rises above it over the message &quot;You won 60 gems for finishing in the top 3!&quot; with a blue CONTINUE button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868eaf52f7f889f3d1cf835/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868eaf52f7f889f3d1cf835/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-gems-chest-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s league reward chest - on the dark screen, a golden treasure chest pops its lid with a spring, blue gems burst out with sparkle particles, and &quot;+60 gems&quot; rises above it over the message &quot;You won 60 gems for finishing in the top 3!&quot; with a blue CONTINUE button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark Duolingo screen with the bottom tab bar visible. Center: a chunky golden chest with a lock plate. Above it after the pop: &quot;+60 gems&quot; in blue. Message below: &quot;You won 60 gems for finishing in the top 3!&quot; Blue CONTINUE button at the bottom.
+
+## Motion spec
+Pattern: spring-loaded chest pop with gem burst.
+- The chest idles with a wiggle of anticipation (rotate +/-3deg, two quick shakes, 400ms).
+- The lid springs open (rotate -70deg around the back hinge, spring ~340/14, overshoot wobble) as the chest squashes (scaleY 0.9, 100ms).
+- Blue gems erupt from inside (8-10 gem sprites, radial burst 350ms, gravity fall, some landing in the chest) with small sparkle stars (6-8, scale in/out 300ms).
+- &quot;+60 gems&quot; pops in above the chest (scale 0 -&gt; 1.15 -&gt; 1, spring ~320/16) and floats up slightly.
+- The message fades in below (250ms); CONTINUE slides up (280ms ease-out).
+- Idle after: the open chest glows from inside (warm light pulse, 2s) with occasional gem twinkles.
+
+## Calibration
+- The lid&#x27;s spring is the star - one big overshoot, then a fast settle.
+- Gems read as blue diamonds, clearly countable in the pile.
+
+## Reduced motion
+Chest appears open with gems and text in place; no burst.
+
+## Don&#x27;t miss
+- The lock plate swings with the lid - it is attached, not separate.
+- &quot;+60 gems&quot; is blue to match the gems, sitting above the chest without a container.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring-loaded chest pop with gem burst.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-gems-chest-pop-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's league reward chest - on the dark screen, a golden treasure chest pops its lid with a spring, blue gems burst out with sparkle particles, and \"+60 gems\" rises above it over the message \"You won 60 gems for finishing in the top 3!\" with a blue CONTINUE button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark Duolingo screen with the bottom tab bar visible. Center: a chunky golden chest with a lock plate. Above it after the pop: \"+60 gems\" in blue. Message below: \"You won 60 gems for finishing in the top 3!\" Blue CONTINUE button at the bottom.\n\n## Motion spec\nPattern: spring-loaded chest pop with gem burst.\n- The chest idles with a wiggle of anticipation (rotate +/-3deg, two quick shakes, 400ms).\n- The lid springs open (rotate -70deg around the back hinge, spring ~340/14, overshoot wobble) as the chest squashes (scaleY 0.9, 100ms).\n- Blue gems erupt from inside (8-10 gem sprites, radial burst 350ms, gravity fall, some landing in the chest) with small sparkle stars (6-8, scale in/out 300ms).\n- \"+60 gems\" pops in above the chest (scale 0 -> 1.15 -> 1, spring ~320/16) and floats up slightly.\n- The message fades in below (250ms); CONTINUE slides up (280ms ease-out).\n- Idle after: the open chest glows from inside (warm light pulse, 2s) with occasional gem twinkles.\n\n## Calibration\n- The lid's spring is the star - one big overshoot, then a fast settle.\n- Gems read as blue diamonds, clearly countable in the pile.\n\n## Reduced motion\nChest appears open with gems and text in place; no burst.\n\n## Don't miss\n- The lock plate swings with the lid - it is attached, not separate.\n- \"+60 gems\" is blue to match the gems, sitting above the chest without a container."</script>
+</body></html>

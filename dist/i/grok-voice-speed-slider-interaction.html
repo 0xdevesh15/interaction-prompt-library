@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grok Voice Speed Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Grok Voice Speed Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/grok-voice-speed-slider-interaction"><b>Grok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-voice-speed-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-voice-speed-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Grok&#x27;s voice settings sheet - the companion fox peeks over the sheet while the Speed slider fills fluidly under the drag, its value bubble tracking the thumb from 0.5x to 1.5x.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adefef19535c52ef39925a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adefef19535c52ef39925a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-grok-voice-speed-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Grok&#x27;s voice settings sheet - the companion fox peeks over the sheet while the Speed slider fills fluidly under the drag, its value bubble tracking the thumb from 0.5x to 1.5x.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Voice mode with a 3D fox companion on a sunny path. The &quot;Voice Settings&quot; sheet: a Companion picker (Rudi selected with a check), a Speed slider, and rows for Erase Conversation, Select Audio Device, Open App in Voice Mode, and Autoplay Suggestions.
+
+## Motion spec
+Pattern: fluid slider in a spring sheet, ~400ms sheet, live drag.
+- Sheet: slides up (spring ~320/26, 400ms); the fox ducks as the sheet rises and peeks back over its top edge (spring ~300/20, 300ms delayed 100ms).
+- Slider: the fill tracks the thumb 1:1; the thumb scales to 1.2 while dragging; a value bubble (&quot;1.2x&quot;) rides above it (fade in 150ms on touch down, out on release).
+- Steps: the slider eases into 0.1x stops with a soft tick (haptic-strength scale nudge 1.05, 80ms).
+- Expand: dragging the sheet up reveals the lower rows, which stagger in (30ms each, 250ms).
+
+## Calibration
+- The fill color leads the thumb by a hair at drag start (spring lag, ~180/24) - it catches up, giving the fluid feel.
+- The fox&#x27;s peek reacts to sheet height, not time.
+
+## Reduced motion
+Sheet fades up; slider moves without the fill lag.
+
+## Don&#x27;t miss
+- The value bubble never detaches from the thumb.
+- The companion stays alive behind the sheet - it watches, ducks, and re-peeks.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">fluid slider in a spring sheet, ~400ms sheet, live drag.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/grok-voice-speed-slider-interaction">original interaction</a> by Grok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Grok's voice settings sheet - the companion fox peeks over the sheet while the Speed slider fills fluidly under the drag, its value bubble tracking the thumb from 0.5x to 1.5x.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nVoice mode with a 3D fox companion on a sunny path. The \"Voice Settings\" sheet: a Companion picker (Rudi selected with a check), a Speed slider, and rows for Erase Conversation, Select Audio Device, Open App in Voice Mode, and Autoplay Suggestions.\n\n## Motion spec\nPattern: fluid slider in a spring sheet, ~400ms sheet, live drag.\n- Sheet: slides up (spring ~320/26, 400ms); the fox ducks as the sheet rises and peeks back over its top edge (spring ~300/20, 300ms delayed 100ms).\n- Slider: the fill tracks the thumb 1:1; the thumb scales to 1.2 while dragging; a value bubble (\"1.2x\") rides above it (fade in 150ms on touch down, out on release).\n- Steps: the slider eases into 0.1x stops with a soft tick (haptic-strength scale nudge 1.05, 80ms).\n- Expand: dragging the sheet up reveals the lower rows, which stagger in (30ms each, 250ms).\n\n## Calibration\n- The fill color leads the thumb by a hair at drag start (spring lag, ~180/24) - it catches up, giving the fluid feel.\n- The fox's peek reacts to sheet height, not time.\n\n## Reduced motion\nSheet fades up; slider moves without the fill lag.\n\n## Don't miss\n- The value bubble never detaches from the thumb.\n- The companion stays alive behind the sheet - it watches, ducks, and re-peeks."</script>
+</body></html>

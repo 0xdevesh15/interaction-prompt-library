@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retro Add Widget Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Retro Add Widget Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/retro-add-widget-animation"><b>Retro</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/retro-add-widget-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/retro-add-widget-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Retro&#x27;s add-widget tutorial - a simulated iOS walkthrough inside an &quot;Add a Widget&quot; sheet that steps through long-pressing the home screen, entering jiggle mode, opening the widget gallery, and dropping the Retro &quot;Your Memories&quot; widget, page dots tracking each step.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c83c99376d4fef5f47/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710c83c99376d4fef5f47/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-retro-add-widget-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Retro&#x27;s add-widget tutorial - a simulated iOS walkthrough inside an &quot;Add a Widget&quot; sheet that steps through long-pressing the home screen, entering jiggle mode, opening the widget gallery, and dropping the Retro &quot;Your Memories&quot; widget, page dots tracking each step.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White sheet: &quot;Add a Widget&quot; header with close (x), a large rounded preview window showing the simulated iOS home screen (dark wallpaper, app icon grid), a caption line, page dots, and a &quot;Next&quot;/&quot;Done&quot; button. The final step shows the Retro widget (polaroid-style photo tile with &quot;Your Memories&quot; label) placed on the simulated home screen.
+
+## Motion spec
+Pattern: scripted multi-step simulation, ~8s total across 5 steps.
+- Long-press: a simulated touch ripple presses a home-screen icon (300ms hold), icons pop slightly (scale 1.05).
+- Jiggle mode: all icons start jiggling (rotation -2deg -&gt; 2deg, 120ms alternate, random phase) and a small minus badge fades onto each.
+- Gallery: the simulated widget gallery slides up over the dimmed home screen (350ms, ease-out); the Retro widget tile scrolls into view.
+- Drop: the widget tile springs into its slot (scale 0.9 -&gt; 1.03 -&gt; 1, ~400ms, spring ~320/20), jiggle stops, and the home screen settles.
+- Chrome: page dots advance with each step (active dot stretches, 200ms); Next becomes Done on the last step (cross-fade 150ms).
+
+## Calibration
+- Each simulated step holds long enough to read the caption (~1.2s) before advancing.
+- The jiggle loops seamlessly for as long as that step is displayed.
+
+## Reduced motion
+Steps advance with 200ms cross-fades; no jiggle, ripples, or springs.
+
+## Don&#x27;t miss
+- The simulation lives inside the preview window - the sheet chrome itself never jiggles.
+- The Retro widget is a polaroid photo tile, not a generic gray box.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scripted multi-step simulation, ~8s total across 5 steps.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/retro-add-widget-animation">original interaction</a> by Retro. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Retro's add-widget tutorial - a simulated iOS walkthrough inside an \"Add a Widget\" sheet that steps through long-pressing the home screen, entering jiggle mode, opening the widget gallery, and dropping the Retro \"Your Memories\" widget, page dots tracking each step.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite sheet: \"Add a Widget\" header with close (x), a large rounded preview window showing the simulated iOS home screen (dark wallpaper, app icon grid), a caption line, page dots, and a \"Next\"/\"Done\" button. The final step shows the Retro widget (polaroid-style photo tile with \"Your Memories\" label) placed on the simulated home screen.\n\n## Motion spec\nPattern: scripted multi-step simulation, ~8s total across 5 steps.\n- Long-press: a simulated touch ripple presses a home-screen icon (300ms hold), icons pop slightly (scale 1.05).\n- Jiggle mode: all icons start jiggling (rotation -2deg -> 2deg, 120ms alternate, random phase) and a small minus badge fades onto each.\n- Gallery: the simulated widget gallery slides up over the dimmed home screen (350ms, ease-out); the Retro widget tile scrolls into view.\n- Drop: the widget tile springs into its slot (scale 0.9 -> 1.03 -> 1, ~400ms, spring ~320/20), jiggle stops, and the home screen settles.\n- Chrome: page dots advance with each step (active dot stretches, 200ms); Next becomes Done on the last step (cross-fade 150ms).\n\n## Calibration\n- Each simulated step holds long enough to read the caption (~1.2s) before advancing.\n- The jiggle loops seamlessly for as long as that step is displayed.\n\n## Reduced motion\nSteps advance with 200ms cross-fades; no jiggle, ripples, or springs.\n\n## Don't miss\n- The simulation lives inside the preview window - the sheet chrome itself never jiggles.\n- The Retro widget is a polaroid photo tile, not a generic gray box."</script>
+</body></html>

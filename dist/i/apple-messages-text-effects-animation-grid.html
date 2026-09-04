@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Messages Text Effects Animation Grid - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Messages Text Effects Animation Grid</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-messages-text-effects-animation-grid"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-messages-text-effects-animation-grid">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-messages-text-effects-animation-grid">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Messages&#x27; Text Effects picker - a 2-column grid of effect buttons (Big, Small, Shake, Nod, Explode, Ripple, Bloom, Jitter) where tapping a button plays its typographic animation live on that button&#x27;s own label.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509749948718dd94147ed9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509749948718dd94147ed9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-messages-text-effects-animation-grid.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Messages&#x27; Text Effects picker - a 2-column grid of effect buttons (Big, Small, Shake, Nod, Explode, Ripple, Bloom, Jitter) where tapping a button plays its typographic animation live on that button&#x27;s own label.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Messages conversation view (dark): a sent blue bubble &quot;Whaaaaa&quot; with Delivered, the compose field with the same draft text, a formatting row (B I U S), and below it the effects grid - two columns of rounded dark-gray buttons: Big, Small, Shake, Nod, Explode, Ripple, Bloom, Jitter.
+
+## Motion spec
+Pattern: per-button live preview of named text effects.
+- Tapping an effect button runs its animation on the button&#x27;s label: Big scales glyphs up 1 -&gt; 1.6 and back (staggered per letter, ~600ms); Small shrinks 1 -&gt; 0.6 and back; Shake oscillates translateX +/-6px with slight rotation (~4 shakes, 500ms); Nod rotates letters +/-12deg sequentially; Explode scatters letters outward with fade (~500ms); Ripple runs a scale wave letter by letter (1 -&gt; 1.3, ~90ms per letter); Bloom blurs letters out and back (blur 0 -&gt; 8px); Jitter vibrates each glyph with small random offsets (~2px, 500ms).
+- Only the tapped button animates; the grid, compose field, and conversation stay static.
+- The button shows a pressed state (darken ~15%) on touch-down, independent of the effect.
+
+## Calibration
+- Each effect must be recognizable from its name alone - amplitude matters more than speed.
+- One effect at a time; tapping during a run restarts that button&#x27;s animation.
+
+## Reduced motion
+Tapping a button flashes the label (opacity pulse, 200ms) instead of running the effect.
+
+## Don&#x27;t miss
+- The animation plays on the picker button itself - the message bubble does not preview it here.
+- The formatting row (B I U S) sits above the grid and is not part of the effects.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">per-button live preview of named text effects.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-messages-text-effects-animation-grid">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Messages' Text Effects picker - a 2-column grid of effect buttons (Big, Small, Shake, Nod, Explode, Ripple, Bloom, Jitter) where tapping a button plays its typographic animation live on that button's own label.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMessages conversation view (dark): a sent blue bubble \"Whaaaaa\" with Delivered, the compose field with the same draft text, a formatting row (B I U S), and below it the effects grid - two columns of rounded dark-gray buttons: Big, Small, Shake, Nod, Explode, Ripple, Bloom, Jitter.\n\n## Motion spec\nPattern: per-button live preview of named text effects.\n- Tapping an effect button runs its animation on the button's label: Big scales glyphs up 1 -> 1.6 and back (staggered per letter, ~600ms); Small shrinks 1 -> 0.6 and back; Shake oscillates translateX +/-6px with slight rotation (~4 shakes, 500ms); Nod rotates letters +/-12deg sequentially; Explode scatters letters outward with fade (~500ms); Ripple runs a scale wave letter by letter (1 -> 1.3, ~90ms per letter); Bloom blurs letters out and back (blur 0 -> 8px); Jitter vibrates each glyph with small random offsets (~2px, 500ms).\n- Only the tapped button animates; the grid, compose field, and conversation stay static.\n- The button shows a pressed state (darken ~15%) on touch-down, independent of the effect.\n\n## Calibration\n- Each effect must be recognizable from its name alone - amplitude matters more than speed.\n- One effect at a time; tapping during a run restarts that button's animation.\n\n## Reduced motion\nTapping a button flashes the label (opacity pulse, 200ms) instead of running the effect.\n\n## Don't miss\n- The animation plays on the picker button itself - the message bubble does not preview it here.\n- The formatting row (B I U S) sits above the grid and is not part of the effects."</script>
+</body></html>

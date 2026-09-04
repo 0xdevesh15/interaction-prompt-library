@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Currency Converter Graph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Currency Converter Graph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/currency-converter-graph-interaction"><b>Currency</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/currency-converter-graph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/currency-converter-graph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the converter&#x27;s rate graph - a full-width red card with a line chart, and a finger-driven scrubber that snaps a vertical crosshair to the nearest point while the header value rolls to that point&#x27;s rate.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f7b8fd64e67f87fede/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f7b8fd64e67f87fede/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-currency-converter-graph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the converter&#x27;s rate graph - a full-width red card with a line chart, and a finger-driven scrubber that snaps a vertical crosshair to the nearest point while the header value rolls to that point&#x27;s rate.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Red rounded card pinned under the currency rows: &quot;INR&quot; label and live value top-left, currency name top-right, a jagged white line chart across the card, and a small range tab pill (1M etc.) at the bottom edge.
+
+## Motion spec
+Pattern: crosshair scrub with rolling value, continuous under drag.
+- The chart draws itself in on entry (stroke reveal left to right, 900ms, ease-out).
+- Touch down on the card spawns a vertical crosshair line and a node dot at the nearest data point (120ms fade in); the line between crosshair and edge dims slightly.
+- Dragging tracks the finger horizontally 1:1; the dot snaps point to point and the top-right value rolls odometer-style to each point&#x27;s rate (~150ms per roll, ease-out), with the date label fading between values.
+- The range pill at the bottom nudges to follow the finger&#x27;s x position with lag (spring stiffness 200 damping 22).
+- Lift and the crosshair and dot fade out (200ms); the header value rolls back to the current rate.
+
+## Calibration
+- The snap is magnetic: the dot is always on a real data point, never free-floating between them.
+- The value roll keeps up with a fast scrub - it can skip intermediate digits but never lags behind the crosshair.
+
+## Reduced motion
+Crosshair appears without fade; value sets without rolling.
+
+## Don&#x27;t miss
+- The dimmed trailing line under scrub - it visually marks &quot;past&quot; versus the bright un-scrubbed remainder.
+- The crosshair spans the full card height, clipped inside the card&#x27;s rounded corners.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">crosshair scrub with rolling value, continuous under drag.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/currency-converter-graph-interaction">original interaction</a> by Currency. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the converter's rate graph - a full-width red card with a line chart, and a finger-driven scrubber that snaps a vertical crosshair to the nearest point while the header value rolls to that point's rate.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRed rounded card pinned under the currency rows: \"INR\" label and live value top-left, currency name top-right, a jagged white line chart across the card, and a small range tab pill (1M etc.) at the bottom edge.\n\n## Motion spec\nPattern: crosshair scrub with rolling value, continuous under drag.\n- The chart draws itself in on entry (stroke reveal left to right, 900ms, ease-out).\n- Touch down on the card spawns a vertical crosshair line and a node dot at the nearest data point (120ms fade in); the line between crosshair and edge dims slightly.\n- Dragging tracks the finger horizontally 1:1; the dot snaps point to point and the top-right value rolls odometer-style to each point's rate (~150ms per roll, ease-out), with the date label fading between values.\n- The range pill at the bottom nudges to follow the finger's x position with lag (spring stiffness 200 damping 22).\n- Lift and the crosshair and dot fade out (200ms); the header value rolls back to the current rate.\n\n## Calibration\n- The snap is magnetic: the dot is always on a real data point, never free-floating between them.\n- The value roll keeps up with a fast scrub - it can skip intermediate digits but never lags behind the crosshair.\n\n## Reduced motion\nCrosshair appears without fade; value sets without rolling.\n\n## Don't miss\n- The dimmed trailing line under scrub - it visually marks \"past\" versus the bright un-scrubbed remainder.\n- The crosshair spans the full card height, clipped inside the card's rounded corners."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lume Time Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lume Time Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lume-time-scroll-interaction"><b>Lume</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lume-time-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lume-time-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Lume&#x27;s time scroll - scrubbing through hours and days shifts the pixel landscape&#x27;s palette from night to noon, rolls the temperature, re-labels the condition, and retypes the AI summary for each day.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e0002e8be589b580cfa66e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e0002e8be589b580cfa66e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lume-time-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Lume&#x27;s time scroll - scrubbing through hours and days shifts the pixel landscape&#x27;s palette from night to noon, rolls the temperature, re-labels the condition, and retypes the AI summary for each day.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The pixel weather dashboard scrubbing across time: &quot;TODAY Mar 22, 72°, 8:33 PM&quot; through &quot;7:27 AM, 73°, Sunny&quot;, &quot;12:36 PM, 90°, Partly Cloudy&quot;, then day changes to &quot;SUN Mar 23, 88°&quot;, &quot;MON Mar 24, 89°, Overcast&quot; (with a &quot;Crunching numbers... - GPT&quot; pill), landing on &quot;TUE Mar 25, 90°&quot;. The pixel mountains and sky bands shift hue (deep maroon night, amber morning, bright orange noon).
+
+## Motion spec
+Pattern: scrub-driven palette shift with typed summary per day.
+- Scrubbing the time control: the palette tweens continuously along a day ramp (sky, mountain, and accent colors interpolate, no discrete steps); the temperature and time text update live (values tween over the drag, condition label crossfades when it changes, 200ms).
+- The pixel landscape redraws its bands to the new palette in a rolling shimmer (row-by-row color tween, 20ms per band) while scrubbing.
+- Crossing midnight: the day label rolls (old weekday slides up, new slides in, spring ~340/18), and a &quot;Crunching numbers... - GPT&quot; pill appears (slide + fade, 200ms) while the new day&#x27;s summary composes.
+- Summary retypes character by character (~30ms per char, block cursor), then the pill fades out (200ms).
+- Release: scrub momentum settles with light deceleration to the nearest hour tick.
+
+## Calibration
+- Palette is bound to the hour value, not the gesture velocity - scrubbing back and forth retraces colors exactly.
+- Text stays crisp over the brightest palette; add a subtle darkening scrim behind the summary when the sky is light.
+
+## Reduced motion
+Time changes jump-cut with a 250ms crossfade; summary appears fully typed.
+
+## Don&#x27;t miss
+- The weekday rolls only on day boundaries; hours never touch it.
+- The pixel-art edges stay sharp through every palette tween - colors change, geometry does not.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scrub-driven palette shift with typed summary per day.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lume-time-scroll-interaction">original interaction</a> by Lume. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Lume's time scroll - scrubbing through hours and days shifts the pixel landscape's palette from night to noon, rolls the temperature, re-labels the condition, and retypes the AI summary for each day.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe pixel weather dashboard scrubbing across time: \"TODAY Mar 22, 72\u00b0, 8:33 PM\" through \"7:27 AM, 73\u00b0, Sunny\", \"12:36 PM, 90\u00b0, Partly Cloudy\", then day changes to \"SUN Mar 23, 88\u00b0\", \"MON Mar 24, 89\u00b0, Overcast\" (with a \"Crunching numbers... - GPT\" pill), landing on \"TUE Mar 25, 90\u00b0\". The pixel mountains and sky bands shift hue (deep maroon night, amber morning, bright orange noon).\n\n## Motion spec\nPattern: scrub-driven palette shift with typed summary per day.\n- Scrubbing the time control: the palette tweens continuously along a day ramp (sky, mountain, and accent colors interpolate, no discrete steps); the temperature and time text update live (values tween over the drag, condition label crossfades when it changes, 200ms).\n- The pixel landscape redraws its bands to the new palette in a rolling shimmer (row-by-row color tween, 20ms per band) while scrubbing.\n- Crossing midnight: the day label rolls (old weekday slides up, new slides in, spring ~340/18), and a \"Crunching numbers... - GPT\" pill appears (slide + fade, 200ms) while the new day's summary composes.\n- Summary retypes character by character (~30ms per char, block cursor), then the pill fades out (200ms).\n- Release: scrub momentum settles with light deceleration to the nearest hour tick.\n\n## Calibration\n- Palette is bound to the hour value, not the gesture velocity - scrubbing back and forth retraces colors exactly.\n- Text stays crisp over the brightest palette; add a subtle darkening scrim behind the summary when the sky is light.\n\n## Reduced motion\nTime changes jump-cut with a 250ms crossfade; summary appears fully typed.\n\n## Don't miss\n- The weekday rolls only on day boundaries; hours never touch it.\n- The pixel-art edges stay sharp through every palette tween - colors change, geometry does not."</script>
+</body></html>

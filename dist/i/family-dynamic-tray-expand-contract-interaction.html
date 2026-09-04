@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Dynamic Tray Expand Contract Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Dynamic Tray Expand Contract Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-dynamic-tray-expand-contract-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-dynamic-tray-expand-contract-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-dynamic-tray-expand-contract-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s wallet-customization tray system - from the light &quot;Wallets&quot; grid, a &quot;Wallet Details&quot; tray morphs and resizes through a full customization flow (rename with keyboard, icon source menu, emoji grid, emoji color editor with Save) and contracts home, updating the wallet&#x27;s identity in place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895332f7f889f3d1b4559/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895332f7f889f3d1b4559/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-dynamic-tray-expand-contract-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s wallet-customization tray system - from the light &quot;Wallets&quot; grid, a &quot;Wallet Details&quot; tray morphs and resizes through a full customization flow (rename with keyboard, icon source menu, emoji grid, emoji color editor with Save) and contracts home, updating the wallet&#x27;s identity in place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light &quot;Wallets&quot; screen: pastel card grid (pink, blue, cream, mint, gray, green), &quot;Edit Watching&quot; row of circular avatars (John, vitalk.eth, Marissa, BFFs), Done button. Tray states: &quot;Wallet Details&quot; menu (Edit Wallet, Notifications, Remove Wallet); rename state (field &quot;Luke&quot;, Icon row, blue Save, keyboard); &quot;Select Icon&quot; (Use ENS Avatar, Take Photo, Choose Image, Use Emoji, Use Icon); &quot;Choose an Emoji&quot; (search, full emoji grid); &quot;Use Emoji&quot; (large emoji preview, two rows of color dots, Save). End state: grid with the customized wallet.
+
+## Motion spec
+Pattern: tray expand/contract with modal handoff.
+- Tap a watched wallet: the tray rises (spring ~300/20), the grid dimming behind it (scrim 35%).
+- Each deeper step: the tray&#x27;s height springs to the new content (spring ~280/22, 300ms) while the old rows slide up and fade (150ms) and the new rows rise (spring ~320/18, 50ms stagger).
+- The rename step pairs tray growth with the keyboard (lockstep, 250ms); the field&#x27;s text caret blinks immediately.
+- The emoji grid step is the tray at its tallest; picking an emoji contracts it to the color editor, the emoji flying into the preview circle (arc, 250ms).
+- Color dots select with an instant ring highlight (100ms) and the preview recolors (150ms crossfade).
+- Save collapses the tray step-by-step back (editor -&gt; details, 250ms) and Done drops it fully (250ms); the wallet&#x27;s circle in Edit Watching and its grid card update together (200ms crossfade).
+
+## Calibration
+- One tray surface the whole flow - steps resize it, never replace it.
+- Save is always blue, always bottom-anchored, and disabled until a change exists.
+
+## Reduced motion
+Tray steps crossfade (200ms); height eases linearly (250ms).
+
+## Don&#x27;t miss
+- The color dots run two rows, magenta through black; the selected dot gets a dark ring.
+- The grid cards behind the tray stay parallax-still - only the scrim changes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tray expand/contract with modal handoff.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-dynamic-tray-expand-contract-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's wallet-customization tray system - from the light \"Wallets\" grid, a \"Wallet Details\" tray morphs and resizes through a full customization flow (rename with keyboard, icon source menu, emoji grid, emoji color editor with Save) and contracts home, updating the wallet's identity in place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight \"Wallets\" screen: pastel card grid (pink, blue, cream, mint, gray, green), \"Edit Watching\" row of circular avatars (John, vitalk.eth, Marissa, BFFs), Done button. Tray states: \"Wallet Details\" menu (Edit Wallet, Notifications, Remove Wallet); rename state (field \"Luke\", Icon row, blue Save, keyboard); \"Select Icon\" (Use ENS Avatar, Take Photo, Choose Image, Use Emoji, Use Icon); \"Choose an Emoji\" (search, full emoji grid); \"Use Emoji\" (large emoji preview, two rows of color dots, Save). End state: grid with the customized wallet.\n\n## Motion spec\nPattern: tray expand/contract with modal handoff.\n- Tap a watched wallet: the tray rises (spring ~300/20), the grid dimming behind it (scrim 35%).\n- Each deeper step: the tray's height springs to the new content (spring ~280/22, 300ms) while the old rows slide up and fade (150ms) and the new rows rise (spring ~320/18, 50ms stagger).\n- The rename step pairs tray growth with the keyboard (lockstep, 250ms); the field's text caret blinks immediately.\n- The emoji grid step is the tray at its tallest; picking an emoji contracts it to the color editor, the emoji flying into the preview circle (arc, 250ms).\n- Color dots select with an instant ring highlight (100ms) and the preview recolors (150ms crossfade).\n- Save collapses the tray step-by-step back (editor -> details, 250ms) and Done drops it fully (250ms); the wallet's circle in Edit Watching and its grid card update together (200ms crossfade).\n\n## Calibration\n- One tray surface the whole flow - steps resize it, never replace it.\n- Save is always blue, always bottom-anchored, and disabled until a change exists.\n\n## Reduced motion\nTray steps crossfade (200ms); height eases linearly (250ms).\n\n## Don't miss\n- The color dots run two rows, magenta through black; the selected dot gets a dark ring.\n- The grid cards behind the tray stay parallax-still - only the scrim changes."</script>
+</body></html>

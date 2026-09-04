@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo ABC Draw Letters - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo ABC Draw Letters</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-abc-draw-letters"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-abc-draw-letters">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-abc-draw-letters">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo ABC&#x27;s letter tracing - a big outline letter (&quot;J&quot;) appears on ruled lines with a blue arrow puck showing where to start; following the stroke draws it in thick black, green sparkles celebrate completion, and the scene transitions to a dark map where a reward ball hops along a path onto a podium.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56e9fb5be771faba1158b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56e9fb5be771faba1158b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-abc-draw-letters.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo ABC&#x27;s letter tracing - a big outline letter (&quot;J&quot;) appears on ruled lines with a blue arrow puck showing where to start; following the stroke draws it in thick black, green sparkles celebrate completion, and the scene transitions to a dark map where a reward ball hops along a path onto a podium.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White tracing canvas: faint gray &quot;Jr&quot; target text at top, ruled handwriting lines, the letter outline with numbered stroke start points and a blue circular puck with an arrow. Map scene: dark brown map with path nodes, a blue-yellow ball, a purple podium, back and grid buttons.
+
+## Motion spec
+Pattern: guided stroke tracing into map reward.
+- Entry: the letter outline draws itself in faintly (600ms) and the puck pulses at the stroke start (scale 1 -&gt; 1.15, 1s loop).
+- Tracing: the stroke fills thick black following the finger within a generous tolerance (~24px); the puck leads 20px ahead, tilting along the stroke direction; lifting mid-stroke pauses, resuming continues - no punishment.
+- Stroke complete: green sparkles pop along the stroke (8-10 pops, scale 0 -&gt; 1 -&gt; 0, 400ms, staggered 60ms) and the target text turns green with a small bounce.
+- Multi-stroke letters: the next stroke&#x27;s puck appears only after the previous stroke&#x27;s sparkle settles.
+- Transition: the canvas wipes to the map (400ms); the reward ball hops along the path (arc hops, spring ~280/18 per hop, squash on landing) and mounts the podium, a final star burst firing on arrival.
+
+## Calibration
+- Stroke direction matters: the puck shows the intended path; wrong-direction drags still fill but the puck nudges back.
+- Sparkles are green - Duo&#x27;s brand applause.
+
+## Reduced motion
+Letter fills statically on trace; map fades in; ball appears on the podium.
+
+## Don&#x27;t miss
+- The puck leads, the ink follows - the child chases it; never let ink appear ahead of the finger.
+- The map hop sequence is the real reward - budget it a full 2 seconds.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">guided stroke tracing into map reward.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-abc-draw-letters">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo ABC's letter tracing - a big outline letter (\"J\") appears on ruled lines with a blue arrow puck showing where to start; following the stroke draws it in thick black, green sparkles celebrate completion, and the scene transitions to a dark map where a reward ball hops along a path onto a podium.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite tracing canvas: faint gray \"Jr\" target text at top, ruled handwriting lines, the letter outline with numbered stroke start points and a blue circular puck with an arrow. Map scene: dark brown map with path nodes, a blue-yellow ball, a purple podium, back and grid buttons.\n\n## Motion spec\nPattern: guided stroke tracing into map reward.\n- Entry: the letter outline draws itself in faintly (600ms) and the puck pulses at the stroke start (scale 1 -> 1.15, 1s loop).\n- Tracing: the stroke fills thick black following the finger within a generous tolerance (~24px); the puck leads 20px ahead, tilting along the stroke direction; lifting mid-stroke pauses, resuming continues - no punishment.\n- Stroke complete: green sparkles pop along the stroke (8-10 pops, scale 0 -> 1 -> 0, 400ms, staggered 60ms) and the target text turns green with a small bounce.\n- Multi-stroke letters: the next stroke's puck appears only after the previous stroke's sparkle settles.\n- Transition: the canvas wipes to the map (400ms); the reward ball hops along the path (arc hops, spring ~280/18 per hop, squash on landing) and mounts the podium, a final star burst firing on arrival.\n\n## Calibration\n- Stroke direction matters: the puck shows the intended path; wrong-direction drags still fill but the puck nudges back.\n- Sparkles are green - Duo's brand applause.\n\n## Reduced motion\nLetter fills statically on trace; map fades in; ball appears on the podium.\n\n## Don't miss\n- The puck leads, the ink follows - the child chases it; never let ink appear ahead of the finger.\n- The map hop sequence is the real reward - budget it a full 2 seconds."</script>
+</body></html>

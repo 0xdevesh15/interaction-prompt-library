@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harvee Tab Switch Graph Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Harvee Tab Switch Graph Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/harvee-tab-switch-graph-morph-interaction"><b>Harvee</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/harvee-tab-switch-graph-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/harvee-tab-switch-graph-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Harvee&#x27;s Patterns screen - switching between &quot;7 Days&quot; and &quot;4 Weeks&quot; tabs morphs the dot-matrix history grid, re-animates the Stress Levels donut chart, and updates the Stressful Periods card with new timeframe data.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69171d15df9720847e0ac8c9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69171d15df9720847e0ac8c9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-harvee-tab-switch-graph-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Harvee&#x27;s Patterns screen - switching between &quot;7 Days&quot; and &quot;4 Weeks&quot; tabs morphs the dot-matrix history grid, re-animates the Stress Levels donut chart, and updates the Stressful Periods card with new timeframe data.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark analytics screen: &quot;Patterns&quot; header, a segmented control (7 Days | 4 Weeks) with the date range beneath, a dot-matrix grid (rows of small colored dots - one per logged entry), a &quot;Stress Levels&quot; section with a rainbow donut chart and legend rows (counts per level), a &quot;Stressful Periods&quot; card with a day/time summary, and a bottom tab bar.
+
+## Motion spec
+Pattern: timeframe switch with chart morphs, ~600ms.
+- Tab: the segmented indicator slides to the new tab (spring ~380/24); the date range label cross-fades (150ms).
+- Dot grid: dots scale down and out (150ms) while the new timeframe&#x27;s dots scale in with a wave stagger (row by row, 30ms per row, spring ~420/20); colors map to the new data.
+- Donut: the chart&#x27;s arcs animate to the new values - segments sweep clockwise to their new angles (500ms, ease-in-out) while legend counts count up (400ms).
+- Stressful Periods: the summary text cross-fades to the new pattern (200ms) and the card does a subtle lift (translateY 4px -&gt; 0).
+
+## Calibration
+- The donut morphs from current values - never resets to zero between tabs.
+- The dot grid wave reads top-to-bottom; a random sparkle order looks noisy.
+
+## Reduced motion
+All three modules cross-fade to the new timeframe&#x27;s state (200ms).
+
+## Don&#x27;t miss
+- The donut keeps its rainbow segment language (green through red) across timeframes.
+- The segmented control, header, and tab bar stay fixed - only data modules animate.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">timeframe switch with chart morphs, ~600ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/harvee-tab-switch-graph-morph-interaction">original interaction</a> by Harvee. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Harvee's Patterns screen - switching between \"7 Days\" and \"4 Weeks\" tabs morphs the dot-matrix history grid, re-animates the Stress Levels donut chart, and updates the Stressful Periods card with new timeframe data.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark analytics screen: \"Patterns\" header, a segmented control (7 Days | 4 Weeks) with the date range beneath, a dot-matrix grid (rows of small colored dots - one per logged entry), a \"Stress Levels\" section with a rainbow donut chart and legend rows (counts per level), a \"Stressful Periods\" card with a day/time summary, and a bottom tab bar.\n\n## Motion spec\nPattern: timeframe switch with chart morphs, ~600ms.\n- Tab: the segmented indicator slides to the new tab (spring ~380/24); the date range label cross-fades (150ms).\n- Dot grid: dots scale down and out (150ms) while the new timeframe's dots scale in with a wave stagger (row by row, 30ms per row, spring ~420/20); colors map to the new data.\n- Donut: the chart's arcs animate to the new values - segments sweep clockwise to their new angles (500ms, ease-in-out) while legend counts count up (400ms).\n- Stressful Periods: the summary text cross-fades to the new pattern (200ms) and the card does a subtle lift (translateY 4px -> 0).\n\n## Calibration\n- The donut morphs from current values - never resets to zero between tabs.\n- The dot grid wave reads top-to-bottom; a random sparkle order looks noisy.\n\n## Reduced motion\nAll three modules cross-fade to the new timeframe's state (200ms).\n\n## Don't miss\n- The donut keeps its rainbow segment language (green through red) across timeframes.\n- The segmented control, header, and tab bar stay fixed - only data modules animate."</script>
+</body></html>

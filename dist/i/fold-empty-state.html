@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fold Empty State - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fold Empty State</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fold-empty-state"><b>Fold</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-empty-state">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-empty-state">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Fold&#x27;s market-closed empty state - a line-drawn mascot loops a playful idle animation above a delayed-data notice and a refresh schedule card.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd12371d29849d7bdb49/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd12371d29849d7bdb49/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fold-empty-state.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Fold&#x27;s market-closed empty state - a line-drawn mascot loops a playful idle animation above a delayed-data notice and a refresh schedule card.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A light-gray screen: centered line-art mascot (a circle-faced character with small arms, drawn in single-weight black stroke), &quot;Market is closed&quot; with &quot;Till tomorrow, 9:15 AM&quot; beneath, a dashed-border pill reading &quot;YOUR DATA COULD BE A BIT DELAYED&quot;, and a &quot;Stocks &amp; ETFs&quot; card listing last refresh (&quot;20 hours ago&quot;) and next refresh (&quot;Today, 7:23 PM&quot;).
+
+## Motion spec
+Pattern: looping mascot idle.
+- The mascot loops a ~3s idle: it bobs gently (translateY +-4px, 1.5s sine), its arms swing in small arcs (rotate +-10deg, phase-offset from the bob), and every other loop it looks sideways (head/eyes translate 3px, hold 400ms, return).
+- Once per ~4 loops the mascot does a trick: a quick spin (rotate 360deg, 600ms, ease-in-out) or a jump (translateY -14px with squash on landing, spring ~420/20).
+- The notice pill&#x27;s dashed border marches slowly (dash offset animating, 8s per cycle) - the only other motion on screen.
+- On pull-to-refresh (though closed), the mascot spins once and the card rows shimmer briefly (600ms) before re-settling with unchanged times.
+
+## Calibration
+- The line weight of the mascot matches the card icons - the whole screen reads as one illustration system.
+- Idle amplitude stays small: this is a waiting room, not a celebration.
+
+## Reduced motion
+Mascot static; pill border still.
+
+## Don&#x27;t miss
+- The mascot is pure line art - no fills, no color; the only tint is the pill&#x27;s dashed stroke.
+- Refresh times are the content: muted gray labels, darker values, no animation on the text.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping mascot idle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fold-empty-state">original interaction</a> by Fold. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Fold's market-closed empty state - a line-drawn mascot loops a playful idle animation above a delayed-data notice and a refresh schedule card.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA light-gray screen: centered line-art mascot (a circle-faced character with small arms, drawn in single-weight black stroke), \"Market is closed\" with \"Till tomorrow, 9:15 AM\" beneath, a dashed-border pill reading \"YOUR DATA COULD BE A BIT DELAYED\", and a \"Stocks & ETFs\" card listing last refresh (\"20 hours ago\") and next refresh (\"Today, 7:23 PM\").\n\n## Motion spec\nPattern: looping mascot idle.\n- The mascot loops a ~3s idle: it bobs gently (translateY +-4px, 1.5s sine), its arms swing in small arcs (rotate +-10deg, phase-offset from the bob), and every other loop it looks sideways (head/eyes translate 3px, hold 400ms, return).\n- Once per ~4 loops the mascot does a trick: a quick spin (rotate 360deg, 600ms, ease-in-out) or a jump (translateY -14px with squash on landing, spring ~420/20).\n- The notice pill's dashed border marches slowly (dash offset animating, 8s per cycle) - the only other motion on screen.\n- On pull-to-refresh (though closed), the mascot spins once and the card rows shimmer briefly (600ms) before re-settling with unchanged times.\n\n## Calibration\n- The line weight of the mascot matches the card icons - the whole screen reads as one illustration system.\n- Idle amplitude stays small: this is a waiting room, not a celebration.\n\n## Reduced motion\nMascot static; pill border still.\n\n## Don't miss\n- The mascot is pure line art - no fills, no color; the only tint is the pill's dashed stroke.\n- Refresh times are the content: muted gray labels, darker values, no animation on the text."</script>
+</body></html>

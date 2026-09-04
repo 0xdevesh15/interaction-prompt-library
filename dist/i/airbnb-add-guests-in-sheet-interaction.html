@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Add Guests in Sheet Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Add Guests in Sheet Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-add-guests-in-sheet-interaction"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-add-guests-in-sheet-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-add-guests-in-sheet-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airbnb&#x27;s guest counter sheet - every tap of + springs another little illustrated person into the row above the count, and at 16+ a llama trots in as the easter egg.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdb5ff8d4ab5d59e3e9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdb5ff8d4ab5d59e3e9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-add-guests-in-sheet-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airbnb&#x27;s guest counter sheet - every tap of + springs another little illustrated person into the row above the count, and at 16+ a llama trots in as the easter egg.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Airbnb bottom sheet, white (shown in Russian locale): title &quot;Сколько гостей с комфортом разместится в жилье?&quot;, a large count with - and + steppers, and above the count a growing row of tiny illustrated people in varied colors. At 16+ the counter shows &quot;16+&quot; and a llama joins the row.
+
+## Motion spec
+Pattern: one springy character spawned per count increment.
+- Tap +: the count rolls to the new number (digits slide up, 200ms) and a new person pops into the row at its end: scale 0 -&gt; 1 with spring ~480/16 (snappy overshoot) plus a 10px rise-and-settle.
+- The row recenters each time so the group stays centered (translate, 250ms ease-out); existing figures stay planted - only the newcomer animates.
+- Tap -: the last figure shrinks out (scale -&gt; 0, 180ms, slight drop) and the count rolls down.
+- At 16 the + caps: the count becomes &quot;16+&quot;, the + button dims to disabled, and the llama slides in from the right end of the row (translateX 30 -&gt; 0 with a two-bounce trot, spring ~300/12) - the only figure that enters sideways.
+- Haptic tick on every increment/decrement; a heavier thud on the llama.
+
+## Calibration
+- Figures are flat vector people ~28px tall, assorted colors/poses - no duplicates adjacent.
+- The row never exceeds one line; figures compress spacing slightly (min 4px gaps) past 10.
+
+## Reduced motion
+Figures fade in/out (200ms); count changes instantly.
+
+## Don&#x27;t miss
+- The llama appears only at 16+ - never in the normal range.
+- The sheet&#x27;s title and steppers never move; the row above the count owns all the motion.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">one springy character spawned per count increment.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-add-guests-in-sheet-interaction">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airbnb's guest counter sheet - every tap of + springs another little illustrated person into the row above the count, and at 16+ a llama trots in as the easter egg.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAirbnb bottom sheet, white (shown in Russian locale): title \"\u0421\u043a\u043e\u043b\u044c\u043a\u043e \u0433\u043e\u0441\u0442\u0435\u0439 \u0441 \u043a\u043e\u043c\u0444\u043e\u0440\u0442\u043e\u043c \u0440\u0430\u0437\u043c\u0435\u0441\u0442\u0438\u0442\u0441\u044f \u0432 \u0436\u0438\u043b\u044c\u0435?\", a large count with - and + steppers, and above the count a growing row of tiny illustrated people in varied colors. At 16+ the counter shows \"16+\" and a llama joins the row.\n\n## Motion spec\nPattern: one springy character spawned per count increment.\n- Tap +: the count rolls to the new number (digits slide up, 200ms) and a new person pops into the row at its end: scale 0 -> 1 with spring ~480/16 (snappy overshoot) plus a 10px rise-and-settle.\n- The row recenters each time so the group stays centered (translate, 250ms ease-out); existing figures stay planted - only the newcomer animates.\n- Tap -: the last figure shrinks out (scale -> 0, 180ms, slight drop) and the count rolls down.\n- At 16 the + caps: the count becomes \"16+\", the + button dims to disabled, and the llama slides in from the right end of the row (translateX 30 -> 0 with a two-bounce trot, spring ~300/12) - the only figure that enters sideways.\n- Haptic tick on every increment/decrement; a heavier thud on the llama.\n\n## Calibration\n- Figures are flat vector people ~28px tall, assorted colors/poses - no duplicates adjacent.\n- The row never exceeds one line; figures compress spacing slightly (min 4px gaps) past 10.\n\n## Reduced motion\nFigures fade in/out (200ms); count changes instantly.\n\n## Don't miss\n- The llama appears only at 16+ - never in the normal range.\n- The sheet's title and steppers never move; the row above the count owns all the motion."</script>
+</body></html>

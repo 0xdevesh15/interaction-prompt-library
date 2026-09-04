@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ahead Stats to Commit to Pricing - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Ahead Stats to Commit to Pricing</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ahead-stats-to-commit-to-pricing"><b>Ahead</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ahead-stats-to-commit-to-pricing">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ahead-stats-to-commit-to-pricing">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Ahead&#x27;s stats-to-pricing run - a welcome screen, an animated outcome chart (&quot;70% fewer emotional reactions within 2 weeks&quot;), a draw-a-smile commitment canvas, a notification ask, and a purple pricing screen with a free-trial CTA.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f612225b7b88f794c711/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f612225b7b88f794c711/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ahead-stats-to-commit-to-pricing.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Ahead&#x27;s stats-to-pricing run - a welcome screen, an animated outcome chart (&quot;70% fewer emotional reactions within 2 weeks&quot;), a draw-a-smile commitment canvas, a notification ask, and a purple pricing screen with a free-trial CTA.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+All screens deep purple with white text. 1: &quot;Welcome aboard, Rishi!&quot; with floating mascot, Let&#x27;s go button. 2: &quot;Ahead members regret 70% fewer emotional reactions within 2 weeks&quot; over a line chart comparing &quot;Other people&quot; (rising line) and &quot;Ahead members&quot; (falling line), plus a 5-star review card; I&#x27;m ready button. 3: &quot;Give change a fair chance: Do 5 min of Ahead for 5 days!&quot; with a flag-on-a-hill illustration and a drawing canvas (&quot;Ready to commit? Draw a happy face!&quot;) plus &quot;I commit to myself&quot; button. 4: &quot;Want to remind your future self to keep going?&quot; with a time picker card, &quot;Help me reach my goal&quot; and &quot;Not now&quot;. 5: &quot;Become a better manager with Ahead!&quot; - feature checklist with colored icons, award laurels, star rating, &quot;Start my free 7 days&quot; button, Restore purchases.
+
+## Motion spec
+Pattern: animated proof chart, draw-to-commit canvas, staggered pricing reveal.
+- Pushes slide horizontally (300ms, ease-out) with the top progress bar advancing per step.
+- The chart draws on entrance: both lines stroke in left to right (~900ms, ease-in-out), the Ahead line slightly delayed (~200ms), with their end labels popping in as each stroke finishes (scale 0.6 to 1.0 spring, stiffness ~320, damping ~20). The review card fades up after (translateY 12px, 200ms).
+- The smile canvas renders freehand strokes as dark rounded ink (width ~6px, 1:1 with touch); a drawn face (two dots + curve) enables the commit button (gray to purple, 150ms) and the flag illustration waves (rotation +-5deg, 400ms).
+- The pricing screen staggers: checklist rows slide in one by one (translateY 14px to 0, 180ms, 70ms apart), laurels scale in last, and the CTA rises from the bottom (translateY 100% to 0, 250ms).
+
+## Calibration
+- Chart lines must animate together but not identically - the delay between them is what separates &quot;other people&quot; from &quot;Ahead members&quot;.
+- Each screen has exactly one primary button at the bottom; keep the rhythm identical so the flow feels like one machine.
+
+## Reduced motion
+Chart renders final; staggers and canvas celebration become 150ms fades; drawing input stays functional.
+
+## Don&#x27;t miss
+- The commitment canvas asks for a happy face specifically, not a checkmark - detection should accept any drawn content of sufficient length.
+- &quot;Not now&quot; on the reminder screen is a quiet text action; the flow continues to pricing either way.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">animated proof chart, draw-to-commit canvas, staggered pricing reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ahead-stats-to-commit-to-pricing">original interaction</a> by Ahead. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Ahead's stats-to-pricing run - a welcome screen, an animated outcome chart (\"70% fewer emotional reactions within 2 weeks\"), a draw-a-smile commitment canvas, a notification ask, and a purple pricing screen with a free-trial CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAll screens deep purple with white text. 1: \"Welcome aboard, Rishi!\" with floating mascot, Let's go button. 2: \"Ahead members regret 70% fewer emotional reactions within 2 weeks\" over a line chart comparing \"Other people\" (rising line) and \"Ahead members\" (falling line), plus a 5-star review card; I'm ready button. 3: \"Give change a fair chance: Do 5 min of Ahead for 5 days!\" with a flag-on-a-hill illustration and a drawing canvas (\"Ready to commit? Draw a happy face!\") plus \"I commit to myself\" button. 4: \"Want to remind your future self to keep going?\" with a time picker card, \"Help me reach my goal\" and \"Not now\". 5: \"Become a better manager with Ahead!\" - feature checklist with colored icons, award laurels, star rating, \"Start my free 7 days\" button, Restore purchases.\n\n## Motion spec\nPattern: animated proof chart, draw-to-commit canvas, staggered pricing reveal.\n- Pushes slide horizontally (300ms, ease-out) with the top progress bar advancing per step.\n- The chart draws on entrance: both lines stroke in left to right (~900ms, ease-in-out), the Ahead line slightly delayed (~200ms), with their end labels popping in as each stroke finishes (scale 0.6 to 1.0 spring, stiffness ~320, damping ~20). The review card fades up after (translateY 12px, 200ms).\n- The smile canvas renders freehand strokes as dark rounded ink (width ~6px, 1:1 with touch); a drawn face (two dots + curve) enables the commit button (gray to purple, 150ms) and the flag illustration waves (rotation +-5deg, 400ms).\n- The pricing screen staggers: checklist rows slide in one by one (translateY 14px to 0, 180ms, 70ms apart), laurels scale in last, and the CTA rises from the bottom (translateY 100% to 0, 250ms).\n\n## Calibration\n- Chart lines must animate together but not identically - the delay between them is what separates \"other people\" from \"Ahead members\".\n- Each screen has exactly one primary button at the bottom; keep the rhythm identical so the flow feels like one machine.\n\n## Reduced motion\nChart renders final; staggers and canvas celebration become 150ms fades; drawing input stays functional.\n\n## Don't miss\n- The commitment canvas asks for a happy face specifically, not a checkmark - detection should accept any drawn content of sufficient length.\n- \"Not now\" on the reminder screen is a quiet text action; the flow continues to pricing either way."</script>
+</body></html>

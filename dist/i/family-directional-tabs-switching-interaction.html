@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Bottom Navigation Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Bottom Navigation Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-directional-tabs-switching-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-directional-tabs-switching-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-directional-tabs-switching-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s morphing bottom navigation - the light tab bar fluidly expands, contracts, and merges its buttons as the active tab changes between the token list home and the dapp browser, the active icon growing into a labeled pill while neighbors compress.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d1fc386bd77fdc73b7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d1fc386bd77fdc73b7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-directional-tabs-switching-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s morphing bottom navigation - the light tab bar fluidly expands, contracts, and merges its buttons as the active tab changes between the token list home and the dapp browser, the active icon growing into a labeled pill while neighbors compress.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light wallet home: Benji header, &quot;Tokens $623.58&quot; list (Aave $922.74, Ethereum $375.08, Optimism $2.98, Tether $2.98, Polygon $15.75, Alongside Crypto Market $7.60, Bridged USDC $0.02, WETH $9.53, Worldcoin, The Doge NFT). Bottom bar: home, compass (browse), wallet, activity icons. Browse screen: &quot;Suggested&quot; dapp grid (Mirror, Zora, Foundation, OpenSea, Uniswap, mint.fun, Sound.xyz, Party), URL bar &quot;Start Exploring Web3...&quot;, search field. A dark &quot;This Week&quot; activity view also appears.
+
+## Motion spec
+Pattern: direction-aware tab bar morph with expanding active pill.
+- Tap a tab: the destination icon&#x27;s circle expands into a rounded pill (width 44 -&gt; 88pt, spring ~320/18, 300ms), its label fading in inside the pill (150ms, delayed 100ms), while the previously active pill contracts back to a bare circle (reverse spring, 250ms).
+- Adjacent icons slide to fill the freed space (translateX spring ~300/22), the bar&#x27;s internal spacing easing so no gap flashes.
+- The content crossfades under the bar (200ms); on home the token list staggers in (40ms rows), on browse the Suggested grid pops (2 columns, 30ms stagger, scale 0.9 -&gt; 1).
+- Switching directions reverses the travel: the pill grows toward the side the new tab sits on, icons compressing away from it.
+
+## Calibration
+- The bar height never changes; only pill width and label visibility animate.
+- The active pill&#x27;s fill is black with white glyph; inactive icons stay gray.
+
+## Reduced motion
+Pill and label crossfade (200ms) without width animation.
+
+## Don&#x27;t miss
+- The browse screen&#x27;s URL bar sits directly above the tab bar and shares its rounded language.
+- The activity icon shows a badge state in the dark &quot;This Week&quot; view.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">direction-aware tab bar morph with expanding active pill.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-directional-tabs-switching-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's morphing bottom navigation - the light tab bar fluidly expands, contracts, and merges its buttons as the active tab changes between the token list home and the dapp browser, the active icon growing into a labeled pill while neighbors compress.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight wallet home: Benji header, \"Tokens $623.58\" list (Aave $922.74, Ethereum $375.08, Optimism $2.98, Tether $2.98, Polygon $15.75, Alongside Crypto Market $7.60, Bridged USDC $0.02, WETH $9.53, Worldcoin, The Doge NFT). Bottom bar: home, compass (browse), wallet, activity icons. Browse screen: \"Suggested\" dapp grid (Mirror, Zora, Foundation, OpenSea, Uniswap, mint.fun, Sound.xyz, Party), URL bar \"Start Exploring Web3...\", search field. A dark \"This Week\" activity view also appears.\n\n## Motion spec\nPattern: direction-aware tab bar morph with expanding active pill.\n- Tap a tab: the destination icon's circle expands into a rounded pill (width 44 -> 88pt, spring ~320/18, 300ms), its label fading in inside the pill (150ms, delayed 100ms), while the previously active pill contracts back to a bare circle (reverse spring, 250ms).\n- Adjacent icons slide to fill the freed space (translateX spring ~300/22), the bar's internal spacing easing so no gap flashes.\n- The content crossfades under the bar (200ms); on home the token list staggers in (40ms rows), on browse the Suggested grid pops (2 columns, 30ms stagger, scale 0.9 -> 1).\n- Switching directions reverses the travel: the pill grows toward the side the new tab sits on, icons compressing away from it.\n\n## Calibration\n- The bar height never changes; only pill width and label visibility animate.\n- The active pill's fill is black with white glyph; inactive icons stay gray.\n\n## Reduced motion\nPill and label crossfade (200ms) without width animation.\n\n## Don't miss\n- The browse screen's URL bar sits directly above the tab bar and shares its rounded language.\n- The activity icon shows a badge state in the dark \"This Week\" view."</script>
+</body></html>

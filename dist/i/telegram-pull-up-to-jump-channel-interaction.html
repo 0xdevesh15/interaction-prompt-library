@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram Pull Up to Jump Channel Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Telegram Pull Up to Jump Channel Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/telegram-pull-up-to-jump-channel-interaction"><b>Telegram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-pull-up-to-jump-channel-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-pull-up-to-jump-channel-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Telegram&#x27;s pull-up-to-next-channel - at the bottom of a channel feed, pulling up stretches the feed elastically, reveals a circular arrow button and &quot;Release to go to the next unread channel&quot;, and releasing slides the next channel&#x27;s feed in from below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e409d9cdca5b9380d6af35/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e409d9cdca5b9380d6af35/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-telegram-pull-up-to-jump-channel-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Telegram&#x27;s pull-up-to-next-channel - at the bottom of a channel feed, pulling up stretches the feed elastically, reveals a circular arrow button and &quot;Release to go to the next unread channel&quot;, and releasing slides the next channel&#x27;s feed in from below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A Telegram channel (green wallpaper, media posts, &quot;Suggested by @artemii and @marzaganoff&quot;). At rest, a hint bar at the bottom: &quot;Pull up to go to the next unread channel&quot;. During pull: a green circular up-arrow button rises into view and fills; on release the next channel (&quot;Secret design&quot;) scrolls in.
+
+## Motion spec
+Pattern: elastic over-scroll channel switch.
+- Overscroll at the feed&#x27;s end: content follows the finger with rubber-band resistance (x^0.5); the hint bar text swaps from &quot;Pull up...&quot; to &quot;Release to go to the next unread channel&quot; once past ~80px.
+- The circular arrow button rises from below the hint bar (translate + scale 0.6 -&gt; 1, spring ~340/20) and its ring fills clockwise with pull distance; full ring = threshold met, with a haptic tick.
+- Release before threshold: everything springs back (spring ~320/24, ~300ms) and the hint resets.
+- Release past threshold: the current feed slides up and off (300ms ease-in-out) while the next channel&#x27;s feed slides in from below; the header crossfades to the new channel&#x27;s avatar + name mid-transition.
+- The hint bar hides during the switch and reappears at the new channel&#x27;s end.
+
+## Calibration
+- The ring fill is the progress truth - text swap and haptic key off the same threshold.
+- The next channel slides in already scrolled to its bottom-most unread region, not its top.
+
+## Reduced motion
+Pull shows the arrow without elastic stretch; release crossfades channels.
+
+## Don&#x27;t miss
+- The gesture works from the feed&#x27;s natural end - no separate button needed, the overscroll IS the control.
+- The arrow button&#x27;s green matches Telegram&#x27;s accent; the ring fill is white.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">elastic over-scroll channel switch.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/telegram-pull-up-to-jump-channel-interaction">original interaction</a> by Telegram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Telegram's pull-up-to-next-channel - at the bottom of a channel feed, pulling up stretches the feed elastically, reveals a circular arrow button and \"Release to go to the next unread channel\", and releasing slides the next channel's feed in from below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA Telegram channel (green wallpaper, media posts, \"Suggested by @artemii and @marzaganoff\"). At rest, a hint bar at the bottom: \"Pull up to go to the next unread channel\". During pull: a green circular up-arrow button rises into view and fills; on release the next channel (\"Secret design\") scrolls in.\n\n## Motion spec\nPattern: elastic over-scroll channel switch.\n- Overscroll at the feed's end: content follows the finger with rubber-band resistance (x^0.5); the hint bar text swaps from \"Pull up...\" to \"Release to go to the next unread channel\" once past ~80px.\n- The circular arrow button rises from below the hint bar (translate + scale 0.6 -> 1, spring ~340/20) and its ring fills clockwise with pull distance; full ring = threshold met, with a haptic tick.\n- Release before threshold: everything springs back (spring ~320/24, ~300ms) and the hint resets.\n- Release past threshold: the current feed slides up and off (300ms ease-in-out) while the next channel's feed slides in from below; the header crossfades to the new channel's avatar + name mid-transition.\n- The hint bar hides during the switch and reappears at the new channel's end.\n\n## Calibration\n- The ring fill is the progress truth - text swap and haptic key off the same threshold.\n- The next channel slides in already scrolled to its bottom-most unread region, not its top.\n\n## Reduced motion\nPull shows the arrow without elastic stretch; release crossfades channels.\n\n## Don't miss\n- The gesture works from the feed's natural end - no separate button needed, the overscroll IS the control.\n- The arrow button's green matches Telegram's accent; the ring fill is white."</script>
+</body></html>

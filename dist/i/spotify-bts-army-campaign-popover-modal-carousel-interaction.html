@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spotify BTS ARMY Campaign Popover Modal Carousel Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spotify BTS ARMY Campaign Popover Modal Carousel Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spotify-bts-army-campaign-popover-modal-carousel-interaction"><b>Spotify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-bts-army-campaign-popover-modal-carousel-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-bts-army-campaign-popover-modal-carousel-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Spotify&#x27;s BTS ARMY campaign modal - a paged card carousel over the dimmed app, with a floating capsule graphic, fragment circles that fill in, and page dots tracking each swipe.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a6e2653946cb0007d4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a6e2653946cb0007d4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spotify-bts-army-campaign-popover-modal-carousel-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Spotify&#x27;s BTS ARMY campaign modal - a paged card carousel over the dimmed app, with a floating capsule graphic, fragment circles that fill in, and page dots tracking each swipe.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Modal card (cream, rounded 20px) centered over the dimmed Spotify home: Spotify logo top, close X top-right, headline + subcopy, a graphic zone (page 1: a red-pink capsule rotating; page 2: two rows of circles, fragments filling from grey to red; page 3: a typewriter illustration with a red key), and three page dots at the bottom.
+
+## Motion spec
+Pattern: paged modal carousel with live graphic states.
+- The modal rises from below (translateY 40 -&gt; 0, spring ~300/18) with the scrim fading to 60% (250ms).
+- Swipe between pages: cards track 1:1 with a peek of the next card&#x27;s edge; release past 30% advances (spring ~320/20); the page dot switch is a stretch - the active dot elongates toward the direction of travel then settles (200ms).
+- Page graphics animate on arrival: the capsule tumbles in (rotateZ 90 -&gt; 0 degrees with a bounce, spring ~260/13); the fragment circles fill one by one (scale 0.7 -&gt; 1 + color grey -&gt; red, 100ms stagger); the typewriter slides up (translateY 20 -&gt; 0, 300ms).
+- Copy crossfades per page (180ms), headline first, subcopy 80ms later.
+
+## Calibration
+- One accent red against cream; the graphic carries it, the dots echo it.
+- The modal is still while reading - graphics animate only on page arrival, then hold.
+
+## Reduced motion
+Pages crossfade (200ms); graphics appear at rest.
+
+## Don&#x27;t miss
+- The capsule casts a soft shadow that moves with its tumble.
+- The close X stays fixed in the card&#x27;s corner across pages - only content swipes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">paged modal carousel with live graphic states.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spotify-bts-army-campaign-popover-modal-carousel-interaction">original interaction</a> by Spotify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Spotify's BTS ARMY campaign modal - a paged card carousel over the dimmed app, with a floating capsule graphic, fragment circles that fill in, and page dots tracking each swipe.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nModal card (cream, rounded 20px) centered over the dimmed Spotify home: Spotify logo top, close X top-right, headline + subcopy, a graphic zone (page 1: a red-pink capsule rotating; page 2: two rows of circles, fragments filling from grey to red; page 3: a typewriter illustration with a red key), and three page dots at the bottom.\n\n## Motion spec\nPattern: paged modal carousel with live graphic states.\n- The modal rises from below (translateY 40 -> 0, spring ~300/18) with the scrim fading to 60% (250ms).\n- Swipe between pages: cards track 1:1 with a peek of the next card's edge; release past 30% advances (spring ~320/20); the page dot switch is a stretch - the active dot elongates toward the direction of travel then settles (200ms).\n- Page graphics animate on arrival: the capsule tumbles in (rotateZ 90 -> 0 degrees with a bounce, spring ~260/13); the fragment circles fill one by one (scale 0.7 -> 1 + color grey -> red, 100ms stagger); the typewriter slides up (translateY 20 -> 0, 300ms).\n- Copy crossfades per page (180ms), headline first, subcopy 80ms later.\n\n## Calibration\n- One accent red against cream; the graphic carries it, the dots echo it.\n- The modal is still while reading - graphics animate only on page arrival, then hold.\n\n## Reduced motion\nPages crossfade (200ms); graphics appear at rest.\n\n## Don't miss\n- The capsule casts a soft shadow that moves with its tumble.\n- The close X stays fixed in the card's corner across pages - only content swipes."</script>
+</body></html>

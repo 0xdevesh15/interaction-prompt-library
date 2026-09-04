@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop Cart Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Shop Cart Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shop-cart-sheet"><b>Shop</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shop-cart-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shop-cart-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Shop&#x27;s cart sheet - tapping the floating cart icon slides a dark bottom sheet up over the product page revealing the cart line item, subtotal, and &quot;Continue to checkout&quot;, with a dimmed peek of the page behind.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c86ba0349efb1a9d1068d3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c86ba0349efb1a9d1068d3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shop-cart-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Shop&#x27;s cart sheet - tapping the floating cart icon slides a dark bottom sheet up over the product page revealing the cart line item, subtotal, and &quot;Continue to checkout&quot;, with a dimmed peek of the page behind.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark product page (Loop earplugs). The sheet: dark surface with a top grabber, a cart line item (product thumbnail, &quot;Loop Earplugs 4.1 (19.9K)&quot;, &quot;Quiet 2 / White&quot;, price, quantity stepper, &quot;...&quot;), a Subtotal row, a purple &quot;Continue to checkout&quot; button, and a circular X button centered below the sheet.
+
+## Motion spec
+Pattern: springy cart sheet with backdrop peek.
+- Tap the cart icon: the sheet rises (spring ~300/22, gentle overshoot) covering ~75% of the screen; the product page behind dims to ~35% and scales down a hair (0.97) - a peek, not a blackout.
+- Sheet content staggers in during the rise: line item first (fade + 10px rise, 250ms), subtotal 80ms later, checkout button last with a single pulse (scale 1 -&gt; 1.02 -&gt; 1).
+- The X below the sheet fades in after the rise completes (200ms).
+- Dismiss (X, backdrop tap, or drag-down): the sheet tracks the drag 1:1 with resistance past its resting point, then springs down and out (spring ~320/24), the backdrop un-dimming in sync.
+
+## Calibration
+- The sheet is the same near-black as the page - separation comes from the dim, the grabber, and a hairline top edge.
+- Quantity stepper taps update the subtotal with a 200ms crossfade, no sheet movement.
+
+## Reduced motion
+Sheet fades in over a static dim.
+
+## Don&#x27;t miss
+- The backdrop stays interactive-looking (blurred live page) - the user never loses context of what they were browsing.
+- The X sits BELOW the sheet on the dim, centered - an unusual placement worth copying exactly.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy cart sheet with backdrop peek.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shop-cart-sheet">original interaction</a> by Shop. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Shop's cart sheet - tapping the floating cart icon slides a dark bottom sheet up over the product page revealing the cart line item, subtotal, and \"Continue to checkout\", with a dimmed peek of the page behind.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark product page (Loop earplugs). The sheet: dark surface with a top grabber, a cart line item (product thumbnail, \"Loop Earplugs 4.1 (19.9K)\", \"Quiet 2 / White\", price, quantity stepper, \"...\"), a Subtotal row, a purple \"Continue to checkout\" button, and a circular X button centered below the sheet.\n\n## Motion spec\nPattern: springy cart sheet with backdrop peek.\n- Tap the cart icon: the sheet rises (spring ~300/22, gentle overshoot) covering ~75% of the screen; the product page behind dims to ~35% and scales down a hair (0.97) - a peek, not a blackout.\n- Sheet content staggers in during the rise: line item first (fade + 10px rise, 250ms), subtotal 80ms later, checkout button last with a single pulse (scale 1 -> 1.02 -> 1).\n- The X below the sheet fades in after the rise completes (200ms).\n- Dismiss (X, backdrop tap, or drag-down): the sheet tracks the drag 1:1 with resistance past its resting point, then springs down and out (spring ~320/24), the backdrop un-dimming in sync.\n\n## Calibration\n- The sheet is the same near-black as the page - separation comes from the dim, the grabber, and a hairline top edge.\n- Quantity stepper taps update the subtotal with a 200ms crossfade, no sheet movement.\n\n## Reduced motion\nSheet fades in over a static dim.\n\n## Don't miss\n- The backdrop stays interactive-looking (blurred live page) - the user never loses context of what they were browsing.\n- The X sits BELOW the sheet on the dim, centered - an unusual placement worth copying exactly."</script>
+</body></html>

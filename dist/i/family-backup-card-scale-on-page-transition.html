@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Backup Card Scale on Page Transition - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Backup Card Scale on Page Transition</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-backup-card-scale-on-page-transition"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-backup-card-scale-on-page-transition">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-backup-card-scale-on-page-transition">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s manual backup transition - on the &quot;Manual Backup&quot; screen with the purple phrase card, the &quot;Keep your Secret Recovery Phrase safe&quot; sheet rises, and on continue the sheet scales down and morphs into a small header icon as the page pushes to &quot;Confirm Backup&quot; with its numbered word grid.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868958e6410daa283ff1597/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868958e6410daa283ff1597/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-backup-card-scale-on-page-transition.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s manual backup transition - on the &quot;Manual Backup&quot; screen with the purple phrase card, the &quot;Keep your Secret Recovery Phrase safe&quot; sheet rises, and on continue the sheet scales down and morphs into a small header icon as the page pushes to &quot;Confirm Backup&quot; with its numbered word grid.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light &quot;Manual Backup&quot; screen: purple card with twelve recovery words, &quot;Copy to Clipboard&quot;, purple &quot;I Understand, Continue&quot; button. The safety sheet: document icon, &quot;Keep your Secret Recovery Phrase safe&quot;, warning paragraphs, same purple CTA. Destination: &quot;Confirm Backup&quot; - &quot;Complete this quick test to confirm you&#x27;ve saved everything correctly&quot;, the word &quot;butter&quot; shown, a number grid (1-12) below, and a small header icon where the sheet&#x27;s glyph landed.
+
+## Motion spec
+Pattern: sheet-to-header-icon morph on page push.
+- The sheet slides up (spring ~300/20) over the dimmed backup screen (scrim 40%).
+- Tap &quot;I Understand, Continue&quot;: the sheet&#x27;s document icon detaches and shrinks (scale 1 -&gt; 0.35) while flying to the top-center header position (arc path, 350ms ease-in-out); the sheet body collapses down and fades (250ms).
+- Simultaneously the &quot;Confirm Backup&quot; page slides in from the right (300ms ease-out), receiving the icon at its header.
+- The number grid staggers in (30ms per cell, scale 0.8 -&gt; 1) and the target word fades up.
+
+## Calibration
+- The icon&#x27;s flight is the through-line - one element connecting the two pages.
+- The purple CTA keeps identical styling across sheet and page so the action feels continuous.
+
+## Reduced motion
+The sheet fades out as the page pushes (250ms); no icon flight.
+
+## Don&#x27;t miss
+- The icon lands exactly in the nav header, becoming part of the page chrome.
+- The number grid (1-12) is the confirm mechanic - tapping a number fills the word slot.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet-to-header-icon morph on page push.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-backup-card-scale-on-page-transition">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's manual backup transition - on the \"Manual Backup\" screen with the purple phrase card, the \"Keep your Secret Recovery Phrase safe\" sheet rises, and on continue the sheet scales down and morphs into a small header icon as the page pushes to \"Confirm Backup\" with its numbered word grid.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight \"Manual Backup\" screen: purple card with twelve recovery words, \"Copy to Clipboard\", purple \"I Understand, Continue\" button. The safety sheet: document icon, \"Keep your Secret Recovery Phrase safe\", warning paragraphs, same purple CTA. Destination: \"Confirm Backup\" - \"Complete this quick test to confirm you've saved everything correctly\", the word \"butter\" shown, a number grid (1-12) below, and a small header icon where the sheet's glyph landed.\n\n## Motion spec\nPattern: sheet-to-header-icon morph on page push.\n- The sheet slides up (spring ~300/20) over the dimmed backup screen (scrim 40%).\n- Tap \"I Understand, Continue\": the sheet's document icon detaches and shrinks (scale 1 -> 0.35) while flying to the top-center header position (arc path, 350ms ease-in-out); the sheet body collapses down and fades (250ms).\n- Simultaneously the \"Confirm Backup\" page slides in from the right (300ms ease-out), receiving the icon at its header.\n- The number grid staggers in (30ms per cell, scale 0.8 -> 1) and the target word fades up.\n\n## Calibration\n- The icon's flight is the through-line - one element connecting the two pages.\n- The purple CTA keeps identical styling across sheet and page so the action feels continuous.\n\n## Reduced motion\nThe sheet fades out as the page pushes (250ms); no icon flight.\n\n## Don't miss\n- The icon lands exactly in the nav header, becoming part of the page chrome.\n- The number grid (1-12) is the confirm mechanic - tapping a number fills the word slot."</script>
+</body></html>

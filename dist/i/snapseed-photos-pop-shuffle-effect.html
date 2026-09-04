@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Snapseed Photos Pop Shuffle Effect - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Snapseed Photos Pop Shuffle Effect</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/snapseed-photos-pop-shuffle-effect"><b>Snapseed</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/snapseed-photos-pop-shuffle-effect">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/snapseed-photos-pop-shuffle-effect">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Snapseed&#x27;s pop shuffle - scattered photo cards drop from above in a staggered cascade and land in a tilted stack on the empty state screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/684fa9e090b0148cd25abe7e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/684fa9e090b0148cd25abe7e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-snapseed-photos-pop-shuffle-effect.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Snapseed&#x27;s pop shuffle - scattered photo cards drop from above in a staggered cascade and land in a tilted stack on the empty state screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light gray empty-state screen: &quot;Snapseed&quot; wordmark center, &quot;Add a photo to start editing&quot; caption, green + button. The action: a handful of photo prints (5-7) fall from above the top edge and gather into a tilted, overlapping stack above the wordmark.
+
+## Motion spec
+Pattern: staggered cascade of photos dropping into a stack.
+- Each print starts above the screen at a random x and slight rotation, then drops with gravity (accelerating fall, ~450ms) into the stack zone.
+- On landing each print bounces once (spring ~220/14, vertical overshoot ~8%) and settles at its own tilt (random between -12deg and +12deg) with a soft shadow fading in beneath.
+- Prints land 90ms apart, alternating sides, each new print landing on top (z-order increases).
+- After the last print lands, the whole stack does a tiny collective settle (scale 1.02 -&gt; 1, 200ms) and idles with a faint sway (+-1deg, 4s).
+- The wordmark and + button never move.
+
+## Calibration
+- The stack must look casually tossed, not aligned: every tilt different, slight overlaps, no grid.
+- Falls are snappy: under half a second each, total cascade under 1.2s.
+
+## Reduced motion
+Stack fades in fully formed (300ms).
+
+## Don&#x27;t miss
+- Prints are photos (real image content), not placeholders.
+- The cascade plays on entry to the empty state - it is a welcome, not a loop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered cascade of photos dropping into a stack.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/snapseed-photos-pop-shuffle-effect">original interaction</a> by Snapseed. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Snapseed's pop shuffle - scattered photo cards drop from above in a staggered cascade and land in a tilted stack on the empty state screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight gray empty-state screen: \"Snapseed\" wordmark center, \"Add a photo to start editing\" caption, green + button. The action: a handful of photo prints (5-7) fall from above the top edge and gather into a tilted, overlapping stack above the wordmark.\n\n## Motion spec\nPattern: staggered cascade of photos dropping into a stack.\n- Each print starts above the screen at a random x and slight rotation, then drops with gravity (accelerating fall, ~450ms) into the stack zone.\n- On landing each print bounces once (spring ~220/14, vertical overshoot ~8%) and settles at its own tilt (random between -12deg and +12deg) with a soft shadow fading in beneath.\n- Prints land 90ms apart, alternating sides, each new print landing on top (z-order increases).\n- After the last print lands, the whole stack does a tiny collective settle (scale 1.02 -> 1, 200ms) and idles with a faint sway (+-1deg, 4s).\n- The wordmark and + button never move.\n\n## Calibration\n- The stack must look casually tossed, not aligned: every tilt different, slight overlaps, no grid.\n- Falls are snappy: under half a second each, total cascade under 1.2s.\n\n## Reduced motion\nStack fades in fully formed (300ms).\n\n## Don't miss\n- Prints are photos (real image content), not placeholders.\n- The cascade plays on entry to the empty state - it is a welcome, not a loop."</script>
+</body></html>

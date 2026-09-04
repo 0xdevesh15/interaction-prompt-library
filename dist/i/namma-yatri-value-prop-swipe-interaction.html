@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Namma Yatri Value Prop Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Namma Yatri Value Prop Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/namma-yatri-value-prop-swipe-interaction"><b>Namma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/namma-yatri-value-prop-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/namma-yatri-value-prop-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Namma Yatri&#x27;s onboarding carousel - swiping pages slides circular illustrations horizontally with a spring, the page-indicator dots morph as the active page changes, and the headline swaps below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6874a14514683753e6742385/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6874a14514683753e6742385/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-namma-yatri-value-prop-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Namma Yatri&#x27;s onboarding carousel - swiping pages slides circular illustrations horizontally with a spring, the page-indicator dots morph as the active page changes, and the headline swaps below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A light onboarding screen: the Namma Yatri logo up top, a large circular illustration per page (booking an auto, a diverse group of riders, driver map pins), a bold headline and a line of copy below, dot indicators bottom-left, and a &quot;Get booked in -&gt;&quot; button bottom-right.
+
+## Motion spec
+Pattern: horizontal paging carousel with morphing dots, ~400ms per page.
+- Swipe: pages track the finger 1:1; on release past 30% or with fling, the current page slides out and the next slides in (spring ~320/24, 350ms) with a small overshoot settle.
+- Illustration: the incoming circle scales from 0.94 to 1 during the settle (200ms).
+- Dots: the active dot stretches into a pill (width animates, spring ~400/20, 250ms) while the previous pill contracts back to a dot - the morph slides with the paging direction.
+- Headline: the text block crossfades with a short rise (translateY 10px -&gt; 0 + fade, 250ms) as the page lands.
+- The logo and button stay fixed; only the carousel region pages.
+
+## Calibration
+- Only one page is centered at rest - full snap, no half positions.
+- The dot morph direction matches the swipe direction.
+
+## Reduced motion
+Crossfade between pages (250ms); dots switch state without morphing.
+
+## Don&#x27;t miss
+- Pages can be swiped or paged by the button - both paths use the same spring.
+- The circular crop of each illustration stays circular through the motion.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal paging carousel with morphing dots, ~400ms per page.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/namma-yatri-value-prop-swipe-interaction">original interaction</a> by Namma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Namma Yatri's onboarding carousel - swiping pages slides circular illustrations horizontally with a spring, the page-indicator dots morph as the active page changes, and the headline swaps below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA light onboarding screen: the Namma Yatri logo up top, a large circular illustration per page (booking an auto, a diverse group of riders, driver map pins), a bold headline and a line of copy below, dot indicators bottom-left, and a \"Get booked in ->\" button bottom-right.\n\n## Motion spec\nPattern: horizontal paging carousel with morphing dots, ~400ms per page.\n- Swipe: pages track the finger 1:1; on release past 30% or with fling, the current page slides out and the next slides in (spring ~320/24, 350ms) with a small overshoot settle.\n- Illustration: the incoming circle scales from 0.94 to 1 during the settle (200ms).\n- Dots: the active dot stretches into a pill (width animates, spring ~400/20, 250ms) while the previous pill contracts back to a dot - the morph slides with the paging direction.\n- Headline: the text block crossfades with a short rise (translateY 10px -> 0 + fade, 250ms) as the page lands.\n- The logo and button stay fixed; only the carousel region pages.\n\n## Calibration\n- Only one page is centered at rest - full snap, no half positions.\n- The dot morph direction matches the swipe direction.\n\n## Reduced motion\nCrossfade between pages (250ms); dots switch state without morphing.\n\n## Don't miss\n- Pages can be swiped or paged by the button - both paths use the same spring.\n- The circular crop of each illustration stays circular through the motion."</script>
+</body></html>

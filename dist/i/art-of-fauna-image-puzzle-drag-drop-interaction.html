@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Art of Fauna Image Puzzle Drag Drop Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Art of Fauna Image Puzzle Drag Drop Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/art-of-fauna-image-puzzle-drag-drop-interaction"><b>Art</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/art-of-fauna-image-puzzle-drag-drop-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/art-of-fauna-image-puzzle-drag-drop-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Art of Fauna&#x27;s slice puzzle - a vintage bird illustration is cut into 3 horizontal strips, misaligned horizontally; drag each strip sideways to align them, and the solved image merges into a card that flips to reveal species details.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb418f8d12020de77d72/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb418f8d12020de77d72/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-art-of-fauna-image-puzzle-drag-drop-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Art of Fauna&#x27;s slice puzzle - a vintage bird illustration is cut into 3 horizontal strips, misaligned horizontally; drag each strip sideways to align them, and the solved image merges into a card that flips to reveal species details.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Warm beige screen: pause and hint icons top, the puzzle stage (3 full-width image strips with thin divider gaps, each offset horizontally), a level intro card (&quot;I&quot;) beforehand. Solved state: the unified illustration framed as a card with &quot;Mandarin Duck&quot; name plate and &quot;Description / Next&quot; links; flip side shows the description paragraph with &quot;Image / Next&quot; tabs.
+
+## Motion spec
+Pattern: drag-to-align puzzle -&gt; card flip, continuous + 800ms reveal.
+- Each strip drags horizontally 1:1 with the finger, clamped to +-40% of screen width, with a soft elastic resistance at the bounds.
+- When a strip&#x27;s offset enters the snap window (+-12px from aligned), it magnetizes to 0 (spring ~500/30, 150ms) with a light haptic.
+- All 3 aligned: strips merge - divider gaps close (150ms) and the image settles as one card with a soft shadow (300ms).
+- The name plate and links fade in under the card (300ms, staggered 100ms).
+- Card tap: flips on Y (rotateY 0 -&gt; 180deg, 600ms, ease-in-out) to the description side; another tap flips back.
+
+## Calibration
+- The snap window is forgiving (12px) - pixel-hunting alignment ruins the delight.
+- Strips keep their image registration while dragging; only translateX moves, never scale or skew.
+
+## Reduced motion
+Strips slide to aligned positions on a single tap each; card crossfades instead of flipping.
+
+## Don&#x27;t miss
+- The merge (gaps closing) is the payoff frame - it must read as one image clicking together, not three strips fading.
+- The flip is a true 3D half-turn around the card&#x27;s vertical center, not a horizontal slide swap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">drag-to-align puzzle -&gt; card flip, continuous + 800ms reveal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/art-of-fauna-image-puzzle-drag-drop-interaction">original interaction</a> by Art. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Art of Fauna's slice puzzle - a vintage bird illustration is cut into 3 horizontal strips, misaligned horizontally; drag each strip sideways to align them, and the solved image merges into a card that flips to reveal species details.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWarm beige screen: pause and hint icons top, the puzzle stage (3 full-width image strips with thin divider gaps, each offset horizontally), a level intro card (\"I\") beforehand. Solved state: the unified illustration framed as a card with \"Mandarin Duck\" name plate and \"Description / Next\" links; flip side shows the description paragraph with \"Image / Next\" tabs.\n\n## Motion spec\nPattern: drag-to-align puzzle -> card flip, continuous + 800ms reveal.\n- Each strip drags horizontally 1:1 with the finger, clamped to +-40% of screen width, with a soft elastic resistance at the bounds.\n- When a strip's offset enters the snap window (+-12px from aligned), it magnetizes to 0 (spring ~500/30, 150ms) with a light haptic.\n- All 3 aligned: strips merge - divider gaps close (150ms) and the image settles as one card with a soft shadow (300ms).\n- The name plate and links fade in under the card (300ms, staggered 100ms).\n- Card tap: flips on Y (rotateY 0 -> 180deg, 600ms, ease-in-out) to the description side; another tap flips back.\n\n## Calibration\n- The snap window is forgiving (12px) - pixel-hunting alignment ruins the delight.\n- Strips keep their image registration while dragging; only translateX moves, never scale or skew.\n\n## Reduced motion\nStrips slide to aligned positions on a single tap each; card crossfades instead of flipping.\n\n## Don't miss\n- The merge (gaps closing) is the payoff frame - it must read as one image clicking together, not three strips fading.\n- The flip is a true 3D half-turn around the card's vertical center, not a horizontal slide swap."</script>
+</body></html>

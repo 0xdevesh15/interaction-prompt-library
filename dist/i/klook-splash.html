@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klook Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Klook Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/klook-splash"><b>Klook</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/klook-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/klook-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Klook&#x27;s splash - on a white screen, scattered colorful petal shapes fly in, spin, and assemble into the circular pinwheel logo above the orange &quot;klook&quot; wordmark.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4badf371d29849d7bc90e/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4badf371d29849d7bc90e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-klook-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Klook&#x27;s splash - on a white screen, scattered colorful petal shapes fly in, spin, and assemble into the circular pinwheel logo above the orange &quot;klook&quot; wordmark.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen. Small orange &quot;klook&quot; wordmark lower-center. Above it, five rounded petal/teardrop shapes (yellow, orange, red, teal, purple) start scattered and oversized, then gather and arrange into a circular pinwheel - the Klook logo mark.
+
+## Motion spec
+Pattern: scatter-to-mark logo assembly.
+- The wordmark fades in first (200ms) and holds.
+- Petals enter from off-center positions, oversized (scale ~1.6) and rotated randomly; each travels to its slot in the circle with a spring (stiffness ~260, damping ~22), rotating upright as it lands, 60ms stagger between petals.
+- Once assembled, the pinwheel does a gentle celebratory spin (rotate ~30deg and settle back, spring ~200/18) and a subtle scale pulse (1.0 to 1.05 to 1, 300ms).
+- The assembled logo holds with a slow idle rotation drift (+-3deg, 3s) until the app loads, then the whole composition scales up slightly and crossfades into the home screen (300ms).
+
+## Calibration
+- Petals must land in pinwheel order around the circle - wrong adjacency breaks the mark.
+- The spin is a settle, not a rotation loop; the logo ends static and crisp.
+
+## Reduced motion
+Petals fade in place; no spin.
+
+## Don&#x27;t miss
+- Petals are rounded teardrops with their points toward center, small gaps between them - not a solid disc.
+- Wordmark stays orange and static throughout; only the petals move.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scatter-to-mark logo assembly.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/klook-splash">original interaction</a> by Klook. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Klook's splash - on a white screen, scattered colorful petal shapes fly in, spin, and assemble into the circular pinwheel logo above the orange \"klook\" wordmark.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen. Small orange \"klook\" wordmark lower-center. Above it, five rounded petal/teardrop shapes (yellow, orange, red, teal, purple) start scattered and oversized, then gather and arrange into a circular pinwheel - the Klook logo mark.\n\n## Motion spec\nPattern: scatter-to-mark logo assembly.\n- The wordmark fades in first (200ms) and holds.\n- Petals enter from off-center positions, oversized (scale ~1.6) and rotated randomly; each travels to its slot in the circle with a spring (stiffness ~260, damping ~22), rotating upright as it lands, 60ms stagger between petals.\n- Once assembled, the pinwheel does a gentle celebratory spin (rotate ~30deg and settle back, spring ~200/18) and a subtle scale pulse (1.0 to 1.05 to 1, 300ms).\n- The assembled logo holds with a slow idle rotation drift (+-3deg, 3s) until the app loads, then the whole composition scales up slightly and crossfades into the home screen (300ms).\n\n## Calibration\n- Petals must land in pinwheel order around the circle - wrong adjacency breaks the mark.\n- The spin is a settle, not a rotation loop; the logo ends static and crisp.\n\n## Reduced motion\nPetals fade in place; no spin.\n\n## Don't miss\n- Petals are rounded teardrops with their points toward center, small gaps between them - not a solid disc.\n- Wordmark stays orange and static throughout; only the petals move."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Weekend Quest Sculpture Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Weekend Quest Sculpture Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-weekend-quest-sculpture-pop-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-weekend-quest-sculpture-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-weekend-quest-sculpture-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s Weekend Quest sculpture reveal - the gray stone statue pops with a ring burst and breaks into fragments, revealing the colored character inside.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a6f6f0f211a1d673fea3b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a6f6f0f211a1d673fea3b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-weekend-quest-sculpture-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s Weekend Quest sculpture reveal - the gray stone statue pops with a ring burst and breaks into fragments, revealing the colored character inside.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark screen with the quest card: a green-framed scene holding a chunky gray stone statue on a pedestal, a pink progress bar (&quot;2/3&quot;) across the card&#x27;s bottom edge, the copy &quot;2 days left! Do 2 more lessons to finish this Weekend Quest.&quot;, and a blue &quot;I CAN DO IT&quot; button.
+
+## Motion spec
+Pattern: sculpture pop and stone-break reveal.
+- The card fades up (12px rise, 300ms), then the statue shudders (small +/-2px jitter, 200ms) as a crack line flashes across it.
+- The pop: a yellow-white puff ring expands outward from the statue&#x27;s center (scale 0.2 -&gt; 1.6, 350ms, fading) while the statue launches up with squash-stretch (spring ~380/11).
+- The stone shell breaks apart: 8-10 gray fragments fly outward with rotation and gravity (fade over 700ms), revealing the colored character underneath at scale 0.6 -&gt; 1 (spring ~400/13).
+- White/green bubbles and small stars drift up around the revealed character (600ms, 30ms stagger).
+- The character settles with a happy bob (two 4px dips, 400ms); the progress bar and copy hold still throughout.
+
+## Calibration
+- The break reads as stone: chunky angular fragments, not confetti strips.
+- The reveal is a scale-in from inside the shell - the character grows out of the crumbling statue, not a swap.
+
+## Reduced motion
+The statue crossfades to the colored character (300ms) with no fragments or ring.
+
+## Don&#x27;t miss
+- The pink progress bar sits on the card&#x27;s bottom border and never moves - all action is inside the green frame.
+- The puff ring is the first beat of the pop - it leads the fragments by ~80ms.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sculpture pop and stone-break reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-weekend-quest-sculpture-pop-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's Weekend Quest sculpture reveal - the gray stone statue pops with a ring burst and breaks into fragments, revealing the colored character inside.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark screen with the quest card: a green-framed scene holding a chunky gray stone statue on a pedestal, a pink progress bar (\"2/3\") across the card's bottom edge, the copy \"2 days left! Do 2 more lessons to finish this Weekend Quest.\", and a blue \"I CAN DO IT\" button.\n\n## Motion spec\nPattern: sculpture pop and stone-break reveal.\n- The card fades up (12px rise, 300ms), then the statue shudders (small +/-2px jitter, 200ms) as a crack line flashes across it.\n- The pop: a yellow-white puff ring expands outward from the statue's center (scale 0.2 -> 1.6, 350ms, fading) while the statue launches up with squash-stretch (spring ~380/11).\n- The stone shell breaks apart: 8-10 gray fragments fly outward with rotation and gravity (fade over 700ms), revealing the colored character underneath at scale 0.6 -> 1 (spring ~400/13).\n- White/green bubbles and small stars drift up around the revealed character (600ms, 30ms stagger).\n- The character settles with a happy bob (two 4px dips, 400ms); the progress bar and copy hold still throughout.\n\n## Calibration\n- The break reads as stone: chunky angular fragments, not confetti strips.\n- The reveal is a scale-in from inside the shell - the character grows out of the crumbling statue, not a swap.\n\n## Reduced motion\nThe statue crossfades to the colored character (300ms) with no fragments or ring.\n\n## Don't miss\n- The pink progress bar sits on the card's bottom border and never moves - all action is inside the green frame.\n- The puff ring is the first beat of the pop - it leads the fragments by ~80ms."</script>
+</body></html>

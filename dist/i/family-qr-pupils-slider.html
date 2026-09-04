@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family QR Pupils Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family QR Pupils Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-qr-pupils-slider"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-qr-pupils-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-qr-pupils-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s QR pupils slider - in the &quot;Customize&quot; screen&#x27;s Pupils tab, scrubbing the slider smoothly morphs the shape of the QR code&#x27;s finder-pattern pupils (the inner marks in the three corner squares) between round and square variants in real time.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91bc84c6b7e105cdf2e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91bc84c6b7e105cdf2e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-qr-pupils-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s QR pupils slider - in the &quot;Customize&quot; screen&#x27;s Pupils tab, scrubbing the slider smoothly morphs the shape of the QR code&#x27;s finder-pattern pupils (the inner marks in the three corner squares) between round and square variants in real time.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black &quot;Customize&quot; screen: large QR code preview with three prominent corner finder patterns, a horizontal slider, customization tabs (Pixels / Pupils / Logo / Frame), Save button.
+
+## Motion spec
+Pattern: real-time slider-driven pupil morph.
+- Drag: the thumb follows the finger 1:1; the finder-pattern pupils morph continuously per frame - interpolating from filled squares through rounded squircles to circles (direct slider mapping, no tween).
+- All three pupils morph identically and simultaneously; the outer finder rings stay unchanged so position detection is preserved.
+- Release: the thumb settles with a tiny spring (spring ~480/30, 150ms); the pupil shape stays where dropped.
+- The QR preview scales subtly down (0.97) during the drag, springs back on release (spring ~400/24, 250ms).
+- The Pupils tab icon reflects the current pupil shape (updates on release, 150ms).
+
+## Calibration
+- Only the pupils change - the data modules and finder rings are untouched.
+- The morph interpolates shape, not size: pupils stay centered and same-sized throughout.
+
+## Reduced motion
+No scale-press effect; morph still updates live (functional control).
+
+## Don&#x27;t miss
+- All three corner pupils must match at every slider position - independent morphing breaks the QR&#x27;s symmetry.
+- The slider is continuous - intermediate squircle shapes are valid states, not just the endpoints.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">real-time slider-driven pupil morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-qr-pupils-slider">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's QR pupils slider - in the \"Customize\" screen's Pupils tab, scrubbing the slider smoothly morphs the shape of the QR code's finder-pattern pupils (the inner marks in the three corner squares) between round and square variants in real time.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack \"Customize\" screen: large QR code preview with three prominent corner finder patterns, a horizontal slider, customization tabs (Pixels / Pupils / Logo / Frame), Save button.\n\n## Motion spec\nPattern: real-time slider-driven pupil morph.\n- Drag: the thumb follows the finger 1:1; the finder-pattern pupils morph continuously per frame - interpolating from filled squares through rounded squircles to circles (direct slider mapping, no tween).\n- All three pupils morph identically and simultaneously; the outer finder rings stay unchanged so position detection is preserved.\n- Release: the thumb settles with a tiny spring (spring ~480/30, 150ms); the pupil shape stays where dropped.\n- The QR preview scales subtly down (0.97) during the drag, springs back on release (spring ~400/24, 250ms).\n- The Pupils tab icon reflects the current pupil shape (updates on release, 150ms).\n\n## Calibration\n- Only the pupils change - the data modules and finder rings are untouched.\n- The morph interpolates shape, not size: pupils stay centered and same-sized throughout.\n\n## Reduced motion\nNo scale-press effect; morph still updates live (functional control).\n\n## Don't miss\n- All three corner pupils must match at every slider position - independent morphing breaks the QR's symmetry.\n- The slider is continuous - intermediate squircle shapes are valid states, not just the endpoints."</script>
+</body></html>

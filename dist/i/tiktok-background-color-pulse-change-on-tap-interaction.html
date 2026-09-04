@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TikTok Background Color Pulse Change on Tap Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>TikTok Background Color Pulse Change on Tap Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tiktok-background-color-pulse-change-on-tap-interaction"><b>Tiktok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiktok-background-color-pulse-change-on-tap-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiktok-background-color-pulse-change-on-tap-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: TikTok&#x27;s QR share background - tapping anywhere on the gradient background behind the QR card sends a soft radial pulse from the tap point and shifts the whole background to the next color (pink-red, orange, green, blue-purple, teal).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68cfc80bd135bd85926/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68cfc80bd135bd85926/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tiktok-background-color-pulse-change-on-tap-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: TikTok&#x27;s QR share background - tapping anywhere on the gradient background behind the QR card sends a soft radial pulse from the tap point and shifts the whole background to the next color (pink-red, orange, green, blue-purple, teal).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen vertical gradient (top color -&gt; bottom tint) behind a white QR card: app logo, &quot;60fps.design&quot;, &quot;@60fps.design&quot; handle, the QR code with a TikTok logo, and &quot;Copy link&quot; / &quot;Share link&quot; buttons. A small footer line sits at the bottom. Taps land anywhere outside the card.
+
+## Motion spec
+Pattern: tap-ripple gradient shift, ~700ms.
+- Pulse: on tap, a soft radial ring expands from the tap point (0 -&gt; 1.5x screen width, 600ms, ease-out, opacity 0.35 -&gt; 0) in the incoming color.
+- Shift: the background gradient crossfades to the next palette (600ms, ease-in-out), the change radiating outward from the tap point (slight delay ramp, ~80ms across the screen).
+- Cycle: palettes advance in a fixed order: magenta-red -&gt; orange -&gt; green -&gt; indigo-purple -&gt; teal -&gt; back.
+- Card: the white QR card stays perfectly still; only the background moves.
+
+## Calibration
+- The pulse origin is the exact tap coordinate - not screen center.
+- Rapid taps queue: each tap starts a new pulse over the in-flight transition.
+
+## Reduced motion
+Background crossfades (300ms) with no radial pulse.
+
+## Don&#x27;t miss
+- The pulse is colored with the incoming palette, so the new color appears to spread from the finger.
+- The gradient is two-stop and vertical in every palette.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-ripple gradient shift, ~700ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tiktok-background-color-pulse-change-on-tap-interaction">original interaction</a> by Tiktok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: TikTok's QR share background - tapping anywhere on the gradient background behind the QR card sends a soft radial pulse from the tap point and shifts the whole background to the next color (pink-red, orange, green, blue-purple, teal).\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen vertical gradient (top color -> bottom tint) behind a white QR card: app logo, \"60fps.design\", \"@60fps.design\" handle, the QR code with a TikTok logo, and \"Copy link\" / \"Share link\" buttons. A small footer line sits at the bottom. Taps land anywhere outside the card.\n\n## Motion spec\nPattern: tap-ripple gradient shift, ~700ms.\n- Pulse: on tap, a soft radial ring expands from the tap point (0 -> 1.5x screen width, 600ms, ease-out, opacity 0.35 -> 0) in the incoming color.\n- Shift: the background gradient crossfades to the next palette (600ms, ease-in-out), the change radiating outward from the tap point (slight delay ramp, ~80ms across the screen).\n- Cycle: palettes advance in a fixed order: magenta-red -> orange -> green -> indigo-purple -> teal -> back.\n- Card: the white QR card stays perfectly still; only the background moves.\n\n## Calibration\n- The pulse origin is the exact tap coordinate - not screen center.\n- Rapid taps queue: each tap starts a new pulse over the in-flight transition.\n\n## Reduced motion\nBackground crossfades (300ms) with no radial pulse.\n\n## Don't miss\n- The pulse is colored with the incoming palette, so the new color appears to spread from the finger.\n- The gradient is two-stop and vertical in every palette."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spotify Clips Touchpoint Nudge Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spotify Clips Touchpoint Nudge Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spotify-clips-touchpoint-nudge-animation"><b>Spotify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-clips-touchpoint-nudge-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-clips-touchpoint-nudge-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Spotify&#x27;s clips touchpoint nudge - on the podcast episode page, the creator avatar chip in the action row periodically expands into a wider profile pill and contracts back, an automatic nudge toward the creator&#x27;s stories.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554f18e315822e1d8efa/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554f18e315822e1d8efa/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spotify-clips-touchpoint-nudge-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Spotify&#x27;s clips touchpoint nudge - on the podcast episode page, the creator avatar chip in the action row periodically expands into a wider profile pill and contracts back, an automatic nudge toward the creator&#x27;s stories.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Spotify episode page (&quot;Lessons from a first-time CEO - Steve El-Hage on learning everything the hard way&quot;, In Depth): artwork top-left, title, show row, then the action row (add, download, share, more icons) with the green play FAB at the right, description below, and a &quot;Steve El-Hage &gt;&quot; creator row at the bottom.
+
+## Motion spec
+Pattern: auto expand/contract attention nudge.
+- Idle: the creator touchpoint is a compact circular avatar chip in the action row.
+- Every ~4s the chip runs the nudge: it expands horizontally into a pill (width animates out, spring ~340/20, 350ms) revealing the creator&#x27;s name next to the avatar with a story ring around it.
+- The pill holds for ~1.2s, then contracts back to the circle (300ms, ease-in) - the name fades out in the last 150ms.
+- Neighbor icons in the action row shift to make room and spring back - the row breathes around the pill.
+- If the user taps during expansion, the nudge loop stops and the clips/stories viewer opens immediately.
+
+## Calibration
+- The expansion is smooth and periodic - a heartbeat, not an alarm; max two nudges per session view.
+- The story ring (a colored arc around the avatar) is the signal that there&#x27;s tappable content.
+
+## Reduced motion
+Chip crossfades between circle and pill states once, no loop.
+
+## Don&#x27;t miss
+- The green play button never moves - only the chips left of it reflow.
+- The avatar inside the pill keeps its own subtle border glow while expanded.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto expand/contract attention nudge.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spotify-clips-touchpoint-nudge-animation">original interaction</a> by Spotify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Spotify's clips touchpoint nudge - on the podcast episode page, the creator avatar chip in the action row periodically expands into a wider profile pill and contracts back, an automatic nudge toward the creator's stories.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Spotify episode page (\"Lessons from a first-time CEO - Steve El-Hage on learning everything the hard way\", In Depth): artwork top-left, title, show row, then the action row (add, download, share, more icons) with the green play FAB at the right, description below, and a \"Steve El-Hage >\" creator row at the bottom.\n\n## Motion spec\nPattern: auto expand/contract attention nudge.\n- Idle: the creator touchpoint is a compact circular avatar chip in the action row.\n- Every ~4s the chip runs the nudge: it expands horizontally into a pill (width animates out, spring ~340/20, 350ms) revealing the creator's name next to the avatar with a story ring around it.\n- The pill holds for ~1.2s, then contracts back to the circle (300ms, ease-in) - the name fades out in the last 150ms.\n- Neighbor icons in the action row shift to make room and spring back - the row breathes around the pill.\n- If the user taps during expansion, the nudge loop stops and the clips/stories viewer opens immediately.\n\n## Calibration\n- The expansion is smooth and periodic - a heartbeat, not an alarm; max two nudges per session view.\n- The story ring (a colored arc around the avatar) is the signal that there's tappable content.\n\n## Reduced motion\nChip crossfades between circle and pill states once, no loop.\n\n## Don't miss\n- The green play button never moves - only the chips left of it reflow.\n- The avatar inside the pill keeps its own subtle border glow while expanded."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supersonic Run Level Picker - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Supersonic Run Level Picker</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/supersonic-run-level-picker"><b>Supersonic</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/supersonic-run-level-picker">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/supersonic-run-level-picker">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Supersonic&#x27;s run-level picker - horizontal swiping between level cards (&quot;Starting out&quot;, &quot;Experienced&quot;) with animated 3D runner characters, while the green CTA relabels to match the focused level.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8e21ea093f143602fc91a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8e21ea093f143602fc91a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-supersonic-run-level-picker.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Supersonic&#x27;s run-level picker - horizontal swiping between level cards (&quot;Starting out&quot;, &quot;Experienced&quot;) with animated 3D runner characters, while the green CTA relabels to match the focused level.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Deep purple screen, &quot;Set your run level&quot; title. Center stage: a card with two stylized 3D runner characters (bright sneakers, neon accents) in mid-stride poses, a level label below (&quot;Starting out&quot; / &quot;Experienced&quot;) with a short descriptor. Bottom: a full-width green pill CTA that reads &quot;I&#x27;m Starting Out&quot; or &quot;I&#x27;m Experienced&quot;.
+
+## Motion spec
+Pattern: horizontal card paging with character animation and a live CTA.
+- Swipe horizontally: the current card slides out as the next slides in 1:1 with the finger; release snaps to the nearest card (spring stiffness ~350, damping ~28).
+- Incoming characters enter with personality: they jog in place (run-cycle loop, ~600ms per stride) and the pair bobs with soft offset phases.
+- The focused card&#x27;s characters are full color and scale 1.0; the off-screen card peeks at ~0.9 scale and 60% opacity.
+- The CTA label crossfades to the focused level&#x27;s name mid-swipe (at the 50% point, 200ms) - it always names the level you&#x27;d get by tapping now.
+- Level label and descriptor fade up per card (200ms) on settle.
+
+## Calibration
+- The CTA is a live preview of selection - it must never lag a settled card.
+- Character run cycles loop seamlessly; a hitching stride reads as a bug.
+
+## Reduced motion
+Cards crossfade; characters hold a static pose.
+
+## Don&#x27;t miss
+- Two characters per card, interacting (one mid-leap, one pacing) - a lone figure loses the social energy.
+- The green CTA is the only green element; it anchors the bottom against the purple field.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal card paging with character animation and a live CTA.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/supersonic-run-level-picker">original interaction</a> by Supersonic. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Supersonic's run-level picker - horizontal swiping between level cards (\"Starting out\", \"Experienced\") with animated 3D runner characters, while the green CTA relabels to match the focused level.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDeep purple screen, \"Set your run level\" title. Center stage: a card with two stylized 3D runner characters (bright sneakers, neon accents) in mid-stride poses, a level label below (\"Starting out\" / \"Experienced\") with a short descriptor. Bottom: a full-width green pill CTA that reads \"I'm Starting Out\" or \"I'm Experienced\".\n\n## Motion spec\nPattern: horizontal card paging with character animation and a live CTA.\n- Swipe horizontally: the current card slides out as the next slides in 1:1 with the finger; release snaps to the nearest card (spring stiffness ~350, damping ~28).\n- Incoming characters enter with personality: they jog in place (run-cycle loop, ~600ms per stride) and the pair bobs with soft offset phases.\n- The focused card's characters are full color and scale 1.0; the off-screen card peeks at ~0.9 scale and 60% opacity.\n- The CTA label crossfades to the focused level's name mid-swipe (at the 50% point, 200ms) - it always names the level you'd get by tapping now.\n- Level label and descriptor fade up per card (200ms) on settle.\n\n## Calibration\n- The CTA is a live preview of selection - it must never lag a settled card.\n- Character run cycles loop seamlessly; a hitching stride reads as a bug.\n\n## Reduced motion\nCards crossfade; characters hold a static pose.\n\n## Don't miss\n- Two characters per card, interacting (one mid-leap, one pacing) - a lone figure loses the social energy.\n- The green CTA is the only green element; it anchors the bottom against the purple field."</script>
+</body></html>

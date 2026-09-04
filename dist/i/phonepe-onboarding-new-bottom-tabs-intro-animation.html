@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PhonePe Onboarding New Bottom Tabs Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>PhonePe Onboarding New Bottom Tabs Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/phonepe-onboarding-new-bottom-tabs-intro-animation"><b>Phonepe</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/phonepe-onboarding-new-bottom-tabs-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/phonepe-onboarding-new-bottom-tabs-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: PhonePe&#x27;s new-tabs intro - a full-screen overlay cycles each tab icon large at center with a sparkle burst, then the icons slide down into a newly revealed bottom navigation bar.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9cc19535c52efbc8269/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9cc19535c52efbc8269/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-phonepe-onboarding-new-bottom-tabs-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: PhonePe&#x27;s new-tabs intro - a full-screen overlay cycles each tab icon large at center with a sparkle burst, then the icons slide down into a newly revealed bottom navigation bar.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White full-screen overlay (X to close): a large tab icon with its label at center (History clock, Alerts bell, Search magnifier), the copy &quot;Effortless and effective&quot; with a purple arrow at the bottom; the finale reveals the real bottom nav bar with the icons docked and Search highlighted purple.
+
+## Motion spec
+Pattern: cycling icon showcase into nav reveal, ~4s.
+- Cycle: each icon+label crossfades in at center (250ms) and holds 800ms; between icons a sparkle burst fires (8-10 thin purple/blue rays shoot outward 30px and fade, 350ms).
+- Advance: tapping the purple arrow or the auto-timer steps to the next icon.
+- Reveal: the last icon slides down into the bottom bar&#x27;s center slot (spring ~320/24, 400ms) as the bar itself rises into view (spring ~300/26, 350ms) and the other tab icons fade into their slots (200ms, 60ms stagger).
+- The Search tab lands highlighted (purple fill circle, 150ms pop).
+
+## Calibration
+- The sparkle burst is the transition between icons - it fires at the swap, not during the hold.
+- In the finale the center icon travels; it does not fade and reappear.
+
+## Reduced motion
+Icons crossfade; the bar slides in without the traveling icon.
+
+## Don&#x27;t miss
+- The cycled icons are the actual tab icons - what you see is what docks.
+- The bottom bar appears only in the finale, fully formed.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cycling icon showcase into nav reveal, ~4s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/phonepe-onboarding-new-bottom-tabs-intro-animation">original interaction</a> by Phonepe. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: PhonePe's new-tabs intro - a full-screen overlay cycles each tab icon large at center with a sparkle burst, then the icons slide down into a newly revealed bottom navigation bar.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite full-screen overlay (X to close): a large tab icon with its label at center (History clock, Alerts bell, Search magnifier), the copy \"Effortless and effective\" with a purple arrow at the bottom; the finale reveals the real bottom nav bar with the icons docked and Search highlighted purple.\n\n## Motion spec\nPattern: cycling icon showcase into nav reveal, ~4s.\n- Cycle: each icon+label crossfades in at center (250ms) and holds 800ms; between icons a sparkle burst fires (8-10 thin purple/blue rays shoot outward 30px and fade, 350ms).\n- Advance: tapping the purple arrow or the auto-timer steps to the next icon.\n- Reveal: the last icon slides down into the bottom bar's center slot (spring ~320/24, 400ms) as the bar itself rises into view (spring ~300/26, 350ms) and the other tab icons fade into their slots (200ms, 60ms stagger).\n- The Search tab lands highlighted (purple fill circle, 150ms pop).\n\n## Calibration\n- The sparkle burst is the transition between icons - it fires at the swap, not during the hold.\n- In the finale the center icon travels; it does not fade and reappear.\n\n## Reduced motion\nIcons crossfade; the bar slides in without the traveling icon.\n\n## Don't miss\n- The cycled icons are the actual tab icons - what you see is what docks.\n- The bottom bar appears only in the finale, fully formed."</script>
+</body></html>

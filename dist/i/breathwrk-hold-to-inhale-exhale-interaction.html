@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Breathwrk Hold to Inhale Exhale Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Breathwrk Hold to Inhale Exhale Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/breathwrk-hold-to-inhale-exhale-interaction"><b>Breathwrk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/breathwrk-hold-to-inhale-exhale-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/breathwrk-hold-to-inhale-exhale-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Breathwrk&#x27;s hold-to-exhale lung test - hold the fingerprint button while exhaling as slowly as possible, a seconds timer counts up with encouraging captions, then release triggers confetti and an animated circular lung-health score.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3d6624f4744434db4b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3d6624f4744434db4b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-breathwrk-hold-to-inhale-exhale-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Breathwrk&#x27;s hold-to-exhale lung test - hold the fingerprint button while exhaling as slowly as possible, a seconds timer counts up with encouraging captions, then release triggers confetti and an animated circular lung-health score.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark green screens: &quot;Inhale fully&quot; with a lungs glyph, then instruction &quot;Hold down the button to start timing your exhale&quot; above a white circular fingerprint button. During hold: large seconds counter (&quot;5.2 seconds&quot;), phase caption (&quot;Exhale as slowly as you can&quot;, &quot;Only release button when you finish exhaling&quot;, &quot;You&#x27;re doing great keep going!&quot; with flame). Result: confetti, &quot;13.3 seconds - Your Lung Health Score is&quot;, circular progress ring, Save and Continue pill.
+
+## Motion spec
+Pattern: press-and-hold measurement with staged feedback.
+- Fingerprint button idles with a soft pulse (scale 1 -&gt; 1.04, 1.8s loop); on touch-down it compresses (scale 0.94, 120ms) with haptic.
+- While held: the counter ticks up in 0.1s steps, digits crossfade on each second (150ms); the button&#x27;s ring fills slowly clockwise as a breath gauge.
+- Captions rotate by elapsed time (each fades 250ms): exhale instruction -&gt; release warning (~8s) -&gt; encouragement (~11s).
+- On release: button springs back (spring ~300/18), confetti bursts from the top (gravity, ~1.2s, mixed colors), the counter holds, and the lung-health ring draws from 0 to the score (trim 0 -&gt; ~0.75, 900ms ease-out) below it.
+- Save and Continue slides up + fades in last (300ms, 200ms after the ring finishes).
+
+## Calibration
+- The counter only runs while the finger is down - early release ends the test immediately.
+- Confetti and ring start together; the score counts with the ring draw.
+
+## Reduced motion
+No confetti; ring fills with a linear wipe.
+
+## Don&#x27;t miss
+- The flame emoji encouragement appears only past a good threshold (~10s) - staged rewards.
+- The fingerprint icon stays visible inside the pressed button the whole hold.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">press-and-hold measurement with staged feedback.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/breathwrk-hold-to-inhale-exhale-interaction">original interaction</a> by Breathwrk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Breathwrk's hold-to-exhale lung test - hold the fingerprint button while exhaling as slowly as possible, a seconds timer counts up with encouraging captions, then release triggers confetti and an animated circular lung-health score.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark green screens: \"Inhale fully\" with a lungs glyph, then instruction \"Hold down the button to start timing your exhale\" above a white circular fingerprint button. During hold: large seconds counter (\"5.2 seconds\"), phase caption (\"Exhale as slowly as you can\", \"Only release button when you finish exhaling\", \"You're doing great keep going!\" with flame). Result: confetti, \"13.3 seconds - Your Lung Health Score is\", circular progress ring, Save and Continue pill.\n\n## Motion spec\nPattern: press-and-hold measurement with staged feedback.\n- Fingerprint button idles with a soft pulse (scale 1 -> 1.04, 1.8s loop); on touch-down it compresses (scale 0.94, 120ms) with haptic.\n- While held: the counter ticks up in 0.1s steps, digits crossfade on each second (150ms); the button's ring fills slowly clockwise as a breath gauge.\n- Captions rotate by elapsed time (each fades 250ms): exhale instruction -> release warning (~8s) -> encouragement (~11s).\n- On release: button springs back (spring ~300/18), confetti bursts from the top (gravity, ~1.2s, mixed colors), the counter holds, and the lung-health ring draws from 0 to the score (trim 0 -> ~0.75, 900ms ease-out) below it.\n- Save and Continue slides up + fades in last (300ms, 200ms after the ring finishes).\n\n## Calibration\n- The counter only runs while the finger is down - early release ends the test immediately.\n- Confetti and ring start together; the score counts with the ring draw.\n\n## Reduced motion\nNo confetti; ring fills with a linear wipe.\n\n## Don't miss\n- The flame emoji encouragement appears only past a good threshold (~10s) - staged rewards.\n- The fingerprint icon stays visible inside the pressed button the whole hold."</script>
+</body></html>

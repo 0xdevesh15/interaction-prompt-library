@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shazam Button Pulse Background Gradient Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Shazam Button Pulse Background Gradient Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shazam-button-pulse-background-gradient-animation"><b>Shazam</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shazam-button-pulse-background-gradient-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shazam-button-pulse-background-gradient-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Shazam&#x27;s listening state - tapping the big S button ignites a blue radial gradient behind it that pulses outward through the whole background while it listens.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/696c8cf10de908dc60be9ff9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/696c8cf10de908dc60be9ff9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shazam-button-pulse-background-gradient-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Shazam&#x27;s listening state - tapping the big S button ignites a blue radial gradient behind it that pulses outward through the whole background while it listens.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Shazam home, dark navy: &quot;Tap to Shazam&quot; label, the large circular S button at center, a &quot;Fast Forward 2026&quot; promo row, and the tab bar. Listening state: the background fills with a saturated blue glow radiating from behind the button.
+
+## Motion spec
+Pattern: pulsing radial gradient breathing from behind the button.
+- Tap the button: it scales 1 -&gt; 0.94 -&gt; 1 (200ms) and a blue radial gradient ignites behind it (opacity 0 -&gt; 1, 400ms), centered on the button and reaching the screen edges.
+- The gradient breathes while listening: its radius swells and relaxes (scale 1 -&gt; 1.25 -&gt; 1, 2.2s sine) and its intensity follows (opacity 0.85 -&gt; 1 -&gt; 0.85) - the whole screen inhales with the button at the core.
+- Concentric soft rings ripple outward from the button every 1.1s (scale 1 -&gt; 2.4, opacity 0.5 -&gt; 0) - sonar waves riding over the gradient.
+- The button&#x27;s white S stays crisp and static; the button rim catches the glow (a 2px lighter ring pulsing in phase).
+- On result or cancel: the gradient and rings fade out together (400ms) back to dark navy.
+
+## Calibration
+- The blue is Shazam&#x27;s saturated brand blue at the center, easing to the dark navy base at the edges - never full-screen flat blue.
+- Rings and breathing stay in phase: a ring launches at each inhale&#x27;s start.
+
+## Reduced motion
+Static gradient behind the button (opacity 0.9); no rings.
+
+## Don&#x27;t miss
+- The promo row and tab bar dim slightly (opacity 0.6) while listening so the glow owns the screen.
+- The &quot;Tap to Shazam&quot; label crossfades to the listening hint (250ms) - text swaps, never slides.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">pulsing radial gradient breathing from behind the button.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shazam-button-pulse-background-gradient-animation">original interaction</a> by Shazam. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Shazam's listening state - tapping the big S button ignites a blue radial gradient behind it that pulses outward through the whole background while it listens.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nShazam home, dark navy: \"Tap to Shazam\" label, the large circular S button at center, a \"Fast Forward 2026\" promo row, and the tab bar. Listening state: the background fills with a saturated blue glow radiating from behind the button.\n\n## Motion spec\nPattern: pulsing radial gradient breathing from behind the button.\n- Tap the button: it scales 1 -> 0.94 -> 1 (200ms) and a blue radial gradient ignites behind it (opacity 0 -> 1, 400ms), centered on the button and reaching the screen edges.\n- The gradient breathes while listening: its radius swells and relaxes (scale 1 -> 1.25 -> 1, 2.2s sine) and its intensity follows (opacity 0.85 -> 1 -> 0.85) - the whole screen inhales with the button at the core.\n- Concentric soft rings ripple outward from the button every 1.1s (scale 1 -> 2.4, opacity 0.5 -> 0) - sonar waves riding over the gradient.\n- The button's white S stays crisp and static; the button rim catches the glow (a 2px lighter ring pulsing in phase).\n- On result or cancel: the gradient and rings fade out together (400ms) back to dark navy.\n\n## Calibration\n- The blue is Shazam's saturated brand blue at the center, easing to the dark navy base at the edges - never full-screen flat blue.\n- Rings and breathing stay in phase: a ring launches at each inhale's start.\n\n## Reduced motion\nStatic gradient behind the button (opacity 0.9); no rings.\n\n## Don't miss\n- The promo row and tab bar dim slightly (opacity 0.6) while listening so the glow owns the screen.\n- The \"Tap to Shazam\" label crossfades to the listening hint (250ms) - text swaps, never slides."</script>
+</body></html>

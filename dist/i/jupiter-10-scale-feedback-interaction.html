@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jupiter 10 Scale Feedback Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Jupiter 10 Scale Feedback Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/jupiter-10-scale-feedback-interaction"><b>Jupiter</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jupiter-10-scale-feedback-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jupiter-10-scale-feedback-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Jupiter&#x27;s NPS scale - tapping a 0-10 rating springs a round mascot through morphing states: a sleepy red crescent moon at low scores, a tired yellow moon mid-scale, and a beaming teal smiley at the top, with the label crossfading to match.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67f35c497ee0a66d6b46c2f9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67f35c497ee0a66d6b46c2f9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-jupiter-10-scale-feedback-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Jupiter&#x27;s NPS scale - tapping a 0-10 rating springs a round mascot through morphing states: a sleepy red crescent moon at low scores, a tired yellow moon mid-scale, and a beaming teal smiley at the top, with the label crossfading to match.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Feedback sheet over a dimmed app: &quot;Your feedback matters&quot; title with X, &quot;How likely are you to recommend Jupiter to a friend or colleague?&quot;, a large circular mascot in the middle, a sentiment label under it (&quot;Not at all&quot; / &quot;Not really&quot; / &quot;Not sure&quot; / &quot;Definitely&quot;), a 0-10 number scale with a small colored square marker, &quot;Not likely&quot; and &quot;Very likely&quot; anchors, and a dark Proceed button.
+
+## Motion spec
+Pattern: score-driven mascot morph with spring pop.
+- Tap (or drag to) a number: the scale marker slides to it (spring ~380/24) and the mascot pops (scale 0.85 -&gt; 1.08 -&gt; 1, spring ~340/13).
+- During the pop the mascot morphs: fill color crossfades along the score ramp (red 0-3 -&gt; yellow 4-6 -&gt; teal 9-10, blended between), and the face redraws (closed sleepy eyes + nightcap at low, droopy eyes mid, open smiling eyes + grin at high) - facial features interpolate, not swap.
+- The label crossfades with a 4pt vertical drift (200ms) once the mascot lands.
+- The marker square takes the mascot&#x27;s current color (150ms color tween).
+- Repeated taps chain pops; a drag scrubs the morph continuously (morph progress bound to marker position).
+
+## Calibration
+- The morph is continuous across the whole 0-10 range - every score has an intermediate face, not three discrete states.
+- Mascot rests large (~120pt circle); the pop is one overshoot, never a wobble loop.
+
+## Reduced motion
+Mascot crossfades between nearest states (200ms); no pop.
+
+## Don&#x27;t miss
+- The crescent moon motif (low scores) vs the full smiley (high) is the character arc - preserve the nightcap and the star accents at the sleepy end.
+- Proceed stays disabled-styled until a score is picked.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">score-driven mascot morph with spring pop.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/jupiter-10-scale-feedback-interaction">original interaction</a> by Jupiter. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Jupiter's NPS scale - tapping a 0-10 rating springs a round mascot through morphing states: a sleepy red crescent moon at low scores, a tired yellow moon mid-scale, and a beaming teal smiley at the top, with the label crossfading to match.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFeedback sheet over a dimmed app: \"Your feedback matters\" title with X, \"How likely are you to recommend Jupiter to a friend or colleague?\", a large circular mascot in the middle, a sentiment label under it (\"Not at all\" / \"Not really\" / \"Not sure\" / \"Definitely\"), a 0-10 number scale with a small colored square marker, \"Not likely\" and \"Very likely\" anchors, and a dark Proceed button.\n\n## Motion spec\nPattern: score-driven mascot morph with spring pop.\n- Tap (or drag to) a number: the scale marker slides to it (spring ~380/24) and the mascot pops (scale 0.85 -> 1.08 -> 1, spring ~340/13).\n- During the pop the mascot morphs: fill color crossfades along the score ramp (red 0-3 -> yellow 4-6 -> teal 9-10, blended between), and the face redraws (closed sleepy eyes + nightcap at low, droopy eyes mid, open smiling eyes + grin at high) - facial features interpolate, not swap.\n- The label crossfades with a 4pt vertical drift (200ms) once the mascot lands.\n- The marker square takes the mascot's current color (150ms color tween).\n- Repeated taps chain pops; a drag scrubs the morph continuously (morph progress bound to marker position).\n\n## Calibration\n- The morph is continuous across the whole 0-10 range - every score has an intermediate face, not three discrete states.\n- Mascot rests large (~120pt circle); the pop is one overshoot, never a wobble loop.\n\n## Reduced motion\nMascot crossfades between nearest states (200ms); no pop.\n\n## Don't miss\n- The crescent moon motif (low scores) vs the full smiley (high) is the character arc - preserve the nightcap and the star accents at the sleepy end.\n- Proceed stays disabled-styled until a score is picked."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thrum Browse Feelings Carousel - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Thrum Browse Feelings Carousel</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/thrum-browse-feelings-carousel"><b>Thrum</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/thrum-browse-feelings-carousel">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/thrum-browse-feelings-carousel">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Thrum&#x27;s &quot;Browse feelings&quot; carousel - swipe horizontally through soundscape cards where a colored blob shape morphs behind each animated vector illustration (heart, clock, fireworks, paper boat, train, leaves) with the name row sliding beneath.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e31bd56624f474442eba30/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e31bd56624f474442eba30/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-thrum-browse-feelings-carousel.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Thrum&#x27;s &quot;Browse feelings&quot; carousel - swipe horizontally through soundscape cards where a colored blob shape morphs behind each animated vector illustration (heart, clock, fireworks, paper boat, train, leaves) with the name row sliding beneath.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen, &quot;Browse feelings&quot; header. Centered circular illustration on an organic colored blob (Heartbeat on pink, Ticking Clock on lavender, Fireworks on yellow, Waves on blue, Train Journey on blue, Breathe on green). A name strip below shows the current label bold with neighbors peeking (&quot;Rain - Heartbeat - Tickin...&quot;). Bottom button: black Start pill for free sounds, or an Upgrade pill with a lock icon for premium ones.
+
+## Motion spec
+Pattern: snapping carousel with morphing backdrop.
+- Drag: the illustration track moves 1:1; the blob behind stretches toward the drag direction (scaleX 1 -&gt; 1.08) and its color crossfades toward the incoming card&#x27;s hue mid-gesture.
+- Release: snaps to the nearest card (spring ~300/24, ~350ms); the blob settles with a wobble (spring ~260/14 on its border-radius path) and the incoming illustration scales 0.92 -&gt; 1.
+- The name strip slides with the carousel at 1.2x speed (parallax) and the centered label bolds + darkens while neighbors gray out.
+- Each illustration loops a subtle idle animation (heart beats, boat bobs, leaves sway).
+- The bottom button morphs between Start and Upgrade states (width + label crossfade, 250ms) based on the centered card.
+
+## Calibration
+- Blob color = the card&#x27;s accent; the crossfade midpoint lands exactly at the snap threshold.
+- Only the centered illustration animates its idle loop; neighbors are static.
+
+## Reduced motion
+Cards snap without blob stretch or wobble; idle loops off.
+
+## Don&#x27;t miss
+- Locked cards swap the CTA to Upgrade with a lock glyph - state rides the carousel.
+- Neighbor labels are clipped mid-word at both edges, signaling more content.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">snapping carousel with morphing backdrop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/thrum-browse-feelings-carousel">original interaction</a> by Thrum. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Thrum's \"Browse feelings\" carousel - swipe horizontally through soundscape cards where a colored blob shape morphs behind each animated vector illustration (heart, clock, fireworks, paper boat, train, leaves) with the name row sliding beneath.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen, \"Browse feelings\" header. Centered circular illustration on an organic colored blob (Heartbeat on pink, Ticking Clock on lavender, Fireworks on yellow, Waves on blue, Train Journey on blue, Breathe on green). A name strip below shows the current label bold with neighbors peeking (\"Rain - Heartbeat - Tickin...\"). Bottom button: black Start pill for free sounds, or an Upgrade pill with a lock icon for premium ones.\n\n## Motion spec\nPattern: snapping carousel with morphing backdrop.\n- Drag: the illustration track moves 1:1; the blob behind stretches toward the drag direction (scaleX 1 -> 1.08) and its color crossfades toward the incoming card's hue mid-gesture.\n- Release: snaps to the nearest card (spring ~300/24, ~350ms); the blob settles with a wobble (spring ~260/14 on its border-radius path) and the incoming illustration scales 0.92 -> 1.\n- The name strip slides with the carousel at 1.2x speed (parallax) and the centered label bolds + darkens while neighbors gray out.\n- Each illustration loops a subtle idle animation (heart beats, boat bobs, leaves sway).\n- The bottom button morphs between Start and Upgrade states (width + label crossfade, 250ms) based on the centered card.\n\n## Calibration\n- Blob color = the card's accent; the crossfade midpoint lands exactly at the snap threshold.\n- Only the centered illustration animates its idle loop; neighbors are static.\n\n## Reduced motion\nCards snap without blob stretch or wobble; idle loops off.\n\n## Don't miss\n- Locked cards swap the CTA to Upgrade with a lock glyph - state rides the carousel.\n- Neighbor labels are clipped mid-word at both edges, signaling more content."</script>
+</body></html>

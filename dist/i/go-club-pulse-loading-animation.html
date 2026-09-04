@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GO Club Pulse Loading Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>GO Club Pulse Loading Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/go-club-pulse-loading-animation"><b>Go</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/go-club-pulse-loading-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/go-club-pulse-loading-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: GO Club&#x27;s AI plan loading - a dark blue gradient screen where the flame logo pulses over &quot;We Have Something Special Just For You!&quot; copy, then transitions into the personalized plan dashboard card with a &quot;Let&#x27;s GO!&quot; button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb408f8d12020de77d3b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb408f8d12020de77d3b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-go-club-pulse-loading-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: GO Club&#x27;s AI plan loading - a dark blue gradient screen where the flame logo pulses over &quot;We Have Something Special Just For You!&quot; copy, then transitions into the personalized plan dashboard card with a &quot;Let&#x27;s GO!&quot; button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen with a deep blue radial glow rising from the bottom. Loading state: centered blue flame logo, headline &quot;We Have Something Special Just For You!&quot;, small subcopy about building a custom plan. Ready state: a mini dashboard card (weather chip 12.4C, progress ring at 33%, stat rows), headline &quot;Your Plan Is Ready! Are You?&quot;, subcopy, white &quot;Let&#x27;s GO!&quot; button.
+
+## Motion spec
+Pattern: pulsing loader -&gt; content reveal, ~2s loading minimum.
+- The flame logo breathes (scale 1 -&gt; 1.08 -&gt; 1, 1.8s, ease-in-out) while the bottom glow pulses its radius and opacity (0.5 -&gt; 0.8, same cycle).
+- Subcopy fades in 200ms after the headline.
+- On ready: logo and loading copy fade out and drift up 20px (300ms); the dashboard card slides up from below and scales 0.9 -&gt; 1 (450ms, spring ~300/20); &quot;Your Plan Is Ready!&quot; headline and button fade in staggered (150ms apart).
+- The background glow never cuts - it persists across both states.
+
+## Calibration
+- The pulse cycle keeps running until the exact frame the reveal starts; freezing mid-breath reads as a hang.
+- Card entrance has a soft overshoot; a plain ease-out reads as a system sheet.
+
+## Reduced motion
+Loading copy crossfades to the ready state (300ms); no pulse.
+
+## Don&#x27;t miss
+- The glow is the continuity element between loading and ready - keep it identical in both states.
+- The button appears last; showing the CTA before the card invites a tap on an empty screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">pulsing loader -&gt; content reveal, ~2s loading minimum.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/go-club-pulse-loading-animation">original interaction</a> by Go. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: GO Club's AI plan loading - a dark blue gradient screen where the flame logo pulses over \"We Have Something Special Just For You!\" copy, then transitions into the personalized plan dashboard card with a \"Let's GO!\" button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen with a deep blue radial glow rising from the bottom. Loading state: centered blue flame logo, headline \"We Have Something Special Just For You!\", small subcopy about building a custom plan. Ready state: a mini dashboard card (weather chip 12.4C, progress ring at 33%, stat rows), headline \"Your Plan Is Ready! Are You?\", subcopy, white \"Let's GO!\" button.\n\n## Motion spec\nPattern: pulsing loader -> content reveal, ~2s loading minimum.\n- The flame logo breathes (scale 1 -> 1.08 -> 1, 1.8s, ease-in-out) while the bottom glow pulses its radius and opacity (0.5 -> 0.8, same cycle).\n- Subcopy fades in 200ms after the headline.\n- On ready: logo and loading copy fade out and drift up 20px (300ms); the dashboard card slides up from below and scales 0.9 -> 1 (450ms, spring ~300/20); \"Your Plan Is Ready!\" headline and button fade in staggered (150ms apart).\n- The background glow never cuts - it persists across both states.\n\n## Calibration\n- The pulse cycle keeps running until the exact frame the reveal starts; freezing mid-breath reads as a hang.\n- Card entrance has a soft overshoot; a plain ease-out reads as a system sheet.\n\n## Reduced motion\nLoading copy crossfades to the ready state (300ms); no pulse.\n\n## Don't miss\n- The glow is the continuity element between loading and ready - keep it identical in both states.\n- The button appears last; showing the CTA before the card invites a tap on an empty screen."</script>
+</body></html>

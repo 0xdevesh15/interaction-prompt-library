@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Y-Pod Life Areas Flower Graph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Y-Pod Life Areas Flower Graph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/y-pod-life-areas-flower-graph-animation"><b>Y</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/y-pod-life-areas-flower-graph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/y-pod-life-areas-flower-graph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Y-Pod&#x27;s Life Areas flower graph - from the Lifetime decades view, the screen transitions to a radar flower whose colored petals bloom outward from the center one by one, with the legend list settling below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554ff6ea50ecbbceca12/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554ff6ea50ecbbceca12/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-y-pod-life-areas-flower-graph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Y-Pod&#x27;s Life Areas flower graph - from the Lifetime decades view, the screen transitions to a radar flower whose colored petals bloom outward from the center one by one, with the legend list settling below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Two dark screens: &quot;Lifetime&quot; - a decades list (2020s through 2070s) with green progress ticks and a side control rail; and &quot;Life Areas&quot; - a radial flower chart center-screen (petals for Joy, Knowledge, Health, Money, Career, Faith, Family, Friends, each a distinct color, sized by score), a concentric-ring scale behind it, and the legend list below with colored dots and values.
+
+## Motion spec
+Pattern: blooming radial chart.
+- Transition in: the flower starts as a tight bud at center (all petals at ~5% radius, rotated together); the concentric guide rings fade in first (300ms).
+- Each petal then blooms: it scales/rotates outward from center to its score radius (spring ~300/16, visible overshoot, 500ms), petals staggered ~70ms apart sweeping around the circle.
+- Score numerals (7, 8, 9, 10) pop in at petal tips as each lands (scale 0.5 -&gt; 1, spring ~500/20).
+- The legend list slides up below (translateY 20pt -&gt; 0, fade, staggered 40ms per row) after the last petal settles.
+- Updating a score re-blooms just that petal (spring to the new radius) while others hold.
+
+## Calibration
+- Petal length maps to score on the ring scale - the bloom must land exactly on its ring.
+- The stagger sweeps clockwise so the bloom reads as one gesture.
+
+## Reduced motion
+Flower fades in fully bloomed; legend fades with it.
+
+## Don&#x27;t miss
+- Petals are rounded teardrops, slightly overlapped at the center like a real flower.
+- The guide rings are faint dashed circles with the scale numerals on one axis.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">blooming radial chart.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/y-pod-life-areas-flower-graph-animation">original interaction</a> by Y. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Y-Pod's Life Areas flower graph - from the Lifetime decades view, the screen transitions to a radar flower whose colored petals bloom outward from the center one by one, with the legend list settling below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTwo dark screens: \"Lifetime\" - a decades list (2020s through 2070s) with green progress ticks and a side control rail; and \"Life Areas\" - a radial flower chart center-screen (petals for Joy, Knowledge, Health, Money, Career, Faith, Family, Friends, each a distinct color, sized by score), a concentric-ring scale behind it, and the legend list below with colored dots and values.\n\n## Motion spec\nPattern: blooming radial chart.\n- Transition in: the flower starts as a tight bud at center (all petals at ~5% radius, rotated together); the concentric guide rings fade in first (300ms).\n- Each petal then blooms: it scales/rotates outward from center to its score radius (spring ~300/16, visible overshoot, 500ms), petals staggered ~70ms apart sweeping around the circle.\n- Score numerals (7, 8, 9, 10) pop in at petal tips as each lands (scale 0.5 -> 1, spring ~500/20).\n- The legend list slides up below (translateY 20pt -> 0, fade, staggered 40ms per row) after the last petal settles.\n- Updating a score re-blooms just that petal (spring to the new radius) while others hold.\n\n## Calibration\n- Petal length maps to score on the ring scale - the bloom must land exactly on its ring.\n- The stagger sweeps clockwise so the bloom reads as one gesture.\n\n## Reduced motion\nFlower fades in fully bloomed; legend fades with it.\n\n## Don't miss\n- Petals are rounded teardrops, slightly overlapped at the center like a real flower.\n- The guide rings are faint dashed circles with the scale numerals on one axis."</script>
+</body></html>

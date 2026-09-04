@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zomato Holi Splash Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zomato Holi Splash Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zomato-holi-splash-animation"><b>Zomato</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zomato-holi-splash-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zomato-holi-splash-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Zomato&#x27;s Holi splash - a pichkari rises under the wordmark, side water guns take position, and a huge pink-orange color splash bursts over the logo with droplets raining down.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5279d1908c2926dcf62/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5279d1908c2926dcf62/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zomato-holi-splash-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Zomato&#x27;s Holi splash - a pichkari rises under the wordmark, side water guns take position, and a huge pink-orange color splash bursts over the logo with droplets raining down.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Zomato red splash: the white &quot;zomato&quot; wordmark center with &quot;AN ETERNAL COMPANY&quot; beneath. The festive layer: a striped pichkari (water gun) standing on a base below the wordmark, two smaller purple water guns flanking it, and a big pink-orange gulaal splash that erupts over the wordmark.
+
+## Motion spec
+Pattern: festive burst sequence - rise, aim, splash, settle.
+- The pichkari rises from below into place (translateY 60 -&gt; 0, spring ~280/14) with the two side guns sliding in from the edges 150ms later (translateX +/-40 -&gt; 0, spring).
+- Beat: all three guns tilt back 5 degrees (150ms) - aiming.
+- The splash bursts from behind the wordmark: a radial pink-orange splat scaling 0 -&gt; 1 (spring ~300/12, fast and juicy) with 12-16 droplets flying outward (arcs with gravity, 500-700ms, varied sizes).
+- Droplets that fly high fall back and land as small dots around the guns (fade in at their landing points, 200ms).
+- The wordmark stays crisp in front of the splash; the splash&#x27;s center sits just behind the text.
+- Final hold: everything still, one droplet occasionally dripping down the splash (translateY, 1s, every ~3s).
+
+## Calibration
+- Festival energy: the burst is fast (under 400ms to full size) and the droplets are chunky, not mist.
+- Palette discipline: zomato red ground, pink-orange splash, teal-striped pichkari, purple side guns - no other colors.
+
+## Reduced motion
+Pichkari and splash fade in composed (400ms); no droplet flight.
+
+## Don&#x27;t miss
+- The splash masks behind the wordmark cleanly - text is never obscured.
+- The side guns mirror each other&#x27;s tilt exactly; the center pichkari stays vertical.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">festive burst sequence - rise, aim, splash, settle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zomato-holi-splash-animation">original interaction</a> by Zomato. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Zomato's Holi splash - a pichkari rises under the wordmark, side water guns take position, and a huge pink-orange color splash bursts over the logo with droplets raining down.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nZomato red splash: the white \"zomato\" wordmark center with \"AN ETERNAL COMPANY\" beneath. The festive layer: a striped pichkari (water gun) standing on a base below the wordmark, two smaller purple water guns flanking it, and a big pink-orange gulaal splash that erupts over the wordmark.\n\n## Motion spec\nPattern: festive burst sequence - rise, aim, splash, settle.\n- The pichkari rises from below into place (translateY 60 -> 0, spring ~280/14) with the two side guns sliding in from the edges 150ms later (translateX +/-40 -> 0, spring).\n- Beat: all three guns tilt back 5 degrees (150ms) - aiming.\n- The splash bursts from behind the wordmark: a radial pink-orange splat scaling 0 -> 1 (spring ~300/12, fast and juicy) with 12-16 droplets flying outward (arcs with gravity, 500-700ms, varied sizes).\n- Droplets that fly high fall back and land as small dots around the guns (fade in at their landing points, 200ms).\n- The wordmark stays crisp in front of the splash; the splash's center sits just behind the text.\n- Final hold: everything still, one droplet occasionally dripping down the splash (translateY, 1s, every ~3s).\n\n## Calibration\n- Festival energy: the burst is fast (under 400ms to full size) and the droplets are chunky, not mist.\n- Palette discipline: zomato red ground, pink-orange splash, teal-striped pichkari, purple side guns - no other colors.\n\n## Reduced motion\nPichkari and splash fade in composed (400ms); no droplet flight.\n\n## Don't miss\n- The splash masks behind the wordmark cleanly - text is never obscured.\n- The side guns mirror each other's tilt exactly; the center pichkari stays vertical."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kann Curvy Bottom Tab Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Kann Curvy Bottom Tab Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/kann-curvy-bottom-tab-interaction"><b>Kann</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/kann-curvy-bottom-tab-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/kann-curvy-bottom-tab-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Kann&#x27;s tab bar - the active tab&#x27;s indicator blob slides between tabs with an elastic wobble inside a curved floating bottom bar.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ebd0df936951f1cb7c897/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ebd0df936951f1cb7c897/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-kann-curvy-bottom-tab-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Kann&#x27;s tab bar - the active tab&#x27;s indicator blob slides between tabs with an elastic wobble inside a curved floating bottom bar.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Japanese-learning app screens (kana grids, kanji lists, extension cards, milestone page) over a floating bottom tab bar: a dark rounded bar with a curved top edge, four icons, and a tinted pill/blob behind the active icon.
+
+## Motion spec
+Pattern: elastic sliding indicator, ~600ms.
+- On tab change, the active blob slides to the new icon (spring stiffness 240 damping 14), stretching wide mid-travel (scaleX to 1.6) and wobbling as it lands (two visible oscillations).
+- The newly active icon bounces upward into the blob (translateY -4px and back, spring stiffness 400 damping 14) and tints to the blob&#x27;s contrast color.
+- The old icon drops back to rest on the same beat (200ms, ease-out).
+- The page content crossfades (250ms) under the bar; the bar itself never moves.
+- The bar&#x27;s curved top edge keeps its shape constant - only the blob inside deforms.
+
+## Calibration
+- The wobble is the personality: underdamped enough to see two bounces, not so loose it feels broken.
+- The stretch aligns with travel direction and relaxes before the landing.
+
+## Reduced motion
+Indicator fades between positions.
+
+## Don&#x27;t miss
+- The blob is wider than the icon and hugs the bar&#x27;s curvature - it reads as liquid inside the bar, not a rectangle.
+- The icon&#x27;s upward bounce is timed to the blob&#x27;s arrival, not the tap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">elastic sliding indicator, ~600ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/kann-curvy-bottom-tab-interaction">original interaction</a> by Kann. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Kann's tab bar - the active tab's indicator blob slides between tabs with an elastic wobble inside a curved floating bottom bar.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nJapanese-learning app screens (kana grids, kanji lists, extension cards, milestone page) over a floating bottom tab bar: a dark rounded bar with a curved top edge, four icons, and a tinted pill/blob behind the active icon.\n\n## Motion spec\nPattern: elastic sliding indicator, ~600ms.\n- On tab change, the active blob slides to the new icon (spring stiffness 240 damping 14), stretching wide mid-travel (scaleX to 1.6) and wobbling as it lands (two visible oscillations).\n- The newly active icon bounces upward into the blob (translateY -4px and back, spring stiffness 400 damping 14) and tints to the blob's contrast color.\n- The old icon drops back to rest on the same beat (200ms, ease-out).\n- The page content crossfades (250ms) under the bar; the bar itself never moves.\n- The bar's curved top edge keeps its shape constant - only the blob inside deforms.\n\n## Calibration\n- The wobble is the personality: underdamped enough to see two bounces, not so loose it feels broken.\n- The stretch aligns with travel direction and relaxes before the landing.\n\n## Reduced motion\nIndicator fades between positions.\n\n## Don't miss\n- The blob is wider than the icon and hugs the bar's curvature - it reads as liquid inside the bar, not a rectangle.\n- The icon's upward bounce is timed to the blob's arrival, not the tap."</script>
+</body></html>

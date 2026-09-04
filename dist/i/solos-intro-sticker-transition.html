@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solos Intro Sticker Transition - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Solos Intro Sticker Transition</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/solos-intro-sticker-transition"><b>Solos</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/solos-intro-sticker-transition">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/solos-intro-sticker-transition">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Solos&#x27; intro sticker pile - on the dark &quot;Welcome to SOLOS&quot; screen, music stickers (vinyl, cassette, CD, headphones, &quot;VIBES ONLY&quot; tag, blue heart, script logo) fly in from the edges one by one and assemble into a floating pile that gently bobs.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6737fee473f4706c6912f5d3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6737fee473f4706c6912f5d3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-solos-intro-sticker-transition.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Solos&#x27; intro sticker pile - on the dark &quot;Welcome to SOLOS&quot; screen, music stickers (vinyl, cassette, CD, headphones, &quot;VIBES ONLY&quot; tag, blue heart, script logo) fly in from the edges one by one and assemble into a floating pile that gently bobs.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark charcoal screen: &quot;Welcome to SOLOS&quot; title and subtitle top-left, empty middle, a &quot;Continue&quot; pill at the bottom. The stickers land in the middle: a vinyl record, an orange cassette, a CD, white headphones, a dark &quot;VIBES ONLY&quot; ticket, a small blue heart, and the white &quot;Solos&quot; script wordmark on top.
+
+## Motion spec
+Pattern: sequential sticker assembly.
+- Each sticker flies in from a different off-screen edge (left, right, top - varied) along a slight arc, rotating as it travels (rotateZ from +/-40deg settling to its resting tilt of +/-10deg, 500ms, ease-out).
+- Stickers land one at a time, 180ms apart, each with a small impact squash (scale 1.1 -&gt; 1, spring ~450/18, 200ms) and a soft shadow that fades in under it.
+- Stacking order builds the collage: vinyl at the back, cassette and CD mid, heart and headphones front, script wordmark last on top.
+- Once assembled, the whole pile idles: slow collective bob (translateY +/-6px, 3s) with individual stickers drifting a few px out of phase with each other.
+
+## Calibration
+- The assembly takes ~2s total - quick enough to feel snappy, slow enough to read each sticker.
+- Resting tilts are deliberate (-8deg to +10deg) - a arranged collage, not a random heap.
+
+## Reduced motion
+The pile fades in fully assembled.
+
+## Don&#x27;t miss
+- The script &quot;Solos&quot; wordmark lands last and sits highest - the brand signs the pile.
+- Stickers have white die-cut borders - they read as physical stickers on a dark table.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential sticker assembly.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/solos-intro-sticker-transition">original interaction</a> by Solos. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Solos' intro sticker pile - on the dark \"Welcome to SOLOS\" screen, music stickers (vinyl, cassette, CD, headphones, \"VIBES ONLY\" tag, blue heart, script logo) fly in from the edges one by one and assemble into a floating pile that gently bobs.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark charcoal screen: \"Welcome to SOLOS\" title and subtitle top-left, empty middle, a \"Continue\" pill at the bottom. The stickers land in the middle: a vinyl record, an orange cassette, a CD, white headphones, a dark \"VIBES ONLY\" ticket, a small blue heart, and the white \"Solos\" script wordmark on top.\n\n## Motion spec\nPattern: sequential sticker assembly.\n- Each sticker flies in from a different off-screen edge (left, right, top - varied) along a slight arc, rotating as it travels (rotateZ from +/-40deg settling to its resting tilt of +/-10deg, 500ms, ease-out).\n- Stickers land one at a time, 180ms apart, each with a small impact squash (scale 1.1 -> 1, spring ~450/18, 200ms) and a soft shadow that fades in under it.\n- Stacking order builds the collage: vinyl at the back, cassette and CD mid, heart and headphones front, script wordmark last on top.\n- Once assembled, the whole pile idles: slow collective bob (translateY +/-6px, 3s) with individual stickers drifting a few px out of phase with each other.\n\n## Calibration\n- The assembly takes ~2s total - quick enough to feel snappy, slow enough to read each sticker.\n- Resting tilts are deliberate (-8deg to +10deg) - a arranged collage, not a random heap.\n\n## Reduced motion\nThe pile fades in fully assembled.\n\n## Don't miss\n- The script \"Solos\" wordmark lands last and sits highest - the brand signs the pile.\n- Stickers have white die-cut borders - they read as physical stickers on a dark table."</script>
+</body></html>

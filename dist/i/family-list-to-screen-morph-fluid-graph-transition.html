@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family List to Screen Morph Fluid Graph Transition - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family List to Screen Morph Fluid Graph Transition</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-list-to-screen-morph-fluid-graph-transition"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-list-to-screen-morph-fluid-graph-transition">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-list-to-screen-morph-fluid-graph-transition">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s token-list to detail morph - tapping the Polygon row in the light token list morphs it into the Polygon detail screen (purple line chart, Balance rows, Swap / Send pills), the chart drawing in and re-morphing across timeframes; dismissing collapses the detail back into the list row.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d16410daa283ff12f6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d16410daa283ff12f6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-list-to-screen-morph-fluid-graph-transition.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s token-list to detail morph - tapping the Polygon row in the light token list morphs it into the Polygon detail screen (purple line chart, Balance rows, Swap / Send pills), the chart drawing in and re-morphing across timeframes; dismissing collapses the detail back into the list row.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light list: Benji header, &quot;Tokens $589.55&quot;, rows (Aave $119.38, Ethereum $353.39, Optimism, Tether $33.70, Polygon $12.70, Alongside Crypto Market $7.94, Bridged USDC, WETH $6.86, Worldcoin, The Doge NFT), bottom bar with a black &quot;+&quot; button. Detail: purple Polygon logo, &quot;Polygon $0.89&quot;, &quot;+1.56%&quot; (red for negatives on other tabs), a purple line chart with timeframe tabs, &quot;Balance 14.272 / $12.70&quot;, &quot;Powered by You&quot;, &quot;Description&quot; row, purple &quot;Swap&quot; / &quot;Send&quot; pills.
+
+## Motion spec
+Pattern: shared-element row-to-screen morph with animated chart.
+- Tap the Polygon row: the row&#x27;s logo and title fly to the detail header (arc, 300ms, spring ~320/20) while the list fades and blurs behind (200ms); the detail content container slides up (spring ~300/20).
+- The chart draws in (stroke trim, 600ms, ease-out) from left to right, then the timeframe tabs morph it (control-point interpolation, 500ms) with a scrubber dot riding the line; the percent change rolls digits and flips red/green (200ms).
+- Balance rows stagger in (50ms apart, translateY 10pt -&gt; 0); the purple Swap / Send pills rise last (200ms).
+- Back: the chart trims out (300ms), the detail slides down, and the logo/title fly back into the list row (reverse arc, 300ms), the list unblurring as the row re-settles.
+
+## Calibration
+- Every accent on the detail is Polygon purple - chart stroke, pills, logo.
+- The morph keeps the row&#x27;s logo pixel-identical between list and header.
+
+## Reduced motion
+List and detail crossfade (250ms); chart appears fully drawn.
+
+## Don&#x27;t miss
+- The final return frame shows the detail collapsing with the list blurred beneath - blur is part of the transition, both directions.
+- Timeframe switching reuses the same fluid morph as the standalone chart shot.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element row-to-screen morph with animated chart.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-list-to-screen-morph-fluid-graph-transition">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's token-list to detail morph - tapping the Polygon row in the light token list morphs it into the Polygon detail screen (purple line chart, Balance rows, Swap / Send pills), the chart drawing in and re-morphing across timeframes; dismissing collapses the detail back into the list row.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight list: Benji header, \"Tokens $589.55\", rows (Aave $119.38, Ethereum $353.39, Optimism, Tether $33.70, Polygon $12.70, Alongside Crypto Market $7.94, Bridged USDC, WETH $6.86, Worldcoin, The Doge NFT), bottom bar with a black \"+\" button. Detail: purple Polygon logo, \"Polygon $0.89\", \"+1.56%\" (red for negatives on other tabs), a purple line chart with timeframe tabs, \"Balance 14.272 / $12.70\", \"Powered by You\", \"Description\" row, purple \"Swap\" / \"Send\" pills.\n\n## Motion spec\nPattern: shared-element row-to-screen morph with animated chart.\n- Tap the Polygon row: the row's logo and title fly to the detail header (arc, 300ms, spring ~320/20) while the list fades and blurs behind (200ms); the detail content container slides up (spring ~300/20).\n- The chart draws in (stroke trim, 600ms, ease-out) from left to right, then the timeframe tabs morph it (control-point interpolation, 500ms) with a scrubber dot riding the line; the percent change rolls digits and flips red/green (200ms).\n- Balance rows stagger in (50ms apart, translateY 10pt -> 0); the purple Swap / Send pills rise last (200ms).\n- Back: the chart trims out (300ms), the detail slides down, and the logo/title fly back into the list row (reverse arc, 300ms), the list unblurring as the row re-settles.\n\n## Calibration\n- Every accent on the detail is Polygon purple - chart stroke, pills, logo.\n- The morph keeps the row's logo pixel-identical between list and header.\n\n## Reduced motion\nList and detail crossfade (250ms); chart appears fully drawn.\n\n## Don't miss\n- The final return frame shows the detail collapsing with the list blurred beneath - blur is part of the transition, both directions.\n- Timeframe switching reuses the same fluid morph as the standalone chart shot."</script>
+</body></html>

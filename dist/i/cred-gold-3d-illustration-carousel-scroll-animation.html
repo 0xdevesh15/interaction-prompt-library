@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Gold 3D Illustration Carousel Scroll Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Gold 3D Illustration Carousel Scroll Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-gold-3d-illustration-carousel-scroll-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-gold-3d-illustration-carousel-scroll-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-gold-3d-illustration-carousel-scroll-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED Gold&#x27;s onboarding carousel - each page pairs a benefit line with a gold 3D object (biscuit, coin, bar chart) that tumbles in and idles with a slow rotation as you page through.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d49d1908c2926dc3f2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d49d1908c2926dc3f2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-gold-3d-illustration-carousel-scroll-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED Gold&#x27;s onboarding carousel - each page pairs a benefit line with a gold 3D object (biscuit, coin, bar chart) that tumbles in and idles with a slow rotation as you page through.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED Gold intro pages, off-white: &quot;INTRODUCING CRED GOLD&quot; over stacked gold bars, then pager pages - &quot;own BIS certified 24K pure gold&quot; (gold biscuit with the X hallmark), &quot;fully liquid and accessible&quot; (a gold coin with ring handles), &quot;proven long term growth&quot; (ascending gold bars) - each with subcopy and a Next (final: Explore now) button in a bordered pill.
+
+## Motion spec
+Pattern: 3D gold-object carousel with tumble-in transitions.
+- Page change: the outgoing object tumbles away (rotateY -&gt; -90 degrees, fade, 300ms) while the new one tumbles in from the opposite side (rotateY 90 -&gt; 0, spring ~280/14), landing with a glint sweep across its face (200ms).
+- At rest each object idles: slow rotateY oscillation (+/-8 degrees, 4s) plus a float (translateY +/-4px, 3s) - museum-piece lighting with a moving specular highlight.
+- Copy blocks crossfade per page (headline 200ms, subcopy 100ms later, slightly rising 8px).
+- Page dots under the copy fill sequentially; the button&#x27;s label rolls (vertical, 200ms) when it becomes &quot;Explore now&quot;.
+
+## Calibration
+- The gold is metallic - anisotropic highlights, not flat yellow; the glint is the signature beat.
+- Objects are centered in a fixed stage; paging never moves the stage, only the object.
+
+## Reduced motion
+Objects crossfade (250ms); no idle rotation.
+
+## Don&#x27;t miss
+- The tumble direction matches the swipe direction - forward swipe tumbles left, back swipe tumbles right.
+- The intro card (&quot;INTRODUCING CRED GOLD&quot;) uses the same gold material so the carousel feels like one cast set of objects.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D gold-object carousel with tumble-in transitions.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-gold-3d-illustration-carousel-scroll-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED Gold's onboarding carousel - each page pairs a benefit line with a gold 3D object (biscuit, coin, bar chart) that tumbles in and idles with a slow rotation as you page through.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED Gold intro pages, off-white: \"INTRODUCING CRED GOLD\" over stacked gold bars, then pager pages - \"own BIS certified 24K pure gold\" (gold biscuit with the X hallmark), \"fully liquid and accessible\" (a gold coin with ring handles), \"proven long term growth\" (ascending gold bars) - each with subcopy and a Next (final: Explore now) button in a bordered pill.\n\n## Motion spec\nPattern: 3D gold-object carousel with tumble-in transitions.\n- Page change: the outgoing object tumbles away (rotateY -> -90 degrees, fade, 300ms) while the new one tumbles in from the opposite side (rotateY 90 -> 0, spring ~280/14), landing with a glint sweep across its face (200ms).\n- At rest each object idles: slow rotateY oscillation (+/-8 degrees, 4s) plus a float (translateY +/-4px, 3s) - museum-piece lighting with a moving specular highlight.\n- Copy blocks crossfade per page (headline 200ms, subcopy 100ms later, slightly rising 8px).\n- Page dots under the copy fill sequentially; the button's label rolls (vertical, 200ms) when it becomes \"Explore now\".\n\n## Calibration\n- The gold is metallic - anisotropic highlights, not flat yellow; the glint is the signature beat.\n- Objects are centered in a fixed stage; paging never moves the stage, only the object.\n\n## Reduced motion\nObjects crossfade (250ms); no idle rotation.\n\n## Don't miss\n- The tumble direction matches the swipe direction - forward swipe tumbles left, back swipe tumbles right.\n- The intro card (\"INTRODUCING CRED GOLD\") uses the same gold material so the carousel feels like one cast set of objects."</script>
+</body></html>

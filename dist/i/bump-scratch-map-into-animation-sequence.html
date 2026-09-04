@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bump Scratch Map Into Animation Sequence - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bump Scratch Map Into Animation Sequence</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bump-scratch-map-into-animation-sequence"><b>Bump</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bump-scratch-map-into-animation-sequence">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bump-scratch-map-into-animation-sequence">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Bump&#x27;s Scratch Map intro sequence - an auto-playing tour where a paper plane scratches a trail across a blue map, bold message cards flash by, friend avatars stack into a challenge strip, and a leaderboard slides up, ending on the Scratch Map title over a glowing earth.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756db7bd60f7be9e276c20b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756db7bd60f7be9e276c20b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bump-scratch-map-into-animation-sequence.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Bump&#x27;s Scratch Map intro sequence - an auto-playing tour where a paper plane scratches a trail across a blue map, bold message cards flash by, friend avatars stack into a challenge strip, and a leaderboard slides up, ending on the Scratch Map title over a glowing earth.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+An electric-blue map fills the screen. A paper-plane marker flies a winding route, scratching off a trail that reveals color and photo thumbnails beneath the blue. Bold headline cards punctuate the flight: &quot;Keep with the app&quot;, &quot;when the app is CLOSED!&quot; with a &quot;33.1&quot; stat badge, and &quot;Challenge friends&quot; beside a vertical strip of friend avatars. Then &quot;Climb the leaderboard&quot; rises with a real leaderboard list (names and percentages, &quot;Me&quot; highlighted climbing from 65.0% to 93.0%). The sequence ends on the &quot;SCRATCH MAP - only on Bump&quot; title over a glowing stylized earth.
+
+## Motion spec
+Pattern: auto-playing map scratch tour, ~12s total.
+- The plane flies a curved path (constant speed, banking into turns), and the scratch trail reveals behind it: the blue layer erases in a rough-edged ribbon (~40px wide) exposing the colorful layer with photo chips popping up along the trail (spring stiffness 350 damping 20).
+- Headline cards cut in and out with hard, rhythmic timing (each holds ~1.5s, sliding up 20px with ease-out).
+- The friend avatar strip assembles vertically (avatars stacking in 80ms apart) beside &quot;Challenge friends&quot;.
+- The leaderboard sheet slides up from the bottom (spring stiffness 300 damping 28), rows staggering in (50ms apart), and the &quot;Me&quot; row animates its percentage counting up (65.0 to 93.0 over 800ms) as it climbs ranks.
+- The finale: the map zooms out to the glowing earth (1s, ease-in-out) as the &quot;SCRATCH MAP&quot; title scales in (spring stiffness 320 damping 20).
+
+## Calibration
+- The scratch edge is textured - torn-paper roughness, not a clean wipe.
+- Message cards are pure white bold type on the blue map, no cards or chrome.
+
+## Reduced motion
+Sequence plays as a slideshow of the key frames with simple fades.
+
+## Don&#x27;t miss
+- The trail the plane flies is the exact path that gets scratched - they are one element.
+- The &quot;Me&quot; leaderboard row both counts up and changes rank.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-playing map scratch tour, ~12s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bump-scratch-map-into-animation-sequence">original interaction</a> by Bump. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Bump's Scratch Map intro sequence - an auto-playing tour where a paper plane scratches a trail across a blue map, bold message cards flash by, friend avatars stack into a challenge strip, and a leaderboard slides up, ending on the Scratch Map title over a glowing earth.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAn electric-blue map fills the screen. A paper-plane marker flies a winding route, scratching off a trail that reveals color and photo thumbnails beneath the blue. Bold headline cards punctuate the flight: \"Keep with the app\", \"when the app is CLOSED!\" with a \"33.1\" stat badge, and \"Challenge friends\" beside a vertical strip of friend avatars. Then \"Climb the leaderboard\" rises with a real leaderboard list (names and percentages, \"Me\" highlighted climbing from 65.0% to 93.0%). The sequence ends on the \"SCRATCH MAP - only on Bump\" title over a glowing stylized earth.\n\n## Motion spec\nPattern: auto-playing map scratch tour, ~12s total.\n- The plane flies a curved path (constant speed, banking into turns), and the scratch trail reveals behind it: the blue layer erases in a rough-edged ribbon (~40px wide) exposing the colorful layer with photo chips popping up along the trail (spring stiffness 350 damping 20).\n- Headline cards cut in and out with hard, rhythmic timing (each holds ~1.5s, sliding up 20px with ease-out).\n- The friend avatar strip assembles vertically (avatars stacking in 80ms apart) beside \"Challenge friends\".\n- The leaderboard sheet slides up from the bottom (spring stiffness 300 damping 28), rows staggering in (50ms apart), and the \"Me\" row animates its percentage counting up (65.0 to 93.0 over 800ms) as it climbs ranks.\n- The finale: the map zooms out to the glowing earth (1s, ease-in-out) as the \"SCRATCH MAP\" title scales in (spring stiffness 320 damping 20).\n\n## Calibration\n- The scratch edge is textured - torn-paper roughness, not a clean wipe.\n- Message cards are pure white bold type on the blue map, no cards or chrome.\n\n## Reduced motion\nSequence plays as a slideshow of the key frames with simple fades.\n\n## Don't miss\n- The trail the plane flies is the exact path that gets scratched - they are one element.\n- The \"Me\" leaderboard row both counts up and changes rank."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agora Theme Color Picker - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Agora Theme Color Picker</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/agora-theme-color-picker"><b>Agora</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/agora-theme-color-picker">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/agora-theme-color-picker">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Agora&#x27;s theme picker - the settings sheet shows a row of color dots, and tapping one re-colors the ENTIRE app instantly: background, list rows, icons, and chrome all shift to the new hue.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b4f98a6ede244b0ba5a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b4f98a6ede244b0ba5a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-agora-theme-color-picker.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Agora&#x27;s theme picker - the settings sheet shows a row of color dots, and tapping one re-colors the ENTIRE app instantly: background, list rows, icons, and chrome all shift to the new hue.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Settings sheet over the podcast app: top row of theme dots (purple, blue, black, maroon, red, orange...), then rows (Dynamic theme, Change theme icon, Icon badge OFF, Start with Playlist, Grid view, Current episode on top). Background is fully theme-tinted.
+
+## Motion spec
+Pattern: whole-app live theme swap.
+- Tap a dot: the selected dot gets a white ring (scale 1 -&gt; 1.15 spring ~400/22, ~200ms).
+- The background color sweeps to the new hue from the tapped dot outward (radial wipe, ~300ms ease-out); every surface (list rows, header icons, toggle text) crossfades its tint in the same 300ms so nothing lags.
+- Text and icon colors re-compute per theme (white on dark hues) and crossfade with the background.
+- The sheet stays open - picking is a live preview, not a commit step.
+
+## Calibration
+- One timing function across all surfaces; a staggered re-tint reads as a bug here.
+- Accent colors (badge red, toggles) stay constant across themes; only the base hue changes.
+
+## Reduced motion
+Theme swaps with a flat crossfade, no radial wipe.
+
+## Don&#x27;t miss
+- The wipe originates from the tapped dot&#x27;s position - the gesture causes the color.
+- The podcast feed behind the sheet is themed too - the change is app-wide, visible at the edges.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">whole-app live theme swap.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/agora-theme-color-picker">original interaction</a> by Agora. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Agora's theme picker - the settings sheet shows a row of color dots, and tapping one re-colors the ENTIRE app instantly: background, list rows, icons, and chrome all shift to the new hue.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSettings sheet over the podcast app: top row of theme dots (purple, blue, black, maroon, red, orange...), then rows (Dynamic theme, Change theme icon, Icon badge OFF, Start with Playlist, Grid view, Current episode on top). Background is fully theme-tinted.\n\n## Motion spec\nPattern: whole-app live theme swap.\n- Tap a dot: the selected dot gets a white ring (scale 1 -> 1.15 spring ~400/22, ~200ms).\n- The background color sweeps to the new hue from the tapped dot outward (radial wipe, ~300ms ease-out); every surface (list rows, header icons, toggle text) crossfades its tint in the same 300ms so nothing lags.\n- Text and icon colors re-compute per theme (white on dark hues) and crossfade with the background.\n- The sheet stays open - picking is a live preview, not a commit step.\n\n## Calibration\n- One timing function across all surfaces; a staggered re-tint reads as a bug here.\n- Accent colors (badge red, toggles) stay constant across themes; only the base hue changes.\n\n## Reduced motion\nTheme swaps with a flat crossfade, no radial wipe.\n\n## Don't miss\n- The wipe originates from the tapped dot's position - the gesture causes the color.\n- The podcast feed behind the sheet is themed too - the change is app-wide, visible at the edges."</script>
+</body></html>

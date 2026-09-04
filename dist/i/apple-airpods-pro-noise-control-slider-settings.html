@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple AirPods Pro Noise Control Slider Settings - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple AirPods Pro Noise Control Slider Settings</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-airpods-pro-noise-control-slider-settings"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-airpods-pro-noise-control-slider-settings">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-airpods-pro-noise-control-slider-settings">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the AirPods Pro noise-control selector in iOS Settings - a four-option segmented control (Off / Transparency / Adaptive / Noise Cancellation) whose selection pill slides between segments with a stretchy, squash-and-stretch motion.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2cdea6624f474442d076e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2cdea6624f474442d076e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-airpods-pro-noise-control-slider-settings.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the AirPods Pro noise-control selector in iOS Settings - a four-option segmented control (Off / Transparency / Adaptive / Noise Cancellation) whose selection pill slides between segments with a stretchy, squash-and-stretch motion.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+iOS Settings &gt; Rishi&#x27;s AirPods Pro: AirPods + case artwork with battery percentages (100% / 47%), Name row, then the NOISE CONTROL section - four segments, each with a person-glyph icon and label. Below: PRESS AND HOLD AIRPODS row.
+
+## Motion spec
+Pattern: stretchy sliding selection pill.
+- Tap a segment: the white selection pill unhooks from the current segment and slides horizontally to the tapped one (spring ~340/22, ~380ms), stretching along its travel axis mid-flight (scaleX up to ~1.25, scaleY ~0.85) and squashing on landing (scaleX 0.92 -&gt; 1).
+- The tapped segment&#x27;s icon + label darken as the pill arrives (crossfade 150ms, delayed ~100ms so the pill leads); the old segment&#x27;s label fades to gray in sync.
+- A light haptic fires on landing.
+- Tapping the CURRENT segment does nothing - no wiggle, no pulse.
+- Dragging across segments: the pill tracks the finger continuously with the same stretch, committing on release to the nearest segment.
+
+## Calibration
+- The pill stretches proportional to travel distance - a one-segment hop barely stretches; an Off -&gt; Noise Cancellation jump stretches fully.
+- Icon glyphs are identical per segment except color; state is carried by pill + label color only.
+
+## Reduced motion
+Pill slides without squash/stretch; labels crossfade.
+
+## Don&#x27;t miss
+- The control sits inside a standard grouped-settings section - keep iOS list margins and section headers.
+- The battery artwork above is static; the control is the only animated element.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stretchy sliding selection pill.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-airpods-pro-noise-control-slider-settings">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the AirPods Pro noise-control selector in iOS Settings - a four-option segmented control (Off / Transparency / Adaptive / Noise Cancellation) whose selection pill slides between segments with a stretchy, squash-and-stretch motion.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\niOS Settings > Rishi's AirPods Pro: AirPods + case artwork with battery percentages (100% / 47%), Name row, then the NOISE CONTROL section - four segments, each with a person-glyph icon and label. Below: PRESS AND HOLD AIRPODS row.\n\n## Motion spec\nPattern: stretchy sliding selection pill.\n- Tap a segment: the white selection pill unhooks from the current segment and slides horizontally to the tapped one (spring ~340/22, ~380ms), stretching along its travel axis mid-flight (scaleX up to ~1.25, scaleY ~0.85) and squashing on landing (scaleX 0.92 -> 1).\n- The tapped segment's icon + label darken as the pill arrives (crossfade 150ms, delayed ~100ms so the pill leads); the old segment's label fades to gray in sync.\n- A light haptic fires on landing.\n- Tapping the CURRENT segment does nothing - no wiggle, no pulse.\n- Dragging across segments: the pill tracks the finger continuously with the same stretch, committing on release to the nearest segment.\n\n## Calibration\n- The pill stretches proportional to travel distance - a one-segment hop barely stretches; an Off -> Noise Cancellation jump stretches fully.\n- Icon glyphs are identical per segment except color; state is carried by pill + label color only.\n\n## Reduced motion\nPill slides without squash/stretch; labels crossfade.\n\n## Don't miss\n- The control sits inside a standard grouped-settings section - keep iOS list margins and section headers.\n- The battery artwork above is static; the control is the only animated element."</script>
+</body></html>

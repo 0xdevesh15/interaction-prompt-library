@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Spin Wheel Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Spin Wheel Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-spin-wheel-interaction"><b>Monopoly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-spin-wheel-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-spin-wheel-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monopoly Go&#x27;s spin wheel - tapping spin whips the multiplier wheel around, it decelerates onto a segment, and a prize burst erupts from the board while the milestone track fills.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc260fb87dca19b4d0589/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc260fb87dca19b4d0589/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-spin-wheel-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monopoly Go&#x27;s spin wheel - tapping spin whips the multiplier wheel around, it decelerates onto a segment, and a prize burst erupts from the board while the milestone track fills.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Monopoly Go board with a half-arc prize wheel at the bottom (segments with dice and multiplier values around a central spin button) and a vertical milestone track along the left edge with a progress fill and a gift marker.
+
+## Motion spec
+Pattern: wheel spin with burst payoff, gesture-driven, ~2.5s spin.
+- Tapping the center button kicks the wheel to full speed (300ms spin-up), the segment values blurring past the top pointer.
+- The wheel decelerates over 1.8-2.2s (ease-out with a long tail), ticking segments under the pointer, and settles on the prize segment with a small bounce-back (2-3 degrees).
+- On landing, the pointer segment flashes and a burst erupts from the board&#x27;s active building: the prize object (hammer, dice, cash) pops out (scale 0.2 to 1.4 to 1, spring stiffness 380 damping 14) with radiating streaks.
+- The milestone track&#x27;s fill rises to the next notch (400ms, ease-out) and the gift marker pops if reached.
+
+## Calibration
+- Deceleration is the drama: fast blur, visible ticking, one bounce at rest.
+- The burst comes from the board, not the wheel - the payoff lands on the city.
+
+## Reduced motion
+Wheel rotates a quarter turn and stops; burst is a static pop.
+
+## Don&#x27;t miss
+- The spin button depresses on tap and stays disabled until the wheel rests.
+- The milestone fill animates after the burst, not during the spin.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">wheel spin with burst payoff, gesture-driven, ~2.5s spin.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-spin-wheel-interaction">original interaction</a> by Monopoly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monopoly Go's spin wheel - tapping spin whips the multiplier wheel around, it decelerates onto a segment, and a prize burst erupts from the board while the milestone track fills.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Monopoly Go board with a half-arc prize wheel at the bottom (segments with dice and multiplier values around a central spin button) and a vertical milestone track along the left edge with a progress fill and a gift marker.\n\n## Motion spec\nPattern: wheel spin with burst payoff, gesture-driven, ~2.5s spin.\n- Tapping the center button kicks the wheel to full speed (300ms spin-up), the segment values blurring past the top pointer.\n- The wheel decelerates over 1.8-2.2s (ease-out with a long tail), ticking segments under the pointer, and settles on the prize segment with a small bounce-back (2-3 degrees).\n- On landing, the pointer segment flashes and a burst erupts from the board's active building: the prize object (hammer, dice, cash) pops out (scale 0.2 to 1.4 to 1, spring stiffness 380 damping 14) with radiating streaks.\n- The milestone track's fill rises to the next notch (400ms, ease-out) and the gift marker pops if reached.\n\n## Calibration\n- Deceleration is the drama: fast blur, visible ticking, one bounce at rest.\n- The burst comes from the board, not the wheel - the payoff lands on the city.\n\n## Reduced motion\nWheel rotates a quarter turn and stops; burst is a static pop.\n\n## Don't miss\n- The spin button depresses on tap and stays disabled until the wheel rests.\n- The milestone fill animates after the burst, not during the spin."</script>
+</body></html>

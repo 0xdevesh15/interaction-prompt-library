@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kuvera Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Kuvera Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/kuvera-intro-animation"><b>Kuvera</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/kuvera-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/kuvera-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Kuvera&#x27;s auth intro - inside a rounded arch window, a small bar chart loops forever: grey and green bars grow and fall like a living portfolio while the sign-in card waits below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d5316379cd218090c7f39a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d5316379cd218090c7f39a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-kuvera-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Kuvera&#x27;s auth intro - inside a rounded arch window, a small bar chart loops forever: grey and green bars grow and fall like a living portfolio while the sign-in card waits below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Kuvera welcome screen, white: an arch-topped rounded window holds the bar chart animation; below it a floating card - &quot;KUVERA&quot; wordmark, &quot;Smarter financial moves await&quot;, a black &quot;Continue with CRED&quot; button, and a &quot;Sign in with your Kuvera Account&quot; link. The page background carries a faint grey skyline silhouette.
+
+## Motion spec
+Pattern: looping bar-chart growth inside an arch window.
+- ~10 bars: each bar grows from the baseline to its height and shrinks back on independent phases (grow 500ms ease-out, hold 200-800ms, shrink 400ms ease-in), a few key bars in green, the rest light grey.
+- Small triangle markers pop above the two tallest bars (scale 0 -&gt; 1, 200ms) when they peak, fade when they shrink.
+- The tallest green bar overshoots slightly (scaleY 1.05 -&gt; 1 settle, spring ~300/16).
+- The card below is static; only the window animates.
+
+## Calibration
+- The motion reads as growth, not an equalizer - bars change height smoothly, never jitter frame to frame.
+- Green is reserved for the leaders; at most 3 green bars at any moment.
+
+## Reduced motion
+Bars hold at mid-heights; a single slow grow-shrink sweep every 4s.
+
+## Don&#x27;t miss
+- Bars are clipped by the arch&#x27;s rounded top - a bar growing into the curve masks cleanly.
+- The skyline silhouette behind the bars stays still; depth comes from the bars alone.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping bar-chart growth inside an arch window.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/kuvera-intro-animation">original interaction</a> by Kuvera. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Kuvera's auth intro - inside a rounded arch window, a small bar chart loops forever: grey and green bars grow and fall like a living portfolio while the sign-in card waits below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nKuvera welcome screen, white: an arch-topped rounded window holds the bar chart animation; below it a floating card - \"KUVERA\" wordmark, \"Smarter financial moves await\", a black \"Continue with CRED\" button, and a \"Sign in with your Kuvera Account\" link. The page background carries a faint grey skyline silhouette.\n\n## Motion spec\nPattern: looping bar-chart growth inside an arch window.\n- ~10 bars: each bar grows from the baseline to its height and shrinks back on independent phases (grow 500ms ease-out, hold 200-800ms, shrink 400ms ease-in), a few key bars in green, the rest light grey.\n- Small triangle markers pop above the two tallest bars (scale 0 -> 1, 200ms) when they peak, fade when they shrink.\n- The tallest green bar overshoots slightly (scaleY 1.05 -> 1 settle, spring ~300/16).\n- The card below is static; only the window animates.\n\n## Calibration\n- The motion reads as growth, not an equalizer - bars change height smoothly, never jitter frame to frame.\n- Green is reserved for the leaders; at most 3 green bars at any moment.\n\n## Reduced motion\nBars hold at mid-heights; a single slow grow-shrink sweep every 4s.\n\n## Don't miss\n- Bars are clipped by the arch's rounded top - a bar growing into the curve masks cleanly.\n- The skyline silhouette behind the bars stays still; depth comes from the bars alone."</script>
+</body></html>

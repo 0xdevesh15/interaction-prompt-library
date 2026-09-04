@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Action on Sheet to Sheet Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Action on Sheet to Sheet Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-action-on-sheet-to-sheet-morph-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-action-on-sheet-to-sheet-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-action-on-sheet-to-sheet-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s transaction sheet morph - tapping the action menu on a transaction detail sheet (&quot;Received from 0x1c96...&quot;, $1.05, Completed) morphs it seamlessly into an educational sheet with a bright green &quot;Receives&quot; header (&quot;Reviewing received transactions&quot;, &quot;Got it&quot; button), the sheet body crossfading while the sheet frame stays pinned.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895752f7f889f3d1b4611/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895752f7f889f3d1b4611/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-action-on-sheet-to-sheet-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s transaction sheet morph - tapping the action menu on a transaction detail sheet (&quot;Received from 0x1c96...&quot;, $1.05, Completed) morphs it seamlessly into an educational sheet with a bright green &quot;Receives&quot; header (&quot;Reviewing received transactions&quot;, &quot;Got it&quot; button), the sheet body crossfading while the sheet frame stays pinned.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Wallet screen (&quot;Benji&quot; header, token list: Ethereum, Polygon). The detail sheet: &quot;Received from 0x1c96...&quot;, &quot;$1.05&quot;, &quot;0.0003153 ETH&quot;, a Completed status row, From/Network fee/Chain (Optimism) rows, and an action menu (Hide Txn, Learn More, Add to Address Book, Watch 0x4c96..., Copy Transaction ID, View on Etherscan). The educational sheet: bright green header with a download-arrow glyph, &quot;Receives&quot; title, explainer paragraphs, and a green &quot;Got it&quot; button.
+
+## Motion spec
+Pattern: sheet-content morph with springy header swap.
+- Tap Learn More: the action menu collapses row by row upward (40ms stagger, 150ms each) as the sheet&#x27;s content crossfades (200ms).
+- The green header slides in from the top of the sheet (translateY -30pt -&gt; 0, spring ~320/18) while the sheet grows to its new height (250ms, height animating with the content swap).
+- The explainer paragraphs fade up in stagger (60ms apart, translateY 8pt -&gt; 0).
+- &quot;Got it&quot; slides in last (200ms); tapping it reverses the morph back to the transaction detail (or dismisses the sheet, 250ms slide down).
+
+## Calibration
+- The sheet frame (grabber, corner radius, scrim) never jumps - only its contents and height change.
+- The green header is a hard brand moment: full-bleed saturated green inside the sheet.
+
+## Reduced motion
+Contents crossfade (200ms) without staggers or height spring.
+
+## Don&#x27;t miss
+- The download-arrow glyph in the green header bounces once on arrival (translateY -6pt -&gt; 0, spring ~340/14).
+- The transaction&#x27;s status dot stays green in both sheets&#x27; vocabulary.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet-content morph with springy header swap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-action-on-sheet-to-sheet-morph-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's transaction sheet morph - tapping the action menu on a transaction detail sheet (\"Received from 0x1c96...\", $1.05, Completed) morphs it seamlessly into an educational sheet with a bright green \"Receives\" header (\"Reviewing received transactions\", \"Got it\" button), the sheet body crossfading while the sheet frame stays pinned.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWallet screen (\"Benji\" header, token list: Ethereum, Polygon). The detail sheet: \"Received from 0x1c96...\", \"$1.05\", \"0.0003153 ETH\", a Completed status row, From/Network fee/Chain (Optimism) rows, and an action menu (Hide Txn, Learn More, Add to Address Book, Watch 0x4c96..., Copy Transaction ID, View on Etherscan). The educational sheet: bright green header with a download-arrow glyph, \"Receives\" title, explainer paragraphs, and a green \"Got it\" button.\n\n## Motion spec\nPattern: sheet-content morph with springy header swap.\n- Tap Learn More: the action menu collapses row by row upward (40ms stagger, 150ms each) as the sheet's content crossfades (200ms).\n- The green header slides in from the top of the sheet (translateY -30pt -> 0, spring ~320/18) while the sheet grows to its new height (250ms, height animating with the content swap).\n- The explainer paragraphs fade up in stagger (60ms apart, translateY 8pt -> 0).\n- \"Got it\" slides in last (200ms); tapping it reverses the morph back to the transaction detail (or dismisses the sheet, 250ms slide down).\n\n## Calibration\n- The sheet frame (grabber, corner radius, scrim) never jumps - only its contents and height change.\n- The green header is a hard brand moment: full-bleed saturated green inside the sheet.\n\n## Reduced motion\nContents crossfade (200ms) without staggers or height spring.\n\n## Don't miss\n- The download-arrow glyph in the green header bounces once on arrival (translateY -6pt -> 0, spring ~340/14).\n- The transaction's status dot stays green in both sheets' vocabulary."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adidas Onboarding Story Stepper Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Adidas Onboarding Story Stepper Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/adidas-onboarding-story-stepper-interaction"><b>Adidas</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/adidas-onboarding-story-stepper-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/adidas-onboarding-story-stepper-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Adidas&#x27; stepped onboarding - a thin progress line at the top advances through permission steps (notifications, location, bluetooth) and a preference picker, each step a black screen with one icon, one ask, and one button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d36933794a0c8c37b8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d36933794a0c8c37b8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-adidas-onboarding-story-stepper-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Adidas&#x27; stepped onboarding - a thin progress line at the top advances through permission steps (notifications, location, bluetooth) and a preference picker, each step a black screen with one icon, one ask, and one button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Adidas onboarding, all black: a thin segmented progress line at the top; per step - a small line icon, an uppercase headline (&quot;GET IMPORTANT UPDATES&quot;, &quot;KEEP IT LOCAL&quot;, &quot;ACCESS IN-STORE SERVICES&quot;, &quot;LAST ONE! SET YOUR SHOPPING PREFERENCES&quot;), small subcopy, and a bottom button (&quot;ENABLE NOTIFICATIONS&quot; / &quot;CONTINUE&quot;), ending in outlined WOMEN / MEN / KIDS / (more) preference buttons.
+
+## Motion spec
+Pattern: stepped permission flow with advancing progress line.
+- Step transitions crossfade: the icon, headline, and copy fade out together (180ms), the next step fades in with a slight rise (translateY 12 -&gt; 0, 280ms).
+- The progress line extends to the next segment as the new step lands (300ms, ease-out) - the bar leads, content follows.
+- The bottom button fades up last on each step (100ms after the copy).
+- The bluetooth step&#x27;s CONTINUE raises the system permission dialog: the screen dims, the dialog scales 0.92 -&gt; 1 with fade (200ms); either answer dismisses (150ms) and the flow advances.
+- On the preferences step, tapping an option fills it white (150ms) and the flow can end on a final CONTINUE.
+
+## Calibration
+- One idea per screen - generous emptiness is the design; never stack steps.
+- Icons are thin line work, same stroke weight across all steps.
+
+## Reduced motion
+Steps crossfade (250ms); progress line jumps.
+
+## Don&#x27;t miss
+- The progress line never moves backward - declining a permission still advances.
+- The system dialog is real chrome: keep the underlying screen visible but dimmed.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stepped permission flow with advancing progress line.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/adidas-onboarding-story-stepper-interaction">original interaction</a> by Adidas. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Adidas' stepped onboarding - a thin progress line at the top advances through permission steps (notifications, location, bluetooth) and a preference picker, each step a black screen with one icon, one ask, and one button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAdidas onboarding, all black: a thin segmented progress line at the top; per step - a small line icon, an uppercase headline (\"GET IMPORTANT UPDATES\", \"KEEP IT LOCAL\", \"ACCESS IN-STORE SERVICES\", \"LAST ONE! SET YOUR SHOPPING PREFERENCES\"), small subcopy, and a bottom button (\"ENABLE NOTIFICATIONS\" / \"CONTINUE\"), ending in outlined WOMEN / MEN / KIDS / (more) preference buttons.\n\n## Motion spec\nPattern: stepped permission flow with advancing progress line.\n- Step transitions crossfade: the icon, headline, and copy fade out together (180ms), the next step fades in with a slight rise (translateY 12 -> 0, 280ms).\n- The progress line extends to the next segment as the new step lands (300ms, ease-out) - the bar leads, content follows.\n- The bottom button fades up last on each step (100ms after the copy).\n- The bluetooth step's CONTINUE raises the system permission dialog: the screen dims, the dialog scales 0.92 -> 1 with fade (200ms); either answer dismisses (150ms) and the flow advances.\n- On the preferences step, tapping an option fills it white (150ms) and the flow can end on a final CONTINUE.\n\n## Calibration\n- One idea per screen - generous emptiness is the design; never stack steps.\n- Icons are thin line work, same stroke weight across all steps.\n\n## Reduced motion\nSteps crossfade (250ms); progress line jumps.\n\n## Don't miss\n- The progress line never moves backward - declining a permission still advances.\n- The system dialog is real chrome: keep the underlying screen visible but dimmed."</script>
+</body></html>

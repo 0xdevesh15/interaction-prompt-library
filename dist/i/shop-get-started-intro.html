@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop Get Started Intro - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Shop Get Started Intro</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shop-get-started-intro"><b>Shop</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shop-get-started-intro">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shop-get-started-intro">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Shop&#x27;s onboarding splash - the purple &quot;shop&quot; logo screen dissolves into a dark constellation of floating product illustrations (chair, disco ball, bag, lipstick, cap, camera) orbiting slowly while rotating value-prop headlines swap in the center.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c86ba002fa2363ead00fe6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c86ba002fa2363ead00fe6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shop-get-started-intro.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Shop&#x27;s onboarding splash - the purple &quot;shop&quot; logo screen dissolves into a dark constellation of floating product illustrations (chair, disco ball, bag, lipstick, cap, camera) orbiting slowly while rotating value-prop headlines swap in the center.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Opens on a solid purple splash with the white &quot;shop&quot; wordmark. Main scene: black background, ~8 small product illustrations scattered in a loose ring, the wordmark (then headlines like &quot;Track your orders every step of the way&quot;, &quot;Discover your next favorite brand&quot;, &quot;Supercharge your online shopping&quot;) centered, a purple &quot;Get Started&quot; button and legal fine print pinned bottom.
+
+## Motion spec
+Pattern: logo dissolve into orbiting product constellation.
+- The purple splash holds 1s, then the wordmark shrinks slightly and the background crossfades to black (500ms) as the product illustrations pop in one by one (scale 0 -&gt; 1, spring ~340/18, 90ms apart, random order).
+- The constellation drifts: each item orbits the center slowly (30-50s per revolution, each with its own radius and phase) with a gentle independent bob (+-6px, 3-5s sine).
+- Center copy rotates every ~3s: the wordmark fades out and each headline fades/slides in (12px rise, 400ms, 250ms out), cycling through the value props.
+- Get Started stays constant; it pulses once (scale 1.03) on entry only.
+
+## Calibration
+- Products never overlap the center text - orbit radii keep a clear core.
+- Motion is all ambient and seamless; nothing snaps at loop points.
+
+## Reduced motion
+Static constellation; headlines crossfade.
+
+## Don&#x27;t miss
+- Each illustration has its own speed - uniform rotation would read as a ferris wheel, not a constellation.
+- The purple from the splash survives only in the button - a deliberate thread through the scene change.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo dissolve into orbiting product constellation.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shop-get-started-intro">original interaction</a> by Shop. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Shop's onboarding splash - the purple \"shop\" logo screen dissolves into a dark constellation of floating product illustrations (chair, disco ball, bag, lipstick, cap, camera) orbiting slowly while rotating value-prop headlines swap in the center.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOpens on a solid purple splash with the white \"shop\" wordmark. Main scene: black background, ~8 small product illustrations scattered in a loose ring, the wordmark (then headlines like \"Track your orders every step of the way\", \"Discover your next favorite brand\", \"Supercharge your online shopping\") centered, a purple \"Get Started\" button and legal fine print pinned bottom.\n\n## Motion spec\nPattern: logo dissolve into orbiting product constellation.\n- The purple splash holds 1s, then the wordmark shrinks slightly and the background crossfades to black (500ms) as the product illustrations pop in one by one (scale 0 -> 1, spring ~340/18, 90ms apart, random order).\n- The constellation drifts: each item orbits the center slowly (30-50s per revolution, each with its own radius and phase) with a gentle independent bob (+-6px, 3-5s sine).\n- Center copy rotates every ~3s: the wordmark fades out and each headline fades/slides in (12px rise, 400ms, 250ms out), cycling through the value props.\n- Get Started stays constant; it pulses once (scale 1.03) on entry only.\n\n## Calibration\n- Products never overlap the center text - orbit radii keep a clear core.\n- Motion is all ambient and seamless; nothing snaps at loop points.\n\n## Reduced motion\nStatic constellation; headlines crossfade.\n\n## Don't miss\n- Each illustration has its own speed - uniform rotation would read as a ferris wheel, not a constellation.\n- The purple from the splash survives only in the button - a deliberate thread through the scene change."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple iPhone MagSafe Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple iPhone MagSafe Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-iphone-magsafe-animation"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-iphone-magsafe-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-iphone-magsafe-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple&#x27;s MagSafe charging moment on the lock screen - the screen dims, a dark circular puck wells up, a green charge ring sweeps around a lightning bolt, &quot;90% Charged&quot; fades in below, then the whole overlay dissolves back to the lock screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721181d0522bbba81ca0033/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721181d0522bbba81ca0033/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-iphone-magsafe-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple&#x27;s MagSafe charging moment on the lock screen - the screen dims, a dark circular puck wells up, a green charge ring sweeps around a lightning bolt, &quot;90% Charged&quot; fades in below, then the whole overlay dissolves back to the lock screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+iOS lock screen (18:55 clock, date, wallpaper). On charger attach, the wallpaper dims and blurs slightly; a centered circular dark puck (~55% of screen width) appears, containing a green lightning bolt surrounded by a green progress ring, with &quot;90% Charged&quot; beneath.
+
+## Motion spec
+Pattern: charging overlay - puck rise, ring sweep, dissolve.
+- Lock screen dims (opacity overlay to ~50%, 300ms) as the puck scales in from ~0.7 with a soft spring (~260/20, ~400ms).
+- Charge ring: a green arc sweeps clockwise around the bolt from 12 o&#x27;clock to the charge-level position (~600ms, ease-out); a lighter track ring sits beneath it.
+- The bolt fades in with the ring start; &quot;90% Charged&quot; fades in below the puck (~250ms, 300ms after the ring starts).
+- Hold ~1.2s, then the puck scales down and fades (300ms) and the lock screen undims.
+
+## Calibration
+- Ring sweep is one smooth arc, not a spinning loader - it travels once to the level and stops.
+- The puck is darker than the dimmed wallpaper: it reads as a physical disc, not a glow.
+
+## Reduced motion
+Overlay fades in/out (250ms) with the ring already at its final position.
+
+## Don&#x27;t miss
+- The clock stays faintly visible behind the dim layer.
+- The green ring has a visible rounded cap at its end.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">charging overlay - puck rise, ring sweep, dissolve.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-iphone-magsafe-animation">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple's MagSafe charging moment on the lock screen - the screen dims, a dark circular puck wells up, a green charge ring sweeps around a lightning bolt, \"90% Charged\" fades in below, then the whole overlay dissolves back to the lock screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\niOS lock screen (18:55 clock, date, wallpaper). On charger attach, the wallpaper dims and blurs slightly; a centered circular dark puck (~55% of screen width) appears, containing a green lightning bolt surrounded by a green progress ring, with \"90% Charged\" beneath.\n\n## Motion spec\nPattern: charging overlay - puck rise, ring sweep, dissolve.\n- Lock screen dims (opacity overlay to ~50%, 300ms) as the puck scales in from ~0.7 with a soft spring (~260/20, ~400ms).\n- Charge ring: a green arc sweeps clockwise around the bolt from 12 o'clock to the charge-level position (~600ms, ease-out); a lighter track ring sits beneath it.\n- The bolt fades in with the ring start; \"90% Charged\" fades in below the puck (~250ms, 300ms after the ring starts).\n- Hold ~1.2s, then the puck scales down and fades (300ms) and the lock screen undims.\n\n## Calibration\n- Ring sweep is one smooth arc, not a spinning loader - it travels once to the level and stops.\n- The puck is darker than the dimmed wallpaper: it reads as a physical disc, not a glow.\n\n## Reduced motion\nOverlay fades in/out (250ms) with the ring already at its final position.\n\n## Don't miss\n- The clock stays faintly visible behind the dim layer.\n- The green ring has a visible rounded cap at its end."</script>
+</body></html>

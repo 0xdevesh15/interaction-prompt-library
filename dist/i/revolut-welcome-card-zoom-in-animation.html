@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revolut Welcome Card Zoom In Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Revolut Welcome Card Zoom In Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/revolut-welcome-card-zoom-in-animation"><b>Revolut</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-welcome-card-zoom-in-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-welcome-card-zoom-in-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Revolut&#x27;s welcome intro - a giant yellow card that fills the screen zooms back and shrinks into a floating cluster of playful 3D objects above the login buttons.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756da9dd60f7be9e276b861/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756da9dd60f7be9e276b861/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-revolut-welcome-card-zoom-in-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Revolut&#x27;s welcome intro - a giant yellow card that fills the screen zooms back and shrinks into a floating cluster of playful 3D objects above the login buttons.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Revolut&#x27;s white welcome screen: &quot;Welcome to Revolut&quot; crumb trail, the bold headline &quot;INDEPENDENCE STARTS HERE&quot;, and two bottom buttons (&quot;Log in to Revolut&quot;, &quot;Create a new account&quot;). The hero area starts as a huge yellow card rushing at the camera, then it zooms out and docks into a cluster of glossy 3D objects - inflatable purple and red shapes, a shield, coins, a small safe - that floats and turns gently above the headline.
+
+## Motion spec
+Pattern: dramatic zoom-out into 3D cluster, ~2s total.
+- The yellow card starts oversized, filling the frame edge to edge (slight perspective tilt), then zooms out fast (700ms, ease-out) as if flying away from the camera.
+- As it shrinks, the surrounding 3D objects fade and scale in around the landing point (spring stiffness 300 damping 20, 80ms stagger), the card docking into the middle of the cluster.
+- The cluster then idles: a slow rotation (plus/minus 4 degrees, 6s period) and a gentle group float (plus/minus 6px, 4s period), individual pieces bobbing on offset phases.
+- Headline and buttons remain static throughout.
+
+## Calibration
+- The zoom starts inside the card&#x27;s details (texture and chip visible), so the scale change reads as extreme.
+- The card ends clearly nested among the objects - part of the still life, not overlaid on it.
+
+## Reduced motion
+Card fades to its docked size; cluster static.
+
+## Don&#x27;t miss
+- The motion is a zoom out (object recedes), not a scale down in place - perspective shifts during flight.
+- The yellow card stays the brightest object in the cluster.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">dramatic zoom-out into 3D cluster, ~2s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/revolut-welcome-card-zoom-in-animation">original interaction</a> by Revolut. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Revolut's welcome intro - a giant yellow card that fills the screen zooms back and shrinks into a floating cluster of playful 3D objects above the login buttons.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRevolut's white welcome screen: \"Welcome to Revolut\" crumb trail, the bold headline \"INDEPENDENCE STARTS HERE\", and two bottom buttons (\"Log in to Revolut\", \"Create a new account\"). The hero area starts as a huge yellow card rushing at the camera, then it zooms out and docks into a cluster of glossy 3D objects - inflatable purple and red shapes, a shield, coins, a small safe - that floats and turns gently above the headline.\n\n## Motion spec\nPattern: dramatic zoom-out into 3D cluster, ~2s total.\n- The yellow card starts oversized, filling the frame edge to edge (slight perspective tilt), then zooms out fast (700ms, ease-out) as if flying away from the camera.\n- As it shrinks, the surrounding 3D objects fade and scale in around the landing point (spring stiffness 300 damping 20, 80ms stagger), the card docking into the middle of the cluster.\n- The cluster then idles: a slow rotation (plus/minus 4 degrees, 6s period) and a gentle group float (plus/minus 6px, 4s period), individual pieces bobbing on offset phases.\n- Headline and buttons remain static throughout.\n\n## Calibration\n- The zoom starts inside the card's details (texture and chip visible), so the scale change reads as extreme.\n- The card ends clearly nested among the objects - part of the still life, not overlaid on it.\n\n## Reduced motion\nCard fades to its docked size; cluster static.\n\n## Don't miss\n- The motion is a zoom out (object recedes), not a scale down in place - perspective shifts during flight.\n- The yellow card stays the brightest object in the cluster."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eimi Generating Card Preview Morph Pop Scale in Sheet Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Eimi Generating Card Preview Morph Pop Scale in Sheet Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/eimi-generating-card-preview-morph-pop-scale-in-sheet-animation"><b>Eimi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/eimi-generating-card-preview-morph-pop-scale-in-sheet-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/eimi-generating-card-preview-morph-pop-scale-in-sheet-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Eimi&#x27;s generating-preview sheet - a blue &quot;Preparing&quot; panel pulses a dashed card outline while generating, then the outline morphs into the rendered card preview with a springy pop and a white glow burst.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdb5ff8d4ab5d59e3f6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdb5ff8d4ab5d59e3f6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-eimi-generating-card-preview-morph-pop-scale-in-sheet-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Eimi&#x27;s generating-preview sheet - a blue &quot;Preparing&quot; panel pulses a dashed card outline while generating, then the outline morphs into the rendered card preview with a springy pop and a white glow burst.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Eimi setup flow, dark: first the &quot;Steve Jobs Innovation&quot; config sheet (Time 7:30AM, How Often Daily, blue FINISH); then the &quot;Preparing / Generating card preview&quot; panel - a large blue rounded area with a dashed card outline at center and a &quot;STOP&quot; button below; finally the rendered green quote card appearing inside with &quot;ALL SET&quot; and a white glow.
+
+## Motion spec
+Pattern: dashed placeholder morphing into the finished card with a pop and glow burst.
+- Tap FINISH: the config sheet&#x27;s contents fade (200ms) as the blue Preparing panel scales up from the sheet&#x27;s body (scale 0.9 -&gt; 1, 300ms) - the sheet&#x27;s color becomes the panel.
+- The dashed outline pulses while generating: opacity 0.35 -&gt; 0.9 -&gt; 0.35 (1.2s loop) with the dashes marching (dash offset animating continuously, ~40px/s) - an ants-marching placeholder.
+- &quot;Preparing&quot; and &quot;Generating card preview&quot; hold at top; STOP stays live below.
+- On completion: the dashes accelerate into the outline (dash offset speeds up over 300ms), the outline fills from its center with the card&#x27;s rendered face (radial reveal, 350ms), and the whole card pops scale 0.92 -&gt; 1.04 -&gt; 1 (spring ~380/13).
+- A white glow ring bursts outward from the card (scale 1 -&gt; 2.2, opacity 0.9 -&gt; 0, 500ms) as &quot;ALL SET&quot; fades in above it (250ms).
+
+## Calibration
+- The placeholder&#x27;s aspect and position are exactly the final card&#x27;s - the morph is fill-in, not a swap.
+- The blue panel stays put through everything; only the placeholder and glow move.
+
+## Reduced motion
+Placeholder crossfades to the rendered card (300ms); glow omitted.
+
+## Don&#x27;t miss
+- The marching dashes are the loading signal - no separate spinner anywhere.
+- The glow ring is clipped to the panel - it never washes over the STOP button.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">dashed placeholder morphing into the finished card with a pop and glow burst.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/eimi-generating-card-preview-morph-pop-scale-in-sheet-animation">original interaction</a> by Eimi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Eimi's generating-preview sheet - a blue \"Preparing\" panel pulses a dashed card outline while generating, then the outline morphs into the rendered card preview with a springy pop and a white glow burst.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nEimi setup flow, dark: first the \"Steve Jobs Innovation\" config sheet (Time 7:30AM, How Often Daily, blue FINISH); then the \"Preparing / Generating card preview\" panel - a large blue rounded area with a dashed card outline at center and a \"STOP\" button below; finally the rendered green quote card appearing inside with \"ALL SET\" and a white glow.\n\n## Motion spec\nPattern: dashed placeholder morphing into the finished card with a pop and glow burst.\n- Tap FINISH: the config sheet's contents fade (200ms) as the blue Preparing panel scales up from the sheet's body (scale 0.9 -> 1, 300ms) - the sheet's color becomes the panel.\n- The dashed outline pulses while generating: opacity 0.35 -> 0.9 -> 0.35 (1.2s loop) with the dashes marching (dash offset animating continuously, ~40px/s) - an ants-marching placeholder.\n- \"Preparing\" and \"Generating card preview\" hold at top; STOP stays live below.\n- On completion: the dashes accelerate into the outline (dash offset speeds up over 300ms), the outline fills from its center with the card's rendered face (radial reveal, 350ms), and the whole card pops scale 0.92 -> 1.04 -> 1 (spring ~380/13).\n- A white glow ring bursts outward from the card (scale 1 -> 2.2, opacity 0.9 -> 0, 500ms) as \"ALL SET\" fades in above it (250ms).\n\n## Calibration\n- The placeholder's aspect and position are exactly the final card's - the morph is fill-in, not a swap.\n- The blue panel stays put through everything; only the placeholder and glow move.\n\n## Reduced motion\nPlaceholder crossfades to the rendered card (300ms); glow omitted.\n\n## Don't miss\n- The marching dashes are the loading signal - no separate spinner anywhere.\n- The glow ring is clipped to the panel - it never washes over the STOP button."</script>
+</body></html>

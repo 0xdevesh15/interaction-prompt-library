@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finma Import Transactions Onboarding Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Finma Import Transactions Onboarding Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/finma-import-transactions-onboarding-animation"><b>Finma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-import-transactions-onboarding-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-import-transactions-onboarding-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Finma&#x27;s import onboarding loop - on the dark &quot;Import Existing Transactions&quot; page, raw transaction labels slide out of the source icons (PDF, Mail, wallet) and drift across the stage, looping to suggest thousands of records pouring in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f283a3162ff378abe/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f283a3162ff378abe/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-finma-import-transactions-onboarding-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Finma&#x27;s import onboarding loop - on the dark &quot;Import Existing Transactions&quot; page, raw transaction labels slide out of the source icons (PDF, Mail, wallet) and drift across the stage, looping to suggest thousands of records pouring in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark onboarding page: a cluster of source icons at center-left (red PDF, white Mail, wallet), and small dark label chips carrying raw merchant strings (&quot;McDonald&#x27;s Pvt ltd&quot;, &quot;AMZN*64PU...&quot;, &quot;uber*tr1233&quot;, &quot;emirates flight-inl d&quot;, &quot;9 INC&quot;) emerging and floating right. Below: &quot;Import Existing Transactions&quot; title, &quot;Import 1000s of existing transactions from PDFs, Apple Wallet and more&quot; subcopy, pager, back chevron, gradient Next pill.
+
+## Motion spec
+Pattern: looping emitter - labels spawn from icons and drift out.
+- Each cycle: a label chip spawns behind its source icon (scale 0.5, opacity 0), slides out from the icon&#x27;s edge (scale -&gt; 1, translateX, 400ms, ease-out), then drifts right and slightly down (2s, ease-in) while fading (last 500ms).
+- Sources alternate per spawn (PDF, Mail, wallet, 700ms apart); the icons bounce subtly when they emit (scale 1 -&gt; 1.06 -&gt; 1, spring ~340/16).
+- Chips vary in vertical lane so streams do not collide; up to three chips are in flight at once.
+- The loop runs continuously and seamlessly - the last chip&#x27;s fade overlaps the next spawn.
+
+## Calibration
+- Chips are dark with gray text - raw, uncleaned data; no logos or categories at this step.
+- The icon cluster stays fixed; only chips move.
+
+## Reduced motion
+Chips fade in/out at their end positions (300ms) without travel; icons static.
+
+## Don&#x27;t miss
+- The merchant strings keep messy bank formatting - they are pre-categorization raw data.
+- The Next pill&#x27;s gradient and the pager are unchanged from sibling pages.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping emitter - labels spawn from icons and drift out.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/finma-import-transactions-onboarding-animation">original interaction</a> by Finma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Finma's import onboarding loop - on the dark \"Import Existing Transactions\" page, raw transaction labels slide out of the source icons (PDF, Mail, wallet) and drift across the stage, looping to suggest thousands of records pouring in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark onboarding page: a cluster of source icons at center-left (red PDF, white Mail, wallet), and small dark label chips carrying raw merchant strings (\"McDonald's Pvt ltd\", \"AMZN*64PU...\", \"uber*tr1233\", \"emirates flight-inl d\", \"9 INC\") emerging and floating right. Below: \"Import Existing Transactions\" title, \"Import 1000s of existing transactions from PDFs, Apple Wallet and more\" subcopy, pager, back chevron, gradient Next pill.\n\n## Motion spec\nPattern: looping emitter - labels spawn from icons and drift out.\n- Each cycle: a label chip spawns behind its source icon (scale 0.5, opacity 0), slides out from the icon's edge (scale -> 1, translateX, 400ms, ease-out), then drifts right and slightly down (2s, ease-in) while fading (last 500ms).\n- Sources alternate per spawn (PDF, Mail, wallet, 700ms apart); the icons bounce subtly when they emit (scale 1 -> 1.06 -> 1, spring ~340/16).\n- Chips vary in vertical lane so streams do not collide; up to three chips are in flight at once.\n- The loop runs continuously and seamlessly - the last chip's fade overlaps the next spawn.\n\n## Calibration\n- Chips are dark with gray text - raw, uncleaned data; no logos or categories at this step.\n- The icon cluster stays fixed; only chips move.\n\n## Reduced motion\nChips fade in/out at their end positions (300ms) without travel; icons static.\n\n## Don't miss\n- The merchant strings keep messy bank formatting - they are pre-categorization raw data.\n- The Next pill's gradient and the pager are unchanged from sibling pages."</script>
+</body></html>

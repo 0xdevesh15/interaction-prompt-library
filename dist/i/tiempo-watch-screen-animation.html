@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tiempo Watch Screen Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tiempo Watch Screen Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tiempo-watch-screen-animation"><b>Tiempo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiempo-watch-screen-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiempo-watch-screen-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Tiempo&#x27;s promo hero - an Apple Watch mockup auto-plays a live workout: the timer counts up, the heart rate pulses, and the progress ring fills around the face.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343d00491e9c48bfb18f64/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343d00491e9c48bfb18f64/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tiempo-watch-screen-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Tiempo&#x27;s promo hero - an Apple Watch mockup auto-plays a live workout: the timer counts up, the heart rate pulses, and the progress ring fills around the face.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Tiempo landing, near-black with a faint dark texture: &quot;TIEMPO&quot; wordmark, &quot;A simple and delightful workout tracker for Apple Watch.&quot;, a large Apple Watch mockup center showing the workout face (elapsed timer 0:00, heart rate with heart glyph, corner complications, a lime-yellow activity ring), and a lime &quot;Get started now&quot; button below.
+
+## Motion spec
+Pattern: auto-playing watch mockup with a live timer, pulsing heart rate, and a filling ring.
+- The page loads with the watch fading up (24px rise, 500ms), wordmark and tagline 150ms earlier, the button 150ms after.
+- The workout auto-starts: the elapsed timer counts up in real time (0:00, 0:01, ... digits roll 100ms per second change, monospaced so nothing shifts).
+- The lime progress ring sweeps clockwise around the watch face, tracking elapsed time (linear, completing one lap per minute).
+- The heart rate pulses: the heart glyph beats (scale 1 -&gt; 1.25 -&gt; 1, 400ms per beat at ~105bpm pacing) and the bpm number drifts realistically (103 -&gt; 105 -&gt; 107, changing every 2-3s with a 150ms crossfade).
+- The watch hardware has a slow ambient glint: a light sweep crossing the case every ~6s (400ms).
+- The CTA button idles with a soft glow pulse (shadow opacity 0.5 -&gt; 0.8 -&gt; 0.5, 2.5s).
+
+## Calibration
+- The timer is monospaced and right-stable - the colon never moves.
+- Everything inside the watch face is live; everything outside it is still.
+
+## Reduced motion
+Static watch face showing 0:00 and a resting heart rate; no ring sweep or beats.
+
+## Don&#x27;t miss
+- The ring&#x27;s color is Tiempo&#x27;s lime, matching the CTA button exactly.
+- Corner complications (time, icons) stay static - only the timer, bpm, heart, and ring move.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-playing watch mockup with a live timer, pulsing heart rate, and a filling ring.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tiempo-watch-screen-animation">original interaction</a> by Tiempo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Tiempo's promo hero - an Apple Watch mockup auto-plays a live workout: the timer counts up, the heart rate pulses, and the progress ring fills around the face.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTiempo landing, near-black with a faint dark texture: \"TIEMPO\" wordmark, \"A simple and delightful workout tracker for Apple Watch.\", a large Apple Watch mockup center showing the workout face (elapsed timer 0:00, heart rate with heart glyph, corner complications, a lime-yellow activity ring), and a lime \"Get started now\" button below.\n\n## Motion spec\nPattern: auto-playing watch mockup with a live timer, pulsing heart rate, and a filling ring.\n- The page loads with the watch fading up (24px rise, 500ms), wordmark and tagline 150ms earlier, the button 150ms after.\n- The workout auto-starts: the elapsed timer counts up in real time (0:00, 0:01, ... digits roll 100ms per second change, monospaced so nothing shifts).\n- The lime progress ring sweeps clockwise around the watch face, tracking elapsed time (linear, completing one lap per minute).\n- The heart rate pulses: the heart glyph beats (scale 1 -> 1.25 -> 1, 400ms per beat at ~105bpm pacing) and the bpm number drifts realistically (103 -> 105 -> 107, changing every 2-3s with a 150ms crossfade).\n- The watch hardware has a slow ambient glint: a light sweep crossing the case every ~6s (400ms).\n- The CTA button idles with a soft glow pulse (shadow opacity 0.5 -> 0.8 -> 0.5, 2.5s).\n\n## Calibration\n- The timer is monospaced and right-stable - the colon never moves.\n- Everything inside the watch face is live; everything outside it is still.\n\n## Reduced motion\nStatic watch face showing 0:00 and a resting heart rate; no ring sweep or beats.\n\n## Don't miss\n- The ring's color is Tiempo's lime, matching the CTA button exactly.\n- Corner complications (time, icons) stay static - only the timer, bpm, heart, and ring move."</script>
+</body></html>

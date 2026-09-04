@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Particle News Step Check Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Particle News Step Check Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/particle-news-step-check-animation"><b>Particle</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/particle-news-step-check-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/particle-news-step-check-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Particle&#x27;s onboarding checklist - each completed step strikes through and its numbered circle morphs into a green checkmark while the next step activates, ending on &quot;Start using Particle&quot; with a &quot;Let&#x27;s Go&quot; button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d71fe76d5c62e604913c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d71fe76d5c62e604913c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-particle-news-step-check-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Particle&#x27;s onboarding checklist - each completed step strikes through and its numbered circle morphs into a green checkmark while the next step activates, ending on &quot;Start using Particle&quot; with a &quot;Let&#x27;s Go&quot; button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light screen with the node-network motif up top. A vertical checklist: &quot;1 Create Account&quot;, &quot;2 Get news you want to see&quot;, &quot;3 Never miss news you care about&quot; (with an &quot;Allow Notifications&quot; black button), &quot;4 Start using Particle&quot; (with a &quot;Let&#x27;s Go&quot; button). Earlier steps show green check circles and strikethrough text.
+
+## Motion spec
+Pattern: sequential checklist completion, ~400ms per step.
+- Complete: the step&#x27;s numbered circle spins + fills green (300ms, ease-out) while a checkmark draws in (stroke-dash, 250ms, +50ms).
+- Strike: the step text strikes through left to right (250ms) and dims to gray (200ms).
+- Activate: the next step&#x27;s number pops in (scale 0.6 -&gt; 1, spring ~380/20) and its body rises 4px (200ms).
+- Sub-screen: the tuning sheet (topic list: Closed-circuit television, Southeast Asia, British Academy Film Awards, Jay Shetty, Thailand, each with a + button) slides up as a sheet (350ms, ease-out); tapping + fills it with a check (200ms) and &quot;Finished Tuning&quot; completes the step.
+
+## Calibration
+- Only one step is active at a time; future steps show hollow numbered circles.
+- The strike lands after the check draw finishes, not before.
+
+## Reduced motion
+Check fades in (200ms); text dims without strike.
+
+## Don&#x27;t miss
+- The circle morph is number-to-check in one element, not a swap of two icons.
+- &quot;Allow Notifications&quot; and &quot;Let&#x27;s Go&quot; are the only black buttons; their steps stay current until tapped.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential checklist completion, ~400ms per step.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/particle-news-step-check-animation">original interaction</a> by Particle. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Particle's onboarding checklist - each completed step strikes through and its numbered circle morphs into a green checkmark while the next step activates, ending on \"Start using Particle\" with a \"Let's Go\" button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen with the node-network motif up top. A vertical checklist: \"1 Create Account\", \"2 Get news you want to see\", \"3 Never miss news you care about\" (with an \"Allow Notifications\" black button), \"4 Start using Particle\" (with a \"Let's Go\" button). Earlier steps show green check circles and strikethrough text.\n\n## Motion spec\nPattern: sequential checklist completion, ~400ms per step.\n- Complete: the step's numbered circle spins + fills green (300ms, ease-out) while a checkmark draws in (stroke-dash, 250ms, +50ms).\n- Strike: the step text strikes through left to right (250ms) and dims to gray (200ms).\n- Activate: the next step's number pops in (scale 0.6 -> 1, spring ~380/20) and its body rises 4px (200ms).\n- Sub-screen: the tuning sheet (topic list: Closed-circuit television, Southeast Asia, British Academy Film Awards, Jay Shetty, Thailand, each with a + button) slides up as a sheet (350ms, ease-out); tapping + fills it with a check (200ms) and \"Finished Tuning\" completes the step.\n\n## Calibration\n- Only one step is active at a time; future steps show hollow numbered circles.\n- The strike lands after the check draw finishes, not before.\n\n## Reduced motion\nCheck fades in (200ms); text dims without strike.\n\n## Don't miss\n- The circle morph is number-to-check in one element, not a swap of two icons.\n- \"Allow Notifications\" and \"Let's Go\" are the only black buttons; their steps stay current until tapped."</script>
+</body></html>

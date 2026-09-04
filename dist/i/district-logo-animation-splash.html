@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>District Logo Animation Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>District Logo Animation Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/district-logo-animation-splash"><b>District</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/district-logo-animation-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/district-logo-animation-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: District&#x27;s splash screen - on a black background, the &quot;district&quot; wordmark draws itself in thin neon outline strokes, the strokes fill to solid purple-white, &quot;BY ZOMATO&quot; appears beneath, and the whole logo settles before fading out.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6739573af82ccc4efa055b68/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6739573af82ccc4efa055b68/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-district-logo-animation-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: District&#x27;s splash screen - on a black background, the &quot;district&quot; wordmark draws itself in thin neon outline strokes, the strokes fill to solid purple-white, &quot;BY ZOMATO&quot; appears beneath, and the whole logo settles before fading out.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pure black splash screen. Center: the lowercase &quot;district&quot; wordmark in a rounded geometric sans, with &quot;BY ZOMATO&quot; in small caps beneath it.
+
+## Motion spec
+Pattern: stroke-draw reveal to solid fill.
+- Each letter&#x27;s outline draws on as a thin glowing stroke (trim path, ~1.2s total, letters staggered ~80ms left to right), with a faint purple glow bleeding around the active stroke.
+- Letters fill in from outline to solid (fill opacity 0 -&gt; 1, ~400ms, following the draw with a ~300ms lag); color lands on a soft purple-white.
+- &quot;BY ZOMATO&quot; fades in below (200ms) once the wordmark is solid.
+- Hold ~600ms, then the whole logo fades out (300ms) into the app&#x27;s first screen.
+
+## Calibration
+- The draw is the star: keep strokes thin (~2px) and the glow subtle - neon, not laser.
+- Letter stagger follows reading order; the t&#x27;s cross draws with its stem.
+
+## Reduced motion
+Logo fades in complete (250ms), holds, fades out.
+
+## Don&#x27;t miss
+- Background stays pure black the entire time - no gradient, no texture.
+- The glow fades as the fill lands; they do not coexist at full strength.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stroke-draw reveal to solid fill.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/district-logo-animation-splash">original interaction</a> by District. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: District's splash screen - on a black background, the \"district\" wordmark draws itself in thin neon outline strokes, the strokes fill to solid purple-white, \"BY ZOMATO\" appears beneath, and the whole logo settles before fading out.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPure black splash screen. Center: the lowercase \"district\" wordmark in a rounded geometric sans, with \"BY ZOMATO\" in small caps beneath it.\n\n## Motion spec\nPattern: stroke-draw reveal to solid fill.\n- Each letter's outline draws on as a thin glowing stroke (trim path, ~1.2s total, letters staggered ~80ms left to right), with a faint purple glow bleeding around the active stroke.\n- Letters fill in from outline to solid (fill opacity 0 -> 1, ~400ms, following the draw with a ~300ms lag); color lands on a soft purple-white.\n- \"BY ZOMATO\" fades in below (200ms) once the wordmark is solid.\n- Hold ~600ms, then the whole logo fades out (300ms) into the app's first screen.\n\n## Calibration\n- The draw is the star: keep strokes thin (~2px) and the glow subtle - neon, not laser.\n- Letter stagger follows reading order; the t's cross draws with its stem.\n\n## Reduced motion\nLogo fades in complete (250ms), holds, fades out.\n\n## Don't miss\n- Background stays pure black the entire time - no gradient, no texture.\n- The glow fades as the fill lands; they do not coexist at full strength."</script>
+</body></html>

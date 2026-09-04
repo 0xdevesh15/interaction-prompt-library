@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Quick Reaction Sheet Testing Double Tap Emoji Burst Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Quick Reaction Sheet Testing Double Tap Emoji Burst Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-quick-reaction-sheet-testing-double-tap-emoji-burst-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-quick-reaction-sheet-testing-double-tap-emoji-burst-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-quick-reaction-sheet-testing-double-tap-emoji-burst-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s Quick Reaction tester - in the &quot;Quick Reaction&quot; sheet, double-tapping the big preview emoji fires bursts of hearts that scale up, float upward, and fade, demonstrating the reaction.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af4c00d01d537450a81/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af4c00d01d537450a81/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-quick-reaction-sheet-testing-double-tap-emoji-burst-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s Quick Reaction tester - in the &quot;Quick Reaction&quot; sheet, double-tapping the big preview emoji fires bursts of hearts that scale up, float upward, and fade, demonstrating the reaction.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Quick Reaction&quot; sheet over the dimmed profile (Benji): title, &quot;Choose an emoji to use for your quick reaction in chats&quot; subcopy, a large red heart as the current reaction preview, a small emoji-picker affordance, and a Save button. Double-tapping the heart fills the sheet with floating hearts.
+
+## Motion spec
+Pattern: double-tap heart burst in a preview sheet.
+- Sheet entrance: slides up over dimmed profile (spring ~300/24, 350ms).
+- Double-tap the preview: the big heart pulses (scale 1 -&gt; 1.15 -&gt; 1, 180ms) and 6-10 red hearts burst from its center (scale 0 -&gt; 1 with 50ms stagger), floating upward (translateY -120 to -260pt over 900-1300ms) with sway (+-20pt at ~1.5Hz) and slight rotation (+-20deg), fading in the last 300ms.
+- Hearts vary in size (12-28pt) and drift speed for depth.
+- Repeated double-taps stack new bursts on fading ones.
+- Choosing a different emoji from the picker swaps the preview (crossfade + scale pop, 200ms) and changes the burst glyph to match.
+
+## Calibration
+- The burst glyph always matches the current preview emoji - hearts here, but it follows selection.
+- The burst lives inside the sheet; it clips at the sheet&#x27;s rounded top corners.
+
+## Reduced motion
+The preview heart pulses once per double-tap; no floating burst.
+
+## Don&#x27;t miss
+- The big preview heart stays put - only spawned hearts float.
+- Save remains secondary; the double-tap playground is the star of the sheet.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">double-tap heart burst in a preview sheet.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-quick-reaction-sheet-testing-double-tap-emoji-burst-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's Quick Reaction tester - in the \"Quick Reaction\" sheet, double-tapping the big preview emoji fires bursts of hearts that scale up, float upward, and fade, demonstrating the reaction.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Quick Reaction\" sheet over the dimmed profile (Benji): title, \"Choose an emoji to use for your quick reaction in chats\" subcopy, a large red heart as the current reaction preview, a small emoji-picker affordance, and a Save button. Double-tapping the heart fills the sheet with floating hearts.\n\n## Motion spec\nPattern: double-tap heart burst in a preview sheet.\n- Sheet entrance: slides up over dimmed profile (spring ~300/24, 350ms).\n- Double-tap the preview: the big heart pulses (scale 1 -> 1.15 -> 1, 180ms) and 6-10 red hearts burst from its center (scale 0 -> 1 with 50ms stagger), floating upward (translateY -120 to -260pt over 900-1300ms) with sway (+-20pt at ~1.5Hz) and slight rotation (+-20deg), fading in the last 300ms.\n- Hearts vary in size (12-28pt) and drift speed for depth.\n- Repeated double-taps stack new bursts on fading ones.\n- Choosing a different emoji from the picker swaps the preview (crossfade + scale pop, 200ms) and changes the burst glyph to match.\n\n## Calibration\n- The burst glyph always matches the current preview emoji - hearts here, but it follows selection.\n- The burst lives inside the sheet; it clips at the sheet's rounded top corners.\n\n## Reduced motion\nThe preview heart pulses once per double-tap; no floating burst.\n\n## Don't miss\n- The big preview heart stays put - only spawned hearts float.\n- Save remains secondary; the double-tap playground is the star of the sheet."</script>
+</body></html>

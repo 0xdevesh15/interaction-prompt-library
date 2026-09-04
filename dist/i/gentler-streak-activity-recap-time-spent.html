@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Activity Recap Time Spent - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Activity Recap Time Spent</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-activity-recap-time-spent"><b>Gentler</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-activity-recap-time-spent">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-activity-recap-time-spent">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Gentler Streak&#x27;s time recap - a bar chart of days grows with the longest day flagged, then the mascot flies in over a full-blue card with the streak stats.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ffebaf936951f1cbe4133/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ffebaf936951f1cbe4133/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-activity-recap-time-spent.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Gentler Streak&#x27;s time recap - a bar chart of days grows with the longest day flagged, then the mascot flies in over a full-blue card with the streak stats.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White over blue banded screen: &quot;TIME SPENT OFF THE COUCH&quot; kicker, a huge &quot;86 hours&quot;, a bar chart of daily durations with one tall dark bar flagged, and a blue lower band &quot;YOUR LONGEST ACTIVITY - 2h 52m on Nov 2&quot;. Second card: full-blue screen, the orange mascot riding a small planet with sparkles, and copy &quot;You kept going for 3.6 days straight! On average, you worked out 14 min per day or 46 min per activity.&quot;
+
+## Motion spec
+Pattern: growing chart then mascot card, ~2.5s.
+- Bands slide in (pale top, blue bottom, 300ms each), kicker and &quot;86 hours&quot; fading up (300ms).
+- The chart bars grow from the baseline left to right (each 200ms, ease-out, 50ms stagger), the longest bar rising last and tallest with its flag popping at the tip (scale 0 to 1, spring stiffness 420 damping 16).
+- The blue band&#x27;s stat line fades in as the tallest bar lands (250ms).
+- Transition: the blue band floods upward to fill the screen (350ms, ease-in-out).
+- The mascot flies in from the lower left on a small arc (spring stiffness 300 damping 16), sparkles popping around it (scale 0 to 1, 100ms stagger), then the copy lines fade and rise (250ms each, 120ms stagger).
+
+## Calibration
+- One bar is dramatically taller and darker than the rest - the outlier is the story.
+- The mascot&#x27;s arc enters low and settles center-top; a straight rise reads as an elevator.
+
+## Reduced motion
+Scenes crossfade; elements appear assembled.
+
+## Don&#x27;t miss
+- The flag sits exactly on the tallest bar&#x27;s tip.
+- The copy mixes three stats (3.6 days, 14 min, 46 min) - keep the line breaks and bold numbers.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">growing chart then mascot card, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-activity-recap-time-spent">original interaction</a> by Gentler. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Gentler Streak's time recap - a bar chart of days grows with the longest day flagged, then the mascot flies in over a full-blue card with the streak stats.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite over blue banded screen: \"TIME SPENT OFF THE COUCH\" kicker, a huge \"86 hours\", a bar chart of daily durations with one tall dark bar flagged, and a blue lower band \"YOUR LONGEST ACTIVITY - 2h 52m on Nov 2\". Second card: full-blue screen, the orange mascot riding a small planet with sparkles, and copy \"You kept going for 3.6 days straight! On average, you worked out 14 min per day or 46 min per activity.\"\n\n## Motion spec\nPattern: growing chart then mascot card, ~2.5s.\n- Bands slide in (pale top, blue bottom, 300ms each), kicker and \"86 hours\" fading up (300ms).\n- The chart bars grow from the baseline left to right (each 200ms, ease-out, 50ms stagger), the longest bar rising last and tallest with its flag popping at the tip (scale 0 to 1, spring stiffness 420 damping 16).\n- The blue band's stat line fades in as the tallest bar lands (250ms).\n- Transition: the blue band floods upward to fill the screen (350ms, ease-in-out).\n- The mascot flies in from the lower left on a small arc (spring stiffness 300 damping 16), sparkles popping around it (scale 0 to 1, 100ms stagger), then the copy lines fade and rise (250ms each, 120ms stagger).\n\n## Calibration\n- One bar is dramatically taller and darker than the rest - the outlier is the story.\n- The mascot's arc enters low and settles center-top; a straight rise reads as an elevator.\n\n## Reduced motion\nScenes crossfade; elements appear assembled.\n\n## Don't miss\n- The flag sits exactly on the tallest bar's tip.\n- The copy mixes three stats (3.6 days, 14 min, 46 min) - keep the line breaks and bold numbers."</script>
+</body></html>

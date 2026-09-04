@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Music Sing - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Music Sing</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-music-sing"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-music-sing">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-music-sing">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Music Sing - a mic button at the bottom of the lyrics view expands into a vertical capsule slider that sets the vocal level, fills with a mint tint as you drag, and collapses back into the button when released or dismissed.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bb490a816b171436ed704b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bb490a816b171436ed704b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-music-sing.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Music Sing - a mic button at the bottom of the lyrics view expands into a vertical capsule slider that sets the vocal level, fills with a mint tint as you drag, and collapses back into the button when released or dismissed.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark lyrics view tinted deep teal from the album art (Skyfall, Adele). Song header top, time-synced lyrics center (current line bright white, upcoming lines dimmed), progress bar at the bottom with a &quot;Sing&quot; label. A small round mic button sits at the bottom-right corner.
+
+## Motion spec
+Pattern: icon button blooming into a vertical level slider.
+- Tap the mic button: it expands upward into a tall capsule (width stays, height grows ~4x, spring stiffness ~300, damping ~22) while the mic glyph stays pinned at the bottom of the capsule.
+- The capsule fills from the bottom with a pale mint tint representing the vocal level; dragging vertically moves the fill 1:1 with the finger.
+- The fill&#x27;s top edge has a slight elastic lag on fast drags and settles (stiffness ~250, damping ~20).
+- Tap elsewhere or release after adjusting: the capsule collapses back into the small mic button (250ms, ease-in), glyph intact.
+- Lyrics keep scrolling and highlighting throughout - the slider never interrupts playback UI.
+
+## Calibration
+- Expansion is vertical only; the button&#x27;s width is the capsule&#x27;s width. Growing sideways reads as a different control.
+- The mint fill must read clearly against the dark teal backdrop - keep it pale and solid, not translucent.
+
+## Reduced motion
+Button crossfades to the full capsule (150ms) and back; no spring, no elastic fill lag.
+
+## Don&#x27;t miss
+- The mic glyph lives at the bottom of the capsule, not centered and not at the fill line.
+- The slider hugs the right edge of the screen where the button sat - it does not recenter.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">icon button blooming into a vertical level slider.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-music-sing">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Music Sing - a mic button at the bottom of the lyrics view expands into a vertical capsule slider that sets the vocal level, fills with a mint tint as you drag, and collapses back into the button when released or dismissed.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark lyrics view tinted deep teal from the album art (Skyfall, Adele). Song header top, time-synced lyrics center (current line bright white, upcoming lines dimmed), progress bar at the bottom with a \"Sing\" label. A small round mic button sits at the bottom-right corner.\n\n## Motion spec\nPattern: icon button blooming into a vertical level slider.\n- Tap the mic button: it expands upward into a tall capsule (width stays, height grows ~4x, spring stiffness ~300, damping ~22) while the mic glyph stays pinned at the bottom of the capsule.\n- The capsule fills from the bottom with a pale mint tint representing the vocal level; dragging vertically moves the fill 1:1 with the finger.\n- The fill's top edge has a slight elastic lag on fast drags and settles (stiffness ~250, damping ~20).\n- Tap elsewhere or release after adjusting: the capsule collapses back into the small mic button (250ms, ease-in), glyph intact.\n- Lyrics keep scrolling and highlighting throughout - the slider never interrupts playback UI.\n\n## Calibration\n- Expansion is vertical only; the button's width is the capsule's width. Growing sideways reads as a different control.\n- The mint fill must read clearly against the dark teal backdrop - keep it pale and solid, not translucent.\n\n## Reduced motion\nButton crossfades to the full capsule (150ms) and back; no spring, no elastic fill lag.\n\n## Don't miss\n- The mic glyph lives at the bottom of the capsule, not centered and not at the fill line.\n- The slider hugs the right edge of the screen where the button sat - it does not recenter."</script>
+</body></html>

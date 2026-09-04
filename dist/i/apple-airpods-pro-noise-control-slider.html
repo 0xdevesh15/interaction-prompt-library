@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple AirPods Pro Noise Control Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple AirPods Pro Noise Control Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-airpods-pro-noise-control-slider"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-airpods-pro-noise-control-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-airpods-pro-noise-control-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: iOS&#x27;s AirPods Pro noise control - the long-press volume card with a four-mode segmented control (Off, Transparency, Adaptive?, Noise Cancellation) where the selection pill glides liquidly between modes with color morphing, and drags past the ends get a rubbery rejection bounce.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c818b502fa2363eace8a16/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c818b502fa2363eace8a16/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-airpods-pro-noise-control-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: iOS&#x27;s AirPods Pro noise control - the long-press volume card with a four-mode segmented control (Off, Transparency, Adaptive?, Noise Cancellation) where the selection pill glides liquidly between modes with color morphing, and drags past the ends get a rubbery rejection bounce.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A tall AirPods volume card (earbuds glyph, &quot;AirPods Pro&quot; label) over a blurred rainbow-gradient backdrop; below it a horizontal dark segmented strip of four mode icons (power-off, transparency, adaptive, noise-cancellation) with labels beneath; the active mode carries a blue (or multicolor for adaptive) filled pill.
+
+## Motion spec
+Pattern: liquid segmented control with edge rejection.
+- Mode change (tap or slide): the selection pill morphs liquidly - it squashes toward the target (stretching horizontally up to 1.4x mid-travel, spring ~300/18) and slides under the new icon, its fill cross-blending colors (blue -&gt; multicolor adaptive -&gt; blue).
+- The newly active icon lifts and fills white while the old one dims (200ms); labels crossfade below.
+- Drag the pill and it tracks the finger with slight lag (60ms), modes snapping under it with a soft tick as each threshold crosses.
+- Past the first/last mode: the pill stretches against a rubber limit (max 24px, damping rises quadratically) and on release bounces back (spring ~380/14) - a felt refusal.
+- The volume slider above responds to mode changes with a 300ms shimmer sweep across its fill.
+
+## Calibration
+- Pill travel between adjacent modes ~70px; the squash-stretch peaks at 50% of travel.
+- Every mode commit fires a light haptic; the edge rejection fires a rigid double-tick.
+
+## Reduced motion
+Pill crossfades between modes; no squash, no rubber bounce.
+
+## Don&#x27;t miss
+- The pill is liquid, not a sliding rectangle - its deformation during travel is the signature.
+- Edge rejection is playful, not an error: bounce, never shake.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">liquid segmented control with edge rejection.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-airpods-pro-noise-control-slider">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: iOS's AirPods Pro noise control - the long-press volume card with a four-mode segmented control (Off, Transparency, Adaptive?, Noise Cancellation) where the selection pill glides liquidly between modes with color morphing, and drags past the ends get a rubbery rejection bounce.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA tall AirPods volume card (earbuds glyph, \"AirPods Pro\" label) over a blurred rainbow-gradient backdrop; below it a horizontal dark segmented strip of four mode icons (power-off, transparency, adaptive, noise-cancellation) with labels beneath; the active mode carries a blue (or multicolor for adaptive) filled pill.\n\n## Motion spec\nPattern: liquid segmented control with edge rejection.\n- Mode change (tap or slide): the selection pill morphs liquidly - it squashes toward the target (stretching horizontally up to 1.4x mid-travel, spring ~300/18) and slides under the new icon, its fill cross-blending colors (blue -> multicolor adaptive -> blue).\n- The newly active icon lifts and fills white while the old one dims (200ms); labels crossfade below.\n- Drag the pill and it tracks the finger with slight lag (60ms), modes snapping under it with a soft tick as each threshold crosses.\n- Past the first/last mode: the pill stretches against a rubber limit (max 24px, damping rises quadratically) and on release bounces back (spring ~380/14) - a felt refusal.\n- The volume slider above responds to mode changes with a 300ms shimmer sweep across its fill.\n\n## Calibration\n- Pill travel between adjacent modes ~70px; the squash-stretch peaks at 50% of travel.\n- Every mode commit fires a light haptic; the edge rejection fires a rigid double-tick.\n\n## Reduced motion\nPill crossfades between modes; no squash, no rubber bounce.\n\n## Don't miss\n- The pill is liquid, not a sliding rectangle - its deformation during travel is the signature.\n- Edge rejection is playful, not an error: bounce, never shake."</script>
+</body></html>

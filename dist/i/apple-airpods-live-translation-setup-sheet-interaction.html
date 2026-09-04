@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple AirPods Live Translation Setup Sheet Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple AirPods Live Translation Setup Sheet Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-airpods-live-translation-setup-sheet-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-airpods-live-translation-setup-sheet-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-airpods-live-translation-setup-sheet-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple&#x27;s AirPods Live Translation setup - a bottom sheet presents the AirPods illustration while greeting words in many languages float and cycle around it, then steps through language download, pause-media, and charging sheets.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc2043b21a129d1102e0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc2043b21a129d1102e0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-airpods-live-translation-setup-sheet-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple&#x27;s AirPods Live Translation setup - a bottom sheet presents the AirPods illustration while greeting words in many languages float and cycle around it, then steps through language download, pause-media, and charging sheets.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dimmed Music app behind. Sheet one: &quot;Live Translation (Beta)&quot; with body copy, an AirPods illustration ringed by floating words (Hello, Bonjour, Gracias, Danke, Ciao, Adios, Merci, Thanks, Bye), a blue &quot;Set Up Live Translation&quot; button and &quot;Not Now&quot;. Sheet two: &quot;Select and Download Languages&quot; with a checkmark list and Continue. Sheet three: &quot;Pause Media When I Fall Asleep&quot; with a speaker-and-Zzz illustration. Sheet four: &quot;Charging AirPods&quot; with the case illustration and Done.
+
+## Motion spec
+Pattern: multi-step sheet with ambient word float, ~450ms per step.
+- Words: each greeting drifts on a slow orbit around the AirPods (8-14s periods, varied radii), fading out and being replaced by the next language (400ms crossfade) every ~2s.
+- Glow: a soft ambient pulse breathes behind the illustration (2.5s, opacity 20-35%).
+- Step change: sheet content crossfades (250ms) while the sheet grows or shrinks to fit (spring ~340/28, 400ms); the new illustration settles with a small rise (12px, 300ms).
+- The Zzz marks float up and fade (1.6s loop, staggered); the charging case shows a rising fill.
+
+## Calibration
+- Words stay inside the illustration band - none overlap the title or buttons.
+- Each step&#x27;s illustration has its own idle loop; only the language sheet cycles words.
+
+## Reduced motion
+Words are static; illustrations hold one frame; steps crossfade only.
+
+## Don&#x27;t miss
+- The floating words swap languages continuously - a fixed set of words is wrong.
+- The sheet resizes per step with a spring, not a jump.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">multi-step sheet with ambient word float, ~450ms per step.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-airpods-live-translation-setup-sheet-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple's AirPods Live Translation setup - a bottom sheet presents the AirPods illustration while greeting words in many languages float and cycle around it, then steps through language download, pause-media, and charging sheets.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDimmed Music app behind. Sheet one: \"Live Translation (Beta)\" with body copy, an AirPods illustration ringed by floating words (Hello, Bonjour, Gracias, Danke, Ciao, Adios, Merci, Thanks, Bye), a blue \"Set Up Live Translation\" button and \"Not Now\". Sheet two: \"Select and Download Languages\" with a checkmark list and Continue. Sheet three: \"Pause Media When I Fall Asleep\" with a speaker-and-Zzz illustration. Sheet four: \"Charging AirPods\" with the case illustration and Done.\n\n## Motion spec\nPattern: multi-step sheet with ambient word float, ~450ms per step.\n- Words: each greeting drifts on a slow orbit around the AirPods (8-14s periods, varied radii), fading out and being replaced by the next language (400ms crossfade) every ~2s.\n- Glow: a soft ambient pulse breathes behind the illustration (2.5s, opacity 20-35%).\n- Step change: sheet content crossfades (250ms) while the sheet grows or shrinks to fit (spring ~340/28, 400ms); the new illustration settles with a small rise (12px, 300ms).\n- The Zzz marks float up and fade (1.6s loop, staggered); the charging case shows a rising fill.\n\n## Calibration\n- Words stay inside the illustration band - none overlap the title or buttons.\n- Each step's illustration has its own idle loop; only the language sheet cycles words.\n\n## Reduced motion\nWords are static; illustrations hold one frame; steps crossfade only.\n\n## Don't miss\n- The floating words swap languages continuously - a fixed set of words is wrong.\n- The sheet resizes per step with a spring, not a jump."</script>
+</body></html>

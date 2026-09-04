@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo 53 Day Streak Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo 53 Day Streak Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-53-day-streak-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-53-day-streak-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-53-day-streak-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s 53-day streak celebration - a spinning vortex sucks the grey flame into an orange screen, the flame ignites over a rolling 52-to-53 counter, and the week bar slides in with its milestone copy.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adddc00a8c57042dc5b37b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adddc00a8c57042dc5b37b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-53-day-streak-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s 53-day streak celebration - a spinning vortex sucks the grey flame into an orange screen, the flame ignites over a rolling 52-to-53 counter, and the week bar slides in with its milestone copy.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen with a grey flame, then a full orange field: a yellow ring vortex, the ignited flame over &quot;53&quot; and &quot;day streak&quot;, a weekly progress bar (Mo-Su dots with a streak flame marker), the copy &quot;You kept your Perfect Streak in 4 weeks in a row!&quot;, and a CONTINUE pill.
+
+## Motion spec
+Pattern: vortex ignition celebration, ~2s.
+- Vortex: a yellow ring spins up around the grey flame (accelerating, 400ms) as the background wipes to orange through the ring (expanding circle mask, 350ms).
+- Ignite: the flame scales in (spring ~400/16, 400ms) with two spark pops.
+- Counter: the number rolls 52 -&gt; 53 (digit slide, 300ms) and pops (scale 1.15 -&gt; 1, spring ~420/18); &quot;day streak&quot; fades in.
+- Bar: the week bar slides up (spring ~320/24, 350ms), its fill sweeping to the current day (350ms) and the flame marker hopping onto its notch (spring ~400/16).
+- Copy and CONTINUE fade up staggered (200ms each, +100ms apart).
+
+## Calibration
+- The vortex is the transition - it is what turns the screen orange.
+- Orange field, yellow ring, white type: no other colors.
+
+## Reduced motion
+Crossfade to the final state (300ms).
+
+## Don&#x27;t miss
+- The counter roll and the flame pop land on the same beat.
+- The week bar&#x27;s marker hop happens after the fill sweep, not during.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vortex ignition celebration, ~2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-53-day-streak-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's 53-day streak celebration - a spinning vortex sucks the grey flame into an orange screen, the flame ignites over a rolling 52-to-53 counter, and the week bar slides in with its milestone copy.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen with a grey flame, then a full orange field: a yellow ring vortex, the ignited flame over \"53\" and \"day streak\", a weekly progress bar (Mo-Su dots with a streak flame marker), the copy \"You kept your Perfect Streak in 4 weeks in a row!\", and a CONTINUE pill.\n\n## Motion spec\nPattern: vortex ignition celebration, ~2s.\n- Vortex: a yellow ring spins up around the grey flame (accelerating, 400ms) as the background wipes to orange through the ring (expanding circle mask, 350ms).\n- Ignite: the flame scales in (spring ~400/16, 400ms) with two spark pops.\n- Counter: the number rolls 52 -> 53 (digit slide, 300ms) and pops (scale 1.15 -> 1, spring ~420/18); \"day streak\" fades in.\n- Bar: the week bar slides up (spring ~320/24, 350ms), its fill sweeping to the current day (350ms) and the flame marker hopping onto its notch (spring ~400/16).\n- Copy and CONTINUE fade up staggered (200ms each, +100ms apart).\n\n## Calibration\n- The vortex is the transition - it is what turns the screen orange.\n- Orange field, yellow ring, white type: no other colors.\n\n## Reduced motion\nCrossfade to the final state (300ms).\n\n## Don't miss\n- The counter roll and the flame pop land on the same beat.\n- The week bar's marker hop happens after the fill sweep, not during."</script>
+</body></html>

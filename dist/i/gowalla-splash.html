@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gowalla Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gowalla Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gowalla-splash"><b>Gowalla</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gowalla-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gowalla-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Gowalla&#x27;s splash - a solid red screen where the white &quot;Go&quot; wordmark materializes, pulses with a dotted ring, then shrinks into a map marker as the red field collapses into the map or the sign-in screen underneath.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be4470854ffb5b1c5d35ff/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be4470854ffb5b1c5d35ff/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gowalla-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Gowalla&#x27;s splash - a solid red screen where the white &quot;Go&quot; wordmark materializes, pulses with a dotted ring, then shrinks into a map marker as the red field collapses into the map or the sign-in screen underneath.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Solid bright red screen. Center: the white bubbly &quot;Go&quot; wordmark. A dotted white ring flashes around it at one point. The end state cuts to the next screen (a red sign-in page with the small &quot;gowalla&quot; header and a phone-number field, or the map), the red persisting as the app&#x27;s brand field.
+
+## Motion spec
+Pattern: brand-mark pulse into a screen handoff.
+- The wordmark fades in at center (300ms, ease-out) and settles.
+- A dotted ring sparks around the wordmark once - dots scale in around the mark (~250ms, staggered radially) and fade - the single pulse beat.
+- The wordmark holds (~600ms), then dims slightly (opacity to ~0.15) as the transition begins.
+- The red field resolves into the next screen: either the sign-in layout fades in over it (header, field, and button pieces staggering in ~80ms apart) or the red shrinks into a pin that lands on the map.
+
+## Calibration
+- One pulse only. Repeating the ring reads as a loading spinner and cheapens the brand mark.
+- Total splash around 1.5 to 2 seconds.
+
+## Reduced motion
+Wordmark fades in, holds 800ms, crossfades to the next screen.
+
+## Don&#x27;t miss
+- The red is the brand - saturated, full-bleed, and unchanged in hue into the next screen.
+- The wordmark&#x27;s dim-to-ghost moment bridges the transition; a hard cut loses the continuity.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">brand-mark pulse into a screen handoff.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gowalla-splash">original interaction</a> by Gowalla. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Gowalla's splash - a solid red screen where the white \"Go\" wordmark materializes, pulses with a dotted ring, then shrinks into a map marker as the red field collapses into the map or the sign-in screen underneath.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSolid bright red screen. Center: the white bubbly \"Go\" wordmark. A dotted white ring flashes around it at one point. The end state cuts to the next screen (a red sign-in page with the small \"gowalla\" header and a phone-number field, or the map), the red persisting as the app's brand field.\n\n## Motion spec\nPattern: brand-mark pulse into a screen handoff.\n- The wordmark fades in at center (300ms, ease-out) and settles.\n- A dotted ring sparks around the wordmark once - dots scale in around the mark (~250ms, staggered radially) and fade - the single pulse beat.\n- The wordmark holds (~600ms), then dims slightly (opacity to ~0.15) as the transition begins.\n- The red field resolves into the next screen: either the sign-in layout fades in over it (header, field, and button pieces staggering in ~80ms apart) or the red shrinks into a pin that lands on the map.\n\n## Calibration\n- One pulse only. Repeating the ring reads as a loading spinner and cheapens the brand mark.\n- Total splash around 1.5 to 2 seconds.\n\n## Reduced motion\nWordmark fades in, holds 800ms, crossfades to the next screen.\n\n## Don't miss\n- The red is the brand - saturated, full-bleed, and unchanged in hue into the next screen.\n- The wordmark's dim-to-ghost moment bridges the transition; a hard cut loses the continuity."</script>
+</body></html>

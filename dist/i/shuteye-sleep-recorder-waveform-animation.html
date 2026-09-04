@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShutEye Sleep Recorder Waveform Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ShutEye Sleep Recorder Waveform Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shuteye-sleep-recorder-waveform-animation"><b>Shuteye</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuteye-sleep-recorder-waveform-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuteye-sleep-recorder-waveform-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: ShutEye&#x27;s sleep recorder list - under &quot;Find out what you did in your sleep!&quot;, recording cards highlight one by one, each active card gaining a glowing border and a live audio waveform.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc261fb87dca19b4d05a8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc261fb87dca19b4d05a8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shuteye-sleep-recorder-waveform-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: ShutEye&#x27;s sleep recorder list - under &quot;Find out what you did in your sleep!&quot;, recording cards highlight one by one, each active card gaining a glowing border and a live audio waveform.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark screen with the &quot;Accurate Sleep Recorder&quot; eyebrow and headline &quot;Find out what you did in your sleep!&quot;. A vertical list of recording cards (You Snored, You Gasped, You Talked, You Snored) each with a sleepy avatar thumbnail and a timestamp (11:26 pm, 11:46 pm, 00:23 am, 11:28 pm). A blue arrow button sits below.
+
+## Motion spec
+Pattern: cycling card highlight with waveform reveal, ~5s loop.
+- The list fades in as a whole (300ms), then the first card activates: a bright blue border glows around it (200ms) and a waveform draws in beneath its title (300ms, left to right).
+- While active, the waveform&#x27;s bars animate as if playing (subtle per-bar height oscillation).
+- After 900ms the card deactivates (border and waveform fade, 200ms) and the next card down activates in the same way, cycling through the list.
+- The arrow button pulses gently throughout.
+
+## Calibration
+- Only one card is active at a time; the handoff is a quick fade down, fade up.
+- The waveform appears inside the card, expanding its height slightly (spring stiffness 300 damping 22).
+
+## Reduced motion
+First card stays highlighted with a static waveform.
+
+## Don&#x27;t miss
+- The active card&#x27;s glow is the same blue as the arrow button.
+- Inactive cards are flat dark rows - the contrast sells the cycle.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cycling card highlight with waveform reveal, ~5s loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shuteye-sleep-recorder-waveform-animation">original interaction</a> by Shuteye. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: ShutEye's sleep recorder list - under \"Find out what you did in your sleep!\", recording cards highlight one by one, each active card gaining a glowing border and a live audio waveform.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark screen with the \"Accurate Sleep Recorder\" eyebrow and headline \"Find out what you did in your sleep!\". A vertical list of recording cards (You Snored, You Gasped, You Talked, You Snored) each with a sleepy avatar thumbnail and a timestamp (11:26 pm, 11:46 pm, 00:23 am, 11:28 pm). A blue arrow button sits below.\n\n## Motion spec\nPattern: cycling card highlight with waveform reveal, ~5s loop.\n- The list fades in as a whole (300ms), then the first card activates: a bright blue border glows around it (200ms) and a waveform draws in beneath its title (300ms, left to right).\n- While active, the waveform's bars animate as if playing (subtle per-bar height oscillation).\n- After 900ms the card deactivates (border and waveform fade, 200ms) and the next card down activates in the same way, cycling through the list.\n- The arrow button pulses gently throughout.\n\n## Calibration\n- Only one card is active at a time; the handoff is a quick fade down, fade up.\n- The waveform appears inside the card, expanding its height slightly (spring stiffness 300 damping 22).\n\n## Reduced motion\nFirst card stays highlighted with a static waveform.\n\n## Don't miss\n- The active card's glow is the same blue as the arrow button.\n- Inactive cards are flat dark rows - the contrast sells the cycle."</script>
+</body></html>

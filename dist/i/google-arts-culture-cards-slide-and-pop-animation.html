@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Arts &amp; Culture Cards Slide and Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Google Arts &amp; Culture Cards Slide and Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/google-arts-culture-cards-slide-and-pop-animation"><b>Google</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-arts-culture-cards-slide-and-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-arts-culture-cards-slide-and-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Google Arts &amp; Culture&#x27;s Culture Weekly onboarding - a digest card rises on the dark maroon screen, then two side cards slide in and fan out behind it with a pop while the explainer caption fades in above.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d71f4d658cce8059df84/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d71f4d658cce8059df84/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-google-arts-culture-cards-slide-and-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Google Arts &amp; Culture&#x27;s Culture Weekly onboarding - a digest card rises on the dark maroon screen, then two side cards slide in and fan out behind it with a pop while the explainer caption fades in above.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark maroon onboarding screen: back chevron and title top, the caption &quot;Once a week we will create a digest based on your interests&quot;, a center card stack (front: illustrated &quot;Culture Weekly&quot; cover; behind: a green card left, a dark photo card right), page dots, and a Skip / Next footer.
+
+## Motion spec
+Pattern: card-stack build, ~1.2s.
+- Rise: the front card slides up from below center and fades in (350ms, ease-out), slightly overshooting (spring ~340/22).
+- Fan: the two rear cards slide in from opposite sides (300ms, ease-out) while rotating into a fan (+-8deg) and settling 24px behind the front card&#x27;s edges.
+- Pop: the front card pops forward (scale 0.96 -&gt; 1.03 -&gt; 1, spring ~400/20) once the fan lands.
+- Caption: the explainer text fades down in above the stack (250ms, +200ms).
+
+## Calibration
+- The fan is symmetric: both rear cards mirror each other&#x27;s angle and offset.
+- The stack settles as one unit - after the pop, all three cards idle together.
+
+## Reduced motion
+Cards fade in already fanned (250ms); caption fades.
+
+## Don&#x27;t miss
+- The front cover is a full-bleed illustration with the &quot;Culture Weekly&quot; wordmark, not a plain card.
+- Rear cards show real content edges (headline text and imagery), readable enough to feel like issues.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card-stack build, ~1.2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/google-arts-culture-cards-slide-and-pop-animation">original interaction</a> by Google. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Google Arts & Culture's Culture Weekly onboarding - a digest card rises on the dark maroon screen, then two side cards slide in and fan out behind it with a pop while the explainer caption fades in above.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark maroon onboarding screen: back chevron and title top, the caption \"Once a week we will create a digest based on your interests\", a center card stack (front: illustrated \"Culture Weekly\" cover; behind: a green card left, a dark photo card right), page dots, and a Skip / Next footer.\n\n## Motion spec\nPattern: card-stack build, ~1.2s.\n- Rise: the front card slides up from below center and fades in (350ms, ease-out), slightly overshooting (spring ~340/22).\n- Fan: the two rear cards slide in from opposite sides (300ms, ease-out) while rotating into a fan (+-8deg) and settling 24px behind the front card's edges.\n- Pop: the front card pops forward (scale 0.96 -> 1.03 -> 1, spring ~400/20) once the fan lands.\n- Caption: the explainer text fades down in above the stack (250ms, +200ms).\n\n## Calibration\n- The fan is symmetric: both rear cards mirror each other's angle and offset.\n- The stack settles as one unit - after the pop, all three cards idle together.\n\n## Reduced motion\nCards fade in already fanned (250ms); caption fades.\n\n## Don't miss\n- The front cover is a full-bleed illustration with the \"Culture Weekly\" wordmark, not a plain card.\n- Rear cards show real content edges (headline text and imagery), readable enough to feel like issues."</script>
+</body></html>

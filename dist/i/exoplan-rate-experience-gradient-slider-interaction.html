@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exoplan Rate Experience Gradient Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Exoplan Rate Experience Gradient Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/exoplan-rate-experience-gradient-slider-interaction"><b>Exoplan</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/exoplan-rate-experience-gradient-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/exoplan-rate-experience-gradient-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Exoplan&#x27;s rating sheet - five stars sit on a glowing gradient bar that fills from red to green as the rating rises, and the sheet morphs to reveal contextual feedback chips (&quot;What did you like the most?&quot; for high ratings, &quot;What can be improved?&quot; for low), a comment field, and a Submit button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f513c99376d4fef31b1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f513c99376d4fef31b1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-exoplan-rate-experience-gradient-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Exoplan&#x27;s rating sheet - five stars sit on a glowing gradient bar that fills from red to green as the rating rises, and the sheet morphs to reveal contextual feedback chips (&quot;What did you like the most?&quot; for high ratings, &quot;What can be improved?&quot; for low), a comment field, and a Submit button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark sheet over a dimmed screen: app icon, &quot;Rate your experience&quot; title, and a star row on a rounded gradient track. Initial state has empty stars and only a Cancel button. After rating: a chip cloud (Energy Prediction, Magic Planner, Design, Speed, Animations), a &quot;Write a comment&quot; field, and a Submit button.
+
+## Motion spec
+Pattern: gradient-fill star slider + adaptive sheet morph.
+- Star fill: dragging or tapping across stars sweeps the track&#x27;s gradient fill to the selected star (fill animates 250ms, ease-out), the track&#x27;s hue shifting red -&gt; yellow -&gt; green with the rating; filled stars glow.
+- Sheet morph: on first selection the sheet grows (spring ~300/22) as the chips header cross-fades to match the rating (&quot;What did you like the most?&quot; for 4-5 stars, &quot;What can be improved?&quot; for 1-3), chips stagger in (40ms, fade + 8px rise), and Cancel swaps to Submit (150ms label cross-fade).
+- Re-rating: changing stars re-sweeps the gradient and flips the chips header copy if the rating crosses the threshold (200ms cross-fade; chips stay).
+- Chip select: tapped chip fills with a light pill (150ms).
+
+## Calibration
+- The gradient is a continuous track fill, not per-star coloring.
+- Chips header depends on the current rating, not the first rating given.
+
+## Reduced motion
+Gradient fill steps instantly; sheet content fades in (200ms) without growth spring.
+
+## Don&#x27;t miss
+- Empty state shows only Cancel; Submit appears only after a rating exists.
+- Keep the glow subtle - a soft bloom on filled stars and the track, not a neon outline.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gradient-fill star slider + adaptive sheet morph.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/exoplan-rate-experience-gradient-slider-interaction">original interaction</a> by Exoplan. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Exoplan's rating sheet - five stars sit on a glowing gradient bar that fills from red to green as the rating rises, and the sheet morphs to reveal contextual feedback chips (\"What did you like the most?\" for high ratings, \"What can be improved?\" for low), a comment field, and a Submit button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark sheet over a dimmed screen: app icon, \"Rate your experience\" title, and a star row on a rounded gradient track. Initial state has empty stars and only a Cancel button. After rating: a chip cloud (Energy Prediction, Magic Planner, Design, Speed, Animations), a \"Write a comment\" field, and a Submit button.\n\n## Motion spec\nPattern: gradient-fill star slider + adaptive sheet morph.\n- Star fill: dragging or tapping across stars sweeps the track's gradient fill to the selected star (fill animates 250ms, ease-out), the track's hue shifting red -> yellow -> green with the rating; filled stars glow.\n- Sheet morph: on first selection the sheet grows (spring ~300/22) as the chips header cross-fades to match the rating (\"What did you like the most?\" for 4-5 stars, \"What can be improved?\" for 1-3), chips stagger in (40ms, fade + 8px rise), and Cancel swaps to Submit (150ms label cross-fade).\n- Re-rating: changing stars re-sweeps the gradient and flips the chips header copy if the rating crosses the threshold (200ms cross-fade; chips stay).\n- Chip select: tapped chip fills with a light pill (150ms).\n\n## Calibration\n- The gradient is a continuous track fill, not per-star coloring.\n- Chips header depends on the current rating, not the first rating given.\n\n## Reduced motion\nGradient fill steps instantly; sheet content fades in (200ms) without growth spring.\n\n## Don't miss\n- Empty state shows only Cancel; Submit appears only after a rating exists.\n- Keep the glow subtle - a soft bloom on filled stars and the track, not a neon outline."</script>
+</body></html>

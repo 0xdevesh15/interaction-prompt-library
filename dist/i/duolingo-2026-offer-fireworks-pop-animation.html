@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo 2026 Offer Fireworks Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo 2026 Offer Fireworks Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-2026-offer-fireworks-pop-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-2026-offer-fireworks-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-2026-offer-fireworks-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s 2026 offer screen - neon fireworks pop one after another around the gradient Duo mascot while the perks list and GET 60% OFF button sit below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69730c933a475e0dbbfa7acc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69730c933a475e0dbbfa7acc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-2026-offer-fireworks-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s 2026 offer screen - neon fireworks pop one after another around the gradient Duo mascot while the perks list and GET 60% OFF button sit below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Duolingo offer, dark navy: SUPER duolingo logo, the Duo owl in a purple-blue gradient, huge &quot;2026&quot; with &quot;Start 2026 with 60% off!&quot; and subcopy, a perks card (Unlimited energy, No ads, Unlimited speaking and listening practice, Free entry to timed challenges), a white &quot;GET 60% OFF&quot; button, and &quot;SKIP OFFER&quot; text. Fireworks: small neon starbursts (green, blue, purple, pink) around the mascot.
+
+## Motion spec
+Pattern: staggered neon firework pops ringing the mascot.
+- The screen composes first: mascot, 2026, and copy fade up (300ms), perks card slides up (300ms), button fades in last (200ms).
+- Then the fireworks loop: every ~500ms a new starburst pops at a random point on an invisible ring around the mascot - it flashes in as a 4-8 spoke star (scale 0 -&gt; 1, 120ms), holds 200ms, and fades while shrinking slightly (300ms).
+- Each burst&#x27;s color cycles green -&gt; blue -&gt; purple -&gt; pink; never the same color twice in a row.
+- Every third firework is larger and sheds 5-6 tiny dots that drift outward and fade (400ms) - an occasional crescendo.
+- The mascot idles with a gentle bob (translateY +/-4px, 3s) throughout; the UI below never animates.
+
+## Calibration
+- Bursts stay inside a ring band around the mascot - never over the copy, the button, or the perks card.
+- Max two bursts alive at once; the screen should twinkle, not strobe.
+
+## Reduced motion
+A single static starburst arrangement; no loop.
+
+## Don&#x27;t miss
+- The fireworks are thin neon line-stars, not particle sprays - drawn spokes, not confetti.
+- The 2026 numerals are huge and heavy - they anchor the composition while sparks play at the edges.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered neon firework pops ringing the mascot.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-2026-offer-fireworks-pop-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's 2026 offer screen - neon fireworks pop one after another around the gradient Duo mascot while the perks list and GET 60% OFF button sit below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDuolingo offer, dark navy: SUPER duolingo logo, the Duo owl in a purple-blue gradient, huge \"2026\" with \"Start 2026 with 60% off!\" and subcopy, a perks card (Unlimited energy, No ads, Unlimited speaking and listening practice, Free entry to timed challenges), a white \"GET 60% OFF\" button, and \"SKIP OFFER\" text. Fireworks: small neon starbursts (green, blue, purple, pink) around the mascot.\n\n## Motion spec\nPattern: staggered neon firework pops ringing the mascot.\n- The screen composes first: mascot, 2026, and copy fade up (300ms), perks card slides up (300ms), button fades in last (200ms).\n- Then the fireworks loop: every ~500ms a new starburst pops at a random point on an invisible ring around the mascot - it flashes in as a 4-8 spoke star (scale 0 -> 1, 120ms), holds 200ms, and fades while shrinking slightly (300ms).\n- Each burst's color cycles green -> blue -> purple -> pink; never the same color twice in a row.\n- Every third firework is larger and sheds 5-6 tiny dots that drift outward and fade (400ms) - an occasional crescendo.\n- The mascot idles with a gentle bob (translateY +/-4px, 3s) throughout; the UI below never animates.\n\n## Calibration\n- Bursts stay inside a ring band around the mascot - never over the copy, the button, or the perks card.\n- Max two bursts alive at once; the screen should twinkle, not strobe.\n\n## Reduced motion\nA single static starburst arrangement; no loop.\n\n## Don't miss\n- The fireworks are thin neon line-stars, not particle sprays - drawn spokes, not confetti.\n- The 2026 numerals are huge and heavy - they anchor the composition while sparks play at the edges."</script>
+</body></html>

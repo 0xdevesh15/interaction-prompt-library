@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hinge Intro Background Video - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Hinge Intro Background Video</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/hinge-intro-background-video"><b>Hinge</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/hinge-intro-background-video">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/hinge-intro-background-video">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Hinge&#x27;s onboarding splash - a black &quot;H&quot; logo on white gives way to an atmospheric full-screen background video of couples (dates, laughter, city moments) cross-fading in a loop behind the static &quot;Hinge / Designed to be deleted.&quot; lockup, legal line, purple &quot;Create account&quot; button, and &quot;Sign in&quot; link.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f503c7ed780e097a2ae/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f503c7ed780e097a2ae/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-hinge-intro-background-video.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Hinge&#x27;s onboarding splash - a black &quot;H&quot; logo on white gives way to an atmospheric full-screen background video of couples (dates, laughter, city moments) cross-fading in a loop behind the static &quot;Hinge / Designed to be deleted.&quot; lockup, legal line, purple &quot;Create account&quot; button, and &quot;Sign in&quot; link.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Frame 1: white splash, centered black &quot;H&quot; mark. Main state: full-bleed video of couples in warm, dim, cinematic tones; centered white &quot;Hinge&quot; wordmark with &quot;Designed to be deleted.&quot; tagline; bottom stack has the terms line, a filled purple &quot;Create account&quot; button, and a &quot;Sign in&quot; text button.
+
+## Motion spec
+Pattern: ambient background video loop behind static UI.
+- Splash handoff: white splash holds ~600ms, then the video fades up from black (600ms) as the UI elements settle in with a gentle stagger (wordmark, tagline, buttons; 120ms apart, 300ms each, ease-out).
+- Video loop: clips cross-fade every ~2.5s (800ms dissolve); each clip holds a slow push-in (scale 1 -&gt; 1.05 over its dwell).
+- UI: fully static after entrance - no parallax, no pulsing.
+
+## Calibration
+- Dissolves only; hard cuts between clips break the mood.
+- Keep the video dark enough that the white wordmark and purple button stay the brightest elements.
+
+## Reduced motion
+Use the first frame as a static poster; no clip cycling or push-in.
+
+## Don&#x27;t miss
+- The tagline &quot;Designed to be deleted.&quot; is part of the lockup - never drop it.
+- The CTA is purple, not the brand-black; &quot;Sign in&quot; is a plain text link under it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient background video loop behind static UI.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/hinge-intro-background-video">original interaction</a> by Hinge. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Hinge's onboarding splash - a black \"H\" logo on white gives way to an atmospheric full-screen background video of couples (dates, laughter, city moments) cross-fading in a loop behind the static \"Hinge / Designed to be deleted.\" lockup, legal line, purple \"Create account\" button, and \"Sign in\" link.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFrame 1: white splash, centered black \"H\" mark. Main state: full-bleed video of couples in warm, dim, cinematic tones; centered white \"Hinge\" wordmark with \"Designed to be deleted.\" tagline; bottom stack has the terms line, a filled purple \"Create account\" button, and a \"Sign in\" text button.\n\n## Motion spec\nPattern: ambient background video loop behind static UI.\n- Splash handoff: white splash holds ~600ms, then the video fades up from black (600ms) as the UI elements settle in with a gentle stagger (wordmark, tagline, buttons; 120ms apart, 300ms each, ease-out).\n- Video loop: clips cross-fade every ~2.5s (800ms dissolve); each clip holds a slow push-in (scale 1 -> 1.05 over its dwell).\n- UI: fully static after entrance - no parallax, no pulsing.\n\n## Calibration\n- Dissolves only; hard cuts between clips break the mood.\n- Keep the video dark enough that the white wordmark and purple button stay the brightest elements.\n\n## Reduced motion\nUse the first frame as a static poster; no clip cycling or push-in.\n\n## Don't miss\n- The tagline \"Designed to be deleted.\" is part of the lockup - never drop it.\n- The CTA is purple, not the brand-black; \"Sign in\" is a plain text link under it."</script>
+</body></html>

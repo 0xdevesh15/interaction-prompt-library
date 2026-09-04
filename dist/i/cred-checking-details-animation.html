@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Checking Details Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Checking Details Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-checking-details-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-checking-details-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-checking-details-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s detail-verification loader - a slot-machine of ID cards cycles upward through a framed viewport, then a checkmark stamps in with a bounce.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4df91c82041cdc38084e4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4df91c82041cdc38084e4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-checking-details-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s detail-verification loader - a slot-machine of ID cards cycles upward through a framed viewport, then a checkmark stamps in with a bounce.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light full-screen loader: a rounded card frame at center, &quot;checking your details&quot; caption below it. Cards (pan card, ID card, document cards) pass vertically through the frame like a film reel.
+
+## Motion spec
+Pattern: reel-cycle loading into success stamp, ~4s.
+- Cards slide up through the frame continuously (~500ms per card, linear, one card visible at a time, slight tilt per card).
+- Each card differs (photo ID, document, cheque) and passes in a fixed rotation, masking at the frame edges.
+- After ~6 cards, the last card exits and a checkmark disc springs in: scale 0.6 to 1.15 to 1 (spring stiffness 300 damping 12), ring drawing on with it (250ms stroke).
+- Caption text holds steady the whole time.
+
+## Calibration
+- Mask the reel hard at the frame&#x27;s top and bottom edges - a card bleeding outside the frame kills the slot illusion.
+- The check must visibly overshoot; an eased fade-in reads as generic.
+
+## Reduced motion
+Single card crossfades into the checkmark over 300ms.
+
+## Don&#x27;t miss
+- Card tilt alternates slightly so the reel reads as physical cards, not scrolling screenshots.
+- The check lands exactly at the frame&#x27;s center - the reel hands off its spot to it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">reel-cycle loading into success stamp, ~4s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-checking-details-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's detail-verification loader - a slot-machine of ID cards cycles upward through a framed viewport, then a checkmark stamps in with a bounce.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight full-screen loader: a rounded card frame at center, \"checking your details\" caption below it. Cards (pan card, ID card, document cards) pass vertically through the frame like a film reel.\n\n## Motion spec\nPattern: reel-cycle loading into success stamp, ~4s.\n- Cards slide up through the frame continuously (~500ms per card, linear, one card visible at a time, slight tilt per card).\n- Each card differs (photo ID, document, cheque) and passes in a fixed rotation, masking at the frame edges.\n- After ~6 cards, the last card exits and a checkmark disc springs in: scale 0.6 to 1.15 to 1 (spring stiffness 300 damping 12), ring drawing on with it (250ms stroke).\n- Caption text holds steady the whole time.\n\n## Calibration\n- Mask the reel hard at the frame's top and bottom edges - a card bleeding outside the frame kills the slot illusion.\n- The check must visibly overshoot; an eased fade-in reads as generic.\n\n## Reduced motion\nSingle card crossfades into the checkmark over 300ms.\n\n## Don't miss\n- Card tilt alternates slightly so the reel reads as physical cards, not scrolling screenshots.\n- The check lands exactly at the frame's center - the reel hands off its spot to it."</script>
+</body></html>

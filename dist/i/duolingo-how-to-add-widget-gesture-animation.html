@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo How to Add Widget Gesture Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo How to Add Widget Gesture Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-how-to-add-widget-gesture-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-how-to-add-widget-gesture-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-how-to-add-widget-gesture-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s lock-screen-widget tutorial - a three-step onboarding sequence on white where a mock iPhone lock screen demonstrates each gesture (press-and-hold, customize picker, widget gallery) with the exact finger affordances, under step captions and a blue NEXT button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687498c80e3615485c49b31d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687498c80e3615485c49b31d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-how-to-add-widget-gesture-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s lock-screen-widget tutorial - a three-step onboarding sequence on white where a mock iPhone lock screen demonstrates each gesture (press-and-hold, customize picker, widget gallery) with the exact finger affordances, under step captions and a blue NEXT button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White onboarding screens, close X top-left, bold sentence-case caption under the notch (&quot;Press and hold anywhere on your lock screen&quot;, &quot;Select &#x27;Customize&#x27; and then &#x27;Lock Screen&#x27;&quot;, &quot;Select &#x27;Add Widgets&#x27; and browse for Duolingo&quot;), a blue NEXT button at the bottom (GOT IT on the last step). Center stage: a rounded mock lock screen showing 12:00 on a pale blue wallpaper.
+
+## Motion spec
+Pattern: step-by-step gesture tutorial with looping demos.
+- Step 1: a touch indicator dot presses the mock lock screen; the wallpaper dims and the clock view enters jiggle/edit mode (scale 0.96, subtle 1deg rotation wobble, 500ms loop) after a 600ms hold.
+- Step 2: the mock zooms out into the wallpaper gallery (two panels, 300ms ease-out), the CUSTOMIZE pill rises below the selected wallpaper and a blue dot taps it (dot scale 1.0 -&gt; 0.8 -&gt; 1.0, 200ms).
+- Step 3: the widget gallery sheet slides up inside the mock (300ms), scrolls slightly, and the Duolingo widget row highlights with a blue selection outline (150ms); a blue dot taps it.
+- Step transitions: caption and mock crossfade (200ms) on NEXT; NEXT button press scales 0.95 (100ms).
+- Each demo loops with a ~800ms pause at the end state.
+
+## Calibration
+- The touch dot is the teacher - hold, release, and tap timings must read as deliberate finger actions, not random pulses.
+- Captions swap exactly with their demo; never show step 2 visuals under step 1 text.
+
+## Reduced motion
+Each step shows its end state statically; step transitions crossfade over 150ms; no jiggle or press loops.
+
+## Don&#x27;t miss
+- The mock lock screen keeps 12:00 and the pale wallpaper across steps for continuity.
+- The last step ends inside the widget gallery with the Duolingo widget selected, not back on the lock screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">step-by-step gesture tutorial with looping demos.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-how-to-add-widget-gesture-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's lock-screen-widget tutorial - a three-step onboarding sequence on white where a mock iPhone lock screen demonstrates each gesture (press-and-hold, customize picker, widget gallery) with the exact finger affordances, under step captions and a blue NEXT button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite onboarding screens, close X top-left, bold sentence-case caption under the notch (\"Press and hold anywhere on your lock screen\", \"Select 'Customize' and then 'Lock Screen'\", \"Select 'Add Widgets' and browse for Duolingo\"), a blue NEXT button at the bottom (GOT IT on the last step). Center stage: a rounded mock lock screen showing 12:00 on a pale blue wallpaper.\n\n## Motion spec\nPattern: step-by-step gesture tutorial with looping demos.\n- Step 1: a touch indicator dot presses the mock lock screen; the wallpaper dims and the clock view enters jiggle/edit mode (scale 0.96, subtle 1deg rotation wobble, 500ms loop) after a 600ms hold.\n- Step 2: the mock zooms out into the wallpaper gallery (two panels, 300ms ease-out), the CUSTOMIZE pill rises below the selected wallpaper and a blue dot taps it (dot scale 1.0 -> 0.8 -> 1.0, 200ms).\n- Step 3: the widget gallery sheet slides up inside the mock (300ms), scrolls slightly, and the Duolingo widget row highlights with a blue selection outline (150ms); a blue dot taps it.\n- Step transitions: caption and mock crossfade (200ms) on NEXT; NEXT button press scales 0.95 (100ms).\n- Each demo loops with a ~800ms pause at the end state.\n\n## Calibration\n- The touch dot is the teacher - hold, release, and tap timings must read as deliberate finger actions, not random pulses.\n- Captions swap exactly with their demo; never show step 2 visuals under step 1 text.\n\n## Reduced motion\nEach step shows its end state statically; step transitions crossfade over 150ms; no jiggle or press loops.\n\n## Don't miss\n- The mock lock screen keeps 12:00 and the pale wallpaper across steps for continuity.\n- The last step ends inside the widget gallery with the Duolingo widget selected, not back on the lock screen."</script>
+</body></html>

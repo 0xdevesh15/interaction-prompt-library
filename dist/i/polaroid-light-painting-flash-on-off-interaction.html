@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Polaroid Light Painting Flash On Off Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Polaroid Light Painting Flash On Off Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/polaroid-light-painting-flash-on-off-interaction"><b>Polaroid</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/polaroid-light-painting-flash-on-off-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/polaroid-light-painting-flash-on-off-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Polaroid&#x27;s Light Painting flash toggle - a big circular button that springs between a dim orange off-state and a glowing white on-state, spilling light across the yellow screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e0002896aa9b8d652d5627/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e0002896aa9b8d652d5627/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-polaroid-light-painting-flash-on-off-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Polaroid&#x27;s Light Painting flash toggle - a big circular button that springs between a dim orange off-state and a glowing white on-state, spilling light across the yellow screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Saturated yellow &quot;Light Painting&quot; screen (back chevron top-left, info icon top-right, faint bokeh circles floating in the background). Center: a huge circular toggle - deep orange with a small flashlight icon when off, brilliant glowing white with a dark icon when on.
+
+## Motion spec
+Pattern: springy light-source toggle with screen-wide glow spill.
+- Tap: the circle presses (scale 1 -&gt; 0.92, 100ms) then blooms (scale to 1.06 -&gt; 1, spring ~340/13).
+- Turning on: the fill flashes from orange to white (150ms) while a radial glow spills outward across the whole screen (white overlay radiating from the button, opacity to 35%, 400ms, ease-out); the flashlight icon inverts color (crossfade 150ms) and the bokeh circles brighten (opacity +20%).
+- The glow settles with a slow breathe (opacity 35% -&gt; 28% -&gt; 35%, 2.4s loop) while on.
+- Turning off: the glow sucks back into the circle (300ms, ease-in), the fill returns to orange with the same press-bloom press feedback, and the bokeh dims back.
+- A tiny spark burst (4-6 white specks, 60pt radius, 300ms) fires on each toggle.
+
+## Calibration
+- The on-state must read as emitting light: brightest at the circle, feathering to nothing at the edges.
+- Press feedback happens on both transitions; the glow only on on.
+
+## Reduced motion
+Fill and glow crossfade (200ms); no bloom, no spark burst.
+
+## Don&#x27;t miss
+- The icon stays centered and small through every state - the circle is the star.
+- Yellow background, orange off, white on: three fixed brand colors, no intermediate purples or grays.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy light-source toggle with screen-wide glow spill.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/polaroid-light-painting-flash-on-off-interaction">original interaction</a> by Polaroid. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Polaroid's Light Painting flash toggle - a big circular button that springs between a dim orange off-state and a glowing white on-state, spilling light across the yellow screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSaturated yellow \"Light Painting\" screen (back chevron top-left, info icon top-right, faint bokeh circles floating in the background). Center: a huge circular toggle - deep orange with a small flashlight icon when off, brilliant glowing white with a dark icon when on.\n\n## Motion spec\nPattern: springy light-source toggle with screen-wide glow spill.\n- Tap: the circle presses (scale 1 -> 0.92, 100ms) then blooms (scale to 1.06 -> 1, spring ~340/13).\n- Turning on: the fill flashes from orange to white (150ms) while a radial glow spills outward across the whole screen (white overlay radiating from the button, opacity to 35%, 400ms, ease-out); the flashlight icon inverts color (crossfade 150ms) and the bokeh circles brighten (opacity +20%).\n- The glow settles with a slow breathe (opacity 35% -> 28% -> 35%, 2.4s loop) while on.\n- Turning off: the glow sucks back into the circle (300ms, ease-in), the fill returns to orange with the same press-bloom press feedback, and the bokeh dims back.\n- A tiny spark burst (4-6 white specks, 60pt radius, 300ms) fires on each toggle.\n\n## Calibration\n- The on-state must read as emitting light: brightest at the circle, feathering to nothing at the edges.\n- Press feedback happens on both transitions; the glow only on on.\n\n## Reduced motion\nFill and glow crossfade (200ms); no bloom, no spark burst.\n\n## Don't miss\n- The icon stays centered and small through every state - the circle is the star.\n- Yellow background, orange off, white on: three fixed brand colors, no intermediate purples or grays."</script>
+</body></html>

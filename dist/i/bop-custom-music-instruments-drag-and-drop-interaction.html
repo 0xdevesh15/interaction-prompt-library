@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bop Custom Music Instruments Drag and Drop Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bop Custom Music Instruments Drag and Drop Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bop-custom-music-instruments-drag-and-drop-interaction"><b>Bop</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bop-custom-music-instruments-drag-and-drop-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bop-custom-music-instruments-drag-and-drop-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Bop&#x27;s instrument drag-and-drop - tiles for drums and chords fly in from the tray, get dragged across the dark studio, and snap onto slots around the spinning vinyl deck with a bounce, stacking into a playable mix.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f332d2befe20b134e5d20c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f332d2befe20b134e5d20c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bop-custom-music-instruments-drag-and-drop-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Bop&#x27;s instrument drag-and-drop - tiles for drums and chords fly in from the tray, get dragged across the dark studio, and snap onto slots around the spinning vinyl deck with a bounce, stacking into a playable mix.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark studio: header (back chevron, &quot;Soda Pop&quot;, Custom pill, Save), a large central vinyl deck with faint concentric rings, and instrument tiles - purple drum pad, green drum, brown frame drum - that start in a bottom tray (&quot;Solo Pop - KPop Demon Hunters&quot; now-playing bar) and end up arranged around the deck. A chord-picker overlay briefly shows labeled categories (Indie Chords, R&amp;B Chords...).
+
+## Motion spec
+Pattern: drag-to-slot physics, gesture-driven.
+- Entrance: tiles slide up from the tray and fan out (stagger 90ms, 300ms ease-out), hovering with a slow bob (translateY +-4px, 2s, offset phases).
+- Drag: a touched tile lifts (scale 1 -&gt; 1.08, 150ms) and follows the finger 1:1 with a slight rotation toward the drag direction (+-8deg).
+- Snap: releasing near the deck pulls the tile into the nearest slot (spring ~360/22, 250ms) with a squash on land (scaleY 0.9 -&gt; 1); releasing elsewhere springs it back to its hover spot (spring ~300/20).
+- Stack: placed tiles settle into orbit positions around the vinyl, each pulsing faintly to the beat (scale 1 -&gt; 1.03, 500ms).
+
+## Calibration
+- Placed tiles lock into fixed slots - no free overlap on the deck.
+- The snap is magnetic within ~60px of a slot; outside that, the tile returns.
+
+## Reduced motion
+Tiles fade into slots (200ms); no bob or rotation.
+
+## Don&#x27;t miss
+- The chord category grid (Indie, R&amp;B, Reggaeton, Dancepop, Lo-fi, Pop Punk) appears as a labeled picker before the chord tiles drop.
+- The now-playing bar never leaves the bottom edge.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">drag-to-slot physics, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bop-custom-music-instruments-drag-and-drop-interaction">original interaction</a> by Bop. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Bop's instrument drag-and-drop - tiles for drums and chords fly in from the tray, get dragged across the dark studio, and snap onto slots around the spinning vinyl deck with a bounce, stacking into a playable mix.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark studio: header (back chevron, \"Soda Pop\", Custom pill, Save), a large central vinyl deck with faint concentric rings, and instrument tiles - purple drum pad, green drum, brown frame drum - that start in a bottom tray (\"Solo Pop - KPop Demon Hunters\" now-playing bar) and end up arranged around the deck. A chord-picker overlay briefly shows labeled categories (Indie Chords, R&B Chords...).\n\n## Motion spec\nPattern: drag-to-slot physics, gesture-driven.\n- Entrance: tiles slide up from the tray and fan out (stagger 90ms, 300ms ease-out), hovering with a slow bob (translateY +-4px, 2s, offset phases).\n- Drag: a touched tile lifts (scale 1 -> 1.08, 150ms) and follows the finger 1:1 with a slight rotation toward the drag direction (+-8deg).\n- Snap: releasing near the deck pulls the tile into the nearest slot (spring ~360/22, 250ms) with a squash on land (scaleY 0.9 -> 1); releasing elsewhere springs it back to its hover spot (spring ~300/20).\n- Stack: placed tiles settle into orbit positions around the vinyl, each pulsing faintly to the beat (scale 1 -> 1.03, 500ms).\n\n## Calibration\n- Placed tiles lock into fixed slots - no free overlap on the deck.\n- The snap is magnetic within ~60px of a slot; outside that, the tile returns.\n\n## Reduced motion\nTiles fade into slots (200ms); no bob or rotation.\n\n## Don't miss\n- The chord category grid (Indie, R&B, Reggaeton, Dancepop, Lo-fi, Pop Punk) appears as a labeled picker before the chord tiles drop.\n- The now-playing bar never leaves the bottom edge."</script>
+</body></html>

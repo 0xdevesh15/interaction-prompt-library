@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perplexity Voice Mode Chat Stroke Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Perplexity Voice Mode Chat Stroke Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/perplexity-voice-mode-chat-stroke-animation"><b>Perplexity</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-voice-mode-chat-stroke-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-voice-mode-chat-stroke-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Perplexity&#x27;s voice-mode input stroke - while voice input is active, a colorful gradient stroke (teal, green, blue) travels continuously around the rounded input box border above the keyboard.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e339020d76d562308f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e339020d76d562308f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-perplexity-voice-mode-chat-stroke-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Perplexity&#x27;s voice-mode input stroke - while voice input is active, a colorful gradient stroke (teal, green, blue) travels continuously around the rounded input box border above the keyboard.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light chat screen: Perplexity thread header, a composer bar (&quot;Ask anything...&quot;) with mic and send, keyboard below. Active voice state: the composer&#x27;s rounded-rect border carries a bright multi-color gradient segment that orbits the perimeter; the rest of the border stays faint gray.
+
+## Motion spec
+Pattern: orbiting gradient stroke, looping.
+- Orbit: a 25%-of-perimeter gradient arc travels around the border (1.6s per lap, linear), its head brightest, tail fading into the base border.
+- Colors: the arc cycles teal -&gt; green -&gt; blue along its length, the hue drifting slowly (8s cycle).
+- Level: the arc&#x27;s thickness pulses subtly with mic amplitude (2px - 4px), reacting within 80ms.
+- Exit: ending voice mode retracts the arc - it shortens to zero length at its tail (250ms) and the border returns to solid gray.
+
+## Calibration
+- The stroke follows the rounded corners exactly - no clipping at the radii.
+- The orbit never stops or reverses while listening.
+
+## Reduced motion
+The border shows a static gradient with a slow opacity pulse (2s); no orbit.
+
+## Don&#x27;t miss
+- The arc is a segment, not a full-border gradient - the contrast with the gray remainder is the effect.
+- Amplitude pulses are subtle; the border never thickens beyond 4px.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orbiting gradient stroke, looping.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/perplexity-voice-mode-chat-stroke-animation">original interaction</a> by Perplexity. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Perplexity's voice-mode input stroke - while voice input is active, a colorful gradient stroke (teal, green, blue) travels continuously around the rounded input box border above the keyboard.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight chat screen: Perplexity thread header, a composer bar (\"Ask anything...\") with mic and send, keyboard below. Active voice state: the composer's rounded-rect border carries a bright multi-color gradient segment that orbits the perimeter; the rest of the border stays faint gray.\n\n## Motion spec\nPattern: orbiting gradient stroke, looping.\n- Orbit: a 25%-of-perimeter gradient arc travels around the border (1.6s per lap, linear), its head brightest, tail fading into the base border.\n- Colors: the arc cycles teal -> green -> blue along its length, the hue drifting slowly (8s cycle).\n- Level: the arc's thickness pulses subtly with mic amplitude (2px - 4px), reacting within 80ms.\n- Exit: ending voice mode retracts the arc - it shortens to zero length at its tail (250ms) and the border returns to solid gray.\n\n## Calibration\n- The stroke follows the rounded corners exactly - no clipping at the radii.\n- The orbit never stops or reverses while listening.\n\n## Reduced motion\nThe border shows a static gradient with a slow opacity pulse (2s); no orbit.\n\n## Don't miss\n- The arc is a segment, not a full-border gradient - the contrast with the gray remainder is the effect.\n- Amplitude pulses are subtle; the border never thickens beyond 4px."</script>
+</body></html>

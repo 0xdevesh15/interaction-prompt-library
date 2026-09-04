@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Share Badge Sheet Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Share Badge Sheet Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-share-badge-sheet-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-share-badge-sheet-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-share-badge-sheet-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s share badge sheet - from the pink badge screen (&quot;Congratulations! You earned Zari&#x27;s Movie Binge badge.&quot;), tapping SHARE BADGE slides up a bottom sheet with a springy entrance showing a share preview card (&quot;I completed the June Challenge&quot;) and a row of share targets (WhatsApp, Messages, Instagram, X, Save image, More); dismissing slides it back down to the badge screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868eaf5fc386bd77fde268a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868eaf5fc386bd77fde268a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-share-badge-sheet-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s share badge sheet - from the pink badge screen (&quot;Congratulations! You earned Zari&#x27;s Movie Binge badge.&quot;), tapping SHARE BADGE slides up a bottom sheet with a springy entrance showing a share preview card (&quot;I completed the June Challenge&quot;) and a row of share targets (WhatsApp, Messages, Instagram, X, Save image, More); dismissing slides it back down to the badge screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pink badge screen: a Duo owl badge with sparkles, &quot;Congratulations! You earned Zari&#x27;s Movie Binge badge.&quot;, white SHARE BADGE button, CONTINUE below. The sheet: dark background, a pink preview card with the badge and &quot;I completed the June Challenge&quot; text, an X close button, &quot;SHARE ACHIEVEMENT&quot; label, a row of round share icons (WhatsApp, Messages, Instagram, X) plus a second row (Save image, More).
+
+## Motion spec
+Pattern: spring bottom sheet with staggered share options.
+- Tap SHARE BADGE: the badge screen dims (scrim to 60%, 200ms) as the sheet slides up (spring ~300/20, slight overshoot past its rest point then settle).
+- The preview card scales in (0.9 -&gt; 1, 200ms) as the sheet arrives.
+- Share icons pop in left to right (scale 0.6 -&gt; 1, spring ~340/16, 50ms stagger), then the second row.
+- Drag on the sheet: it follows the finger 1:1 downward; release below 40% of its height dismisses (slide down 250ms ease-in, scrim fades), otherwise it springs back.
+- The X button dismisses with the same slide-down; behind the sheet, the badge screen is unchanged.
+
+## Calibration
+- The spring overshoot is small - the sheet feels buoyant, not bouncy.
+- The preview card reads as the exact image that would be shared.
+
+## Reduced motion
+The sheet fades and slides up 40pt (200ms) without spring overshoot.
+
+## Don&#x27;t miss
+- The sheet is dark even though the badge screen is bright pink - clear layering.
+- Share icons use their real brand colors (green WhatsApp, green Messages, gradient Instagram, black X).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring bottom sheet with staggered share options.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-share-badge-sheet-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's share badge sheet - from the pink badge screen (\"Congratulations! You earned Zari's Movie Binge badge.\"), tapping SHARE BADGE slides up a bottom sheet with a springy entrance showing a share preview card (\"I completed the June Challenge\") and a row of share targets (WhatsApp, Messages, Instagram, X, Save image, More); dismissing slides it back down to the badge screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPink badge screen: a Duo owl badge with sparkles, \"Congratulations! You earned Zari's Movie Binge badge.\", white SHARE BADGE button, CONTINUE below. The sheet: dark background, a pink preview card with the badge and \"I completed the June Challenge\" text, an X close button, \"SHARE ACHIEVEMENT\" label, a row of round share icons (WhatsApp, Messages, Instagram, X) plus a second row (Save image, More).\n\n## Motion spec\nPattern: spring bottom sheet with staggered share options.\n- Tap SHARE BADGE: the badge screen dims (scrim to 60%, 200ms) as the sheet slides up (spring ~300/20, slight overshoot past its rest point then settle).\n- The preview card scales in (0.9 -> 1, 200ms) as the sheet arrives.\n- Share icons pop in left to right (scale 0.6 -> 1, spring ~340/16, 50ms stagger), then the second row.\n- Drag on the sheet: it follows the finger 1:1 downward; release below 40% of its height dismisses (slide down 250ms ease-in, scrim fades), otherwise it springs back.\n- The X button dismisses with the same slide-down; behind the sheet, the badge screen is unchanged.\n\n## Calibration\n- The spring overshoot is small - the sheet feels buoyant, not bouncy.\n- The preview card reads as the exact image that would be shared.\n\n## Reduced motion\nThe sheet fades and slides up 40pt (200ms) without spring overshoot.\n\n## Don't miss\n- The sheet is dark even though the badge screen is bright pink - clear layering.\n- Share icons use their real brand colors (green WhatsApp, green Messages, gradient Instagram, black X)."</script>
+</body></html>

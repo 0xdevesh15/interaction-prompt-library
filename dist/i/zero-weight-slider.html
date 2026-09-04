@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zero Weight Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zero Weight Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zero-weight-slider"><b>Zero</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zero-weight-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zero-weight-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Zero&#x27;s weight picker - a vertical wheel of numbers that scales and fades with distance from center, snapping to the selected weight.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7b23d61d73e2622c3c2e7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7b23d61d73e2622c3c2e7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zero-weight-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Zero&#x27;s weight picker - a vertical wheel of numbers that scales and fades with distance from center, snapping to the selected weight.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A light onboarding screen (&quot;What&#x27;s your current weight?&quot; with a sub-line, Next pill at bottom). Center: a vertical drum of weight values - the center value is large and dark maroon with a small &quot;KG&quot; tag beside it; values above and below shrink and fade (67 / 68 / 69 stepping through 52-70 as it scrolls).
+
+## Motion spec
+Pattern: vertical drum picker with depth scaling.
+- Drag: values scroll 1:1 vertically with momentum on release (decay ~0.94/frame); each value&#x27;s scale (0.55-1.0) and opacity (0.25-1) interpolate continuously with its distance from the center line - a lens effect, not discrete states.
+- Snap: on release the drum settles to the nearest integer (spring ~380/24) with a light haptic tick per passed value and a slightly stronger one on snap.
+- The center value sits on a soft highlight band (a faint gray pill behind the center row, fading in when scrolling stops, 200ms).
+- The &quot;KG&quot; tag tracks the center value&#x27;s trailing edge, sliding horizontally as the digit count changes (spring ~360/26).
+- The drum edges fade into the background (vertical gradient mask) so values dissolve at top and bottom.
+- Rubber-band at range limits (0.35x resistance past min/max) with spring-back.
+
+## Calibration
+- Only the center value is fully opaque and maroon; everything else is gray - the hierarchy must survive fast flicks.
+- Haptics tick per unit even during fast scrolls (coalesced to max 1 per 40ms).
+
+## Reduced motion
+Values scroll without scaling; snaps instantly.
+
+## Don&#x27;t miss
+- The picker is the whole screen - no dial, no +/- buttons; the drum IS the control.
+- The previous screen&#x27;s orange circle hands off via a shared-element shrink into the header area before the wheel appears.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vertical drum picker with depth scaling.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zero-weight-slider">original interaction</a> by Zero. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Zero's weight picker - a vertical wheel of numbers that scales and fades with distance from center, snapping to the selected weight.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA light onboarding screen (\"What's your current weight?\" with a sub-line, Next pill at bottom). Center: a vertical drum of weight values - the center value is large and dark maroon with a small \"KG\" tag beside it; values above and below shrink and fade (67 / 68 / 69 stepping through 52-70 as it scrolls).\n\n## Motion spec\nPattern: vertical drum picker with depth scaling.\n- Drag: values scroll 1:1 vertically with momentum on release (decay ~0.94/frame); each value's scale (0.55-1.0) and opacity (0.25-1) interpolate continuously with its distance from the center line - a lens effect, not discrete states.\n- Snap: on release the drum settles to the nearest integer (spring ~380/24) with a light haptic tick per passed value and a slightly stronger one on snap.\n- The center value sits on a soft highlight band (a faint gray pill behind the center row, fading in when scrolling stops, 200ms).\n- The \"KG\" tag tracks the center value's trailing edge, sliding horizontally as the digit count changes (spring ~360/26).\n- The drum edges fade into the background (vertical gradient mask) so values dissolve at top and bottom.\n- Rubber-band at range limits (0.35x resistance past min/max) with spring-back.\n\n## Calibration\n- Only the center value is fully opaque and maroon; everything else is gray - the hierarchy must survive fast flicks.\n- Haptics tick per unit even during fast scrolls (coalesced to max 1 per 40ms).\n\n## Reduced motion\nValues scroll without scaling; snaps instantly.\n\n## Don't miss\n- The picker is the whole screen - no dial, no +/- buttons; the drum IS the control.\n- The previous screen's orange circle hands off via a shared-element shrink into the header area before the wheel appears."</script>
+</body></html>

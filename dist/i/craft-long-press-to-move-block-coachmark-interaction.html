@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Craft Long Press to Move Block Coachmark Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Craft Long Press to Move Block Coachmark Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/craft-long-press-to-move-block-coachmark-interaction"><b>Craft</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/craft-long-press-to-move-block-coachmark-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/craft-long-press-to-move-block-coachmark-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Craft&#x27;s &quot;Drag And Drop Anything&quot; coachmark - long-press the highlighted block, drag it above the title, and drop it to reorder, unlocking the Next button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3df2621936ee01364fe3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3df2621936ee01364fe3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-craft-long-press-to-move-block-coachmark-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Craft&#x27;s &quot;Drag And Drop Anything&quot; coachmark - long-press the highlighted block, drag it above the title, and drop it to reorder, unlocking the Next button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Craft onboarding page, black: the &quot;Drag And Drop Anything&quot; title with the line &quot;Dragging and dropping is the primary way to manipulate content in Craft - Give it a try!&quot;, a teal-highlighted block reading &quot;Long press, and move me to the top&quot;, and a bottom button that starts gray (&quot;Next&quot;, disabled) and turns blue when the task completes.
+
+## Motion spec
+Pattern: long-press lift, drag, and drop reorder of a content block.
+- The block&#x27;s teal highlight pulses gently (1.2s loop) until touched.
+- On long-press (~400ms hold), the block lifts: scale 1 -&gt; 1.04 with a soft shadow bloom and a 6px rise (200ms, spring ~350/18) - the surrounding content stays put.
+- While dragging, the block tracks the finger 1:1; the gap it would occupy renders as a dim placeholder strip that slides open between neighbors (150ms) as the finger crosses each boundary.
+- On release over a valid slot, the block snaps in (spring ~320/20, ~250ms) and the placeholder closes around it; over an invalid area it flies back to its origin (300ms, spring ~300/18).
+- When the block lands at the top slot, its coachmark text becomes normal content (200ms), and the Next button fills blue and brightens (250ms) - the only state change outside the block.
+
+## Calibration
+- The lift is subtle - 4% scale and shadow, not a balloon. The block must still read as the same text.
+- The placeholder is a real layout gap: neighbors reflow around it during the drag, never overlap.
+
+## Reduced motion
+Long-press lifts without shadow bloom; drop snaps without spring overshoot.
+
+## Don&#x27;t miss
+- The instruction text lives inside the draggable block - completing the task retires the instruction.
+- Next stays visibly disabled (gray) until the drop completes - the affordance is the lesson&#x27;s reward.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">long-press lift, drag, and drop reorder of a content block.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/craft-long-press-to-move-block-coachmark-interaction">original interaction</a> by Craft. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Craft's \"Drag And Drop Anything\" coachmark - long-press the highlighted block, drag it above the title, and drop it to reorder, unlocking the Next button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCraft onboarding page, black: the \"Drag And Drop Anything\" title with the line \"Dragging and dropping is the primary way to manipulate content in Craft - Give it a try!\", a teal-highlighted block reading \"Long press, and move me to the top\", and a bottom button that starts gray (\"Next\", disabled) and turns blue when the task completes.\n\n## Motion spec\nPattern: long-press lift, drag, and drop reorder of a content block.\n- The block's teal highlight pulses gently (1.2s loop) until touched.\n- On long-press (~400ms hold), the block lifts: scale 1 -> 1.04 with a soft shadow bloom and a 6px rise (200ms, spring ~350/18) - the surrounding content stays put.\n- While dragging, the block tracks the finger 1:1; the gap it would occupy renders as a dim placeholder strip that slides open between neighbors (150ms) as the finger crosses each boundary.\n- On release over a valid slot, the block snaps in (spring ~320/20, ~250ms) and the placeholder closes around it; over an invalid area it flies back to its origin (300ms, spring ~300/18).\n- When the block lands at the top slot, its coachmark text becomes normal content (200ms), and the Next button fills blue and brightens (250ms) - the only state change outside the block.\n\n## Calibration\n- The lift is subtle - 4% scale and shadow, not a balloon. The block must still read as the same text.\n- The placeholder is a real layout gap: neighbors reflow around it during the drag, never overlap.\n\n## Reduced motion\nLong-press lifts without shadow bloom; drop snaps without spring overshoot.\n\n## Don't miss\n- The instruction text lives inside the draggable block - completing the task retires the instruction.\n- Next stays visibly disabled (gray) until the drop completes - the affordance is the lesson's reward."</script>
+</body></html>

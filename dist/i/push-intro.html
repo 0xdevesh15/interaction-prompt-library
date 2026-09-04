@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Push Intro - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Push Intro</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/push-intro"><b>Push</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/push-intro">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/push-intro">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Push&#x27;s onboarding intro - on black, &quot;hi&quot; appears alone, holds a beat, then &quot;welcome to push&quot; slides up with a small paragraph, and a white &quot;let&#x27;s go&quot; pill rises last.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf475da8ec7d01f57bd0c3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf475da8ec7d01f57bd0c3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-push-intro.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Push&#x27;s onboarding intro - on black, &quot;hi&quot; appears alone, holds a beat, then &quot;welcome to push&quot; slides up with a small paragraph, and a white &quot;let&#x27;s go&quot; pill rises last.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen, slightly visible blurred workout texture at top. Sequence: &quot;hi&quot; (small, centered-ish low), then &quot;welcome to push&quot; (two lines, bold, left-aligned), a gray paragraph of small copy, and a white rounded &quot;let&#x27;s go&quot; button.
+
+## Motion spec
+Pattern: staggered fade-rise intro.
+- &quot;hi&quot; fades in at slight oversize and settles (opacity 0 -&gt; 1 with scale 1.04 -&gt; 1, 400ms, ease-out), then holds ~700ms alone.
+- &quot;welcome to push&quot; rises 16px and fades in (450ms, ease-out); the paragraph follows 200ms later with the same rise, shorter fade.
+- &quot;let&#x27;s go&quot; rises last from lower (20px, 400ms, spring ~320/22), then does a single soft pulse (scale 1 -&gt; 1.02 -&gt; 1) to invite the tap.
+- Between &quot;hi&quot; and &quot;welcome&quot;, &quot;hi&quot; crossfades away (250ms) rather than moving - each beat replaces the last.
+
+## Calibration
+- All type is white/gray on black; the button is the only filled element.
+- Total intro under 3s to interactive - no forced watching.
+
+## Reduced motion
+All elements fade in together; no rises.
+
+## Don&#x27;t miss
+- The cadence is conversational: greet, pause, introduce, invite - each step waits for the last to finish.
+- Copy is lowercase throughout - keep it that way.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered fade-rise intro.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/push-intro">original interaction</a> by Push. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Push's onboarding intro - on black, \"hi\" appears alone, holds a beat, then \"welcome to push\" slides up with a small paragraph, and a white \"let's go\" pill rises last.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen, slightly visible blurred workout texture at top. Sequence: \"hi\" (small, centered-ish low), then \"welcome to push\" (two lines, bold, left-aligned), a gray paragraph of small copy, and a white rounded \"let's go\" button.\n\n## Motion spec\nPattern: staggered fade-rise intro.\n- \"hi\" fades in at slight oversize and settles (opacity 0 -> 1 with scale 1.04 -> 1, 400ms, ease-out), then holds ~700ms alone.\n- \"welcome to push\" rises 16px and fades in (450ms, ease-out); the paragraph follows 200ms later with the same rise, shorter fade.\n- \"let's go\" rises last from lower (20px, 400ms, spring ~320/22), then does a single soft pulse (scale 1 -> 1.02 -> 1) to invite the tap.\n- Between \"hi\" and \"welcome\", \"hi\" crossfades away (250ms) rather than moving - each beat replaces the last.\n\n## Calibration\n- All type is white/gray on black; the button is the only filled element.\n- Total intro under 3s to interactive - no forced watching.\n\n## Reduced motion\nAll elements fade in together; no rises.\n\n## Don't miss\n- The cadence is conversational: greet, pause, introduce, invite - each step waits for the last to finish.\n- Copy is lowercase throughout - keep it that way."</script>
+</body></html>

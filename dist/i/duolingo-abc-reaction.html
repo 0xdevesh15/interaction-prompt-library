@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo ABC Reaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo ABC Reaction</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-abc-reaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-abc-reaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-abc-reaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo ABC&#x27;s emoji reaction - tapping an emoji in the picker grid sends the chosen character into a full-screen celebration: the character grows huge over a radiating sunburst while copies of the picked emoji float up around it, ending with a blue arrow button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56e9f12271a7827f53088/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56e9f12271a7827f53088/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-abc-reaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo ABC&#x27;s emoji reaction - tapping an emoji in the picker grid sends the chosen character into a full-screen celebration: the character grows huge over a radiating sunburst while copies of the picked emoji float up around it, ending with a blue arrow button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: two characters up top (a brown one with a mic, an orange curly-haired one), a 2x3 emoji picker grid below. Reaction state: the orange character centered and huge over a light-blue radial sunburst, laughing emojis floating around, a blue arrow pill bottom.
+
+## Motion spec
+Pattern: full-screen character celebration with emoji particles.
+- Tap an emoji: the picked cell pops (scale 1 -&gt; 1.3 -&gt; 1, spring ~420/16) and the grid + second character slide down and fade out (250ms).
+- The chosen character springs to center, growing 3x (spring ~300/16 - overshooting bounce) as a radial sunburst fades in behind it (300ms, rays slowly rotating 8deg/s).
+- The character bobs joyfully (translateY +-8px with +-5deg tilt, 1.2s sine) with a happy expression swap.
+- Emoji particles: copies of the picked emoji spawn from below and float upward (rise 120% of screen over 3-4s, gentle +-20px sway, fade in first/last 15%), spawning continuously ~2/s.
+- The blue arrow button slides up (spring ~360/20) once the celebration peaks (~1s in) - exit without killing the mood.
+
+## Calibration
+- Particles are the PICKED emoji - laugh face tap rains laugh faces.
+- The sunburst is pale (10% blue) - energy without noise.
+
+## Reduced motion
+Character appears at center with a static burst; no particles.
+
+## Don&#x27;t miss
+- The un-picked character leaves - the spotlight is singular.
+- Particles keep spawning behind the arrow button - the celebration never hard-stops before the user leaves.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-screen character celebration with emoji particles.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-abc-reaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo ABC's emoji reaction - tapping an emoji in the picker grid sends the chosen character into a full-screen celebration: the character grows huge over a radiating sunburst while copies of the picked emoji float up around it, ending with a blue arrow button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: two characters up top (a brown one with a mic, an orange curly-haired one), a 2x3 emoji picker grid below. Reaction state: the orange character centered and huge over a light-blue radial sunburst, laughing emojis floating around, a blue arrow pill bottom.\n\n## Motion spec\nPattern: full-screen character celebration with emoji particles.\n- Tap an emoji: the picked cell pops (scale 1 -> 1.3 -> 1, spring ~420/16) and the grid + second character slide down and fade out (250ms).\n- The chosen character springs to center, growing 3x (spring ~300/16 - overshooting bounce) as a radial sunburst fades in behind it (300ms, rays slowly rotating 8deg/s).\n- The character bobs joyfully (translateY +-8px with +-5deg tilt, 1.2s sine) with a happy expression swap.\n- Emoji particles: copies of the picked emoji spawn from below and float upward (rise 120% of screen over 3-4s, gentle +-20px sway, fade in first/last 15%), spawning continuously ~2/s.\n- The blue arrow button slides up (spring ~360/20) once the celebration peaks (~1s in) - exit without killing the mood.\n\n## Calibration\n- Particles are the PICKED emoji - laugh face tap rains laugh faces.\n- The sunburst is pale (10% blue) - energy without noise.\n\n## Reduced motion\nCharacter appears at center with a static burst; no particles.\n\n## Don't miss\n- The un-picked character leaves - the spotlight is singular.\n- Particles keep spawning behind the arrow button - the celebration never hard-stops before the user leaves."</script>
+</body></html>

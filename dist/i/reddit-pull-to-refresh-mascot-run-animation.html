@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reddit Pull to Refresh Mascot Run Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Reddit Pull to Refresh Mascot Run Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/reddit-pull-to-refresh-mascot-run-animation"><b>Reddit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/reddit-pull-to-refresh-mascot-run-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/reddit-pull-to-refresh-mascot-run-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Reddit&#x27;s pull-to-refresh - dragging the feed down reveals Snoo running in place inside an expanding red circle, and releasing fires a red progress bar across the top as the feed swaps to fresh posts.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9b1cd4a3cfd549a7d92/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9b1cd4a3cfd549a7d92/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-reddit-pull-to-refresh-mascot-run-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Reddit&#x27;s pull-to-refresh - dragging the feed down reveals Snoo running in place inside an expanding red circle, and releasing fires a red progress bar across the top as the feed swaps to fresh posts.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark Reddit feed (header, post cards with images); the refresh zone above the feed hides a red circle containing the running Snoo mascot.
+
+## Motion spec
+Pattern: gesture-driven mascot reveal with refresh bar.
+- Pull: the feed translates down 1:1 (with rubber-banding past 120pt); the red circle scales up from a point (0 -&gt; 1 across the pull range) and Snoo fades in inside it (opacity tied to pull depth).
+- Run: Snoo&#x27;s run cycle plays at a speed proportional to pull depth (0.5x at first reveal -&gt; 2x at threshold).
+- Release past threshold: the circle contracts back (spring ~380/22, 300ms) as a thin red progress bar sweeps left-to-right across the top of the feed (900ms, ease-in-out).
+- Swap: the feed content crossfades to the new posts (200ms) when the bar completes and snaps back up (spring ~340/24, 350ms).
+- Release below threshold: everything springs home without the bar.
+
+## Calibration
+- Mascot scale and run speed are continuous functions of drag distance until release.
+- The bar owns the top edge - it overlaps the header, not the status bar.
+
+## Reduced motion
+Standard circular spinner instead of the running mascot.
+
+## Don&#x27;t miss
+- Snoo runs in place - the mascot never translates horizontally.
+- The content swap happens exactly at bar completion.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gesture-driven mascot reveal with refresh bar.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/reddit-pull-to-refresh-mascot-run-animation">original interaction</a> by Reddit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Reddit's pull-to-refresh - dragging the feed down reveals Snoo running in place inside an expanding red circle, and releasing fires a red progress bar across the top as the feed swaps to fresh posts.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark Reddit feed (header, post cards with images); the refresh zone above the feed hides a red circle containing the running Snoo mascot.\n\n## Motion spec\nPattern: gesture-driven mascot reveal with refresh bar.\n- Pull: the feed translates down 1:1 (with rubber-banding past 120pt); the red circle scales up from a point (0 -> 1 across the pull range) and Snoo fades in inside it (opacity tied to pull depth).\n- Run: Snoo's run cycle plays at a speed proportional to pull depth (0.5x at first reveal -> 2x at threshold).\n- Release past threshold: the circle contracts back (spring ~380/22, 300ms) as a thin red progress bar sweeps left-to-right across the top of the feed (900ms, ease-in-out).\n- Swap: the feed content crossfades to the new posts (200ms) when the bar completes and snaps back up (spring ~340/24, 350ms).\n- Release below threshold: everything springs home without the bar.\n\n## Calibration\n- Mascot scale and run speed are continuous functions of drag distance until release.\n- The bar owns the top edge - it overlaps the header, not the status bar.\n\n## Reduced motion\nStandard circular spinner instead of the running mascot.\n\n## Don't miss\n- Snoo runs in place - the mascot never translates horizontally.\n- The content swap happens exactly at bar completion."</script>
+</body></html>

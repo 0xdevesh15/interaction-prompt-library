@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elevate Math Workout Input - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Elevate Math Workout Input</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/elevate-math-workout-input"><b>Elevate</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-math-workout-input">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-math-workout-input">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Elevate&#x27;s math workout loop - typing an answer on the keypad and submitting expands it into a pulsing green badge that flies up into the score, the round counter ticks, and the next question slides in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c96af7c7b75e2e1eed8b65/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c96af7c7b75e2e1eed8b65/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-elevate-math-workout-input.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Elevate&#x27;s math workout loop - typing an answer on the keypad and submitting expands it into a pulsing green badge that flies up into the score, the round counter ticks, and the next question slides in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Plum workout screen: score top-left, hearts and ROUND n/4 top-right, a big centered question (&quot;10% OF 10&quot;, &quot;50% OF 10&quot;) with a floating geometric shard motif, the typed answer large beneath it, and a numeric keypad with SUBMIT.
+
+## Motion spec
+Pattern: answer-to-score flight.
+- Keys press with a quick dip (scale 0.92, 80ms); the answer digits appear above the keypad with a small pop each (scale 1.2 -&gt; 1, 150ms).
+- Submit correct: the answer morphs into a filled green circle badge (color wipe 150ms) that pulses twice (scale 1 &lt;-&gt; 1.15, 180ms each), then launches upward along a slight arc into the top-left score (450ms, ease-in), shrinking as it flies; the score ticks up with a digit roll on impact and flashes green once.
+- The question shard motif drifts continuously (slow float, 6s loop) behind the text.
+- The next question slides in from the right (300ms, ease-out) as the old one exits left; ROUND n/4 ticks with the changeover.
+- Wrong answers: the badge flashes red, shakes (+-8px, 3 cycles, 300ms), and a heart empties top-right.
+
+## Calibration
+- The flight path is the reward - it must visibly CONNECT the answer to the score.
+- Green badge, red shake: instant color grammar, never mixed.
+
+## Reduced motion
+Badge fades; score updates in place.
+
+## Don&#x27;t miss
+- The badge&#x27;s pulse happens BEFORE the flight - celebrate, then bank.
+- The shard artwork keeps floating through question changes; it anchors the screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">answer-to-score flight.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/elevate-math-workout-input">original interaction</a> by Elevate. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Elevate's math workout loop - typing an answer on the keypad and submitting expands it into a pulsing green badge that flies up into the score, the round counter ticks, and the next question slides in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPlum workout screen: score top-left, hearts and ROUND n/4 top-right, a big centered question (\"10% OF 10\", \"50% OF 10\") with a floating geometric shard motif, the typed answer large beneath it, and a numeric keypad with SUBMIT.\n\n## Motion spec\nPattern: answer-to-score flight.\n- Keys press with a quick dip (scale 0.92, 80ms); the answer digits appear above the keypad with a small pop each (scale 1.2 -> 1, 150ms).\n- Submit correct: the answer morphs into a filled green circle badge (color wipe 150ms) that pulses twice (scale 1 <-> 1.15, 180ms each), then launches upward along a slight arc into the top-left score (450ms, ease-in), shrinking as it flies; the score ticks up with a digit roll on impact and flashes green once.\n- The question shard motif drifts continuously (slow float, 6s loop) behind the text.\n- The next question slides in from the right (300ms, ease-out) as the old one exits left; ROUND n/4 ticks with the changeover.\n- Wrong answers: the badge flashes red, shakes (+-8px, 3 cycles, 300ms), and a heart empties top-right.\n\n## Calibration\n- The flight path is the reward - it must visibly CONNECT the answer to the score.\n- Green badge, red shake: instant color grammar, never mixed.\n\n## Reduced motion\nBadge fades; score updates in place.\n\n## Don't miss\n- The badge's pulse happens BEFORE the flight - celebrate, then bank.\n- The shard artwork keeps floating through question changes; it anchors the screen."</script>
+</body></html>

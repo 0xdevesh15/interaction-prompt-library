@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Money Internal Navigation Bottom Bar Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Money Internal Navigation Bottom Bar Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-money-internal-navigation-bottom-bar-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-money-internal-navigation-bottom-bar-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-money-internal-navigation-bottom-bar-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED money&#x27;s expanding bottom tray - the dark nav bar at the bottom grows into a taller panel, revealing a second row of destinations, while the gold page above yields room.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5256933794a0c8c42b0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5256933794a0c8c42b0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-money-internal-navigation-bottom-bar-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED money&#x27;s expanding bottom tray - the dark nav bar at the bottom grows into a taller panel, revealing a second row of destinations, while the gold page above yields room.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED gold page, warm cream: gold-bar illustration, &quot;earn 1% extra gold everyday&quot; serif headline, a stat ticker, daily/monthly/one-time cards, and a black &quot;Get 1% extra gold now&quot; button. At the bottom: a dark &quot;CRED money&quot; tray - collapsed state shows one icon row (ALL, BANK, MF, STOCKS); expanded state reveals a taller panel with an added &quot;MORE&quot; row and a close affordance.
+
+## Motion spec
+Pattern: expanding bottom tray with staged row reveal.
+- Drag the tray&#x27;s handle up or tap it: the tray&#x27;s height springs from pill to panel (spring ~320/20), corner radius tightening slightly as it grows.
+- The first icon row stays pinned at the tray&#x27;s top; the second row (MORE) fades up beneath it (translateY 12 -&gt; 0, 200ms, 60ms into the expansion).
+- Content above compresses gracefully: the CTA button slides up with the tray&#x27;s edge 1:1 and the cards dim to 70% while the tray is open.
+- Reverse on close: the second row fades first (120ms), then the tray collapses with the same spring; the CTA rides back down.
+
+## Calibration
+- The tray is a surface, not a modal - the page stays interactive and visible above it.
+- Icons in the pinned row keep a subtle active-state fill; only the active destination&#x27;s icon is lit.
+
+## Reduced motion
+Tray height animates 200ms linear; rows crossfade.
+
+## Don&#x27;t miss
+- The tray&#x27;s header (&quot;CRED money&quot; + close) stays fixed through the height change - no layout jump.
+- The black CTA button and the dark tray are near-identical colors; the tray&#x27;s top edge needs a hairline separator so they never visually merge.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">expanding bottom tray with staged row reveal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-money-internal-navigation-bottom-bar-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED money's expanding bottom tray - the dark nav bar at the bottom grows into a taller panel, revealing a second row of destinations, while the gold page above yields room.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED gold page, warm cream: gold-bar illustration, \"earn 1% extra gold everyday\" serif headline, a stat ticker, daily/monthly/one-time cards, and a black \"Get 1% extra gold now\" button. At the bottom: a dark \"CRED money\" tray - collapsed state shows one icon row (ALL, BANK, MF, STOCKS); expanded state reveals a taller panel with an added \"MORE\" row and a close affordance.\n\n## Motion spec\nPattern: expanding bottom tray with staged row reveal.\n- Drag the tray's handle up or tap it: the tray's height springs from pill to panel (spring ~320/20), corner radius tightening slightly as it grows.\n- The first icon row stays pinned at the tray's top; the second row (MORE) fades up beneath it (translateY 12 -> 0, 200ms, 60ms into the expansion).\n- Content above compresses gracefully: the CTA button slides up with the tray's edge 1:1 and the cards dim to 70% while the tray is open.\n- Reverse on close: the second row fades first (120ms), then the tray collapses with the same spring; the CTA rides back down.\n\n## Calibration\n- The tray is a surface, not a modal - the page stays interactive and visible above it.\n- Icons in the pinned row keep a subtle active-state fill; only the active destination's icon is lit.\n\n## Reduced motion\nTray height animates 200ms linear; rows crossfade.\n\n## Don't miss\n- The tray's header (\"CRED money\" + close) stays fixed through the height change - no layout jump.\n- The black CTA button and the dark tray are near-identical colors; the tray's top edge needs a hairline separator so they never visually merge."</script>
+</body></html>

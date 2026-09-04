@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Threads Play Audio Vinyl Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Threads Play Audio Vinyl Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/threads-play-audio-vinyl-interaction"><b>Threads</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/threads-play-audio-vinyl-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/threads-play-audio-vinyl-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Threads&#x27; vinyl play - tapping play on a track post slides a vinyl record out from behind the album art, spins it while audio plays, and reels it back on pause.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a1aac9e1bc4884e66825615/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a1aac9e1bc4884e66825615/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-threads-play-audio-vinyl-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Threads&#x27; vinyl play - tapping play on a track post slides a vinyl record out from behind the album art, spins it while audio plays, and reels it back on pause.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Thread detail: author header, a track card with square album art on the left and title/artist lines right, a circular play button at the card&#x27;s right edge, then the post text and action row below.
+
+## Motion spec
+Pattern: vinyl slides from behind the sleeve and spins while playing.
+- On play: a black vinyl disc slides right out from behind the album art (translate 0 -&gt; ~60% of its width, 350ms, spring ~280/18), overlapping the title area.
+- Once clear, the vinyl spins continuously (1.8s per revolution, linear); its label and grooves catch a soft moving highlight.
+- The play icon morphs to pause (150ms crossfade with a 10% scale dip).
+- On pause: the spin eases to a stop over 400ms and the disc slides back behind the art (300ms, ease-in-out).
+- The album art never moves - it is the sleeve.
+
+## Calibration
+- The disc is visibly grooved with a colored center label matching the artwork&#x27;s palette.
+- Slide and spin overlap slightly: the disc starts turning as it emerges.
+
+## Reduced motion
+Disc fades in/out at its out position; no spin.
+
+## Don&#x27;t miss
+- The disc stays half-hidden at rest - its right edge peeks from behind the art even before playing.
+- While playing, a tiny progress shimmer runs along the card&#x27;s bottom edge.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vinyl slides from behind the sleeve and spins while playing.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/threads-play-audio-vinyl-interaction">original interaction</a> by Threads. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Threads' vinyl play - tapping play on a track post slides a vinyl record out from behind the album art, spins it while audio plays, and reels it back on pause.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThread detail: author header, a track card with square album art on the left and title/artist lines right, a circular play button at the card's right edge, then the post text and action row below.\n\n## Motion spec\nPattern: vinyl slides from behind the sleeve and spins while playing.\n- On play: a black vinyl disc slides right out from behind the album art (translate 0 -> ~60% of its width, 350ms, spring ~280/18), overlapping the title area.\n- Once clear, the vinyl spins continuously (1.8s per revolution, linear); its label and grooves catch a soft moving highlight.\n- The play icon morphs to pause (150ms crossfade with a 10% scale dip).\n- On pause: the spin eases to a stop over 400ms and the disc slides back behind the art (300ms, ease-in-out).\n- The album art never moves - it is the sleeve.\n\n## Calibration\n- The disc is visibly grooved with a colored center label matching the artwork's palette.\n- Slide and spin overlap slightly: the disc starts turning as it emerges.\n\n## Reduced motion\nDisc fades in/out at its out position; no spin.\n\n## Don't miss\n- The disc stays half-hidden at rest - its right edge peeks from behind the art even before playing.\n- While playing, a tiny progress shimmer runs along the card's bottom edge."</script>
+</body></html>

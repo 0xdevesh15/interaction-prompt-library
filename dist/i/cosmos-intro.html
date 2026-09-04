@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cosmos Intro - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Cosmos Intro</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cosmos-intro"><b>Cosmos</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cosmos-intro">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cosmos-intro">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Cosmos&#x27; intro - a fast auto-playing black-sequence of kinetic typography and floating imagery ending on glass marbles and a Get Started pill.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd07371d29849d7bda7d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd07371d29849d7bda7d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cosmos-intro.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Cosmos&#x27; intro - a fast auto-playing black-sequence of kinetic typography and floating imagery ending on glass marbles and a Get Started pill.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-black auto-playing sequence: &quot;COSMOS(R)&quot; surrounded by floating image tiles, a mirrored duplex &quot;A NEW HOME FOR DESIGNERS&quot;, &quot;CURATE ELEMENTS INTO CLUSTERS&quot;, a masonry grid of saved art, a full-screen wall of repeating &quot;SHARE THE WORLD&quot; type, and a final screen of floating glass marbles above a &quot;Get Started&quot; pill.
+
+## Motion spec
+Pattern: auto-playing kinetic-type showcase.
+- Beats advance every ~1.2-1.8s with hard-cut energy but eased internals; total run ~10s.
+- Opening: image tiles drift in from the edges on slow float paths (each with its own +-10px drift loop) while &quot;COSMOS(R)&quot; tracks in (letter-spacing +0.2em to 0, 600ms).
+- Duplex headline: &quot;A NEW HOME FOR DESIGNERS&quot; appears twice - upright and vertically mirrored - the two copies sliding from opposite directions and locking together (300ms, ease-out), the mirrored copy at 40% opacity.
+- &quot;CURATE ELEMENTS INTO CLUSTERS&quot;: words stack in one at a time (each dropping 12px into place, 150ms apart) as a sample image card tilts in behind (rotate -6deg to 0, spring ~300/20).
+- Masonry grid: columns scroll in opposite directions (top column down, next up, 8s linear loops) while the header fades over.
+- Type wall: &quot;SHARE THE WORLD&quot; rows tile the screen, alternating rows sliding left and right (linear, 6s loops, offset phases) with occasional rows flipping to outline-stroke style.
+- Finale: the type wall parts to black; 6-8 glass marbles rise from the bottom with refraction shimmer (translateY +40px to resting, spring ~280/18, 60ms stagger) and idle-float; &quot;Get Started&quot; pill fades up (250ms) and the sequence stops, awaiting tap.
+
+## Calibration
+- Keep every beat under 2s - the sequence should feel like a trailer, not a tour.
+- Type is white on black throughout; imagery supplies the only color until the marbles.
+
+## Reduced motion
+Static key screens crossfade; no scrolling rows.
+
+## Don&#x27;t miss
+- The mirrored-headline duplex effect and the parting type wall are the signature moves.
+- &quot;Get Started&quot; is the only interactive element - everything before it is playback.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-playing kinetic-type showcase.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cosmos-intro">original interaction</a> by Cosmos. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Cosmos' intro - a fast auto-playing black-sequence of kinetic typography and floating imagery ending on glass marbles and a Get Started pill.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-black auto-playing sequence: \"COSMOS(R)\" surrounded by floating image tiles, a mirrored duplex \"A NEW HOME FOR DESIGNERS\", \"CURATE ELEMENTS INTO CLUSTERS\", a masonry grid of saved art, a full-screen wall of repeating \"SHARE THE WORLD\" type, and a final screen of floating glass marbles above a \"Get Started\" pill.\n\n## Motion spec\nPattern: auto-playing kinetic-type showcase.\n- Beats advance every ~1.2-1.8s with hard-cut energy but eased internals; total run ~10s.\n- Opening: image tiles drift in from the edges on slow float paths (each with its own +-10px drift loop) while \"COSMOS(R)\" tracks in (letter-spacing +0.2em to 0, 600ms).\n- Duplex headline: \"A NEW HOME FOR DESIGNERS\" appears twice - upright and vertically mirrored - the two copies sliding from opposite directions and locking together (300ms, ease-out), the mirrored copy at 40% opacity.\n- \"CURATE ELEMENTS INTO CLUSTERS\": words stack in one at a time (each dropping 12px into place, 150ms apart) as a sample image card tilts in behind (rotate -6deg to 0, spring ~300/20).\n- Masonry grid: columns scroll in opposite directions (top column down, next up, 8s linear loops) while the header fades over.\n- Type wall: \"SHARE THE WORLD\" rows tile the screen, alternating rows sliding left and right (linear, 6s loops, offset phases) with occasional rows flipping to outline-stroke style.\n- Finale: the type wall parts to black; 6-8 glass marbles rise from the bottom with refraction shimmer (translateY +40px to resting, spring ~280/18, 60ms stagger) and idle-float; \"Get Started\" pill fades up (250ms) and the sequence stops, awaiting tap.\n\n## Calibration\n- Keep every beat under 2s - the sequence should feel like a trailer, not a tour.\n- Type is white on black throughout; imagery supplies the only color until the marbles.\n\n## Reduced motion\nStatic key screens crossfade; no scrolling rows.\n\n## Don't miss\n- The mirrored-headline duplex effect and the parting type wall are the signature moves.\n- \"Get Started\" is the only interactive element - everything before it is playback."</script>
+</body></html>

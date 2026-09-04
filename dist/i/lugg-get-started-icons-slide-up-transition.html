@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lugg Get Started Icons Slide Up Transition - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lugg Get Started Icons Slide Up Transition</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lugg-get-started-icons-slide-up-transition"><b>Lugg</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lugg-get-started-icons-slide-up-transition">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lugg-get-started-icons-slide-up-transition">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Lugg&#x27;s welcome screen - above the delivery truck illustration, a continuous fountain of small item icons (chairs, boxes, plants, frames) slides up in staggered streams and fades out, looping forever.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd2e58c8cb017edaddebb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd2e58c8cb017edaddebb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lugg-get-started-icons-slide-up-transition.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Lugg&#x27;s welcome screen - above the delivery truck illustration, a continuous fountain of small item icons (chairs, boxes, plants, frames) slides up in staggered streams and fades out, looping forever.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Yellow splash with the purple &quot;lugg&quot; wordmark, then the white welcome screen: &quot;lugg&quot; logo top-center, a delivery truck illustration, &quot;Move anything with Lugg&quot; headline, subcopy about furniture delivery, and a purple &quot;Get started&quot; button. Between the logo and the truck, small household-item icons float upward in staggered columns.
+
+## Motion spec
+Pattern: looping staggered icon fountain.
+- Splash -&gt; content: yellow screen slides up and away (400ms, ease-in) as the white screen reveals beneath; logo, truck, headline, and button stagger in from below (60ms apart, spring ~300/22).
+- Icon fountain: ~10 icons across 3-4 vertical lanes above the truck; each icon rises from just above the truck (translateY 0 -&gt; -160pt over 2.4s, ease-out), fading in over the first 20% and out over the last 25%.
+- Lanes are staggered (each lane offset ~600ms) and icons within a lane space ~800ms apart, so rising icons never align into rows.
+- Icons drift slightly sideways (+-8pt sine) and a few rotate gently (+-10deg) as they rise.
+- The fountain loops indefinitely; truck, headline, and button stay static.
+
+## Calibration
+- Icon mix is household inventory: chair, box, plant, frame, lamp - small (~20-28pt), flat single-color style.
+- Density stays sparse (max ~8 live icons) so the headline remains the focus.
+
+## Reduced motion
+Icons fade in a static scattered arrangement; no rising.
+
+## Don&#x27;t miss
+- The fountain emerges from behind/above the truck illustration - icons originate at the truck bed.
+- Purple brand color reserved for logo and button; icons stay muted so they don&#x27;t compete.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping staggered icon fountain.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lugg-get-started-icons-slide-up-transition">original interaction</a> by Lugg. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Lugg's welcome screen - above the delivery truck illustration, a continuous fountain of small item icons (chairs, boxes, plants, frames) slides up in staggered streams and fades out, looping forever.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nYellow splash with the purple \"lugg\" wordmark, then the white welcome screen: \"lugg\" logo top-center, a delivery truck illustration, \"Move anything with Lugg\" headline, subcopy about furniture delivery, and a purple \"Get started\" button. Between the logo and the truck, small household-item icons float upward in staggered columns.\n\n## Motion spec\nPattern: looping staggered icon fountain.\n- Splash -> content: yellow screen slides up and away (400ms, ease-in) as the white screen reveals beneath; logo, truck, headline, and button stagger in from below (60ms apart, spring ~300/22).\n- Icon fountain: ~10 icons across 3-4 vertical lanes above the truck; each icon rises from just above the truck (translateY 0 -> -160pt over 2.4s, ease-out), fading in over the first 20% and out over the last 25%.\n- Lanes are staggered (each lane offset ~600ms) and icons within a lane space ~800ms apart, so rising icons never align into rows.\n- Icons drift slightly sideways (+-8pt sine) and a few rotate gently (+-10deg) as they rise.\n- The fountain loops indefinitely; truck, headline, and button stay static.\n\n## Calibration\n- Icon mix is household inventory: chair, box, plant, frame, lamp - small (~20-28pt), flat single-color style.\n- Density stays sparse (max ~8 live icons) so the headline remains the focus.\n\n## Reduced motion\nIcons fade in a static scattered arrangement; no rising.\n\n## Don't miss\n- The fountain emerges from behind/above the truck illustration - icons originate at the truck bed.\n- Purple brand color reserved for logo and button; icons stay muted so they don't compete."</script>
+</body></html>

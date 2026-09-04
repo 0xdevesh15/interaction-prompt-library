@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airlearn Topic Completion Confetti Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airlearn Topic Completion Confetti Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airlearn-topic-completion-confetti-animation"><b>Airlearn</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airlearn-topic-completion-confetti-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airlearn-topic-completion-confetti-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airlearn&#x27;s topic completion celebration - the screen fades in on a proud blue cat mascot standing on books, a confetti burst fires from the top, and the two stat cards (accuracy % and XP) count up before the &quot;Next lesson&quot; button becomes active.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509746e7e8e499ed161f84/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509746e7e8e499ed161f84/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airlearn-topic-completion-confetti-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airlearn&#x27;s topic completion celebration - the screen fades in on a proud blue cat mascot standing on books, a confetti burst fires from the top, and the two stat cards (accuracy % and XP) count up before the &quot;Next lesson&quot; button becomes active.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Mobile screen, lavender gradient background with soft light beams. Top half: blue cat mascot with glasses standing on a stack of books. Below: &quot;Smashed that topic in no time!&quot; headline, &quot;TOPIC COMPLETED / Getting started&quot; label, two stat cards side by side (accuracy &quot;96%&quot; with a small icon, XP total with a bolt icon), a &quot;Keep going! 2 lessons till reward&quot; progress strip, and a bottom bar with a close X and a wide blue &quot;Next lesson&quot; button.
+
+## Motion spec
+Pattern: celebration entrance with count-up stats.
+- Screen content fades in from white (300ms); mascot settles with a small bob (translateY 8px -&gt; 0, spring ~200/16).
+- Confetti: one burst of ~50 pieces (pink, yellow, teal, purple) from the top-center, radial ejection with gravity and rotation, ~1.6s to clear.
+- Stat cards count up: accuracy ticks 0 -&gt; 96% and XP ticks up to its final value (both ~900ms, ease-out, starting ~300ms after the burst).
+- &quot;Next lesson&quot; button fills from a muted to a solid blue and becomes tappable when the count completes.
+
+## Calibration
+- One confetti burst only - this is a completion moment, not an ongoing party.
+- Stat count-ups are the secondary beat; they must start after the burst, not with it.
+
+## Reduced motion
+Content fades in (200ms) with final stat values; no confetti, no count-up.
+
+## Don&#x27;t miss
+- The light beams behind the mascot are static art; only confetti and counters move.
+- XP card uses the green bolt icon; accuracy card uses a different (target/check) glyph - do not duplicate icons.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">celebration entrance with count-up stats.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airlearn-topic-completion-confetti-animation">original interaction</a> by Airlearn. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airlearn's topic completion celebration - the screen fades in on a proud blue cat mascot standing on books, a confetti burst fires from the top, and the two stat cards (accuracy % and XP) count up before the \"Next lesson\" button becomes active.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMobile screen, lavender gradient background with soft light beams. Top half: blue cat mascot with glasses standing on a stack of books. Below: \"Smashed that topic in no time!\" headline, \"TOPIC COMPLETED / Getting started\" label, two stat cards side by side (accuracy \"96%\" with a small icon, XP total with a bolt icon), a \"Keep going! 2 lessons till reward\" progress strip, and a bottom bar with a close X and a wide blue \"Next lesson\" button.\n\n## Motion spec\nPattern: celebration entrance with count-up stats.\n- Screen content fades in from white (300ms); mascot settles with a small bob (translateY 8px -> 0, spring ~200/16).\n- Confetti: one burst of ~50 pieces (pink, yellow, teal, purple) from the top-center, radial ejection with gravity and rotation, ~1.6s to clear.\n- Stat cards count up: accuracy ticks 0 -> 96% and XP ticks up to its final value (both ~900ms, ease-out, starting ~300ms after the burst).\n- \"Next lesson\" button fills from a muted to a solid blue and becomes tappable when the count completes.\n\n## Calibration\n- One confetti burst only - this is a completion moment, not an ongoing party.\n- Stat count-ups are the secondary beat; they must start after the burst, not with it.\n\n## Reduced motion\nContent fades in (200ms) with final stat values; no confetti, no count-up.\n\n## Don't miss\n- The light beams behind the mascot are static art; only confetti and counters move.\n- XP card uses the green bolt icon; accuracy card uses a different (target/check) glyph - do not duplicate icons."</script>
+</body></html>

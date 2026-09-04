@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Search AI Generation Loader - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Arc Search AI Generation Loader</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/arc-search-ai-generation-loader"><b>Arc Search</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-ai-generation-loader">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-ai-generation-loader">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Arc Search&#x27;s AI answer loader - a glowing gradient wave rises while pages are read, then a structured results page assembles section by section.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcf561d73e2622b35346/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcf561d73e2622b35346/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-arc-search-ai-generation-loader.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Arc Search&#x27;s AI answer loader - a glowing gradient wave rises while pages are read, then a structured results page assembles section by section.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark Arc interface: the query sits in the top bar. A status line (&quot;Reading 6 web pages&quot;) appears over a luminous purple/pink gradient that floods up from the bottom edge. The gradient resolves into the &quot;Browse for Me&quot; results page: an image row, a bold title, and stacked sections (Definition, Key Concepts, Properties, Algorithms) with purple markers.
+
+## Motion spec
+Pattern: gradient-surge loader into section assembly.
+- Query submit: the keyboard drops, the status line fades in (200ms), and the gradient wave rises from the bottom (translateY +40% to 0, 700ms, ease-out) with slow internal churn (two hue blobs rotating, 4s loop) and a soft top-edge shimmer.
+- The status text updates as pages are read (&quot;Reading 6 web pages&quot; then &quot;Summarizing...&quot;), each swap a 150ms crossfade with a 4px rise.
+- On completion the gradient crests (brightness pulse +20%, 200ms) and sinks away as results build: image row slides in from the right (300ms), title types in (fade + letterspacing settle, 250ms), then sections stack down with 80ms stagger, each sliding up 12px and fading (spring ~380/26).
+- Each section&#x27;s purple marker dot pops first (scale 0 to 1, 150ms) before its text block.
+- A small glow pill (&quot;Arc Search answers&quot;) fades in at the bottom last.
+
+## Calibration
+- The gradient is alive the whole load - static purple reads as broken, not loading.
+- Sections assemble top-down in reading order; never all at once.
+
+## Reduced motion
+Gradient fades in static; sections fade without stagger.
+
+## Don&#x27;t miss
+- The gradient hugging the bottom edge (like heat rising) is the signature - not a fullscreen wash.
+- Results typography is compact with purple accent markers, not generic list bullets.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gradient-surge loader into section assembly.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/arc-search-ai-generation-loader">original interaction</a> by Arc Search. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Arc Search's AI answer loader - a glowing gradient wave rises while pages are read, then a structured results page assembles section by section.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark Arc interface: the query sits in the top bar. A status line (\"Reading 6 web pages\") appears over a luminous purple/pink gradient that floods up from the bottom edge. The gradient resolves into the \"Browse for Me\" results page: an image row, a bold title, and stacked sections (Definition, Key Concepts, Properties, Algorithms) with purple markers.\n\n## Motion spec\nPattern: gradient-surge loader into section assembly.\n- Query submit: the keyboard drops, the status line fades in (200ms), and the gradient wave rises from the bottom (translateY +40% to 0, 700ms, ease-out) with slow internal churn (two hue blobs rotating, 4s loop) and a soft top-edge shimmer.\n- The status text updates as pages are read (\"Reading 6 web pages\" then \"Summarizing...\"), each swap a 150ms crossfade with a 4px rise.\n- On completion the gradient crests (brightness pulse +20%, 200ms) and sinks away as results build: image row slides in from the right (300ms), title types in (fade + letterspacing settle, 250ms), then sections stack down with 80ms stagger, each sliding up 12px and fading (spring ~380/26).\n- Each section's purple marker dot pops first (scale 0 to 1, 150ms) before its text block.\n- A small glow pill (\"Arc Search answers\") fades in at the bottom last.\n\n## Calibration\n- The gradient is alive the whole load - static purple reads as broken, not loading.\n- Sections assemble top-down in reading order; never all at once.\n\n## Reduced motion\nGradient fades in static; sections fade without stagger.\n\n## Don't miss\n- The gradient hugging the bottom edge (like heat rising) is the signature - not a fullscreen wash.\n- Results typography is compact with purple accent markers, not generic list bullets."</script>
+</body></html>

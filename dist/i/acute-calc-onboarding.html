@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acute Calc Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Acute Calc Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/acute-calc-onboarding"><b>Acute Calc</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/acute-calc-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/acute-calc-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Acute Calculator&#x27;s onboarding - the calculator UI blurs into a colorful aurora backdrop while a Quick Setup theme picker retints the whole scene in real time.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc371d29849d7bd77c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc371d29849d7bd77c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-acute-calc-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Acute Calculator&#x27;s onboarding - the calculator UI blurs into a colorful aurora backdrop while a Quick Setup theme picker retints the whole scene in real time.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Opens on the calculator (dark keypad, blue accents). The UI blurs and dims into the background as &quot;Welcome to Acute Calculator&quot; fades in over a glowing aurora gradient. Get Started leads to &quot;Quick Setup&quot;: rows of colored theme dots; tapping a dot retints the aurora, the keypad accents behind the blur, and the Buy button (blue, green, pink, red).
+
+## Motion spec
+Pattern: blur-dive transition + live theme retint.
+- Calculator to welcome: the keypad layer blurs from 0 to ~30px radius and dims 40% over 500ms (ease-out) while the aurora gradient fades up beneath it; the welcome title rises 16px and fades in (400ms, 100ms delay).
+- The aurora is a slowly drifting multi-color blob field (20s loop, large soft radial gradients translating on sine paths).
+- Tap a theme dot: the dot pops (scale 1 to 1.3 with a white ring appearing, spring ~450/22), the previously selected dot&#x27;s ring collapses (150ms), and every accent in the scene - aurora hue set, blurred keypad operator keys, Buy button - crossfades to the new color over 300ms.
+- The theme dot rows scroll horizontally with a rubber-band edge (overscroll stretch ~0.3x).
+- Buy button holds its pill shape; only its color changes.
+
+## Calibration
+- The blur is the transition: content behind stays legible as shapes but never readable.
+- Retint is simultaneous across all tinted elements - no per-element lag.
+
+## Reduced motion
+Blur reduces to a dim-only fade; retints crossfade.
+
+## Don&#x27;t miss
+- The aurora must feel alive behind the blur - slow drift, not a static gradient.
+- Selected theme dot keeps a white ring; unselected dots are flat.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">blur-dive transition + live theme retint.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/acute-calc-onboarding">original interaction</a> by Acute Calc. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Acute Calculator's onboarding - the calculator UI blurs into a colorful aurora backdrop while a Quick Setup theme picker retints the whole scene in real time.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOpens on the calculator (dark keypad, blue accents). The UI blurs and dims into the background as \"Welcome to Acute Calculator\" fades in over a glowing aurora gradient. Get Started leads to \"Quick Setup\": rows of colored theme dots; tapping a dot retints the aurora, the keypad accents behind the blur, and the Buy button (blue, green, pink, red).\n\n## Motion spec\nPattern: blur-dive transition + live theme retint.\n- Calculator to welcome: the keypad layer blurs from 0 to ~30px radius and dims 40% over 500ms (ease-out) while the aurora gradient fades up beneath it; the welcome title rises 16px and fades in (400ms, 100ms delay).\n- The aurora is a slowly drifting multi-color blob field (20s loop, large soft radial gradients translating on sine paths).\n- Tap a theme dot: the dot pops (scale 1 to 1.3 with a white ring appearing, spring ~450/22), the previously selected dot's ring collapses (150ms), and every accent in the scene - aurora hue set, blurred keypad operator keys, Buy button - crossfades to the new color over 300ms.\n- The theme dot rows scroll horizontally with a rubber-band edge (overscroll stretch ~0.3x).\n- Buy button holds its pill shape; only its color changes.\n\n## Calibration\n- The blur is the transition: content behind stays legible as shapes but never readable.\n- Retint is simultaneous across all tinted elements - no per-element lag.\n\n## Reduced motion\nBlur reduces to a dim-only fade; retints crossfade.\n\n## Don't miss\n- The aurora must feel alive behind the blur - slow drift, not a static gradient.\n- Selected theme dot keeps a white ring; unselected dots are flat."</script>
+</body></html>

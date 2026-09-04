@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Craft Swipe Left Right to Change Block Style Coachmark Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Craft Swipe Left Right to Change Block Style Coachmark Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/craft-swipe-left-right-to-change-block-style-coachmark-interaction"><b>Craft</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/craft-swipe-left-right-to-change-block-style-coachmark-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/craft-swipe-left-right-to-change-block-style-coachmark-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Craft&#x27;s &quot;Easy Styling&quot; coachmark - swipe left or right on the highlighted block and its style cycles while the bottom toolbar&#x27;s selection follows.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3df1ecf0543e54f6d47d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3df1ecf0543e54f6d47d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-craft-swipe-left-right-to-change-block-style-coachmark-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Craft&#x27;s &quot;Easy Styling&quot; coachmark - swipe left or right on the highlighted block and its style cycles while the bottom toolbar&#x27;s selection follows.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Craft onboarding page, black: the &quot;Easy Styling&quot; heading with the line &quot;Making your content look both beautiful and legible has never been simpler&quot;, a teal-highlighted coachmark block reading &quot;Swipe ← or → on me, and change my style&quot;, and a bottom styling toolbar - tab row (Heading, Body, Page, More...) over rows of style controls (Focus, Block, color dots). A &quot;Done&quot; pill sits top-right.
+
+## Motion spec
+Pattern: horizontal swipe on a block cycling its style with a tracking toolbar.
+- The coachmark block pulses its teal highlight (border opacity 0.6 -&gt; 1, 1.2s loop) until first touch.
+- A horizontal drag on the block tracks 1:1 with a slight resistance curve; past 40pt the swipe commits and the block flips to the next style: the text crossfades (150ms) as the block does a quick lateral settle (spring ~320/20, 8px overshoot in the swipe direction).
+- Each swipe advances one step through the style cycle (body -&gt; heading -&gt; page styles); the toolbar below updates in the same beat: the active tab pill slides (200ms) and the matching style button raises its highlight (150ms).
+- After the first successful swipe, the coachmark text swaps to plain content (200ms) and the block&#x27;s teal glow retires (300ms fade).
+- &quot;Done&quot; stays available the whole time; the toolbar never moves or hides during swipes.
+
+## Calibration
+- One swipe equals exactly one style step - no multi-skip on fast flings.
+- The toolbar is a mirror of the block state, not a second input: it animates, it doesn&#x27;t get tapped here.
+
+## Reduced motion
+Style changes crossfade (200ms) without the lateral settle; toolbar pill still slides.
+
+## Don&#x27;t miss
+- The swipe arrows live inside the coachmark text itself - the instruction is the content.
+- The teal highlight is the block&#x27;s focused state in Craft&#x27;s exact cyan-teal, not a generic blue.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal swipe on a block cycling its style with a tracking toolbar.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/craft-swipe-left-right-to-change-block-style-coachmark-interaction">original interaction</a> by Craft. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Craft's \"Easy Styling\" coachmark - swipe left or right on the highlighted block and its style cycles while the bottom toolbar's selection follows.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCraft onboarding page, black: the \"Easy Styling\" heading with the line \"Making your content look both beautiful and legible has never been simpler\", a teal-highlighted coachmark block reading \"Swipe \u2190 or \u2192 on me, and change my style\", and a bottom styling toolbar - tab row (Heading, Body, Page, More...) over rows of style controls (Focus, Block, color dots). A \"Done\" pill sits top-right.\n\n## Motion spec\nPattern: horizontal swipe on a block cycling its style with a tracking toolbar.\n- The coachmark block pulses its teal highlight (border opacity 0.6 -> 1, 1.2s loop) until first touch.\n- A horizontal drag on the block tracks 1:1 with a slight resistance curve; past 40pt the swipe commits and the block flips to the next style: the text crossfades (150ms) as the block does a quick lateral settle (spring ~320/20, 8px overshoot in the swipe direction).\n- Each swipe advances one step through the style cycle (body -> heading -> page styles); the toolbar below updates in the same beat: the active tab pill slides (200ms) and the matching style button raises its highlight (150ms).\n- After the first successful swipe, the coachmark text swaps to plain content (200ms) and the block's teal glow retires (300ms fade).\n- \"Done\" stays available the whole time; the toolbar never moves or hides during swipes.\n\n## Calibration\n- One swipe equals exactly one style step - no multi-skip on fast flings.\n- The toolbar is a mirror of the block state, not a second input: it animates, it doesn't get tapped here.\n\n## Reduced motion\nStyle changes crossfade (200ms) without the lateral settle; toolbar pill still slides.\n\n## Don't miss\n- The swipe arrows live inside the coachmark text itself - the instruction is the content.\n- The teal highlight is the block's focused state in Craft's exact cyan-teal, not a generic blue."</script>
+</body></html>

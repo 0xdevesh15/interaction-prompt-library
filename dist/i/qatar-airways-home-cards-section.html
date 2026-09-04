@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qatar Airways Home Cards Section - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Qatar Airways Home Cards Section</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/qatar-airways-home-cards-section"><b>Qatar Airways</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/qatar-airways-home-cards-section">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/qatar-airways-home-cards-section">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Qatar Airways&#x27; home feed - a vertical scroll of themed sections, each with its own horizontal card carousel that snaps between full-bleed destination and promo cards.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5be7061d73e2622ba1c28/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5be7061d73e2622ba1c28/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-qatar-airways-home-cards-section.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Qatar Airways&#x27; home feed - a vertical scroll of themed sections, each with its own horizontal card carousel that snaps between full-bleed destination and promo cards.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White home feed (&quot;Travel inspiration&quot;, &quot;Travel from Bengaluru&quot; header with origin switcher). Stacked sections, each a header plus a horizontal carousel of tall photo cards: destination cards (&quot;Atlanta&quot;, &quot;Boston&quot; with fare chips), &quot;Visit Qatar! Make new memories&quot;, membership prompts (&quot;Not a member? Join to enjoy benefits&quot;), promos (&quot;Doha&#x27;s YSL Summer Mirage&quot;, &quot;Privilege Club&quot;, &quot;Making a difference - FIFA Futsal World Cup&quot;, &quot;Transforming air travel - Meet Sama&quot;). Bottom tab bar stays fixed.
+
+## Motion spec
+Pattern: vertical feed with snapping horizontal carousels.
+- Vertical scroll is a normal feed scroll with standard deceleration; sections stack with consistent spacing.
+- Each carousel scrolls horizontally with the card peeking from the next item (~24px visible edge); on release it snaps to the nearest card (spring stiffness ~350, damping ~30), centering it with a small scale-up (1.0 from 0.96) as it lands.
+- Cards carry a subtle parallax: the photo shifts against the card frame opposite the scroll direction (~8% of drag).
+- Carousel scroll and vertical scroll never fight: gesture direction locks within the first ~10px, then owns the axis.
+- Section headers stay pinned to their carousel and scroll with the feed.
+
+## Calibration
+- One card snap per flick - no multi-card skids.
+- The active card&#x27;s scale/parallax settle must complete within ~300ms of release.
+
+## Reduced motion
+Carousels snap without parallax or scale.
+
+## Don&#x27;t miss
+- Cards are image-first with text overlaid on a bottom gradient - the photography owns the card.
+- Fare chips and badges ride the card image, pinned to its top edge during parallax.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vertical feed with snapping horizontal carousels.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/qatar-airways-home-cards-section">original interaction</a> by Qatar Airways. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Qatar Airways' home feed - a vertical scroll of themed sections, each with its own horizontal card carousel that snaps between full-bleed destination and promo cards.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite home feed (\"Travel inspiration\", \"Travel from Bengaluru\" header with origin switcher). Stacked sections, each a header plus a horizontal carousel of tall photo cards: destination cards (\"Atlanta\", \"Boston\" with fare chips), \"Visit Qatar! Make new memories\", membership prompts (\"Not a member? Join to enjoy benefits\"), promos (\"Doha's YSL Summer Mirage\", \"Privilege Club\", \"Making a difference - FIFA Futsal World Cup\", \"Transforming air travel - Meet Sama\"). Bottom tab bar stays fixed.\n\n## Motion spec\nPattern: vertical feed with snapping horizontal carousels.\n- Vertical scroll is a normal feed scroll with standard deceleration; sections stack with consistent spacing.\n- Each carousel scrolls horizontally with the card peeking from the next item (~24px visible edge); on release it snaps to the nearest card (spring stiffness ~350, damping ~30), centering it with a small scale-up (1.0 from 0.96) as it lands.\n- Cards carry a subtle parallax: the photo shifts against the card frame opposite the scroll direction (~8% of drag).\n- Carousel scroll and vertical scroll never fight: gesture direction locks within the first ~10px, then owns the axis.\n- Section headers stay pinned to their carousel and scroll with the feed.\n\n## Calibration\n- One card snap per flick - no multi-card skids.\n- The active card's scale/parallax settle must complete within ~300ms of release.\n\n## Reduced motion\nCarousels snap without parallax or scale.\n\n## Don't miss\n- Cards are image-first with text overlaid on a bottom gradient - the photography owns the card.\n- Fare chips and badges ride the card image, pinned to its top edge during parallax."</script>
+</body></html>

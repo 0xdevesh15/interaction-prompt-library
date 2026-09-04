@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Up Ahead Add Widget Tooltip Animation in Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Up Ahead Add Widget Tooltip Animation in Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/up-ahead-add-widget-tooltip-animation-in-sheet"><b>Up</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/up-ahead-add-widget-tooltip-animation-in-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/up-ahead-add-widget-tooltip-animation-in-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Up Ahead&#x27;s widget setup guide - a &quot;Widget Guide&quot; sheet that walks through adding an iOS Home Screen widget, each step a looping simulation of the real interaction (jiggle mode, the plus button, the widget gallery, placement, customization) with caption text below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756edca63a8472654601d6b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756edca63a8472654601d6b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-up-ahead-add-widget-tooltip-animation-in-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Up Ahead&#x27;s widget setup guide - a &quot;Widget Guide&quot; sheet that walks through adding an iOS Home Screen widget, each step a looping simulation of the real interaction (jiggle mode, the plus button, the widget gallery, placement, customization) with caption text below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white sheet titled &quot;Widget Guide&quot;. Inside, a simulated iOS Home Screen in blue with rows of colorful app icons. Five steps, one caption each: press and hold an empty space (icons jiggle, a dashed widget placeholder appears); tap the plus button top left; find Up Ahead and choose a widget (a gallery of green, pink, yellow, and blue widget cards slides up); place the widget and press Done top right (the widget drops into the grid, icons reflowing); press and hold a widget to customize it (an &quot;Edit Widget&quot; panel pops over the home screen). Page dots and captions sit below the simulation, with chevron buttons to move between steps.
+
+## Motion spec
+Pattern: step-by-step simulated OS walkthrough, gesture to advance.
+- Each step loops its own simulation (~2s cycles): the jiggle wiggles every icon a couple degrees out of phase, the plus button pulses, the gallery sheet slides up and back, the widget drops in with a spring (stiffness 300 damping 20) as icons shuffle aside.
+- Advancing a step crossfades the simulation and slides the caption in from the direction of travel (300ms, ease-out); the page dots update immediately.
+- The simulated home screen keeps real iOS behaviors: jiggle mode, reflow, the Done button appearing top right.
+- The sheet stays at a fixed detent throughout.
+
+## Calibration
+- The simulation is faithful to iOS - jiggle, gallery, and edit panel all match the real system.
+- Captions are imperative one-liners (&quot;Tap the plus button in the top left.&quot;), one per step.
+
+## Reduced motion
+Simulations hold still; steps crossfade.
+
+## Don&#x27;t miss
+- The dashed placeholder marks the empty widget slot before anything is placed.
+- The edit step shows the widget&#x27;s own settings panel, not a generic menu.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">step-by-step simulated OS walkthrough, gesture to advance.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/up-ahead-add-widget-tooltip-animation-in-sheet">original interaction</a> by Up. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Up Ahead's widget setup guide - a \"Widget Guide\" sheet that walks through adding an iOS Home Screen widget, each step a looping simulation of the real interaction (jiggle mode, the plus button, the widget gallery, placement, customization) with caption text below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white sheet titled \"Widget Guide\". Inside, a simulated iOS Home Screen in blue with rows of colorful app icons. Five steps, one caption each: press and hold an empty space (icons jiggle, a dashed widget placeholder appears); tap the plus button top left; find Up Ahead and choose a widget (a gallery of green, pink, yellow, and blue widget cards slides up); place the widget and press Done top right (the widget drops into the grid, icons reflowing); press and hold a widget to customize it (an \"Edit Widget\" panel pops over the home screen). Page dots and captions sit below the simulation, with chevron buttons to move between steps.\n\n## Motion spec\nPattern: step-by-step simulated OS walkthrough, gesture to advance.\n- Each step loops its own simulation (~2s cycles): the jiggle wiggles every icon a couple degrees out of phase, the plus button pulses, the gallery sheet slides up and back, the widget drops in with a spring (stiffness 300 damping 20) as icons shuffle aside.\n- Advancing a step crossfades the simulation and slides the caption in from the direction of travel (300ms, ease-out); the page dots update immediately.\n- The simulated home screen keeps real iOS behaviors: jiggle mode, reflow, the Done button appearing top right.\n- The sheet stays at a fixed detent throughout.\n\n## Calibration\n- The simulation is faithful to iOS - jiggle, gallery, and edit panel all match the real system.\n- Captions are imperative one-liners (\"Tap the plus button in the top left.\"), one per step.\n\n## Reduced motion\nSimulations hold still; steps crossfade.\n\n## Don't miss\n- The dashed placeholder marks the empty widget slot before anything is placed.\n- The edit step shows the widget's own settings panel, not a generic menu."</script>
+</body></html>

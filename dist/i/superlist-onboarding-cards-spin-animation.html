@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Superlist Onboarding Cards Spin Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Superlist Onboarding Cards Spin Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/superlist-onboarding-cards-spin-animation"><b>Superlist</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/superlist-onboarding-cards-spin-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/superlist-onboarding-cards-spin-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Superlist&#x27;s fun onboarding beat - task cards fan out around a central photo, spin a full orbit behind it, then collapse back into a tidy stack.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e002ed586c4a5a5e05c810/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e002ed586c4a5a5e05c810/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-superlist-onboarding-cards-spin-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Superlist&#x27;s fun onboarding beat - task cards fan out around a central photo, spin a full orbit behind it, then collapse back into a tidy stack.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Purple panel, headline &quot;Get things done with a bit more fun&quot;. Center: a rounded-square photo of a smiling person. Around it, five small white task cards (&quot;Team Offsite&quot;, &quot;Product Hunt&quot;, &quot;Monday Tasks&quot;, &quot;App Launch&quot;, &quot;Daily Habit&quot;) fan out at angles, orbit the photo, then stack back behind it. Bottom: the dark sign-up bar.
+
+## Motion spec
+Pattern: card fan-out, orbit, and restack around a fixed center.
+- Cards burst from behind the photo (spring ~280/18, 60ms stagger), landing fanned at +-30deg rotations around the center.
+- The fan then orbits: all cards rotate around the photo&#x27;s center (360deg over ~3s, ease-in-out) while each card keeps its own tilt (counter-rotated so labels stay readable).
+- The photo stays fixed and slightly scales with a breathing pulse (1 -&gt; 1.04 -&gt; 1, 2s).
+- Cards then collapse back behind the photo in reverse stagger (spring ~300/22), ending as a neat stack peeking from behind the edges.
+
+## Calibration
+- The orbit is the showpiece: smooth, continuous, and perfectly circular - no easing stalls mid-loop.
+- Cards pass behind the photo (z-order), never over the face.
+
+## Reduced motion
+Cards fan out and restack without the orbit.
+
+## Don&#x27;t miss
+- Exactly five cards, evenly spaced; each has a tiny colored dot and its label.
+- The photo&#x27;s rounded corners and shadow stay constant - it is the anchor.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card fan-out, orbit, and restack around a fixed center.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/superlist-onboarding-cards-spin-animation">original interaction</a> by Superlist. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Superlist's fun onboarding beat - task cards fan out around a central photo, spin a full orbit behind it, then collapse back into a tidy stack.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPurple panel, headline \"Get things done with a bit more fun\". Center: a rounded-square photo of a smiling person. Around it, five small white task cards (\"Team Offsite\", \"Product Hunt\", \"Monday Tasks\", \"App Launch\", \"Daily Habit\") fan out at angles, orbit the photo, then stack back behind it. Bottom: the dark sign-up bar.\n\n## Motion spec\nPattern: card fan-out, orbit, and restack around a fixed center.\n- Cards burst from behind the photo (spring ~280/18, 60ms stagger), landing fanned at +-30deg rotations around the center.\n- The fan then orbits: all cards rotate around the photo's center (360deg over ~3s, ease-in-out) while each card keeps its own tilt (counter-rotated so labels stay readable).\n- The photo stays fixed and slightly scales with a breathing pulse (1 -> 1.04 -> 1, 2s).\n- Cards then collapse back behind the photo in reverse stagger (spring ~300/22), ending as a neat stack peeking from behind the edges.\n\n## Calibration\n- The orbit is the showpiece: smooth, continuous, and perfectly circular - no easing stalls mid-loop.\n- Cards pass behind the photo (z-order), never over the face.\n\n## Reduced motion\nCards fan out and restack without the orbit.\n\n## Don't miss\n- Exactly five cards, evenly spaced; each has a tiny colored dot and its label.\n- The photo's rounded corners and shadow stay constant - it is the anchor."</script>
+</body></html>

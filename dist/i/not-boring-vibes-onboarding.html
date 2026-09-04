@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Boring Vibes Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Not Boring Vibes Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/not-boring-vibes-onboarding"><b>Not Boring</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-vibes-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-vibes-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Not Boring Vibes&#x27; onboarding - chaotic colorful 3D shapes swirl around the opening statements, then calm down and merge into a single smooth rainbow wave as the copy turns soothing.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b785c7490d9b41ee566d8b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b785c7490d9b41ee566d8b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-not-boring-vibes-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Not Boring Vibes&#x27; onboarding - chaotic colorful 3D shapes swirl around the opening statements, then calm down and merge into a single smooth rainbow wave as the copy turns soothing.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black background. Early beats: a swarm of colorful 3D shapes (red blobs, orbs, chat bubbles, shards) floats and tumbles around centered caps copy (&quot;THINGS ARE PRETTY CRAZY RIGHT NOW&quot;, &quot;WE NEED HELP TO FOCUS ON WHAT MATTERS&quot;). Later beats: the chaos resolves into one silky horizontal gradient wave (green-yellow-pink) undulating under calmer copy (&quot;VIBES ANALYZES YOUR ENERGY RHYTHMS AND...&quot;, &quot;...GENERATES SOUNDSCAPES TO ENHANCE YOUR FOCUS, SLEEP&quot;).
+
+## Motion spec
+Pattern: chaos-to-calm resolution.
+- Chaos phase: 10-14 shapes drift on independent slow paths (translate +-30px over 3-5s loops, random phases), each slowly rotating (tumble +-20deg); sparkles twinkle intermittently (opacity blink, 400ms).
+- Statement transitions: copy swaps with a soft blur-fade (opacity + blur 8px to 0, 350ms) while shapes keep moving - the motion never cuts.
+- The resolution beat: over ~1.5s the shapes decelerate, dim, and drift offscreen toward the edges while the rainbow wave fades in at center (opacity 0 to 1, 800ms) - one continuous slow-down, no scene cut.
+- Wave phase: the wave undulates gently (amplitude +-10px, 4s period) with its gradient slowly flowing along its length (2 revolutions of hue drift per minute); copy lines fade up beneath it (translateY 10px, 250ms, staggered 120ms).
+- Final beat holds: wave + copy + a small continue prompt.
+
+## Calibration
+- The emotional arc is the spec: busy and fast-ish early, slow and sparse late. Timing must slow down across the sequence.
+- Shapes never overlap the copy enough to hurt legibility - keep a clear center column.
+
+## Reduced motion
+Static shapes, then static wave; copy crossfades.
+
+## Don&#x27;t miss
+- The wave is a single organic stroke with a smooth rainbow gradient - not a line chart, not a waveform with bars.
+- The transition moment (chaos calming into the wave) is the signature; it must feel like exhaling.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">chaos-to-calm resolution.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/not-boring-vibes-onboarding">original interaction</a> by Not Boring. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Not Boring Vibes' onboarding - chaotic colorful 3D shapes swirl around the opening statements, then calm down and merge into a single smooth rainbow wave as the copy turns soothing.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack background. Early beats: a swarm of colorful 3D shapes (red blobs, orbs, chat bubbles, shards) floats and tumbles around centered caps copy (\"THINGS ARE PRETTY CRAZY RIGHT NOW\", \"WE NEED HELP TO FOCUS ON WHAT MATTERS\"). Later beats: the chaos resolves into one silky horizontal gradient wave (green-yellow-pink) undulating under calmer copy (\"VIBES ANALYZES YOUR ENERGY RHYTHMS AND...\", \"...GENERATES SOUNDSCAPES TO ENHANCE YOUR FOCUS, SLEEP\").\n\n## Motion spec\nPattern: chaos-to-calm resolution.\n- Chaos phase: 10-14 shapes drift on independent slow paths (translate +-30px over 3-5s loops, random phases), each slowly rotating (tumble +-20deg); sparkles twinkle intermittently (opacity blink, 400ms).\n- Statement transitions: copy swaps with a soft blur-fade (opacity + blur 8px to 0, 350ms) while shapes keep moving - the motion never cuts.\n- The resolution beat: over ~1.5s the shapes decelerate, dim, and drift offscreen toward the edges while the rainbow wave fades in at center (opacity 0 to 1, 800ms) - one continuous slow-down, no scene cut.\n- Wave phase: the wave undulates gently (amplitude +-10px, 4s period) with its gradient slowly flowing along its length (2 revolutions of hue drift per minute); copy lines fade up beneath it (translateY 10px, 250ms, staggered 120ms).\n- Final beat holds: wave + copy + a small continue prompt.\n\n## Calibration\n- The emotional arc is the spec: busy and fast-ish early, slow and sparse late. Timing must slow down across the sequence.\n- Shapes never overlap the copy enough to hurt legibility - keep a clear center column.\n\n## Reduced motion\nStatic shapes, then static wave; copy crossfades.\n\n## Don't miss\n- The wave is a single organic stroke with a smooth rainbow gradient - not a line chart, not a waveform with bars.\n- The transition moment (chaos calming into the wave) is the signature; it must feel like exhaling."</script>
+</body></html>

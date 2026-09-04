@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zara Logo Splash to Permissions Story Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zara Logo Splash to Permissions Story Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zara-logo-splash-to-permissions-story-interaction"><b>Zara</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zara-logo-splash-to-permissions-story-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zara-logo-splash-to-permissions-story-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Zara&#x27;s splash-to-permissions flow - the oversized serif logo zooms through the screen into a black splash, then hands off to a story-style sequence of permission pages (cookies, notifications) with a segment indicator on top.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d49d1908c2926dc3d7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d49d1908c2926dc3d7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zara-logo-splash-to-permissions-story-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Zara&#x27;s splash-to-permissions flow - the oversized serif logo zooms through the screen into a black splash, then hands off to a story-style sequence of permission pages (cookies, notifications) with a segment indicator on top.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Zara launch flow: a white splash with a huge cropped &quot;ZARA&quot; serif at the lower left; a black mode screen with the white logo and JOIN / STORE MODE buttons; then white permission pages - &quot;USE OF COOKIES&quot; (copy block + CONTINUE), &quot;DON&#x27;T MISS A THING&quot; (notifications pitch + CONTINUE) that raises the system notification dialog, and &quot;ENJOY IN-STORE EVENTS&quot; - each with a thin segment indicator at the top.
+
+## Motion spec
+Pattern: logo zoom transition into a paged permission story.
+- Splash: the giant white-background logo holds 800ms, then scales up and past the camera (scale 1 -&gt; 4, 700ms, ease-in) - letters blow past the screen edges, landing on the black mode screen whose logo is the same glyph at rest size (shared-element match).
+- Mode screen: buttons fade up after the logo settles (translateY 10 -&gt; 0, 250ms).
+- Choosing JOIN starts the story: each permission page slides in from the right (translateX 40 -&gt; 0, fade, 300ms), the segment indicator advances its fill with each page.
+- On the notifications page, the CONTINUE tap raises the system dialog: the page dims to 60%, the dialog scales from 0.9 -&gt; 1 with a fade (200ms); either choice dismisses it (fade, 150ms) and advances the story.
+- The last page&#x27;s CONTINUE exits to the app: the page slides left and the home screen fades in beneath (300ms).
+
+## Calibration
+- Typography carries everything: serif logo, small uppercase labels, generous white space, no illustration.
+- The black mode screen is the only dark beat - a single dramatic inversion.
+
+## Reduced motion
+Logo crossfades to the mode screen (300ms); pages crossfade (250ms); dialog appears without scale.
+
+## Don&#x27;t miss
+- The splash logo and the mode-screen logo must be the same asset so the zoom reads as one continuous move.
+- The segment indicator only appears once the story starts - never on the splash or mode screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo zoom transition into a paged permission story.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zara-logo-splash-to-permissions-story-interaction">original interaction</a> by Zara. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Zara's splash-to-permissions flow - the oversized serif logo zooms through the screen into a black splash, then hands off to a story-style sequence of permission pages (cookies, notifications) with a segment indicator on top.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nZara launch flow: a white splash with a huge cropped \"ZARA\" serif at the lower left; a black mode screen with the white logo and JOIN / STORE MODE buttons; then white permission pages - \"USE OF COOKIES\" (copy block + CONTINUE), \"DON'T MISS A THING\" (notifications pitch + CONTINUE) that raises the system notification dialog, and \"ENJOY IN-STORE EVENTS\" - each with a thin segment indicator at the top.\n\n## Motion spec\nPattern: logo zoom transition into a paged permission story.\n- Splash: the giant white-background logo holds 800ms, then scales up and past the camera (scale 1 -> 4, 700ms, ease-in) - letters blow past the screen edges, landing on the black mode screen whose logo is the same glyph at rest size (shared-element match).\n- Mode screen: buttons fade up after the logo settles (translateY 10 -> 0, 250ms).\n- Choosing JOIN starts the story: each permission page slides in from the right (translateX 40 -> 0, fade, 300ms), the segment indicator advances its fill with each page.\n- On the notifications page, the CONTINUE tap raises the system dialog: the page dims to 60%, the dialog scales from 0.9 -> 1 with a fade (200ms); either choice dismisses it (fade, 150ms) and advances the story.\n- The last page's CONTINUE exits to the app: the page slides left and the home screen fades in beneath (300ms).\n\n## Calibration\n- Typography carries everything: serif logo, small uppercase labels, generous white space, no illustration.\n- The black mode screen is the only dark beat - a single dramatic inversion.\n\n## Reduced motion\nLogo crossfades to the mode screen (300ms); pages crossfade (250ms); dialog appears without scale.\n\n## Don't miss\n- The splash logo and the mode-screen logo must be the same asset so the zoom reads as one continuous move.\n- The segment indicator only appears once the story starts - never on the splash or mode screen."</script>
+</body></html>

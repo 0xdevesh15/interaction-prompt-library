@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Headspace Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Headspace Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/headspace-splash"><b>Headspace</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/headspace-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/headspace-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Headspace&#x27;s splash - the orange dot character breathes slowly over a purple horizon, then rises and morphs into the sun of the onboarding welcome screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775733e4ee6c592aaedf0ec/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4badf225b7b88f78c6795/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-headspace-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Headspace&#x27;s splash - the orange dot character breathes slowly over a purple horizon, then rises and morphs into the sun of the onboarding welcome screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A deep purple screen with rolling horizon hills. The Headspace dot - a yellow-orange circle with two small eyes - rests half-sunk behind the nearest hill, breathing. The splash hands off to the onboarding flow (welcome, coach intro, Ebb companion, content pages).
+
+## Motion spec
+Pattern: breathing character + rise-and-morph handoff.
+- Breathing (loops 2-3 times, ~4s per breath): the dot expands 8% on the inhale (2s ease-in-out) and contracts on the exhale; its eyes close on the inhale peak and open on the exhale; the hills sway +-3px counterphase to the breath, and a soft glow halo around the dot tracks its size (opacity 0.15 to 0.3).
+- Handoff: after the final exhale, the dot rises from behind the hill (translateY -35% of screen, 900ms, ease-in-out) while growing (scale 1 to 2.2) and the purple sky lightens toward the welcome screen&#x27;s palette; the hills sink away (translateY +10%, fade, 700ms).
+- The dot lands as the welcome screen&#x27;s sun/hero (or the Ebb orb on companion screens), and the welcome copy staggers up beneath it (translateY 16px, 250ms, 80ms apart) with the primary button fading in last.
+- Content pages beyond (coach video, sleepcasts, care team) follow standard crossfade pushes; the breathing calm of the splash sets the motion tempo for all of them - nothing moves faster than 200ms anywhere.
+
+## Calibration
+- The breath must be slow enough to feel like a breathing exercise: never faster than 3.5s per cycle.
+- The dot&#x27;s eyes are two short vertical strokes - they scale, they don&#x27;t blink shut with lids.
+
+## Reduced motion
+Single slow fade from splash to welcome; no breathing loop.
+
+## Don&#x27;t miss
+- The dot is partially occluded by the hill while breathing - the horizon overlap sells the depth.
+- The color journey is purple-dusk to warm dawn; the dot stays the same yellow-orange throughout.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">breathing character + rise-and-morph handoff.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/headspace-splash">original interaction</a> by Headspace. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Headspace's splash - the orange dot character breathes slowly over a purple horizon, then rises and morphs into the sun of the onboarding welcome screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA deep purple screen with rolling horizon hills. The Headspace dot - a yellow-orange circle with two small eyes - rests half-sunk behind the nearest hill, breathing. The splash hands off to the onboarding flow (welcome, coach intro, Ebb companion, content pages).\n\n## Motion spec\nPattern: breathing character + rise-and-morph handoff.\n- Breathing (loops 2-3 times, ~4s per breath): the dot expands 8% on the inhale (2s ease-in-out) and contracts on the exhale; its eyes close on the inhale peak and open on the exhale; the hills sway +-3px counterphase to the breath, and a soft glow halo around the dot tracks its size (opacity 0.15 to 0.3).\n- Handoff: after the final exhale, the dot rises from behind the hill (translateY -35% of screen, 900ms, ease-in-out) while growing (scale 1 to 2.2) and the purple sky lightens toward the welcome screen's palette; the hills sink away (translateY +10%, fade, 700ms).\n- The dot lands as the welcome screen's sun/hero (or the Ebb orb on companion screens), and the welcome copy staggers up beneath it (translateY 16px, 250ms, 80ms apart) with the primary button fading in last.\n- Content pages beyond (coach video, sleepcasts, care team) follow standard crossfade pushes; the breathing calm of the splash sets the motion tempo for all of them - nothing moves faster than 200ms anywhere.\n\n## Calibration\n- The breath must be slow enough to feel like a breathing exercise: never faster than 3.5s per cycle.\n- The dot's eyes are two short vertical strokes - they scale, they don't blink shut with lids.\n\n## Reduced motion\nSingle slow fade from splash to welcome; no breathing loop.\n\n## Don't miss\n- The dot is partially occluded by the hill while breathing - the horizon overlap sells the depth.\n- The color journey is purple-dusk to warm dawn; the dot stays the same yellow-orange throughout."</script>
+</body></html>

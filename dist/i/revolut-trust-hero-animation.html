@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revolut Trust Hero Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Revolut Trust Hero Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/revolut-trust-hero-animation"><b>Revolut</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-trust-hero-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-trust-hero-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Revolut&#x27;s &quot;Choose who you trust&quot; hero - inside a dark card, a 3D stack of translucent glass cards rotates on its vertical axis with a soft cyan glow breathing through it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4df93a3a1f8e40ae74490/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4df93a3a1f8e40ae74490/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-revolut-trust-hero-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Revolut&#x27;s &quot;Choose who you trust&quot; hero - inside a dark card, a 3D stack of translucent glass cards rotates on its vertical axis with a soft cyan glow breathing through it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Onboarding screen: close X, &quot;CHOOSE WHO YOU TRUST&quot; title + subcopy, a dark hero panel containing the glass stack inside a faint wireframe cube, two bullet rows, Get started button.
+
+## Motion spec
+Pattern: looping 3D glass rotation, ~6s per turn.
+- The stack of ~8 translucent cards rotates slowly and continuously on its vertical axis (linear, seamless loop).
+- Each pane catches light as it turns - a cyan-tinted highlight sweeps across successive panes, so the stack reads as glass, not paper.
+- A soft glow at the stack&#x27;s core pulses gently (alpha +-15%, ~3s cycle), independent of the rotation.
+- The wireframe cube and all text stay static.
+
+## Calibration
+- Rotation is slow enough to read individual panes; faster turns it into a fan blur.
+- Panes keep consistent spacing through the rotation - wobble breaks the machined feel.
+
+## Reduced motion
+Static three-quarter view of the stack with a single slow glow breathe.
+
+## Don&#x27;t miss
+- The loop must be perfectly seamless - any hitch at the wrap point is glaring on a hero.
+- Glass panes need both faces rendered (front and back surfaces) or the rotation looks hollow.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping 3D glass rotation, ~6s per turn.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/revolut-trust-hero-animation">original interaction</a> by Revolut. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Revolut's \"Choose who you trust\" hero - inside a dark card, a 3D stack of translucent glass cards rotates on its vertical axis with a soft cyan glow breathing through it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOnboarding screen: close X, \"CHOOSE WHO YOU TRUST\" title + subcopy, a dark hero panel containing the glass stack inside a faint wireframe cube, two bullet rows, Get started button.\n\n## Motion spec\nPattern: looping 3D glass rotation, ~6s per turn.\n- The stack of ~8 translucent cards rotates slowly and continuously on its vertical axis (linear, seamless loop).\n- Each pane catches light as it turns - a cyan-tinted highlight sweeps across successive panes, so the stack reads as glass, not paper.\n- A soft glow at the stack's core pulses gently (alpha +-15%, ~3s cycle), independent of the rotation.\n- The wireframe cube and all text stay static.\n\n## Calibration\n- Rotation is slow enough to read individual panes; faster turns it into a fan blur.\n- Panes keep consistent spacing through the rotation - wobble breaks the machined feel.\n\n## Reduced motion\nStatic three-quarter view of the stack with a single slow glow breathe.\n\n## Don't miss\n- The loop must be perfectly seamless - any hitch at the wrap point is glaring on a hero.\n- Glass panes need both faces rendered (front and back surfaces) or the rotation looks hollow."</script>
+</body></html>

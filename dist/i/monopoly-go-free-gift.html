@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Free Gift - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Free Gift</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-free-gift"><b>Monopoly Go</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-free-gift">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-free-gift">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monopoly Go&#x27;s free-gift reveal - a ribboned gift box that bursts open with light, scatters cash and dice, then unwraps a card pack into sticker cards that fan out under a Congratulations banner.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b64e4a61d73e2622bdc15b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b64e4a61d73e2622bdc15b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-free-gift.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monopoly Go&#x27;s free-gift reveal - a ribboned gift box that bursts open with light, scatters cash and dice, then unwraps a card pack into sticker cards that fan out under a Congratulations banner.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Store screen with a FREE gift banner. Claim stage (dark): a purple gift box with a yellow ribbon on a pedestal disc. The box opens: cash (&quot;99.7M&quot;) and dice (&quot;x2&quot;) pop out with light rays, confetti scatters, a dice shower follows. Then a gold Monopoly card pack rises, tears open, and reveals sticker cards (&quot;Armor Up&quot; and friends). End card: &quot;CONGRATULATIONS! You received 3 Stickers!&quot; with the three stickers displayed.
+
+## Motion spec
+Pattern: multi-stage gift unboxing.
+- The gift box idles with a teasing wobble (rotation +-3deg, 1.5s loop) until tapped.
+- Tap: the lid pops off (translateY -60px with spin, 300ms) on a white light flash; the cash and dice rewards spring out upward (stiffness ~320, damping ~18) and hang with labels.
+- Confetti scatters (~30 pieces, 1s) then a dice shower rains from the top (~20 dice, tumbling, 800ms).
+- The card pack rises from the bottom (spring, stiffness ~280, damping ~22), wiggles, and tears open (top strip peels with a 300ms zip); a sticker card flips out (rotationY 180 to 0, 400ms) showing its art and stars.
+- The Congratulations banner drops from the top (spring, small bounce) as the three sticker cards fan into a row (each rotate-in +-10deg to 0, staggered 100ms).
+
+## Calibration
+- Each stage clears before the next enters - overlapping stages read as a bug, not abundance.
+- The box wobble stops the instant the tap lands.
+
+## Reduced motion
+Box fades open, rewards fade in, cards fade into the row; no particles.
+
+## Don&#x27;t miss
+- The light flash is the hinge between box and rewards - without it the pop-out feels unearned.
+- Sticker cards are collectible cards with star ratings, not flat icons; keep the card chrome.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">multi-stage gift unboxing.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-free-gift">original interaction</a> by Monopoly Go. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monopoly Go's free-gift reveal - a ribboned gift box that bursts open with light, scatters cash and dice, then unwraps a card pack into sticker cards that fan out under a Congratulations banner.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nStore screen with a FREE gift banner. Claim stage (dark): a purple gift box with a yellow ribbon on a pedestal disc. The box opens: cash (\"99.7M\") and dice (\"x2\") pop out with light rays, confetti scatters, a dice shower follows. Then a gold Monopoly card pack rises, tears open, and reveals sticker cards (\"Armor Up\" and friends). End card: \"CONGRATULATIONS! You received 3 Stickers!\" with the three stickers displayed.\n\n## Motion spec\nPattern: multi-stage gift unboxing.\n- The gift box idles with a teasing wobble (rotation +-3deg, 1.5s loop) until tapped.\n- Tap: the lid pops off (translateY -60px with spin, 300ms) on a white light flash; the cash and dice rewards spring out upward (stiffness ~320, damping ~18) and hang with labels.\n- Confetti scatters (~30 pieces, 1s) then a dice shower rains from the top (~20 dice, tumbling, 800ms).\n- The card pack rises from the bottom (spring, stiffness ~280, damping ~22), wiggles, and tears open (top strip peels with a 300ms zip); a sticker card flips out (rotationY 180 to 0, 400ms) showing its art and stars.\n- The Congratulations banner drops from the top (spring, small bounce) as the three sticker cards fan into a row (each rotate-in +-10deg to 0, staggered 100ms).\n\n## Calibration\n- Each stage clears before the next enters - overlapping stages read as a bug, not abundance.\n- The box wobble stops the instant the tap lands.\n\n## Reduced motion\nBox fades open, rewards fade in, cards fade into the row; no particles.\n\n## Don't miss\n- The light flash is the hinge between box and rewards - without it the pop-out feels unearned.\n- Sticker cards are collectible cards with star ratings, not flat icons; keep the card chrome."</script>
+</body></html>

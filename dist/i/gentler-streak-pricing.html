@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Pricing - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Pricing</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-pricing"><b>Gentler Streak</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-pricing">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-pricing">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Gentler Streak&#x27;s Go Gentler premium screen - a slider at the top scrubs a carousel of workout-suggestion cards below it, so dragging browses the benefits.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1d225b7b88f78c79cb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1d225b7b88f78c79cb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-pricing.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Gentler Streak&#x27;s Go Gentler premium screen - a slider at the top scrubs a carousel of workout-suggestion cards below it, so dragging browses the benefits.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The &quot;Go Gentler&quot; upsell screen: heart mascot, pitch copy, a small orange pill, and a horizontal slider with a green-to-blue gradient track. Beneath, a card carousel of workout suggestions (Badminton, HIT, Indoor Run...) - each card shows a line-art activity icon, the activity name, and a benefit list, with an orange Upgrade button and page dots below.
+
+## Motion spec
+Pattern: slider-scrubbed card carousel.
+- Dragging the slider handle scrubs the carousel 1:1: the track&#x27;s full width maps to the full card range; cards slide horizontally in lockstep with the handle (no independent fling).
+- The handle&#x27;s ring fills with the track&#x27;s local color under it; a soft tick haptic fires as each card crosses center.
+- Release: the carousel snaps to the nearest card (spring ~380/24) and the slider handle glides to the matching position with the same spring - they settle together, never separately.
+- The snapped card lifts slightly (scale 1 to 1.02, shadow deepens) while its neighbors sit 15% smaller and 40% faded at the edges.
+- Cards can also be swiped directly: the slider handle then follows the card position 1:1 in reverse - the two controls are one shared value.
+- Card changes swap the icon with a draw-in (stroke-dash, 350ms) and stagger the benefit rows (60ms apart, translateY 8px).
+
+## Calibration
+- Page dots mirror card count and highlight with the same spring timing as the snap.
+- The slider is the scrubber - no autoflow; nothing moves without touch after the initial entry stagger.
+
+## Reduced motion
+Cards snap without scale/fade neighbors; icon swaps crossfade.
+
+## Don&#x27;t miss
+- The bidirectional binding is the point: slider drags cards, cards drag slider.
+- The activity icons are single-stroke line art, matching the app&#x27;s illustration system.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slider-scrubbed card carousel.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-pricing">original interaction</a> by Gentler Streak. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Gentler Streak's Go Gentler premium screen - a slider at the top scrubs a carousel of workout-suggestion cards below it, so dragging browses the benefits.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe \"Go Gentler\" upsell screen: heart mascot, pitch copy, a small orange pill, and a horizontal slider with a green-to-blue gradient track. Beneath, a card carousel of workout suggestions (Badminton, HIT, Indoor Run...) - each card shows a line-art activity icon, the activity name, and a benefit list, with an orange Upgrade button and page dots below.\n\n## Motion spec\nPattern: slider-scrubbed card carousel.\n- Dragging the slider handle scrubs the carousel 1:1: the track's full width maps to the full card range; cards slide horizontally in lockstep with the handle (no independent fling).\n- The handle's ring fills with the track's local color under it; a soft tick haptic fires as each card crosses center.\n- Release: the carousel snaps to the nearest card (spring ~380/24) and the slider handle glides to the matching position with the same spring - they settle together, never separately.\n- The snapped card lifts slightly (scale 1 to 1.02, shadow deepens) while its neighbors sit 15% smaller and 40% faded at the edges.\n- Cards can also be swiped directly: the slider handle then follows the card position 1:1 in reverse - the two controls are one shared value.\n- Card changes swap the icon with a draw-in (stroke-dash, 350ms) and stagger the benefit rows (60ms apart, translateY 8px).\n\n## Calibration\n- Page dots mirror card count and highlight with the same spring timing as the snap.\n- The slider is the scrubber - no autoflow; nothing moves without touch after the initial entry stagger.\n\n## Reduced motion\nCards snap without scale/fade neighbors; icon swaps crossfade.\n\n## Don't miss\n- The bidirectional binding is the point: slider drags cards, cards drag slider.\n- The activity icons are single-stroke line art, matching the app's illustration system."</script>
+</body></html>

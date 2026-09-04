@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Happy Mascot Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Happy Mascot Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-happy-mascot-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-happy-mascot-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-happy-mascot-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo Chess&#x27; happy Oscar - solve the puzzle and Oscar does a squash-and-stretch joy bounce as the progress bar fills and the success sheet slides up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3de8ecf0543e54f6d35f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3de8ecf0543e54f6d35f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-happy-mascot-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo Chess&#x27; happy Oscar - solve the puzzle and Oscar does a squash-and-stretch joy bounce as the progress bar fills and the success sheet slides up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Duolingo Chess puzzle, near-black: &quot;Solve the puzzle&quot; title, close X, green progress bar, Oscar top-left with his bubble (&quot;Take your time with these.&quot;), the chess board, and the success sheet (&quot;Nice!&quot; with a green Continue button).
+
+## Motion spec
+Pattern: squash-and-stretch mascot bounce on puzzle completion.
+- The correct move lands (piece slide, 250ms; destination square rings green, 400ms).
+- Oscar reacts: a quick anticipatory squash (scaleY 1 -&gt; 0.8, scaleX -&gt; 1.15, 100ms), then a happy launch (scale back through 1 to scaleY 1.12, spring ~380/11, ~450ms) with a 14px hop and a wide-open smile; his bubble lifts with him.
+- The progress bar fills its segment with a green wipe (300ms) timed to the bounce&#x27;s peak.
+- Oscar lands with a second small squash (scaleY 0.92, 120ms) and settles with one wobble (spring decay, ~300ms).
+- 250ms after the landing, the success sheet slides up (translateY 100% -&gt; 0, spring ~320/20): green check, &quot;Nice!&quot;, and Continue.
+
+## Calibration
+- The bounce is full squash-and-stretch - volume shifts between scaleX and scaleY, never a uniform scale.
+- One bounce only - no idle looping after the sheet arrives.
+
+## Reduced motion
+Oscar fades between neutral and happy poses (200ms); the sheet fades up.
+
+## Don&#x27;t miss
+- The bubble rides with Oscar - it never detaches or lags.
+- The sheet waits for the bounce to finish: solve -&gt; bounce -&gt; sheet, in that order.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">squash-and-stretch mascot bounce on puzzle completion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-happy-mascot-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo Chess' happy Oscar - solve the puzzle and Oscar does a squash-and-stretch joy bounce as the progress bar fills and the success sheet slides up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDuolingo Chess puzzle, near-black: \"Solve the puzzle\" title, close X, green progress bar, Oscar top-left with his bubble (\"Take your time with these.\"), the chess board, and the success sheet (\"Nice!\" with a green Continue button).\n\n## Motion spec\nPattern: squash-and-stretch mascot bounce on puzzle completion.\n- The correct move lands (piece slide, 250ms; destination square rings green, 400ms).\n- Oscar reacts: a quick anticipatory squash (scaleY 1 -> 0.8, scaleX -> 1.15, 100ms), then a happy launch (scale back through 1 to scaleY 1.12, spring ~380/11, ~450ms) with a 14px hop and a wide-open smile; his bubble lifts with him.\n- The progress bar fills its segment with a green wipe (300ms) timed to the bounce's peak.\n- Oscar lands with a second small squash (scaleY 0.92, 120ms) and settles with one wobble (spring decay, ~300ms).\n- 250ms after the landing, the success sheet slides up (translateY 100% -> 0, spring ~320/20): green check, \"Nice!\", and Continue.\n\n## Calibration\n- The bounce is full squash-and-stretch - volume shifts between scaleX and scaleY, never a uniform scale.\n- One bounce only - no idle looping after the sheet arrives.\n\n## Reduced motion\nOscar fades between neutral and happy poses (200ms); the sheet fades up.\n\n## Don't miss\n- The bubble rides with Oscar - it never detaches or lags.\n- The sheet waits for the bounce to finish: solve -> bounce -> sheet, in that order."</script>
+</body></html>

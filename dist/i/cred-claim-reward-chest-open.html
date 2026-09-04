@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Claim Reward Chest Open - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Claim Reward Chest Open</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-claim-reward-chest-open"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-claim-reward-chest-open">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-claim-reward-chest-open">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s reward chest - tapping the purple banner makes the 3D chest snap open, the screen erupts into a full-bleed yellow sunburst, then settles into a &quot;congratulations&quot; reveal with ticking counters and confetti before landing on the redeem-rewards sheet.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b86519371d29849d8eaeff/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b86519371d29849d8eaeff/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-claim-reward-chest-open.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s reward chest - tapping the purple banner makes the 3D chest snap open, the screen erupts into a full-bleed yellow sunburst, then settles into a &quot;congratulations&quot; reveal with ticking counters and confetti before landing on the redeem-rewards sheet.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen with a purple &quot;claim your assured reward&quot; banner up top, a chunky purple 3D chest at center, a gold gem button below. Sequence: the chest scales up and its lid pops; a yellow sunburst (rays in yellow, green, white) floods the screen with the gem visible at the bottom; then a black &quot;congratulations - you won&quot; screen with a small purple gem, the won amount with a ticking counter, and a remaining-balance chip; finally a &quot;redeem rewards&quot; sheet slides up with reward cards and a bottom banner.
+
+## Motion spec
+Pattern: gamified chest-burst into a ticking reward reveal.
+- The chest idles with a hover bob (translateY +-6px, 2s sine). On tap it scales up (~1.15) and the lid flips open (rotationX ~-70deg, 300ms, ease-in) with a glow spill from inside.
+- The burst: radial rays scale from center past the screen edges (~350ms, ease-in, accelerating) with confetti particles (80-120 pieces, gravity, rotation, 1.5s fall).
+- Cut to the congratulations screen: &quot;congratulations&quot; drops in with a slight bounce, the amount counter ticks up from 0 (count-up ~800ms, ease-out) while its scale pulses on landing, the balance chip fades in below.
+- &quot;Tap to skip&quot; is live the whole sequence - tapping jumps straight to the final state.
+- The redeem sheet slides up last (~400ms, ease-out) with its cards staggering in.
+
+## Calibration
+- The burst must be full-bleed and fast; a slow or inset burst reads as a page transition, not an explosion.
+- The counter tick is the dopamine beat - give it the full ~800ms even if the number is small.
+
+## Reduced motion
+Chest crossfades to the congratulations screen; amount appears final; no confetti.
+
+## Don&#x27;t miss
+- The yellow sunburst is the brand loud moment - saturated yellow with green/white rays on black, nothing muted.
+- The gem button stays visible through the burst (it rides the bottom edge) - it is the anchor between scenes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gamified chest-burst into a ticking reward reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-claim-reward-chest-open">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's reward chest - tapping the purple banner makes the 3D chest snap open, the screen erupts into a full-bleed yellow sunburst, then settles into a \"congratulations\" reveal with ticking counters and confetti before landing on the redeem-rewards sheet.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen with a purple \"claim your assured reward\" banner up top, a chunky purple 3D chest at center, a gold gem button below. Sequence: the chest scales up and its lid pops; a yellow sunburst (rays in yellow, green, white) floods the screen with the gem visible at the bottom; then a black \"congratulations - you won\" screen with a small purple gem, the won amount with a ticking counter, and a remaining-balance chip; finally a \"redeem rewards\" sheet slides up with reward cards and a bottom banner.\n\n## Motion spec\nPattern: gamified chest-burst into a ticking reward reveal.\n- The chest idles with a hover bob (translateY +-6px, 2s sine). On tap it scales up (~1.15) and the lid flips open (rotationX ~-70deg, 300ms, ease-in) with a glow spill from inside.\n- The burst: radial rays scale from center past the screen edges (~350ms, ease-in, accelerating) with confetti particles (80-120 pieces, gravity, rotation, 1.5s fall).\n- Cut to the congratulations screen: \"congratulations\" drops in with a slight bounce, the amount counter ticks up from 0 (count-up ~800ms, ease-out) while its scale pulses on landing, the balance chip fades in below.\n- \"Tap to skip\" is live the whole sequence - tapping jumps straight to the final state.\n- The redeem sheet slides up last (~400ms, ease-out) with its cards staggering in.\n\n## Calibration\n- The burst must be full-bleed and fast; a slow or inset burst reads as a page transition, not an explosion.\n- The counter tick is the dopamine beat - give it the full ~800ms even if the number is small.\n\n## Reduced motion\nChest crossfades to the congratulations screen; amount appears final; no confetti.\n\n## Don't miss\n- The yellow sunburst is the brand loud moment - saturated yellow with green/white rays on black, nothing muted.\n- The gem button stays visible through the burst (it rides the bottom edge) - it is the anchor between scenes."</script>
+</body></html>

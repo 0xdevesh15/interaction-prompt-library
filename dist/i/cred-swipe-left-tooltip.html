@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Swipe Left Tooltip - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Swipe Left Tooltip</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-swipe-left-tooltip"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-swipe-left-tooltip">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-swipe-left-tooltip">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s credit-score tooltip - on the light score screen, a circular dial reveals &quot;excellent&quot; in green inside it, while a hand-cursor tooltip demonstrates swiping left; following the swipe slides the score panel left to reveal a detailed breakdown with colored rating segments and a &quot;swipe left to see where you stand&quot; hint above a dark CTA.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f244f2a68b6428c817c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f244f2a68b6428c817c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-swipe-left-tooltip.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s credit-score tooltip - on the light score screen, a circular dial reveals &quot;excellent&quot; in green inside it, while a hand-cursor tooltip demonstrates swiping left; following the swipe slides the score panel left to reveal a detailed breakdown with colored rating segments and a &quot;swipe left to see where you stand&quot; hint above a dark CTA.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light gray CRED screen (&quot;payment history&quot; header). Center: a large circular score dial that fills in with green text &quot;excellent&quot; and &quot;100% timely payments&quot;. Below: an &quot;AN UNMISTAKABLE RECORD&quot; line, masked card number, and a paginated detail area. A hand cursor floats over the dial. Hint text: &quot;swipe left to see where you stand&quot; above a dark &quot;Get it&quot; style button.
+
+## Motion spec
+Pattern: onboarding hand-tooltip with swipe-reveal.
+- The dial draws in (stroke sweep 800ms) as &quot;excellent&quot; fades up in green with a soft glow.
+- The hand tooltip appears over the dial (scale 0.8 -&gt; 1, 200ms) and drags left in a loop: swipe arc 60pt left (500ms ease-in-out), hold 300ms, fade reset (200ms), repeat.
+- On the user&#x27;s actual swipe (or after the demo), the score panel translates left with the finger 1:1 and the breakdown panel enters from the right: rows of rating segments in green/amber/red with percentage labels.
+- Release snaps the page (spring ~320/22); the dial page slides fully off and the breakdown fills the viewport.
+- The hint text fades out once the breakdown is visible.
+
+## Calibration
+- The hand loop is slow and legible - it teaches, it does not rush.
+- The swipe is a pager, not a dismiss: both pages remain one gesture apart.
+
+## Reduced motion
+The hand tooltip is static, pointing left; page change crossfades (200ms).
+
+## Don&#x27;t miss
+- The green &quot;excellent&quot; glow is the only saturated element on the first page.
+- The breakdown keeps the same dial edge visible as a sliver, preserving orientation.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">onboarding hand-tooltip with swipe-reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-swipe-left-tooltip">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's credit-score tooltip - on the light score screen, a circular dial reveals \"excellent\" in green inside it, while a hand-cursor tooltip demonstrates swiping left; following the swipe slides the score panel left to reveal a detailed breakdown with colored rating segments and a \"swipe left to see where you stand\" hint above a dark CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight gray CRED screen (\"payment history\" header). Center: a large circular score dial that fills in with green text \"excellent\" and \"100% timely payments\". Below: an \"AN UNMISTAKABLE RECORD\" line, masked card number, and a paginated detail area. A hand cursor floats over the dial. Hint text: \"swipe left to see where you stand\" above a dark \"Get it\" style button.\n\n## Motion spec\nPattern: onboarding hand-tooltip with swipe-reveal.\n- The dial draws in (stroke sweep 800ms) as \"excellent\" fades up in green with a soft glow.\n- The hand tooltip appears over the dial (scale 0.8 -> 1, 200ms) and drags left in a loop: swipe arc 60pt left (500ms ease-in-out), hold 300ms, fade reset (200ms), repeat.\n- On the user's actual swipe (or after the demo), the score panel translates left with the finger 1:1 and the breakdown panel enters from the right: rows of rating segments in green/amber/red with percentage labels.\n- Release snaps the page (spring ~320/22); the dial page slides fully off and the breakdown fills the viewport.\n- The hint text fades out once the breakdown is visible.\n\n## Calibration\n- The hand loop is slow and legible - it teaches, it does not rush.\n- The swipe is a pager, not a dismiss: both pages remain one gesture apart.\n\n## Reduced motion\nThe hand tooltip is static, pointing left; page change crossfades (200ms).\n\n## Don't miss\n- The green \"excellent\" glow is the only saturated element on the first page.\n- The breakdown keeps the same dial edge visible as a sliver, preserving orientation."</script>
+</body></html>

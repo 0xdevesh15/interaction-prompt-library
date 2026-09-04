@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lake Mood Picker Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lake Mood Picker Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lake-mood-picker-interaction"><b>Lake</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lake-mood-picker-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lake-mood-picker-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Lake&#x27;s onboarding mood picker - &quot;How&#x27;s your day?&quot; with a row of expressive smiley faces; picking one slides to &quot;How would you describe your feelings?&quot; with a tag cloud, then the selections collapse into stacked chips and a &quot;CREATE MOOD PALETTE&quot; button generates a custom palette that floods the screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e65d11d5a0fec069fe/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670512e65d11d5a0fec069fe/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lake-mood-picker-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Lake&#x27;s onboarding mood picker - &quot;How&#x27;s your day?&quot; with a row of expressive smiley faces; picking one slides to &quot;How would you describe your feelings?&quot; with a tag cloud, then the selections collapse into stacked chips and a &quot;CREATE MOOD PALETTE&quot; button generates a custom palette that floods the screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light-grey onboarding flow: screen 1 has the day&#x27;s question and a row of five face icons (sad to happy, line-drawn with tiny features); screen 2 shows the chosen face enlarged above a grid of feeling tags (Relaxed, Confident, Calm...); final beat: the choices stack as chips, the button appears, and the screen fills with the generated palette.
+
+## Motion spec
+Pattern: stepped picker with generative payoff.
+- Tap a face: it springs up and centers above the question (scale 1.6, spring ~340/22, 400ms) while the other faces fade out and the tag grid slides in from the right (spring ~360/26, 350ms).
+- Tap tags: selected tags fill dark (200ms) with a small pop (scale 1 -&gt; 1.08 -&gt; 1, 200ms); the Next button appears once at least one tag is chosen (fade + rise, 250ms).
+- Next: the face and chosen tags collapse into a centered vertical chip stack (each element flies to its stack slot, spring ~320/24, 400ms, 60ms stagger) and &quot;CREATE MOOD PALETTE&quot; rises in below.
+- Tap create: the chips scatter-fade, a brief loading pulse, then palette color bands sweep up the screen (bottom-up wipe, 500ms, staggered 60ms per band).
+
+## Calibration
+- The chosen face persists as the constant element across screens - everything else rearranges around it.
+- The palette wipe is the payoff - full-bleed, no chrome visible during the sweep.
+
+## Reduced motion
+Screens crossfade (250ms); palette fades in instead of wiping.
+
+## Don&#x27;t miss
+- The faces are minimal line smileys - tiny curved features, no emoji realism.
+- The tag grid keeps unselected tags as light outlined pills - only selection fills them.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stepped picker with generative payoff.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lake-mood-picker-interaction">original interaction</a> by Lake. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Lake's onboarding mood picker - \"How's your day?\" with a row of expressive smiley faces; picking one slides to \"How would you describe your feelings?\" with a tag cloud, then the selections collapse into stacked chips and a \"CREATE MOOD PALETTE\" button generates a custom palette that floods the screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight-grey onboarding flow: screen 1 has the day's question and a row of five face icons (sad to happy, line-drawn with tiny features); screen 2 shows the chosen face enlarged above a grid of feeling tags (Relaxed, Confident, Calm...); final beat: the choices stack as chips, the button appears, and the screen fills with the generated palette.\n\n## Motion spec\nPattern: stepped picker with generative payoff.\n- Tap a face: it springs up and centers above the question (scale 1.6, spring ~340/22, 400ms) while the other faces fade out and the tag grid slides in from the right (spring ~360/26, 350ms).\n- Tap tags: selected tags fill dark (200ms) with a small pop (scale 1 -> 1.08 -> 1, 200ms); the Next button appears once at least one tag is chosen (fade + rise, 250ms).\n- Next: the face and chosen tags collapse into a centered vertical chip stack (each element flies to its stack slot, spring ~320/24, 400ms, 60ms stagger) and \"CREATE MOOD PALETTE\" rises in below.\n- Tap create: the chips scatter-fade, a brief loading pulse, then palette color bands sweep up the screen (bottom-up wipe, 500ms, staggered 60ms per band).\n\n## Calibration\n- The chosen face persists as the constant element across screens - everything else rearranges around it.\n- The palette wipe is the payoff - full-bleed, no chrome visible during the sweep.\n\n## Reduced motion\nScreens crossfade (250ms); palette fades in instead of wiping.\n\n## Don't miss\n- The faces are minimal line smileys - tiny curved features, no emoji realism.\n- The tag grid keeps unselected tags as light outlined pills - only selection fills them."</script>
+</body></html>

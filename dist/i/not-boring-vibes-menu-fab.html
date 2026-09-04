@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Boring Vibes Menu Fab - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Not Boring Vibes Menu Fab</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/not-boring-vibes-menu-fab"><b>Not Boring</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-vibes-menu-fab">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-vibes-menu-fab">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Not Boring Vibes&#x27; menu FAB - the round floating button morphs into a full-screen dark menu overlay whose mode icons spring in as a staggered grid.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b785c7371d29849d8bb364/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b785c7371d29849d8bb364/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-not-boring-vibes-menu-fab.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Not Boring Vibes&#x27; menu FAB - the round floating button morphs into a full-screen dark menu overlay whose mode icons spring in as a staggered grid.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The landscape scene (desert, floating rocks) with a small round FAB bottom-right. Open state: a full-screen dark blurred overlay titled &quot;FOCUS&quot; in condensed type with the tagline &quot;Find your flow with no distractions&quot;, a 2-column grid of mode tiles (rounded squares with glyph art: teal, yellow, green, purple, pink), and a play control at the bottom.
+
+## Motion spec
+Pattern: FAB-to-overlay morph with staggered grid entrance.
+- Tap the FAB: it scales up and fades (200ms) as the dark overlay fades in over the scene, the landscape blurring behind it (300ms).
+- The &quot;FOCUS&quot; title drops in from above (250ms, ease-out).
+- Grid tiles spring in staggered from bottom to top, left to right: each tile translateY 24px to 0 with opacity, spring stiffness ~260, damping ~22, ~60ms stagger between tiles.
+- The bottom play control fades in last (200ms after the final tile).
+- Close (tap outside or the close control): the sequence reverses faster - tiles fade out together (150ms), overlay dissolves (250ms), and the FAB scales back in with a slight overshoot (spring stiffness ~300, damping ~18).
+
+## Calibration
+- The stagger reads as a ripple from the bottom, not a random scatter.
+- The scene stays live and blurred behind the overlay - never cut to a flat black background.
+
+## Reduced motion
+Overlay crossfades; tiles appear without stagger or translation.
+
+## Don&#x27;t miss
+- Each tile keeps its own saturated color against the dark blur - the grid is the only color on screen.
+- The title is condensed caps, centered, small - restraint against the loud grid.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">FAB-to-overlay morph with staggered grid entrance.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/not-boring-vibes-menu-fab">original interaction</a> by Not Boring. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Not Boring Vibes' menu FAB - the round floating button morphs into a full-screen dark menu overlay whose mode icons spring in as a staggered grid.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe landscape scene (desert, floating rocks) with a small round FAB bottom-right. Open state: a full-screen dark blurred overlay titled \"FOCUS\" in condensed type with the tagline \"Find your flow with no distractions\", a 2-column grid of mode tiles (rounded squares with glyph art: teal, yellow, green, purple, pink), and a play control at the bottom.\n\n## Motion spec\nPattern: FAB-to-overlay morph with staggered grid entrance.\n- Tap the FAB: it scales up and fades (200ms) as the dark overlay fades in over the scene, the landscape blurring behind it (300ms).\n- The \"FOCUS\" title drops in from above (250ms, ease-out).\n- Grid tiles spring in staggered from bottom to top, left to right: each tile translateY 24px to 0 with opacity, spring stiffness ~260, damping ~22, ~60ms stagger between tiles.\n- The bottom play control fades in last (200ms after the final tile).\n- Close (tap outside or the close control): the sequence reverses faster - tiles fade out together (150ms), overlay dissolves (250ms), and the FAB scales back in with a slight overshoot (spring stiffness ~300, damping ~18).\n\n## Calibration\n- The stagger reads as a ripple from the bottom, not a random scatter.\n- The scene stays live and blurred behind the overlay - never cut to a flat black background.\n\n## Reduced motion\nOverlay crossfades; tiles appear without stagger or translation.\n\n## Don't miss\n- Each tile keeps its own saturated color against the dark blur - the grid is the only color on screen.\n- The title is condensed caps, centered, small - restraint against the loud grid."</script>
+</body></html>

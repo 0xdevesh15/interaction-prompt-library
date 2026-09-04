@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Outsiders Progress Graph Color Change Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>The Outsiders Progress Graph Color Change Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/the-outsiders-progress-graph-color-change-interaction"><b>The</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/the-outsiders-progress-graph-color-change-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/the-outsiders-progress-graph-color-change-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: The Outsiders&#x27; progress graph theming - switching the metric pill on the Progress screen washes the whole screen&#x27;s accent color (red, blue, yellow, green, teal) through the dot graph, the selected pill, and every accent in one smooth crossfade.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e734b6e76d5c62e6f809ac/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e734b6e76d5c62e6f809ac/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-the-outsiders-progress-graph-color-change-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: The Outsiders&#x27; progress graph theming - switching the metric pill on the Progress screen washes the whole screen&#x27;s accent color (red, blue, yellow, green, teal) through the dot graph, the selected pill, and every accent in one smooth crossfade.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark Progress screen: &quot;Training Summary&quot; header with a 4W range, a scatter dot graph (dots in the accent color over a baseline grid), a row of metric pills (Training Load and others - selected one filled), and an Intensity Distribution card (&quot;57 33 10&quot; over a yellow/orange/red/purple segmented bar). Bottom tab bar.
+
+## Motion spec
+Pattern: full-theme accent crossfade, ~450ms.
+- Tap: the newly selected pill fills with its color (200ms) while the old one deflates to outline.
+- Wash: every accent-colored element - graph dots, axis highlight, pill fill, detail values - crossfades from the old hue to the new one (350ms, ease-in-out), staggered ~40ms top-to-bottom for a wash-down feel.
+- Graph: the dots re-render for the new metric: each dot springs to its new height (spring ~360/22, 60ms column stagger) while recoloring.
+- Distribution: the Intensity Distribution values count to their new numbers (300ms) but keep their fixed segment colors.
+
+## Calibration
+- The wash covers all accents at once - no element may hold the old color past 450ms.
+- Each metric owns one hue; the mapping is fixed, not cyclical.
+
+## Reduced motion
+Colors crossfade (300ms); dots jump to new heights without spring.
+
+## Don&#x27;t miss
+- The top-to-bottom stagger makes it a wash, not a palette swap - keep the 40ms cascade.
+- The multi-colored intensity bar is exempt: it never recolors.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-theme accent crossfade, ~450ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/the-outsiders-progress-graph-color-change-interaction">original interaction</a> by The. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: The Outsiders' progress graph theming - switching the metric pill on the Progress screen washes the whole screen's accent color (red, blue, yellow, green, teal) through the dot graph, the selected pill, and every accent in one smooth crossfade.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark Progress screen: \"Training Summary\" header with a 4W range, a scatter dot graph (dots in the accent color over a baseline grid), a row of metric pills (Training Load and others - selected one filled), and an Intensity Distribution card (\"57 33 10\" over a yellow/orange/red/purple segmented bar). Bottom tab bar.\n\n## Motion spec\nPattern: full-theme accent crossfade, ~450ms.\n- Tap: the newly selected pill fills with its color (200ms) while the old one deflates to outline.\n- Wash: every accent-colored element - graph dots, axis highlight, pill fill, detail values - crossfades from the old hue to the new one (350ms, ease-in-out), staggered ~40ms top-to-bottom for a wash-down feel.\n- Graph: the dots re-render for the new metric: each dot springs to its new height (spring ~360/22, 60ms column stagger) while recoloring.\n- Distribution: the Intensity Distribution values count to their new numbers (300ms) but keep their fixed segment colors.\n\n## Calibration\n- The wash covers all accents at once - no element may hold the old color past 450ms.\n- Each metric owns one hue; the mapping is fixed, not cyclical.\n\n## Reduced motion\nColors crossfade (300ms); dots jump to new heights without spring.\n\n## Don't miss\n- The top-to-bottom stagger makes it a wash, not a palette swap - keep the 40ms cascade.\n- The multi-colored intensity bar is exempt: it never recolors."</script>
+</body></html>

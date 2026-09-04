@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jupiter Track All Cards Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Jupiter Track All Cards Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/jupiter-track-all-cards-animation"><b>Jupiter</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jupiter-track-all-cards-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jupiter-track-all-cards-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Jupiter&#x27;s credit-card tracking onboarding - a dark explainer screen where a looping mini demo animates above fixed copy: cards fan into a stack, a spend summary slides in, a bill gets paid, and a success receipt confirms it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b2196ec7d0ca132d5e9b0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b2196ec7d0ca132d5e9b0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-jupiter-track-all-cards-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Jupiter&#x27;s credit-card tracking onboarding - a dark explainer screen where a looping mini demo animates above fixed copy: cards fan into a stack, a spend summary slides in, a bill gets paid, and a success receipt confirms it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Jupiter&#x27;s dark onboarding screen: back chevron and info icon at top, the headline &quot;Track all your credit card spends&quot; with a sub-line, and three feature icons along the bottom (Track spends, Get reminders, Pay bills on time). The upper half hosts a looping miniature demo: real bank cards (ICICI, Axis, Kotak Mahindra) fan and stack, a mini &quot;Money&quot; app screen rises showing &quot;Total spends this ₹80,560&quot; with a per-card breakdown, a red bill banner &quot;₹80,560.20 - Pay now&quot; slides over it, and a success toast &quot;You paid ₹80,560.20 from this bill on 25 Sept&quot; lands before the loop resets.
+
+## Motion spec
+Pattern: looping product demo sequence, ~8s per loop.
+- The three cards fan open from a stack (spring stiffness 280 damping 22), each rotating a few degrees apart, then gather back into a single deck.
+- The mini Money screen rises from the bottom of the demo area (450ms, ease-out), its spend rows staggering in (60ms apart).
+- The bill banner slides in from the right (300ms) carrying amount and Pay now button; a tap flash on the button leads to the banner filling green as &quot;Paid&quot;.
+- The success toast pops in at the bottom of the demo (spring stiffness 380 damping 20), holds a beat, and the whole demo fades out to reset the loop.
+- Headline, sub-line, and feature icons stay static throughout.
+
+## Calibration
+- The demo reads as a tiny real UI - card art, rupee amounts, and buttons are legible.
+- The loop resets cleanly: demo area empties before the cards return.
+
+## Reduced motion
+Demo steps crossfade without motion.
+
+## Don&#x27;t miss
+- Cards are recognizable real-bank designs, not generic rectangles.
+- The three bottom icons anchor the screen&#x27;s three promises and never animate.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping product demo sequence, ~8s per loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/jupiter-track-all-cards-animation">original interaction</a> by Jupiter. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Jupiter's credit-card tracking onboarding - a dark explainer screen where a looping mini demo animates above fixed copy: cards fan into a stack, a spend summary slides in, a bill gets paid, and a success receipt confirms it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nJupiter's dark onboarding screen: back chevron and info icon at top, the headline \"Track all your credit card spends\" with a sub-line, and three feature icons along the bottom (Track spends, Get reminders, Pay bills on time). The upper half hosts a looping miniature demo: real bank cards (ICICI, Axis, Kotak Mahindra) fan and stack, a mini \"Money\" app screen rises showing \"Total spends this \u20b980,560\" with a per-card breakdown, a red bill banner \"\u20b980,560.20 - Pay now\" slides over it, and a success toast \"You paid \u20b980,560.20 from this bill on 25 Sept\" lands before the loop resets.\n\n## Motion spec\nPattern: looping product demo sequence, ~8s per loop.\n- The three cards fan open from a stack (spring stiffness 280 damping 22), each rotating a few degrees apart, then gather back into a single deck.\n- The mini Money screen rises from the bottom of the demo area (450ms, ease-out), its spend rows staggering in (60ms apart).\n- The bill banner slides in from the right (300ms) carrying amount and Pay now button; a tap flash on the button leads to the banner filling green as \"Paid\".\n- The success toast pops in at the bottom of the demo (spring stiffness 380 damping 20), holds a beat, and the whole demo fades out to reset the loop.\n- Headline, sub-line, and feature icons stay static throughout.\n\n## Calibration\n- The demo reads as a tiny real UI - card art, rupee amounts, and buttons are legible.\n- The loop resets cleanly: demo area empties before the cards return.\n\n## Reduced motion\nDemo steps crossfade without motion.\n\n## Don't miss\n- Cards are recognizable real-bank designs, not generic rectangles.\n- The three bottom icons anchor the screen's three promises and never animate."</script>
+</body></html>

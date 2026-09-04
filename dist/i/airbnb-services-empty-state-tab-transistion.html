@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Services Empty State Tab Transistion - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Services Empty State Tab Transistion</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-services-empty-state-tab-transistion"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-services-empty-state-tab-transistion">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-services-empty-state-tab-transistion">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airbnb&#x27;s services tabs - swiping the category row switches between service categories, each landing on a springy, scaling empty-state illustration (&quot;No matches for your dates&quot; or &quot;coming soon&quot;) with its own art.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a20e8590900ee9af1a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a20e8590900ee9af1a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-services-empty-state-tab-transistion.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airbnb&#x27;s services tabs - swiping the category row switches between service categories, each landing on a springy, scaling empty-state illustration (&quot;No matches for your dates&quot; or &quot;coming soon&quot;) with its own art.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Services in San Francisco&quot;: a search field, a horizontally scrolling category row (Photography, Chefs, Prepared meals, Massage, Training, Makeup, Nails, Hair, Spa treatments, Catering), and a content area showing either results or an empty state - a centered 3D illustration (pasta bowl, massage table, lipstick, nail polish, meal tray) with a line of copy and a &quot;Clear dates&quot; button where relevant.
+
+## Motion spec
+Pattern: tab crossfade with springy illustration entrance, ~450ms.
+- Tab change: tapping a category (or swiping the row) recenters the row with a scroll snap (250ms, ease-out) and the active chip gets its selected treatment.
+- Content: the outgoing state crossfades (200ms) as the new empty state fades in (250ms).
+- Illustration: the category&#x27;s artwork scales in (0.7 -&gt; 1.04 -&gt; 1, spring ~300/16, 450ms) with a slight rise (translateY 12px -&gt; 0).
+- Copy and button fade in under the illustration (200ms, +100ms).
+
+## Calibration
+- Each category has its own illustration - no generic placeholder.
+- The scale overshoot is soft; the art should feel placed, not bounced.
+
+## Reduced motion
+Crossfade only; illustrations appear at full scale.
+
+## Don&#x27;t miss
+- The category row itself scrolls to keep the active chip visible.
+- &quot;Coming soon&quot; states have no Clear dates button - the two empty types differ.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tab crossfade with springy illustration entrance, ~450ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-services-empty-state-tab-transistion">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airbnb's services tabs - swiping the category row switches between service categories, each landing on a springy, scaling empty-state illustration (\"No matches for your dates\" or \"coming soon\") with its own art.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Services in San Francisco\": a search field, a horizontally scrolling category row (Photography, Chefs, Prepared meals, Massage, Training, Makeup, Nails, Hair, Spa treatments, Catering), and a content area showing either results or an empty state - a centered 3D illustration (pasta bowl, massage table, lipstick, nail polish, meal tray) with a line of copy and a \"Clear dates\" button where relevant.\n\n## Motion spec\nPattern: tab crossfade with springy illustration entrance, ~450ms.\n- Tab change: tapping a category (or swiping the row) recenters the row with a scroll snap (250ms, ease-out) and the active chip gets its selected treatment.\n- Content: the outgoing state crossfades (200ms) as the new empty state fades in (250ms).\n- Illustration: the category's artwork scales in (0.7 -> 1.04 -> 1, spring ~300/16, 450ms) with a slight rise (translateY 12px -> 0).\n- Copy and button fade in under the illustration (200ms, +100ms).\n\n## Calibration\n- Each category has its own illustration - no generic placeholder.\n- The scale overshoot is soft; the art should feel placed, not bounced.\n\n## Reduced motion\nCrossfade only; illustrations appear at full scale.\n\n## Don't miss\n- The category row itself scrolls to keep the active chip visible.\n- \"Coming soon\" states have no Clear dates button - the two empty types differ."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klima Splash Background Shuffle - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Klima Splash Background Shuffle</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/klima-splash-background-shuffle"><b>Klima</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/klima-splash-background-shuffle">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/klima-splash-background-shuffle">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Klima&#x27;s splash - a green logo screen crossfades into a looping aerial rainforest video with the klima wordmark and &quot;Tap to start&quot;; tapping shuffles the background video and slides up the onboarding controls.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d84c4c6c0fbb153fa84324/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d84c4c6c0fbb153fa84324/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-klima-splash-background-shuffle.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Klima&#x27;s splash - a green logo screen crossfades into a looping aerial rainforest video with the klima wordmark and &quot;Tap to start&quot;; tapping shuffles the background video and slides up the onboarding controls.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Solid green splash with the white klima leaf-mark; then full-screen aerial jungle video under drifting clouds, white &quot;klima&quot; wordmark centered, &quot;Tap to start&quot; at the bottom; after the tap, a green &quot;Calculate your footprint&quot; button and &quot;Already a member? Log in&quot; link rise at the bottom.
+
+## Motion spec
+Pattern: splash-to-video crossfade with background shuffle.
+- Launch: the green splash holds ~600ms, then crossfades into the video (500ms) as the wordmark fades in (300ms, slight rise).
+- The background video loops with a slow lateral drift; every few seconds it shuffles - crossfading to a different aerial cut (600ms) while the wordmark stays rock still.
+- Tap anywhere: &quot;Tap to start&quot; fades out, the background dims ~15%, and the green CTA button slides up from the bottom edge (spring ~320/24) with the login link fading in beneath it.
+- The wordmark gently breathes (scale 1 &lt;-&gt; 1.02, 3s) while idle.
+
+## Calibration
+- All motion is in the background layer and the bottom controls - the wordmark never moves.
+- The green of the splash, the button, and the leaf in the wordmark are one brand green.
+
+## Reduced motion
+Static background frame; controls fade in without slide.
+
+## Don&#x27;t miss
+- The video keeps playing behind the raised controls - the CTA overlays, never replaces.
+- &quot;Tap to start&quot; is tiny and centered-low; it whispers, the video shouts.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">splash-to-video crossfade with background shuffle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/klima-splash-background-shuffle">original interaction</a> by Klima. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Klima's splash - a green logo screen crossfades into a looping aerial rainforest video with the klima wordmark and \"Tap to start\"; tapping shuffles the background video and slides up the onboarding controls.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSolid green splash with the white klima leaf-mark; then full-screen aerial jungle video under drifting clouds, white \"klima\" wordmark centered, \"Tap to start\" at the bottom; after the tap, a green \"Calculate your footprint\" button and \"Already a member? Log in\" link rise at the bottom.\n\n## Motion spec\nPattern: splash-to-video crossfade with background shuffle.\n- Launch: the green splash holds ~600ms, then crossfades into the video (500ms) as the wordmark fades in (300ms, slight rise).\n- The background video loops with a slow lateral drift; every few seconds it shuffles - crossfading to a different aerial cut (600ms) while the wordmark stays rock still.\n- Tap anywhere: \"Tap to start\" fades out, the background dims ~15%, and the green CTA button slides up from the bottom edge (spring ~320/24) with the login link fading in beneath it.\n- The wordmark gently breathes (scale 1 <-> 1.02, 3s) while idle.\n\n## Calibration\n- All motion is in the background layer and the bottom controls - the wordmark never moves.\n- The green of the splash, the button, and the leaf in the wordmark are one brand green.\n\n## Reduced motion\nStatic background frame; controls fade in without slide.\n\n## Don't miss\n- The video keeps playing behind the raised controls - the CTA overlays, never replaces.\n- \"Tap to start\" is tiny and centered-low; it whispers, the video shouts."</script>
+</body></html>

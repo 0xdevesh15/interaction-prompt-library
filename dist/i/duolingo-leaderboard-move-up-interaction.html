@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Leaderboard Move up Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Leaderboard Move up Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-leaderboard-move-up-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-leaderboard-move-up-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-leaderboard-move-up-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s league promotion moment - the leaderboard list scrolls smoothly as your row (&quot;You&quot;, green-highlighted) climbs past other learners&#x27; rows toward the promotion zone, your row pulsing, then the screen transitions back to the lesson path.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6719d91ac180cd70acd5d602/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6719d91ac180cd70acd5d602/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-leaderboard-move-up-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s league promotion moment - the leaderboard list scrolls smoothly as your row (&quot;You&quot;, green-highlighted) climbs past other learners&#x27; rows toward the promotion zone, your row pulsing, then the screen transitions back to the lesson path.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;You moved up in the Bronze League!&quot; screen: a leaderboard list (rank, avatar, name, XP), the user&#x27;s row highlighted green, a green &quot;PROMOTION ZONE&quot; marker, and a blue Continue button. Ends on the lesson path view.
+
+## Motion spec
+Pattern: animated rank climb with row highlight.
+- The list scrolls upward smoothly (~1.2s, ease-in-out) as ranks above recede; the user&#x27;s row moves up past 2-3 competitors.
+- The user&#x27;s row pulses while climbing (highlight opacity 0.6 -&gt; 1 -&gt; 0.6, 800ms loop) and its rank number ticks down.
+- Passing the promotion zone line triggers a small pop on the user&#x27;s row (scale 1 -&gt; 1.03 -&gt; 1, 300ms).
+- Continue: the leaderboard slides down and out (spring ~380/26) as the lesson path slides in from below (350ms).
+
+## Calibration
+- Other rows never move relative to the list - only the scroll and the user&#x27;s highlight carry the story.
+- The green highlight must survive the whole climb - the user can always find themselves.
+
+## Reduced motion
+List jumps to the final rank with a fade (200ms); highlight fades in once.
+
+## Don&#x27;t miss
+- The XP values stay fixed - the story is position, not points changing.
+- The promotion zone marker is a labeled band, not just a color change.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">animated rank climb with row highlight.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-leaderboard-move-up-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's league promotion moment - the leaderboard list scrolls smoothly as your row (\"You\", green-highlighted) climbs past other learners' rows toward the promotion zone, your row pulsing, then the screen transitions back to the lesson path.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"You moved up in the Bronze League!\" screen: a leaderboard list (rank, avatar, name, XP), the user's row highlighted green, a green \"PROMOTION ZONE\" marker, and a blue Continue button. Ends on the lesson path view.\n\n## Motion spec\nPattern: animated rank climb with row highlight.\n- The list scrolls upward smoothly (~1.2s, ease-in-out) as ranks above recede; the user's row moves up past 2-3 competitors.\n- The user's row pulses while climbing (highlight opacity 0.6 -> 1 -> 0.6, 800ms loop) and its rank number ticks down.\n- Passing the promotion zone line triggers a small pop on the user's row (scale 1 -> 1.03 -> 1, 300ms).\n- Continue: the leaderboard slides down and out (spring ~380/26) as the lesson path slides in from below (350ms).\n\n## Calibration\n- Other rows never move relative to the list - only the scroll and the user's highlight carry the story.\n- The green highlight must survive the whole climb - the user can always find themselves.\n\n## Reduced motion\nList jumps to the final rank with a fade (200ms); highlight fades in once.\n\n## Don't miss\n- The XP values stay fixed - the story is position, not points changing.\n- The promotion zone marker is a labeled band, not just a color change."</script>
+</body></html>

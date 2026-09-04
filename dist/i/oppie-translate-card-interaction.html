@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oppie Translate Card Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Oppie Translate Card Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/oppie-translate-card-interaction"><b>Oppie</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/oppie-translate-card-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/oppie-translate-card-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Oppie&#x27;s translate card - tap the word card and a circular wipe blooms from the tap point, morphing the card into a full-screen translation view with a dramatic color flip.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb4f225b7b88f78c6be6/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb4f225b7b88f78c6be6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-oppie-translate-card-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Oppie&#x27;s translate card - tap the word card and a circular wipe blooms from the tap point, morphing the card into a full-screen translation view with a dramatic color flip.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A light-gray vocabulary app: a large card showing the word (&quot;Hübsch&quot;) in bold with its translation ghosted below, above a bottom bar (menu, Shuffle with remaining-card count, add). Tapping flips the card into its answer state - a full-bleed dark (or vibrant accent) view with the translation (&quot;Nice&quot;) in the same bold position.
+
+## Motion spec
+Pattern: circular-reveal card morph.
+- Tap: an iris wipe starts at the tap point - a circle of the answer state&#x27;s background expands (radius 0 to screen diagonal, 500ms, ease-out), revealing the dark/vibrant answer card beneath.
+- The card&#x27;s rounded rect expands to full-bleed as the wipe progresses (corner radius 24px to 0, matched timing), so the wipe and the morph read as one motion.
+- The word crossfades to the translation at the wipe&#x27;s leading edge - letters are revealed by the circle, not faded globally.
+- The bottom bar persists through the morph (it slides down 8px and returns, 200ms, as a subtle acknowledgment).
+- Tap again (or tap the close affordance): the iris contracts back from the tap point, restoring the question card (450ms, ease-in-out).
+- Shuffle swaps cards with a quick horizontal slide-fade (250ms), the count ticking down.
+
+## Calibration
+- The wipe origin is the exact tap point, not the card center.
+- Word position must be identical in both states so the crossfade reads as the word transforming.
+
+## Reduced motion
+Simple crossfade between word and translation states.
+
+## Don&#x27;t miss
+- The color flip is the payoff: question state is light and quiet, answer state is dark or saturated - never two similar backgrounds.
+- Keep the giant bold word treatment; the type fills the card&#x27;s upper half.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">circular-reveal card morph.</div></div><div><div class="k">Content type</div><div class="v">interactive gesture</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/oppie-translate-card-interaction">original interaction</a> by Oppie. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Oppie's translate card - tap the word card and a circular wipe blooms from the tap point, morphing the card into a full-screen translation view with a dramatic color flip.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA light-gray vocabulary app: a large card showing the word (\"H\u00fcbsch\") in bold with its translation ghosted below, above a bottom bar (menu, Shuffle with remaining-card count, add). Tapping flips the card into its answer state - a full-bleed dark (or vibrant accent) view with the translation (\"Nice\") in the same bold position.\n\n## Motion spec\nPattern: circular-reveal card morph.\n- Tap: an iris wipe starts at the tap point - a circle of the answer state's background expands (radius 0 to screen diagonal, 500ms, ease-out), revealing the dark/vibrant answer card beneath.\n- The card's rounded rect expands to full-bleed as the wipe progresses (corner radius 24px to 0, matched timing), so the wipe and the morph read as one motion.\n- The word crossfades to the translation at the wipe's leading edge - letters are revealed by the circle, not faded globally.\n- The bottom bar persists through the morph (it slides down 8px and returns, 200ms, as a subtle acknowledgment).\n- Tap again (or tap the close affordance): the iris contracts back from the tap point, restoring the question card (450ms, ease-in-out).\n- Shuffle swaps cards with a quick horizontal slide-fade (250ms), the count ticking down.\n\n## Calibration\n- The wipe origin is the exact tap point, not the card center.\n- Word position must be identical in both states so the crossfade reads as the word transforming.\n\n## Reduced motion\nSimple crossfade between word and translation states.\n\n## Don't miss\n- The color flip is the payoff: question state is light and quiet, answer state is dark or saturated - never two similar backgrounds.\n- Keep the giant bold word treatment; the type fills the card's upper half."</script>
+</body></html>

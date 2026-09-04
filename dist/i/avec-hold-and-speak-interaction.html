@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avec Hold and Speak Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Avec Hold and Speak Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/avec-hold-and-speak-interaction"><b>Avec</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/avec-hold-and-speak-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/avec-hold-and-speak-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Avec&#x27;s hold-to-talk compose - holding the blue mic button turns it red with a live waveform, releasing generates the email body line by line, and a coaching tooltip updates between states.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a1197426d3b523a9761a173/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a1197426d3b523a9761a173/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-avec-hold-and-speak-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Avec&#x27;s hold-to-talk compose - holding the blue mic button turns it red with a live waveform, releasing generates the email body line by line, and a coaching tooltip updates between states.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+New email screen: To/Subject rows up top, an empty body, a tooltip bubble above a full-width blue &quot;Hold &amp; speak&quot; button. Recording state: the button goes red with &quot;Release to generate&quot; and a hint. After: the generated email body fills in and the tooltip switches to editing suggestions (&quot;&#x27;Make it sound like a pirate&#x27;&quot;).
+
+## Motion spec
+Pattern: press-and-hold state machine - idle, recording, generating, written.
+- Press: the button squashes (scaleY 0.94, 100ms) then floods red from the bottom (200ms); the label crossfades to &quot;Release to generate&quot; and a thin waveform bars row animates along its top edge (bars dance at 8-12Hz, amplitude follows input).
+- The tooltip bubble lifts 4px and swaps copy with a 150ms fade.
+- Release: the button flashes back to blue, the waveform collapses (150ms), and a brief &quot;Generating&quot; shimmer sweeps the body area (400ms).
+- Generated text types into the body line by line (each line fades up 8px, 120ms stagger), then the tooltip morphs to the editing hint with the button returning to &quot;Hold &amp; speak&quot;.
+
+## Calibration
+- Red means live mic - the flood is immediate on hold, before any waveform.
+- Text generation reads as composed, not pasted: visible line-by-line arrival.
+
+## Reduced motion
+Button color crossfades; body text fades in whole (250ms).
+
+## Don&#x27;t miss
+- The tooltip is anchored to the button and never covers the body text.
+- Releasing early (under ~400ms) springs back with no recording - an accidental-tap guard.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">press-and-hold state machine - idle, recording, generating, written.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/avec-hold-and-speak-interaction">original interaction</a> by Avec. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Avec's hold-to-talk compose - holding the blue mic button turns it red with a live waveform, releasing generates the email body line by line, and a coaching tooltip updates between states.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNew email screen: To/Subject rows up top, an empty body, a tooltip bubble above a full-width blue \"Hold & speak\" button. Recording state: the button goes red with \"Release to generate\" and a hint. After: the generated email body fills in and the tooltip switches to editing suggestions (\"'Make it sound like a pirate'\").\n\n## Motion spec\nPattern: press-and-hold state machine - idle, recording, generating, written.\n- Press: the button squashes (scaleY 0.94, 100ms) then floods red from the bottom (200ms); the label crossfades to \"Release to generate\" and a thin waveform bars row animates along its top edge (bars dance at 8-12Hz, amplitude follows input).\n- The tooltip bubble lifts 4px and swaps copy with a 150ms fade.\n- Release: the button flashes back to blue, the waveform collapses (150ms), and a brief \"Generating\" shimmer sweeps the body area (400ms).\n- Generated text types into the body line by line (each line fades up 8px, 120ms stagger), then the tooltip morphs to the editing hint with the button returning to \"Hold & speak\".\n\n## Calibration\n- Red means live mic - the flood is immediate on hold, before any waveform.\n- Text generation reads as composed, not pasted: visible line-by-line arrival.\n\n## Reduced motion\nButton color crossfades; body text fades in whole (250ms).\n\n## Don't miss\n- The tooltip is anchored to the button and never covers the body text.\n- Releasing early (under ~400ms) springs back with no recording - an accidental-tap guard."</script>
+</body></html>

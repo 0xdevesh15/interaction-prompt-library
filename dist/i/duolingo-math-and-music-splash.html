@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Math and Music Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Math and Music Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-math-and-music-splash"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-math-and-music-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-math-and-music-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s Math and Music promo splash - a purple night scene where the math and music course cards bob and tilt above the clouds, Duo blinks below them, and background stars twinkle, over &quot;There&#x27;s more to learn. Say hello to Math and Music.&quot; with a START LEARNING button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6719d8f27544fc380038c9f1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6719d8f27544fc380038c9f1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-math-and-music-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s Math and Music promo splash - a purple night scene where the math and music course cards bob and tilt above the clouds, Duo blinks below them, and background stars twinkle, over &quot;There&#x27;s more to learn. Say hello to Math and Music.&quot; with a START LEARNING button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Purple gradient sky over cloud layers: two rounded square cards (blue math card with operators, purple music card with a note) tilted toward each other, Duo peeking from behind the clouds, white caption text, and a white START LEARNING button. Close X top-left.
+
+## Motion spec
+Pattern: looping idle diorama.
+- The two cards bob in opposition (translateY +/-8px, 2.4s, sine) with a slow tilt (rotate +/-4deg, same period, phase-offset).
+- Duo blinks every ~3s (eyes squint 120ms) and sways slightly with the clouds.
+- Stars twinkle at random points (opacity 0.2 -&gt; 1 -&gt; 0.2, ~1.5s each, randomized phases).
+- Cloud layers drift horizontally at two speeds (near layer ~20px/s, far ~8px/s), looping seamlessly.
+- Caption and button are static.
+
+## Calibration
+- Everything loops with no visible seam - this is an ambient splash, not a one-shot.
+- The cards never touch or pass each other; the bob amplitude is small.
+
+## Reduced motion
+All motion stops except a single slow fade-in of the whole scene (300ms).
+
+## Don&#x27;t miss
+- Duo&#x27;s blink is the only facial animation - the charm beat.
+- The two cards&#x27; bob is phase-opposed - when one is up, the other is down.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping idle diorama.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-math-and-music-splash">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's Math and Music promo splash - a purple night scene where the math and music course cards bob and tilt above the clouds, Duo blinks below them, and background stars twinkle, over \"There's more to learn. Say hello to Math and Music.\" with a START LEARNING button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPurple gradient sky over cloud layers: two rounded square cards (blue math card with operators, purple music card with a note) tilted toward each other, Duo peeking from behind the clouds, white caption text, and a white START LEARNING button. Close X top-left.\n\n## Motion spec\nPattern: looping idle diorama.\n- The two cards bob in opposition (translateY +/-8px, 2.4s, sine) with a slow tilt (rotate +/-4deg, same period, phase-offset).\n- Duo blinks every ~3s (eyes squint 120ms) and sways slightly with the clouds.\n- Stars twinkle at random points (opacity 0.2 -> 1 -> 0.2, ~1.5s each, randomized phases).\n- Cloud layers drift horizontally at two speeds (near layer ~20px/s, far ~8px/s), looping seamlessly.\n- Caption and button are static.\n\n## Calibration\n- Everything loops with no visible seam - this is an ambient splash, not a one-shot.\n- The cards never touch or pass each other; the bob amplitude is small.\n\n## Reduced motion\nAll motion stops except a single slow fade-in of the whole scene (300ms).\n\n## Don't miss\n- Duo's blink is the only facial animation - the charm beat.\n- The two cards' bob is phase-opposed - when one is up, the other is down."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dtd Sounds Sun Morph Screensaver Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Dtd Sounds Sun Morph Screensaver Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/dtd-sounds-sun-morph-screensaver-animation"><b>Dtd</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dtd-sounds-sun-morph-screensaver-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dtd-sounds-sun-morph-screensaver-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: DTD Sounds&#x27; screensaver morph - the illustrated room (dog, window, timer card) slides away while its little sun stays pinned, morphing into the sun of the next scene as a meadow landscape grows in beneath it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edcb98dac9951779442a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edcb98dac9951779442a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-dtd-sounds-sun-morph-screensaver-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: DTD Sounds&#x27; screensaver morph - the illustrated room (dog, window, timer card) slides away while its little sun stays pinned, morphing into the sun of the next scene as a meadow landscape grows in beneath it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Two illustrated states: the focus room (cream line-art interior, dog on a couch, a small sun outside the window, &quot;Hold to Stop Focus&quot; timer card) and the meadow screensaver (peach sky, green grass, a plant, a tent, a butterfly, the same sun in the sky with the time ghosted into it).
+
+## Motion spec
+Pattern: shared-element sun anchoring a full scene morph.
+- The timer card slides down and off (translateY, 300ms) while the room&#x27;s line art pans up and out (translateY -&gt; -60%, 500ms, ease-in-out) - the room leaves upward, the window&#x27;s sun stays exactly in place.
+- The background washes from cream to warm peach around the unmoving sun (color tween, 500ms).
+- The meadow grows in from the bottom: grass layer slides up (translateY 40% -&gt; 0, 450ms), then the plant and tent scale up from their bases (spring ~300/16, 80ms apart), the butterfly flutters in (small arcing path, 600ms).
+- The time (&quot;04:22&quot;) fades into the sky beside the sun, ghosted at 40% opacity (300ms).
+- The sun breathes gently once settled (scale 1 -&gt; 1.05 -&gt; 1, 4s loop) and the butterfly idles around the plant.
+
+## Calibration
+- The sun is the anchor: it must not translate a single pixel during the whole morph.
+- Line-art style is consistent across both scenes - same stroke weight, same flat fills.
+
+## Reduced motion
+Scenes crossfade (400ms) with the sun static.
+
+## Don&#x27;t miss
+- The ghosted time sits in the sky, not on a card - the screensaver has no chrome.
+- The meadow elements grow from their own bases - plant from the grass line, tent from the ground.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element sun anchoring a full scene morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/dtd-sounds-sun-morph-screensaver-animation">original interaction</a> by Dtd. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: DTD Sounds' screensaver morph - the illustrated room (dog, window, timer card) slides away while its little sun stays pinned, morphing into the sun of the next scene as a meadow landscape grows in beneath it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTwo illustrated states: the focus room (cream line-art interior, dog on a couch, a small sun outside the window, \"Hold to Stop Focus\" timer card) and the meadow screensaver (peach sky, green grass, a plant, a tent, a butterfly, the same sun in the sky with the time ghosted into it).\n\n## Motion spec\nPattern: shared-element sun anchoring a full scene morph.\n- The timer card slides down and off (translateY, 300ms) while the room's line art pans up and out (translateY -> -60%, 500ms, ease-in-out) - the room leaves upward, the window's sun stays exactly in place.\n- The background washes from cream to warm peach around the unmoving sun (color tween, 500ms).\n- The meadow grows in from the bottom: grass layer slides up (translateY 40% -> 0, 450ms), then the plant and tent scale up from their bases (spring ~300/16, 80ms apart), the butterfly flutters in (small arcing path, 600ms).\n- The time (\"04:22\") fades into the sky beside the sun, ghosted at 40% opacity (300ms).\n- The sun breathes gently once settled (scale 1 -> 1.05 -> 1, 4s loop) and the butterfly idles around the plant.\n\n## Calibration\n- The sun is the anchor: it must not translate a single pixel during the whole morph.\n- Line-art style is consistent across both scenes - same stroke weight, same flat fills.\n\n## Reduced motion\nScenes crossfade (400ms) with the sun static.\n\n## Don't miss\n- The ghosted time sits in the sky, not on a card - the screensaver has no chrome.\n- The meadow elements grow from their own bases - plant from the grass line, tent from the ground."</script>
+</body></html>

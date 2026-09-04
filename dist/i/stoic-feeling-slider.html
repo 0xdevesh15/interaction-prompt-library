@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stoic Feeling Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Stoic Feeling Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/stoic-feeling-slider"><b>Stoic</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stoic-feeling-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stoic-feeling-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Stoic&#x27;s feeling slider - scrub a single horizontal pill and the mood label crossfades through Bad, Not great, Fine, Good as the black fill follows your finger.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb6d61d73e2622b34928/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb6d61d73e2622b34928/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-stoic-feeling-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Stoic&#x27;s feeling slider - scrub a single horizontal pill and the mood label crossfades through Bad, Not great, Fine, Good as the black fill follows your finger.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A pale-gray screen with a small centered question (&quot;How are you feeling&quot;), one horizontal pill slider (white track, black fill from the left, round knob), faint min/max glyphs at its ends, and a quiet Skip at the bottom. Above the slider sits the answer: &quot;I&#x27;m feeling&quot; in gray, with the mood word in bold black.
+
+## Motion spec
+Pattern: continuous-fill mood slider with crossfading labels.
+- Drag: the black fill and knob track the finger 1:1, no detents; the knob scales up slightly while touched (1 to 1.15, 150ms).
+- Labels: the mood word crossfades as the knob passes each quarter boundary (opacity + 2px vertical shift, 180ms); &quot;I&#x27;m feeling&quot; stays static - only the word swaps.
+- The fill has a soft inner shadow so it reads as a groove filling with ink, not a flat bar.
+- Release: a hair of inertia (the knob settles with spring ~420/28 over the last few px); a light haptic ticks at each label boundary crossing.
+- The word sits closer to the slider as values approach center - a subtle 4px vertical drift that keeps the composition balanced.
+
+## Calibration
+- Four labels exactly (Bad, Not great, Fine, Good), evenly spaced quarters; no emoji, no color coding - the app stays monochrome.
+- The knob must be grabbable across the full track, including at the very ends.
+
+## Reduced motion
+Labels swap instantly; no knob scale.
+
+## Don&#x27;t miss
+- The fill starts from the left edge always - the scale reads bad-to-good left-to-right.
+- Everything is gray-on-gray except the black fill and the bold mood word.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous-fill mood slider with crossfading labels.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/stoic-feeling-slider">original interaction</a> by Stoic. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Stoic's feeling slider - scrub a single horizontal pill and the mood label crossfades through Bad, Not great, Fine, Good as the black fill follows your finger.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA pale-gray screen with a small centered question (\"How are you feeling\"), one horizontal pill slider (white track, black fill from the left, round knob), faint min/max glyphs at its ends, and a quiet Skip at the bottom. Above the slider sits the answer: \"I'm feeling\" in gray, with the mood word in bold black.\n\n## Motion spec\nPattern: continuous-fill mood slider with crossfading labels.\n- Drag: the black fill and knob track the finger 1:1, no detents; the knob scales up slightly while touched (1 to 1.15, 150ms).\n- Labels: the mood word crossfades as the knob passes each quarter boundary (opacity + 2px vertical shift, 180ms); \"I'm feeling\" stays static - only the word swaps.\n- The fill has a soft inner shadow so it reads as a groove filling with ink, not a flat bar.\n- Release: a hair of inertia (the knob settles with spring ~420/28 over the last few px); a light haptic ticks at each label boundary crossing.\n- The word sits closer to the slider as values approach center - a subtle 4px vertical drift that keeps the composition balanced.\n\n## Calibration\n- Four labels exactly (Bad, Not great, Fine, Good), evenly spaced quarters; no emoji, no color coding - the app stays monochrome.\n- The knob must be grabbable across the full track, including at the very ends.\n\n## Reduced motion\nLabels swap instantly; no knob scale.\n\n## Don't miss\n- The fill starts from the left edge always - the scale reads bad-to-good left-to-right.\n- Everything is gray-on-gray except the black fill and the bold mood word."</script>
+</body></html>

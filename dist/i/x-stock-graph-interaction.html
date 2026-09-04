@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X Stock Graph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>X Stock Graph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/x-stock-graph-interaction"><b>X</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-stock-graph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-stock-graph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: X&#x27;s cashtag stock chart - scrub the graph and the price header tracks your finger, range chips morph the series, and a popover swaps between line and candlestick rendering.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69e48b4ed04993c17ee2b5f9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69e48b4ed04993c17ee2b5f9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-x-stock-graph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: X&#x27;s cashtag stock chart - scrub the graph and the price header tracks your finger, range chips morph the series, and a popover swaps between line and candlestick rendering.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+An X post-detail style page for $NVDA, dark: search bar with back and sliders icon, Top/Latest/People/Videos/Photos tabs, then the stock card - &quot;NVIDIA Corp&quot; with logo, big price ($198.87) with a green change line and after-hours note, the chart, range chips 1D 1W 1M 1Y ALL plus a chart-type button, and the originating tweet pinned below.
+
+## Motion spec
+Pattern: scrubbable financial chart with live header and morphing ranges.
+- Touch-drag across the chart: a vertical crosshair and dot snap to the series (haptic tick per data point), the header price and change crossfade to the scrubbed value (100ms per update), and a timestamp label (&quot;Apr 15 at 1:15 AM&quot;) fades in at the chart&#x27;s base; release fades the crosshair (200ms) and the header eases back to the latest price (250ms).
+- Range chips: the active chip gets a filled pill (150ms) and the series redraws by scaling from the right edge - the old line compresses horizontally into the new one (300ms, ease-in-out), the area fill following.
+- Chart-type button opens a small popover (scale from its anchor, spring ~400/20) listing Line, 30m, 1h, 4h; picking candles morphs each line segment into its candle (staggered 20ms left to right, 150ms each).
+- Positive territory tints the line and area green; the fill is a vertical gradient fading to transparent.
+
+## Calibration
+- Scrubbing must feel glued - the dot never lags the finger by more than a frame.
+- Red down-values flip the header tint and the change arrow, not just the text.
+
+## Reduced motion
+Range changes crossfade (200ms); scrub updates values without crosshair animation.
+
+## Don&#x27;t miss
+- The after-hours line appears only on the latest price, never while scrubbing history.
+- The tweet below stays visible - the chart block doesn&#x27;t push it off screen when popovers open.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scrubbable financial chart with live header and morphing ranges.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/x-stock-graph-interaction">original interaction</a> by X. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: X's cashtag stock chart - scrub the graph and the price header tracks your finger, range chips morph the series, and a popover swaps between line and candlestick rendering.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAn X post-detail style page for $NVDA, dark: search bar with back and sliders icon, Top/Latest/People/Videos/Photos tabs, then the stock card - \"NVIDIA Corp\" with logo, big price ($198.87) with a green change line and after-hours note, the chart, range chips 1D 1W 1M 1Y ALL plus a chart-type button, and the originating tweet pinned below.\n\n## Motion spec\nPattern: scrubbable financial chart with live header and morphing ranges.\n- Touch-drag across the chart: a vertical crosshair and dot snap to the series (haptic tick per data point), the header price and change crossfade to the scrubbed value (100ms per update), and a timestamp label (\"Apr 15 at 1:15 AM\") fades in at the chart's base; release fades the crosshair (200ms) and the header eases back to the latest price (250ms).\n- Range chips: the active chip gets a filled pill (150ms) and the series redraws by scaling from the right edge - the old line compresses horizontally into the new one (300ms, ease-in-out), the area fill following.\n- Chart-type button opens a small popover (scale from its anchor, spring ~400/20) listing Line, 30m, 1h, 4h; picking candles morphs each line segment into its candle (staggered 20ms left to right, 150ms each).\n- Positive territory tints the line and area green; the fill is a vertical gradient fading to transparent.\n\n## Calibration\n- Scrubbing must feel glued - the dot never lags the finger by more than a frame.\n- Red down-values flip the header tint and the change arrow, not just the text.\n\n## Reduced motion\nRange changes crossfade (200ms); scrub updates values without crosshair animation.\n\n## Don't miss\n- The after-hours line appears only on the latest price, never while scrubbing history.\n- The tweet below stays visible - the chart block doesn't push it off screen when popovers open."</script>
+</body></html>

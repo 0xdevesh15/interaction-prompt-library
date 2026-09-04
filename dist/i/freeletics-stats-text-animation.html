@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Freeletics Stats Text Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Freeletics Stats Text Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/freeletics-stats-text-animation"><b>Freeletics</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/freeletics-stats-text-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/freeletics-stats-text-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Freeletics&#x27; social-proof counter - under &quot;Alright, let&#x27;s burn some fat!&quot;, a giant blue number rolls upward from 0 to 1,32,10,725 like a slot-machine ticker, digits settling left to right.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf4ea8a8ec7d01f57bed4a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf4ea8a8ec7d01f57bed4a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-freeletics-stats-text-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Freeletics&#x27; social-proof counter - under &quot;Alright, let&#x27;s burn some fat!&quot;, a giant blue number rolls upward from 0 to 1,32,10,725 like a slot-machine ticker, digits settling left to right.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Onboarding screen: progress bar (7/13) top, &quot;Alright, let&#x27;s burn some fat!&quot; headline with a flame, a tiny &quot;We&#x27;ve helped:&quot; label, then the huge blue stat number, a two-line gray caption beneath, blue Next button pinned bottom.
+
+## Motion spec
+Pattern: rolling-digit count-up ticker.
+- Each digit is a vertical reel of 0-9; on mount all reels spin and decelerate, settling left-to-right with ~90ms between digit landings (each landing: slight overshoot bounce, spring ~400/20).
+- Total settle ~1.6s; the number grows its separators live as digit count increases (Indian grouping: 1,32,10,725), so the string visibly widens mid-count.
+- The caption lines fade in staggered (150ms apart) once the last digit lands; Next pulses once (scale 1 -&gt; 1.03 -&gt; 1).
+- The headline and emoji are static throughout - all energy is in the number.
+
+## Calibration
+- Blue is reserved for the number and Next; keep the rest grayscale.
+- The count must always start at 0 on entry - no mid-value fades.
+
+## Reduced motion
+Number fades in at its final value.
+
+## Don&#x27;t miss
+- Digits land in reading order (left to right), which feels deliberate rather than mechanical.
+- The separator commas appear WITH their digit group, never orphaned.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rolling-digit count-up ticker.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/freeletics-stats-text-animation">original interaction</a> by Freeletics. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Freeletics' social-proof counter - under \"Alright, let's burn some fat!\", a giant blue number rolls upward from 0 to 1,32,10,725 like a slot-machine ticker, digits settling left to right.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOnboarding screen: progress bar (7/13) top, \"Alright, let's burn some fat!\" headline with a flame, a tiny \"We've helped:\" label, then the huge blue stat number, a two-line gray caption beneath, blue Next button pinned bottom.\n\n## Motion spec\nPattern: rolling-digit count-up ticker.\n- Each digit is a vertical reel of 0-9; on mount all reels spin and decelerate, settling left-to-right with ~90ms between digit landings (each landing: slight overshoot bounce, spring ~400/20).\n- Total settle ~1.6s; the number grows its separators live as digit count increases (Indian grouping: 1,32,10,725), so the string visibly widens mid-count.\n- The caption lines fade in staggered (150ms apart) once the last digit lands; Next pulses once (scale 1 -> 1.03 -> 1).\n- The headline and emoji are static throughout - all energy is in the number.\n\n## Calibration\n- Blue is reserved for the number and Next; keep the rest grayscale.\n- The count must always start at 0 on entry - no mid-value fades.\n\n## Reduced motion\nNumber fades in at its final value.\n\n## Don't miss\n- Digits land in reading order (left to right), which feels deliberate rather than mechanical.\n- The separator commas appear WITH their digit group, never orphaned."</script>
+</body></html>

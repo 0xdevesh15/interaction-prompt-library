@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Presence Indicator Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Presence Indicator Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-presence-indicator-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-presence-indicator-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-presence-indicator-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s presence indicator - when the friend joins the chat, a presence ring bounces onto their header avatar with a spring, and the subtitle under the name swaps to the live state.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af4c00d01d537450a79/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af4c00d01d537450a79/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-presence-indicator-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s presence indicator - when the friend joins the chat, a presence ring bounces onto their header avatar with a spring, and the subtitle under the name swaps to the live state.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Honk chat with Alex: header with back chevron, centered &quot;Alex&quot;, and the friend&#x27;s avatar top-right; blue live bubble (&quot;heyyyyy&quot;) typing below, keyboard open. On join, the avatar gains a colored presence ring (and/or a small badge) and a subtitle line (&quot;Left the Chat&quot; / joined state) under the name updates.
+
+## Motion spec
+Pattern: springy presence-ring pop with subtitle swap.
+- Join event: the presence ring pops around the avatar (scale 0.5 -&gt; 1.15 -&gt; 1, spring ~340/13, 300ms) - a bouncy entrance with visible overshoot.
+- The ring then idles with a soft pulse (scale 1 -&gt; 1.04 -&gt; 1, 2s sine).
+- The subtitle swaps in sync: old text slides up and fades (150ms), new status text slides in from below (200ms, 50ms later).
+- The avatar itself nudges (scale 1 -&gt; 1.06 -&gt; 1) as the ring lands.
+- Leave event reverses: ring shrinks away (scale -&gt; 0.6, fade, 200ms), subtitle returns to the away state.
+
+## Calibration
+- The ring color is the presence signal (blue/green for live) - it must contrast clearly with the header&#x27;s white background.
+- Ring pop and subtitle swap happen together, reading as one event.
+
+## Reduced motion
+Ring fades in (200ms); subtitle swaps instantly.
+
+## Don&#x27;t miss
+- The indicator hugs the avatar only - the name and chevron never move.
+- Typing in the bubble below continues unaffected during the transition.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy presence-ring pop with subtitle swap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-presence-indicator-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's presence indicator - when the friend joins the chat, a presence ring bounces onto their header avatar with a spring, and the subtitle under the name swaps to the live state.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nHonk chat with Alex: header with back chevron, centered \"Alex\", and the friend's avatar top-right; blue live bubble (\"heyyyyy\") typing below, keyboard open. On join, the avatar gains a colored presence ring (and/or a small badge) and a subtitle line (\"Left the Chat\" / joined state) under the name updates.\n\n## Motion spec\nPattern: springy presence-ring pop with subtitle swap.\n- Join event: the presence ring pops around the avatar (scale 0.5 -> 1.15 -> 1, spring ~340/13, 300ms) - a bouncy entrance with visible overshoot.\n- The ring then idles with a soft pulse (scale 1 -> 1.04 -> 1, 2s sine).\n- The subtitle swaps in sync: old text slides up and fades (150ms), new status text slides in from below (200ms, 50ms later).\n- The avatar itself nudges (scale 1 -> 1.06 -> 1) as the ring lands.\n- Leave event reverses: ring shrinks away (scale -> 0.6, fade, 200ms), subtitle returns to the away state.\n\n## Calibration\n- The ring color is the presence signal (blue/green for live) - it must contrast clearly with the header's white background.\n- Ring pop and subtitle swap happen together, reading as one event.\n\n## Reduced motion\nRing fades in (200ms); subtitle swaps instantly.\n\n## Don't miss\n- The indicator hugs the avatar only - the name and chevron never move.\n- Typing in the bubble below continues unaffected during the transition."</script>
+</body></html>

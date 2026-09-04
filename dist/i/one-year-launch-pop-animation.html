@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One Year Launch Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>One Year Launch Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/one-year-launch-pop-animation"><b>One</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/one-year-launch-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/one-year-launch-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: the One Year app launch - on a light gray dotted-grid canvas, a horizontal band of hand-drawn ink illustrations pops in one by one with springy stagger across the middle of the screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a787c9592db07ea46303c4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a787c9592db07ea46303c4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-one-year-launch-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: the One Year app launch - on a light gray dotted-grid canvas, a horizontal band of hand-drawn ink illustrations pops in one by one with springy stagger across the middle of the screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light gray screen with a faint dotted grid texture. A horizontal strip across the vertical center holds ~12 small purple-ink hand-drawn doodles (figures, objects, scenes). A small app mark sits near the bottom.
+
+## Motion spec
+Pattern: staggered spring pop-in, ~1.5s.
+- Doodles pop in left to right, 70ms apart: each scales 0 -&gt; 1 with a spring (~380/16) so it overshoots ~10% and settles, fading in over the first 100ms.
+- Each doodle lands at a tiny fixed rotation (+-3deg) so the band feels hand-placed, not grid-snapped.
+- After the last doodle lands, the whole band does one gentle collective settle (scale 1 -&gt; 0.98 -&gt; 1, 200ms).
+- App mark fades in at the bottom during the band&#x27;s settle (200ms).
+
+## Calibration
+- Overshoot is uniform across doodles; varying spring constants per item reads as sloppy, not organic.
+- The dotted grid is texture, not a guide - doodles ignore it.
+
+## Reduced motion
+Band fades in fully assembled (300ms).
+
+## Don&#x27;t miss
+- Left-to-right order is the whole rhythm; random order reads as popcorn, not a parade.
+- Doodles never overlap; the band breathes as a single composition.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered spring pop-in, ~1.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/one-year-launch-pop-animation">original interaction</a> by One. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: the One Year app launch - on a light gray dotted-grid canvas, a horizontal band of hand-drawn ink illustrations pops in one by one with springy stagger across the middle of the screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight gray screen with a faint dotted grid texture. A horizontal strip across the vertical center holds ~12 small purple-ink hand-drawn doodles (figures, objects, scenes). A small app mark sits near the bottom.\n\n## Motion spec\nPattern: staggered spring pop-in, ~1.5s.\n- Doodles pop in left to right, 70ms apart: each scales 0 -> 1 with a spring (~380/16) so it overshoots ~10% and settles, fading in over the first 100ms.\n- Each doodle lands at a tiny fixed rotation (+-3deg) so the band feels hand-placed, not grid-snapped.\n- After the last doodle lands, the whole band does one gentle collective settle (scale 1 -> 0.98 -> 1, 200ms).\n- App mark fades in at the bottom during the band's settle (200ms).\n\n## Calibration\n- Overshoot is uniform across doodles; varying spring constants per item reads as sloppy, not organic.\n- The dotted grid is texture, not a guide - doodles ignore it.\n\n## Reduced motion\nBand fades in fully assembled (300ms).\n\n## Don't miss\n- Left-to-right order is the whole rhythm; random order reads as popcorn, not a parade.\n- Doodles never overlap; the band breathes as a single composition."</script>
+</body></html>

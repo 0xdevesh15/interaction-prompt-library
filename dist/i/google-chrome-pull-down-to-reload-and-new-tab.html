@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Chrome Pull Down to Reload and New Tab - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Google Chrome Pull Down to Reload and New Tab</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/google-chrome-pull-down-to-reload-and-new-tab"><b>Google</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-chrome-pull-down-to-reload-and-new-tab">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-chrome-pull-down-to-reload-and-new-tab">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Chrome mobile&#x27;s overscroll actions - pulling down on a page reveals three circular action buttons (new tab +, reload, close tab X) in a row; dragging the finger across them highlights each, and releasing on one fires it with a snap-back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c75e3acf45ba67eebd8b29/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c75e3acf45ba67eebd8b29/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-google-chrome-pull-down-to-reload-and-new-tab.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Chrome mobile&#x27;s overscroll actions - pulling down on a page reveals three circular action buttons (new tab +, reload, close tab X) in a row; dragging the finger across them highlights each, and releasing on one fires it with a snap-back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A Google new-tab page. On pull-down, the page content slides down and three gray circular buttons appear in the space above it: &quot;+&quot; (new tab, left), circular-arrow (reload, center), &quot;X&quot; (close tab, right), each with a tiny label (&quot;New Tab&quot;, &quot;Reload&quot;, &quot;Close Tab&quot;).
+
+## Motion spec
+Pattern: three-way overscroll radial menu.
+- Pull: the page translates down 1:1 with the drag (resistance 0.5x past 60px); the three circles fade and scale in staggered center-out (reload first, then + and X, 150ms, 60ms apart) as the pull crosses ~90px.
+- Drag horizontally without lifting: the finger&#x27;s nearest circle highlights (gray -&gt; dark fill, icon inverting white, 150ms) with a light haptic tick per switch; the highlight travels with the touch.
+- Release on a circle: it flashes dark (120ms), the page snaps back up (spring ~380/22) and the action fires - reload spins its arrow, new tab / close tab transition the view.
+- Release between circles or below threshold: circles fade out upward (200ms) and the page settles home - no action.
+
+## Calibration
+- Circles are 44px, spaced 72px apart - one-thumb horizontal travel.
+- Highlight requires ~40% proximity to a circle&#x27;s center; hysteresis prevents flicker between two.
+
+## Reduced motion
+Circles appear without stagger; page snaps back without spring.
+
+## Don&#x27;t miss
+- The center reload appears FIRST - it&#x27;s the primary, and the layout grows around it.
+- One continuous gesture: pull, slide, release - lifting between steps cancels the menu.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">three-way overscroll radial menu.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/google-chrome-pull-down-to-reload-and-new-tab">original interaction</a> by Google. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Chrome mobile's overscroll actions - pulling down on a page reveals three circular action buttons (new tab +, reload, close tab X) in a row; dragging the finger across them highlights each, and releasing on one fires it with a snap-back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA Google new-tab page. On pull-down, the page content slides down and three gray circular buttons appear in the space above it: \"+\" (new tab, left), circular-arrow (reload, center), \"X\" (close tab, right), each with a tiny label (\"New Tab\", \"Reload\", \"Close Tab\").\n\n## Motion spec\nPattern: three-way overscroll radial menu.\n- Pull: the page translates down 1:1 with the drag (resistance 0.5x past 60px); the three circles fade and scale in staggered center-out (reload first, then + and X, 150ms, 60ms apart) as the pull crosses ~90px.\n- Drag horizontally without lifting: the finger's nearest circle highlights (gray -> dark fill, icon inverting white, 150ms) with a light haptic tick per switch; the highlight travels with the touch.\n- Release on a circle: it flashes dark (120ms), the page snaps back up (spring ~380/22) and the action fires - reload spins its arrow, new tab / close tab transition the view.\n- Release between circles or below threshold: circles fade out upward (200ms) and the page settles home - no action.\n\n## Calibration\n- Circles are 44px, spaced 72px apart - one-thumb horizontal travel.\n- Highlight requires ~40% proximity to a circle's center; hysteresis prevents flicker between two.\n\n## Reduced motion\nCircles appear without stagger; page snaps back without spring.\n\n## Don't miss\n- The center reload appears FIRST - it's the primary, and the layout grows around it.\n- One continuous gesture: pull, slide, release - lifting between steps cancels the menu."</script>
+</body></html>

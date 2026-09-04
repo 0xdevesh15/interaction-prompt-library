@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Order Purchased Offer Card Expand Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Order Purchased Offer Card Expand Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-order-purchased-offer-card-expand-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-order-purchased-offer-card-expand-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-order-purchased-offer-card-expand-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s post-purchase promo card - on the order-success page a collapsed promo band auto-expands into a tall groupbuy panel, its logo and member avatars staggering in, pushing the cards below down with a spring.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edd698dac995177945a8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edd698dac995177945a8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-order-purchased-offer-card-expand-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s post-purchase promo card - on the order-success page a collapsed promo band auto-expands into a tall groupbuy panel, its logo and member avatars staggering in, pushing the cards below down with a spring.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED order-success page, white: &quot;no more long distance&quot; header, a &quot;1 product purchased&quot; card, then a promo card - collapsed: a slim purple band with a label; expanded: a tall purple panel with the &quot;groupbuy&quot; diamond logo and wordmark, a row of member avatars, and copy - above a dark green &quot;level 2 unlocked&quot; card. A &quot;Continue shopping&quot; button pins the bottom.
+
+## Motion spec
+Pattern: auto-expanding promo card with staggered interior reveal.
+- ~600ms after the page settles, the promo card&#x27;s height grows from band to panel (spring ~280/20, slight overshoot) - everything below translates down with it 1:1, keeping gaps constant.
+- Inside the new space: the diamond logo draws/scales in first (scale 0 -&gt; 1, spring ~400/15, rotateZ -90 -&gt; 0), then the &quot;groupbuy&quot; wordmark fades up (translateY 10 -&gt; 0, 250ms).
+- The member avatars pop in one by one (scale 0 -&gt; 1, spring ~450/18, 70ms stagger) sliding into their overlapping row; a count badge lands last (scale pop, 150ms).
+- The card&#x27;s purple deepens slightly as it expands (color tween over the spring).
+- Tap anywhere on the panel to collapse it back (same spring reversed); it re-expands on the next visit.
+
+## Calibration
+- The expansion must read as the card opening, not the page scrolling - content above never moves.
+- The purple panel is the only saturated block on the page; keep neighboring cards muted.
+
+## Reduced motion
+Card height animates 250ms linear; interior elements fade in together (200ms).
+
+## Don&#x27;t miss
+- The green &quot;level 2 unlocked&quot; card below never changes size - it just rides the push.
+- The logo&#x27;s rotational entry is the signature - don&#x27;t flatten it to a fade.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-expanding promo card with staggered interior reveal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-order-purchased-offer-card-expand-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's post-purchase promo card - on the order-success page a collapsed promo band auto-expands into a tall groupbuy panel, its logo and member avatars staggering in, pushing the cards below down with a spring.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED order-success page, white: \"no more long distance\" header, a \"1 product purchased\" card, then a promo card - collapsed: a slim purple band with a label; expanded: a tall purple panel with the \"groupbuy\" diamond logo and wordmark, a row of member avatars, and copy - above a dark green \"level 2 unlocked\" card. A \"Continue shopping\" button pins the bottom.\n\n## Motion spec\nPattern: auto-expanding promo card with staggered interior reveal.\n- ~600ms after the page settles, the promo card's height grows from band to panel (spring ~280/20, slight overshoot) - everything below translates down with it 1:1, keeping gaps constant.\n- Inside the new space: the diamond logo draws/scales in first (scale 0 -> 1, spring ~400/15, rotateZ -90 -> 0), then the \"groupbuy\" wordmark fades up (translateY 10 -> 0, 250ms).\n- The member avatars pop in one by one (scale 0 -> 1, spring ~450/18, 70ms stagger) sliding into their overlapping row; a count badge lands last (scale pop, 150ms).\n- The card's purple deepens slightly as it expands (color tween over the spring).\n- Tap anywhere on the panel to collapse it back (same spring reversed); it re-expands on the next visit.\n\n## Calibration\n- The expansion must read as the card opening, not the page scrolling - content above never moves.\n- The purple panel is the only saturated block on the page; keep neighboring cards muted.\n\n## Reduced motion\nCard height animates 250ms linear; interior elements fade in together (200ms).\n\n## Don't miss\n- The green \"level 2 unlocked\" card below never changes size - it just rides the push.\n- The logo's rotational entry is the signature - don't flatten it to a fade."</script>
+</body></html>

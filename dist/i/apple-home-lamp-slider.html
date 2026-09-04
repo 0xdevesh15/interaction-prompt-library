@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Home Lamp Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Home Lamp Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-home-lamp-slider"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-home-lamp-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-home-lamp-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Home&#x27;s lamp control - a vertical capsule slider over a blurred room backdrop that stretches elastically as you drag brightness, with a color-dot row that sweeps the lamp&#x27;s hue and an off state that empties the capsule.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b64e3861d73e2622bdc080/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b64e3861d73e2622bdc080/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-home-lamp-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Home&#x27;s lamp control - a vertical capsule slider over a blurred room backdrop that stretches elastically as you drag brightness, with a color-dot row that sweeps the lamp&#x27;s hue and an off state that empties the capsule.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen blurred room photo. &quot;Mi Lamp&quot; title and room name top center. Center: a tall rounded capsule - the slider. Its lower portion fills with the lamp&#x27;s current color (amber/orange), capped by a small white bulb glyph; the unfilled portion stays dark translucent. Below: a row of color dots (ambers, white, orange). Off state: capsule empty, showing a gray crossed-bolt glyph.
+
+## Motion spec
+Pattern: elastic fill slider with live color.
+- Dragging vertically fills the capsule from the bottom 1:1 with the finger; the fill&#x27;s top edge stretches past the finger slightly and settles (spring stiffness ~250, damping ~18) - the elastic overshoot is the tactile signature.
+- The bulb glyph rides the fill&#x27;s top edge and tilts a few degrees with drag velocity.
+- Tapping a color dot sweeps the fill&#x27;s hue to the new color over 300ms (interpolating through the shortest hue path); the selected dot gets a ring highlight (150ms).
+- Dragging to zero (or tapping off) empties the capsule with a drain animation (fill height to 0, 250ms, ease-in) and swaps the glyph to the crossed bolt.
+- Turning on refills to the last level with the reverse spring.
+
+## Calibration
+- The stretch must stay subtle: overshoot beyond ~8% of the capsule height reads as rubber, not glass.
+- Color changes animate the fill only - the backdrop blur stays constant.
+
+## Reduced motion
+Fill tracks the finger without elastic overshoot; color changes are instant.
+
+## Don&#x27;t miss
+- The fill grows from the bottom of the capsule, and the glyph sits at the fill&#x27;s surface, not the capsule&#x27;s top.
+- The capsule is translucent when unfilled - the blurred room shows through it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">elastic fill slider with live color.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-home-lamp-slider">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Home's lamp control - a vertical capsule slider over a blurred room backdrop that stretches elastically as you drag brightness, with a color-dot row that sweeps the lamp's hue and an off state that empties the capsule.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen blurred room photo. \"Mi Lamp\" title and room name top center. Center: a tall rounded capsule - the slider. Its lower portion fills with the lamp's current color (amber/orange), capped by a small white bulb glyph; the unfilled portion stays dark translucent. Below: a row of color dots (ambers, white, orange). Off state: capsule empty, showing a gray crossed-bolt glyph.\n\n## Motion spec\nPattern: elastic fill slider with live color.\n- Dragging vertically fills the capsule from the bottom 1:1 with the finger; the fill's top edge stretches past the finger slightly and settles (spring stiffness ~250, damping ~18) - the elastic overshoot is the tactile signature.\n- The bulb glyph rides the fill's top edge and tilts a few degrees with drag velocity.\n- Tapping a color dot sweeps the fill's hue to the new color over 300ms (interpolating through the shortest hue path); the selected dot gets a ring highlight (150ms).\n- Dragging to zero (or tapping off) empties the capsule with a drain animation (fill height to 0, 250ms, ease-in) and swaps the glyph to the crossed bolt.\n- Turning on refills to the last level with the reverse spring.\n\n## Calibration\n- The stretch must stay subtle: overshoot beyond ~8% of the capsule height reads as rubber, not glass.\n- Color changes animate the fill only - the backdrop blur stays constant.\n\n## Reduced motion\nFill tracks the finger without elastic overshoot; color changes are instant.\n\n## Don't miss\n- The fill grows from the bottom of the capsule, and the glyph sits at the fill's surface, not the capsule's top.\n- The capsule is translucent when unfilled - the blurred room shows through it."</script>
+</body></html>

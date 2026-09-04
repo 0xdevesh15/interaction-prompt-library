@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Things 3 Intro Logo Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Things 3 Intro Logo Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/things-3-intro-logo-animation"><b>Things</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/things-3-intro-logo-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/things-3-intro-logo-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Things 3&#x27;s intro logo animation - on the welcome card, a sheet of paper slides into the blue checkbox and folds into the checkmark, forming the Things icon with a springy settle.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91bb79a267f9966fcdd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91bb79a267f9966fcdd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-things-3-intro-logo-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Things 3&#x27;s intro logo animation - on the welcome card, a sheet of paper slides into the blue checkbox and folds into the checkmark, forming the Things icon with a springy settle.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A light grey screen with a centered white card: the Things logo (blue rounded-square checkbox with a white check), the wordmark &quot;Things&quot;, the line &quot;Welcome. Here&#x27;s what you need to know in a nutshell.&quot;, and a blue Continue button.
+
+## Motion spec
+Pattern: assembling logo mark.
+- The card fades in and rises slightly (300ms).
+- The checkbox square pops in empty (scale 0.5 -&gt; 1, spring ~380/18, overshoot).
+- A small white paper sheet slides in from above-left (translate + slight rotate, 350ms, ease-out) and lands in the box.
+- The sheet folds/creases into the checkmark: the bottom edge kicks up (rotateX-ish fold, 250ms) and the stroke snaps into the check shape with a spring (~420/20, small overshoot).
+- The box&#x27;s blue deepens as the check locks in; a soft shadow settles under the card.
+- &quot;Things&quot; and the subtitle fade/translate up in sequence (120ms apart), then Continue slides up (spring ~360/22).
+
+## Calibration
+- The fold is the hero - keep it under 300ms with one clear overshoot.
+- Everything else stays quiet; the card never moves after entry.
+
+## Reduced motion
+Logo fades in fully formed; text crossfades.
+
+## Don&#x27;t miss
+- The check&#x27;s short arm points down-left, long arm up-right - the classic Things geometry.
+- The paper has a faint top edge line before folding, so it reads as a sheet, not a blob.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">assembling logo mark.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/things-3-intro-logo-animation">original interaction</a> by Things. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Things 3's intro logo animation - on the welcome card, a sheet of paper slides into the blue checkbox and folds into the checkmark, forming the Things icon with a springy settle.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA light grey screen with a centered white card: the Things logo (blue rounded-square checkbox with a white check), the wordmark \"Things\", the line \"Welcome. Here's what you need to know in a nutshell.\", and a blue Continue button.\n\n## Motion spec\nPattern: assembling logo mark.\n- The card fades in and rises slightly (300ms).\n- The checkbox square pops in empty (scale 0.5 -> 1, spring ~380/18, overshoot).\n- A small white paper sheet slides in from above-left (translate + slight rotate, 350ms, ease-out) and lands in the box.\n- The sheet folds/creases into the checkmark: the bottom edge kicks up (rotateX-ish fold, 250ms) and the stroke snaps into the check shape with a spring (~420/20, small overshoot).\n- The box's blue deepens as the check locks in; a soft shadow settles under the card.\n- \"Things\" and the subtitle fade/translate up in sequence (120ms apart), then Continue slides up (spring ~360/22).\n\n## Calibration\n- The fold is the hero - keep it under 300ms with one clear overshoot.\n- Everything else stays quiet; the card never moves after entry.\n\n## Reduced motion\nLogo fades in fully formed; text crossfades.\n\n## Don't miss\n- The check's short arm points down-left, long arm up-right - the classic Things geometry.\n- The paper has a faint top edge line before folding, so it reads as a sheet, not a blob."</script>
+</body></html>

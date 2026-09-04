@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Numo Tooltip Pop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Numo Tooltip Pop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/numo-tooltip-pop-animation"><b>Numo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/numo-tooltip-pop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/numo-tooltip-pop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Numo&#x27;s onboarding tooltip chain - tapping NEXT makes the current orange tooltip shrink-pop out with springy physics while the next tooltip scales up pointing at its target, walking the user across the screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb578f8d12020de77e66/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb578f8d12020de77e66/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-numo-tooltip-pop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Numo&#x27;s onboarding tooltip chain - tapping NEXT makes the current orange tooltip shrink-pop out with springy physics while the next tooltip scales up pointing at its target, walking the user across the screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Blue-header task screen: &quot;Today&quot; title, a top icon row (Plans, Backlog, Tags, Reminders) that appears during the tour, task list (&quot;Begin my ADHD journey&quot; rows), FAB, tab bar. Tooltips: orange rounded bubbles with white copy and a NEXT button, anchored with a small tail to UI elements (bottom area first, then a task row).
+
+## Motion spec
+Pattern: tooltip tour with pop handoff, ~500ms per handoff.
+- Tooltip idle: gentle bob (translateY +-3px, 2s loop).
+- NEXT tap: button presses (scale 0.94, 80ms); the tooltip shrinks to scale 0.6 and fades out toward its tail anchor (180ms, ease-in) with a tiny spring overshoot on the shrink.
+- 80ms later the next tooltip scales up from its own anchor point (scale 0.5 -&gt; 1, spring ~400/18, 300ms), its tail aimed at the new target.
+- If the target is off-screen or hidden (e.g. the top icon row), that UI fades/slides in first (250ms), then the tooltip pops.
+
+## Calibration
+- Outgoing tooltip collapses toward its tail, incoming grows from its tail - the anchor is the transform origin, never the bubble center.
+- The 80ms gap between pop-out and pop-in is the rhythm; overlapping them reads as a crossfade between unrelated bubbles.
+
+## Reduced motion
+Old tooltip fades out, new one fades in (200ms each), no scale.
+
+## Don&#x27;t miss
+- Each tooltip&#x27;s tail points at a real element; a floating bubble with no anchor fails the tour.
+- The tour always shows exactly one tooltip - two on screen at once is a bug, not a style.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tooltip tour with pop handoff, ~500ms per handoff.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/numo-tooltip-pop-animation">original interaction</a> by Numo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Numo's onboarding tooltip chain - tapping NEXT makes the current orange tooltip shrink-pop out with springy physics while the next tooltip scales up pointing at its target, walking the user across the screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlue-header task screen: \"Today\" title, a top icon row (Plans, Backlog, Tags, Reminders) that appears during the tour, task list (\"Begin my ADHD journey\" rows), FAB, tab bar. Tooltips: orange rounded bubbles with white copy and a NEXT button, anchored with a small tail to UI elements (bottom area first, then a task row).\n\n## Motion spec\nPattern: tooltip tour with pop handoff, ~500ms per handoff.\n- Tooltip idle: gentle bob (translateY +-3px, 2s loop).\n- NEXT tap: button presses (scale 0.94, 80ms); the tooltip shrinks to scale 0.6 and fades out toward its tail anchor (180ms, ease-in) with a tiny spring overshoot on the shrink.\n- 80ms later the next tooltip scales up from its own anchor point (scale 0.5 -> 1, spring ~400/18, 300ms), its tail aimed at the new target.\n- If the target is off-screen or hidden (e.g. the top icon row), that UI fades/slides in first (250ms), then the tooltip pops.\n\n## Calibration\n- Outgoing tooltip collapses toward its tail, incoming grows from its tail - the anchor is the transform origin, never the bubble center.\n- The 80ms gap between pop-out and pop-in is the rhythm; overlapping them reads as a crossfade between unrelated bubbles.\n\n## Reduced motion\nOld tooltip fades out, new one fades in (200ms each), no scale.\n\n## Don't miss\n- Each tooltip's tail points at a real element; a floating bubble with no anchor fails the tour.\n- The tour always shows exactly one tooltip - two on screen at once is a bug, not a style."</script>
+</body></html>

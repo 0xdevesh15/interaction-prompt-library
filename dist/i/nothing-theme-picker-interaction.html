@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nothing Theme Picker Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Nothing Theme Picker Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/nothing-theme-picker-interaction"><b>Nothing</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nothing-theme-picker-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nothing-theme-picker-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Nothing X&#x27;s colour theme picker - three stacked circular options (Light, Dark, System) with a red-outlined selection ring that slides between them while the whole screen previews the chosen theme.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb4d61d73e2622b34818/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb4d61d73e2622b34818/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-nothing-theme-picker-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Nothing X&#x27;s colour theme picker - three stacked circular options (Light, Dark, System) with a red-outlined selection ring that slides between them while the whole screen previews the chosen theme.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A minimal &quot;COLOUR THEME&quot; settings screen in Nothing&#x27;s dot-matrix voice: back chevron, small-caps header, and three large circles stacked vertically - Light (white fill), Dark (black fill), System (gray fill) - each labeled in tiny dot-matrix text. A thin red-outlined ring marks the selection. The screen background itself is the preview: light gray for Light, black for Dark.
+
+## Motion spec
+Pattern: sliding selection ring with live theme preview.
+- Tap a circle: the red ring slides from its current circle to the tapped one (spring ~350/28), stretching slightly along its path (scaleY 1.1 mid-travel) like a rubber band.
+- As the ring travels, the entire screen crossfades to the selected theme (300ms, ease-in-out) - background, text, and the other circles all invert together.
+- The tapped circle does a small press bounce (scale 0.96 to 1, spring ~420/24) on selection.
+- Selecting System: the ring lands and the screen fades to match the OS current theme, with a tiny dot-matrix hint line appearing under the label (fade, 200ms).
+- The ring&#x27;s red stays constant across themes - the one fixed accent.
+
+## Calibration
+- The ring travels through the space between circles - it never teleports or crossfades.
+- Theme crossfade starts when the ring starts moving, not when it lands; the preview feels immediate.
+
+## Reduced motion
+Ring jumps to selection; theme crossfades.
+
+## Don&#x27;t miss
+- Labels are dot-matrix/Nothing-style type, tiny and tracked wide - generic sans breaks the brand.
+- Dark theme&#x27;s Dark circle is still visible as a filled disc against black - give it a faint outline.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sliding selection ring with live theme preview.</div></div><div><div class="k">Content type</div><div class="v">interactive gesture</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/nothing-theme-picker-interaction">original interaction</a> by Nothing. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Nothing X's colour theme picker - three stacked circular options (Light, Dark, System) with a red-outlined selection ring that slides between them while the whole screen previews the chosen theme.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA minimal \"COLOUR THEME\" settings screen in Nothing's dot-matrix voice: back chevron, small-caps header, and three large circles stacked vertically - Light (white fill), Dark (black fill), System (gray fill) - each labeled in tiny dot-matrix text. A thin red-outlined ring marks the selection. The screen background itself is the preview: light gray for Light, black for Dark.\n\n## Motion spec\nPattern: sliding selection ring with live theme preview.\n- Tap a circle: the red ring slides from its current circle to the tapped one (spring ~350/28), stretching slightly along its path (scaleY 1.1 mid-travel) like a rubber band.\n- As the ring travels, the entire screen crossfades to the selected theme (300ms, ease-in-out) - background, text, and the other circles all invert together.\n- The tapped circle does a small press bounce (scale 0.96 to 1, spring ~420/24) on selection.\n- Selecting System: the ring lands and the screen fades to match the OS current theme, with a tiny dot-matrix hint line appearing under the label (fade, 200ms).\n- The ring's red stays constant across themes - the one fixed accent.\n\n## Calibration\n- The ring travels through the space between circles - it never teleports or crossfades.\n- Theme crossfade starts when the ring starts moving, not when it lands; the preview feels immediate.\n\n## Reduced motion\nRing jumps to selection; theme crossfades.\n\n## Don't miss\n- Labels are dot-matrix/Nothing-style type, tiny and tracked wide - generic sans breaks the brand.\n- Dark theme's Dark circle is still visible as a filled disc against black - give it a faint outline."</script>
+</body></html>

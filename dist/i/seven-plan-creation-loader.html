@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seven Plan Creation Loader - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Seven Plan Creation Loader</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/seven-plan-creation-loader"><b>Seven</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/seven-plan-creation-loader">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/seven-plan-creation-loader">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Seven&#x27;s plan-creation loader - &quot;Creating your workout plan.&quot; over a blue wave header while a grid of activity icons streams upward and a central circular badge cycles through exercise glyphs, then morphs into the ready state (&quot;Your workout plan is ready! Get Fit - 7 Week&quot;).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf54a3a8ec7d01f57c010d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf54a3a8ec7d01f57c010d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-seven-plan-creation-loader.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Seven&#x27;s plan-creation loader - &quot;Creating your workout plan.&quot; over a blue wave header while a grid of activity icons streams upward and a central circular badge cycles through exercise glyphs, then morphs into the ready state (&quot;Your workout plan is ready! Get Fit - 7 Week&quot;).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen, curved blue header (&quot;Creating your workout plan.&quot; with an ellipsis that animates), a central white circular badge straddling the wave, and behind it a loose grid of light-blue activity icons (bottles, weights, poses) filling the body.
+
+## Motion spec
+Pattern: streaming icon field with morphing progress badge.
+- The icon grid scrolls continuously upward (~40px/s), icons drifting with slight per-column offset; opacity ~25% so they read as texture.
+- The center badge cycles through activity icons every ~600ms (crossfade 200ms with a slight scale pulse 1 -&gt; 1.1).
+- On completion: the icon grid fades out (300ms), the badge&#x27;s glyph becomes a white check on orange with a spring pop (scale 0.7 -&gt; 1.1 -&gt; 1, ~350/18), the header text crossfades to &quot;Your workout plan is ready!&quot;, and the plan summary rows (goal, duration) slide up staggered 120ms apart.
+
+## Calibration
+- The loader runs at least one full badge cycle even if the data is ready sooner - never flash it.
+- Icons are single-weight line art, always the same light blue.
+
+## Reduced motion
+Static icon grid; badge crossfades only.
+
+## Don&#x27;t miss
+- The badge sits exactly on the wave seam, half over blue half over white - it needs a white ring to stay legible.
+- The transition to ready is a morph, not a screen swap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">streaming icon field with morphing progress badge.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/seven-plan-creation-loader">original interaction</a> by Seven. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Seven's plan-creation loader - \"Creating your workout plan.\" over a blue wave header while a grid of activity icons streams upward and a central circular badge cycles through exercise glyphs, then morphs into the ready state (\"Your workout plan is ready! Get Fit - 7 Week\").\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen, curved blue header (\"Creating your workout plan.\" with an ellipsis that animates), a central white circular badge straddling the wave, and behind it a loose grid of light-blue activity icons (bottles, weights, poses) filling the body.\n\n## Motion spec\nPattern: streaming icon field with morphing progress badge.\n- The icon grid scrolls continuously upward (~40px/s), icons drifting with slight per-column offset; opacity ~25% so they read as texture.\n- The center badge cycles through activity icons every ~600ms (crossfade 200ms with a slight scale pulse 1 -> 1.1).\n- On completion: the icon grid fades out (300ms), the badge's glyph becomes a white check on orange with a spring pop (scale 0.7 -> 1.1 -> 1, ~350/18), the header text crossfades to \"Your workout plan is ready!\", and the plan summary rows (goal, duration) slide up staggered 120ms apart.\n\n## Calibration\n- The loader runs at least one full badge cycle even if the data is ready sooner - never flash it.\n- Icons are single-weight line art, always the same light blue.\n\n## Reduced motion\nStatic icon grid; badge crossfades only.\n\n## Don't miss\n- The badge sits exactly on the wave seam, half over blue half over white - it needs a white ring to stay legible.\n- The transition to ready is a morph, not a screen swap."</script>
+</body></html>

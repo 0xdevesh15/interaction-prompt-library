@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Media Morph Preview Scale Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Media Morph Preview Scale Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-media-morph-preview-scale-interaction"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-media-morph-preview-scale-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-media-morph-preview-scale-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airbnb&#x27;s photo morph - tapping an image in the media grid scales it out of its cell into a large preview over the blurred gallery, and dismissing shrinks it back into its exact grid position.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f0d704558b404636d21382/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f0d704558b404636d21382/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-media-morph-preview-scale-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airbnb&#x27;s photo morph - tapping an image in the media grid scales it out of its cell into a large preview over the blurred gallery, and dismissing shrinks it back into its exact grid position.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White Airbnb listing: a detail page (&quot;I&#x27;ll come to you&quot;) with a photo collage header, which scrolls into a dense 2-column media grid of food photography. The preview state shows the tapped image large at center-top over the heavily blurred grid, with a close affordance. The sequence ends by returning to the listing page.
+
+## Motion spec
+Pattern: shared-element scale morph, ~450ms each way.
+- Open: the tapped cell&#x27;s image detaches and scales/translates from its grid rect to the preview rect (450ms, ease-in-out), corner radius animating from the cell&#x27;s to the preview&#x27;s; the rest of the grid blurs (0 -&gt; 24px) and dims (400ms) underneath.
+- Settle: the preview breathes to its final size (scale 0.98 -&gt; 1, 200ms).
+- Close: the image reverses the same path back into its cell (400ms, ease-in-out) as the blur lifts; neighboring cells never reflow.
+- Exit: returning to the listing, the collage cross-fades back (250ms).
+
+## Calibration
+- The morph uses the cell&#x27;s real geometry - the image must start and end pixel-aligned with its grid slot.
+- The blurred backdrop is the live grid, not a solid scrim.
+
+## Reduced motion
+Preview fades in over a dimmed grid (250ms); no scale path.
+
+## Don&#x27;t miss
+- Only the tapped image moves; every other cell stays pinned under the blur.
+- The morph keeps the image&#x27;s aspect crop continuous throughout - no squashing mid-flight.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element scale morph, ~450ms each way.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-media-morph-preview-scale-interaction">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airbnb's photo morph - tapping an image in the media grid scales it out of its cell into a large preview over the blurred gallery, and dismissing shrinks it back into its exact grid position.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite Airbnb listing: a detail page (\"I'll come to you\") with a photo collage header, which scrolls into a dense 2-column media grid of food photography. The preview state shows the tapped image large at center-top over the heavily blurred grid, with a close affordance. The sequence ends by returning to the listing page.\n\n## Motion spec\nPattern: shared-element scale morph, ~450ms each way.\n- Open: the tapped cell's image detaches and scales/translates from its grid rect to the preview rect (450ms, ease-in-out), corner radius animating from the cell's to the preview's; the rest of the grid blurs (0 -> 24px) and dims (400ms) underneath.\n- Settle: the preview breathes to its final size (scale 0.98 -> 1, 200ms).\n- Close: the image reverses the same path back into its cell (400ms, ease-in-out) as the blur lifts; neighboring cells never reflow.\n- Exit: returning to the listing, the collage cross-fades back (250ms).\n\n## Calibration\n- The morph uses the cell's real geometry - the image must start and end pixel-aligned with its grid slot.\n- The blurred backdrop is the live grid, not a solid scrim.\n\n## Reduced motion\nPreview fades in over a dimmed grid (250ms); no scale path.\n\n## Don't miss\n- Only the tapped image moves; every other cell stays pinned under the blur.\n- The morph keeps the image's aspect crop continuous throughout - no squashing mid-flight."</script>
+</body></html>

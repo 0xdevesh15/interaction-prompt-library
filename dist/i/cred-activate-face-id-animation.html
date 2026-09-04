@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Activate Face ID Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Activate Face ID Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-activate-face-id-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-activate-face-id-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-activate-face-id-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s Face ID activation - concentric ripple rings pulse around the Face ID glyph, and on activation the glyph flips to a green check as the rings flush green, then settles into a shield.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d532c579cd218090c81b55/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d532c579cd218090c81b55/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-activate-face-id-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s Face ID activation - concentric ripple rings pulse around the Face ID glyph, and on activation the glyph flips to a green check as the rings flush green, then settles into a shield.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED light screen: back arrow, the glyph medallion top-center (Face ID face in a dark circle wrapped by 3 concentric thin rings), &quot;activate PIN less UPI payments&quot; headline, an HDFC bank account row, a black &quot;Activate Face ID&quot; button, and a skip link.
+
+## Motion spec
+Pattern: concentric ripple rings around a state-flipping medallion.
+- Idle: the rings ripple outward from the medallion (each ring scales 1 -&gt; 1.15 fading 0.8 -&gt; 0, 1.8s, staggered 600ms, looping) - a sonar pulse.
+- On activate: the pulse accelerates (one fast ripple, 600ms), the dark medallion flips to green with a white check (scale 0.85 -&gt; 1.05 -&gt; 1, spring ~380/15), and the rings flush green one by one, innermost first (120ms stagger).
+- A beat later the check morphs into a shield-with-check (path morph, 300ms, ease-in-out) - protected, not just verified.
+- The button&#x27;s label rolls to its success copy (vertical roll, 200ms) as the medallion settles.
+
+## Calibration
+- Green arrives exactly once, at the flip - idle rings stay neutral grey.
+- The medallion is the only filled disc; rings stay hairlines.
+
+## Reduced motion
+Medallion crossfades to the green check (250ms); rings hold static.
+
+## Don&#x27;t miss
+- Ripples originate behind the medallion and are clipped by nothing - they expand over the white background.
+- The shield morph keeps the check&#x27;s stroke continuous - the check never disappears mid-morph.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">concentric ripple rings around a state-flipping medallion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-activate-face-id-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's Face ID activation - concentric ripple rings pulse around the Face ID glyph, and on activation the glyph flips to a green check as the rings flush green, then settles into a shield.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED light screen: back arrow, the glyph medallion top-center (Face ID face in a dark circle wrapped by 3 concentric thin rings), \"activate PIN less UPI payments\" headline, an HDFC bank account row, a black \"Activate Face ID\" button, and a skip link.\n\n## Motion spec\nPattern: concentric ripple rings around a state-flipping medallion.\n- Idle: the rings ripple outward from the medallion (each ring scales 1 -> 1.15 fading 0.8 -> 0, 1.8s, staggered 600ms, looping) - a sonar pulse.\n- On activate: the pulse accelerates (one fast ripple, 600ms), the dark medallion flips to green with a white check (scale 0.85 -> 1.05 -> 1, spring ~380/15), and the rings flush green one by one, innermost first (120ms stagger).\n- A beat later the check morphs into a shield-with-check (path morph, 300ms, ease-in-out) - protected, not just verified.\n- The button's label rolls to its success copy (vertical roll, 200ms) as the medallion settles.\n\n## Calibration\n- Green arrives exactly once, at the flip - idle rings stay neutral grey.\n- The medallion is the only filled disc; rings stay hairlines.\n\n## Reduced motion\nMedallion crossfades to the green check (250ms); rings hold static.\n\n## Don't miss\n- Ripples originate behind the medallion and are clipped by nothing - they expand over the white background.\n- The shield morph keeps the check's stroke continuous - the check never disappears mid-morph."</script>
+</body></html>

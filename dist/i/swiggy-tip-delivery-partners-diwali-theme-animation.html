@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Tip Delivery Partners Diwali Theme Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Tip Delivery Partners Diwali Theme Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-tip-delivery-partners-diwali-theme-animation"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-tip-delivery-partners-diwali-theme-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-tip-delivery-partners-diwali-theme-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Swiggy&#x27;s Diwali tip card - inside the &quot;Say thanks with a Tip!&quot; card on checkout, a small festive thumbnail loops through a Diwali slideshow (diya, lanterns, gifts, celebrations) beside the tip amount options.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177fad85c0894404b445/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177fad85c0894404b445/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-tip-delivery-partners-diwali-theme-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Swiggy&#x27;s Diwali tip card - inside the &quot;Say thanks with a Tip!&quot; card on checkout, a small festive thumbnail loops through a Diwali slideshow (diya, lanterns, gifts, celebrations) beside the tip amount options.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The checkout sheet: &quot;Offers &amp; Benefits&quot; / &quot;Apply Coupon&quot; rows, then the tip card - &quot;Say thanks with a Tip!&quot; header, copy &quot;Day &amp; night, our delivery partners bring your favourite meals. Thank them with a tip.&quot;, a rounded-square festive image at the right, and amount chips below (Rs20, Rs30 with a &quot;Most Tipped&quot; flag, Rs50, Other). Below: Delivery Instructions icons (Avoid ringing bell, Leave at the door, Directions to reach, Avoid calling), Bill Details, and the payment row (HDFC Diners Black Metal).
+
+## Motion spec
+Pattern: looping festive slideshow in a card slot.
+- The festive thumbnail cycles images on a 2.5s cadence: each slide crossfades in (400ms) with a gentle Ken Burns drift (scale 1 -&gt; 1.06 over the hold).
+- A tiny progress indicator under the thumbnail advances per slide.
+- Tapping an amount chip: the chip highlights (fill + border, 150ms) and the thumbnail does a quick celebratory pop (scale 1 -&gt; 1.08 -&gt; 1, spring ~480/20) with a sparkle burst.
+- The &quot;Most Tipped&quot; flag rides the Rs30 chip with a subtle sway.
+- The rest of the sheet is static; the slideshow loops indefinitely until an amount is chosen, then settles on the thank-you frame.
+
+## Calibration
+- The slideshow is ambient - slow crossfades only, no hard cuts.
+- The thumbnail is small (about chip height); keep the motion subtle so the amounts stay the focus.
+
+## Reduced motion
+Static festive image, no cycle; chip selection changes fill only.
+
+## Don&#x27;t miss
+- Slides are Diwali-specific: lit diyas, lantern strings, gift boxes - warm orange palette matching the brand.
+- The image corners match the card&#x27;s radius language.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping festive slideshow in a card slot.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-tip-delivery-partners-diwali-theme-animation">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Swiggy's Diwali tip card - inside the \"Say thanks with a Tip!\" card on checkout, a small festive thumbnail loops through a Diwali slideshow (diya, lanterns, gifts, celebrations) beside the tip amount options.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe checkout sheet: \"Offers & Benefits\" / \"Apply Coupon\" rows, then the tip card - \"Say thanks with a Tip!\" header, copy \"Day & night, our delivery partners bring your favourite meals. Thank them with a tip.\", a rounded-square festive image at the right, and amount chips below (Rs20, Rs30 with a \"Most Tipped\" flag, Rs50, Other). Below: Delivery Instructions icons (Avoid ringing bell, Leave at the door, Directions to reach, Avoid calling), Bill Details, and the payment row (HDFC Diners Black Metal).\n\n## Motion spec\nPattern: looping festive slideshow in a card slot.\n- The festive thumbnail cycles images on a 2.5s cadence: each slide crossfades in (400ms) with a gentle Ken Burns drift (scale 1 -> 1.06 over the hold).\n- A tiny progress indicator under the thumbnail advances per slide.\n- Tapping an amount chip: the chip highlights (fill + border, 150ms) and the thumbnail does a quick celebratory pop (scale 1 -> 1.08 -> 1, spring ~480/20) with a sparkle burst.\n- The \"Most Tipped\" flag rides the Rs30 chip with a subtle sway.\n- The rest of the sheet is static; the slideshow loops indefinitely until an amount is chosen, then settles on the thank-you frame.\n\n## Calibration\n- The slideshow is ambient - slow crossfades only, no hard cuts.\n- The thumbnail is small (about chip height); keep the motion subtle so the amounts stay the focus.\n\n## Reduced motion\nStatic festive image, no cycle; chip selection changes fill only.\n\n## Don't miss\n- Slides are Diwali-specific: lit diyas, lantern strings, gift boxes - warm orange palette matching the brand.\n- The image corners match the card's radius language."</script>
+</body></html>

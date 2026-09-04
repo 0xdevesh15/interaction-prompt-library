@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ultrahuman Winding Down Timer Text Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Ultrahuman Winding Down Timer Text Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ultrahuman-winding-down-timer-text-animation"><b>Ultrahuman</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ultrahuman-winding-down-timer-text-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ultrahuman-winding-down-timer-text-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Ultrahuman&#x27;s wind-down countdown - the timer inside the circadian dial rolls its digits vertically like a drum counter as each second ticks.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4ec7f3dde702a6fe3f746/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4ec7f3dde702a6fe3f746/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ultrahuman-winding-down-timer-text-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Ultrahuman&#x27;s wind-down countdown - the timer inside the circadian dial rolls its digits vertically like a drum counter as each second ticks.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark circadian rhythm card: a purple-blue circular phase dial, &quot;HOURS LEFT&quot; label, and a large monospaced countdown (04:12:45) at its center. &quot;Start winding down&quot; copy block below.
+
+## Motion spec
+Pattern: rolling-digit countdown, continuous.
+- Each second, the changing digit rolls vertically out of view as the new digit rolls in from the opposite side (250ms, slight ease-out), like a split-flap/odometer drum.
+- Only digits that change animate; stable digits hold perfectly still.
+- Lower-place digits roll every second; tens cascade naturally when their neighbor carries.
+- The dial ring and labels stay static; the roll is the only motion.
+
+## Calibration
+- Roll direction is consistent (new values enter from the top for a countdown) - mixed directions read as a slot machine.
+- Digits are monospaced and center-pinned; any horizontal jitter breaks the drum illusion.
+
+## Reduced motion
+Digits crossfade on change (150ms).
+
+## Don&#x27;t miss
+- The roll is clipped to the digit&#x27;s own cell - neighboring digits must never see the travel.
+- The colon separators blink or hold steady, but never roll.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rolling-digit countdown, continuous.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ultrahuman-winding-down-timer-text-animation">original interaction</a> by Ultrahuman. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Ultrahuman's wind-down countdown - the timer inside the circadian dial rolls its digits vertically like a drum counter as each second ticks.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark circadian rhythm card: a purple-blue circular phase dial, \"HOURS LEFT\" label, and a large monospaced countdown (04:12:45) at its center. \"Start winding down\" copy block below.\n\n## Motion spec\nPattern: rolling-digit countdown, continuous.\n- Each second, the changing digit rolls vertically out of view as the new digit rolls in from the opposite side (250ms, slight ease-out), like a split-flap/odometer drum.\n- Only digits that change animate; stable digits hold perfectly still.\n- Lower-place digits roll every second; tens cascade naturally when their neighbor carries.\n- The dial ring and labels stay static; the roll is the only motion.\n\n## Calibration\n- Roll direction is consistent (new values enter from the top for a countdown) - mixed directions read as a slot machine.\n- Digits are monospaced and center-pinned; any horizontal jitter breaks the drum illusion.\n\n## Reduced motion\nDigits crossfade on change (150ms).\n\n## Don't miss\n- The roll is clipped to the digit's own cell - neighboring digits must never see the travel.\n- The colon separators blink or hold steady, but never roll."</script>
+</body></html>

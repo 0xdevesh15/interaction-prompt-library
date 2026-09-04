@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Must Movie Collection - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Must Movie Collection</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/must-movie-collection"><b>Must</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/must-movie-collection">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/must-movie-collection">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Must&#x27;s collection open - tapping a collections list row expands it into a detail page where the row&#x27;s artwork becomes the header, then a staggered 2-column poster grid reveals beneath, and tapping a poster shared-elements into its detail.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c77f50cf45ba67eebe1ae7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c77f50cf45ba67eebe1ae7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-must-movie-collection.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Must&#x27;s collection open - tapping a collections list row expands it into a detail page where the row&#x27;s artwork becomes the header, then a staggered 2-column poster grid reveals beneath, and tapping a poster shared-elements into its detail.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Collections list (rows with small artwork clusters, &quot;Full list of 2024 Oscar nominees&quot;, counts). Detail: header with the same artwork cluster and title, description text, then a 2-column grid of movie posters (Oppenheimer, Barbie, Killers of the Flower Moon, Maestro...), action bar at bottom.
+
+## Motion spec
+Pattern: shared-element list-to-detail with staggered poster reveal.
+- Tap a row: its artwork cluster expands into the detail header (shared element, spring ~300/24, corner radius animating 8 -&gt; 0) while the row&#x27;s title slides up into the header position (300ms, ease-out).
+- The rest of the list fades and slides down away (200ms); description text fades in beneath the header (250ms, 100ms after it lands).
+- The poster grid staggers in row by row: each poster scales 0.85 -&gt; 1 with a 12px rise (spring ~380/20), 40ms apart, alternating columns - the grid ripples downward.
+- Tap a poster: it shared-elements into the movie detail&#x27;s hero (same spring, radius animating back up), the grid behind dimming 30%.
+- Back: the whole sequence reverses - hero returns to its grid cell, grid ripples out upward, header collapses into the list row.
+
+## Calibration
+- The stagger is quick (full grid in under 700ms) - browse speed matters more than ceremony.
+- Shared elements keep aspect fill throughout; no letterbox flash mid-flight.
+
+## Reduced motion
+Simple crossfades between list, detail, and movie page.
+
+## Don&#x27;t miss
+- The artwork cluster is one shared element from row to header - it never disappears or reloads.
+- The stagger alternates left/right columns so the reveal reads as a wave, not a typewriter.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element list-to-detail with staggered poster reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/must-movie-collection">original interaction</a> by Must. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Must's collection open - tapping a collections list row expands it into a detail page where the row's artwork becomes the header, then a staggered 2-column poster grid reveals beneath, and tapping a poster shared-elements into its detail.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCollections list (rows with small artwork clusters, \"Full list of 2024 Oscar nominees\", counts). Detail: header with the same artwork cluster and title, description text, then a 2-column grid of movie posters (Oppenheimer, Barbie, Killers of the Flower Moon, Maestro...), action bar at bottom.\n\n## Motion spec\nPattern: shared-element list-to-detail with staggered poster reveal.\n- Tap a row: its artwork cluster expands into the detail header (shared element, spring ~300/24, corner radius animating 8 -> 0) while the row's title slides up into the header position (300ms, ease-out).\n- The rest of the list fades and slides down away (200ms); description text fades in beneath the header (250ms, 100ms after it lands).\n- The poster grid staggers in row by row: each poster scales 0.85 -> 1 with a 12px rise (spring ~380/20), 40ms apart, alternating columns - the grid ripples downward.\n- Tap a poster: it shared-elements into the movie detail's hero (same spring, radius animating back up), the grid behind dimming 30%.\n- Back: the whole sequence reverses - hero returns to its grid cell, grid ripples out upward, header collapses into the list row.\n\n## Calibration\n- The stagger is quick (full grid in under 700ms) - browse speed matters more than ceremony.\n- Shared elements keep aspect fill throughout; no letterbox flash mid-flight.\n\n## Reduced motion\nSimple crossfades between list, detail, and movie page.\n\n## Don't miss\n- The artwork cluster is one shared element from row to header - it never disappears or reloads.\n- The stagger alternates left/right columns so the reveal reads as a wave, not a typewriter."</script>
+</body></html>

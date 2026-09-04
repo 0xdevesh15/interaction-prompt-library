@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Hold Drag Gesture Tooltip Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Hold Drag Gesture Tooltip Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-hold-drag-gesture-tooltip-animation"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-hold-drag-gesture-tooltip-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-hold-drag-gesture-tooltip-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Instagram&#x27;s editor gesture coach - a hand tooltip loops a hold-and-drag motion with the caption &quot;Hold and drag to change preview size.&quot;, then the real drag fluidly resizes the video preview.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adeff70a8c57042dc6c2ac/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adeff70a8c57042dc6c2ac/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-hold-drag-gesture-tooltip-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Instagram&#x27;s editor gesture coach - a hand tooltip loops a hold-and-drag motion with the caption &quot;Hold and drag to change preview size.&quot;, then the real drag fluidly resizes the video preview.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark video editor: a preview canvas with a white hand-pointer glyph at center and the caption &quot;Hold and drag to change preview size.&quot; with a Skip pill; editing toolbar at the bottom. After the gesture: the preview fills the screen and the caption overlays the footage.
+
+## Motion spec
+Pattern: coached gesture loop then live drag-resize, ~2s loop.
+- Tooltip: the hand presses (scale 0.9, 200ms), holds 400ms, then drags downward 120px (500ms, ease-in-out) as the preview behind it grows (scale 0.8 -&gt; 1); it releases and loops.
+- Real gesture: on the user&#x27;s actual hold, the tooltip fades (150ms) and the preview tracks the drag 1:1 - pinching vertical distance scales the preview between 0.6 and 1.0 with corner radius shrinking as it grows (24 -&gt; 0px).
+- Release: the preview springs to the nearest snap point (spring ~340/22, 300ms).
+- Skip: fades the tooltip and restores the default preview size (300ms).
+
+## Calibration
+- During the coached loop the preview actually resizes with the ghost drag - it is not a static illustration.
+- The caption stays fixed; only the hand and preview move.
+
+## Reduced motion
+A static caption with a non-animated hand icon.
+
+## Don&#x27;t miss
+- The drag is hold-first: the hand visibly presses before it moves.
+- Preview scale and corner radius are coupled throughout the drag.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">coached gesture loop then live drag-resize, ~2s loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-hold-drag-gesture-tooltip-animation">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Instagram's editor gesture coach - a hand tooltip loops a hold-and-drag motion with the caption \"Hold and drag to change preview size.\", then the real drag fluidly resizes the video preview.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark video editor: a preview canvas with a white hand-pointer glyph at center and the caption \"Hold and drag to change preview size.\" with a Skip pill; editing toolbar at the bottom. After the gesture: the preview fills the screen and the caption overlays the footage.\n\n## Motion spec\nPattern: coached gesture loop then live drag-resize, ~2s loop.\n- Tooltip: the hand presses (scale 0.9, 200ms), holds 400ms, then drags downward 120px (500ms, ease-in-out) as the preview behind it grows (scale 0.8 -> 1); it releases and loops.\n- Real gesture: on the user's actual hold, the tooltip fades (150ms) and the preview tracks the drag 1:1 - pinching vertical distance scales the preview between 0.6 and 1.0 with corner radius shrinking as it grows (24 -> 0px).\n- Release: the preview springs to the nearest snap point (spring ~340/22, 300ms).\n- Skip: fades the tooltip and restores the default preview size (300ms).\n\n## Calibration\n- During the coached loop the preview actually resizes with the ghost drag - it is not a static illustration.\n- The caption stays fixed; only the hand and preview move.\n\n## Reduced motion\nA static caption with a non-animated hand icon.\n\n## Don't miss\n- The drag is hold-first: the hand visibly presses before it moves.\n- Preview scale and corner radius are coupled throughout the drag."</script>
+</body></html>

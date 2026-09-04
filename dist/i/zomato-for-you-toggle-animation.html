@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zomato For You Toggle Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zomato For You Toggle Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zomato-for-you-toggle-animation"><b>Zomato</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zomato-for-you-toggle-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zomato-for-you-toggle-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Zomato&#x27;s personalization intro - restaurant cards sit with their ratings, a &quot;For you&quot; badge bounces in, and every rating badge flips to a personalized score in a wave.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6873141214683753e669fff8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6873141214683753e669fff8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zomato-for-you-toggle-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Zomato&#x27;s personalization intro - restaurant cards sit with their ratings, a &quot;For you&quot; badge bounces in, and every rating badge flips to a personalized score in a wave.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream onboarding sheet over a dimmed map: &quot;Now discover restaurants that are a perfect match&quot;, three restaurant cards in a row (bowls flanking &quot;The Burger Deal&quot; in the center), each with a green rating badge (4.1, 4.3, 4.3). A pink &quot;Okay&quot; button at bottom and a close X on top.
+
+## Motion spec
+Pattern: bouncy badge reveal with a cascading rating flip.
+- A small star pill appears above the cards (scale 0 -&gt; 1, spring ~400/16), then expands into the &quot;For you ✦&quot; badge (width spring ~320/18, label fading in mid-expansion).
+- The center card&#x27;s rating badge flips first: the number counts up 4.3 -&gt; 4.6 (rolling digits, 400ms) as the badge shifts green -&gt; deeper green with a star (200ms), with a small bounce on settle (scale 1 -&gt; 1.15 -&gt; 1, spring ~380/14).
+- The flanking badges follow in a wave (150ms stagger): 4.1 -&gt; 5.0 and 4.3 -&gt; 5.1, turning golden-yellow as they become personalized picks.
+- Cards themselves do a subtle proud lift as their badge flips (rise 4pt + back, spring ~320/22).
+
+## Calibration
+- The wave order is center-out: hero card first, sides after.
+- Personalized badges are visually distinct (gold with star) from the plain green originals - the before/after must read at a glance.
+
+## Reduced motion
+Badge fades in; ratings swap without the count animation.
+
+## Don&#x27;t miss
+- Cards keep their photos and names; only badges and scores change.
+- The &quot;For you&quot; badge stays after the wave - it is the screen&#x27;s new anchor.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bouncy badge reveal with a cascading rating flip.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zomato-for-you-toggle-animation">original interaction</a> by Zomato. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Zomato's personalization intro - restaurant cards sit with their ratings, a \"For you\" badge bounces in, and every rating badge flips to a personalized score in a wave.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream onboarding sheet over a dimmed map: \"Now discover restaurants that are a perfect match\", three restaurant cards in a row (bowls flanking \"The Burger Deal\" in the center), each with a green rating badge (4.1, 4.3, 4.3). A pink \"Okay\" button at bottom and a close X on top.\n\n## Motion spec\nPattern: bouncy badge reveal with a cascading rating flip.\n- A small star pill appears above the cards (scale 0 -> 1, spring ~400/16), then expands into the \"For you \u2726\" badge (width spring ~320/18, label fading in mid-expansion).\n- The center card's rating badge flips first: the number counts up 4.3 -> 4.6 (rolling digits, 400ms) as the badge shifts green -> deeper green with a star (200ms), with a small bounce on settle (scale 1 -> 1.15 -> 1, spring ~380/14).\n- The flanking badges follow in a wave (150ms stagger): 4.1 -> 5.0 and 4.3 -> 5.1, turning golden-yellow as they become personalized picks.\n- Cards themselves do a subtle proud lift as their badge flips (rise 4pt + back, spring ~320/22).\n\n## Calibration\n- The wave order is center-out: hero card first, sides after.\n- Personalized badges are visually distinct (gold with star) from the plain green originals - the before/after must read at a glance.\n\n## Reduced motion\nBadge fades in; ratings swap without the count animation.\n\n## Don't miss\n- Cards keep their photos and names; only badges and scores change.\n- The \"For you\" badge stays after the wave - it is the screen's new anchor."</script>
+</body></html>

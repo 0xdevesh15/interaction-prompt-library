@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ben Journal Pull Down to Close Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Ben Journal Pull Down to Close Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ben-journal-pull-down-to-close-interaction"><b>Ben</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ben-journal-pull-down-to-close-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ben-journal-pull-down-to-close-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Ben Journal&#x27;s pull-down-to-close - dragging down on a full-screen note shrinks and tilts it back into the scattered canvas, with a springy physical release.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343a3503bcee22ddd040c4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343a3503bcee22ddd040c4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ben-journal-pull-down-to-close-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Ben Journal&#x27;s pull-down-to-close - dragging down on a full-screen note shrinks and tilts it back into the scattered canvas, with a springy physical release.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Ben Journal: the full-screen note editor (yellow &quot;Note&quot; header, &quot;Write something...&quot; body, keyboard up) over the home canvas (&quot;Dec 2 / Tuesday&quot; header with the scattered widget cards on the dusk sky). Mid-gesture the note header shows &quot;Drag to close&quot; and the canvas behind shows a &quot;Pull down to back&quot; hint.
+
+## Motion spec
+Pattern: pull-down shrink-and-rotate dismiss into a spatial canvas.
+- The note opens full-screen with the keyboard rising (standard 300ms).
+- Pull down from the note&#x27;s top area: the gesture tracks 1:1 - the note translates down, scales down toward its card size (down to ~0.45x at full drag), rotates slightly (up to 4deg, direction following horizontal finger drift), and its corner radius grows toward the card&#x27;s radius - all in drag proportion.
+- As the drag passes 25%, the keyboard dismisses, the note&#x27;s header swaps &quot;Note&quot; to &quot;Drag to close&quot; (150ms crossfade), and the canvas fades in behind (opacity follows drag progress) with its &quot;Pull down to back&quot; hint fading up.
+- Release past 50%: the note springs the rest of the way into its exact slot in the scattered layout (spring ~340/18, rotation settling to the card&#x27;s resting tilt) - a physical landing with a soft thud haptic.
+- Release before 50%: the note springs back to full-screen (same spring reversed), keyboard returning.
+- During the whole gesture the canvas cards stay parked - only the note moves.
+
+## Calibration
+- Every property (scale, rotation, radius, backdrop opacity) is a function of drag distance - nothing runs on a timer while the finger is down.
+- The note must land in its exact original card position and tilt - no approximations.
+
+## Reduced motion
+Pull past the threshold crossfades the note into its card slot (250ms) without tracking.
+
+## Don&#x27;t miss
+- The yellow header strip stays pinned to the note&#x27;s top edge through the whole shrink.
+- The &quot;Pull down to back&quot; hint is the canvas&#x27;s copy - it never appears on the note itself.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">pull-down shrink-and-rotate dismiss into a spatial canvas.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ben-journal-pull-down-to-close-interaction">original interaction</a> by Ben. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Ben Journal's pull-down-to-close - dragging down on a full-screen note shrinks and tilts it back into the scattered canvas, with a springy physical release.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBen Journal: the full-screen note editor (yellow \"Note\" header, \"Write something...\" body, keyboard up) over the home canvas (\"Dec 2 / Tuesday\" header with the scattered widget cards on the dusk sky). Mid-gesture the note header shows \"Drag to close\" and the canvas behind shows a \"Pull down to back\" hint.\n\n## Motion spec\nPattern: pull-down shrink-and-rotate dismiss into a spatial canvas.\n- The note opens full-screen with the keyboard rising (standard 300ms).\n- Pull down from the note's top area: the gesture tracks 1:1 - the note translates down, scales down toward its card size (down to ~0.45x at full drag), rotates slightly (up to 4deg, direction following horizontal finger drift), and its corner radius grows toward the card's radius - all in drag proportion.\n- As the drag passes 25%, the keyboard dismisses, the note's header swaps \"Note\" to \"Drag to close\" (150ms crossfade), and the canvas fades in behind (opacity follows drag progress) with its \"Pull down to back\" hint fading up.\n- Release past 50%: the note springs the rest of the way into its exact slot in the scattered layout (spring ~340/18, rotation settling to the card's resting tilt) - a physical landing with a soft thud haptic.\n- Release before 50%: the note springs back to full-screen (same spring reversed), keyboard returning.\n- During the whole gesture the canvas cards stay parked - only the note moves.\n\n## Calibration\n- Every property (scale, rotation, radius, backdrop opacity) is a function of drag distance - nothing runs on a timer while the finger is down.\n- The note must land in its exact original card position and tilt - no approximations.\n\n## Reduced motion\nPull past the threshold crossfades the note into its card slot (250ms) without tracking.\n\n## Don't miss\n- The yellow header strip stays pinned to the note's top edge through the whole shrink.\n- The \"Pull down to back\" hint is the canvas's copy - it never appears on the note itself."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Threads Swipe to Like Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Threads Swipe to Like Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/threads-swipe-to-like-interaction"><b>Threads</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/threads-swipe-to-like-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/threads-swipe-to-like-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Threads&#x27; swipe-to-like - dragging a post card sideways reveals a heart that scales up as you pull; release past the threshold and the card snaps back with the like confirmed.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/671733987544fc38002d9bbd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/671733987544fc38002d9bbd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-threads-swipe-to-like-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Threads&#x27; swipe-to-like - dragging a post card sideways reveals a heart that scales up as you pull; release past the threshold and the card snaps back with the like confirmed.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The light Threads feed (60fps.design &quot;What&#x27;s new?&quot; composer row; a post by forsmsns, &quot;App Store portfolio section - Made in @Framer&quot;, with a dark screenshot). Swiping the post card right exposes a heart glyph revealed in the gap at the leading edge.
+
+## Motion spec
+Pattern: swipe-reveal confirm gesture.
+- Drag right: the whole card tracks the finger 1:1; in the revealed gutter a heart scales with drag progress (0.3 -&gt; 1.0 at the commit threshold, ~80pt) and greys-to-red as it arms.
+- Cross the threshold: the heart does a readiness pop (extra scale pulse 1 -&gt; 1.2 -&gt; 1, 150ms) mid-drag.
+- Release past threshold: the card springs home (spring ~420/22, 280ms), the heart flashes and flies into the action row&#x27;s heart slot (arc path, 250ms), and the row heart fills red with a small count tick.
+- Release early: the card springs home and the revealed heart shrinks away (scale + fade, 180ms) - nothing happens.
+
+## Calibration
+- The heart&#x27;s growth is tied to drag distance, not time - the user feels the threshold through the animation.
+- The card stays under the finger; no decoupled easing while dragging.
+
+## Reduced motion
+No flight arc - the row heart fills after the card settles.
+
+## Don&#x27;t miss
+- Vertical scroll still wins: the gesture only claims the touch after clear horizontal intent (~10deg cone).
+- The revealed heart sits in the left gutter the swipe creates - it&#x27;s uncovered, not overlaid.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-reveal confirm gesture.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/threads-swipe-to-like-interaction">original interaction</a> by Threads. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Threads' swipe-to-like - dragging a post card sideways reveals a heart that scales up as you pull; release past the threshold and the card snaps back with the like confirmed.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe light Threads feed (60fps.design \"What's new?\" composer row; a post by forsmsns, \"App Store portfolio section - Made in @Framer\", with a dark screenshot). Swiping the post card right exposes a heart glyph revealed in the gap at the leading edge.\n\n## Motion spec\nPattern: swipe-reveal confirm gesture.\n- Drag right: the whole card tracks the finger 1:1; in the revealed gutter a heart scales with drag progress (0.3 -> 1.0 at the commit threshold, ~80pt) and greys-to-red as it arms.\n- Cross the threshold: the heart does a readiness pop (extra scale pulse 1 -> 1.2 -> 1, 150ms) mid-drag.\n- Release past threshold: the card springs home (spring ~420/22, 280ms), the heart flashes and flies into the action row's heart slot (arc path, 250ms), and the row heart fills red with a small count tick.\n- Release early: the card springs home and the revealed heart shrinks away (scale + fade, 180ms) - nothing happens.\n\n## Calibration\n- The heart's growth is tied to drag distance, not time - the user feels the threshold through the animation.\n- The card stays under the finger; no decoupled easing while dragging.\n\n## Reduced motion\nNo flight arc - the row heart fills after the card settles.\n\n## Don't miss\n- Vertical scroll still wins: the gesture only claims the touch after clear horizontal intent (~10deg cone).\n- The revealed heart sits in the left gutter the swipe creates - it's uncovered, not overlaid."</script>
+</body></html>

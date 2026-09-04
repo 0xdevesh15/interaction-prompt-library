@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Match Complete Duo Skate Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Match Complete Duo Skate Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-match-complete-duo-skate-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-match-complete-duo-skate-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-match-complete-duo-skate-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s speed-run lesson complete - Duo skates in on a green brush card, the caption calls out a sub-2-minute finish (&quot;Whoa whoa whoa... How much caffeine have you had?&quot;), and three stat cards stagger in above the Claim XP button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7277c01fefe1a9aa4a31a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7277c01fefe1a9aa4a31a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-match-complete-duo-skate-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s speed-run lesson complete - Duo skates in on a green brush card, the caption calls out a sub-2-minute finish (&quot;Whoa whoa whoa... How much caffeine have you had?&quot;), and three stat cards stagger in above the Claim XP button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: a green brush-stroke card with Duo the owl skating (leaning pose, blue skates), &quot;Lesson complete!&quot; in yellow, then the caption &quot;Whoa whoa whoa. That took under 2 minutes! How much caffeine have you had?&quot;, three stat cards (XP +21 on yellow, 88% on green, 1:37 on blue), and a blue CLAIM XP pill. Small sparkles surround Duo.
+
+## Motion spec
+Pattern: sequential celebration build, ~2.5s.
+- Art: the brush card wipes in diagonally (350ms) as Duo slides in on skates (translateX -40px -&gt; 0 with a slight lean, spring ~320/18, 450ms), sparkles popping around (scale 0 -&gt; 1 -&gt; 0, staggered 60ms).
+- Title: &quot;Lesson complete!&quot; bounces up (spring ~300/18), then the caption fades in below (250ms, +150ms).
+- Stats: the three cards pop in left to right (scale 0.6 -&gt; 1.05 -&gt; 1, spring ~360/20, 110ms stagger), each value counting up as it lands (300ms).
+- Button: CLAIM XP slides up (250ms, +100ms) and holds.
+
+## Calibration
+- Duo&#x27;s skate lean eases out to neutral - he lands, he doesn&#x27;t keep sliding.
+- Stat cards finish counting only after their spring settles.
+
+## Reduced motion
+All elements fade in place (200ms, staggered 80ms); values appear final.
+
+## Don&#x27;t miss
+- The caption is the joke - it must stay readable; don&#x27;t cover it with the stat cards.
+- The brush card edge is rough and hand-painted, matching Duo&#x27;s pose energy.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential celebration build, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-match-complete-duo-skate-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's speed-run lesson complete - Duo skates in on a green brush card, the caption calls out a sub-2-minute finish (\"Whoa whoa whoa... How much caffeine have you had?\"), and three stat cards stagger in above the Claim XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: a green brush-stroke card with Duo the owl skating (leaning pose, blue skates), \"Lesson complete!\" in yellow, then the caption \"Whoa whoa whoa. That took under 2 minutes! How much caffeine have you had?\", three stat cards (XP +21 on yellow, 88% on green, 1:37 on blue), and a blue CLAIM XP pill. Small sparkles surround Duo.\n\n## Motion spec\nPattern: sequential celebration build, ~2.5s.\n- Art: the brush card wipes in diagonally (350ms) as Duo slides in on skates (translateX -40px -> 0 with a slight lean, spring ~320/18, 450ms), sparkles popping around (scale 0 -> 1 -> 0, staggered 60ms).\n- Title: \"Lesson complete!\" bounces up (spring ~300/18), then the caption fades in below (250ms, +150ms).\n- Stats: the three cards pop in left to right (scale 0.6 -> 1.05 -> 1, spring ~360/20, 110ms stagger), each value counting up as it lands (300ms).\n- Button: CLAIM XP slides up (250ms, +100ms) and holds.\n\n## Calibration\n- Duo's skate lean eases out to neutral - he lands, he doesn't keep sliding.\n- Stat cards finish counting only after their spring settles.\n\n## Reduced motion\nAll elements fade in place (200ms, staggered 80ms); values appear final.\n\n## Don't miss\n- The caption is the joke - it must stay readable; don't cover it with the stat cards.\n- The brush card edge is rough and hand-painted, matching Duo's pose energy."</script>
+</body></html>

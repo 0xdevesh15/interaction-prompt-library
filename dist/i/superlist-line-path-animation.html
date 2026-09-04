@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Superlist Loading Line Path Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Superlist Loading Line Path Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/superlist-line-path-animation"><b>Superlist</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/superlist-line-path-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/superlist-line-path-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Superlist&#x27;s loading line - a hand-drawn green squiggle travels left to right along a hairline at screen center, drawing the line behind it, then everything fades and the loop restarts.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdbffc582b7d20c0da7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdbffc582b7d20c0da7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-superlist-line-path-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Superlist&#x27;s loading line - a hand-drawn green squiggle travels left to right along a hairline at screen center, drawing the line behind it, then everything fades and the loop restarts.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Superlist loader, near-white: an empty screen with a single short green stroke at the vertical center - a tight scribble that becomes a thin drawn line as it moves.
+
+## Motion spec
+Pattern: traveling squiggle that draws its own path.
+- The squiggle (a small dense scribble, ~24px wide) appears at center-left and travels right along a perfectly horizontal path over ~1.2s, ease-in-out.
+- As it moves it leaves a thin hand-drawn line (1.5px, same green) in its wake - the line extends from the squiggle&#x27;s start point to its current position, with slight organic waviness (+/-1px) so it reads as drawn, not rendered.
+- The squiggle itself wriggles as it travels - the scribble rotates/scales subtly at ~8Hz, like a pen scribbling in place while sliding.
+- At the end of the path the squiggle and line hold 200ms, then fade out together (300ms) and the loop restarts from the left.
+- Total cycle ~2s; the line&#x27;s final length is ~120px - short and centered, never edge to edge.
+
+## Calibration
+- One green only - the exact Superlist green, flat, no gradient.
+- The line&#x27;s waviness is per-frame stable - it must not shimmer once drawn.
+
+## Reduced motion
+A static short line that pulses opacity (0.4 -&gt; 1 -&gt; 0.4, 1.5s).
+
+## Don&#x27;t miss
+- The squiggle leads, the line follows - the draw-on is the whole point; don&#x27;t render the full line first.
+- The loop&#x27;s restart has a clear ~400ms gap of empty screen - breathing room.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">traveling squiggle that draws its own path.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/superlist-line-path-animation">original interaction</a> by Superlist. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Superlist's loading line - a hand-drawn green squiggle travels left to right along a hairline at screen center, drawing the line behind it, then everything fades and the loop restarts.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSuperlist loader, near-white: an empty screen with a single short green stroke at the vertical center - a tight scribble that becomes a thin drawn line as it moves.\n\n## Motion spec\nPattern: traveling squiggle that draws its own path.\n- The squiggle (a small dense scribble, ~24px wide) appears at center-left and travels right along a perfectly horizontal path over ~1.2s, ease-in-out.\n- As it moves it leaves a thin hand-drawn line (1.5px, same green) in its wake - the line extends from the squiggle's start point to its current position, with slight organic waviness (+/-1px) so it reads as drawn, not rendered.\n- The squiggle itself wriggles as it travels - the scribble rotates/scales subtly at ~8Hz, like a pen scribbling in place while sliding.\n- At the end of the path the squiggle and line hold 200ms, then fade out together (300ms) and the loop restarts from the left.\n- Total cycle ~2s; the line's final length is ~120px - short and centered, never edge to edge.\n\n## Calibration\n- One green only - the exact Superlist green, flat, no gradient.\n- The line's waviness is per-frame stable - it must not shimmer once drawn.\n\n## Reduced motion\nA static short line that pulses opacity (0.4 -> 1 -> 0.4, 1.5s).\n\n## Don't miss\n- The squiggle leads, the line follows - the draw-on is the whole point; don't render the full line first.\n- The loop's restart has a clear ~400ms gap of empty screen - breathing room."</script>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smallcase Wealth Office Setup Check Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Smallcase Wealth Office Setup Check Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/smallcase-wealth-office-setup-check-animation"><b>Smallcase</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/smallcase-wealth-office-setup-check-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/smallcase-wealth-office-setup-check-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Smallcase&#x27;s setup-complete beat - the status text fades away, a blue scalloped badge springs in, a white check draws itself inside it, and the welcome line fades up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edcbe9610ba04ea9378b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edcbe9610ba04ea9378b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-smallcase-wealth-office-setup-check-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Smallcase&#x27;s setup-complete beat - the status text fades away, a blue scalloped badge springs in, a white check draws itself inside it, and the welcome line fades up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Smallcase Wealth Office, white: opening copy &quot;Your net worth &amp; timeline updates as you add more assets...&quot;; then the completion state - a blue scalloped (seal-edge) badge with a white check, faint concentric rings behind it, and &quot;You are all set&quot; / &quot;Welcome to Wealth Office&quot; below.
+
+## Motion spec
+Pattern: springy seal-badge pop with a drawn checkmark and fading text handoff.
+- The opening copy fades out (250ms).
+- The badge pops in at center: scale 0.4 -&gt; 1 with spring ~380/14 (clear overshoot to ~1.15), the scalloped edge staying crisp through the scale.
+- The white check draws on inside the badge: stroke path animated 0 -&gt; full, 300ms, ease-out, starting at the check&#x27;s short arm.
+- Two faint concentric rings ripple outward from the badge once (scale 1 -&gt; 1.6, opacity -&gt; 0, 600ms, staggered 120ms) - a soft sonar, once only.
+- &quot;You are all set&quot; fades in (200ms), then &quot;Welcome to Wealth Office&quot; fades up beneath it (translateY 8 -&gt; 0, 250ms).
+- Settled state: the badge does one micro-bounce (scale 1 -&gt; 1.04 -&gt; 1, 300ms) and rests.
+
+## Calibration
+- The badge is the only blue element - pure, saturated, and flat.
+- The whole sequence lands in under 1.5s; it&#x27;s a confirmation, not a ceremony.
+
+## Reduced motion
+Badge fades in (250ms); check appears with it; text crossfades (200ms).
+
+## Don&#x27;t miss
+- The check draws after the badge lands - never during the scale.
+- The scalloped edge must survive the scale as a vector, not a bitmap that softens.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy seal-badge pop with a drawn checkmark and fading text handoff.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/smallcase-wealth-office-setup-check-animation">original interaction</a> by Smallcase. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Smallcase's setup-complete beat - the status text fades away, a blue scalloped badge springs in, a white check draws itself inside it, and the welcome line fades up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSmallcase Wealth Office, white: opening copy \"Your net worth & timeline updates as you add more assets...\"; then the completion state - a blue scalloped (seal-edge) badge with a white check, faint concentric rings behind it, and \"You are all set\" / \"Welcome to Wealth Office\" below.\n\n## Motion spec\nPattern: springy seal-badge pop with a drawn checkmark and fading text handoff.\n- The opening copy fades out (250ms).\n- The badge pops in at center: scale 0.4 -> 1 with spring ~380/14 (clear overshoot to ~1.15), the scalloped edge staying crisp through the scale.\n- The white check draws on inside the badge: stroke path animated 0 -> full, 300ms, ease-out, starting at the check's short arm.\n- Two faint concentric rings ripple outward from the badge once (scale 1 -> 1.6, opacity -> 0, 600ms, staggered 120ms) - a soft sonar, once only.\n- \"You are all set\" fades in (200ms), then \"Welcome to Wealth Office\" fades up beneath it (translateY 8 -> 0, 250ms).\n- Settled state: the badge does one micro-bounce (scale 1 -> 1.04 -> 1, 300ms) and rests.\n\n## Calibration\n- The badge is the only blue element - pure, saturated, and flat.\n- The whole sequence lands in under 1.5s; it's a confirmation, not a ceremony.\n\n## Reduced motion\nBadge fades in (250ms); check appears with it; text crossfades (200ms).\n\n## Don't miss\n- The check draws after the badge lands - never during the scale.\n- The scalloped edge must survive the scale as a vector, not a bitmap that softens."</script>
+</body></html>

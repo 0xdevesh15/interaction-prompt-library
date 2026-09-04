@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Globetrotter Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Globetrotter Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/globetrotter-onboarding"><b>Globetrotter</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/globetrotter-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/globetrotter-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Globetrotter&#x27;s onboarding - an airplane window shade the user swipes up to raise, flooding the dark cabin screen with daylight and flipping the app from dark to light mode.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1e371d29849d7bdc46/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1e371d29849d7bdc46/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-globetrotter-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Globetrotter&#x27;s onboarding - an airplane window shade the user swipes up to raise, flooding the dark cabin screen with daylight and flipping the app from dark to light mode.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark screen lit by a single cabin spotlight from above: an airplane window at center with its shade pulled down, the instruction &quot;Please prepare for landing by raising your window shade&quot;, and a Skip link. Raising the shade reveals a bright sky-and-wing view and the entire UI transitions to light mode.
+
+## Motion spec
+Pattern: swipe-up shade reveal driving a theme flip.
+- Idle: the cabin spotlight sways almost imperceptibly (light cone rotates +-2deg, 6s loop); the shade&#x27;s bottom edge shows a grab lip that pulses (translateY 0 to 3px, 1.6s).
+- Drag the shade up: it tracks the finger 1:1 inside the window frame; through the widening gap, the bright exterior (blue sky, cloud, wing) is revealed - and the rest of the screen&#x27;s theme lerps with shade progress: background from near-black to white, text inverting, spotlight fading out (all driven by drag %).
+- Release above 60%: the shade snaps fully up (spring ~380/22, a bounce as it hits the top) and the theme completes its flip with an overshoot glow (a brief 10% brightness bloom, 300ms).
+- Release below 60%: the shade slides back down (spring ~420/26) and the cabin re-dims with it.
+- Completion reveals the next onboarding content inside the light UI (crossfade, 300ms) - the window remains as a framed image.
+
+## Calibration
+- The theme flip is bound to shade position continuously - half-raised is a genuine half-dark UI, not a two-state toggle.
+- The exterior view parallaxes slightly with drag (moves at 0.9x) for depth against the shade.
+
+## Reduced motion
+Tap-to-open: shade slides up over 400ms and theme crossfades.
+
+## Don&#x27;t miss
+- The spotlight cone is the only light source in the dark state - it must visibly die as daylight wins.
+- The shade lip is the affordance; without the pulse the gesture is undiscoverable.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-up shade reveal driving a theme flip.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/globetrotter-onboarding">original interaction</a> by Globetrotter. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Globetrotter's onboarding - an airplane window shade the user swipes up to raise, flooding the dark cabin screen with daylight and flipping the app from dark to light mode.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark screen lit by a single cabin spotlight from above: an airplane window at center with its shade pulled down, the instruction \"Please prepare for landing by raising your window shade\", and a Skip link. Raising the shade reveals a bright sky-and-wing view and the entire UI transitions to light mode.\n\n## Motion spec\nPattern: swipe-up shade reveal driving a theme flip.\n- Idle: the cabin spotlight sways almost imperceptibly (light cone rotates +-2deg, 6s loop); the shade's bottom edge shows a grab lip that pulses (translateY 0 to 3px, 1.6s).\n- Drag the shade up: it tracks the finger 1:1 inside the window frame; through the widening gap, the bright exterior (blue sky, cloud, wing) is revealed - and the rest of the screen's theme lerps with shade progress: background from near-black to white, text inverting, spotlight fading out (all driven by drag %).\n- Release above 60%: the shade snaps fully up (spring ~380/22, a bounce as it hits the top) and the theme completes its flip with an overshoot glow (a brief 10% brightness bloom, 300ms).\n- Release below 60%: the shade slides back down (spring ~420/26) and the cabin re-dims with it.\n- Completion reveals the next onboarding content inside the light UI (crossfade, 300ms) - the window remains as a framed image.\n\n## Calibration\n- The theme flip is bound to shade position continuously - half-raised is a genuine half-dark UI, not a two-state toggle.\n- The exterior view parallaxes slightly with drag (moves at 0.9x) for depth against the shade.\n\n## Reduced motion\nTap-to-open: shade slides up over 400ms and theme crossfades.\n\n## Don't miss\n- The spotlight cone is the only light source in the dark state - it must visibly die as daylight wins.\n- The shade lip is the affordance; without the pulse the gesture is undiscoverable."</script>
+</body></html>

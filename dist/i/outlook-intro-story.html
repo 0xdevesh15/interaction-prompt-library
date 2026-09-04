@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Outlook Intro Story - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Outlook Intro Story</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/outlook-intro-story"><b>Outlook</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/outlook-intro-story">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/outlook-intro-story">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Outlook&#x27;s onboarding story - auto-advancing slides where flat vector illustrations assemble piece by piece (Outlook envelope, floating app logos, calendar pages, shield with orbiting dots), headline and subcopy below, blue &quot;Add Account&quot; and ghost &quot;Create New Account&quot; buttons pinned.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c5f597138938bb5584d969/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c5f597138938bb5584d969/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-outlook-intro-story.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Outlook&#x27;s onboarding story - auto-advancing slides where flat vector illustrations assemble piece by piece (Outlook envelope, floating app logos, calendar pages, shield with orbiting dots), headline and subcopy below, blue &quot;Add Account&quot; and ghost &quot;Create New Account&quot; buttons pinned.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White slides, each: a vector illustration center (blue envelope / tumbling Google-Gmail-Outlook logos / calendar sheet / shield with lock and orbiting colored dots), bold headline (&quot;Welcome to Outlook&quot;, &quot;One calendar for everything&quot;, &quot;Connected and protected&quot;, &quot;Add your email accounts&quot;), gray subcopy, and pinned bottom buttons. A thin progress line at top advances per slide.
+
+## Motion spec
+Pattern: auto-assembling illustration story.
+- Each slide&#x27;s illustration ASSEMBLES on entry: component pieces fly in from scattered offsets (+-40px) with rotation (+-15deg), converging into the final composition (spring ~280/20, pieces staggered 70ms).
+- After assembly, pieces idle with gentle drift (+-4px, +-3deg, 3-5s sines, each piece its own phase) - the illustration breathes while the user reads.
+- Auto-advance every ~4.5s: the current illustration&#x27;s pieces scatter outward (reverse of entry, 300ms) as the slide crossfades to the next (350ms); headline and subcopy crossfade with it.
+- The top progress line fills per slide (linear over the slide&#x27;s dwell), then the next segment begins.
+- Buttons are constant and static - only the story above them moves.
+
+## Calibration
+- Pieces never overlap the headline during assembly - flight paths arc above it.
+- Auto-advance pauses on touch-down anywhere; resumes 3s after release.
+
+## Reduced motion
+Illustrations appear assembled; slides crossfade; no auto-advance (manual only).
+
+## Don&#x27;t miss
+- Assembly is per-slide and semantic: the security slide&#x27;s dots ORBIT the shield, the account slide&#x27;s logos tumble - motion matches meaning.
+- The progress line is the only pager - no dots.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-assembling illustration story.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/outlook-intro-story">original interaction</a> by Outlook. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Outlook's onboarding story - auto-advancing slides where flat vector illustrations assemble piece by piece (Outlook envelope, floating app logos, calendar pages, shield with orbiting dots), headline and subcopy below, blue \"Add Account\" and ghost \"Create New Account\" buttons pinned.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite slides, each: a vector illustration center (blue envelope / tumbling Google-Gmail-Outlook logos / calendar sheet / shield with lock and orbiting colored dots), bold headline (\"Welcome to Outlook\", \"One calendar for everything\", \"Connected and protected\", \"Add your email accounts\"), gray subcopy, and pinned bottom buttons. A thin progress line at top advances per slide.\n\n## Motion spec\nPattern: auto-assembling illustration story.\n- Each slide's illustration ASSEMBLES on entry: component pieces fly in from scattered offsets (+-40px) with rotation (+-15deg), converging into the final composition (spring ~280/20, pieces staggered 70ms).\n- After assembly, pieces idle with gentle drift (+-4px, +-3deg, 3-5s sines, each piece its own phase) - the illustration breathes while the user reads.\n- Auto-advance every ~4.5s: the current illustration's pieces scatter outward (reverse of entry, 300ms) as the slide crossfades to the next (350ms); headline and subcopy crossfade with it.\n- The top progress line fills per slide (linear over the slide's dwell), then the next segment begins.\n- Buttons are constant and static - only the story above them moves.\n\n## Calibration\n- Pieces never overlap the headline during assembly - flight paths arc above it.\n- Auto-advance pauses on touch-down anywhere; resumes 3s after release.\n\n## Reduced motion\nIllustrations appear assembled; slides crossfade; no auto-advance (manual only).\n\n## Don't miss\n- Assembly is per-slide and semantic: the security slide's dots ORBIT the shield, the account slide's logos tumble - motion matches meaning.\n- The progress line is the only pager - no dots."</script>
+</body></html>

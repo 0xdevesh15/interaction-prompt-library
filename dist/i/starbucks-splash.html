@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Starbucks Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Starbucks Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/starbucks-splash"><b>Starbucks</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/starbucks-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/starbucks-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Starbucks&#x27; classic splash - jungle leaves part on dark green, the siren logo scales up with twinkling stars, a butterfly flutters through, and the wordmark settles beneath.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8ce2df3c0da1588c97d2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8ce2df3c0da1588c97d2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-starbucks-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Starbucks&#x27; classic splash - jungle leaves part on dark green, the siren logo scales up with twinkling stars, a butterfly flutters through, and the wordmark settles beneath.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Deep forest-green field ringed by layered jungle leaves and fronds (two greens plus a red flower accent). Center: the white-line siren logo growing from small to full, tiny star sparkles around it, a small butterfly that crosses the frame. End: clean dark green, siren centered, STARBUCKS wordmark below, leaves retreated to the edges.
+
+## Motion spec
+Pattern: scaling logo reveal with botanical parting and a fluttering accent.
+- Leaves assemble from the edges (spring ~260/22, 80ms stagger) over a black-to-green fade (400ms).
+- The siren scales up at center (0.3 -&gt; 1, spring ~240/16, 800ms) while 4-6 star sparkles twinkle around it (opacity + scale pulses, staggered, 300-500ms each).
+- A butterfly crosses on a curved path (bezier, 2.2s, wings flapping via scaleX oscillation 8Hz) and exits.
+- The leaves then retreat to the frame edges (500ms, ease-in-out) as the background deepens to flat green (400ms) and the wordmark fades in under the logo (300ms).
+
+## Calibration
+- The logo&#x27;s growth is the spine; leaves, stars, and butterfly are accompaniment - they never overlap the logo&#x27;s face.
+- Butterfly path is a single graceful S-curve, not a zigzag.
+
+## Reduced motion
+Logo fades in at full size (300ms); leaves static at edges; no butterfly.
+
+## Don&#x27;t miss
+- The siren is line-art white/green on dark - never a filled white disc.
+- The final resting state is quiet: logo, wordmark, edge leaves, nothing moving.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scaling logo reveal with botanical parting and a fluttering accent.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/starbucks-splash">original interaction</a> by Starbucks. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Starbucks' classic splash - jungle leaves part on dark green, the siren logo scales up with twinkling stars, a butterfly flutters through, and the wordmark settles beneath.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDeep forest-green field ringed by layered jungle leaves and fronds (two greens plus a red flower accent). Center: the white-line siren logo growing from small to full, tiny star sparkles around it, a small butterfly that crosses the frame. End: clean dark green, siren centered, STARBUCKS wordmark below, leaves retreated to the edges.\n\n## Motion spec\nPattern: scaling logo reveal with botanical parting and a fluttering accent.\n- Leaves assemble from the edges (spring ~260/22, 80ms stagger) over a black-to-green fade (400ms).\n- The siren scales up at center (0.3 -> 1, spring ~240/16, 800ms) while 4-6 star sparkles twinkle around it (opacity + scale pulses, staggered, 300-500ms each).\n- A butterfly crosses on a curved path (bezier, 2.2s, wings flapping via scaleX oscillation 8Hz) and exits.\n- The leaves then retreat to the frame edges (500ms, ease-in-out) as the background deepens to flat green (400ms) and the wordmark fades in under the logo (300ms).\n\n## Calibration\n- The logo's growth is the spine; leaves, stars, and butterfly are accompaniment - they never overlap the logo's face.\n- Butterfly path is a single graceful S-curve, not a zigzag.\n\n## Reduced motion\nLogo fades in at full size (300ms); leaves static at edges; no butterfly.\n\n## Don't miss\n- The siren is line-art white/green on dark - never a filled white disc.\n- The final resting state is quiet: logo, wordmark, edge leaves, nothing moving."</script>
+</body></html>

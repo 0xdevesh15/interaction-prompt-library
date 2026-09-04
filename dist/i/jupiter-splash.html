@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jupiter Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Jupiter Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/jupiter-splash"><b>Jupiter</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jupiter-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/jupiter-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Jupiter&#x27;s splash - the red wordmark gives way to a spinning J coin that settles into a central badge while financial icons orbit it like planets, then the onboarding line fades in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4badf61d73e2622b343d3/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4badf61d73e2622b343d3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-jupiter-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Jupiter&#x27;s splash - the red wordmark gives way to a spinning J coin that settles into a central badge while financial icons orbit it like planets, then the onboarding line fades in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A cream screen with the red &quot;Jupiter&quot; wordmark. The mark flips into a red circular J badge at screen center, and coins, cards, and finance glyphs swing in on elliptical orbit rings drawn faintly around the badge. &quot;Your financial wellness account&quot; sits at the bottom.
+
+## Motion spec
+Pattern: orbital assembly.
+- Wordmark phase (0-500ms): the wordmark holds, then flips/shrinks (rotateY 180deg + scale to 0.3, 400ms) into the red J badge which bounces to full size (spring ~360/20).
+- Orbit rings draw in: 2-3 thin elliptical strokes trace around the badge (stroke-dash draw, 600ms, staggered 150ms).
+- Icons fly in along the rings: each financial icon (coin, card, bank glyphs in circles) enters from off-ring, snapping onto its orbit with a small overshoot (spring ~300/18), staggered 120ms; once placed, all icons drift slowly along their ellipses (one revolution per ~12s, counter-rotating rings).
+- The badge breathes gently (scale +-2%, 3s) while icons orbit.
+- Tagline &quot;Your financial wellness account&quot; fades up at the bottom (translateY 12px, 300ms) once the first icons land; onboarding cards slide in after if the sequence continues.
+
+## Calibration
+- Orbits are ellipses tilted at different angles (like a solar system diagram), not flat circles.
+- Icon drift is slow and continuous - this is ambient, not a one-shot.
+
+## Reduced motion
+Badge and icons fade in statically; no orbiting.
+
+## Don&#x27;t miss
+- The palette is restrained: cream field, red badge, neutral gray icons - the red J is the only saturated element.
+- The wordmark-to-badge flip is the transition&#x27;s signature; don&#x27;t crossfade it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orbital assembly.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/jupiter-splash">original interaction</a> by Jupiter. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Jupiter's splash - the red wordmark gives way to a spinning J coin that settles into a central badge while financial icons orbit it like planets, then the onboarding line fades in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA cream screen with the red \"Jupiter\" wordmark. The mark flips into a red circular J badge at screen center, and coins, cards, and finance glyphs swing in on elliptical orbit rings drawn faintly around the badge. \"Your financial wellness account\" sits at the bottom.\n\n## Motion spec\nPattern: orbital assembly.\n- Wordmark phase (0-500ms): the wordmark holds, then flips/shrinks (rotateY 180deg + scale to 0.3, 400ms) into the red J badge which bounces to full size (spring ~360/20).\n- Orbit rings draw in: 2-3 thin elliptical strokes trace around the badge (stroke-dash draw, 600ms, staggered 150ms).\n- Icons fly in along the rings: each financial icon (coin, card, bank glyphs in circles) enters from off-ring, snapping onto its orbit with a small overshoot (spring ~300/18), staggered 120ms; once placed, all icons drift slowly along their ellipses (one revolution per ~12s, counter-rotating rings).\n- The badge breathes gently (scale +-2%, 3s) while icons orbit.\n- Tagline \"Your financial wellness account\" fades up at the bottom (translateY 12px, 300ms) once the first icons land; onboarding cards slide in after if the sequence continues.\n\n## Calibration\n- Orbits are ellipses tilted at different angles (like a solar system diagram), not flat circles.\n- Icon drift is slow and continuous - this is ambient, not a one-shot.\n\n## Reduced motion\nBadge and icons fade in statically; no orbiting.\n\n## Don't miss\n- The palette is restrained: cream field, red badge, neutral gray icons - the red J is the only saturated element.\n- The wordmark-to-badge flip is the transition's signature; don't crossfade it."</script>
+</body></html>

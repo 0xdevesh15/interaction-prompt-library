@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spotify Fragment Unlock Play Message Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spotify Fragment Unlock Play Message Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spotify-fragment-unlock-play-message-interaction"><b>Spotify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-fragment-unlock-play-message-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-fragment-unlock-play-message-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Spotify&#x27;s fragment unlock - tap the 3D fragment and the skeuomorphic cassette player wakes: reels spin, the locked message row unlocks with a green badge, and the voice note plays.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a679cd218090c8c6c3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69d538a679cd218090c8c6c3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spotify-fragment-unlock-play-message-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Spotify&#x27;s fragment unlock - tap the 3D fragment and the skeuomorphic cassette player wakes: reels spin, the locked message row unlocks with a green badge, and the voice note plays.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark screen holding a 3D cassette deck (silver, tape window, twin reels, red accents) over a message list: rows like &quot;Message from Jin&quot; and &quot;Message from Jimin&quot;, each with a status dot (red = locked) or a green &quot;NEW&quot;/playing badge when unlocked. A small 3D fragment floats near the deck as the key.
+
+## Motion spec
+Pattern: tap-to-unlock - fragment triggers the cassette&#x27;s mechanical wake and the row&#x27;s state flip.
+- The fragment idles with a slow spin and bob (3.5s loop), gently pulsing its edge light to invite the tap.
+- On tap: the fragment shrinks into the deck (scale 1 -&gt; 0, 300ms toward the tape window), the deck rocks subtly (rotateZ +/-2deg settle, spring ~300/16), and the reels spool up from rest to playback speed (400ms, ease-out).
+- Simultaneously the target row unlocks: the red dot crossfades to the green badge (200ms) which pops (scale 0.6 -&gt; 1.15 -&gt; 1, spring ~400/15), and the row title brightens.
+- Playback: reels spin continuously, a scrubber advances across the row (real-time with the audio), and a soft red VU glow flickers in the tape window with the voice&#x27;s amplitude.
+- When the message ends, the reels spin down (300ms) and the badge flips from NEW to played state - the row stays unlocked forever.
+
+## Calibration
+- Every state change is mechanical - the deck&#x27;s parts (reels, window light, rock) carry the feedback, not toast text.
+- The unlock is single-tap and immediate - no hold, no confirmation; the fragment is the key.
+
+## Reduced motion
+Fragment fades out; row crossfades to unlocked; reels shown spinning as a static blur.
+
+## Don&#x27;t miss
+- The red-to-green status language is the whole UI - dots and badges carry state, not labels.
+- Multiple locked rows stay in view - one fragment, one message; the rest tease.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tap-to-unlock - fragment triggers the cassette&#x27;s mechanical wake and the row&#x27;s state flip.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spotify-fragment-unlock-play-message-interaction">original interaction</a> by Spotify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Spotify's fragment unlock - tap the 3D fragment and the skeuomorphic cassette player wakes: reels spin, the locked message row unlocks with a green badge, and the voice note plays.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark screen holding a 3D cassette deck (silver, tape window, twin reels, red accents) over a message list: rows like \"Message from Jin\" and \"Message from Jimin\", each with a status dot (red = locked) or a green \"NEW\"/playing badge when unlocked. A small 3D fragment floats near the deck as the key.\n\n## Motion spec\nPattern: tap-to-unlock - fragment triggers the cassette's mechanical wake and the row's state flip.\n- The fragment idles with a slow spin and bob (3.5s loop), gently pulsing its edge light to invite the tap.\n- On tap: the fragment shrinks into the deck (scale 1 -> 0, 300ms toward the tape window), the deck rocks subtly (rotateZ +/-2deg settle, spring ~300/16), and the reels spool up from rest to playback speed (400ms, ease-out).\n- Simultaneously the target row unlocks: the red dot crossfades to the green badge (200ms) which pops (scale 0.6 -> 1.15 -> 1, spring ~400/15), and the row title brightens.\n- Playback: reels spin continuously, a scrubber advances across the row (real-time with the audio), and a soft red VU glow flickers in the tape window with the voice's amplitude.\n- When the message ends, the reels spin down (300ms) and the badge flips from NEW to played state - the row stays unlocked forever.\n\n## Calibration\n- Every state change is mechanical - the deck's parts (reels, window light, rock) carry the feedback, not toast text.\n- The unlock is single-tap and immediate - no hold, no confirmation; the fragment is the key.\n\n## Reduced motion\nFragment fades out; row crossfades to unlocked; reels shown spinning as a static blur.\n\n## Don't miss\n- The red-to-green status language is the whole UI - dots and badges carry state, not labels.\n- Multiple locked rows stay in view - one fragment, one message; the rest tease."</script>
+</body></html>

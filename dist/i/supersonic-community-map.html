@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supersonic Community Map - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Supersonic Community Map</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/supersonic-community-map"><b>Supersonic</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/supersonic-community-map">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/supersonic-community-map">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Supersonic&#x27;s community map - a dark map (centered on Bengaluru, India) dotted with clustered member avatar pins that fluidly de-cluster into individual labeled avatars as you zoom, with a bottom bar holding the member carousel and a &quot;Community&quot; label.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c482db7487698bb8315783/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c482db7487698bb8315783/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-supersonic-community-map.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Supersonic&#x27;s community map - a dark map (centered on Bengaluru, India) dotted with clustered member avatar pins that fluidly de-cluster into individual labeled avatars as you zoom, with a bottom bar holding the member carousel and a &quot;Community&quot; label.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark navy map filling the screen, small circular avatar pins (some clustered with count rings). Bottom: a dark bar with a horizontal strip of member avatars, the center one enlarged and glowing with a name below (&quot;Rohan&quot; style), &quot;Community&quot; label at the base.
+
+## Motion spec
+Pattern: zoom-driven cluster/de-cluster fluidity.
+- Pinch zoom: the map scales under the gesture; when a cluster&#x27;s members would overlap less than 60%, the cluster pops apart - child avatars spring outward to their true coordinates (spring ~280/16, staggered 20ms) while the cluster ring dissolves (scale 1.4 + fade, 250ms).
+- Zoom out: members merge into the nearest cluster - avatars slide along curved paths into the cluster point (400ms, ease-in) and the count badge pops (scale 0.5 -&gt; 1, spring ~420/18).
+- Location labels fade in past a zoom threshold (250ms) and sharpen; they never collide - lower-priority labels yield.
+- Tapping a bottom-bar avatar: the map pans and zooms to that member (flight-style ease, 600ms), their pin blooming a glow ring (scale 1 -&gt; 1.6, 400ms) as the bar highlights them.
+
+## Calibration
+- Cluster transitions are physics-springs, not linear fades - members feel placed, not teleported.
+- The bottom bar stays fixed and stable while the map churns - the anchor of the screen.
+
+## Reduced motion
+Clusters fade apart/together; map pans without flight easing.
+
+## Don&#x27;t miss
+- De-clustering is the delight: watch a &quot;12&quot; ring burst into twelve real people.
+- The selected member glows on BOTH surfaces at once - map pin and bar avatar in sync.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">zoom-driven cluster/de-cluster fluidity.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/supersonic-community-map">original interaction</a> by Supersonic. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Supersonic's community map - a dark map (centered on Bengaluru, India) dotted with clustered member avatar pins that fluidly de-cluster into individual labeled avatars as you zoom, with a bottom bar holding the member carousel and a \"Community\" label.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark navy map filling the screen, small circular avatar pins (some clustered with count rings). Bottom: a dark bar with a horizontal strip of member avatars, the center one enlarged and glowing with a name below (\"Rohan\" style), \"Community\" label at the base.\n\n## Motion spec\nPattern: zoom-driven cluster/de-cluster fluidity.\n- Pinch zoom: the map scales under the gesture; when a cluster's members would overlap less than 60%, the cluster pops apart - child avatars spring outward to their true coordinates (spring ~280/16, staggered 20ms) while the cluster ring dissolves (scale 1.4 + fade, 250ms).\n- Zoom out: members merge into the nearest cluster - avatars slide along curved paths into the cluster point (400ms, ease-in) and the count badge pops (scale 0.5 -> 1, spring ~420/18).\n- Location labels fade in past a zoom threshold (250ms) and sharpen; they never collide - lower-priority labels yield.\n- Tapping a bottom-bar avatar: the map pans and zooms to that member (flight-style ease, 600ms), their pin blooming a glow ring (scale 1 -> 1.6, 400ms) as the bar highlights them.\n\n## Calibration\n- Cluster transitions are physics-springs, not linear fades - members feel placed, not teleported.\n- The bottom bar stays fixed and stable while the map churns - the anchor of the screen.\n\n## Reduced motion\nClusters fade apart/together; map pans without flight easing.\n\n## Don't miss\n- De-clustering is the delight: watch a \"12\" ring burst into twelve real people.\n- The selected member glows on BOTH surfaces at once - map pin and bar avatar in sync."</script>
+</body></html>

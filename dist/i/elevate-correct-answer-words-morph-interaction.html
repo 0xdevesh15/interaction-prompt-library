@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elevate Correct Answer Words Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Elevate Correct Answer Words Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/elevate-correct-answer-words-morph-interaction"><b>Elevate</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-correct-answer-words-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-correct-answer-words-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Elevate&#x27;s correct-answer beat - the wrong word&#x27;s highlight morphs letter-by-letter into the right spelling, then the whole sentence scatters into drifting letters as the game moves on.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edda825d3351d5526440/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a2edda825d3351d5526440/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-elevate-correct-answer-words-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Elevate&#x27;s correct-answer beat - the wrong word&#x27;s highlight morphs letter-by-letter into the right spelling, then the whole sentence scatters into drifting letters as the game moves on.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Elevate question screen, deep green: a reading passage (&quot;In the 1960 Olympics, Abebe Bikila ran the marathon without shoos and won a gold medal.&quot;) with the suspect word highlighted white; ERROR / VALID buttons below; a progress dot rail mid-screen.
+
+## Motion spec
+Pattern: in-place word correction morph, then a letter-scatter scene transition.
+- On the correct answer, the highlighted word&#x27;s letters rearrange in place: wrong letters fade/shrink out (120ms) and correct letters grow in (scale 0.6 -&gt; 1, spring ~400/18), so &quot;shoos&quot; visibly becomes &quot;shoes&quot;; the highlight flips white -&gt; green with a soft glow pulse (250ms).
+- The chosen button flashes its border (200ms) and a small &quot;correct&quot; badge ticks on the progress rail (dot fills, 200ms).
+- Hold ~600ms for the correction to read.
+- Transition: the passage&#x27;s letters detach and scatter - each glyph gets a random drift vector and rotation (60-140px, +/-40 degrees, 500-800ms, staggered 6ms per letter) fading out as they float; the screen clears to the next question fading up (300ms).
+
+## Calibration
+- The morph is legible - slow enough to watch the spelling fix itself.
+- Scatter letters stay crisp (no blur) and thin - elegant, not confetti.
+
+## Reduced motion
+Word crossfades to the correction (250ms); passage crossfades out (300ms).
+
+## Don&#x27;t miss
+- Only the corrected word gets the green highlight - the rest of the passage never changes color.
+- The scatter starts from the passage, top line first - a top-down peel, not a simultaneous burst.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">in-place word correction morph, then a letter-scatter scene transition.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/elevate-correct-answer-words-morph-interaction">original interaction</a> by Elevate. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Elevate's correct-answer beat - the wrong word's highlight morphs letter-by-letter into the right spelling, then the whole sentence scatters into drifting letters as the game moves on.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nElevate question screen, deep green: a reading passage (\"In the 1960 Olympics, Abebe Bikila ran the marathon without shoos and won a gold medal.\") with the suspect word highlighted white; ERROR / VALID buttons below; a progress dot rail mid-screen.\n\n## Motion spec\nPattern: in-place word correction morph, then a letter-scatter scene transition.\n- On the correct answer, the highlighted word's letters rearrange in place: wrong letters fade/shrink out (120ms) and correct letters grow in (scale 0.6 -> 1, spring ~400/18), so \"shoos\" visibly becomes \"shoes\"; the highlight flips white -> green with a soft glow pulse (250ms).\n- The chosen button flashes its border (200ms) and a small \"correct\" badge ticks on the progress rail (dot fills, 200ms).\n- Hold ~600ms for the correction to read.\n- Transition: the passage's letters detach and scatter - each glyph gets a random drift vector and rotation (60-140px, +/-40 degrees, 500-800ms, staggered 6ms per letter) fading out as they float; the screen clears to the next question fading up (300ms).\n\n## Calibration\n- The morph is legible - slow enough to watch the spelling fix itself.\n- Scatter letters stay crisp (no blur) and thin - elegant, not confetti.\n\n## Reduced motion\nWord crossfades to the correction (250ms); passage crossfades out (300ms).\n\n## Don't miss\n- Only the corrected word gets the green highlight - the rest of the passage never changes color.\n- The scatter starts from the passage, top line first - a top-down peel, not a simultaneous burst."</script>
+</body></html>

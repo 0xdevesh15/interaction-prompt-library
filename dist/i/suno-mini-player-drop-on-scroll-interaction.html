@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suno Mini Player Drop on Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Suno Mini Player Drop on Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/suno-mini-player-drop-on-scroll-interaction"><b>Suno</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/suno-mini-player-drop-on-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/suno-mini-player-drop-on-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Suno&#x27;s lyrics scroll - as the user scrolls down past the main player, a compact mini player drops from the top header; scrolling back up slides it away as the main player returns.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313ca0e3615485c3fbbdf/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313ca0e3615485c3fbbdf/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-suno-mini-player-drop-on-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Suno&#x27;s lyrics scroll - as the user scrolls down past the main player, a compact mini player drops from the top header; scrolling back up slides it away as the main player returns.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark song page: header, large artwork, title &quot;Afternoon Drip&quot; with artist, transport controls (prev / play-pause / next), style description, then the full lyrics body scrolling beneath. The mini player is a slim bar pinned under the top header: artwork thumbnail, title and artist, and a circular pause button.
+
+## Motion spec
+Pattern: scroll-triggered sticky mini player dropping from the header.
+- The page scrolls normally; the main player (artwork + transport) moves up with the content.
+- When the main transport controls scroll fully under the header, the mini player drops in from above (spring ~340/26, ~60pt travel, 250ms) and stays pinned.
+- The mini player&#x27;s pause button mirrors playback state and toggles it (icon swap with a 150ms scale pop).
+- Scrolling back up: once the main player re-enters view, the mini player slides back up and out (250ms, ease-in) while the main controls scroll back into place.
+- The threshold is positional, not velocity-based: the mini player appears exactly when the main controls leave the viewport.
+
+## Calibration
+- One player is always visible: the handoff happens at the exact crossover, no gap, no overlap of both full controls.
+- The mini player casts a thin bottom divider/shadow so lyrics passing under it read clearly.
+
+## Reduced motion
+Mini player fades in/out (150ms) instead of sliding.
+
+## Don&#x27;t miss
+- The mini player inherits the page&#x27;s dark blurred background, not an opaque bar.
+- The title in the mini player matches the main player&#x27;s title exactly, thumbnail included.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-triggered sticky mini player dropping from the header.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/suno-mini-player-drop-on-scroll-interaction">original interaction</a> by Suno. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Suno's lyrics scroll - as the user scrolls down past the main player, a compact mini player drops from the top header; scrolling back up slides it away as the main player returns.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark song page: header, large artwork, title \"Afternoon Drip\" with artist, transport controls (prev / play-pause / next), style description, then the full lyrics body scrolling beneath. The mini player is a slim bar pinned under the top header: artwork thumbnail, title and artist, and a circular pause button.\n\n## Motion spec\nPattern: scroll-triggered sticky mini player dropping from the header.\n- The page scrolls normally; the main player (artwork + transport) moves up with the content.\n- When the main transport controls scroll fully under the header, the mini player drops in from above (spring ~340/26, ~60pt travel, 250ms) and stays pinned.\n- The mini player's pause button mirrors playback state and toggles it (icon swap with a 150ms scale pop).\n- Scrolling back up: once the main player re-enters view, the mini player slides back up and out (250ms, ease-in) while the main controls scroll back into place.\n- The threshold is positional, not velocity-based: the mini player appears exactly when the main controls leave the viewport.\n\n## Calibration\n- One player is always visible: the handoff happens at the exact crossover, no gap, no overlap of both full controls.\n- The mini player casts a thin bottom divider/shadow so lyrics passing under it read clearly.\n\n## Reduced motion\nMini player fades in/out (150ms) instead of sliding.\n\n## Don't miss\n- The mini player inherits the page's dark blurred background, not an opaque bar.\n- The title in the mini player matches the main player's title exactly, thumbnail included."</script>
+</body></html>

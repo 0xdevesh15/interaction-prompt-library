@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Call Chat Suggestions Bubble Chat Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Call Chat Suggestions Bubble Chat Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-call-chat-suggestions-bubble-chat-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-call-chat-suggestions-bubble-chat-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-call-chat-suggestions-bubble-chat-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s in-call chat suggestions - on the purple call screen, tapping the chat button slides up a suggestion sheet with canned lines (&quot;Let&#x27;s do this!&quot;, &quot;Good luck!&quot;, &quot;You&#x27;re gonna lose!&quot;, &quot;I&#x27;m gonna win!&quot;); picking one springs a white bubble out of your avatar, which then shrinks away.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b8d1ead5e2ea454ffcf/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b8d1ead5e2ea454ffcf/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-call-chat-suggestions-bubble-chat-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s in-call chat suggestions - on the purple call screen, tapping the chat button slides up a suggestion sheet with canned lines (&quot;Let&#x27;s do this!&quot;, &quot;Good luck!&quot;, &quot;You&#x27;re gonna lose!&quot;, &quot;I&#x27;m gonna win!&quot;); picking one springs a white bubble out of your avatar, which then shrinks away.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Purple-blue call screen: two circular avatars stacked (Alex top, you bottom), gamepad and chat buttons at the bottom. The chat sheet: dark rounded sheet with drag chevron, four suggestion bubbles in two columns, and the keyboard below with a blue &quot;go&quot; key. After selection, the sheet closes and a small white pill bubble (&quot;Let&#x27;s do this!&quot;) appears attached under your avatar.
+
+## Motion spec
+Pattern: springy avatar-anchored chat bubble.
+- Tap chat button: the button fills white (100ms); the suggestion sheet slides up over the dimmed call screen (spring ~300/24, 350ms), keyboard rises with it.
+- Tap a suggestion: the sheet slides down (280ms, ease-in), keyboard dismisses with it.
+- The bubble spawns from your avatar: scale 0 -&gt; 1 anchored at the avatar&#x27;s bottom edge (spring ~340/14, 300ms) with a slight overshoot, text fading in at 60% scale.
+- The bubble holds (~2.5s), then shrinks back into the avatar (scale -&gt; 0, 250ms, ease-in) and disappears.
+- A second sent bubble replaces the first (old shrinks as new springs, 100ms overlap).
+
+## Calibration
+- The bubble is anchored to the sender&#x27;s avatar, not floating mid-screen - it must scale out from that point.
+- Sheet and keyboard move as one unit; no gap opens between them.
+
+## Reduced motion
+The sheet and bubble fade (250ms) without springs.
+
+## Don&#x27;t miss
+- The suggestion chips are dark rounded bubbles, two per row, left-aligned - not a list.
+- The avatar behind the bubble stays visible; the bubble hangs below it like a caption.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy avatar-anchored chat bubble.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-call-chat-suggestions-bubble-chat-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's in-call chat suggestions - on the purple call screen, tapping the chat button slides up a suggestion sheet with canned lines (\"Let's do this!\", \"Good luck!\", \"You're gonna lose!\", \"I'm gonna win!\"); picking one springs a white bubble out of your avatar, which then shrinks away.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPurple-blue call screen: two circular avatars stacked (Alex top, you bottom), gamepad and chat buttons at the bottom. The chat sheet: dark rounded sheet with drag chevron, four suggestion bubbles in two columns, and the keyboard below with a blue \"go\" key. After selection, the sheet closes and a small white pill bubble (\"Let's do this!\") appears attached under your avatar.\n\n## Motion spec\nPattern: springy avatar-anchored chat bubble.\n- Tap chat button: the button fills white (100ms); the suggestion sheet slides up over the dimmed call screen (spring ~300/24, 350ms), keyboard rises with it.\n- Tap a suggestion: the sheet slides down (280ms, ease-in), keyboard dismisses with it.\n- The bubble spawns from your avatar: scale 0 -> 1 anchored at the avatar's bottom edge (spring ~340/14, 300ms) with a slight overshoot, text fading in at 60% scale.\n- The bubble holds (~2.5s), then shrinks back into the avatar (scale -> 0, 250ms, ease-in) and disappears.\n- A second sent bubble replaces the first (old shrinks as new springs, 100ms overlap).\n\n## Calibration\n- The bubble is anchored to the sender's avatar, not floating mid-screen - it must scale out from that point.\n- Sheet and keyboard move as one unit; no gap opens between them.\n\n## Reduced motion\nThe sheet and bubble fade (250ms) without springs.\n\n## Don't miss\n- The suggestion chips are dark rounded bubbles, two per row, left-aligned - not a list.\n- The avatar behind the bubble stays visible; the bubble hangs below it like a caption."</script>
+</body></html>

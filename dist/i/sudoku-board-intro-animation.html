@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sudoku Board Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sudoku Board Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sudoku-board-intro-animation"><b>Sudoku</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sudoku-board-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sudoku-board-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Sudoku a Day&#x27;s intro - a dark Sudoku grid materializes as its numbers stagger into cells, a stacked S-U-DO-KU wordmark with colored dots builds beneath, and the title plus two actions fade in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8753cb2a6516988e66b5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8753cb2a6516988e66b5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sudoku-board-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Sudoku a Day&#x27;s intro - a dark Sudoku grid materializes as its numbers stagger into cells, a stacked S-U-DO-KU wordmark with colored dots builds beneath, and the title plus two actions fade in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Near-black screen. Center-top: a 9x9 Sudoku grid outline with thin gray cell lines; digits fill in one by one. Below it the wordmark: &quot;S U&quot; over &quot;D O&quot; over &quot;K U&quot; as stacked letter pairs, each pair followed by a small colored dot (purple, red, yellow). Then the title &quot;Sudoku a Day&quot;, the subtitle &quot;A fresh Sudoku puzzle every day, to challenge your mind&quot;, a white &quot;How to play Sudoku&quot; button, and an &quot;I know how to play&quot; text link.
+
+## Motion spec
+Pattern: staggered cell population with a sequential lockup build.
+- The grid outline draws in (stroke fade, 400ms) on the dark field.
+- Digits populate the grid in a scattered stagger: each fades and scales into its cell (scale 0.5 -&gt; 1, 180ms, 25ms apart, random order), some in white, a few in the accent colors.
+- The wordmark letter pairs slide up one row at a time (rise 10pt + fade, 300ms, 150ms apart), each colored dot popping in after its pair (scale 0 -&gt; 1, spring ~400/17).
+- Title, subtitle, button, and link fade in sequence below (250ms each, 120ms apart).
+
+## Calibration
+- Number stagger is random-order, not row by row - the grid feels like it is being solved into existence.
+- Everything is centered on a strict vertical axis; no element shifts horizontally.
+
+## Reduced motion
+Grid and texts crossfade in place (300ms) with no per-cell stagger.
+
+## Don&#x27;t miss
+- The grid stays faint: thin lines, dim digits - the wordmark and title are brighter than the board.
+- Exactly three accent dots (purple, red, yellow), one per wordmark row.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered cell population with a sequential lockup build.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sudoku-board-intro-animation">original interaction</a> by Sudoku. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Sudoku a Day's intro - a dark Sudoku grid materializes as its numbers stagger into cells, a stacked S-U-DO-KU wordmark with colored dots builds beneath, and the title plus two actions fade in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNear-black screen. Center-top: a 9x9 Sudoku grid outline with thin gray cell lines; digits fill in one by one. Below it the wordmark: \"S U\" over \"D O\" over \"K U\" as stacked letter pairs, each pair followed by a small colored dot (purple, red, yellow). Then the title \"Sudoku a Day\", the subtitle \"A fresh Sudoku puzzle every day, to challenge your mind\", a white \"How to play Sudoku\" button, and an \"I know how to play\" text link.\n\n## Motion spec\nPattern: staggered cell population with a sequential lockup build.\n- The grid outline draws in (stroke fade, 400ms) on the dark field.\n- Digits populate the grid in a scattered stagger: each fades and scales into its cell (scale 0.5 -> 1, 180ms, 25ms apart, random order), some in white, a few in the accent colors.\n- The wordmark letter pairs slide up one row at a time (rise 10pt + fade, 300ms, 150ms apart), each colored dot popping in after its pair (scale 0 -> 1, spring ~400/17).\n- Title, subtitle, button, and link fade in sequence below (250ms each, 120ms apart).\n\n## Calibration\n- Number stagger is random-order, not row by row - the grid feels like it is being solved into existence.\n- Everything is centered on a strict vertical axis; no element shifts horizontally.\n\n## Reduced motion\nGrid and texts crossfade in place (300ms) with no per-cell stagger.\n\n## Don't miss\n- The grid stays faint: thin lines, dim digits - the wordmark and title are brighter than the board.\n- Exactly three accent dots (purple, red, yellow), one per wordmark row."</script>
+</body></html>

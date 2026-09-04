@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Voucher Claim Now Button Tap Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Voucher Claim Now Button Tap Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-voucher-claim-now-button-tap-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-voucher-claim-now-button-tap-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-voucher-claim-now-button-tap-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s voucher claim - tapping CLAIM NOW punches a green stamp onto the voucher, the voucher then miniaturizes and flies to the bottom of the screen, and the claimed rewards card rises in its place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e52a3a549438044fd472/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e52a3a549438044fd472/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-voucher-claim-now-button-tap-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s voucher claim - tapping CLAIM NOW punches a green stamp onto the voucher, the voucher then miniaturizes and flies to the bottom of the screen, and the claimed rewards card rises in its place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED voucher detail, dark: a big photo voucher (houseboats, &quot;get Rs 1,000 off on all packages&quot;, Rs 300 off line) with a purple stamp pad above and an orange CLAIM NOW button below. Claimed: a &quot;rewards&quot; card (same photo, &quot;Rs 1,000 off on all packages&quot;, Redeem Now) standing on the rewards stage.
+
+## Motion spec
+Pattern: stamp-punch claim, then collect-and-file.
+- Tap CLAIM NOW: the button squashes (scaleY 0.92, 100ms), a green stamp slams down onto the voucher (translateY -60 -&gt; 0, 200ms ease-in) with a paper shake (rotateZ +/-1 degree, 150ms) and an ink ring spreading from the stamp (scale 0.8 -&gt; 1.4, fade, 300ms).
+- The voucher then shrinks and flies to the bottom-center (scale 1 -&gt; 0.25, translateY to the dock, 400ms, ease-in) as the screen dims - filed away.
+- After a 200ms dark beat, the claimed rewards card rises from the bottom (translateY 120 -&gt; 0, spring ~280/15) with the &quot;rewards&quot; wordmark fading in under it (250ms).
+- The card settles with a soft shadow bloom and holds.
+
+## Calibration
+- The stamp is a physical punch - fast in, tiny shake, ink bloom. No gentle fades on the stamp itself.
+- The fly-away path is a straight shrink to the dock, not an arc - filing, not celebrating.
+
+## Reduced motion
+Stamp fades on (200ms); voucher crossfades to the rewards card (300ms).
+
+## Don&#x27;t miss
+- The photo on the voucher and the claimed card is identical - the shared image carries the continuity.
+- CLAIM NOW is gone after the punch; the button never comes back in that session.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stamp-punch claim, then collect-and-file.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-voucher-claim-now-button-tap-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's voucher claim - tapping CLAIM NOW punches a green stamp onto the voucher, the voucher then miniaturizes and flies to the bottom of the screen, and the claimed rewards card rises in its place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED voucher detail, dark: a big photo voucher (houseboats, \"get Rs 1,000 off on all packages\", Rs 300 off line) with a purple stamp pad above and an orange CLAIM NOW button below. Claimed: a \"rewards\" card (same photo, \"Rs 1,000 off on all packages\", Redeem Now) standing on the rewards stage.\n\n## Motion spec\nPattern: stamp-punch claim, then collect-and-file.\n- Tap CLAIM NOW: the button squashes (scaleY 0.92, 100ms), a green stamp slams down onto the voucher (translateY -60 -> 0, 200ms ease-in) with a paper shake (rotateZ +/-1 degree, 150ms) and an ink ring spreading from the stamp (scale 0.8 -> 1.4, fade, 300ms).\n- The voucher then shrinks and flies to the bottom-center (scale 1 -> 0.25, translateY to the dock, 400ms, ease-in) as the screen dims - filed away.\n- After a 200ms dark beat, the claimed rewards card rises from the bottom (translateY 120 -> 0, spring ~280/15) with the \"rewards\" wordmark fading in under it (250ms).\n- The card settles with a soft shadow bloom and holds.\n\n## Calibration\n- The stamp is a physical punch - fast in, tiny shake, ink bloom. No gentle fades on the stamp itself.\n- The fly-away path is a straight shrink to the dock, not an arc - filing, not celebrating.\n\n## Reduced motion\nStamp fades on (200ms); voucher crossfades to the rewards card (300ms).\n\n## Don't miss\n- The photo on the voucher and the claimed card is identical - the shared image carries the continuity.\n- CLAIM NOW is gone after the punch; the button never comes back in that session."</script>
+</body></html>

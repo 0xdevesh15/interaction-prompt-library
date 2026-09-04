@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zero Fasting Setup Sequence Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zero Fasting Setup Sequence Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zero-fasting-setup-sequence-animation"><b>Zero</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zero-fasting-setup-sequence-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zero-fasting-setup-sequence-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Zero&#x27;s fasting setup summary - a blue path draws itself between two pins while the user&#x27;s goals check in one by one beneath it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8ce2cb2a6516988e8ce6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8ce2cb2a6516988e8ce6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zero-fasting-setup-sequence-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Zero&#x27;s fasting setup summary - a blue path draws itself between two pins while the user&#x27;s goals check in one by one beneath it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pale pink screen with a back chevron and a maroon &quot;Continue&quot; button at bottom. Top center: two circle pins connected by a drawn route. Below: &quot;Let&#x27;s get to it, Prithvi!&quot; and the goal list - &quot;You&#x27;re a 30 year old male&quot;, &quot;Looking to gain 4 kgs&quot;, &quot;At a sustainable rate of 0.5-1 kgs per week&quot;, and &quot;Start your first fast today to reach your goal as soon as May 10th&quot;.
+
+## Motion spec
+Pattern: route drawing with staggered goal reveals.
+- The start pin pops in (scale 0 -&gt; 1, spring ~380/18), then the route draws toward the destination pin (stroke along an S-curve, 1s, ease-in-out), the destination pin popping as the path arrives (spring ~380/18).
+- The route thickens from a thin line to a bold blue ribbon (250ms) and sparkle bursts bloom at both pins (scale 0 -&gt; 1 -&gt; 0, 500ms, staggered).
+- Goal rows reveal top-down: each fades + rises 10pt (300ms) with its check icon drawing (stroke, 200ms), staggered 200ms apart; the final row (the call to action) is tappable-styled and settles with a soft scale (1.02 -&gt; 1).
+- Continue stays pinned and static throughout.
+
+## Calibration
+- The route draws at a travel pace - like watching a journey, not an instant line.
+- Each goal check lands exactly when its row finishes rising.
+
+## Reduced motion
+Route and rows fade in fully formed (300ms), top to bottom.
+
+## Don&#x27;t miss
+- Pin circles are blue outlines with a white center; the route is solid blue.
+- The last row is visually distinct: it is the action, the others are facts.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">route drawing with staggered goal reveals.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zero-fasting-setup-sequence-animation">original interaction</a> by Zero. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Zero's fasting setup summary - a blue path draws itself between two pins while the user's goals check in one by one beneath it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPale pink screen with a back chevron and a maroon \"Continue\" button at bottom. Top center: two circle pins connected by a drawn route. Below: \"Let's get to it, Prithvi!\" and the goal list - \"You're a 30 year old male\", \"Looking to gain 4 kgs\", \"At a sustainable rate of 0.5-1 kgs per week\", and \"Start your first fast today to reach your goal as soon as May 10th\".\n\n## Motion spec\nPattern: route drawing with staggered goal reveals.\n- The start pin pops in (scale 0 -> 1, spring ~380/18), then the route draws toward the destination pin (stroke along an S-curve, 1s, ease-in-out), the destination pin popping as the path arrives (spring ~380/18).\n- The route thickens from a thin line to a bold blue ribbon (250ms) and sparkle bursts bloom at both pins (scale 0 -> 1 -> 0, 500ms, staggered).\n- Goal rows reveal top-down: each fades + rises 10pt (300ms) with its check icon drawing (stroke, 200ms), staggered 200ms apart; the final row (the call to action) is tappable-styled and settles with a soft scale (1.02 -> 1).\n- Continue stays pinned and static throughout.\n\n## Calibration\n- The route draws at a travel pace - like watching a journey, not an instant line.\n- Each goal check lands exactly when its row finishes rising.\n\n## Reduced motion\nRoute and rows fade in fully formed (300ms), top to bottom.\n\n## Don't miss\n- Pin circles are blue outlines with a white center; the route is solid blue.\n- The last row is visually distinct: it is the action, the others are facts."</script>
+</body></html>

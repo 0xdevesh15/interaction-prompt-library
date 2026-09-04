@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agora Podcast Player Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Agora Podcast Player Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/agora-podcast-player-interaction"><b>Agora</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/agora-podcast-player-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/agora-podcast-player-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Agora&#x27;s mini-player scrub - dragging along the bottom podcast player floats a white timestamp tooltip that tracks your finger, while a &quot;SKIP INTRO&quot; pill and an expandable quick-actions row appear above the bar.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3dcdca5b9380d936aa/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3dcdca5b9380d936aa/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-agora-podcast-player-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Agora&#x27;s mini-player scrub - dragging along the bottom podcast player floats a white timestamp tooltip that tracks your finger, while a &quot;SKIP INTRO&quot; pill and an expandable quick-actions row appear above the bar.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Orange podcast app (&quot;Discover new content&quot; feed). Bottom mini-player: episode art thumb, skip-back, pause, skip-forward, queue icon. Above it on demand: a dark &quot;SKIP INTRO 17 MIN&quot; pill and a quick-actions row (speed, sleep timer, share, more icons).
+
+## Motion spec
+Pattern: scrub tooltip + progressive player chrome.
+- Touch the progress area: the player bar grows slightly (height +6px, 150ms) and a white tooltip with the hovered timestamp (6:00, 23:00...) springs in above the touch point (scale 0.6 -&gt; 1, spring ~400/22, ~200ms).
+- Drag: tooltip tracks the finger horizontally with tight lag-free positioning; the timestamp ticks over in 15s steps with a subtle number roll (100ms per step); playhead fill follows at 1:1.
+- Release: playback seeks with a soft haptic; the tooltip pops away (scale 1 -&gt; 0.7 + fade, 150ms) and the bar height settles back.
+- The &quot;SKIP INTRO&quot; pill slides up above the player when the playhead enters a marked intro range (spring ~320/26, ~250ms) and slides away past it.
+- Tapping the queue/more icon expands the quick-actions row upward (icons stagger in 40ms apart, rise 8px + fade, 200ms each) over the player; tap again collapses (reverse, faster).
+
+## Calibration
+- Tooltip never leaves the screen edge - clamp with a soft 8px margin.
+- Scrub is direct manipulation: no spring lag between finger and tooltip.
+
+## Reduced motion
+Tooltip fades in place; rows appear without stagger.
+
+## Don&#x27;t miss
+- The timestamp tooltip is white with dark text - a deliberate contrast pop on the orange field.
+- SKIP INTRO is contextual chrome: it belongs to the episode position, not the player state.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scrub tooltip + progressive player chrome.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/agora-podcast-player-interaction">original interaction</a> by Agora. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Agora's mini-player scrub - dragging along the bottom podcast player floats a white timestamp tooltip that tracks your finger, while a \"SKIP INTRO\" pill and an expandable quick-actions row appear above the bar.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOrange podcast app (\"Discover new content\" feed). Bottom mini-player: episode art thumb, skip-back, pause, skip-forward, queue icon. Above it on demand: a dark \"SKIP INTRO 17 MIN\" pill and a quick-actions row (speed, sleep timer, share, more icons).\n\n## Motion spec\nPattern: scrub tooltip + progressive player chrome.\n- Touch the progress area: the player bar grows slightly (height +6px, 150ms) and a white tooltip with the hovered timestamp (6:00, 23:00...) springs in above the touch point (scale 0.6 -> 1, spring ~400/22, ~200ms).\n- Drag: tooltip tracks the finger horizontally with tight lag-free positioning; the timestamp ticks over in 15s steps with a subtle number roll (100ms per step); playhead fill follows at 1:1.\n- Release: playback seeks with a soft haptic; the tooltip pops away (scale 1 -> 0.7 + fade, 150ms) and the bar height settles back.\n- The \"SKIP INTRO\" pill slides up above the player when the playhead enters a marked intro range (spring ~320/26, ~250ms) and slides away past it.\n- Tapping the queue/more icon expands the quick-actions row upward (icons stagger in 40ms apart, rise 8px + fade, 200ms each) over the player; tap again collapses (reverse, faster).\n\n## Calibration\n- Tooltip never leaves the screen edge - clamp with a soft 8px margin.\n- Scrub is direct manipulation: no spring lag between finger and tooltip.\n\n## Reduced motion\nTooltip fades in place; rows appear without stagger.\n\n## Don't miss\n- The timestamp tooltip is white with dark text - a deliberate contrast pop on the orange field.\n- SKIP INTRO is contextual chrome: it belongs to the episode position, not the player state."</script>
+</body></html>

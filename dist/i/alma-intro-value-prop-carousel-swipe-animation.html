@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alma Intro Value Prop Carousel Swipe Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Alma Intro Value Prop Carousel Swipe Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/alma-intro-value-prop-carousel-swipe-animation"><b>Alma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alma-intro-value-prop-carousel-swipe-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alma-intro-value-prop-carousel-swipe-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Alma&#x27;s intro value-prop carousel - a cream onboarding screen where swiping pages through product previews: a goals card with colored nutrient bubbles, a journal entry card answering &quot;What am I missing?&quot;, and a &quot;coming soon&quot; recipes card with dish photography.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f0d704befe20b134c14515/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f0d704befe20b134c14515/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-alma-intro-value-prop-carousel-swipe-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Alma&#x27;s intro value-prop carousel - a cream onboarding screen where swiping pages through product previews: a goals card with colored nutrient bubbles, a journal entry card answering &quot;What am I missing?&quot;, and a &quot;coming soon&quot; recipes card with dish photography.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream onboarding screen: small logo and Sign in top, a rounded white preview card at center, the headline &quot;The easiest way to...&quot; with a changing subline (&quot;Track what you eat&quot;, &quot;Learn how your diet affects you&quot;), page dots, and a dark green Get Started pill. Pages: a goals recap card with red/green/yellow bubble clusters, a Journal Entry card with the entry &quot;Eating well but dragging at the gym. What am I missing?&quot; and an AI answer, and a &quot;And coming soon...&quot; recipes card (&quot;Dishes of the Week&quot;, Vegan/Salmon dishes).
+
+## Motion spec
+Pattern: swipeable card carousel, gesture-driven ~400ms per page.
+- Swipe: the card track follows the finger 1:1; on release it settles to the nearest page (spring ~320/24), the incoming card scaling 0.94 -&gt; 1 while the outgoing drops to 0.94.
+- Text: headline stays fixed; the subline cross-fades per page (200ms).
+- Dots: the active dot widens (8px -&gt; 20px, 250ms ease-out) and darkens; others shrink.
+- Edge: the next card peeks in from the side during the drag, clipped by the screen edge.
+
+## Calibration
+- Card corners stay constant; only scale and position animate.
+- The Get Started button and header never move across pages.
+
+## Reduced motion
+Pages cross-fade (250ms); dots switch without stretch.
+
+## Don&#x27;t miss
+- The mid-swipe frame shows two cards at once with real parallax - no fake page curl.
+- The recipes page reveals a second headline (&quot;And coming soon...&quot;) that replaces the first.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipeable card carousel, gesture-driven ~400ms per page.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/alma-intro-value-prop-carousel-swipe-animation">original interaction</a> by Alma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Alma's intro value-prop carousel - a cream onboarding screen where swiping pages through product previews: a goals card with colored nutrient bubbles, a journal entry card answering \"What am I missing?\", and a \"coming soon\" recipes card with dish photography.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream onboarding screen: small logo and Sign in top, a rounded white preview card at center, the headline \"The easiest way to...\" with a changing subline (\"Track what you eat\", \"Learn how your diet affects you\"), page dots, and a dark green Get Started pill. Pages: a goals recap card with red/green/yellow bubble clusters, a Journal Entry card with the entry \"Eating well but dragging at the gym. What am I missing?\" and an AI answer, and a \"And coming soon...\" recipes card (\"Dishes of the Week\", Vegan/Salmon dishes).\n\n## Motion spec\nPattern: swipeable card carousel, gesture-driven ~400ms per page.\n- Swipe: the card track follows the finger 1:1; on release it settles to the nearest page (spring ~320/24), the incoming card scaling 0.94 -> 1 while the outgoing drops to 0.94.\n- Text: headline stays fixed; the subline cross-fades per page (200ms).\n- Dots: the active dot widens (8px -> 20px, 250ms ease-out) and darkens; others shrink.\n- Edge: the next card peeks in from the side during the drag, clipped by the screen edge.\n\n## Calibration\n- Card corners stay constant; only scale and position animate.\n- The Get Started button and header never move across pages.\n\n## Reduced motion\nPages cross-fade (250ms); dots switch without stretch.\n\n## Don't miss\n- The mid-swipe frame shows two cards at once with real parallax - no fake page curl.\n- The recipes page reveals a second headline (\"And coming soon...\") that replaces the first."</script>
+</body></html>

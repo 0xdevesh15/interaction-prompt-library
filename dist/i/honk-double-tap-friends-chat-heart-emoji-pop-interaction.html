@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Double Tap Friends Chat Heart Emoji Pop Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Double Tap Friends Chat Heart Emoji Pop Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-double-tap-friends-chat-heart-emoji-pop-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-double-tap-friends-chat-heart-emoji-pop-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-double-tap-friends-chat-heart-emoji-pop-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s double-tap hearts - double-tapping the friend&#x27;s chat bursts red heart emojis from the tap point that float up across the message area and get absorbed into the friend&#x27;s avatar at the top-right.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af41ead5e2ea454f849/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af41ead5e2ea454f849/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-double-tap-friends-chat-heart-emoji-pop-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s double-tap hearts - double-tapping the friend&#x27;s chat bursts red heart emojis from the tap point that float up across the message area and get absorbed into the friend&#x27;s avatar at the top-right.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Honk Bot chat (&quot;This is what a chat on Honk looks like. Type a reply to see how it works!&quot;), blue live bubble, keyboard open. The friend&#x27;s avatar sits top-right. On double-tap, a stream of red hearts rises through the message area toward the avatar.
+
+## Motion spec
+Pattern: heart burst with avatar absorption.
+- Double-tap: 5-8 red hearts spawn at the tap point (scale 0 -&gt; 1, staggered 60ms apart), each popping with a tiny overshoot (scale 1 -&gt; 1.15 -&gt; 1).
+- Hearts float upward along slight S-curves (translateY -180 to -320pt over 900-1200ms, horizontal sway +-20pt at ~1.5Hz), rotating gently (+-20deg), growing slightly then shrinking (scale peak 1.1 at 40%).
+- As each heart reaches the avatar&#x27;s vicinity it homes in (accelerates toward the avatar center, 150ms) and shrinks into it (scale -&gt; 0); the avatar absorbs with a pulse (scale 1 -&gt; 1.15 -&gt; 1, 180ms) per heart.
+- Repeated double-taps stack streams; earlier hearts continue independently.
+
+## Calibration
+- Hearts are red and filled; size 16-24pt with random variation.
+- The absorption target is the avatar&#x27;s center - hearts should converge, not just fade near it.
+
+## Reduced motion
+A single heart pops over the tap point and fades (400ms); avatar pulses once.
+
+## Don&#x27;t miss
+- Hearts spawn at the exact tap location, not at the bubble or avatar.
+- The keyboard and bubble stay fully interactive underneath - the hearts overlay everything.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">heart burst with avatar absorption.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-double-tap-friends-chat-heart-emoji-pop-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's double-tap hearts - double-tapping the friend's chat bursts red heart emojis from the tap point that float up across the message area and get absorbed into the friend's avatar at the top-right.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nHonk Bot chat (\"This is what a chat on Honk looks like. Type a reply to see how it works!\"), blue live bubble, keyboard open. The friend's avatar sits top-right. On double-tap, a stream of red hearts rises through the message area toward the avatar.\n\n## Motion spec\nPattern: heart burst with avatar absorption.\n- Double-tap: 5-8 red hearts spawn at the tap point (scale 0 -> 1, staggered 60ms apart), each popping with a tiny overshoot (scale 1 -> 1.15 -> 1).\n- Hearts float upward along slight S-curves (translateY -180 to -320pt over 900-1200ms, horizontal sway +-20pt at ~1.5Hz), rotating gently (+-20deg), growing slightly then shrinking (scale peak 1.1 at 40%).\n- As each heart reaches the avatar's vicinity it homes in (accelerates toward the avatar center, 150ms) and shrinks into it (scale -> 0); the avatar absorbs with a pulse (scale 1 -> 1.15 -> 1, 180ms) per heart.\n- Repeated double-taps stack streams; earlier hearts continue independently.\n\n## Calibration\n- Hearts are red and filled; size 16-24pt with random variation.\n- The absorption target is the avatar's center - hearts should converge, not just fade near it.\n\n## Reduced motion\nA single heart pops over the tap point and fades (400ms); avatar pulses once.\n\n## Don't miss\n- Hearts spawn at the exact tap location, not at the bubble or avatar.\n- The keyboard and bubble stay fully interactive underneath - the hearts overlay everything."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cosmos Cluster Drag and Drop Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Cosmos Cluster Drag and Drop Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cosmos-cluster-drag-and-drop-interaction"><b>Cosmos</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cosmos-cluster-drag-and-drop-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cosmos-cluster-drag-and-drop-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Cosmos&#x27; cluster pinning - dragging a saved-image cluster from the grid pins it into another cluster, which then expands into its own board view with a &quot;Subcluster created&quot; confirmation.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d35befe20b134bc6947/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d35befe20b134bc6947/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cosmos-cluster-drag-and-drop-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Cosmos&#x27; cluster pinning - dragging a saved-image cluster from the grid pins it into another cluster, which then expands into its own board view with a &quot;Subcluster created&quot; confirmation.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White gallery app: a 2-column grid of cluster cards (CA, Shopping, Interiors, Buildings) with rounded thumbnails and counts, a bottom tab bar, and a &quot;Drag to pin&quot; hint at top during the drag. A floating cluster chip (&quot;Pin cluster&quot;) follows the drag. The destination board (&quot;Buildings&quot;) shows a header with cover thumbnail, Interiors subcluster, and a masonry of architecture photos.
+
+## Motion spec
+Pattern: drag-to-nest with board transition, gesture-driven.
+- Lift: long-pressing a cluster lifts it (scale 1 -&gt; 1.05, shadow deepens, 150ms); remaining cards stay put.
+- Drag: the chip follows the finger 1:1; hovering a target cluster highlights it (border + scale 1.03, 150ms) and shows &quot;Move into cluster&quot;.
+- Drop: releasing over the target snaps the chip into it (spring ~340/22); the source grid slot collapses (height 0, 250ms).
+- Reveal: the target cluster expands to its board view (400ms, ease-out) - header fades in, masonry items stagger up (50ms apart), and a dark &quot;Subcluster created&quot; toast slides up from the bottom (300ms), auto-dismissing after 2s.
+
+## Calibration
+- The drop target is the whole cluster card, not a drop zone icon.
+- The grid never re-flows until the dragged card&#x27;s slot collapses.
+
+## Reduced motion
+Chip fades into the target; board cross-fades in (250ms); toast fades.
+
+## Don&#x27;t miss
+- The &quot;Drag to pin&quot; hint replaces the header only while a drag is active.
+- The toast is a dark pill with the new subcluster&#x27;s thumbnail and an Undo-style action.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">drag-to-nest with board transition, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cosmos-cluster-drag-and-drop-interaction">original interaction</a> by Cosmos. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Cosmos' cluster pinning - dragging a saved-image cluster from the grid pins it into another cluster, which then expands into its own board view with a \"Subcluster created\" confirmation.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite gallery app: a 2-column grid of cluster cards (CA, Shopping, Interiors, Buildings) with rounded thumbnails and counts, a bottom tab bar, and a \"Drag to pin\" hint at top during the drag. A floating cluster chip (\"Pin cluster\") follows the drag. The destination board (\"Buildings\") shows a header with cover thumbnail, Interiors subcluster, and a masonry of architecture photos.\n\n## Motion spec\nPattern: drag-to-nest with board transition, gesture-driven.\n- Lift: long-pressing a cluster lifts it (scale 1 -> 1.05, shadow deepens, 150ms); remaining cards stay put.\n- Drag: the chip follows the finger 1:1; hovering a target cluster highlights it (border + scale 1.03, 150ms) and shows \"Move into cluster\".\n- Drop: releasing over the target snaps the chip into it (spring ~340/22); the source grid slot collapses (height 0, 250ms).\n- Reveal: the target cluster expands to its board view (400ms, ease-out) - header fades in, masonry items stagger up (50ms apart), and a dark \"Subcluster created\" toast slides up from the bottom (300ms), auto-dismissing after 2s.\n\n## Calibration\n- The drop target is the whole cluster card, not a drop zone icon.\n- The grid never re-flows until the dragged card's slot collapses.\n\n## Reduced motion\nChip fades into the target; board cross-fades in (250ms); toast fades.\n\n## Don't miss\n- The \"Drag to pin\" hint replaces the header only while a drag is active.\n- The toast is a dark pill with the new subcluster's thumbnail and an Undo-style action."</script>
+</body></html>

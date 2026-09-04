@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLKJCK Intro Card Slide Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BLKJCK Intro Card Slide Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/blkjck-intro-card-slide-animation"><b>Blkjck</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blkjck-intro-card-slide-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blkjck-intro-card-slide-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BLKJCK&#x27;s intro transition - the welcome text and button slide away while the logo&#x27;s playing cards scatter and re-deal themselves into the table layout.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f7b8fd64e67f87fef5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f7b8fd64e67f87fef5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-blkjck-intro-card-slide-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BLKJCK&#x27;s intro transition - the welcome text and button slide away while the logo&#x27;s playing cards scatter and re-deal themselves into the table layout.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pink welcome screen: a stacked pair of cards (A and K) as the logo, &quot;Welcome to BLKJCK&quot;, a Learn the basics button, and a skip link. The end state is the game table: dealer cards up top, player cards below, hint text between.
+
+## Motion spec
+Pattern: re-dealing shared-element transition, ~900ms.
+- On advance, the welcome copy and button slide down and fade (250ms, ease-in).
+- The two logo cards split: each slides on a curved path to its new seat - one up to the dealer row, one down to the player row (spring stiffness 220 damping 19), rotating to match its final tilt.
+- As they travel, their faces flip to the new dealt cards (half-flip at the path&#x27;s midpoint, 150ms).
+- The remaining cards slide in from the screen edges to complete both hands (300ms, 60ms stagger), and the hint text fades up last.
+
+## Calibration
+- The logo cards are shared elements - the same two cards become part of the deal; spawning new cards at the seats breaks the trick.
+- The flip happens in flight, never at rest - a card that flips after landing reads as a content update.
+
+## Reduced motion
+Welcome fades out; the table fades in fully dealt.
+
+## Don&#x27;t miss
+- Card shadows track the travel so the cards read as physical objects, not sliding images.
+- The dealer seat card and player seat card are fixed roles - the A goes up, the K comes down, matching the source layout.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">re-dealing shared-element transition, ~900ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/blkjck-intro-card-slide-animation">original interaction</a> by Blkjck. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BLKJCK's intro transition - the welcome text and button slide away while the logo's playing cards scatter and re-deal themselves into the table layout.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPink welcome screen: a stacked pair of cards (A and K) as the logo, \"Welcome to BLKJCK\", a Learn the basics button, and a skip link. The end state is the game table: dealer cards up top, player cards below, hint text between.\n\n## Motion spec\nPattern: re-dealing shared-element transition, ~900ms.\n- On advance, the welcome copy and button slide down and fade (250ms, ease-in).\n- The two logo cards split: each slides on a curved path to its new seat - one up to the dealer row, one down to the player row (spring stiffness 220 damping 19), rotating to match its final tilt.\n- As they travel, their faces flip to the new dealt cards (half-flip at the path's midpoint, 150ms).\n- The remaining cards slide in from the screen edges to complete both hands (300ms, 60ms stagger), and the hint text fades up last.\n\n## Calibration\n- The logo cards are shared elements - the same two cards become part of the deal; spawning new cards at the seats breaks the trick.\n- The flip happens in flight, never at rest - a card that flips after landing reads as a content update.\n\n## Reduced motion\nWelcome fades out; the table fades in fully dealt.\n\n## Don't miss\n- Card shadows track the travel so the cards read as physical objects, not sliding images.\n- The dealer seat card and player seat card are fixed roles - the A goes up, the K comes down, matching the source layout."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Outsiders Sleep Duration Graph Slide Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>The Outsiders Sleep Duration Graph Slide Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/the-outsiders-sleep-duration-graph-slide-interaction"><b>The</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/the-outsiders-sleep-duration-graph-slide-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/the-outsiders-sleep-duration-graph-slide-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: The Outsiders&#x27; sleep duration graph - scrubbing the purple bar chart snaps a tooltip pill above the active bar and a date capsule below the axis, both springing bar-to-bar as you drag.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f080a76b5c1015acd51afc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f080a76b5c1015acd51afc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-the-outsiders-sleep-duration-graph-slide-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: The Outsiders&#x27; sleep duration graph - scrubbing the purple bar chart snaps a tooltip pill above the active bar and a date capsule below the axis, both springing bar-to-bar as you drag.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark purple Sleep screen, Duration tab: stats &quot;6:21 VERY LOW&quot; and &quot;1:16 LOW&quot; with colored dots, a bar chart of indigo-purple vertical bars over day labels, and the bottom tab bar. Scrub state: the active bar brightens, a pill tooltip floats above it (&quot;7:05&quot;), and a small capsule under the axis shows the date.
+
+## Motion spec
+Pattern: dual-snap bar scrub, gesture-driven.
+- Scrub: dragging moves the selection 1:1; crossing a bar&#x27;s midpoint snaps the highlight to that bar (spring ~420/22, overshoot visible) with haptic.
+- Tooltip: the value pill re-centers over the active bar with the same spring, its value crossfading (100ms) per change.
+- Date capsule: the small capsule below the axis slides to stay under the active bar (spring, slightly lagged ~40ms behind the tooltip for a trailing feel).
+- Highlight: the active bar brightens (120ms); neighbors stay at base opacity.
+
+## Calibration
+- Tooltip above, capsule below - both track the same bar at all times.
+- Values are durations (h:mm), the capsule is the date.
+
+## Reduced motion
+Tap selects a bar; tooltip and capsule appear without snap (150ms).
+
+## Don&#x27;t miss
+- The capsule&#x27;s slight lag behind the tooltip is the springy signature - keep it.
+- Scrubbing off the ends clamps to the first/last bar, never empty space.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">dual-snap bar scrub, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/the-outsiders-sleep-duration-graph-slide-interaction">original interaction</a> by The. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: The Outsiders' sleep duration graph - scrubbing the purple bar chart snaps a tooltip pill above the active bar and a date capsule below the axis, both springing bar-to-bar as you drag.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark purple Sleep screen, Duration tab: stats \"6:21 VERY LOW\" and \"1:16 LOW\" with colored dots, a bar chart of indigo-purple vertical bars over day labels, and the bottom tab bar. Scrub state: the active bar brightens, a pill tooltip floats above it (\"7:05\"), and a small capsule under the axis shows the date.\n\n## Motion spec\nPattern: dual-snap bar scrub, gesture-driven.\n- Scrub: dragging moves the selection 1:1; crossing a bar's midpoint snaps the highlight to that bar (spring ~420/22, overshoot visible) with haptic.\n- Tooltip: the value pill re-centers over the active bar with the same spring, its value crossfading (100ms) per change.\n- Date capsule: the small capsule below the axis slides to stay under the active bar (spring, slightly lagged ~40ms behind the tooltip for a trailing feel).\n- Highlight: the active bar brightens (120ms); neighbors stay at base opacity.\n\n## Calibration\n- Tooltip above, capsule below - both track the same bar at all times.\n- Values are durations (h:mm), the capsule is the date.\n\n## Reduced motion\nTap selects a bar; tooltip and capsule appear without snap (150ms).\n\n## Don't miss\n- The capsule's slight lag behind the tooltip is the springy signature - keep it.\n- Scrubbing off the ends clamps to the first/last bar, never empty space."</script>
+</body></html>

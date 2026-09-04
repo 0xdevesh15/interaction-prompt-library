@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perplexity AI Audio Player - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Perplexity AI Audio Player</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/perplexity-ai-audio-player"><b>Perplexity</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-ai-audio-player">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-ai-audio-player">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Perplexity&#x27;s audio player - a full-screen dark player whose dense vertical waveform pulses in real time with the spoken track.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb50225b7b88f78c6bfb/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb50225b7b88f78c6bfb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-perplexity-ai-audio-player.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Perplexity&#x27;s audio player - a full-screen dark player whose dense vertical waveform pulses in real time with the spoken track.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A deep maroon full-screen player: a thin progress line at top, then a dense field of vertical waveform bars filling the upper half, the episode title (&quot;The Global Stock Rout&quot;), a dotted scrubber line, and a control row (skip back 15, previous, pause, next, skip forward 15, playback speed).
+
+## Motion spec
+Pattern: live waveform visualizer.
+- The waveform is energy-mapped to the audio: bars rise and fall with amplitude (attack 60ms, release 180ms), brighter red-pink at peaks, dimming to dark maroon in quiet passages; the played region of the waveform is lit, the unplayed region sits at 30% opacity.
+- The top progress line fills left to right in sync (continuous, no steps).
+- The dotted scrubber line under the title has a moving playhead dot; dragging it scrubs, and the waveform&#x27;s lit region follows the scrub position immediately (100ms catch-up).
+- Pause/play: the pause glyph morphs to play (200ms path morph) and the waveform relaxes to a low idle ripple (bars at 10% height, slow 2s undulation) when paused.
+- Skip buttons nudge the waveform sideways (translateX +-12px with spring ~400/24 return) as position jumps.
+
+## Calibration
+- Bars are thin (2-3px) and densely packed (~60 across) with rounded caps - a field, not a graphic EQ with chunky blocks.
+- Idle (paused) state must still breathe slightly; never freeze the bars mid-height.
+
+## Reduced motion
+Static waveform outline; only the progress line moves.
+
+## Don&#x27;t miss
+- The whole screen is monochrome maroon/red - the waveform&#x27;s brightness carries all the information.
+- Controls are small and quiet at the bottom; the waveform owns the screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">live waveform visualizer.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/perplexity-ai-audio-player">original interaction</a> by Perplexity. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Perplexity's audio player - a full-screen dark player whose dense vertical waveform pulses in real time with the spoken track.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA deep maroon full-screen player: a thin progress line at top, then a dense field of vertical waveform bars filling the upper half, the episode title (\"The Global Stock Rout\"), a dotted scrubber line, and a control row (skip back 15, previous, pause, next, skip forward 15, playback speed).\n\n## Motion spec\nPattern: live waveform visualizer.\n- The waveform is energy-mapped to the audio: bars rise and fall with amplitude (attack 60ms, release 180ms), brighter red-pink at peaks, dimming to dark maroon in quiet passages; the played region of the waveform is lit, the unplayed region sits at 30% opacity.\n- The top progress line fills left to right in sync (continuous, no steps).\n- The dotted scrubber line under the title has a moving playhead dot; dragging it scrubs, and the waveform's lit region follows the scrub position immediately (100ms catch-up).\n- Pause/play: the pause glyph morphs to play (200ms path morph) and the waveform relaxes to a low idle ripple (bars at 10% height, slow 2s undulation) when paused.\n- Skip buttons nudge the waveform sideways (translateX +-12px with spring ~400/24 return) as position jumps.\n\n## Calibration\n- Bars are thin (2-3px) and densely packed (~60 across) with rounded caps - a field, not a graphic EQ with chunky blocks.\n- Idle (paused) state must still breathe slightly; never freeze the bars mid-height.\n\n## Reduced motion\nStatic waveform outline; only the progress line moves.\n\n## Don't miss\n- The whole screen is monochrome maroon/red - the waveform's brightness carries all the information.\n- Controls are small and quiet at the bottom; the waveform owns the screen."</script>
+</body></html>

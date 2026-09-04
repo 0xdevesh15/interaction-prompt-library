@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saily Auto Topup Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Saily Auto Topup Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/saily-auto-topup-animation"><b>Saily</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/saily-auto-topup-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/saily-auto-topup-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Saily&#x27;s auto top-up demo - a looping card animation where the data bar drains from 10GB to 0GB, a &quot;+10GB&quot; badge floats in, and the bar refills, selling the automatic top-up toggle below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d35558b404636cd354b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d35558b404636cd354b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-saily-auto-topup-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Saily&#x27;s auto top-up demo - a looping card animation where the data bar drains from 10GB to 0GB, a &quot;+10GB&quot; badge floats in, and the bar refills, selling the automatic top-up toggle below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light sheet: close X top-left, &quot;Auto top-up&quot; title, a credit-card graphic (VISA) with yellow-green splash shapes behind it and a data progress bar across it, an &quot;Auto top-up&quot; toggle row on the card, then copy: &quot;Stay connected with auto top-up&quot;, &quot;Don&#x27;t worry about running out of data - set your plan to top up automatically!&quot;, and a &quot;How does it work?&quot; FAQ row.
+
+## Motion spec
+Pattern: looping product demo, ~4s cycle.
+- Drain: the bar depletes from full to empty (1.6s, ease-in-out), its GB label counting down (10GB -&gt; 0GB).
+- Badge: at empty, a green &quot;+10GB&quot; badge pops in above the card (spring ~380/18, scale 0 -&gt; 1), drifts up 10px, and fades (600ms total).
+- Refill: the bar refills to full (1s, ease-out) with the label counting back up; yellow splash shapes wiggle (+-3deg, 400ms) on refill.
+- Pause: 600ms hold at full before the loop restarts.
+
+## Calibration
+- The toggle on the card stays on the whole loop - the animation sells the result, not the toggle.
+- Splash shapes are decorative: they only wiggle, never translate off the card.
+
+## Reduced motion
+Static full bar with a single &quot;+10GB&quot; badge, no loop.
+
+## Don&#x27;t miss
+- The count-down and count-up are numeric, matching the bar fill exactly.
+- The badge reads &quot;+10GB&quot; with a checkmark, not a generic refill icon.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping product demo, ~4s cycle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/saily-auto-topup-animation">original interaction</a> by Saily. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Saily's auto top-up demo - a looping card animation where the data bar drains from 10GB to 0GB, a \"+10GB\" badge floats in, and the bar refills, selling the automatic top-up toggle below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight sheet: close X top-left, \"Auto top-up\" title, a credit-card graphic (VISA) with yellow-green splash shapes behind it and a data progress bar across it, an \"Auto top-up\" toggle row on the card, then copy: \"Stay connected with auto top-up\", \"Don't worry about running out of data - set your plan to top up automatically!\", and a \"How does it work?\" FAQ row.\n\n## Motion spec\nPattern: looping product demo, ~4s cycle.\n- Drain: the bar depletes from full to empty (1.6s, ease-in-out), its GB label counting down (10GB -> 0GB).\n- Badge: at empty, a green \"+10GB\" badge pops in above the card (spring ~380/18, scale 0 -> 1), drifts up 10px, and fades (600ms total).\n- Refill: the bar refills to full (1s, ease-out) with the label counting back up; yellow splash shapes wiggle (+-3deg, 400ms) on refill.\n- Pause: 600ms hold at full before the loop restarts.\n\n## Calibration\n- The toggle on the card stays on the whole loop - the animation sells the result, not the toggle.\n- Splash shapes are decorative: they only wiggle, never translate off the card.\n\n## Reduced motion\nStatic full bar with a single \"+10GB\" badge, no loop.\n\n## Don't miss\n- The count-down and count-up are numeric, matching the bar fill exactly.\n- The badge reads \"+10GB\" with a checkmark, not a generic refill icon."</script>
+</body></html>

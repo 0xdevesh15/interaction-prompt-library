@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grok Chat Menu Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Grok Chat Menu Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/grok-chat-menu-interaction"><b>Grok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-chat-menu-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-chat-menu-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Grok&#x27;s attachment menu - tapping plus dismisses the keyboard, blurs the chat behind, and slides the quick-action items in one by one.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/677573674ee6c592aaedf261/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/677573674ee6c592aaedf261/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-grok-chat-menu-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Grok&#x27;s attachment menu - tapping plus dismisses the keyboard, blurs the chat behind, and slides the quick-action items in one by one.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Grok chat screen with the keyboard up. Menu state: a &quot;Recents&quot; header row with chevron, then Camera, Photos, Files, and a muted Create Image item - all floating over the heavily blurred chat.
+
+## Motion spec
+Pattern: blurred-overlay menu with staggered items, ~500ms.
+- Tap plus: the keyboard slides down (250ms, ease-in) while the chat behind blurs and dims (300ms, ease-out), both starting together.
+- The &quot;Recents&quot; header fades in first (200ms), then Camera, Photos, Files slide in from the left with a 60ms stagger (each 300ms, 20px slide, ease-out).
+- Create Image arrives last, already at its muted opacity - it never animates to full strength.
+- Each row&#x27;s icon pops slightly ahead of its label (scale 0.8 to 1, 150ms).
+- Tap outside or pick an item: rows slide back out right-to-left in reverse stagger (200ms), the blur lifts, and the keyboard stays down.
+
+## Calibration
+- The blur ramps before the first item lands - items must arrive onto a settled backdrop.
+- The stagger is left-slide plus fade, uniform per row; no scaling of whole rows.
+
+## Reduced motion
+Menu fades in over the dimmed chat; no stagger.
+
+## Don&#x27;t miss
+- Create Image is visibly dimmer than the others from its first frame - a disabled state, not a loading one.
+- The blurred background keeps the chat&#x27;s colors readable as shapes; it is frosted, not blacked out.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">blurred-overlay menu with staggered items, ~500ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/grok-chat-menu-interaction">original interaction</a> by Grok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Grok's attachment menu - tapping plus dismisses the keyboard, blurs the chat behind, and slides the quick-action items in one by one.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nGrok chat screen with the keyboard up. Menu state: a \"Recents\" header row with chevron, then Camera, Photos, Files, and a muted Create Image item - all floating over the heavily blurred chat.\n\n## Motion spec\nPattern: blurred-overlay menu with staggered items, ~500ms.\n- Tap plus: the keyboard slides down (250ms, ease-in) while the chat behind blurs and dims (300ms, ease-out), both starting together.\n- The \"Recents\" header fades in first (200ms), then Camera, Photos, Files slide in from the left with a 60ms stagger (each 300ms, 20px slide, ease-out).\n- Create Image arrives last, already at its muted opacity - it never animates to full strength.\n- Each row's icon pops slightly ahead of its label (scale 0.8 to 1, 150ms).\n- Tap outside or pick an item: rows slide back out right-to-left in reverse stagger (200ms), the blur lifts, and the keyboard stays down.\n\n## Calibration\n- The blur ramps before the first item lands - items must arrive onto a settled backdrop.\n- The stagger is left-slide plus fade, uniform per row; no scaling of whole rows.\n\n## Reduced motion\nMenu fades in over the dimmed chat; no stagger.\n\n## Don't miss\n- Create Image is visibly dimmer than the others from its first frame - a disabled state, not a loading one.\n- The blurred background keeps the chat's colors readable as shapes; it is frosted, not blacked out."</script>
+</body></html>

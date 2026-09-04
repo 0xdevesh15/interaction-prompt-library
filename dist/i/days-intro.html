@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Days Intro - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Days Intro</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/days-intro"><b>Days</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/days-intro">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/days-intro">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the Days app intro - the &quot;D&quot; logo zooms out of a full-screen card, then the view transitions into an auto-scrolling vertical showcase of event countdown cards (Kate&#x27;s Birthday, Halloween, Christmas, New Year, Thanksgiving, Valentine&#x27;s Day) before settling on the DAYS wordmark.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6706669dfb4e89886436b58c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6706669dfb4e89886436b58c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-days-intro.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the Days app intro - the &quot;D&quot; logo zooms out of a full-screen card, then the view transitions into an auto-scrolling vertical showcase of event countdown cards (Kate&#x27;s Birthday, Halloween, Christmas, New Year, Thanksgiving, Valentine&#x27;s Day) before settling on the DAYS wordmark.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White splash with the black &quot;D&quot; mark; a full-screen photo countdown card (&quot;Kate&#x27;s Birthday, IN 6 DAYS&quot;); a scrolling stack of event cards; final white screen with the gray &quot;DAYS&quot; wordmark and tagline.
+
+## Motion spec
+Pattern: logo zoom into auto-scrolling card showcase.
+- The &quot;D&quot; holds ~500ms, then zooms (scale 1 -&gt; 8, 600ms, ease-in) until it fills and exits the frame, revealing the first full-screen card.
+- The card stack auto-scrolls vertically (~40px/s, continuous), cards drifting up past the viewport, each a full-bleed photo with the countdown and name overlaid.
+- The scroll decelerates (ease-out, last 800ms) and the final frame crossfades (300ms) to the DAYS wordmark, which fades in letterspaced with the tagline below.
+
+## Calibration
+- The showcase scroll is automatic - no user input; the user watches.
+- Cards maintain their overlay text position while scrolling (text rides with its card).
+
+## Reduced motion
+Logo crossfades to a static grid of cards (250ms), then to the wordmark.
+
+## Don&#x27;t miss
+- The zoom uses the D&#x27;s own shape as the reveal - the card appears through/behind the letterform.
+- The wordmark is gray on white, quiet after the loud showcase.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo zoom into auto-scrolling card showcase.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/days-intro">original interaction</a> by Days. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the Days app intro - the \"D\" logo zooms out of a full-screen card, then the view transitions into an auto-scrolling vertical showcase of event countdown cards (Kate's Birthday, Halloween, Christmas, New Year, Thanksgiving, Valentine's Day) before settling on the DAYS wordmark.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite splash with the black \"D\" mark; a full-screen photo countdown card (\"Kate's Birthday, IN 6 DAYS\"); a scrolling stack of event cards; final white screen with the gray \"DAYS\" wordmark and tagline.\n\n## Motion spec\nPattern: logo zoom into auto-scrolling card showcase.\n- The \"D\" holds ~500ms, then zooms (scale 1 -> 8, 600ms, ease-in) until it fills and exits the frame, revealing the first full-screen card.\n- The card stack auto-scrolls vertically (~40px/s, continuous), cards drifting up past the viewport, each a full-bleed photo with the countdown and name overlaid.\n- The scroll decelerates (ease-out, last 800ms) and the final frame crossfades (300ms) to the DAYS wordmark, which fades in letterspaced with the tagline below.\n\n## Calibration\n- The showcase scroll is automatic - no user input; the user watches.\n- Cards maintain their overlay text position while scrolling (text rides with its card).\n\n## Reduced motion\nLogo crossfades to a static grid of cards (250ms), then to the wordmark.\n\n## Don't miss\n- The zoom uses the D's own shape as the reveal - the card appears through/behind the letterform.\n- The wordmark is gray on white, quiet after the loud showcase."</script>
+</body></html>

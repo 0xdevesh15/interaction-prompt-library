@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blinkit 2024 Badges Intro Sequence - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Blinkit 2024 Badges Intro Sequence</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/blinkit-2024-badges-intro-sequence"><b>Blinkit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blinkit-2024-badges-intro-sequence">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blinkit-2024-badges-intro-sequence">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Blinkit&#x27;s 2024 badges intro - an auto-playing story sequence where bold typography lands over morphing color fields, building to the yellow badges reveal.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775735e4ee6c592aaedf1db/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775735e4ee6c592aaedf1db/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-blinkit-2024-badges-intro-sequence.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Blinkit&#x27;s 2024 badges intro - an auto-playing story sequence where bold typography lands over morphing color fields, building to the yellow badges reveal.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen story format with a progress bar on top. Beats: dark gradient blobs with &quot;2024 - went by in a blink&quot;, magenta field with &quot;PARTIED&quot;, green field with &quot;SHARED GIFTS&quot;, black with &quot;THAT REMINDS US&quot;, a trophy scene with &quot;INDIA WON THE WORLD CUP&quot;, dark with &quot;and now it&#x27;s time to celebrate YOU&quot;, then the yellow &quot;blinkit 2024 BADGES&quot; card crowded with floating 3D badge characters.
+
+## Motion spec
+Pattern: story sequence with color morphs and typographic slams, ~2s per beat.
+- Each beat&#x27;s background color field wipes or crossfades in from the previous (400ms); gradient blobs drift slowly behind the text (6s ambient float).
+- Headlines slam in word by word: each word scales from 1.4 to 1 (spring stiffness 400 damping 15) with a 90ms stagger between words.
+- The trophy rises from the bottom with a spring (stiffness 280 damping 16) while sparkles pop around it (scale 0 to 1, 200ms, random stagger).
+- The final card: background floods yellow (400ms), the &quot;2024 BADGES&quot; logo locks up center (scale 0.6 to 1, stiffness 340 damping 14), and the 3D badge characters float in from the edges (spring stiffness 260 damping 15, 100ms stagger) and idle-drift in place.
+- The top progress bar fills beat by beat, each segment animating its fill across the beat&#x27;s duration.
+
+## Calibration
+- Word slams land hard and settle fast - no floaty ease-outs.
+- Every color morph is full-bleed; no hard edges between beats.
+
+## Reduced motion
+Beats crossfade; text and badges appear assembled.
+
+## Don&#x27;t miss
+- The final card&#x27;s characters keep drifting after landing - the scene never freezes.
+- The trophy beat is the tonal pivot: it is the only beat with a literal object instead of pure type.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">story sequence with color morphs and typographic slams, ~2s per beat.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/blinkit-2024-badges-intro-sequence">original interaction</a> by Blinkit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Blinkit's 2024 badges intro - an auto-playing story sequence where bold typography lands over morphing color fields, building to the yellow badges reveal.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen story format with a progress bar on top. Beats: dark gradient blobs with \"2024 - went by in a blink\", magenta field with \"PARTIED\", green field with \"SHARED GIFTS\", black with \"THAT REMINDS US\", a trophy scene with \"INDIA WON THE WORLD CUP\", dark with \"and now it's time to celebrate YOU\", then the yellow \"blinkit 2024 BADGES\" card crowded with floating 3D badge characters.\n\n## Motion spec\nPattern: story sequence with color morphs and typographic slams, ~2s per beat.\n- Each beat's background color field wipes or crossfades in from the previous (400ms); gradient blobs drift slowly behind the text (6s ambient float).\n- Headlines slam in word by word: each word scales from 1.4 to 1 (spring stiffness 400 damping 15) with a 90ms stagger between words.\n- The trophy rises from the bottom with a spring (stiffness 280 damping 16) while sparkles pop around it (scale 0 to 1, 200ms, random stagger).\n- The final card: background floods yellow (400ms), the \"2024 BADGES\" logo locks up center (scale 0.6 to 1, stiffness 340 damping 14), and the 3D badge characters float in from the edges (spring stiffness 260 damping 15, 100ms stagger) and idle-drift in place.\n- The top progress bar fills beat by beat, each segment animating its fill across the beat's duration.\n\n## Calibration\n- Word slams land hard and settle fast - no floaty ease-outs.\n- Every color morph is full-bleed; no hard edges between beats.\n\n## Reduced motion\nBeats crossfade; text and badges appear assembled.\n\n## Don't miss\n- The final card's characters keep drifting after landing - the scene never freezes.\n- The trophy beat is the tonal pivot: it is the only beat with a literal object instead of pure type."</script>
+</body></html>

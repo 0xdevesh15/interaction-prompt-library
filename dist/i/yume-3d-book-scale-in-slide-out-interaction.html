@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yume 3D Book Scale In Slide Out Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Yume 3D Book Scale In Slide Out Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/yume-3d-book-scale-in-slide-out-interaction"><b>Yume</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/yume-3d-book-scale-in-slide-out-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/yume-3d-book-scale-in-slide-out-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Yume&#x27;s journal card - tapping a dream card scales it up to a full-screen page, and dismissing scales it down with a 3D tilt as it slides back into the list.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adcfe419535c52ef3791ee/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adcfe419535c52ef3791ee/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-yume-3d-book-scale-in-slide-out-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Yume&#x27;s journal card - tapping a dream card scales it up to a full-screen page, and dismissing scales it down with a 3D tilt as it slides back into the list.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark journal app &quot;Browse your dreams&quot;: a list card (date, dream excerpt) over a month strip; open state is a full-screen paper page with the dream text; dismiss returns the card to its list position.
+
+## Motion spec
+Pattern: card-to-page morph with 3D dismiss, ~450ms each way.
+- Open: the card scales from list size to full screen (spring ~280/26, 400ms), its corners expanding to the screen edges; the month strip and header fade (200ms) as the page content fades in staggered (150ms, +50ms per block).
+- Dismiss: the page tilts in 3D (rotateX ~12deg, perspective 1000px), scales down (spring ~320/24, 450ms) and slides toward its list slot while the list fades back in (200ms).
+- The card lands exactly in its scroll position - no snap or jump.
+
+## Calibration
+- One continuous transform from card rect to screen rect - no crossfade between two views.
+- The 3D tilt is strongest mid-flight and zero at both ends.
+
+## Reduced motion
+Simple scale and fade, no 3D tilt.
+
+## Don&#x27;t miss
+- The dismiss carries a paper-like tilt - it is not a flat shrink.
+- Header and month strip crossfade with the card, not before it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card-to-page morph with 3D dismiss, ~450ms each way.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/yume-3d-book-scale-in-slide-out-interaction">original interaction</a> by Yume. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Yume's journal card - tapping a dream card scales it up to a full-screen page, and dismissing scales it down with a 3D tilt as it slides back into the list.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark journal app \"Browse your dreams\": a list card (date, dream excerpt) over a month strip; open state is a full-screen paper page with the dream text; dismiss returns the card to its list position.\n\n## Motion spec\nPattern: card-to-page morph with 3D dismiss, ~450ms each way.\n- Open: the card scales from list size to full screen (spring ~280/26, 400ms), its corners expanding to the screen edges; the month strip and header fade (200ms) as the page content fades in staggered (150ms, +50ms per block).\n- Dismiss: the page tilts in 3D (rotateX ~12deg, perspective 1000px), scales down (spring ~320/24, 450ms) and slides toward its list slot while the list fades back in (200ms).\n- The card lands exactly in its scroll position - no snap or jump.\n\n## Calibration\n- One continuous transform from card rect to screen rect - no crossfade between two views.\n- The 3D tilt is strongest mid-flight and zero at both ends.\n\n## Reduced motion\nSimple scale and fade, no 3D tilt.\n\n## Don't miss\n- The dismiss carries a paper-like tilt - it is not a flat shrink.\n- Header and month strip crossfade with the card, not before it."</script>
+</body></html>

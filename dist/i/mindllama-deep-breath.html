@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mindllama Deep Breath - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mindllama Deep Breath</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mindllama-deep-breath"><b>Mindllama</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mindllama-deep-breath">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mindllama-deep-breath">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Mindllama&#x27;s deep-breath exercise - a llama mascot that sinks for a countdown, then rises and expands on &quot;Breathe in,&quot; holds, and deflates on &quot;Breathe out,&quot; scaled to the breath phase.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b9efd9a093f14360331df6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b9efd9a093f14360331df6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mindllama-deep-breath.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Mindllama&#x27;s deep-breath exercise - a llama mascot that sinks for a countdown, then rises and expands on &quot;Breathe in,&quot; holds, and deflates on &quot;Breathe out,&quot; scaled to the breath phase.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A storybook canal-city illustration (turquoise water, pastel buildings) fills the screen. The fluffy llama sits center with &quot;Take 1 deep breath&quot; above and a &quot;Take 1 breath&quot; pill button below. On start, a countdown (3, 2, 1) appears top-left as the llama sinks. Then the breath loop: large text top-left (&quot;Breathe in&quot; / &quot;Hold&quot; / &quot;Breathe out&quot;) while the llama rises and grows on inhale (eyes closed, blue glasses visible at full size), holds, then shrinks and sinks on exhale.
+
+## Motion spec
+Pattern: mascot-scaled breath pacing.
+- Tap the pill: the intro text and button fade (250ms) and the countdown runs - each number (3, 2, 1) at top-left for ~700ms - while the llama translateYs down ~80px and scales to 0.7, easing out of view&#x27;s center.
+- Breathe in (~4s): &quot;Breathe in&quot; text fades/slides in; the llama rises to center and scales 0.7 to 1.15 on a slow ease-in-out - the growth is the pacer.
+- Hold (~2s): text swaps to &quot;Hold&quot;; the llama hangs at full size with a tiny idle bob (+-4px, 1s).
+- Breathe out (~4s): text swaps to &quot;Breathe out&quot;; the llama scales back to 0.7 and sinks, mirroring the inhale curve.
+- The loop repeats per breath count; the background illustration stays still throughout.
+
+## Calibration
+- The llama&#x27;s scale must track the breath timing exactly - easing that finishes early leaves dead time at full lungs.
+- Text changes are quick (200ms) so they never lag the phase change.
+
+## Reduced motion
+The llama holds center; a ring around it expands/contracts to pace the breath instead.
+
+## Don&#x27;t miss
+- The llama&#x27;s eyes close at full inhale - the face sells the calm, keep the expression change on the scale peak.
+- Only the llama and text move; animating the background distracts from the pacing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">mascot-scaled breath pacing.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mindllama-deep-breath">original interaction</a> by Mindllama. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Mindllama's deep-breath exercise - a llama mascot that sinks for a countdown, then rises and expands on \"Breathe in,\" holds, and deflates on \"Breathe out,\" scaled to the breath phase.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA storybook canal-city illustration (turquoise water, pastel buildings) fills the screen. The fluffy llama sits center with \"Take 1 deep breath\" above and a \"Take 1 breath\" pill button below. On start, a countdown (3, 2, 1) appears top-left as the llama sinks. Then the breath loop: large text top-left (\"Breathe in\" / \"Hold\" / \"Breathe out\") while the llama rises and grows on inhale (eyes closed, blue glasses visible at full size), holds, then shrinks and sinks on exhale.\n\n## Motion spec\nPattern: mascot-scaled breath pacing.\n- Tap the pill: the intro text and button fade (250ms) and the countdown runs - each number (3, 2, 1) at top-left for ~700ms - while the llama translateYs down ~80px and scales to 0.7, easing out of view's center.\n- Breathe in (~4s): \"Breathe in\" text fades/slides in; the llama rises to center and scales 0.7 to 1.15 on a slow ease-in-out - the growth is the pacer.\n- Hold (~2s): text swaps to \"Hold\"; the llama hangs at full size with a tiny idle bob (+-4px, 1s).\n- Breathe out (~4s): text swaps to \"Breathe out\"; the llama scales back to 0.7 and sinks, mirroring the inhale curve.\n- The loop repeats per breath count; the background illustration stays still throughout.\n\n## Calibration\n- The llama's scale must track the breath timing exactly - easing that finishes early leaves dead time at full lungs.\n- Text changes are quick (200ms) so they never lag the phase change.\n\n## Reduced motion\nThe llama holds center; a ring around it expands/contracts to pace the breath instead.\n\n## Don't miss\n- The llama's eyes close at full inhale - the face sells the calm, keep the expression change on the scale peak.\n- Only the llama and text move; animating the background distracts from the pacing."</script>
+</body></html>

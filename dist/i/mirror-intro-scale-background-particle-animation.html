@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mirror Intro Scale Background Particle Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mirror Intro Scale Background Particle Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mirror-intro-scale-background-particle-animation"><b>Mirror</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mirror-intro-scale-background-particle-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mirror-intro-scale-background-particle-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Mirror&#x27;s onboarding intro - a slow-zooming black particle field behind the two-circle MIRROR mark, with the headline, Jung quote, and buttons fading in one by one.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343465491e9c48bfb0e7da/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343465491e9c48bfb0e7da/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mirror-intro-scale-background-particle-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Mirror&#x27;s onboarding intro - a slow-zooming black particle field behind the two-circle MIRROR mark, with the headline, Jung quote, and buttons fading in one by one.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Mirror intro, pure black: a field of faint drifting specks (dust, tiny shards, occasional soft glints) filling the whole screen. Upper third: the two-circle mark (one filled cream circle, one cream outline, overlapping) above &quot;MIRROR&quot;. Lower half: &quot;Know Yourself. Know Others.&quot;, the Carl Jung quote with attribution, a cream &quot;Get Started&quot; button and &quot;Already on Mirror? Sign in&quot; ghost button.
+
+## Motion spec
+Pattern: slow-zoom particle atmosphere with staggered typographic fade-in.
+- The particle field slow-zooms continuously (scale 1 -&gt; 1.08 over 30s, looping with an imperceptible reset); individual specks drift on their own vectors (2-6px/s) with a few catching light (opacity pulses 0.1 -&gt; 0.5 -&gt; 0.1 over ~3s, random phases).
+- Content fades in from black in a strict sequence: the two-circle mark first (1s fade, 300ms in), &quot;MIRROR&quot; 200ms later (800ms), then the headline line by line (600ms each, 150ms apart), then the quote block (600ms), then Get Started (500ms) and Sign In (400ms, 100ms apart).
+- Nothing slides - every entrance is a pure fade with at most a 6px rise.
+- After the sequence completes, the field keeps breathing forever; the buttons idle with no pulse.
+
+## Calibration
+- The palette is monochrome: black, cream, and grey specks only.
+- The whole intro takes ~3.5s to fully reveal and must feel unhurried.
+
+## Reduced motion
+Static particle field (single frame); all content fades in together over 600ms.
+
+## Don&#x27;t miss
+- The two circles of the mark must overlap exactly as shown - one filled, one outline.
+- The quote attribution (&quot;Carl Jung&quot;) is part of the fade sequence, not a separate step.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slow-zoom particle atmosphere with staggered typographic fade-in.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mirror-intro-scale-background-particle-animation">original interaction</a> by Mirror. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Mirror's onboarding intro - a slow-zooming black particle field behind the two-circle MIRROR mark, with the headline, Jung quote, and buttons fading in one by one.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMirror intro, pure black: a field of faint drifting specks (dust, tiny shards, occasional soft glints) filling the whole screen. Upper third: the two-circle mark (one filled cream circle, one cream outline, overlapping) above \"MIRROR\". Lower half: \"Know Yourself. Know Others.\", the Carl Jung quote with attribution, a cream \"Get Started\" button and \"Already on Mirror? Sign in\" ghost button.\n\n## Motion spec\nPattern: slow-zoom particle atmosphere with staggered typographic fade-in.\n- The particle field slow-zooms continuously (scale 1 -> 1.08 over 30s, looping with an imperceptible reset); individual specks drift on their own vectors (2-6px/s) with a few catching light (opacity pulses 0.1 -> 0.5 -> 0.1 over ~3s, random phases).\n- Content fades in from black in a strict sequence: the two-circle mark first (1s fade, 300ms in), \"MIRROR\" 200ms later (800ms), then the headline line by line (600ms each, 150ms apart), then the quote block (600ms), then Get Started (500ms) and Sign In (400ms, 100ms apart).\n- Nothing slides - every entrance is a pure fade with at most a 6px rise.\n- After the sequence completes, the field keeps breathing forever; the buttons idle with no pulse.\n\n## Calibration\n- The palette is monochrome: black, cream, and grey specks only.\n- The whole intro takes ~3.5s to fully reveal and must feel unhurried.\n\n## Reduced motion\nStatic particle field (single frame); all content fades in together over 600ms.\n\n## Don't miss\n- The two circles of the mark must overlap exactly as shown - one filled, one outline.\n- The quote attribution (\"Carl Jung\") is part of the fade sequence, not a separate step."</script>
+</body></html>

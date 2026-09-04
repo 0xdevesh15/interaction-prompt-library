@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flighty Friends Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flighty Friends Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flighty-friends-sheet"><b>Flighty</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-friends-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-friends-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Flighty&#x27;s Friends sheet - a spring-loaded bottom sheet over the flight map, topped by a looping globe illustration with friend avatars orbiting it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd10371d29849d7bdb25/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd10371d29849d7bdb25/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flighty-friends-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Flighty&#x27;s Friends sheet - a spring-loaded bottom sheet over the flight map, topped by a looping globe illustration with friend avatars orbiting it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Over the live flight map (route line visible), a profile sheet shows the user&#x27;s name, &quot;Flighty Friends&quot; and &quot;Settings&quot; rows, and the purple &quot;ALL-TIME FLIGHTY PASSPORT&quot; card. Tapping Flighty Friends raises a taller sheet: a dark-blue globe header with three friend avatars in rings connected by orbit lines, &quot;Flighty Friends&quot; title, explainer copy, and a blue &quot;Invite Flighty Friend&quot; button.
+
+## Motion spec
+Pattern: spring bottom sheet + looping orbit illustration.
+- Sheet entry: rises from the bottom with spring ~360/22 (a slight overshoot past its resting detent, settling in ~500ms); the map behind dims 20% and zooms out a touch (scale 1 to 0.96) as the sheet covers it.
+- The globe header: the earth rotates continuously (1 revolution per 20s, linear); the three avatar rings sit on orbit lines that sweep slowly around the globe (each orbit 8-12s, different phases and tilts); avatars counter-rotate so faces stay upright.
+- Sheet content (title, copy, button) staggers up after the sheet lands: translateY 16px to 0, 250ms, 80ms apart; the Invite button fills last with a blue sweep (200ms).
+- Drag-to-dismiss: the sheet tracks the finger 1:1 downward with resistance past the top edge; release below 40% dismisses (accelerating ease-in, 300ms), above snaps back (spring ~400/26).
+- Transition from the profile card state: the sheet&#x27;s top edge stretches upward (height animates) rather than a new sheet sliding over - the passport card slides out left as the globe header expands in from the top.
+
+## Calibration
+- The globe loop must be seamless - avatar orbits never jump at wrap.
+- Keep one detent only; no half-open state.
+
+## Reduced motion
+Sheet slides up without overshoot; globe static with avatars placed.
+
+## Don&#x27;t miss
+- The orbit lines are drawn thin and light against the dark globe; avatars have white ring borders.
+- The purple passport card and the blue globe header are the two color blocks - everything else is white sheet.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring bottom sheet + looping orbit illustration.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flighty-friends-sheet">original interaction</a> by Flighty. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Flighty's Friends sheet - a spring-loaded bottom sheet over the flight map, topped by a looping globe illustration with friend avatars orbiting it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOver the live flight map (route line visible), a profile sheet shows the user's name, \"Flighty Friends\" and \"Settings\" rows, and the purple \"ALL-TIME FLIGHTY PASSPORT\" card. Tapping Flighty Friends raises a taller sheet: a dark-blue globe header with three friend avatars in rings connected by orbit lines, \"Flighty Friends\" title, explainer copy, and a blue \"Invite Flighty Friend\" button.\n\n## Motion spec\nPattern: spring bottom sheet + looping orbit illustration.\n- Sheet entry: rises from the bottom with spring ~360/22 (a slight overshoot past its resting detent, settling in ~500ms); the map behind dims 20% and zooms out a touch (scale 1 to 0.96) as the sheet covers it.\n- The globe header: the earth rotates continuously (1 revolution per 20s, linear); the three avatar rings sit on orbit lines that sweep slowly around the globe (each orbit 8-12s, different phases and tilts); avatars counter-rotate so faces stay upright.\n- Sheet content (title, copy, button) staggers up after the sheet lands: translateY 16px to 0, 250ms, 80ms apart; the Invite button fills last with a blue sweep (200ms).\n- Drag-to-dismiss: the sheet tracks the finger 1:1 downward with resistance past the top edge; release below 40% dismisses (accelerating ease-in, 300ms), above snaps back (spring ~400/26).\n- Transition from the profile card state: the sheet's top edge stretches upward (height animates) rather than a new sheet sliding over - the passport card slides out left as the globe header expands in from the top.\n\n## Calibration\n- The globe loop must be seamless - avatar orbits never jump at wrap.\n- Keep one detent only; no half-open state.\n\n## Reduced motion\nSheet slides up without overshoot; globe static with avatars placed.\n\n## Don't miss\n- The orbit lines are drawn thin and light against the dark globe; avatars have white ring borders.\n- The purple passport card and the blue globe header are the two color blocks - everything else is white sheet."</script>
+</body></html>

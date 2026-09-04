@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revolut Graph Glow Load Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Revolut Graph Glow Load Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/revolut-graph-glow-load-animation"><b>Revolut</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-graph-glow-load-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-graph-glow-load-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Revolut&#x27;s glowing chart load - the neon-green price line draws itself left to right with a soft glow, its gradient fill blooming underneath as the stroke travels.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a97da9feefe705cbd870f9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a97da9feefe705cbd870f9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-revolut-graph-glow-load-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Revolut&#x27;s glowing chart load - the neon-green price line draws itself left to right with a soft glow, its gradient fill blooming underneath as the stroke travels.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark coin-detail screen: header icons, coin name + price figure + delta, empty chart area with faint min/max labels, timeframe tabs below.
+
+## Motion spec
+Pattern: stroke draw with glow trail, ~1.6s.
+- The line strokes on left to right (stroke-dashoffset, 1.4s, ease-in-out), 2px core with a neon glow (blur ~10px, ~50% alpha) that travels with the draw head - the head is the brightest point.
+- The area fill under the line fades in beneath the drawn portion only (gradient, line color at ~30% alpha at the stroke fading to transparent at the baseline), tracking the head.
+- When the draw completes, the glow settles to a resting intensity (~30% alpha, 300ms).
+- Price figure and header are already in place; only the chart animates.
+
+## Calibration
+- Fill reveals with the head, never ahead of it - fill appearing under undrawn line spoils the trick.
+- Glow travels with the head; a static full-line glow from frame one reads as a filter, not an animation.
+
+## Reduced motion
+Chart fades in complete (300ms).
+
+## Don&#x27;t miss
+- The draw follows the real data path point by point; no smoothed approximation that misses the sharp dips.
+- Resting glow stays subtle enough that axis labels remain readable through it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stroke draw with glow trail, ~1.6s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/revolut-graph-glow-load-animation">original interaction</a> by Revolut. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Revolut's glowing chart load - the neon-green price line draws itself left to right with a soft glow, its gradient fill blooming underneath as the stroke travels.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark coin-detail screen: header icons, coin name + price figure + delta, empty chart area with faint min/max labels, timeframe tabs below.\n\n## Motion spec\nPattern: stroke draw with glow trail, ~1.6s.\n- The line strokes on left to right (stroke-dashoffset, 1.4s, ease-in-out), 2px core with a neon glow (blur ~10px, ~50% alpha) that travels with the draw head - the head is the brightest point.\n- The area fill under the line fades in beneath the drawn portion only (gradient, line color at ~30% alpha at the stroke fading to transparent at the baseline), tracking the head.\n- When the draw completes, the glow settles to a resting intensity (~30% alpha, 300ms).\n- Price figure and header are already in place; only the chart animates.\n\n## Calibration\n- Fill reveals with the head, never ahead of it - fill appearing under undrawn line spoils the trick.\n- Glow travels with the head; a static full-line glow from frame one reads as a filter, not an animation.\n\n## Reduced motion\nChart fades in complete (300ms).\n\n## Don't miss\n- The draw follows the real data path point by point; no smoothed approximation that misses the sharp dips.\n- Resting glow stays subtle enough that axis labels remain readable through it."</script>
+</body></html>

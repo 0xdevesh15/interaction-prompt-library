@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChatGPT Listening - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ChatGPT Listening</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/chatgpt-listening"><b>Chatgpt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/chatgpt-listening">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/chatgpt-listening">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: ChatGPT&#x27;s voice mode - a single white orb on black that morphs through connecting, listening, and speaking states as organic fluid shapes.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd03371d29849d7bda2a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd03371d29849d7bda2a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-chatgpt-listening.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: ChatGPT&#x27;s voice mode - a single white orb on black that morphs through connecting, listening, and speaking states as organic fluid shapes.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+From the chat screen, voice mode opens to a full black canvas with a small dot that grows into a large white circle (&quot;Start Speaking&quot; / &quot;Listening&quot;), then morphs into an amoeba-like blob while the assistant speaks, and resolves into a row of white rounded bars during playback. Pause and red end-call buttons sit at the bottom with state captions.
+
+## Motion spec
+Pattern: organic state morphing orb.
+- Entry: the chat&#x27;s composer dot expands to full-screen black (circle-mask expand, 350ms) with the small white dot persisting at center.
+- Connecting: the dot pulses (scale 1 to 1.3, 800ms ease-in-out loop) with a rotating conic shimmer sweep (2s per revolution) under the &quot;Connecting&quot; caption.
+- Listening: the dot grows into a large perfect circle (spring ~260/20) that breathes subtly (scale +-2%, 2.4s) and reacts to mic input (radius += amplitude * 12%, per-frame).
+- Speaking: the circle&#x27;s border melts into 5-7 lobes that travel around the circumference (each lobe a traveling gaussian bump, ~1.5s per orbit, offsets desynced) - the shape stays white, filled, and centered; a small satellite dot orbits and occasionally merges in.
+- Playback: the blob collapses into a row of 4-5 rounded bars (morph over 300ms) that bounce heights with the audio envelope (spring ~400/18 per bar).
+- State captions crossfade (200ms) under the orb: Connecting / Start Speaking / Listening / Tap to interrupt.
+
+## Calibration
+- All states are one continuous shape - never cut between them; every transition is a morph (250-400ms).
+- White shape on pure black only; the single red accent is the end button.
+
+## Reduced motion
+Orb fades between static state shapes; no audio reactivity.
+
+## Don&#x27;t miss
+- The blob is smooth and liquid (no polygon edges); lobes deform the outline, they don&#x27;t overlay.
+- Captions are small, centered, gray-white - the orb owns the screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">organic state morphing orb.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/chatgpt-listening">original interaction</a> by Chatgpt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: ChatGPT's voice mode - a single white orb on black that morphs through connecting, listening, and speaking states as organic fluid shapes.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFrom the chat screen, voice mode opens to a full black canvas with a small dot that grows into a large white circle (\"Start Speaking\" / \"Listening\"), then morphs into an amoeba-like blob while the assistant speaks, and resolves into a row of white rounded bars during playback. Pause and red end-call buttons sit at the bottom with state captions.\n\n## Motion spec\nPattern: organic state morphing orb.\n- Entry: the chat's composer dot expands to full-screen black (circle-mask expand, 350ms) with the small white dot persisting at center.\n- Connecting: the dot pulses (scale 1 to 1.3, 800ms ease-in-out loop) with a rotating conic shimmer sweep (2s per revolution) under the \"Connecting\" caption.\n- Listening: the dot grows into a large perfect circle (spring ~260/20) that breathes subtly (scale +-2%, 2.4s) and reacts to mic input (radius += amplitude * 12%, per-frame).\n- Speaking: the circle's border melts into 5-7 lobes that travel around the circumference (each lobe a traveling gaussian bump, ~1.5s per orbit, offsets desynced) - the shape stays white, filled, and centered; a small satellite dot orbits and occasionally merges in.\n- Playback: the blob collapses into a row of 4-5 rounded bars (morph over 300ms) that bounce heights with the audio envelope (spring ~400/18 per bar).\n- State captions crossfade (200ms) under the orb: Connecting / Start Speaking / Listening / Tap to interrupt.\n\n## Calibration\n- All states are one continuous shape - never cut between them; every transition is a morph (250-400ms).\n- White shape on pure black only; the single red accent is the end button.\n\n## Reduced motion\nOrb fades between static state shapes; no audio reactivity.\n\n## Don't miss\n- The blob is smooth and liquid (no polygon edges); lobes deform the outline, they don't overlay.\n- Captions are small, centered, gray-white - the orb owns the screen."</script>
+</body></html>

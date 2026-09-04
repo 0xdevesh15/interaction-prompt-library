@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram Clear Cache Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Telegram Clear Cache Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/telegram-clear-cache-animation"><b>Telegram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-clear-cache-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/telegram-clear-cache-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Telegram&#x27;s clear-cache sequence - tapping Clear Entire Cache melts the Storage Usage page into a blurred backdrop with a sweeping broom mascot and a counting percentage, then returns to the page with the shrunken chart and a freed-space toast.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6713f5b1350c08ef72eecc52/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6713f5b1350c08ef72eecc52/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-telegram-clear-cache-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Telegram&#x27;s clear-cache sequence - tapping Clear Entire Cache melts the Storage Usage page into a blurred backdrop with a sweeping broom mascot and a counting percentage, then returns to the page with the shrunken chart and a freed-space toast.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Storage Usage page: a donut chart (345.7 MB at center, colored segments - Misc orange, Videos blue, Files green, Stories pink, Other), a legend list with per-category sizes, a blue &quot;Clear Entire Cache 345.7 MB&quot; button, and a cached-media list below (Private Chats, Group Chats, Channels). The clearing state overlays the blurred page with a yellow mascot sweeping with a broom, a percentage readout (43% -&gt; 80% -&gt; 100%), and a caption. End state: chart re-renders at 271.9 MB with a dark toast &quot;345.7 MB freed on your device&quot;.
+
+## Motion spec
+Pattern: full-screen progress takeover.
+- Tap Clear Entire Cache: the page blurs and dims behind (300ms), the donut&#x27;s colors ghost into a soft radial blur, and the mascot scales in (0.7 -&gt; 1, spring ~360/18, 350ms).
+- The mascot sweeps in a loop: broom strokes left-right (rotate +/- 10deg at the shoulder, 600ms per stroke) with dust puffs at the broom head.
+- The percentage counts up under the mascot, easing - quick to 80%, slower crawl to 100% (total ~2.5s).
+- Completion: mascot pops out (scale + fade, 250ms), blur lifts, and the page re-renders - the donut re-animates its arcs to the new smaller values (stroke draw, 500ms) and the center total ticks down from 345.7 to 271.9 MB.
+- The toast slides up from the bottom (spring ~380/22), holds 2.5s, slides away.
+
+## Calibration
+- The blur transition is the container for the whole operation - never cut between page and overlay.
+- The count-up should track real progress when known, simulated ease otherwise - never jump backward.
+
+## Reduced motion
+Simple progress bar over a dimmed page; toast fades.
+
+## Don&#x27;t miss
+- The button&#x27;s label carries the exact bytes (&quot;Clear Entire Cache 345.7 MB&quot;) and disables during clearing.
+- The toast matches the dark snackbar style and sits above the tab bar.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-screen progress takeover.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/telegram-clear-cache-animation">original interaction</a> by Telegram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Telegram's clear-cache sequence - tapping Clear Entire Cache melts the Storage Usage page into a blurred backdrop with a sweeping broom mascot and a counting percentage, then returns to the page with the shrunken chart and a freed-space toast.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Storage Usage page: a donut chart (345.7 MB at center, colored segments - Misc orange, Videos blue, Files green, Stories pink, Other), a legend list with per-category sizes, a blue \"Clear Entire Cache 345.7 MB\" button, and a cached-media list below (Private Chats, Group Chats, Channels). The clearing state overlays the blurred page with a yellow mascot sweeping with a broom, a percentage readout (43% -> 80% -> 100%), and a caption. End state: chart re-renders at 271.9 MB with a dark toast \"345.7 MB freed on your device\".\n\n## Motion spec\nPattern: full-screen progress takeover.\n- Tap Clear Entire Cache: the page blurs and dims behind (300ms), the donut's colors ghost into a soft radial blur, and the mascot scales in (0.7 -> 1, spring ~360/18, 350ms).\n- The mascot sweeps in a loop: broom strokes left-right (rotate +/- 10deg at the shoulder, 600ms per stroke) with dust puffs at the broom head.\n- The percentage counts up under the mascot, easing - quick to 80%, slower crawl to 100% (total ~2.5s).\n- Completion: mascot pops out (scale + fade, 250ms), blur lifts, and the page re-renders - the donut re-animates its arcs to the new smaller values (stroke draw, 500ms) and the center total ticks down from 345.7 to 271.9 MB.\n- The toast slides up from the bottom (spring ~380/22), holds 2.5s, slides away.\n\n## Calibration\n- The blur transition is the container for the whole operation - never cut between page and overlay.\n- The count-up should track real progress when known, simulated ease otherwise - never jump backward.\n\n## Reduced motion\nSimple progress bar over a dimmed page; toast fades.\n\n## Don't miss\n- The button's label carries the exact bytes (\"Clear Entire Cache 345.7 MB\") and disables during clearing.\n- The toast matches the dark snackbar style and sits above the tab bar."</script>
+</body></html>

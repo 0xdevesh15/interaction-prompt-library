@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Gift Cards Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Gift Cards Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-gift-cards-intro-animation"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-gift-cards-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-gift-cards-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Airbnb&#x27;s gift cards empty state - after a loading beat, the title lands and two gift cards spring in from below, tilting into a casual stacked pose.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb7b4f9807bdad9fb1ac5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb7b4f9807bdad9fb1ac5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-gift-cards-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Airbnb&#x27;s gift cards empty state - after a loading beat, the title lands and two gift cards spring in from below, tilting into a casual stacked pose.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light modal screen: close button, Airbnb logo, &quot;Airbnb gift cards&quot; headline with subcopy, and an illustration zone where the gift cards land.
+
+## Motion spec
+Pattern: springy card slide-in, ~1s.
+- The screen starts on a three-dot loading state (dots pulse in sequence, 300ms cycle).
+- Title, subcopy, and logo fade up together (300ms, 20px rise).
+- The photo gift card slides up from below the illustration zone (spring stiffness 240 damping 17), rotating from 0 to its resting -8deg tilt during the flight.
+- A solid pink card follows 120ms later on the same motion, landing behind and offset at +6deg, so the pair reads as a fanned stack.
+- Both cards settle with one visible overshoot bounce, then hold a barely-there sway (+-1deg, 3s).
+
+## Calibration
+- The cards must overshoot rotation and position together - desynced axes make the bounce feel mechanical.
+- Resting tilts are small and opposite; matching tilts read as one card&#x27;s shadow.
+
+## Reduced motion
+Cards fade in at their resting poses; no sway.
+
+## Don&#x27;t miss
+- The pink card enters later but settles first - it has less travel; that ordering reads as physical stacking.
+- The loading dots never overlap the title&#x27;s entrance; the beats are sequential.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy card slide-in, ~1s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-gift-cards-intro-animation">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Airbnb's gift cards empty state - after a loading beat, the title lands and two gift cards spring in from below, tilting into a casual stacked pose.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight modal screen: close button, Airbnb logo, \"Airbnb gift cards\" headline with subcopy, and an illustration zone where the gift cards land.\n\n## Motion spec\nPattern: springy card slide-in, ~1s.\n- The screen starts on a three-dot loading state (dots pulse in sequence, 300ms cycle).\n- Title, subcopy, and logo fade up together (300ms, 20px rise).\n- The photo gift card slides up from below the illustration zone (spring stiffness 240 damping 17), rotating from 0 to its resting -8deg tilt during the flight.\n- A solid pink card follows 120ms later on the same motion, landing behind and offset at +6deg, so the pair reads as a fanned stack.\n- Both cards settle with one visible overshoot bounce, then hold a barely-there sway (+-1deg, 3s).\n\n## Calibration\n- The cards must overshoot rotation and position together - desynced axes make the bounce feel mechanical.\n- Resting tilts are small and opposite; matching tilts read as one card's shadow.\n\n## Reduced motion\nCards fade in at their resting poses; no sway.\n\n## Don't miss\n- The pink card enters later but settles first - it has less travel; that ordering reads as physical stacking.\n- The loading dots never overlap the title's entrance; the beats are sequential."</script>
+</body></html>

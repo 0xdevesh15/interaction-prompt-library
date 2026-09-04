@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go City Progress Path Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go City Progress Path Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-city-progress-path-animation"><b>Monopoly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-city-progress-path-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-city-progress-path-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Monopoly Go&#x27;s city progression - Mr. Monopoly&#x27;s tooltip pops in over the map, then the next locked island bursts from greyscale into full color.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1abf936951f1cb7e341/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1abf936951f1cb7e341/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-city-progress-path-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Monopoly Go&#x27;s city progression - Mr. Monopoly&#x27;s tooltip pops in over the map, then the next locked island bursts from greyscale into full color.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The pastel-sky map of floating city islands (&quot;PORTLAND&quot; completed in color below, &quot;SHIBUYA&quot; locked in grey above under cloud wisps). Mr. Monopoly appears with a speech bubble: &quot;Keep progressing to collect valuable rewards from the Bank of Monopoly!&quot;
+
+## Motion spec
+Pattern: tooltip beat then unlock burst, ~2.5s.
+- Mr. Monopoly slides in from the left edge (spring stiffness 320 damping 18) and his speech bubble pops open beside him (scale 0.8 to 1, stiffness 400 damping 16).
+- The bubble holds 1.2s, then both exit left (250ms, ease-in).
+- The locked island rumbles (+-3px shake, 200ms), its padlock badge flashing, then it bursts into color: saturation sweeps across it (400ms, ease-out), sparkle pops scattering off the rooftops (150ms stagger).
+- The island settles with a happy bounce (scale 1 to 1.08 and back, spring stiffness 340 damping 13) as the clouds around it thin.
+- The completed island below keeps a gentle idle bob throughout (+-4px, 3s).
+
+## Calibration
+- The color sweep travels across the island - it does not fade in uniformly.
+- The tooltip sequence is a beat that clears before the unlock begins; they never overlap.
+
+## Reduced motion
+Bubble fades in and out; island crossfades to color.
+
+## Don&#x27;t miss
+- The padlock badge flashes just before the burst - it is the trigger beat.
+- Clouds part around the unlocked island, not across the whole sky.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tooltip beat then unlock burst, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-city-progress-path-animation">original interaction</a> by Monopoly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Monopoly Go's city progression - Mr. Monopoly's tooltip pops in over the map, then the next locked island bursts from greyscale into full color.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe pastel-sky map of floating city islands (\"PORTLAND\" completed in color below, \"SHIBUYA\" locked in grey above under cloud wisps). Mr. Monopoly appears with a speech bubble: \"Keep progressing to collect valuable rewards from the Bank of Monopoly!\"\n\n## Motion spec\nPattern: tooltip beat then unlock burst, ~2.5s.\n- Mr. Monopoly slides in from the left edge (spring stiffness 320 damping 18) and his speech bubble pops open beside him (scale 0.8 to 1, stiffness 400 damping 16).\n- The bubble holds 1.2s, then both exit left (250ms, ease-in).\n- The locked island rumbles (+-3px shake, 200ms), its padlock badge flashing, then it bursts into color: saturation sweeps across it (400ms, ease-out), sparkle pops scattering off the rooftops (150ms stagger).\n- The island settles with a happy bounce (scale 1 to 1.08 and back, spring stiffness 340 damping 13) as the clouds around it thin.\n- The completed island below keeps a gentle idle bob throughout (+-4px, 3s).\n\n## Calibration\n- The color sweep travels across the island - it does not fade in uniformly.\n- The tooltip sequence is a beat that clears before the unlock begins; they never overlap.\n\n## Reduced motion\nBubble fades in and out; island crossfades to color.\n\n## Don't miss\n- The padlock badge flashes just before the burst - it is the trigger beat.\n- Clouds part around the unlocked island, not across the whole sky."</script>
+</body></html>

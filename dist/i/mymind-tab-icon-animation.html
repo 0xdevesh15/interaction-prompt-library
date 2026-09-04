@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mymind Tab Icon Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mymind Tab Icon Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mymind-tab-icon-animation"><b>Mymind</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mymind-tab-icon-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mymind-tab-icon-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: mymind&#x27;s tab bar icons - selecting a tab morphs and recolors its icon: the grid fills in, a circle becomes a loading spinner then a ring, and a lamp shape pops into a map-pin, each animating while tinting coral.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ddc4c8808cde07e310221b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66ddc4c8808cde07e310221b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mymind-tab-icon-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: mymind&#x27;s tab bar icons - selecting a tab morphs and recolors its icon: the grid fills in, a circle becomes a loading spinner then a ring, and a lamp shape pops into a map-pin, each animating while tinting coral.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light screens with a 3-icon bottom tab bar: Everything (2x2 grid glyph), Spaces (circle glyph), Serendipity (lamp glyph). Inactive tabs are gray outlines; the active tab tints coral and its label stays small and gray-to-coral.
+
+## Motion spec
+Pattern: morphing tab icons on selection.
+- Tap a tab: its icon tint sweeps gray -&gt; coral (200ms) while the glyph animates its signature morph (~350ms): the grid cells pop in one-by-one (stagger 40ms), the circle strokes around (trim path 0 -&gt; 1) resolving into a filled ring, the lamp tilts and pops into a pin with a small bounce (scale 0.85 -&gt; 1, spring ~420/18).
+- Deselecting reverses: the icon relaxes back to its outline state (250ms) as it returns to gray.
+- Selection also springs the icon&#x27;s scale (1 -&gt; 0.9 -&gt; 1, spring ~500/20) with a light haptic tap.
+- The tab content swaps underneath with a soft crossfade (200ms) - the icon show is the star.
+
+## Calibration
+- Every icon has its own morph personality; none simply swap color.
+- The home indicator area stays clear; the bar is a floating white strip with soft shadow.
+
+## Reduced motion
+Icons tint and crossfade without morphs.
+
+## Don&#x27;t miss
+- The Spaces circle plays a spinner arc before settling into its ring - it reads as &quot;loading a space.&quot;
+- Labels are tiny caps under each glyph; only the active label is coral.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">morphing tab icons on selection.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mymind-tab-icon-animation">original interaction</a> by Mymind. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: mymind's tab bar icons - selecting a tab morphs and recolors its icon: the grid fills in, a circle becomes a loading spinner then a ring, and a lamp shape pops into a map-pin, each animating while tinting coral.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screens with a 3-icon bottom tab bar: Everything (2x2 grid glyph), Spaces (circle glyph), Serendipity (lamp glyph). Inactive tabs are gray outlines; the active tab tints coral and its label stays small and gray-to-coral.\n\n## Motion spec\nPattern: morphing tab icons on selection.\n- Tap a tab: its icon tint sweeps gray -> coral (200ms) while the glyph animates its signature morph (~350ms): the grid cells pop in one-by-one (stagger 40ms), the circle strokes around (trim path 0 -> 1) resolving into a filled ring, the lamp tilts and pops into a pin with a small bounce (scale 0.85 -> 1, spring ~420/18).\n- Deselecting reverses: the icon relaxes back to its outline state (250ms) as it returns to gray.\n- Selection also springs the icon's scale (1 -> 0.9 -> 1, spring ~500/20) with a light haptic tap.\n- The tab content swaps underneath with a soft crossfade (200ms) - the icon show is the star.\n\n## Calibration\n- Every icon has its own morph personality; none simply swap color.\n- The home indicator area stays clear; the bar is a floating white strip with soft shadow.\n\n## Reduced motion\nIcons tint and crossfade without morphs.\n\n## Don't miss\n- The Spaces circle plays a spinner arc before settling into its ring - it reads as \"loading a space.\"\n- Labels are tiny caps under each glyph; only the active label is coral."</script>
+</body></html>

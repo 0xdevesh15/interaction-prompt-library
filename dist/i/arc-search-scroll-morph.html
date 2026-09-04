@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Search Scroll Morph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Arc Search Scroll Morph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/arc-search-scroll-morph"><b>Arc</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-scroll-morph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-scroll-morph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Arc Search&#x27;s scroll-to-morph suggestions - typing a query lists autocomplete rows; scrolling the list morphs the text inside the search field itself to match the highlighted suggestion, letter by letter.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db386eed3abd3165925a4b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db386eed3abd3165925a4b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-arc-search-scroll-morph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Arc Search&#x27;s scroll-to-morph suggestions - typing a query lists autocomplete rows; scrolling the list morphs the text inside the search field itself to match the highlighted suggestion, letter by letter.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark search screen, keyboard up: rounded search field pinned top (&quot;Bangalore&quot;, clear X), suggestion rows below with small arrow icons (Bangalore / bangalore weather / bangalore metro map / bangalore news / bangalore university / bangalore to delhi flight...).
+
+## Motion spec
+Pattern: scroll-driven field morphing.
+- Scroll the suggestion list: rows move under a fixed highlight zone; whichever row crosses it pushes its text up into the search field.
+- The field text morphs, not swaps: characters shared with the current query stay put while extra characters type in sequentially (~25ms per char) and removed characters delete in reverse - &quot;Bangalore&quot; -&gt; &quot;bangalore weather&quot; grows tail characters as the row approaches the highlight.
+- The highlighted row lifts to full white; others dim (~50%); the row&#x27;s arrow icon nudges left 4px when highlighted.
+- The morph overshoots slightly on fast scrolls and catches up - it chases the scroll (spring ~380/26 on the text commit).
+- Release settles on one suggestion: the field commits its text, the X clears back to the typed query with the same character-by-character delete.
+
+## Calibration
+- The keyboard never dismisses while scrolling; the field keeps focus styling.
+- Typed query casing (&quot;Bangalore&quot;) is preserved until a suggestion overwrites it.
+
+## Reduced motion
+Field text swaps with a 150ms crossfade instead of character morphing.
+
+## Don&#x27;t miss
+- The field morphs while scrolling - the user never taps a row to preview it.
+- Suggestions show lowercase except the typed query - the morph visibly changes case.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-driven field morphing.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/arc-search-scroll-morph">original interaction</a> by Arc. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Arc Search's scroll-to-morph suggestions - typing a query lists autocomplete rows; scrolling the list morphs the text inside the search field itself to match the highlighted suggestion, letter by letter.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark search screen, keyboard up: rounded search field pinned top (\"Bangalore\", clear X), suggestion rows below with small arrow icons (Bangalore / bangalore weather / bangalore metro map / bangalore news / bangalore university / bangalore to delhi flight...).\n\n## Motion spec\nPattern: scroll-driven field morphing.\n- Scroll the suggestion list: rows move under a fixed highlight zone; whichever row crosses it pushes its text up into the search field.\n- The field text morphs, not swaps: characters shared with the current query stay put while extra characters type in sequentially (~25ms per char) and removed characters delete in reverse - \"Bangalore\" -> \"bangalore weather\" grows tail characters as the row approaches the highlight.\n- The highlighted row lifts to full white; others dim (~50%); the row's arrow icon nudges left 4px when highlighted.\n- The morph overshoots slightly on fast scrolls and catches up - it chases the scroll (spring ~380/26 on the text commit).\n- Release settles on one suggestion: the field commits its text, the X clears back to the typed query with the same character-by-character delete.\n\n## Calibration\n- The keyboard never dismisses while scrolling; the field keeps focus styling.\n- Typed query casing (\"Bangalore\") is preserved until a suggestion overwrites it.\n\n## Reduced motion\nField text swaps with a 150ms crossfade instead of character morphing.\n\n## Don't miss\n- The field morphs while scrolling - the user never taps a row to preview it.\n- Suggestions show lowercase except the typed query - the morph visibly changes case."</script>
+</body></html>

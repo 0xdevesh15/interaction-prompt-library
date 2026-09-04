@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Dynamic Sheet Expand Contract Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Dynamic Sheet Expand Contract Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-dynamic-sheet-expand-contract-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-dynamic-sheet-expand-contract-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-dynamic-sheet-expand-contract-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s wallet-editing sheet flow - from the light &quot;Wallets&quot; grid of pastel cards, a wallet&#x27;s &quot;Wallet Details&quot; sheet expands through editing states (name field with keyboard, Select Icon menu, Choose an Emoji grid, Use Emoji color picker with Save) and contracts back to the grid showing the updated wallet.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895332f7f889f3d1b4559/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686895332f7f889f3d1b4559/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-dynamic-sheet-expand-contract-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s wallet-editing sheet flow - from the light &quot;Wallets&quot; grid of pastel cards, a wallet&#x27;s &quot;Wallet Details&quot; sheet expands through editing states (name field with keyboard, Select Icon menu, Choose an Emoji grid, Use Emoji color picker with Save) and contracts back to the grid showing the updated wallet.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light &quot;Wallets&quot; screen: 2x3 grid of pastel wallet cards (pink, blue, cream, mint, gray, green) plus an &quot;Edit Watching&quot; row of circular watched wallets (John, vitalk.eth, Marissa, BFFs) and Done. Sheet 1 &quot;Wallet Details&quot;: Edit Wallet, Notifications, Remove Wallet (red). Edit state: name field (&quot;Luke&quot;), Icon row, Save (blue), keyboard up. &quot;Select Icon&quot;: Use ENS Avatar, Take Photo, Choose Image, Use Emoji, Use Icon. &quot;Choose an Emoji&quot;: search field, emoji grid. &quot;Use Emoji&quot;: big emoji preview on a color dot, color dot rows (magenta, purple, blue, teal, green, orange, red, black), Save.
+
+## Motion spec
+Pattern: single sheet container expanding and contracting per step.
+- Tap a wallet: the sheet rises (spring ~300/20) to its menu height, content staggering in (50ms rows).
+- Tap Edit Wallet: the sheet grows (height spring ~280/22, 300ms) as the keyboard slides up in lockstep (250ms), the name field focused with cursor blink; Save enables once text changes.
+- Tap the Icon row: the sheet contracts to the Select Icon menu (height easing 250ms), then expands into the Choose an Emoji grid (height spring 300ms) with the emoji rows cascading in (30ms per row).
+- Pick an emoji: the sheet contracts to the Use Emoji preview (spring ~320/20), the chosen emoji scaling into the preview circle (0.6 -&gt; 1, spring ~340/16); tapping a color dot recolors the preview instantly with a 150ms crossfade.
+- Save: the sheet collapses back to Wallet Details (250ms), then Done returns to the grid where the wallet&#x27;s icon crossfades to the new emoji (200ms).
+
+## Calibration
+- The sheet&#x27;s corner radius and width stay constant; only height and content animate.
+- Keyboard and sheet bottom never separate.
+
+## Reduced motion
+Steps crossfade (200ms) at each step&#x27;s final height without spring.
+
+## Don&#x27;t miss
+- Remove Wallet stays visible in red at the bottom of the details sheet.
+- The watched-wallet circles in Edit Watching update with the new emoji after Save.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">single sheet container expanding and contracting per step.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-dynamic-sheet-expand-contract-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's wallet-editing sheet flow - from the light \"Wallets\" grid of pastel cards, a wallet's \"Wallet Details\" sheet expands through editing states (name field with keyboard, Select Icon menu, Choose an Emoji grid, Use Emoji color picker with Save) and contracts back to the grid showing the updated wallet.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight \"Wallets\" screen: 2x3 grid of pastel wallet cards (pink, blue, cream, mint, gray, green) plus an \"Edit Watching\" row of circular watched wallets (John, vitalk.eth, Marissa, BFFs) and Done. Sheet 1 \"Wallet Details\": Edit Wallet, Notifications, Remove Wallet (red). Edit state: name field (\"Luke\"), Icon row, Save (blue), keyboard up. \"Select Icon\": Use ENS Avatar, Take Photo, Choose Image, Use Emoji, Use Icon. \"Choose an Emoji\": search field, emoji grid. \"Use Emoji\": big emoji preview on a color dot, color dot rows (magenta, purple, blue, teal, green, orange, red, black), Save.\n\n## Motion spec\nPattern: single sheet container expanding and contracting per step.\n- Tap a wallet: the sheet rises (spring ~300/20) to its menu height, content staggering in (50ms rows).\n- Tap Edit Wallet: the sheet grows (height spring ~280/22, 300ms) as the keyboard slides up in lockstep (250ms), the name field focused with cursor blink; Save enables once text changes.\n- Tap the Icon row: the sheet contracts to the Select Icon menu (height easing 250ms), then expands into the Choose an Emoji grid (height spring 300ms) with the emoji rows cascading in (30ms per row).\n- Pick an emoji: the sheet contracts to the Use Emoji preview (spring ~320/20), the chosen emoji scaling into the preview circle (0.6 -> 1, spring ~340/16); tapping a color dot recolors the preview instantly with a 150ms crossfade.\n- Save: the sheet collapses back to Wallet Details (250ms), then Done returns to the grid where the wallet's icon crossfades to the new emoji (200ms).\n\n## Calibration\n- The sheet's corner radius and width stay constant; only height and content animate.\n- Keyboard and sheet bottom never separate.\n\n## Reduced motion\nSteps crossfade (200ms) at each step's final height without spring.\n\n## Don't miss\n- Remove Wallet stays visible in red at the bottom of the details sheet.\n- The watched-wallet circles in Edit Watching update with the new emoji after Save."</script>
+</body></html>

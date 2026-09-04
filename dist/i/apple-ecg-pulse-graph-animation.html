@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple ECG Pulse Graph Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple ECG Pulse Graph Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-ecg-pulse-graph-animation"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-ecg-pulse-graph-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-ecg-pulse-graph-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: the Apple Watch ECG recording - a red waveform draws continuously across a dotted grid as the seconds counter ticks down from 9 and the live BPM updates top-left, and at 0 the whole graph blurs and fades into the &quot;Sinus Rhythm&quot; results screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712ac5ebf3ce1dd7e363a45/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712ac5ebf3ce1dd7e363a45/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-ecg-pulse-graph-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: the Apple Watch ECG recording - a red waveform draws continuously across a dotted grid as the seconds counter ticks down from 9 and the live BPM updates top-left, and at 0 the whole graph blurs and fades into the &quot;Sinus Rhythm&quot; results screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Apple Watch ECG measurement: &quot;N BPM&quot; top-left, time top-right, the live trace on a dotted grid, big &quot;N sec&quot; counter and the &quot;Apple Watch never checks for heart attacks&quot; note below. Results screen: &quot;Sinus Rhythm&quot;, average BPM chip, explanation text.
+
+## Motion spec
+Pattern: real-time trace with blur-out transition.
+- The ECG line draws left to right at constant speed (~25mm/s equivalent), QRS spikes rising sharply with a glowing white leading dot; the oldest trace scrolls off the left edge.
+- BPM top-left updates with each detected beat (value crossfade 200ms); the seconds counter ticks down each second (no animation on the digit, just the value).
+- At 0 sec: the trace holds one beat, then the entire graph layer blurs (radius 0 -&gt; 20px, ~400ms) and fades while the results screen fades in beneath it (300ms overlap).
+- Results: &quot;Sinus Rhythm&quot; header with info icon, red heart chip with average BPM, then body copy - staggered fade-in (~100ms apart).
+
+## Calibration
+- Spike morphology matters: small P wave, sharp tall QRS, gentle T wave - not a sine wave.
+- The blur-out is the transition: no slide, no cut between measurement and results.
+
+## Reduced motion
+Trace still draws (it is data), but the transition is a simple crossfade (200ms).
+
+## Don&#x27;t miss
+- The countdown reaches 0 and stops - it never goes negative.
+- The results screen replaces the note text area too - nothing from the measurement layout persists.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">real-time trace with blur-out transition.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-ecg-pulse-graph-animation">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: the Apple Watch ECG recording - a red waveform draws continuously across a dotted grid as the seconds counter ticks down from 9 and the live BPM updates top-left, and at 0 the whole graph blurs and fades into the \"Sinus Rhythm\" results screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nApple Watch ECG measurement: \"N BPM\" top-left, time top-right, the live trace on a dotted grid, big \"N sec\" counter and the \"Apple Watch never checks for heart attacks\" note below. Results screen: \"Sinus Rhythm\", average BPM chip, explanation text.\n\n## Motion spec\nPattern: real-time trace with blur-out transition.\n- The ECG line draws left to right at constant speed (~25mm/s equivalent), QRS spikes rising sharply with a glowing white leading dot; the oldest trace scrolls off the left edge.\n- BPM top-left updates with each detected beat (value crossfade 200ms); the seconds counter ticks down each second (no animation on the digit, just the value).\n- At 0 sec: the trace holds one beat, then the entire graph layer blurs (radius 0 -> 20px, ~400ms) and fades while the results screen fades in beneath it (300ms overlap).\n- Results: \"Sinus Rhythm\" header with info icon, red heart chip with average BPM, then body copy - staggered fade-in (~100ms apart).\n\n## Calibration\n- Spike morphology matters: small P wave, sharp tall QRS, gentle T wave - not a sine wave.\n- The blur-out is the transition: no slide, no cut between measurement and results.\n\n## Reduced motion\nTrace still draws (it is data), but the transition is a simple crossfade (200ms).\n\n## Don't miss\n- The countdown reaches 0 and stops - it never goes negative.\n- The results screen replaces the note text area too - nothing from the measurement layout persists."</script>
+</body></html>

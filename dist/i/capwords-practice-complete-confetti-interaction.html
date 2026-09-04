@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CapWords Practice Complete Confetti Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CapWords Practice Complete Confetti Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/capwords-practice-complete-confetti-interaction"><b>Capwords</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/capwords-practice-complete-confetti-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/capwords-practice-complete-confetti-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CapWords&#x27; practice completion - after the last card (a &quot;Sushi&quot; card), a circular progress wheel spins up with a ticking percentage counter (to 60%), &quot;Memory requires repeated practice!&quot; appears, result cards (&quot;Got it!&quot;, &quot;Needs review&quot;) stagger in, and a confetti burst celebrates as the black Finish button slides up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe895fcb2a6516988e7352/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe895fcb2a6516988e7352/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-capwords-practice-complete-confetti-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CapWords&#x27; practice completion - after the last card (a &quot;Sushi&quot; card), a circular progress wheel spins up with a ticking percentage counter (to 60%), &quot;Memory requires repeated practice!&quot; appears, result cards (&quot;Got it!&quot;, &quot;Needs review&quot;) stagger in, and a confetti burst celebrates as the black Finish button slides up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light screen. Start: a practice card (orange &quot;Sushi&quot; card with a fish cutout). Completion: a circular dashed progress ring with &quot;60%&quot; at center, the message &quot;Memory requires repeated practice!&quot; above, rows of result cards with thumbnails (&quot;Got it!&quot; / &quot;Needs review&quot;), a black &quot;Finish&quot; button, and a &quot;Review Again&quot; link. Confetti falls during the celebration.
+
+## Motion spec
+Pattern: progress wheel count-up with staggered results and confetti.
+- The practice card flips away (rotateY 90deg, 250ms) as the ring draws itself (stroke animation 0 -&gt; 60% of full circle, 800ms ease-out).
+- The percentage counter ticks up in sync with the ring (60 steps, digit roll).
+- Small word chips orbit briefly around the ring while it fills (3s rotation, fading out as it completes).
+- &quot;Memory requires repeated practice!&quot; fades up (250ms).
+- Result cards slide in staggered from the bottom (translateY 30pt -&gt; 0, 280ms each, 100ms apart).
+- Confetti burst: two cannons from the bottom corners (30-40 pieces, colorful rects and circles, 1.2s, gravity + drift).
+- Finish button slides up (280ms) with Review Again fading in under it (200ms).
+
+## Calibration
+- Ring and counter stay locked in sync - never let the number lead the ring.
+- Confetti is one burst, then ambient fall - not a repeating cannon.
+
+## Reduced motion
+Ring shows final value instantly, results fade in, no confetti.
+
+## Don&#x27;t miss
+- The dashed ring style stays dashed while filling.
+- Result cards show the actual practiced item thumbnails.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">progress wheel count-up with staggered results and confetti.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/capwords-practice-complete-confetti-interaction">original interaction</a> by Capwords. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CapWords' practice completion - after the last card (a \"Sushi\" card), a circular progress wheel spins up with a ticking percentage counter (to 60%), \"Memory requires repeated practice!\" appears, result cards (\"Got it!\", \"Needs review\") stagger in, and a confetti burst celebrates as the black Finish button slides up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen. Start: a practice card (orange \"Sushi\" card with a fish cutout). Completion: a circular dashed progress ring with \"60%\" at center, the message \"Memory requires repeated practice!\" above, rows of result cards with thumbnails (\"Got it!\" / \"Needs review\"), a black \"Finish\" button, and a \"Review Again\" link. Confetti falls during the celebration.\n\n## Motion spec\nPattern: progress wheel count-up with staggered results and confetti.\n- The practice card flips away (rotateY 90deg, 250ms) as the ring draws itself (stroke animation 0 -> 60% of full circle, 800ms ease-out).\n- The percentage counter ticks up in sync with the ring (60 steps, digit roll).\n- Small word chips orbit briefly around the ring while it fills (3s rotation, fading out as it completes).\n- \"Memory requires repeated practice!\" fades up (250ms).\n- Result cards slide in staggered from the bottom (translateY 30pt -> 0, 280ms each, 100ms apart).\n- Confetti burst: two cannons from the bottom corners (30-40 pieces, colorful rects and circles, 1.2s, gravity + drift).\n- Finish button slides up (280ms) with Review Again fading in under it (200ms).\n\n## Calibration\n- Ring and counter stay locked in sync - never let the number lead the ring.\n- Confetti is one burst, then ambient fall - not a repeating cannon.\n\n## Reduced motion\nRing shows final value instantly, results fade in, no confetti.\n\n## Don't miss\n- The dashed ring style stays dashed while filling.\n- Result cards show the actual practiced item thumbnails."</script>
+</body></html>

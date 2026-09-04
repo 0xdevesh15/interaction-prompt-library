@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Activities Graph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Activities Graph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-activities-graph"><b>Gentler Streak</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-activities-graph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-activities-graph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Gentler Streak&#x27;s activities graph - switching summary cards redraws the line graph, which springs up from a flat baseline and re-colors to match the selected metric.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd15225b7b88f78c791b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd15225b7b88f78c791b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-activities-graph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Gentler Streak&#x27;s activities graph - switching summary cards redraws the line graph, which springs up from a flat baseline and re-colors to match the selected metric.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+An &quot;Activities&quot; screen: Week/Month/Year/All Time tabs, a &quot;This Week&quot; range picker, a line graph with a Today marker, and a 2x2 Summary grid of metric cards (Duration, Active Energy, Distance, Elevation). The selected card fills with its metric color (blue, green, pink, orange).
+
+## Motion spec
+Pattern: springy metric-switch graph morph.
+- Tap a summary card: the card fills with its color (fill sweeps from the tap point, 250ms) and the previous card&#x27;s fill drains (200ms); the graph line and its soft area fill crossfade to the new color (300ms).
+- The graph morphs to the new metric by first collapsing to the flat baseline (points ease down, 200ms, ease-in) then springing up to the new data (spring ~180/16, points staggered left to right 15ms apart) - a visible overshoot and wobble settles over ~700ms.
+- The Today marker line slides horizontally to its new position (spring ~360/24) with its dot trailing slightly (scale 0.8 to 1 pop on arrival).
+- Y-axis labels crossfade to the new units; gridlines stay put.
+- Tab switches (Week/Month/...) replay the collapse-and-spring with the new range&#x27;s data; the range label (&quot;This Week&quot;) crossfades.
+
+## Calibration
+- Collapse-then-spring is the signature: never lerp directly between two data shapes.
+- Only the selected card carries color; all others stay flat white/gray.
+
+## Reduced motion
+Graph crossfades between metrics; no spring wobble.
+
+## Don&#x27;t miss
+- The area fill under the line is a soft vertical fade of the line color - it follows the same spring.
+- Card corner radius stays constant while the fill sweeps - the shape never morphs.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy metric-switch graph morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-activities-graph">original interaction</a> by Gentler Streak. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Gentler Streak's activities graph - switching summary cards redraws the line graph, which springs up from a flat baseline and re-colors to match the selected metric.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAn \"Activities\" screen: Week/Month/Year/All Time tabs, a \"This Week\" range picker, a line graph with a Today marker, and a 2x2 Summary grid of metric cards (Duration, Active Energy, Distance, Elevation). The selected card fills with its metric color (blue, green, pink, orange).\n\n## Motion spec\nPattern: springy metric-switch graph morph.\n- Tap a summary card: the card fills with its color (fill sweeps from the tap point, 250ms) and the previous card's fill drains (200ms); the graph line and its soft area fill crossfade to the new color (300ms).\n- The graph morphs to the new metric by first collapsing to the flat baseline (points ease down, 200ms, ease-in) then springing up to the new data (spring ~180/16, points staggered left to right 15ms apart) - a visible overshoot and wobble settles over ~700ms.\n- The Today marker line slides horizontally to its new position (spring ~360/24) with its dot trailing slightly (scale 0.8 to 1 pop on arrival).\n- Y-axis labels crossfade to the new units; gridlines stay put.\n- Tab switches (Week/Month/...) replay the collapse-and-spring with the new range's data; the range label (\"This Week\") crossfades.\n\n## Calibration\n- Collapse-then-spring is the signature: never lerp directly between two data shapes.\n- Only the selected card carries color; all others stay flat white/gray.\n\n## Reduced motion\nGraph crossfades between metrics; no spring wobble.\n\n## Don't miss\n- The area fill under the line is a soft vertical fade of the line color - it follows the same spring.\n- Card corner radius stays constant while the fill sweeps - the shape never morphs."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NowPlaying Loader Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>NowPlaying Loader Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/nowplaying-loader-animation"><b>Nowplaying</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nowplaying-loader-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nowplaying-loader-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: NowPlaying&#x27;s listening loader - a glossy disc logo spins slowly on black, its gradient drifting from gold to red, over &quot;Looking for Songs &amp; Information...&quot; with a red &quot;Stop Listening&quot; pill below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf475d3f9ae8767d8f2f6b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf475d3f9ae8767d8f2f6b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-nowplaying-loader-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: NowPlaying&#x27;s listening loader - a glossy disc logo spins slowly on black, its gradient drifting from gold to red, over &quot;Looking for Songs &amp; Information...&quot; with a red &quot;Stop Listening&quot; pill below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pure black screen: a small circular disc logo (like a vinyl/CD with a dark bite) rotating center, white caption &quot;Looking for Songs &amp; Information...&quot; beneath, a translucent red &quot;Stop Listening&quot; pill pinned near the bottom.
+
+## Motion spec
+Pattern: rotating gradient-disc listening state.
+- The disc rotates continuously (~6s per revolution, linear) with a soft specular highlight that sweeps as it turns.
+- Its gradient hue drifts on a long cycle: warm gold easing into deep red and back (~8s round trip, smooth sine) - the disc glows faintly onto the black around it.
+- The caption sits at ~70% opacity, static; the ellipsis cycles (three dots, 900ms).
+- The red pill breathes subtly (opacity 0.75 &lt;-&gt; 1, 2s) to signal it is live.
+
+## Calibration
+- Rotation and hue are decoupled loops - they never visibly sync.
+- The disc is small (~64px); restraint is the brand.
+
+## Reduced motion
+Static disc; hue fixed at gold.
+
+## Don&#x27;t miss
+- The glow bleed around the disc tracks the current hue - gold glows warm, red glows hot.
+- The whole state idles indefinitely; nothing ever completes or times out on screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rotating gradient-disc listening state.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/nowplaying-loader-animation">original interaction</a> by Nowplaying. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: NowPlaying's listening loader - a glossy disc logo spins slowly on black, its gradient drifting from gold to red, over \"Looking for Songs & Information...\" with a red \"Stop Listening\" pill below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPure black screen: a small circular disc logo (like a vinyl/CD with a dark bite) rotating center, white caption \"Looking for Songs & Information...\" beneath, a translucent red \"Stop Listening\" pill pinned near the bottom.\n\n## Motion spec\nPattern: rotating gradient-disc listening state.\n- The disc rotates continuously (~6s per revolution, linear) with a soft specular highlight that sweeps as it turns.\n- Its gradient hue drifts on a long cycle: warm gold easing into deep red and back (~8s round trip, smooth sine) - the disc glows faintly onto the black around it.\n- The caption sits at ~70% opacity, static; the ellipsis cycles (three dots, 900ms).\n- The red pill breathes subtly (opacity 0.75 <-> 1, 2s) to signal it is live.\n\n## Calibration\n- Rotation and hue are decoupled loops - they never visibly sync.\n- The disc is small (~64px); restraint is the brand.\n\n## Reduced motion\nStatic disc; hue fixed at gold.\n\n## Don't miss\n- The glow bleed around the disc tracks the current hue - gold glows warm, red glows hot.\n- The whole state idles indefinitely; nothing ever completes or times out on screen."</script>
+</body></html>

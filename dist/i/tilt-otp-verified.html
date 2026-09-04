@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tilt OTP Verified - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tilt OTP Verified</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tilt-otp-verified"><b>Tilt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tilt-otp-verified">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tilt-otp-verified">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Tilt&#x27;s OTP verification - the entered digits fly together and merge into a metallic 3D cube, which pulses green when verification succeeds.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bdc82d131e88d4acabb8b4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bdc82d131e88d4acabb8b4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tilt-otp-verified.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Tilt&#x27;s OTP verification - the entered digits fly together and merge into a metallic 3D cube, which pulses green when verification succeeds.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The OTP screen: a row of digit boxes, each holding a typed digit. On submit, the digits lift out of their boxes, converge at center, and fuse into a brushed-metal 3D cube that tumbles slowly. On success, the cube pulses green.
+
+## Motion spec
+Pattern: digit convergence into a 3D cube with success pulse.
+- Each digit box pops its digit out (scale 1 to 1.2, 120ms, staggered 40ms left-to-right) and the boxes collapse (fade + shrink, 200ms).
+- Digits arc toward center along ease-in paths (~400ms), shrinking as they travel, and are absorbed into the forming cube - the cube scales in from 0 (spring ~320/22) as the last digit lands.
+- The cube idles in a slow tumble (rotateX/Y, ~6s loop) with a moving specular highlight across its metal faces.
+- Success: the cube pulses - a green emissive ring sweeps across its faces, it scales 1.0 to 1.12 and back (spring ~350/20), and a soft green glow blooms behind it (fade 250ms); success copy fades up below (250ms).
+- Failure (if shown): the cube shakes (translateX +-8px, 3 cycles, 300ms) with a red tint flash, then splits back into digit boxes (reverse of entry).
+
+## Calibration
+- The cube must inherit the digits&#x27; momentum - convergence paths and the cube&#x27;s spring-in are one continuous motion.
+- The green pulse is emissive on the metal, not a flat color swap - the cube stays metallic.
+
+## Reduced motion
+Digits fade out; a static checkmark appears with green accent.
+
+## Don&#x27;t miss
+- The tumble never stops during the success pulse - motion layers, never interrupts.
+- Glow stays behind the cube&#x27;s silhouette; halo spillover looks like a rendering bug.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">digit convergence into a 3D cube with success pulse.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tilt-otp-verified">original interaction</a> by Tilt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Tilt's OTP verification - the entered digits fly together and merge into a metallic 3D cube, which pulses green when verification succeeds.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe OTP screen: a row of digit boxes, each holding a typed digit. On submit, the digits lift out of their boxes, converge at center, and fuse into a brushed-metal 3D cube that tumbles slowly. On success, the cube pulses green.\n\n## Motion spec\nPattern: digit convergence into a 3D cube with success pulse.\n- Each digit box pops its digit out (scale 1 to 1.2, 120ms, staggered 40ms left-to-right) and the boxes collapse (fade + shrink, 200ms).\n- Digits arc toward center along ease-in paths (~400ms), shrinking as they travel, and are absorbed into the forming cube - the cube scales in from 0 (spring ~320/22) as the last digit lands.\n- The cube idles in a slow tumble (rotateX/Y, ~6s loop) with a moving specular highlight across its metal faces.\n- Success: the cube pulses - a green emissive ring sweeps across its faces, it scales 1.0 to 1.12 and back (spring ~350/20), and a soft green glow blooms behind it (fade 250ms); success copy fades up below (250ms).\n- Failure (if shown): the cube shakes (translateX +-8px, 3 cycles, 300ms) with a red tint flash, then splits back into digit boxes (reverse of entry).\n\n## Calibration\n- The cube must inherit the digits' momentum - convergence paths and the cube's spring-in are one continuous motion.\n- The green pulse is emissive on the metal, not a flat color swap - the cube stays metallic.\n\n## Reduced motion\nDigits fade out; a static checkmark appears with green accent.\n\n## Don't miss\n- The tumble never stops during the success pulse - motion layers, never interrupts.\n- Glow stays behind the cube's silhouette; halo spillover looks like a rendering bug."</script>
+</body></html>

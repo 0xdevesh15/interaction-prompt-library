@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Verifying Documents Loader Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Verifying Documents Loader Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-verifying-documents-loader-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-verifying-documents-loader-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-verifying-documents-loader-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s document verification loader - a near-black screen with &quot;verifying the document uploaded by you&quot;, an isometric line-art animation of a document uploading to a cloud with a cycling ellipsis, and a ticking countdown timer (&quot;this can take upto 00:30&quot;) at the bottom.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67f35c489eef3d8809a8dd08/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67f35c489eef3d8809a8dd08/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-verifying-documents-loader-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s document verification loader - a near-black screen with &quot;verifying the document uploaded by you&quot;, an isometric line-art animation of a document uploading to a cloud with a cycling ellipsis, and a ticking countdown timer (&quot;this can take upto 00:30&quot;) at the bottom.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark charcoal screen. Top-center serif copy: &quot;verifying the document uploaded by you&quot;. Center: an isometric line-art scene - a document/card shape with a cloud above it and an upload arrow; beneath it a row of dots (ellipsis loader). Bottom center: small copy &quot;this can take upto 00:30&quot; counting down by seconds.
+
+## Motion spec
+Pattern: isometric line-art upload loop with countdown.
+- The document floats with a slow isometric bob (translateY +/-3pt, 2.5s sine, preserve the iso projection).
+- The upload arrow travels from the document to the cloud (translateY 24pt -&gt; 0, 800ms ease-in-out), fades, and repeats.
+- The cloud pulses faintly as each arrow arrives (scale 1 -&gt; 1.04 -&gt; 1, 200ms).
+- The ellipsis dots cycle: each dot fades in sequence (200ms apart, opacity 0.2 -&gt; 1), holds, all reset - a classic typing indicator rhythm.
+- The countdown ticks once per second (00:30 -&gt; 00:00) with a plain digit change, no roll.
+- Line-art edges shimmer subtly (a faint highlight travels the outline every 4s).
+
+## Calibration
+- Everything is thin gray line art on near-black - no fills, no color.
+- The countdown is steady and honest; it never pauses or jumps.
+
+## Reduced motion
+Static line art with a plain &quot;verifying...&quot; text indicator; countdown still ticks.
+
+## Don&#x27;t miss
+- The serif headline is quiet and centered - this is a waiting screen, not a celebration.
+- The ellipsis sits under the illustration, separate from the countdown line.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">isometric line-art upload loop with countdown.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-verifying-documents-loader-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's document verification loader - a near-black screen with \"verifying the document uploaded by you\", an isometric line-art animation of a document uploading to a cloud with a cycling ellipsis, and a ticking countdown timer (\"this can take upto 00:30\") at the bottom.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark charcoal screen. Top-center serif copy: \"verifying the document uploaded by you\". Center: an isometric line-art scene - a document/card shape with a cloud above it and an upload arrow; beneath it a row of dots (ellipsis loader). Bottom center: small copy \"this can take upto 00:30\" counting down by seconds.\n\n## Motion spec\nPattern: isometric line-art upload loop with countdown.\n- The document floats with a slow isometric bob (translateY +/-3pt, 2.5s sine, preserve the iso projection).\n- The upload arrow travels from the document to the cloud (translateY 24pt -> 0, 800ms ease-in-out), fades, and repeats.\n- The cloud pulses faintly as each arrow arrives (scale 1 -> 1.04 -> 1, 200ms).\n- The ellipsis dots cycle: each dot fades in sequence (200ms apart, opacity 0.2 -> 1), holds, all reset - a classic typing indicator rhythm.\n- The countdown ticks once per second (00:30 -> 00:00) with a plain digit change, no roll.\n- Line-art edges shimmer subtly (a faint highlight travels the outline every 4s).\n\n## Calibration\n- Everything is thin gray line art on near-black - no fills, no color.\n- The countdown is steady and honest; it never pauses or jumps.\n\n## Reduced motion\nStatic line art with a plain \"verifying...\" text indicator; countdown still ticks.\n\n## Don't miss\n- The serif headline is quiet and centered - this is a waiting screen, not a celebration.\n- The ellipsis sits under the illustration, separate from the countdown line."</script>
+</body></html>

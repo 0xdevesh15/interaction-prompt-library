@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sudoku Daily Reminder Toggle Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sudoku Daily Reminder Toggle Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sudoku-daily-reminder-toggle-interaction"><b>Sudoku</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sudoku-daily-reminder-toggle-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sudoku-daily-reminder-toggle-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Sudoku a Day&#x27;s reminder toggle - flipping the Daily Reminder switch smoothly expands or collapses the time-picker section beneath it while the Continue button rides along.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8753df3c0da1588c7136/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8753df3c0da1588c7136/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sudoku-daily-reminder-toggle-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Sudoku a Day&#x27;s reminder toggle - flipping the Daily Reminder switch smoothly expands or collapses the time-picker section beneath it while the Continue button rides along.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen. Top: lock-screen preview card with &quot;Your Daily Sudoku is Ready&quot; notification. Middle: &quot;Daily Reminder&quot; label with subtext and an iOS-style toggle. Below it the time-picker card (&quot;10 : 06&quot; wheels). Bottom: back chevron and white Continue button.
+
+## Motion spec
+Pattern: toggle-driven expand/collapse of an inline section.
+- The toggle flips with the standard spring (~500/30, 160ms travel), thumb sliding and track tinting on.
+- Toggling ON: the picker card expands from zero height (spring ~340/28, no bounce), its contents fading in over the first 60% of the expansion (200ms); the Continue button and everything below slide down in the same motion.
+- Toggling OFF: contents fade out fast (120ms) while the card collapses (spring ~340/30) and the lower content slides up to fill the gap.
+- The preview card and reminder row stay fixed; only the picker region and everything below it move.
+
+## Calibration
+- Expansion is a height animation, not a scale: the picker&#x27;s contents never squash.
+- One continuous motion - no two-stage slide-then-fade.
+
+## Reduced motion
+Picker section fades in/out (200ms) without height travel.
+
+## Don&#x27;t miss
+- The collapsed state removes the picker entirely - the Continue button sits directly under the reminder row.
+- The remembered time (10:06) persists across toggles; it does not reset.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">toggle-driven expand/collapse of an inline section.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sudoku-daily-reminder-toggle-interaction">original interaction</a> by Sudoku. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Sudoku a Day's reminder toggle - flipping the Daily Reminder switch smoothly expands or collapses the time-picker section beneath it while the Continue button rides along.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen. Top: lock-screen preview card with \"Your Daily Sudoku is Ready\" notification. Middle: \"Daily Reminder\" label with subtext and an iOS-style toggle. Below it the time-picker card (\"10 : 06\" wheels). Bottom: back chevron and white Continue button.\n\n## Motion spec\nPattern: toggle-driven expand/collapse of an inline section.\n- The toggle flips with the standard spring (~500/30, 160ms travel), thumb sliding and track tinting on.\n- Toggling ON: the picker card expands from zero height (spring ~340/28, no bounce), its contents fading in over the first 60% of the expansion (200ms); the Continue button and everything below slide down in the same motion.\n- Toggling OFF: contents fade out fast (120ms) while the card collapses (spring ~340/30) and the lower content slides up to fill the gap.\n- The preview card and reminder row stay fixed; only the picker region and everything below it move.\n\n## Calibration\n- Expansion is a height animation, not a scale: the picker's contents never squash.\n- One continuous motion - no two-stage slide-then-fade.\n\n## Reduced motion\nPicker section fades in/out (200ms) without height travel.\n\n## Don't miss\n- The collapsed state removes the picker entirely - the Continue button sits directly under the reminder row.\n- The remembered time (10:06) persists across toggles; it does not reset."</script>
+</body></html>

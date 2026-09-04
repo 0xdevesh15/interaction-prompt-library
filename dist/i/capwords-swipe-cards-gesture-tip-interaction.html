@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CapWords Swipe Cards Gesture Tip Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CapWords Swipe Cards Gesture Tip Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/capwords-swipe-cards-gesture-tip-interaction"><b>Capwords</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/capwords-swipe-cards-gesture-tip-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/capwords-swipe-cards-gesture-tip-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CapWords&#x27; gesture tutorial - an orange hand icon demonstrates the swipe on a flashcard (&quot;Helado en cono&quot; with an ice cream photo): it drags the card right toward &quot;Got it!&quot;, then left toward &quot;Needs review&quot;, with direction labels appearing at the top, then a &quot;Tap for details&quot; hint shows the tap gesture.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8866df3c0da1588c77f9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8866df3c0da1588c77f9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-capwords-swipe-cards-gesture-tip-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CapWords&#x27; gesture tutorial - an orange hand icon demonstrates the swipe on a flashcard (&quot;Helado en cono&quot; with an ice cream photo): it drags the card right toward &quot;Got it!&quot;, then left toward &quot;Needs review&quot;, with direction labels appearing at the top, then a &quot;Tap for details&quot; hint shows the tap gesture.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light gray practice screen. Center: a flashcard with an ice cream photo and the word &quot;Helado en cono&quot; with pronunciation. An orange cartoon hand overlays the card. Top center: contextual labels that swap between &quot;Got it!&quot; (right), &quot;Needs review&quot; (left), and &quot;Tap for details&quot;. Behind the card, the next card&#x27;s orange edge peeks out.
+
+## Motion spec
+Pattern: animated hand demonstrating swipe-right, swipe-left, and tap gestures.
+- The hand appears on the card (fade 200ms) and presses (card scales 0.97).
+- Demo 1: the hand drags the card right (translateX 120pt, rotate 10deg, 600ms ease-out); &quot;Got it!&quot; fades in top-center as the card tilts; the card springs back to center (spring ~300/18) and the label fades.
+- Demo 2: same drag to the left (rotate -10deg) with &quot;Needs review&quot; at top; spring back.
+- Demo 3: the hand moves to the card center and taps (two quick scale pulses 0.95 -&gt; 1, 150ms each) as &quot;Tap for details&quot; appears.
+- The loop repeats with a 600ms rest between cycles; the peeking next card bobs subtly behind (translateY +/-2pt).
+
+## Calibration
+- The hand leads the card slightly - the drag reads as the hand pulling it.
+- Labels are tied to direction: right is always &quot;Got it!&quot;, left always &quot;Needs review&quot;.
+
+## Reduced motion
+A static diagram: card centered, arrows left/right with labels, tap hint below.
+
+## Don&#x27;t miss
+- The hand is orange and cartoonish - a friendly pointer, not a realistic hand.
+- The card rotates around its bottom edge during drags, like a card on a table.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">animated hand demonstrating swipe-right, swipe-left, and tap gestures.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/capwords-swipe-cards-gesture-tip-interaction">original interaction</a> by Capwords. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CapWords' gesture tutorial - an orange hand icon demonstrates the swipe on a flashcard (\"Helado en cono\" with an ice cream photo): it drags the card right toward \"Got it!\", then left toward \"Needs review\", with direction labels appearing at the top, then a \"Tap for details\" hint shows the tap gesture.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight gray practice screen. Center: a flashcard with an ice cream photo and the word \"Helado en cono\" with pronunciation. An orange cartoon hand overlays the card. Top center: contextual labels that swap between \"Got it!\" (right), \"Needs review\" (left), and \"Tap for details\". Behind the card, the next card's orange edge peeks out.\n\n## Motion spec\nPattern: animated hand demonstrating swipe-right, swipe-left, and tap gestures.\n- The hand appears on the card (fade 200ms) and presses (card scales 0.97).\n- Demo 1: the hand drags the card right (translateX 120pt, rotate 10deg, 600ms ease-out); \"Got it!\" fades in top-center as the card tilts; the card springs back to center (spring ~300/18) and the label fades.\n- Demo 2: same drag to the left (rotate -10deg) with \"Needs review\" at top; spring back.\n- Demo 3: the hand moves to the card center and taps (two quick scale pulses 0.95 -> 1, 150ms each) as \"Tap for details\" appears.\n- The loop repeats with a 600ms rest between cycles; the peeking next card bobs subtly behind (translateY +/-2pt).\n\n## Calibration\n- The hand leads the card slightly - the drag reads as the hand pulling it.\n- Labels are tied to direction: right is always \"Got it!\", left always \"Needs review\".\n\n## Reduced motion\nA static diagram: card centered, arrows left/right with labels, tap hint below.\n\n## Don't miss\n- The hand is orange and cartoonish - a friendly pointer, not a realistic hand.\n- The card rotates around its bottom edge during drags, like a card on a table."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Card in Hand Slide in Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Card in Hand Slide in Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-card-in-hand-slide-in-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-card-in-hand-slide-in-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-card-in-hand-slide-in-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s card-in-hand reveal - a hand holding the white credit card slides in from the left edge, tilts to its resting angle, and the feature row fades in beneath it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d46933794a0c8c37db/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d46933794a0c8c37db/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-card-in-hand-slide-in-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s card-in-hand reveal - a hand holding the white credit card slides in from the left edge, tilts to its resting angle, and the feature row fades in beneath it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED card page, white: &quot;transparent by design.&quot; headline with subcopy, a feature row under the hero (icons + labels), and a black &quot;Get your card&quot; button. The hero: a photoreal hand holding the white card with its red accent block, tilted about -12 degrees.
+
+## Motion spec
+Pattern: handheld card slide-in with a rotational settle.
+- The hand+card enters from off-screen left (translateX -60% -&gt; 0, rotateZ -18 -&gt; -12 degrees, spring ~260/13) - a placing gesture, not a throw.
+- On landing there&#x27;s a small counter-rotation (rotateZ -12 -&gt; -10 -&gt; -12, 250ms) like the hand adjusting its grip.
+- The card catches a soft shadow beneath it that fades in over 300ms after the settle.
+- The feature row fades up beneath the card (translateY 10 -&gt; 0, 250ms) only after the card rests.
+- Idle: the hand holds nearly still with a barely-there sway (rotateZ +/-0.5 degrees, 4s).
+
+## Calibration
+- The hand is photographic, not illustrated - motion must be slow and weighty to match.
+- The card&#x27;s red block is the only saturated element; keep it tack-sharp through the rotation.
+
+## Reduced motion
+Hand+card fades in at rest position (300ms); feature row follows (200ms).
+
+## Don&#x27;t miss
+- Fingers wrap the card&#x27;s edges - the card is held, not floating over a palm.
+- The entry happens once per page visit; scrolling away and back does not replay it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">handheld card slide-in with a rotational settle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-card-in-hand-slide-in-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's card-in-hand reveal - a hand holding the white credit card slides in from the left edge, tilts to its resting angle, and the feature row fades in beneath it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED card page, white: \"transparent by design.\" headline with subcopy, a feature row under the hero (icons + labels), and a black \"Get your card\" button. The hero: a photoreal hand holding the white card with its red accent block, tilted about -12 degrees.\n\n## Motion spec\nPattern: handheld card slide-in with a rotational settle.\n- The hand+card enters from off-screen left (translateX -60% -> 0, rotateZ -18 -> -12 degrees, spring ~260/13) - a placing gesture, not a throw.\n- On landing there's a small counter-rotation (rotateZ -12 -> -10 -> -12, 250ms) like the hand adjusting its grip.\n- The card catches a soft shadow beneath it that fades in over 300ms after the settle.\n- The feature row fades up beneath the card (translateY 10 -> 0, 250ms) only after the card rests.\n- Idle: the hand holds nearly still with a barely-there sway (rotateZ +/-0.5 degrees, 4s).\n\n## Calibration\n- The hand is photographic, not illustrated - motion must be slow and weighty to match.\n- The card's red block is the only saturated element; keep it tack-sharp through the rotation.\n\n## Reduced motion\nHand+card fades in at rest position (300ms); feature row follows (200ms).\n\n## Don't miss\n- Fingers wrap the card's edges - the card is held, not floating over a palm.\n- The entry happens once per page visit; scrolling away and back does not replay it."</script>
+</body></html>

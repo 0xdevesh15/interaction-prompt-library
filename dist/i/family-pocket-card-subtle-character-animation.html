@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Pocket Card Subtle Character Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Pocket Card Subtle Character Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-pocket-card-subtle-character-animation"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-pocket-card-subtle-character-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-pocket-card-subtle-character-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s Pocket promo card - on the &quot;Backups &amp; Account&quot; settings page, the Pocket card (&quot;Simple wallet management with one secure account&quot;, green Sign Up or Login button) hosts two small mascot characters (a green wallet character and an orange coin character) that idle with a subtle looping micro-animation while the rest of the page stays still.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f928080b60408ca18b86/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f928080b60408ca18b86/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-pocket-card-subtle-character-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s Pocket promo card - on the &quot;Backups &amp; Account&quot; settings page, the Pocket card (&quot;Simple wallet management with one secure account&quot;, green Sign Up or Login button) hosts two small mascot characters (a green wallet character and an orange coin character) that idle with a subtle looping micro-animation while the rest of the page stays still.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White settings page: &quot;Backups &amp; Account&quot; nav header, the Pocket promo card (title, subline, green CTA, two mascot characters on the right), Face ID toggle row, and iCloud backup options below.
+
+## Motion spec
+Pattern: ambient mascot micro-animation inside a promo card.
+- The two mascots bob gently (translateY +/-3px, 2.4s loop, ease-in-out), phase-offset by ~400ms so they never move in lockstep.
+- The orange coin character tilts slightly as it bobs (rotation +/-3deg, same loop); the green wallet character stays upright.
+- Eyes blink: both characters&#x27; eyes close and reopen together every ~3.5s (100ms close, 100ms open).
+- Everything else on the card and page - copy, CTA, toggles - is static.
+
+## Calibration
+- The motion stays inside the card&#x27;s illustration zone - the card layout never shifts.
+- Amplitudes are tiny (3px, 3deg) - felt as life, seen as stillness.
+
+## Reduced motion
+Static mascots; no bob, tilt, or blink.
+
+## Don&#x27;t miss
+- The blink is synchronized between the two characters; the bob is not.
+- The green CTA&#x27;s saturation is the strongest color on the page - the mascots accent it, never compete.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient mascot micro-animation inside a promo card.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-pocket-card-subtle-character-animation">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's Pocket promo card - on the \"Backups & Account\" settings page, the Pocket card (\"Simple wallet management with one secure account\", green Sign Up or Login button) hosts two small mascot characters (a green wallet character and an orange coin character) that idle with a subtle looping micro-animation while the rest of the page stays still.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite settings page: \"Backups & Account\" nav header, the Pocket promo card (title, subline, green CTA, two mascot characters on the right), Face ID toggle row, and iCloud backup options below.\n\n## Motion spec\nPattern: ambient mascot micro-animation inside a promo card.\n- The two mascots bob gently (translateY +/-3px, 2.4s loop, ease-in-out), phase-offset by ~400ms so they never move in lockstep.\n- The orange coin character tilts slightly as it bobs (rotation +/-3deg, same loop); the green wallet character stays upright.\n- Eyes blink: both characters' eyes close and reopen together every ~3.5s (100ms close, 100ms open).\n- Everything else on the card and page - copy, CTA, toggles - is static.\n\n## Calibration\n- The motion stays inside the card's illustration zone - the card layout never shifts.\n- Amplitudes are tiny (3px, 3deg) - felt as life, seen as stillness.\n\n## Reduced motion\nStatic mascots; no bob, tilt, or blink.\n\n## Don't miss\n- The blink is synchronized between the two characters; the bob is not.\n- The green CTA's saturation is the strongest color on the page - the mascots accent it, never compete."</script>
+</body></html>

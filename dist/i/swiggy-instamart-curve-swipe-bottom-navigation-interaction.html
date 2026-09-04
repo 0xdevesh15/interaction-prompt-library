@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Instamart Curve Swipe Bottom Navigation Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Instamart Curve Swipe Bottom Navigation Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-instamart-curve-swipe-bottom-navigation-interaction"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-instamart-curve-swipe-bottom-navigation-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-instamart-curve-swipe-bottom-navigation-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Swiggy Instamart&#x27;s curved bottom wheel - product icons ride a circular arc at the bottom of the screen, swiping rotates the wheel, and the centered icon&#x27;s product card takes over the page above.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5323a549438044fd5db/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5323a549438044fd5db/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-instamart-curve-swipe-bottom-navigation-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Swiggy Instamart&#x27;s curved bottom wheel - product icons ride a circular arc at the bottom of the screen, swiping rotates the wheel, and the centered icon&#x27;s product card takes over the page above.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Instamart product screen, white: product image and details card (Nescafe Iced Latte / Sleepy Owl Cold Brew / Bru Cold Coffee - name, quantity chips, price, ADD button) above a curved bottom bar; the bar is an arc of circular product icons, the center one raised and enlarged in the arc&#x27;s notch, the rest receding along the curve.
+
+## Motion spec
+Pattern: curved-wheel bottom navigation driving content swap.
+- Horizontal swipe anywhere on the wheel rotates icons along the arc 1:1 (icons translate along the curve and scale: center 1.25x, neighbors fall to 0.7x and 60% opacity at the edges).
+- Release: the wheel snaps the nearest icon to center (spring ~350/18 along the arc) with a small overshoot.
+- On snap, the centered icon lifts into the notch (translateY -10px, 200ms) and the product card above swaps: current content slides up and fades (200ms) while the new product slides in from below (250ms, 12px rise), image first, details 80ms later.
+- The ADD button and price crossfade with the card but the button never changes size - stable touch target.
+
+## Calibration
+- The wheel reads as a physical drum - icons at the edges tilt slightly toward center as if on a cylinder.
+- Content swap follows the wheel, never leads it: the card changes only after the snap lands.
+
+## Reduced motion
+Wheel steps one icon per swipe (150ms ease); card crossfades (200ms).
+
+## Don&#x27;t miss
+- The notch highlight stays fixed at center - icons move through it, it never travels.
+- Edge icons are still tappable: tapping an off-center icon rotates it to center with the same snap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">curved-wheel bottom navigation driving content swap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-instamart-curve-swipe-bottom-navigation-interaction">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Swiggy Instamart's curved bottom wheel - product icons ride a circular arc at the bottom of the screen, swiping rotates the wheel, and the centered icon's product card takes over the page above.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nInstamart product screen, white: product image and details card (Nescafe Iced Latte / Sleepy Owl Cold Brew / Bru Cold Coffee - name, quantity chips, price, ADD button) above a curved bottom bar; the bar is an arc of circular product icons, the center one raised and enlarged in the arc's notch, the rest receding along the curve.\n\n## Motion spec\nPattern: curved-wheel bottom navigation driving content swap.\n- Horizontal swipe anywhere on the wheel rotates icons along the arc 1:1 (icons translate along the curve and scale: center 1.25x, neighbors fall to 0.7x and 60% opacity at the edges).\n- Release: the wheel snaps the nearest icon to center (spring ~350/18 along the arc) with a small overshoot.\n- On snap, the centered icon lifts into the notch (translateY -10px, 200ms) and the product card above swaps: current content slides up and fades (200ms) while the new product slides in from below (250ms, 12px rise), image first, details 80ms later.\n- The ADD button and price crossfade with the card but the button never changes size - stable touch target.\n\n## Calibration\n- The wheel reads as a physical drum - icons at the edges tilt slightly toward center as if on a cylinder.\n- Content swap follows the wheel, never leads it: the card changes only after the snap lands.\n\n## Reduced motion\nWheel steps one icon per swipe (150ms ease); card crossfades (200ms).\n\n## Don't miss\n- The notch highlight stays fixed at center - icons move through it, it never travels.\n- Edge icons are still tappable: tapping an off-center icon rotates it to center with the same snap."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo 2025 Recap Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo 2025 Recap Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-2025-recap-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-2025-recap-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-2025-recap-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s 2025 year-in-review story - a paged vertical recap where each stat page gets its own mascot gag (Duo juggling subject icons, Duo with a streak flame, league trophy, frozen crystal reveal), ending on a &quot;You&#x27;re a Stellar Student&quot; award page and a share sheet with the year&#x27;s stats.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6933fc5e7d19d0702825d991/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6933fc5e7d19d0702825d991/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-2025-recap-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s 2025 year-in-review story - a paged vertical recap where each stat page gets its own mascot gag (Duo juggling subject icons, Duo with a streak flame, league trophy, frozen crystal reveal), ending on a &quot;You&#x27;re a Stellar Student&quot; award page and a share sheet with the year&#x27;s stats.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A sequence of full-screen story pages, each with a close (x) top-left, a stat blurb under the mascot, a SHARE button, and a page dot indicator (2 of 8, etc.): (1) dark chess-path intro with Duo icons and a progress track; (2) light blue &quot;You did 825 lessons in Chess, Math, and Music. You&#x27;ve got range!&quot; - Duo juggling three subject cubes; (3) orange &quot;You earned 26582 XP in total, more than 97% of learners!&quot;; (4) orange-red &quot;You kept a streak for 167 days, putting you in the top 10%!&quot; - Duo beside a flame; (5) white &quot;You competed in the Obsidian League for 2 weeks!&quot; - obsidian trophy between league color splashes; (6) dark blue &quot;Ready for the grand finale?&quot; with a &quot;Swipe up to see!&quot; pill over a silhouetted gate; (7) blue &quot;You&#x27;re a Stellar Student&quot; - Duo bursting out of an ice crystal with a star; (8) share sheet &quot;Share your progress and keep learning next year!&quot; with a duolingo 2025 YEAR IN REVIEW card (&quot;I&#x27;m a top 4% learner on Duolingo!&quot;), four stat chips, and a SHARE FOR A REWARD button.
+
+## Motion spec
+Pattern: paged story with per-page mascot vignettes and vertical parallax transitions, ~8 pages.
+- Page transitions: swipe (or auto-advance) moves pages vertically; the outgoing page slides up and scales to ~0.92 while the incoming page rises from below (450ms, ease-out), background colors cross-fading.
+- Mascot entrance per page: Duo springs in (scale 0.6 -&gt; 1, spring ~300/15) with its prop a beat later (150ms delay).
+- Idle gags: juggled cubes loop in a circle (~1.2s cycle), the streak flame flickers (scale 1 -&gt; 1.06, 400ms alternate), the crystal reveal plays a one-shot crack + star pop (500ms).
+- Grand finale gate: the &quot;Swipe up to see!&quot; pill bobs (8px, 1.2s) until the gesture; swipe-up flings the gate page away (spring ~240/18).
+- Share sheet: the recap card tilts in (rotate 6deg -&gt; 0, spring ~260/16) and stat chips pop in a row (100ms stagger).
+
+## Calibration
+- Each page owns one background color and one gag - do not reuse vignettes across pages.
+- The finale is gated on the swipe gesture; never auto-advance past page 6.
+
+## Reduced motion
+Pages cross-fade (250ms) with no parallax scale; mascots appear static; the finale still requires the swipe but without the fling.
+
+## Don&#x27;t miss
+- The page dots and per-page SHARE button stay fixed while content moves.
+- The share card copy is exact: &quot;I&#x27;m a top 4% learner on Duolingo!&quot; with duolingo 2025 YEAR IN REVIEW branding.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">paged story with per-page mascot vignettes and vertical parallax transitions, ~8 pages.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-2025-recap-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's 2025 year-in-review story - a paged vertical recap where each stat page gets its own mascot gag (Duo juggling subject icons, Duo with a streak flame, league trophy, frozen crystal reveal), ending on a \"You're a Stellar Student\" award page and a share sheet with the year's stats.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA sequence of full-screen story pages, each with a close (x) top-left, a stat blurb under the mascot, a SHARE button, and a page dot indicator (2 of 8, etc.): (1) dark chess-path intro with Duo icons and a progress track; (2) light blue \"You did 825 lessons in Chess, Math, and Music. You've got range!\" - Duo juggling three subject cubes; (3) orange \"You earned 26582 XP in total, more than 97% of learners!\"; (4) orange-red \"You kept a streak for 167 days, putting you in the top 10%!\" - Duo beside a flame; (5) white \"You competed in the Obsidian League for 2 weeks!\" - obsidian trophy between league color splashes; (6) dark blue \"Ready for the grand finale?\" with a \"Swipe up to see!\" pill over a silhouetted gate; (7) blue \"You're a Stellar Student\" - Duo bursting out of an ice crystal with a star; (8) share sheet \"Share your progress and keep learning next year!\" with a duolingo 2025 YEAR IN REVIEW card (\"I'm a top 4% learner on Duolingo!\"), four stat chips, and a SHARE FOR A REWARD button.\n\n## Motion spec\nPattern: paged story with per-page mascot vignettes and vertical parallax transitions, ~8 pages.\n- Page transitions: swipe (or auto-advance) moves pages vertically; the outgoing page slides up and scales to ~0.92 while the incoming page rises from below (450ms, ease-out), background colors cross-fading.\n- Mascot entrance per page: Duo springs in (scale 0.6 -> 1, spring ~300/15) with its prop a beat later (150ms delay).\n- Idle gags: juggled cubes loop in a circle (~1.2s cycle), the streak flame flickers (scale 1 -> 1.06, 400ms alternate), the crystal reveal plays a one-shot crack + star pop (500ms).\n- Grand finale gate: the \"Swipe up to see!\" pill bobs (8px, 1.2s) until the gesture; swipe-up flings the gate page away (spring ~240/18).\n- Share sheet: the recap card tilts in (rotate 6deg -> 0, spring ~260/16) and stat chips pop in a row (100ms stagger).\n\n## Calibration\n- Each page owns one background color and one gag - do not reuse vignettes across pages.\n- The finale is gated on the swipe gesture; never auto-advance past page 6.\n\n## Reduced motion\nPages cross-fade (250ms) with no parallax scale; mascots appear static; the finale still requires the swipe but without the fling.\n\n## Don't miss\n- The page dots and per-page SHARE button stay fixed while content moves.\n- The share card copy is exact: \"I'm a top 4% learner on Duolingo!\" with duolingo 2025 YEAR IN REVIEW branding."</script>
+</body></html>

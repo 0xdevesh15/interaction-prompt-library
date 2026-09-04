@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Search Add Widget Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Arc Search Add Widget Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/arc-search-add-widget-animation"><b>Arc</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-add-widget-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/arc-search-add-widget-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Arc Search&#x27;s add-widget tutorial - a step-by-step demo where a stylized home screen dims, a finger spot holds on it, icons enter edit mode, and the Edit / Add Widget path is highlighted beat by beat.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676960968f5e80dcc0b73037/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676960968f5e80dcc0b73037/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-arc-search-add-widget-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Arc Search&#x27;s add-widget tutorial - a step-by-step demo where a stylized home screen dims, a finger spot holds on it, icons enter edit mode, and the Edit / Add Widget path is highlighted beat by beat.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white tutorial card: &quot;Bring Arc to your home screen&quot; with the Arc widget preview, an &quot;Add Widget&quot; button and &quot;Maybe Later&quot;. Steps play on a mock home screen (dimmed app grid): step 1 &quot;Start by holding anywhere on your home screen&quot; with a touch ripple; step 2 &quot;Tap Edit and select Add Widget&quot; with the Edit pill highlighted and a popover appearing; a &quot;Next&quot;/&quot;Done&quot; button advances.
+
+## Motion spec
+Pattern: guided tutorial beats on a mock home screen, ~2s per step.
+- The mock home screen fades in dimmed (300ms); a touch spot appears and holds, its ripple expanding (600ms loop, twice).
+- The grid icons pop into edit mode: each grows a minus badge (spring stiffness 400 damping 18, 40ms stagger across the grid) and the set begins a subtle wiggle (plus/minus 1.5 degrees, alternating per icon, 280ms loop).
+- The Edit pill highlights with a glow pulse (600ms), then a popover menu rises from it (250ms, ease-out) with &quot;Add Widget&quot; highlighted.
+- The instruction text crossfades between steps (250ms); the step dots advance.
+- On Done, the mock fades out back to the intro card (300ms).
+
+## Calibration
+- The wiggle is gentle and desynchronized per icon - a demo of jiggle mode, not a storm.
+- Every highlight animates to its target: ripple where the hold happens, glow on the exact Edit control.
+
+## Reduced motion
+Steps fade between static states.
+
+## Don&#x27;t miss
+- The home screen mock is blurred and dimmed - a stage, not a real springboard.
+- The minus badges appear on every icon at once with a fast ripple-order stagger.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">guided tutorial beats on a mock home screen, ~2s per step.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/arc-search-add-widget-animation">original interaction</a> by Arc. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Arc Search's add-widget tutorial - a step-by-step demo where a stylized home screen dims, a finger spot holds on it, icons enter edit mode, and the Edit / Add Widget path is highlighted beat by beat.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white tutorial card: \"Bring Arc to your home screen\" with the Arc widget preview, an \"Add Widget\" button and \"Maybe Later\". Steps play on a mock home screen (dimmed app grid): step 1 \"Start by holding anywhere on your home screen\" with a touch ripple; step 2 \"Tap Edit and select Add Widget\" with the Edit pill highlighted and a popover appearing; a \"Next\"/\"Done\" button advances.\n\n## Motion spec\nPattern: guided tutorial beats on a mock home screen, ~2s per step.\n- The mock home screen fades in dimmed (300ms); a touch spot appears and holds, its ripple expanding (600ms loop, twice).\n- The grid icons pop into edit mode: each grows a minus badge (spring stiffness 400 damping 18, 40ms stagger across the grid) and the set begins a subtle wiggle (plus/minus 1.5 degrees, alternating per icon, 280ms loop).\n- The Edit pill highlights with a glow pulse (600ms), then a popover menu rises from it (250ms, ease-out) with \"Add Widget\" highlighted.\n- The instruction text crossfades between steps (250ms); the step dots advance.\n- On Done, the mock fades out back to the intro card (300ms).\n\n## Calibration\n- The wiggle is gentle and desynchronized per icon - a demo of jiggle mode, not a storm.\n- Every highlight animates to its target: ripple where the hold happens, glow on the exact Edit control.\n\n## Reduced motion\nSteps fade between static states.\n\n## Don't miss\n- The home screen mock is blurred and dimmed - a stage, not a real springboard.\n- The minus badges appear on every icon at once with a fast ripple-order stagger."</script>
+</body></html>

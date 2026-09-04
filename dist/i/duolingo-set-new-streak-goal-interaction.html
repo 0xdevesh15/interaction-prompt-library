@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Set New Streak Goal Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Set New Streak Goal Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-set-new-streak-goal-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-set-new-streak-goal-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-set-new-streak-goal-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s streak-goal picker - after the &quot;Streak Goal complete!&quot; burst, the &quot;Set a new Streak Goal!&quot; sheet pairs a horizontal milestone calendar with a list picker that stay in sync, ending on the I CAN DO IT! button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68749fb1b0f230ae67854834/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68749fb1b0f230ae67854834/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-set-new-streak-goal-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s streak-goal picker - after the &quot;Streak Goal complete!&quot; burst, the &quot;Set a new Streak Goal!&quot; sheet pairs a horizontal milestone calendar with a list picker that stay in sync, ending on the I CAN DO IT! button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A sheet over the streak screen: up top a horizontal strip of milestone tiles (flame icons with day counts 40 / 50 / 60) connected by a progress line; below, a list of goal rows (&quot;40 days - Earn 25 gems&quot;, &quot;50 days&quot;, &quot;60 days&quot;) and a blue I CAN DO IT! button.
+
+## Motion spec
+Pattern: synchronized calendar strip + list selection, ~400ms per change.
+- Completion beat: the current streak tile flashes with a confetti pop (8 pieces, 400ms) and &quot;Streak Goal complete!&quot; fades in before the picker appears (300ms slide-up).
+- Select: tapping a list row highlights it (blue tint fades in, 150ms) and the calendar strip scrolls so that milestone centers (spring ~320/24, 350ms); the milestone tile fills orange and its flame pops (scale 0.8 -&gt; 1.15 -&gt; 1, spring ~400/16).
+- Strip swipe: dragging the strip likewise updates the selected row - the two controls never disagree.
+- The progress line fills up to the chosen milestone (300ms, ease-out).
+- CTA: I CAN DO IT! presses (scale 0.97, 100ms) and confirms with the milestone tile pulsing once.
+
+## Calibration
+- Sync is bidirectional - strip and list are one selection.
+- Only the chosen milestone is filled; earlier ones show their completed check.
+
+## Reduced motion
+Selection changes are instant; strip snaps without spring.
+
+## Don&#x27;t miss
+- The strip centers the active milestone, not just highlights it.
+- Gem rewards ride along in each list row.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">synchronized calendar strip + list selection, ~400ms per change.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-set-new-streak-goal-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's streak-goal picker - after the \"Streak Goal complete!\" burst, the \"Set a new Streak Goal!\" sheet pairs a horizontal milestone calendar with a list picker that stay in sync, ending on the I CAN DO IT! button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA sheet over the streak screen: up top a horizontal strip of milestone tiles (flame icons with day counts 40 / 50 / 60) connected by a progress line; below, a list of goal rows (\"40 days - Earn 25 gems\", \"50 days\", \"60 days\") and a blue I CAN DO IT! button.\n\n## Motion spec\nPattern: synchronized calendar strip + list selection, ~400ms per change.\n- Completion beat: the current streak tile flashes with a confetti pop (8 pieces, 400ms) and \"Streak Goal complete!\" fades in before the picker appears (300ms slide-up).\n- Select: tapping a list row highlights it (blue tint fades in, 150ms) and the calendar strip scrolls so that milestone centers (spring ~320/24, 350ms); the milestone tile fills orange and its flame pops (scale 0.8 -> 1.15 -> 1, spring ~400/16).\n- Strip swipe: dragging the strip likewise updates the selected row - the two controls never disagree.\n- The progress line fills up to the chosen milestone (300ms, ease-out).\n- CTA: I CAN DO IT! presses (scale 0.97, 100ms) and confirms with the milestone tile pulsing once.\n\n## Calibration\n- Sync is bidirectional - strip and list are one selection.\n- Only the chosen milestone is filled; earlier ones show their completed check.\n\n## Reduced motion\nSelection changes are instant; strip snaps without spring.\n\n## Don't miss\n- The strip centers the active milestone, not just highlights it.\n- Gem rewards ride along in each list row."</script>
+</body></html>

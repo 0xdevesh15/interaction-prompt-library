@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shuffles Animator Welcome Tooltip Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Shuffles Animator Welcome Tooltip Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shuffles-animator-welcome-tooltip-animation"><b>Shuffles</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuffles-animator-welcome-tooltip-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuffles-animator-welcome-tooltip-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Shuffles&#x27; welcome-to-the-animator tooltip - the purple card (&quot;WELCOME TO THE ANIMATOR&quot;) loops a demo of frame-by-frame animation: objects get placed in frame one, repositioned in frame two, and the play button runs the in-betweened result with a sparkle.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5b0f164c141d9e459/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a5a5b0f164c141d9e459/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shuffles-animator-welcome-tooltip-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Shuffles&#x27; welcome-to-the-animator tooltip - the purple card (&quot;WELCOME TO THE ANIMATOR&quot;) loops a demo of frame-by-frame animation: objects get placed in frame one, repositioned in frame two, and the play button runs the in-betweened result with a sparkle.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The dark animator canvas (toy dinosaur collage) behind the purple card: caption &quot;WELCOME TO THE ANIMATOR&quot;, body &quot;Place your object in the first frame, then move or reposition in the second, and the app will magically animate your object for you!&quot;, page dots, Done below. The demo area holds a play triangle, the frame thumbnails with a &quot;+&quot; button, and the canvas above.
+
+## Motion spec
+Pattern: looping build-and-play demo.
+- Beat 1: the canvas shows frame 1 - the dinosaurs in their start poses; the first frame thumbnail fills in (fade, 250ms).
+- Beat 2: the second thumbnail gets added (scale 0.6 -&gt; 1, spring, 250ms) and on the canvas the dinos glide to new positions (600ms, ease-in-out) - the &quot;reposition&quot; step, shown as the actual move.
+- Beat 3: the play triangle pulses (scale 1 -&gt; 1.15 -&gt; 1) and the canvas plays the tweened animation - the dinos animate smoothly between the two poses (800ms) with a sparkle burst (small star particles, 500ms) on completion.
+- Hold the result 800ms, then reset to empty frames and loop.
+
+## Calibration
+- The magic beat is the playback - the in-betweens must be smooth interpolation, not a cut.
+- Sparkles mark &quot;animation done&quot; - they are the only particles in the loop.
+
+## Reduced motion
+Static frame showing both thumbnails filled and the played result.
+
+## Don&#x27;t miss
+- The thumbnails mirror the canvas poses exactly - frame 1 and frame 2 are snapshots, not icons.
+- The &quot;+&quot; button stays visible after both frames exist - adding more frames is the always-on affordance.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping build-and-play demo.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shuffles-animator-welcome-tooltip-animation">original interaction</a> by Shuffles. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Shuffles' welcome-to-the-animator tooltip - the purple card (\"WELCOME TO THE ANIMATOR\") loops a demo of frame-by-frame animation: objects get placed in frame one, repositioned in frame two, and the play button runs the in-betweened result with a sparkle.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe dark animator canvas (toy dinosaur collage) behind the purple card: caption \"WELCOME TO THE ANIMATOR\", body \"Place your object in the first frame, then move or reposition in the second, and the app will magically animate your object for you!\", page dots, Done below. The demo area holds a play triangle, the frame thumbnails with a \"+\" button, and the canvas above.\n\n## Motion spec\nPattern: looping build-and-play demo.\n- Beat 1: the canvas shows frame 1 - the dinosaurs in their start poses; the first frame thumbnail fills in (fade, 250ms).\n- Beat 2: the second thumbnail gets added (scale 0.6 -> 1, spring, 250ms) and on the canvas the dinos glide to new positions (600ms, ease-in-out) - the \"reposition\" step, shown as the actual move.\n- Beat 3: the play triangle pulses (scale 1 -> 1.15 -> 1) and the canvas plays the tweened animation - the dinos animate smoothly between the two poses (800ms) with a sparkle burst (small star particles, 500ms) on completion.\n- Hold the result 800ms, then reset to empty frames and loop.\n\n## Calibration\n- The magic beat is the playback - the in-betweens must be smooth interpolation, not a cut.\n- Sparkles mark \"animation done\" - they are the only particles in the loop.\n\n## Reduced motion\nStatic frame showing both thumbnails filled and the played result.\n\n## Don't miss\n- The thumbnails mirror the canvas poses exactly - frame 1 and frame 2 are snapshots, not icons.\n- The \"+\" button stays visible after both frames exist - adding more frames is the always-on affordance."</script>
+</body></html>

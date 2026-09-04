@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Button Morph to Sheet Button Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Button Morph to Sheet Button Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-button-morph-to-sheet-button-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-button-morph-to-sheet-button-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-button-morph-to-sheet-button-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s swap confirm button morph - on the dark &quot;Confirm swap of Ethereum to Chainlink&quot; screen, opening the &quot;Max Slippage&quot; sheet (1.0% stepper) slides it up over the dimmed page, and confirming blends the sheet&#x27;s &quot;Confirm Slippage&quot; button down into the page&#x27;s &quot;Confirm&quot; button - one continuous button across the dismissal.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d16410daa283ff12ee/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d16410daa283ff12ee/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-button-morph-to-sheet-button-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s swap confirm button morph - on the dark &quot;Confirm swap of Ethereum to Chainlink&quot; screen, opening the &quot;Max Slippage&quot; sheet (1.0% stepper) slides it up over the dimmed page, and confirming blends the sheet&#x27;s &quot;Confirm Slippage&quot; button down into the page&#x27;s &quot;Confirm&quot; button - one continuous button across the dismissal.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark swap confirm screen: token pair glyphs (Ethereum diamond, Chainlink hexagon), &quot;Confirm swap of Ethereum to Chainlink&quot;, detail rows (Swap ETH 0.002098187, Receive LINK 0.57167892, Chain, Wallet &quot;Benji&quot;, Price Difference, rate line, Max Slippage 1%), and a white &quot;Confirm&quot; pill at the bottom. The sheet: &quot;Max Slippage&quot; title, &quot;- 1.0 % +&quot; stepper, explainer, white &quot;Confirm Slippage&quot; pill.
+
+## Motion spec
+Pattern: sheet rise with button morph on dismiss.
+- Tap the slippage row: the page dims (scrim 50%, 200ms) and the sheet slides up (spring ~300/20, small overshoot), the stepper ticking with detents (value rolls 100ms per 0.1%).
+- Tap &quot;Confirm Slippage&quot;: the sheet slides down (250ms ease-in) while its button detaches and morphs - traveling to the page&#x27;s Confirm button position (bounds + corner radius animating, 300ms ease-in-out), its label crossfading &quot;Confirm Slippage&quot; -&gt; &quot;Confirm&quot; mid-flight.
+- The page&#x27;s slippage value updates with a digit roll (150ms) as the button lands with a settle (scale 1.03 -&gt; 1, spring ~340/16).
+- Cancel path: the sheet slides down and the original Confirm button fades back in (150ms) - no morph.
+
+## Calibration
+- The morph sells that both buttons are the same action at two depths.
+- During flight the button casts a lifted shadow; it grounds on landing.
+
+## Reduced motion
+The sheet slides down and the Confirm button fades in (200ms); no flight.
+
+## Don&#x27;t miss
+- The stepper buttons have press states (scale 0.9, 100ms) distinct from the sheet spring.
+- The white pill style is identical in sheet and page - that is what makes the morph readable.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet rise with button morph on dismiss.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-button-morph-to-sheet-button-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's swap confirm button morph - on the dark \"Confirm swap of Ethereum to Chainlink\" screen, opening the \"Max Slippage\" sheet (1.0% stepper) slides it up over the dimmed page, and confirming blends the sheet's \"Confirm Slippage\" button down into the page's \"Confirm\" button - one continuous button across the dismissal.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark swap confirm screen: token pair glyphs (Ethereum diamond, Chainlink hexagon), \"Confirm swap of Ethereum to Chainlink\", detail rows (Swap ETH 0.002098187, Receive LINK 0.57167892, Chain, Wallet \"Benji\", Price Difference, rate line, Max Slippage 1%), and a white \"Confirm\" pill at the bottom. The sheet: \"Max Slippage\" title, \"- 1.0 % +\" stepper, explainer, white \"Confirm Slippage\" pill.\n\n## Motion spec\nPattern: sheet rise with button morph on dismiss.\n- Tap the slippage row: the page dims (scrim 50%, 200ms) and the sheet slides up (spring ~300/20, small overshoot), the stepper ticking with detents (value rolls 100ms per 0.1%).\n- Tap \"Confirm Slippage\": the sheet slides down (250ms ease-in) while its button detaches and morphs - traveling to the page's Confirm button position (bounds + corner radius animating, 300ms ease-in-out), its label crossfading \"Confirm Slippage\" -> \"Confirm\" mid-flight.\n- The page's slippage value updates with a digit roll (150ms) as the button lands with a settle (scale 1.03 -> 1, spring ~340/16).\n- Cancel path: the sheet slides down and the original Confirm button fades back in (150ms) - no morph.\n\n## Calibration\n- The morph sells that both buttons are the same action at two depths.\n- During flight the button casts a lifted shadow; it grounds on landing.\n\n## Reduced motion\nThe sheet slides down and the Confirm button fades in (200ms); no flight.\n\n## Don't miss\n- The stepper buttons have press states (scale 0.9, 100ms) distinct from the sheet spring.\n- The white pill style is identical in sheet and page - that is what makes the morph readable."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FocusFlight Animated Text and Video Background Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>FocusFlight Animated Text and Video Background Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/focusflight-animated-text-and-video-background-onboarding"><b>Focusflight</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/focusflight-animated-text-and-video-background-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/focusflight-animated-text-and-video-background-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: FocusFlight&#x27;s onboarding carousel - full-screen pages with staggered text reveals over living backgrounds: an airplane-window video for &quot;New Window View&quot;, a map that flips between standard and satellite for &quot;Portrait Focus is Here&quot;, and a purple puzzle-piece illustration for &quot;Something Big is on the Way&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f313c7ed780e0979eff/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69270f313c7ed780e0979eff/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-focusflight-animated-text-and-video-background-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: FocusFlight&#x27;s onboarding carousel - full-screen pages with staggered text reveals over living backgrounds: an airplane-window video for &quot;New Window View&quot;, a map that flips between standard and satellite for &quot;Portrait Focus is Here&quot;, and a purple puzzle-piece illustration for &quot;Something Big is on the Way&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark onboarding pages with page dots and a next affordance bottom-right. Page 1: a rounded airplane-window video (sunset clouds) centered on black, &quot;New Window View&quot; headline + subcopy. Page 2: a full-bleed map that transitions from standard to satellite style with a flight-path overlay, &quot;Portrait Focus is Here&quot; + subcopy. Page 3: dark purple page with a soft-glow puzzle piece, &quot;Something Big is on the Way&quot; + waitlist subcopy.
+
+## Motion spec
+Pattern: video-background paged carousel with staggered text.
+- Page turn: horizontal slide (400ms, ease-in-out); the incoming page&#x27;s background scales 1.05 -&gt; 1 as it lands.
+- Text: headline words slide up and fade (70ms stagger, 300ms each), subcopy follows 120ms later, controls last.
+- Window video: the clip loops with a slow cloud drift; the window frame gets a subtle light shift (2s cycle).
+- Map: style cross-fades standard -&gt; satellite (600ms) once the page settles; a small plane glyph crawls along the route line (3s loop).
+- Puzzle page: the piece floats (10px, 2.5s) with a slow hue shimmer.
+
+## Calibration
+- Backgrounds are alive but quiet - if the background competes with the headline, slow it down.
+- Text stagger restarts on every page entry.
+
+## Reduced motion
+Static poster frames for each background; text fades in without stagger (200ms).
+
+## Don&#x27;t miss
+- Each page owns its background medium: video, map, illustration - don&#x27;t reuse one across pages.
+- The window is a rounded rectangle with a real frame, not a full-bleed video.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">video-background paged carousel with staggered text.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/focusflight-animated-text-and-video-background-onboarding">original interaction</a> by Focusflight. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: FocusFlight's onboarding carousel - full-screen pages with staggered text reveals over living backgrounds: an airplane-window video for \"New Window View\", a map that flips between standard and satellite for \"Portrait Focus is Here\", and a purple puzzle-piece illustration for \"Something Big is on the Way\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark onboarding pages with page dots and a next affordance bottom-right. Page 1: a rounded airplane-window video (sunset clouds) centered on black, \"New Window View\" headline + subcopy. Page 2: a full-bleed map that transitions from standard to satellite style with a flight-path overlay, \"Portrait Focus is Here\" + subcopy. Page 3: dark purple page with a soft-glow puzzle piece, \"Something Big is on the Way\" + waitlist subcopy.\n\n## Motion spec\nPattern: video-background paged carousel with staggered text.\n- Page turn: horizontal slide (400ms, ease-in-out); the incoming page's background scales 1.05 -> 1 as it lands.\n- Text: headline words slide up and fade (70ms stagger, 300ms each), subcopy follows 120ms later, controls last.\n- Window video: the clip loops with a slow cloud drift; the window frame gets a subtle light shift (2s cycle).\n- Map: style cross-fades standard -> satellite (600ms) once the page settles; a small plane glyph crawls along the route line (3s loop).\n- Puzzle page: the piece floats (10px, 2.5s) with a slow hue shimmer.\n\n## Calibration\n- Backgrounds are alive but quiet - if the background competes with the headline, slow it down.\n- Text stagger restarts on every page entry.\n\n## Reduced motion\nStatic poster frames for each background; text fades in without stagger (200ms).\n\n## Don't miss\n- Each page owns its background medium: video, map, illustration - don't reuse one across pages.\n- The window is a rounded rectangle with a real frame, not a full-bleed video."</script>
+</body></html>

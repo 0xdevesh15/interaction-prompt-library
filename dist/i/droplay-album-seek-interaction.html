@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Droplay Album Seek Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Droplay Album Seek Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/droplay-album-seek-interaction"><b>Droplay</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/droplay-album-seek-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/droplay-album-seek-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Droplay&#x27;s alphabetical seek - dragging along a vertical letter index beside the CD carousel scrubs the carousel at speed while the large CD in the player spins and the carousel snaps to the album whose title matches the landed letter.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b941e962df2301435db7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b941e962df2301435db7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-droplay-album-seek-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Droplay&#x27;s alphabetical seek - dragging along a vertical letter index beside the CD carousel scrubs the carousel at speed while the large CD in the player spins and the carousel snaps to the album whose title matches the landed letter.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark music player: a large metallic CD on top (track title &quot;Hello&quot;, artist, transport controls), and a bottom carousel of small CD thumbnails on a curved rail. A slim A-Z index rail sits along the carousel&#x27;s edge.
+
+## Motion spec
+Pattern: index-scrub coupled carousel + platter spin.
+- Drag on the letter rail: the carousel scrolls horizontally at a rate mapped to the rail position (nonlinear - letters near the drag point dominate), tracking the finger with ~80ms lag for weight.
+- The big CD platter spins proportionally to carousel velocity (visual spin rate = scroll speed x k), decelerating with friction when scrolling stops.
+- On release: the carousel decelerates and snaps the nearest album to center (spring ~380/24, ~400ms); the centered CD enlarges slightly and its title label brightens.
+- The active letter highlights on the rail and ticks as letters pass (haptic-timed pops, 60ms).
+
+## Calibration
+- Spin direction follows scroll direction; reversing scroll reverses spin.
+- Carousel items tilt on the curve - edge CDs angle away from the viewer.
+
+## Reduced motion
+Carousel scrolls without spin; snap without spring overshoot.
+
+## Don&#x27;t miss
+- The rail is alphabetical, not positional - jumping from A to M skips proportionally many albums.
+- The platter never stops dead: it eases to rest after the snap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">index-scrub coupled carousel + platter spin.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/droplay-album-seek-interaction">original interaction</a> by Droplay. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Droplay's alphabetical seek - dragging along a vertical letter index beside the CD carousel scrubs the carousel at speed while the large CD in the player spins and the carousel snaps to the album whose title matches the landed letter.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark music player: a large metallic CD on top (track title \"Hello\", artist, transport controls), and a bottom carousel of small CD thumbnails on a curved rail. A slim A-Z index rail sits along the carousel's edge.\n\n## Motion spec\nPattern: index-scrub coupled carousel + platter spin.\n- Drag on the letter rail: the carousel scrolls horizontally at a rate mapped to the rail position (nonlinear - letters near the drag point dominate), tracking the finger with ~80ms lag for weight.\n- The big CD platter spins proportionally to carousel velocity (visual spin rate = scroll speed x k), decelerating with friction when scrolling stops.\n- On release: the carousel decelerates and snaps the nearest album to center (spring ~380/24, ~400ms); the centered CD enlarges slightly and its title label brightens.\n- The active letter highlights on the rail and ticks as letters pass (haptic-timed pops, 60ms).\n\n## Calibration\n- Spin direction follows scroll direction; reversing scroll reverses spin.\n- Carousel items tilt on the curve - edge CDs angle away from the viewer.\n\n## Reduced motion\nCarousel scrolls without spin; snap without spring overshoot.\n\n## Don't miss\n- The rail is alphabetical, not positional - jumping from A to M skips proportionally many albums.\n- The platter never stops dead: it eases to rest after the snap."</script>
+</body></html>

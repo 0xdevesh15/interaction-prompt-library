@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Torch Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Torch Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-torch-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-torch-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-torch-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: iOS 18&#x27;s flashlight control in the Dynamic Island - tapping the torch expands the island into a tall black panel showing a glowing flashlight with its beam cone, and dragging vertically adjusts brightness while dragging horizontally widens or narrows the beam, with the glow and cone updating fluidly.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6718ee957544fc3800358143/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6718ee957544fc3800358143/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-torch-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: iOS 18&#x27;s flashlight control in the Dynamic Island - tapping the torch expands the island into a tall black panel showing a glowing flashlight with its beam cone, and dragging vertically adjusts brightness while dragging horizontally widens or narrows the beam, with the glow and cone updating fluidly.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Any app screen (here: Notes) with the Dynamic Island. Expanded state: a tall rounded black panel fills the top of the screen, containing a white flashlight glyph whose head emits a gradient glow and whose beam is a translucent cone above it, plus a thin arc at the top showing the beam spread.
+
+## Motion spec
+Pattern: Dynamic Island expansion with two-axis fluid control.
+- Tap torch: the island stretches downward into the panel (spring ~340/26, ~400ms, slight overshoot), content fading in as it grows.
+- Vertical drag: brightness - the glow intensity and cone opacity track the finger 1:1 across 4 levels; level changes land with a soft haptic-timed pulse (glow pops ~10% for 120ms).
+- Horizontal drag: beam width - the cone splays from a narrow spotlight (~15deg) to a wide flood (~50deg), the top arc stretching to match, tracking 1:1.
+- The flashlight glyph stays fixed at the panel&#x27;s vertical center; only glow and cone reshape.
+- Tap outside or swipe up: panel springs back to the island (350ms).
+
+## Calibration
+- Both axes work from anywhere inside the panel, simultaneously - no mode switch.
+- The beam&#x27;s edge stays soft (gradient), never a hard line.
+
+## Reduced motion
+Panel fades between compact/expanded (200ms); drags still track 1:1.
+
+## Don&#x27;t miss
+- The panel is pure black on any wallpaper - it reads as hardware, not UI chrome.
+- At minimum brightness the glow never fully dies while the torch is on.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">Dynamic Island expansion with two-axis fluid control.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-torch-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: iOS 18's flashlight control in the Dynamic Island - tapping the torch expands the island into a tall black panel showing a glowing flashlight with its beam cone, and dragging vertically adjusts brightness while dragging horizontally widens or narrows the beam, with the glow and cone updating fluidly.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAny app screen (here: Notes) with the Dynamic Island. Expanded state: a tall rounded black panel fills the top of the screen, containing a white flashlight glyph whose head emits a gradient glow and whose beam is a translucent cone above it, plus a thin arc at the top showing the beam spread.\n\n## Motion spec\nPattern: Dynamic Island expansion with two-axis fluid control.\n- Tap torch: the island stretches downward into the panel (spring ~340/26, ~400ms, slight overshoot), content fading in as it grows.\n- Vertical drag: brightness - the glow intensity and cone opacity track the finger 1:1 across 4 levels; level changes land with a soft haptic-timed pulse (glow pops ~10% for 120ms).\n- Horizontal drag: beam width - the cone splays from a narrow spotlight (~15deg) to a wide flood (~50deg), the top arc stretching to match, tracking 1:1.\n- The flashlight glyph stays fixed at the panel's vertical center; only glow and cone reshape.\n- Tap outside or swipe up: panel springs back to the island (350ms).\n\n## Calibration\n- Both axes work from anywhere inside the panel, simultaneously - no mode switch.\n- The beam's edge stays soft (gradient), never a hard line.\n\n## Reduced motion\nPanel fades between compact/expanded (200ms); drags still track 1:1.\n\n## Don't miss\n- The panel is pure black on any wallpaper - it reads as hardware, not UI chrome.\n- At minimum brightness the glow never fully dies while the torch is on."</script>
+</body></html>

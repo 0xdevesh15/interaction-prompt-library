@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Sleep Goal Slider and Button Color Change Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Sleep Goal Slider and Button Color Change Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-sleep-goal-slider-and-button-color-change-interaction"><b>Gentler</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-sleep-goal-slider-and-button-color-change-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-sleep-goal-slider-and-button-color-change-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Gentler Streak&#x27;s sleep goal slider - in the &quot;Sleep Goal&quot; sheet, dragging the slider changes the goal readout (&quot;7h 00m&quot; -&gt; &quot;10h 10m&quot;) while the track fill, the handle, and the Done button all interpolate color across a purple-to-red spectrum, and range banners (&quot;ABOVE RECOMMENDED RANGE&quot; / &quot;BELOW RECOMMENDED RANGE&quot;) pop in at the extremes.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734b940ba34cfe064c78fa9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734b940ba34cfe064c78fa9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-sleep-goal-slider-and-button-color-change-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Gentler Streak&#x27;s sleep goal slider - in the &quot;Sleep Goal&quot; sheet, dragging the slider changes the goal readout (&quot;7h 00m&quot; -&gt; &quot;10h 10m&quot;) while the track fill, the handle, and the Done button all interpolate color across a purple-to-red spectrum, and range banners (&quot;ABOVE RECOMMENDED RANGE&quot; / &quot;BELOW RECOMMENDED RANGE&quot;) pop in at the extremes.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark purple bottom sheet over a dimmed article: &quot;Sleep Goal&quot; title, subline, a large hour/minute readout, a horizontal slider with a white-ringed handle over a gradient track (purple left, red right), a range banner slot above the track, and a full-width Done button.
+
+## Motion spec
+Pattern: color-interpolated slider with threshold banners.
+- Drag: the handle follows the finger 1:1; the readout updates continuously (minutes roll, ~80ms per step).
+- Color: the track fill, handle ring glow, and Done button all tween through the same gradient - calm purple at low values, magenta mid, alert red at high values (continuous interpolation, no steps).
+- Threshold banners: crossing into the high zone pops &quot;ABOVE RECOMMENDED RANGE&quot; (red pill label, scale 0.8 -&gt; 1.05 -&gt; 1, spring ~420/22, 220ms) above the track; crossing low pops &quot;BELOW RECOMMENDED RANGE&quot;; back inside the range, the banner fades out (200ms).
+- Release: the handle settles with a small spring (spring ~440/28, 180ms); colors hold at the final value.
+
+## Calibration
+- Every colored element samples the same gradient at the same value - track, handle, and button never disagree.
+- The color change is continuous during the drag - no snapping between presets.
+
+## Reduced motion
+Colors update on release only; banners fade without the scale pop.
+
+## Don&#x27;t miss
+- The banners are signed - above and below are different states with different copy.
+- The Done button participates in the color system - it is the largest color surface after the track.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">color-interpolated slider with threshold banners.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-sleep-goal-slider-and-button-color-change-interaction">original interaction</a> by Gentler. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Gentler Streak's sleep goal slider - in the \"Sleep Goal\" sheet, dragging the slider changes the goal readout (\"7h 00m\" -> \"10h 10m\") while the track fill, the handle, and the Done button all interpolate color across a purple-to-red spectrum, and range banners (\"ABOVE RECOMMENDED RANGE\" / \"BELOW RECOMMENDED RANGE\") pop in at the extremes.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark purple bottom sheet over a dimmed article: \"Sleep Goal\" title, subline, a large hour/minute readout, a horizontal slider with a white-ringed handle over a gradient track (purple left, red right), a range banner slot above the track, and a full-width Done button.\n\n## Motion spec\nPattern: color-interpolated slider with threshold banners.\n- Drag: the handle follows the finger 1:1; the readout updates continuously (minutes roll, ~80ms per step).\n- Color: the track fill, handle ring glow, and Done button all tween through the same gradient - calm purple at low values, magenta mid, alert red at high values (continuous interpolation, no steps).\n- Threshold banners: crossing into the high zone pops \"ABOVE RECOMMENDED RANGE\" (red pill label, scale 0.8 -> 1.05 -> 1, spring ~420/22, 220ms) above the track; crossing low pops \"BELOW RECOMMENDED RANGE\"; back inside the range, the banner fades out (200ms).\n- Release: the handle settles with a small spring (spring ~440/28, 180ms); colors hold at the final value.\n\n## Calibration\n- Every colored element samples the same gradient at the same value - track, handle, and button never disagree.\n- The color change is continuous during the drag - no snapping between presets.\n\n## Reduced motion\nColors update on release only; banners fade without the scale pop.\n\n## Don't miss\n- The banners are signed - above and below are different states with different copy.\n- The Done button participates in the color system - it is the largest color surface after the track."</script>
+</body></html>

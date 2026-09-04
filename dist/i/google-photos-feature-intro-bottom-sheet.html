@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Photos Feature Intro Bottom Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Google Photos Feature Intro Bottom Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/google-photos-feature-intro-bottom-sheet"><b>Google</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-photos-feature-intro-bottom-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/google-photos-feature-intro-bottom-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Google Photos&#x27; &quot;Similar photos are now automatically stacked&quot; sheet - an auto-playing loop at the top of the sheet shows a photo grid collapsing into stacks with count badges.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1f61d73e2622b35682/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1f61d73e2622b35682/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-google-photos-feature-intro-bottom-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Google Photos&#x27; &quot;Similar photos are now automatically stacked&quot; sheet - an auto-playing loop at the top of the sheet shows a photo grid collapsing into stacks with count badges.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A bottom sheet: a demo area at top separated from the text by a wavy torn-paper edge, the headline &quot;Similar photos are now automatically stacked&quot;, explainer copy with a Learn more link, a blue OK button, and a &quot;Turn off Photo stacks&quot; text action.
+
+## Motion spec
+Pattern: looping photo-stack demo.
+- The demo loops ~every 4s across several photo sets (selfies, dogs, landscapes): the grid of similar photos animates as each set&#x27;s duplicates fly toward their best shot (translate + scale down to 0.85, 400ms, ease-in-out, 60ms stagger) and tuck behind it with a slight fan (each -3deg), a count badge (&quot;8&quot;) popping onto the top card (scale 0 to 1, spring ~460/20).
+- Hold stacked ~1s, then the stack fans back out to the grid (reverse paths, 350ms) and the next photo set crossfades in (300ms) to repeat.
+- The wavy divider edge ripples subtly (+-2px, 3s) as the demo plays above it.
+- Sheet entry: slides up with spring ~360/24; the demo starts playing 200ms after the sheet lands.
+- OK dismisses with the sheet accelerating down (300ms); the demo halts immediately on dismiss start.
+
+## Calibration
+- The fly-to-stack paths arc slightly (20px vertical bow) so photos read as physical cards being gathered.
+- The count badge is the payoff - it appears only after the last duplicate lands.
+
+## Reduced motion
+Demo shows before/after states crossfading; no flight paths.
+
+## Don&#x27;t miss
+- The torn-paper wave edge between demo and text is the sheet&#x27;s signature - keep it crisp.
+- Duplicates tuck BEHIND the hero shot with visible edge offsets - the stack must read as a stack at rest.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping photo-stack demo.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/google-photos-feature-intro-bottom-sheet">original interaction</a> by Google. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Google Photos' \"Similar photos are now automatically stacked\" sheet - an auto-playing loop at the top of the sheet shows a photo grid collapsing into stacks with count badges.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA bottom sheet: a demo area at top separated from the text by a wavy torn-paper edge, the headline \"Similar photos are now automatically stacked\", explainer copy with a Learn more link, a blue OK button, and a \"Turn off Photo stacks\" text action.\n\n## Motion spec\nPattern: looping photo-stack demo.\n- The demo loops ~every 4s across several photo sets (selfies, dogs, landscapes): the grid of similar photos animates as each set's duplicates fly toward their best shot (translate + scale down to 0.85, 400ms, ease-in-out, 60ms stagger) and tuck behind it with a slight fan (each -3deg), a count badge (\"8\") popping onto the top card (scale 0 to 1, spring ~460/20).\n- Hold stacked ~1s, then the stack fans back out to the grid (reverse paths, 350ms) and the next photo set crossfades in (300ms) to repeat.\n- The wavy divider edge ripples subtly (+-2px, 3s) as the demo plays above it.\n- Sheet entry: slides up with spring ~360/24; the demo starts playing 200ms after the sheet lands.\n- OK dismisses with the sheet accelerating down (300ms); the demo halts immediately on dismiss start.\n\n## Calibration\n- The fly-to-stack paths arc slightly (20px vertical bow) so photos read as physical cards being gathered.\n- The count badge is the payoff - it appears only after the last duplicate lands.\n\n## Reduced motion\nDemo shows before/after states crossfading; no flight paths.\n\n## Don't miss\n- The torn-paper wave edge between demo and text is the sheet's signature - keep it crisp.\n- Duplicates tuck BEHIND the hero shot with visible edge offsets - the stack must read as a stack at rest."</script>
+</body></html>

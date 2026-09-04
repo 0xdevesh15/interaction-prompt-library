@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LG ThinQ Remote Drag Coachmark Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>LG ThinQ Remote Drag Coachmark Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lg-thinq-remote-drag-coachmark-animation"><b>Lg</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lg-thinq-remote-drag-coachmark-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lg-thinq-remote-drag-coachmark-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: LG ThinQ&#x27;s remote drag coachmark - a 3D hand with an extended index finger drags downward along a glowing teal trail inside the coachmark card, looping the gesture demo over the dimmed remote UI.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67f35c497ee0a66d6b46c2fd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67f35c497ee0a66d6b46c2fd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lg-thinq-remote-drag-coachmark-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: LG ThinQ&#x27;s remote drag coachmark - a 3D hand with an extended index finger drags downward along a glowing teal trail inside the coachmark card, looping the gesture demo over the dimmed remote UI.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+TV remote screen: power button, VOL and CH rocker columns, navigation and settings icons, bottom tab bar with the joystick tab active. The coachmark card occupies the middle: explainer text at top, and a demo area where a 3D hand drags down a touch surface, a teal trail line following the fingertip.
+
+## Motion spec
+Pattern: looping drag-gesture demo with a trailing guide.
+- The hand enters from the top of the demo area (translateY -20pt + fade, 300ms) and settles on the surface (scale 1.05 -&gt; 1, 150ms - a soft &quot;touch down&quot;).
+- Drag: the hand moves down ~120pt over 900ms (ease-in-out), the teal trail drawing behind the fingertip at the same progress (stroke-dash style reveal), ending with a small ripple ring at the stop point (scale 0 -&gt; 1.4, fade, 400ms).
+- Hold 300ms, then the trail fades (300ms) and the hand floats back to the start (600ms, ease-in-out) - loop with an 800ms pause.
+- A small down-arrow glyph rides above the fingertip, bobbing gently (translateY +-3pt, 1s).
+- The remote UI behind the card stays dimmed and static.
+
+## Calibration
+- The fingertip and the trail head must be the same point at every frame - no lag between hand and line.
+- The loop reads as a demo, not an error: keep the pause long enough to register &quot;again&quot;.
+
+## Reduced motion
+Static hand at mid-drag with the full trail drawn; no loop.
+
+## Don&#x27;t miss
+- The hand is a soft 3D render with a sleeve accent, not a flat icon.
+- Trail glow (teal, ~4pt with blur) against the muted card is the attention hook.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping drag-gesture demo with a trailing guide.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lg-thinq-remote-drag-coachmark-animation">original interaction</a> by Lg. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: LG ThinQ's remote drag coachmark - a 3D hand with an extended index finger drags downward along a glowing teal trail inside the coachmark card, looping the gesture demo over the dimmed remote UI.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTV remote screen: power button, VOL and CH rocker columns, navigation and settings icons, bottom tab bar with the joystick tab active. The coachmark card occupies the middle: explainer text at top, and a demo area where a 3D hand drags down a touch surface, a teal trail line following the fingertip.\n\n## Motion spec\nPattern: looping drag-gesture demo with a trailing guide.\n- The hand enters from the top of the demo area (translateY -20pt + fade, 300ms) and settles on the surface (scale 1.05 -> 1, 150ms - a soft \"touch down\").\n- Drag: the hand moves down ~120pt over 900ms (ease-in-out), the teal trail drawing behind the fingertip at the same progress (stroke-dash style reveal), ending with a small ripple ring at the stop point (scale 0 -> 1.4, fade, 400ms).\n- Hold 300ms, then the trail fades (300ms) and the hand floats back to the start (600ms, ease-in-out) - loop with an 800ms pause.\n- A small down-arrow glyph rides above the fingertip, bobbing gently (translateY +-3pt, 1s).\n- The remote UI behind the card stays dimmed and static.\n\n## Calibration\n- The fingertip and the trail head must be the same point at every frame - no lag between hand and line.\n- The loop reads as a demo, not an error: keep the pause long enough to register \"again\".\n\n## Reduced motion\nStatic hand at mid-drag with the full trail drawn; no loop.\n\n## Don't miss\n- The hand is a soft 3D render with a sleeve accent, not a flat icon.\n- Trail glow (teal, ~4pt with blur) against the muted card is the attention hook."</script>
+</body></html>

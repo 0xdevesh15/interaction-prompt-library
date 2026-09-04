@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Check Steps Bounce Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Check Steps Bounce Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-check-steps-bounce-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-check-steps-bounce-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-check-steps-bounce-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s check-steps celebration - the Duo owl hops across a row of progress steps, squashing each one green with a checkmark and a confetti pop, then the scene morphs into a score screen with a big number and a Continue button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675ec74ec9f25eced4e524c0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675ec74ec9f25eced4e524c0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-check-steps-bounce-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s check-steps celebration - the Duo owl hops across a row of progress steps, squashing each one green with a checkmark and a confetti pop, then the scene morphs into a score screen with a big number and a Continue button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A clean white screen. Duo (the green owl) leaps between small round step platforms: grey pending dots ahead, green checked discs behind. Each landing squashes the step, flashes a white checkmark, and kicks up a few confetti bits. After the final step, the scene morphs into the result: Duo posed above a US flag and a big &quot;60&quot;, the line &quot;You unlocked your Duolingo English Score!&quot;, and a blue &quot;CONTINUE&quot; button pinned at the bottom.
+
+## Motion spec
+Pattern: mascot hop chain into a score reveal, ~3.5s total.
+- Duo hops step to step (each hop 400ms: squash anticipation 80ms, arc with ease-out up and ease-in down, landing squash to 0.7y then spring back, stiffness 400 damping 16).
+- Each landed step pops its checkmark (scale 0 to 1, spring stiffness 450 damping 18) and a 6-piece confetti burst (300ms, outward with gravity).
+- Duo&#x27;s body tilts into each jump direction and wobbles on landing (plus/minus 8 degrees settling).
+- After the last step, Duo and the final platform scale up and drift to center-top (400ms) as the flag and &quot;60&quot; count up beneath (800ms, ease-out), the unlock line fading in, then the Continue button sliding up (spring stiffness 300 damping 24).
+
+## Calibration
+- The hops are rhythmic - a steady beat, not accelerating.
+- The score screen inherits Duo&#x27;s final pose; no cut to a different illustration.
+
+## Reduced motion
+Steps fill green in sequence; score screen fades in.
+
+## Don&#x27;t miss
+- The squash-and-stretch on Duo carries the whole piece - rigid hops kill it.
+- Confetti is small and sparse per step; the big number and flag own the finale.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">mascot hop chain into a score reveal, ~3.5s total.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-check-steps-bounce-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's check-steps celebration - the Duo owl hops across a row of progress steps, squashing each one green with a checkmark and a confetti pop, then the scene morphs into a score screen with a big number and a Continue button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA clean white screen. Duo (the green owl) leaps between small round step platforms: grey pending dots ahead, green checked discs behind. Each landing squashes the step, flashes a white checkmark, and kicks up a few confetti bits. After the final step, the scene morphs into the result: Duo posed above a US flag and a big \"60\", the line \"You unlocked your Duolingo English Score!\", and a blue \"CONTINUE\" button pinned at the bottom.\n\n## Motion spec\nPattern: mascot hop chain into a score reveal, ~3.5s total.\n- Duo hops step to step (each hop 400ms: squash anticipation 80ms, arc with ease-out up and ease-in down, landing squash to 0.7y then spring back, stiffness 400 damping 16).\n- Each landed step pops its checkmark (scale 0 to 1, spring stiffness 450 damping 18) and a 6-piece confetti burst (300ms, outward with gravity).\n- Duo's body tilts into each jump direction and wobbles on landing (plus/minus 8 degrees settling).\n- After the last step, Duo and the final platform scale up and drift to center-top (400ms) as the flag and \"60\" count up beneath (800ms, ease-out), the unlock line fading in, then the Continue button sliding up (spring stiffness 300 damping 24).\n\n## Calibration\n- The hops are rhythmic - a steady beat, not accelerating.\n- The score screen inherits Duo's final pose; no cut to a different illustration.\n\n## Reduced motion\nSteps fill green in sequence; score screen fades in.\n\n## Don't miss\n- The squash-and-stretch on Duo carries the whole piece - rigid hops kill it.\n- Confetti is small and sparse per step; the big number and flag own the finale."</script>
+</body></html>

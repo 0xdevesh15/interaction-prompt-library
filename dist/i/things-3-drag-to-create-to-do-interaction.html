@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Things 3 Drag to Create To-Do Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Things 3 Drag to Create To-Do Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/things-3-drag-to-create-to-do-interaction"><b>Things</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/things-3-drag-to-create-to-do-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/things-3-drag-to-create-to-do-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Things 3&#x27;s new to-do - the blue + button at the bottom-right can be tapped or dragged up into the list, expanding into an editable to-do card with the keyboard, then settling as a new row under &quot;Next Chapter&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f338486b5c1015ac01cf27/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f338486b5c1015ac01cf27/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-things-3-drag-to-create-to-do-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Things 3&#x27;s new to-do - the blue + button at the bottom-right can be tapped or dragged up into the list, expanding into an editable to-do card with the keyboard, then settling as a new row under &quot;Next Chapter&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light list screen: &quot;Next Chapter&quot; heading, existing rows with circle checkboxes, and a floating blue + button bottom-right. Edit state: a white to-do card with a title field (&quot;New To-Do&quot; placeholder), note field, and toolbar icons, keyboard up with a blue check button on the input bar.
+
+## Motion spec
+Pattern: FAB morph to card, ~400ms.
+- Tap: the + button expands into the to-do card (spring ~340/22, corner radius circle -&gt; 10px), the keyboard rises (250ms), and the card&#x27;s title field takes focus.
+- Drag: dragging the + up moves it 1:1; a gap opens in the list under the finger (rows part, 200ms, ease-out); releasing drops the card into the gap (spring ~320/22) and opens editing.
+- Commit: tapping the blue check collapses the card into a plain row (250ms, ease-in) as the keyboard drops; the new row flash-settles (scale 1.02 -&gt; 1, 200ms).
+- Cancel: swiping the card down dismisses back to the + button (reverse morph, 300ms).
+
+## Calibration
+- The morph is one element changing shape - no crossfade between button and card.
+- The gap preview during drag matches the final row position exactly.
+
+## Reduced motion
+Button fades into the card in place (200ms); keyboard appears without slide.
+
+## Don&#x27;t miss
+- The + stays draggable - it is not tap-only; the parting-rows preview is the signature.
+- The check button lives on the keyboard input bar, not in the card.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">FAB morph to card, ~400ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/things-3-drag-to-create-to-do-interaction">original interaction</a> by Things. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Things 3's new to-do - the blue + button at the bottom-right can be tapped or dragged up into the list, expanding into an editable to-do card with the keyboard, then settling as a new row under \"Next Chapter\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight list screen: \"Next Chapter\" heading, existing rows with circle checkboxes, and a floating blue + button bottom-right. Edit state: a white to-do card with a title field (\"New To-Do\" placeholder), note field, and toolbar icons, keyboard up with a blue check button on the input bar.\n\n## Motion spec\nPattern: FAB morph to card, ~400ms.\n- Tap: the + button expands into the to-do card (spring ~340/22, corner radius circle -> 10px), the keyboard rises (250ms), and the card's title field takes focus.\n- Drag: dragging the + up moves it 1:1; a gap opens in the list under the finger (rows part, 200ms, ease-out); releasing drops the card into the gap (spring ~320/22) and opens editing.\n- Commit: tapping the blue check collapses the card into a plain row (250ms, ease-in) as the keyboard drops; the new row flash-settles (scale 1.02 -> 1, 200ms).\n- Cancel: swiping the card down dismisses back to the + button (reverse morph, 300ms).\n\n## Calibration\n- The morph is one element changing shape - no crossfade between button and card.\n- The gap preview during drag matches the final row position exactly.\n\n## Reduced motion\nButton fades into the card in place (200ms); keyboard appears without slide.\n\n## Don't miss\n- The + stays draggable - it is not tap-only; the parting-rows preview is the signature.\n- The check button lives on the keyboard input bar, not in the card."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revolut Coin Lightspeed Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Revolut Coin Lightspeed Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/revolut-coin-lightspeed-animation"><b>Revolut</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-coin-lightspeed-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-coin-lightspeed-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Revolut&#x27;s coin lightspeed loop - on the dark &quot;READY TO CHANGE THE WAY YOU MONEY?&quot; onboarding screen, a silver R coin floats and rotates in 3D over a lightspeed starfield whose light streaks radiate outward from center.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/672f78effbe814b252142603/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/672f78effbe814b252142603/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-revolut-coin-lightspeed-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Revolut&#x27;s coin lightspeed loop - on the dark &quot;READY TO CHANGE THE WAY YOU MONEY?&quot; onboarding screen, a silver R coin floats and rotates in 3D over a lightspeed starfield whose light streaks radiate outward from center.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A near-black screen: &quot;Welcome to Revolut&quot; eyebrow, bold headline &quot;READY TO CHANGE THE WAY YOU MONEY?&quot; top-left, then the hero - a metallic silver coin embossed with the Revolut R, floating center-frame - and black &quot;Log in&quot; / white &quot;Sign up&quot; pills at the bottom.
+
+## Motion spec
+Pattern: hyperspace starfield + floating 3D coin.
+- The starfield: thin light streaks (blue, green, white) radiate outward from the screen&#x27;s center vanishing point - each streak is born small at center and stretches toward the edges (600-900ms per streak, continuous spawn, motion-blurred lines).
+- The coin floats center: slow rotateY spin (one full turn ~6s, linear) with a gentle bob (translateY +/-8px, 3s ease-in-out loop) and a slight tilt drift (+/-6deg).
+- The coin is lit by the starfield: specular highlights sweep across the embossed R as it turns; occasionally a green streak passes close and rims the coin&#x27;s edge.
+- The whole loop is seamless and ambient - no start or end state while the screen is shown.
+
+## Calibration
+- Streak speed is fast (crosses half the screen in under a second) - it should read as speed, not rain.
+- The coin stays the brightest object - the starfield never overpowers it.
+
+## Reduced motion
+Static starfield image; coin holds a three-quarter pose.
+
+## Don&#x27;t miss
+- The streaks converge on the center behind the coin - the coin sits at the vanishing point.
+- The coin&#x27;s milled edge catches light separately from its faces.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">hyperspace starfield + floating 3D coin.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/revolut-coin-lightspeed-animation">original interaction</a> by Revolut. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Revolut's coin lightspeed loop - on the dark \"READY TO CHANGE THE WAY YOU MONEY?\" onboarding screen, a silver R coin floats and rotates in 3D over a lightspeed starfield whose light streaks radiate outward from center.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA near-black screen: \"Welcome to Revolut\" eyebrow, bold headline \"READY TO CHANGE THE WAY YOU MONEY?\" top-left, then the hero - a metallic silver coin embossed with the Revolut R, floating center-frame - and black \"Log in\" / white \"Sign up\" pills at the bottom.\n\n## Motion spec\nPattern: hyperspace starfield + floating 3D coin.\n- The starfield: thin light streaks (blue, green, white) radiate outward from the screen's center vanishing point - each streak is born small at center and stretches toward the edges (600-900ms per streak, continuous spawn, motion-blurred lines).\n- The coin floats center: slow rotateY spin (one full turn ~6s, linear) with a gentle bob (translateY +/-8px, 3s ease-in-out loop) and a slight tilt drift (+/-6deg).\n- The coin is lit by the starfield: specular highlights sweep across the embossed R as it turns; occasionally a green streak passes close and rims the coin's edge.\n- The whole loop is seamless and ambient - no start or end state while the screen is shown.\n\n## Calibration\n- Streak speed is fast (crosses half the screen in under a second) - it should read as speed, not rain.\n- The coin stays the brightest object - the starfield never overpowers it.\n\n## Reduced motion\nStatic starfield image; coin holds a three-quarter pose.\n\n## Don't miss\n- The streaks converge on the center behind the coin - the coin sits at the vanishing point.\n- The coin's milled edge catches light separately from its faces."</script>
+</body></html>

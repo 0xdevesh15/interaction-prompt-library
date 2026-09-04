@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FirstClub Intro Button Progress Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>FirstClub Intro Button Progress Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/firstclub-intro-button-progress-animation"><b>Firstclub</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/firstclub-intro-button-progress-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/firstclub-intro-button-progress-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: FirstClub&#x27;s onboarding slideshow - the green &quot;Explore Firstclub&quot; button doubles as a progress bar, filling left to right to drive each auto-advance to the next slide.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68bb1d69cfdbcd132cb0490c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68bb1d69cfdbcd132cb0490c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-firstclub-intro-button-progress-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: FirstClub&#x27;s onboarding slideshow - the green &quot;Explore Firstclub&quot; button doubles as a progress bar, filling left to right to drive each auto-advance to the next slide.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream onboarding slides with food photography and centered serif headlines: &quot;Bengaluru&#x27;s finest selection&quot;, &quot;Say no to 200+ harmful ingredients&quot;, &quot;Only the freshest, always&quot;, &quot;Made the right way,&quot;, &quot;Welcome to FIRSTCLUB&quot;. A green &quot;Explore Firstclub&quot; pill button sits fixed at the bottom.
+
+## Motion spec
+Pattern: button-as-progress auto-advance, ~4s per slide.
+- Progress: a darker green fill sweeps the button left to right (linear, 3.5s); at full, the slide advances.
+- Slide change: the photo and headline slide up and out (300ms, ease-in) while the next rises in (350ms, ease-out, 40px travel); the button fill resets instantly to empty.
+- Tapping the button skips straight to the final slide (fill completes in 200ms first).
+- Final slide: &quot;Welcome to FIRSTCLUB&quot; fades in with the wordmark scaling 0.9 -&gt; 1 (spring ~340/22, 400ms); the button fills one last time and becomes tappable.
+
+## Calibration
+- The fill is inside the button bounds - it never becomes a separate bar.
+- Headline photography and text move as one block per slide.
+
+## Reduced motion
+Slides crossfade (300ms); the button shows a static fill per slide index.
+
+## Don&#x27;t miss
+- The auto-advance is readable off the button alone - no page dots carry the timing.
+- The fill resets with a snap, not a rewind.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">button-as-progress auto-advance, ~4s per slide.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/firstclub-intro-button-progress-animation">original interaction</a> by Firstclub. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: FirstClub's onboarding slideshow - the green \"Explore Firstclub\" button doubles as a progress bar, filling left to right to drive each auto-advance to the next slide.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream onboarding slides with food photography and centered serif headlines: \"Bengaluru's finest selection\", \"Say no to 200+ harmful ingredients\", \"Only the freshest, always\", \"Made the right way,\", \"Welcome to FIRSTCLUB\". A green \"Explore Firstclub\" pill button sits fixed at the bottom.\n\n## Motion spec\nPattern: button-as-progress auto-advance, ~4s per slide.\n- Progress: a darker green fill sweeps the button left to right (linear, 3.5s); at full, the slide advances.\n- Slide change: the photo and headline slide up and out (300ms, ease-in) while the next rises in (350ms, ease-out, 40px travel); the button fill resets instantly to empty.\n- Tapping the button skips straight to the final slide (fill completes in 200ms first).\n- Final slide: \"Welcome to FIRSTCLUB\" fades in with the wordmark scaling 0.9 -> 1 (spring ~340/22, 400ms); the button fills one last time and becomes tappable.\n\n## Calibration\n- The fill is inside the button bounds - it never becomes a separate bar.\n- Headline photography and text move as one block per slide.\n\n## Reduced motion\nSlides crossfade (300ms); the button shows a static fill per slide index.\n\n## Don't miss\n- The auto-advance is readable off the button alone - no page dots carry the timing.\n- The fill resets with a snap, not a rewind."</script>
+</body></html>

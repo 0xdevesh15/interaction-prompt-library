@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Shield to Card Flip Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Shield to Card Flip Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-shield-to-card-flip-animation"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-shield-to-card-flip-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-shield-to-card-flip-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s shield-to-card flip - tapping Continue on the &quot;Before you continue, there&#x27;s a few things you should know...&quot; sheet flips the blue header illustration in 3D: the shield-with-check face rotates away around the vertical axis and the recovery-phrase grid face rotates in, while the copy below swaps to &quot;Ok, but what is a &#x27;Secret Recovery Phrase?&#x27;&quot;</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67067b0e5d11d5a0fec7587a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67067b0e5d11d5a0fec7587a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-shield-to-card-flip-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s shield-to-card flip - tapping Continue on the &quot;Before you continue, there&#x27;s a few things you should know...&quot; sheet flips the blue header illustration in 3D: the shield-with-check face rotates away around the vertical axis and the recovery-phrase grid face rotates in, while the copy below swaps to &quot;Ok, but what is a &#x27;Secret Recovery Phrase?&#x27;&quot;
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Bottom sheet over a dimmed app: blue illustrated header panel (state A: shield with check badge; state B: 12-word recovery phrase grid), title + body text, Continue button.
+
+## Motion spec
+Pattern: 3D card flip on the illustration panel with copy swap.
+- Tap Continue: the blue header panel rotates around its vertical center axis (rotateY 0 -&gt; 180deg, 550ms, ease-in-out) with real perspective (panel narrows and skews through 90deg).
+- At 90deg the content swaps: the shield face is replaced by the phrase-grid face mid-flip (the classic two-sided card technique).
+- The flip settles with a tiny spring (spring ~360/26 on the last 30deg, ~150ms) - one small overshoot, no wobble.
+- Title and body crossfade to the new copy (250ms, starting ~100ms into the flip); the Continue button stays put.
+- The sheet&#x27;s height and position never change - only the header&#x27;s content rotates.
+
+## Calibration
+- The flip axis is the panel&#x27;s vertical centerline - never the screen&#x27;s.
+- Perspective is essential: at 90deg the panel is a sliver, which hides the face swap.
+
+## Reduced motion
+Header crossfades between faces (250ms); no rotation.
+
+## Don&#x27;t miss
+- The two faces share the same blue background - the flip reads as one card turning, not two panels swapping.
+- The copy swap lags the flip start - it never changes while the old face is still fully visible.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D card flip on the illustration panel with copy swap.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-shield-to-card-flip-animation">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's shield-to-card flip - tapping Continue on the \"Before you continue, there's a few things you should know...\" sheet flips the blue header illustration in 3D: the shield-with-check face rotates away around the vertical axis and the recovery-phrase grid face rotates in, while the copy below swaps to \"Ok, but what is a 'Secret Recovery Phrase?'\"\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBottom sheet over a dimmed app: blue illustrated header panel (state A: shield with check badge; state B: 12-word recovery phrase grid), title + body text, Continue button.\n\n## Motion spec\nPattern: 3D card flip on the illustration panel with copy swap.\n- Tap Continue: the blue header panel rotates around its vertical center axis (rotateY 0 -> 180deg, 550ms, ease-in-out) with real perspective (panel narrows and skews through 90deg).\n- At 90deg the content swaps: the shield face is replaced by the phrase-grid face mid-flip (the classic two-sided card technique).\n- The flip settles with a tiny spring (spring ~360/26 on the last 30deg, ~150ms) - one small overshoot, no wobble.\n- Title and body crossfade to the new copy (250ms, starting ~100ms into the flip); the Continue button stays put.\n- The sheet's height and position never change - only the header's content rotates.\n\n## Calibration\n- The flip axis is the panel's vertical centerline - never the screen's.\n- Perspective is essential: at 90deg the panel is a sliver, which hides the face swap.\n\n## Reduced motion\nHeader crossfades between faces (250ms); no rotation.\n\n## Don't miss\n- The two faces share the same blue background - the flip reads as one card turning, not two panels swapping.\n- The copy swap lags the flip start - it never changes while the old face is still fully visible."</script>
+</body></html>

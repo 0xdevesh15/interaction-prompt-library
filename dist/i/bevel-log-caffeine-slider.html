@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bevel Log Caffeine Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bevel Log Caffeine Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bevel-log-caffeine-slider"><b>Bevel</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bevel-log-caffeine-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bevel-log-caffeine-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Bevel&#x27;s caffeine logging sheet - +/- steppers drive a cup illustration whose coffee level rises and falls with springy liquid physics.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcfe61d73e2622b35407/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcfe61d73e2622b35407/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bevel-log-caffeine-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Bevel&#x27;s caffeine logging sheet - +/- steppers drive a cup illustration whose coffee level rises and falls with springy liquid physics.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A &quot;Log Caffeine&quot; sheet over a dimmed journal: a large &quot;100.0 mg&quot; value with an edit pencil, a coffee cup illustration between - and + stepper buttons, a Time row (&quot;11:14&quot;), and a black &quot;Add to journal&quot; button. Tapping Time opens a wheel picker with Done.
+
+## Motion spec
+Pattern: stepper-driven liquid fill.
+- Each -/+ tap steps the value by 10 mg (shown with one decimal) and animates the cup&#x27;s coffee level to value/max (~150mg full): the brown liquid surface moves with spring ~170/14 so it visibly overshoots and sloshes (surface tilts +-4 degrees during overshoot, settling in ~600ms).
+- The value digits roll vertically on change (old digit slides up and out, new one in from below, 180ms).
+- Steppers give tactile press feedback: scale 0.88 on touch-down, spring back (~500/25) on release; value changes fire on tap, repeat every 120ms on hold after a 350ms delay.
+- Cup empty state (~0-10mg) shows only the cup outline with a faint residue line; coffee color deepens as level rises (light caramel to dark roast).
+- Time row tap: the wheel picker slides up over the sheet (300ms, ease-out), wheels snap with detents, Done slides it away; the row&#x27;s time crossfades to the new value.
+- Add to journal: button press ripple, sheet slides down and the journal entry appears in the list behind with a highlight flash.
+
+## Calibration
+- The liquid never jumps: even a 100-to-30 jump animates through intermediate levels with one continuous spring.
+- Slosh amplitude scales with step size: a hold-driven sweep sloshes more than a single tap.
+
+## Reduced motion
+Level tweens linearly over 200ms; no slosh tilt.
+
+## Don&#x27;t miss
+- The cup is the value - the number and the liquid must never disagree at rest.
+- Liquid renders inside the cup shape with a clipped wave edge, not a straight line, while sloshing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stepper-driven liquid fill.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bevel-log-caffeine-slider">original interaction</a> by Bevel. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Bevel's caffeine logging sheet - +/- steppers drive a cup illustration whose coffee level rises and falls with springy liquid physics.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA \"Log Caffeine\" sheet over a dimmed journal: a large \"100.0 mg\" value with an edit pencil, a coffee cup illustration between - and + stepper buttons, a Time row (\"11:14\"), and a black \"Add to journal\" button. Tapping Time opens a wheel picker with Done.\n\n## Motion spec\nPattern: stepper-driven liquid fill.\n- Each -/+ tap steps the value by 10 mg (shown with one decimal) and animates the cup's coffee level to value/max (~150mg full): the brown liquid surface moves with spring ~170/14 so it visibly overshoots and sloshes (surface tilts +-4 degrees during overshoot, settling in ~600ms).\n- The value digits roll vertically on change (old digit slides up and out, new one in from below, 180ms).\n- Steppers give tactile press feedback: scale 0.88 on touch-down, spring back (~500/25) on release; value changes fire on tap, repeat every 120ms on hold after a 350ms delay.\n- Cup empty state (~0-10mg) shows only the cup outline with a faint residue line; coffee color deepens as level rises (light caramel to dark roast).\n- Time row tap: the wheel picker slides up over the sheet (300ms, ease-out), wheels snap with detents, Done slides it away; the row's time crossfades to the new value.\n- Add to journal: button press ripple, sheet slides down and the journal entry appears in the list behind with a highlight flash.\n\n## Calibration\n- The liquid never jumps: even a 100-to-30 jump animates through intermediate levels with one continuous spring.\n- Slosh amplitude scales with step size: a hold-driven sweep sloshes more than a single tap.\n\n## Reduced motion\nLevel tweens linearly over 200ms; no slosh tilt.\n\n## Don't miss\n- The cup is the value - the number and the liquid must never disagree at rest.\n- Liquid renders inside the cup shape with a clipped wave edge, not a straight line, while sloshing."</script>
+</body></html>

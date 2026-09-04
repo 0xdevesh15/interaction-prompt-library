@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Fitness Empty State Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Fitness Empty State Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-fitness-empty-state-animation"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-fitness-empty-state-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-fitness-empty-state-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Fitness+ personalization empty state - a small green running-figure icon dashes back and forth across a dark screen above a static &quot;We are personalizing your Fitness+ experience.&quot; message, looping until content loads.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/672f62aceaffeddcdf50f244/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/672f62aceaffeddcdf50f244/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-fitness-empty-state-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Fitness+ personalization empty state - a small green running-figure icon dashes back and forth across a dark screen above a static &quot;We are personalizing your Fitness+ experience.&quot; message, looping until content loads.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen with the Fitness+ segmented tabs (&quot;For You&quot;, Explore, Library, search) at top. Centered message block: &quot;We are personalizing your Fitness+ experience.&quot; with a smaller gray explainer paragraph. Bottom tab bar (Activity rings, Fitness+ highlighted green, Sharing). A small green running-person glyph is the only moving element.
+
+## Motion spec
+Pattern: looping traversal loader.
+- The runner glyph crosses the message area horizontally: enters from the left edge, runs to the right edge (~1.4s, ease-in-out), flips horizontally, and runs back (~1.4s). Loop repeats with no pause.
+- Vertical position stays fixed at the message block&#x27;s headline height; the glyph bobs slightly (translateY +/-3px at ~6Hz) to read as running strides.
+- Text, tabs, and tab bar are static; no skeleton shimmer, no spinner.
+
+## Calibration
+- The flip at each edge is instant (one frame); a rotated turn reads as sliding.
+- Constant-speed crossing with only a light ease - the charm is the simplicity.
+
+## Reduced motion
+Static runner glyph centered above the message; no traversal.
+
+## Don&#x27;t miss
+- The glyph uses the Fitness+ green and mirrors direction at each edge.
+- Nothing else on the screen animates - no pulsing text or loading spinner.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping traversal loader.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-fitness-empty-state-animation">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Fitness+ personalization empty state - a small green running-figure icon dashes back and forth across a dark screen above a static \"We are personalizing your Fitness+ experience.\" message, looping until content loads.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen with the Fitness+ segmented tabs (\"For You\", Explore, Library, search) at top. Centered message block: \"We are personalizing your Fitness+ experience.\" with a smaller gray explainer paragraph. Bottom tab bar (Activity rings, Fitness+ highlighted green, Sharing). A small green running-person glyph is the only moving element.\n\n## Motion spec\nPattern: looping traversal loader.\n- The runner glyph crosses the message area horizontally: enters from the left edge, runs to the right edge (~1.4s, ease-in-out), flips horizontally, and runs back (~1.4s). Loop repeats with no pause.\n- Vertical position stays fixed at the message block's headline height; the glyph bobs slightly (translateY +/-3px at ~6Hz) to read as running strides.\n- Text, tabs, and tab bar are static; no skeleton shimmer, no spinner.\n\n## Calibration\n- The flip at each edge is instant (one frame); a rotated turn reads as sliding.\n- Constant-speed crossing with only a light ease - the charm is the simplicity.\n\n## Reduced motion\nStatic runner glyph centered above the message; no traversal.\n\n## Don't miss\n- The glyph uses the Fitness+ green and mirrors direction at each edge.\n- Nothing else on the screen animates - no pulsing text or loading spinner."</script>
+</body></html>

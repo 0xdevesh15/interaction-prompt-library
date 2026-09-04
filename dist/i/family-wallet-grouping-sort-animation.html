@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Wallet Grouping Sort Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Wallet Grouping Sort Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-wallet-grouping-sort-animation"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-wallet-grouping-sort-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-wallet-grouping-sort-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Family&#x27;s wallet grouping sort - the light Wallets grid springs from a flat 2-column grid into grouped sections (&quot;Wallet Group 1&quot;, &quot;Wallet Group 3&quot;, &quot;Wallet Group 6&quot; headers), cards flying to their new positions, then back to flat on toggle.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868960f6410daa283ff17cd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868960f6410daa283ff17cd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-wallet-grouping-sort-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Family&#x27;s wallet grouping sort - the light Wallets grid springs from a flat 2-column grid into grouped sections (&quot;Wallet Group 1&quot;, &quot;Wallet Group 3&quot;, &quot;Wallet Group 6&quot; headers), cards flying to their new positions, then back to flat on toggle.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light Wallets screen: toggle control in the header. Flat state: 2-column grid of colored cards (Family Wallet, Benji, NFT Vault red, Base Dawg blue, orange heart, Rainy Day teal, Fren black, Luke&#x27;s Money green), &quot;Watching&quot; row (John, vitalik.eth, Luke). Grouped state: section headers with counts - &quot;Wallet Group 1&quot; (orange heart, Rainy Day, Benji, Luke&#x27;s Money), &quot;Wallet Group 3&quot; (Family Wallet, Fees), &quot;Wallet Group 6&quot; (NFT Vault, Base Dawg) - same card art in each section.
+
+## Motion spec
+Pattern: spring reorganization with shared-element cards.
+- Toggle to grouped: the header control slides (spring ~340/22, 250ms); every card lifts slightly (scale 1.02, 150ms) then travels to its section position along individual arcs (spring ~280/20, 450ms, staggered 20ms per card by distance), shadows sweeping.
+- Section headers fade in as their first card arrives (200ms, translateY 6pt -&gt; 0), counts sliding in beside the titles (150ms).
+- Cards settle with a small overshoot bounce (spring ~300/16, 200ms); the &quot;Watching&quot; row slides down to stay below the last section (spring ~300/22).
+- Toggle back: sections&#x27; headers fade out (150ms) and cards fly back to flat-grid positions (same springs, reversed stagger).
+
+## Calibration
+- Cards never scale to zero or pop - every card is a shared element with a visible path.
+- Group order and card order within groups match the data, not the old layout.
+
+## Reduced motion
+The grid crossfades between flat and grouped layouts (250ms).
+
+## Don&#x27;t miss
+- Section headers are gray small-caps with card counts.
+- Cards keep their exact colors/art through the flight.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring reorganization with shared-element cards.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-wallet-grouping-sort-animation">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Family's wallet grouping sort - the light Wallets grid springs from a flat 2-column grid into grouped sections (\"Wallet Group 1\", \"Wallet Group 3\", \"Wallet Group 6\" headers), cards flying to their new positions, then back to flat on toggle.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight Wallets screen: toggle control in the header. Flat state: 2-column grid of colored cards (Family Wallet, Benji, NFT Vault red, Base Dawg blue, orange heart, Rainy Day teal, Fren black, Luke's Money green), \"Watching\" row (John, vitalik.eth, Luke). Grouped state: section headers with counts - \"Wallet Group 1\" (orange heart, Rainy Day, Benji, Luke's Money), \"Wallet Group 3\" (Family Wallet, Fees), \"Wallet Group 6\" (NFT Vault, Base Dawg) - same card art in each section.\n\n## Motion spec\nPattern: spring reorganization with shared-element cards.\n- Toggle to grouped: the header control slides (spring ~340/22, 250ms); every card lifts slightly (scale 1.02, 150ms) then travels to its section position along individual arcs (spring ~280/20, 450ms, staggered 20ms per card by distance), shadows sweeping.\n- Section headers fade in as their first card arrives (200ms, translateY 6pt -> 0), counts sliding in beside the titles (150ms).\n- Cards settle with a small overshoot bounce (spring ~300/16, 200ms); the \"Watching\" row slides down to stay below the last section (spring ~300/22).\n- Toggle back: sections' headers fade out (150ms) and cards fly back to flat-grid positions (same springs, reversed stagger).\n\n## Calibration\n- Cards never scale to zero or pop - every card is a shared element with a visible path.\n- Group order and card order within groups match the data, not the old layout.\n\n## Reduced motion\nThe grid crossfades between flat and grouped layouts (250ms).\n\n## Don't miss\n- Section headers are gray small-caps with card counts.\n- Cards keep their exact colors/art through the flight."</script>
+</body></html>

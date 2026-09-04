@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Black Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Black Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/black-splash"><b>Black</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/black-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/black-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Black&#x27;s splash - on a pure black screen, a small rotating geometric loader deconstructs and its construction lines sweep outward to assemble the outlined &quot;BLACK&quot; wordmark in place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd0261d73e2622b35456/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd0261d73e2622b35456/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-black-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Black&#x27;s splash - on a pure black screen, a small rotating geometric loader deconstructs and its construction lines sweep outward to assemble the outlined &quot;BLACK&quot; wordmark in place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pure black screen, home indicator only. The sequence: three tiny dots at center, a single white outlined triangle, then thin construction lines (horizontal and vertical guides) sweeping through, then the wordmark &quot;BLACK&quot; in thin white outline type assembling among the guides, and finally resting centered with one horizontal rule through it.
+
+## Motion spec
+Pattern: geometric loader morphing into a wordmark.
+- Three dots fade in at center (100ms, staggered 60ms) and pulse once.
+- The dots collapse into a small outlined triangle that rotates slowly (~1 turn per 2s) for ~800ms - the loader beat.
+- The triangle fractures: thin guide lines shoot out horizontally and vertically from its edges (150ms, ease-out), and the triangle&#x27;s strokes travel along those guides to their letter positions.
+- Letter outlines of &quot;BLACK&quot; draw in along the guides (stroke draw, ~400ms, staggered 50ms per letter) as the spare guides fade out.
+- Final state: the outlined wordmark rests dead center, one horizontal line running through its middle; hold.
+
+## Calibration
+- Total sequence lands around 2 to 2.5 seconds. Longer and the splash overstays.
+- Line weight is uniform throughout - the loader and the letters must feel cut from the same stroke.
+
+## Reduced motion
+Skip the loader; fade the finished wordmark in over 300ms.
+
+## Don&#x27;t miss
+- The morph is geometric continuity: the triangle&#x27;s lines become the letters&#x27; lines. A crossfade between loader and logo loses the trick.
+- Everything is white-on-black outline; nothing is ever filled.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">geometric loader morphing into a wordmark.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/black-splash">original interaction</a> by Black. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Black's splash - on a pure black screen, a small rotating geometric loader deconstructs and its construction lines sweep outward to assemble the outlined \"BLACK\" wordmark in place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPure black screen, home indicator only. The sequence: three tiny dots at center, a single white outlined triangle, then thin construction lines (horizontal and vertical guides) sweeping through, then the wordmark \"BLACK\" in thin white outline type assembling among the guides, and finally resting centered with one horizontal rule through it.\n\n## Motion spec\nPattern: geometric loader morphing into a wordmark.\n- Three dots fade in at center (100ms, staggered 60ms) and pulse once.\n- The dots collapse into a small outlined triangle that rotates slowly (~1 turn per 2s) for ~800ms - the loader beat.\n- The triangle fractures: thin guide lines shoot out horizontally and vertically from its edges (150ms, ease-out), and the triangle's strokes travel along those guides to their letter positions.\n- Letter outlines of \"BLACK\" draw in along the guides (stroke draw, ~400ms, staggered 50ms per letter) as the spare guides fade out.\n- Final state: the outlined wordmark rests dead center, one horizontal line running through its middle; hold.\n\n## Calibration\n- Total sequence lands around 2 to 2.5 seconds. Longer and the splash overstays.\n- Line weight is uniform throughout - the loader and the letters must feel cut from the same stroke.\n\n## Reduced motion\nSkip the loader; fade the finished wordmark in over 300ms.\n\n## Don't miss\n- The morph is geometric continuity: the triangle's lines become the letters' lines. A crossfade between loader and logo loses the trick.\n- Everything is white-on-black outline; nothing is ever filled."</script>
+</body></html>

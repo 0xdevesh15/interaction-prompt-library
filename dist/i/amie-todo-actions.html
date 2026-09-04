@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amie Todo Actions - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Amie Todo Actions</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/amie-todo-actions"><b>Amie</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/amie-todo-actions">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/amie-todo-actions">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Amie&#x27;s todo creation flow - an inline quick-add bar with Schedule / recurrence / Add chips, a month-grid date picker with an All-day toggle and Cancel/Confirm, a Repeat frequency sheet, and a rotary duration dial you spin to values like 17 or 118 minutes.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56cd7b5be771faba11106/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c56cd7b5be771faba11106/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-amie-todo-actions.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Amie&#x27;s todo creation flow - an inline quick-add bar with Schedule / recurrence / Add chips, a month-grid date picker with an All-day toggle and Cancel/Confirm, a Repeat frequency sheet, and a rotary duration dial you spin to values like 17 or 118 minutes.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark task UI. Quick-add bar: text field with &quot;Schedule&quot;, recurrence, and &quot;Add&quot; chips. Date sheet: &quot;August 2024&quot; month grid, selected day circled, &quot;All day&quot; toggle, Cancel / Confirm pills. Repeat sheet: Repeat &quot;Every day&quot;, &quot;On the day (if previous is done)&quot;, &quot;Add to calendar&quot; toggle, &quot;Starts on&quot; row. Duration sheet: a semicircular rotary dial with a big number (&quot;17&quot;) and quick chips (15, 30, 45, 60, +30), Duration / Cancel / Confirm below.
+
+## Motion spec
+Pattern: stacked spring sheets with a rotary dial finale.
+- Each sub-sheet springs up from the quick-add bar (spring ~330/22), the previous layer dimming and sinking 4% - a visible stack of depth.
+- Date grid: tapping a day moves the selection circle with a slide (spring ~400/22) rather than a cut; Confirm/Cancel dip on press and drop the sheet.
+- The duration dial: dragging rotates the dial 1:1 around its center, the number rolling live and a tick haptic every 5 units; flinging spins it with momentum, easing to a stop (deceleration ~0.94/frame); quick chips snap the dial with a spring (~300/18).
+- Confirm collapses the whole stack back to the quick-add bar in one chained motion (each sheet dropping 80ms after the one above it).
+
+## Calibration
+- The dial&#x27;s number is the largest type on the sheet (~56px) - the value is the interface.
+- Every sheet carries both Cancel and Confirm - escape is always symmetric.
+
+## Reduced motion
+Sheets fade; dial sets value on release without momentum.
+
+## Don&#x27;t miss
+- The rotary dial is skeuomorphic on purpose - it should feel like spinning hardware, ticks and momentum included.
+- Sheet stacking keeps the breadcrumb of context: date sits above todo, duration above both.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stacked spring sheets with a rotary dial finale.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/amie-todo-actions">original interaction</a> by Amie. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Amie's todo creation flow - an inline quick-add bar with Schedule / recurrence / Add chips, a month-grid date picker with an All-day toggle and Cancel/Confirm, a Repeat frequency sheet, and a rotary duration dial you spin to values like 17 or 118 minutes.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark task UI. Quick-add bar: text field with \"Schedule\", recurrence, and \"Add\" chips. Date sheet: \"August 2024\" month grid, selected day circled, \"All day\" toggle, Cancel / Confirm pills. Repeat sheet: Repeat \"Every day\", \"On the day (if previous is done)\", \"Add to calendar\" toggle, \"Starts on\" row. Duration sheet: a semicircular rotary dial with a big number (\"17\") and quick chips (15, 30, 45, 60, +30), Duration / Cancel / Confirm below.\n\n## Motion spec\nPattern: stacked spring sheets with a rotary dial finale.\n- Each sub-sheet springs up from the quick-add bar (spring ~330/22), the previous layer dimming and sinking 4% - a visible stack of depth.\n- Date grid: tapping a day moves the selection circle with a slide (spring ~400/22) rather than a cut; Confirm/Cancel dip on press and drop the sheet.\n- The duration dial: dragging rotates the dial 1:1 around its center, the number rolling live and a tick haptic every 5 units; flinging spins it with momentum, easing to a stop (deceleration ~0.94/frame); quick chips snap the dial with a spring (~300/18).\n- Confirm collapses the whole stack back to the quick-add bar in one chained motion (each sheet dropping 80ms after the one above it).\n\n## Calibration\n- The dial's number is the largest type on the sheet (~56px) - the value is the interface.\n- Every sheet carries both Cancel and Confirm - escape is always symmetric.\n\n## Reduced motion\nSheets fade; dial sets value on release without momentum.\n\n## Don't miss\n- The rotary dial is skeuomorphic on purpose - it should feel like spinning hardware, ticks and momentum included.\n- Sheet stacking keeps the breadcrumb of context: date sits above todo, duration above both."</script>
+</body></html>

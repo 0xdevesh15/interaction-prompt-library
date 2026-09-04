@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mozi Onboarding Carousel Tabs Pulse Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mozi Onboarding Carousel Tabs Pulse Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mozi-onboarding-carousel-tabs-pulse-interaction"><b>Mozi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mozi-onboarding-carousel-tabs-pulse-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mozi-onboarding-carousel-tabs-pulse-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Mozi&#x27;s tab-driven onboarding - the bottom tab bar itself is the pager, and a pulsing glow on the next tab guides the user to tap it, sliding each feature sheet in horizontally.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adddc0cd4a3cfd5418a30c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adddc0cd4a3cfd5418a30c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mozi-onboarding-carousel-tabs-pulse-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Mozi&#x27;s tab-driven onboarding - the bottom tab bar itself is the pager, and a pulsing glow on the next tab guides the user to tap it, sliding each feature sheet in horizontally.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark background with a rounded white sheet per step: a feature screenshot and headline (&quot;Know who&#x27;s around, wherever you are&quot;, &quot;Tell friends where you&#x27;ll be and when&quot;, &quot;Easy access to all your people&quot;, &quot;...and keep track of the things that matter&quot;) with a Next or Done button, page dots, and the app&#x27;s bottom tab bar (Home, Plans, People, Profile icons) below.
+
+## Motion spec
+Pattern: tab-guided carousel with pulsing indicator, ~450ms per step.
+- Guidance: the next tab&#x27;s icon carries a peach glow that pulses (scale 1 -&gt; 1.15 halo, opacity 60 -&gt; 20%, 1.2s loop) until it is tapped.
+- Transition: tapping the glowing tab slides the current sheet out left and the next in from the right (350ms, ease-out); the headline crossfades with a 12px rise (250ms).
+- The active tab icon fills with the peach tint (150ms); the glow moves to the following tab.
+- Final step: Done replaces Next (crossfade 200ms) and the glow stops.
+
+## Calibration
+- The glow is a halo behind the tab icon, not a badge on it.
+- Swiping the sheet also advances and moves the glow - tab and pager stay in sync.
+
+## Reduced motion
+Sheets crossfade (300ms); the glow is a static tint.
+
+## Don&#x27;t miss
+- The bottom tab bar is real and tappable throughout onboarding - it is not a mock.
+- The pulse keeps looping until the user follows it; it never times out.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tab-guided carousel with pulsing indicator, ~450ms per step.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mozi-onboarding-carousel-tabs-pulse-interaction">original interaction</a> by Mozi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Mozi's tab-driven onboarding - the bottom tab bar itself is the pager, and a pulsing glow on the next tab guides the user to tap it, sliding each feature sheet in horizontally.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark background with a rounded white sheet per step: a feature screenshot and headline (\"Know who's around, wherever you are\", \"Tell friends where you'll be and when\", \"Easy access to all your people\", \"...and keep track of the things that matter\") with a Next or Done button, page dots, and the app's bottom tab bar (Home, Plans, People, Profile icons) below.\n\n## Motion spec\nPattern: tab-guided carousel with pulsing indicator, ~450ms per step.\n- Guidance: the next tab's icon carries a peach glow that pulses (scale 1 -> 1.15 halo, opacity 60 -> 20%, 1.2s loop) until it is tapped.\n- Transition: tapping the glowing tab slides the current sheet out left and the next in from the right (350ms, ease-out); the headline crossfades with a 12px rise (250ms).\n- The active tab icon fills with the peach tint (150ms); the glow moves to the following tab.\n- Final step: Done replaces Next (crossfade 200ms) and the glow stops.\n\n## Calibration\n- The glow is a halo behind the tab icon, not a badge on it.\n- Swiping the sheet also advances and moves the glow - tab and pager stay in sync.\n\n## Reduced motion\nSheets crossfade (300ms); the glow is a static tint.\n\n## Don't miss\n- The bottom tab bar is real and tappable throughout onboarding - it is not a mock.\n- The pulse keeps looping until the user follows it; it never times out."</script>
+</body></html>

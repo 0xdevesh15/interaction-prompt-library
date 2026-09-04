@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Julienne Swipe Cards Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Julienne Swipe Cards Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/julienne-swipe-cards-interaction"><b>Julienne</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/julienne-swipe-cards-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/julienne-swipe-cards-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Julienne&#x27;s recipe card stack - swiping a recipe card rotates and flings it off-screen while the next card scales and settles into place, with the ghost index number ticking up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682ab559283a3162ff3765b0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682ab559283a3162ff3765b0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-julienne-swipe-cards-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Julienne&#x27;s recipe card stack - swiping a recipe card rotates and flings it off-screen while the next card scales and settles into place, with the ghost index number ticking up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White recipe app &quot;Julienne&quot;: a card with a large circular dish photo (&quot;Hong Kong-inspired Mini French Toast&quot;), skill-level label, a huge ghosted index &quot;03&quot; behind, and a Save / Ask / Make action row; the next card (&quot;Sun-Dried Tomato and Ricotta Stuffed Shells&quot;, index &quot;04&quot;) waits behind. Bottom tab bar with five icons.
+
+## Motion spec
+Pattern: rotating swipe dismissal with settle-in spring.
+- Drag: the top card follows the finger 1:1 on X, rotating proportionally (dragX/width * 15deg) and lifting a soft shadow; the card beneath scales 0.94 -&gt; 1 and rises ~10pt in sync with drag distance.
+- Release past threshold (~35% width or fling velocity): the card continues off-screen with the release velocity, rotation increasing to +-20deg, fading slightly after it leaves the edge (300ms).
+- Release short of threshold: the card springs back to center (spring ~300/18, rotation -&gt; 0).
+- On dismissal: the next card completes its scale-up with a settle overshoot (spring ~280/16), and the ghost index crossfades to the new number (&quot;03&quot; -&gt; &quot;04&quot;) with a 6pt upward drift (250ms).
+- The action row and header stay fixed; only the card layer and ghost number move.
+
+## Calibration
+- Rotation pivot is the card&#x27;s bottom-center - it swings like it&#x27;s pinned at the base.
+- Two-card depth max: exactly one card visible behind the top card.
+
+## Reduced motion
+Cards slide off without rotation; the next card fades in at full scale.
+
+## Don&#x27;t miss
+- The circular dish photo stays circular through all rotation - clip to the card, not the image.
+- The ghost index is decorative and huge (~120pt, 8% opacity); it never intercepts touches.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rotating swipe dismissal with settle-in spring.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/julienne-swipe-cards-interaction">original interaction</a> by Julienne. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Julienne's recipe card stack - swiping a recipe card rotates and flings it off-screen while the next card scales and settles into place, with the ghost index number ticking up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite recipe app \"Julienne\": a card with a large circular dish photo (\"Hong Kong-inspired Mini French Toast\"), skill-level label, a huge ghosted index \"03\" behind, and a Save / Ask / Make action row; the next card (\"Sun-Dried Tomato and Ricotta Stuffed Shells\", index \"04\") waits behind. Bottom tab bar with five icons.\n\n## Motion spec\nPattern: rotating swipe dismissal with settle-in spring.\n- Drag: the top card follows the finger 1:1 on X, rotating proportionally (dragX/width * 15deg) and lifting a soft shadow; the card beneath scales 0.94 -> 1 and rises ~10pt in sync with drag distance.\n- Release past threshold (~35% width or fling velocity): the card continues off-screen with the release velocity, rotation increasing to +-20deg, fading slightly after it leaves the edge (300ms).\n- Release short of threshold: the card springs back to center (spring ~300/18, rotation -> 0).\n- On dismissal: the next card completes its scale-up with a settle overshoot (spring ~280/16), and the ghost index crossfades to the new number (\"03\" -> \"04\") with a 6pt upward drift (250ms).\n- The action row and header stay fixed; only the card layer and ghost number move.\n\n## Calibration\n- Rotation pivot is the card's bottom-center - it swings like it's pinned at the base.\n- Two-card depth max: exactly one card visible behind the top card.\n\n## Reduced motion\nCards slide off without rotation; the next card fades in at full scale.\n\n## Don't miss\n- The circular dish photo stays circular through all rotation - clip to the card, not the image.\n- The ghost index is decorative and huge (~120pt, 8% opacity); it never intercepts touches."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reddit Recap Banana Loader Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Reddit Recap Banana Loader Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/reddit-recap-banana-loader-animation"><b>Reddit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/reddit-recap-banana-loader-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/reddit-recap-banana-loader-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Reddit Recap&#x27;s loading screen - a voxel-style pixel-art banana spins continuously on a flat bright green background, its 3D blocks catching the light as it rotates.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6767ff93a080a6ad1602a425/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6767ff93a080a6ad1602a425/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-reddit-recap-banana-loader-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Reddit Recap&#x27;s loading screen - a voxel-style pixel-art banana spins continuously on a flat bright green background, its 3D blocks catching the light as it rotates.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A full-bleed bright green screen (Recap&#x27;s brand green) with a close X at top left. Dead center: a banana built from chunky yellow-orange voxels, rotating on its vertical axis. The blocks read as pixel art in 3D - stepped edges, flat faces, slight shading shifts per face as it turns. At the end of loading, the banana shrinks and drops into the Reddit Recap title card.
+
+## Motion spec
+Pattern: continuous voxel spin, looping.
+- The banana rotates around its vertical axis at a constant rate (one full turn per 1.6s, linear).
+- Per-voxel shading shifts with the rotation (flat-lit faces: lit face warm yellow, shadow face orange-brown), selling the 3D form without smooth gradients.
+- A subtle scale pulse rides the loop (1.0 to 1.04, 1.6s period, in phase with the spin).
+- On load completion, the banana scales down and slides down-left (400ms, ease-in) as the &quot;Reddit Recap&quot; title card rises in (spring stiffness 300 damping 24).
+
+## Calibration
+- Rotation is perfectly constant - no easing in the loop; the charm is the chunky pixel silhouette cycling.
+- The background is dead flat: no vignette, no texture.
+
+## Reduced motion
+The banana holds a static three-quarter pose.
+
+## Don&#x27;t miss
+- The banana is voxels, not smooth 3D - stepped silhouette at every angle.
+- The spin axis is vertical through the banana&#x27;s middle, not a tumble.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous voxel spin, looping.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/reddit-recap-banana-loader-animation">original interaction</a> by Reddit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Reddit Recap's loading screen - a voxel-style pixel-art banana spins continuously on a flat bright green background, its 3D blocks catching the light as it rotates.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA full-bleed bright green screen (Recap's brand green) with a close X at top left. Dead center: a banana built from chunky yellow-orange voxels, rotating on its vertical axis. The blocks read as pixel art in 3D - stepped edges, flat faces, slight shading shifts per face as it turns. At the end of loading, the banana shrinks and drops into the Reddit Recap title card.\n\n## Motion spec\nPattern: continuous voxel spin, looping.\n- The banana rotates around its vertical axis at a constant rate (one full turn per 1.6s, linear).\n- Per-voxel shading shifts with the rotation (flat-lit faces: lit face warm yellow, shadow face orange-brown), selling the 3D form without smooth gradients.\n- A subtle scale pulse rides the loop (1.0 to 1.04, 1.6s period, in phase with the spin).\n- On load completion, the banana scales down and slides down-left (400ms, ease-in) as the \"Reddit Recap\" title card rises in (spring stiffness 300 damping 24).\n\n## Calibration\n- Rotation is perfectly constant - no easing in the loop; the charm is the chunky pixel silhouette cycling.\n- The background is dead flat: no vignette, no texture.\n\n## Reduced motion\nThe banana holds a static three-quarter pose.\n\n## Don't miss\n- The banana is voxels, not smooth 3D - stepped silhouette at every angle.\n- The spin axis is vertical through the banana's middle, not a tumble."</script>
+</body></html>

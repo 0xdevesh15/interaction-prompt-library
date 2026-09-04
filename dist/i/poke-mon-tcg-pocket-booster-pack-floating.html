@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pokémon TCG Pocket Booster Pack Floating - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Pokémon TCG Pocket Booster Pack Floating</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/poke-mon-tcg-pocket-booster-pack-floating"><b>Poke</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/poke-mon-tcg-pocket-booster-pack-floating">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/poke-mon-tcg-pocket-booster-pack-floating">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Pokemon TCG Pocket&#x27;s pack select - under the &quot;Please choose the booster pack you want.&quot; bubble, three 3D booster packs (Charizard, Mewtwo center front, Pikachu) bob gently on offset phases over the pastel gradient stage, each casting a soft reflection.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6755274c63a8472654541408/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6755274c63a8472654541408/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-poke-mon-tcg-pocket-booster-pack-floating.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Pokemon TCG Pocket&#x27;s pack select - under the &quot;Please choose the booster pack you want.&quot; bubble, three 3D booster packs (Charizard, Mewtwo center front, Pikachu) bob gently on offset phases over the pastel gradient stage, each casting a soft reflection.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A soft pastel gradient (pink to blue) screen: a white speech-bubble pill at top reading &quot;Please choose the booster pack you want.&quot; and three upright booster packs in a loose row - orange Charizard pack left, purple Genetic Apex Mewtwo pack centered and forward, yellow Pikachu pack right - with glossy floor reflections.
+
+## Motion spec
+Pattern: idle floating trio.
+- Each pack bobs vertically on its own phase (translateY +/-6px, ~2.2-3s loops, staggered by ~500ms) with a tiny counter-rotation (rotateZ +/-1.5deg) - a gentle hover, not bouncing.
+- The center pack sits slightly larger and lower (closer to camera); side packs drift at 80% amplitude - the depth difference stays visible.
+- Reflections on the glossy floor track each bob inversely (reflection translateY mirrors the pack&#x27;s motion).
+- Tap a pack: it dips and lifts (translateY +6 -&gt; -10px, 250ms, spring) as a selection acknowledgment before the flow continues.
+
+## Calibration
+- The three bob loops never sync up - offset phases keep the scene alive.
+- Motion amplitude stays small - product display, not a toy.
+
+## Reduced motion
+Packs static; only the selection dip remains.
+
+## Don&#x27;t miss
+- The speech-bubble pill has a small tail and sits above the packs like a shopkeeper&#x27;s prompt.
+- The center pack&#x27;s wrapper catches a soft light sweep every ~4s (holo band, 600ms) - the hero pack draws the eye.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">idle floating trio.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/poke-mon-tcg-pocket-booster-pack-floating">original interaction</a> by Poke. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Pokemon TCG Pocket's pack select - under the \"Please choose the booster pack you want.\" bubble, three 3D booster packs (Charizard, Mewtwo center front, Pikachu) bob gently on offset phases over the pastel gradient stage, each casting a soft reflection.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA soft pastel gradient (pink to blue) screen: a white speech-bubble pill at top reading \"Please choose the booster pack you want.\" and three upright booster packs in a loose row - orange Charizard pack left, purple Genetic Apex Mewtwo pack centered and forward, yellow Pikachu pack right - with glossy floor reflections.\n\n## Motion spec\nPattern: idle floating trio.\n- Each pack bobs vertically on its own phase (translateY +/-6px, ~2.2-3s loops, staggered by ~500ms) with a tiny counter-rotation (rotateZ +/-1.5deg) - a gentle hover, not bouncing.\n- The center pack sits slightly larger and lower (closer to camera); side packs drift at 80% amplitude - the depth difference stays visible.\n- Reflections on the glossy floor track each bob inversely (reflection translateY mirrors the pack's motion).\n- Tap a pack: it dips and lifts (translateY +6 -> -10px, 250ms, spring) as a selection acknowledgment before the flow continues.\n\n## Calibration\n- The three bob loops never sync up - offset phases keep the scene alive.\n- Motion amplitude stays small - product display, not a toy.\n\n## Reduced motion\nPacks static; only the selection dip remains.\n\n## Don't miss\n- The speech-bubble pill has a small tail and sits above the packs like a shopkeeper's prompt.\n- The center pack's wrapper catches a soft light sweep every ~4s (holo band, 600ms) - the hero pack draws the eye."</script>
+</body></html>

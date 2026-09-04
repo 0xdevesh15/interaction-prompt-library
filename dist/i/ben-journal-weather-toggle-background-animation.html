@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ben Journal Weather Toggle Background Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Ben Journal Weather Toggle Background Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ben-journal-weather-toggle-background-animation"><b>Ben</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ben-journal-weather-toggle-background-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ben-journal-weather-toggle-background-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Ben Journal&#x27;s weather toggle - tapping weather icons in the bottom sheet morphs the entire screen into a live weather scene, from sunset clouds to storm to falling snow.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343a35491e9c48bfb15b51/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69343a35491e9c48bfb15b51/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ben-journal-weather-toggle-background-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Ben Journal&#x27;s weather toggle - tapping weather icons in the bottom sheet morphs the entire screen into a live weather scene, from sunset clouds to storm to falling snow.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Ben Journal, full-bleed animated weather scene behind everything (sunset gradient with clouds, dark storm front, or night snow). Bottom sheet: &quot;Weather&quot; title, &quot;Dynamic weather backgrounds set the perfect writing atmosphere&quot;, a Done button, a row of circular weather icons (stars, rain, cloud, sun, moon, lightning), and three background thumbnails.
+
+## Motion spec
+Pattern: full-screen weather scene transition driven by an icon toggle.
+- Tap a weather icon: the tapped icon fills with its active treatment (scale 1 -&gt; 1.15 with spring ~400/15, fill wipes in 200ms) while the previous icon deflates.
+- The sky transitions over 1.2s: the current scene&#x27;s clouds drift off with increasing speed (accelerating translate) as the new scene&#x27;s clouds roll in from the opposite edge; the base gradient crossfades between palettes (sunset mauve -&gt; storm slate -&gt; night navy).
+- Particles fade in per scene: rain streaks or snow specks spawn over 600ms after the clouds arrive, falling at constant velocity with slight horizontal drift; they fade out over 400ms when switching away.
+- The tapped scene&#x27;s thumbnail in the sheet gets a white selection ring (200ms).
+- The sheet itself never moves - only the sky and the icon states change.
+
+## Calibration
+- Scene swaps always complete: a tap mid-transition retargets the running transition to the new scene, never restarts from zero.
+- Keep exactly one particle system alive at a time.
+
+## Reduced motion
+Sky crossfades (600ms) with static clouds and no particles.
+
+## Don&#x27;t miss
+- Clouds have parallax: two layers moving at different speeds, the far layer at 60% speed and 70% opacity.
+- The status bar time stays legible - the sky dims behind it if needed.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-screen weather scene transition driven by an icon toggle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ben-journal-weather-toggle-background-animation">original interaction</a> by Ben. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Ben Journal's weather toggle - tapping weather icons in the bottom sheet morphs the entire screen into a live weather scene, from sunset clouds to storm to falling snow.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBen Journal, full-bleed animated weather scene behind everything (sunset gradient with clouds, dark storm front, or night snow). Bottom sheet: \"Weather\" title, \"Dynamic weather backgrounds set the perfect writing atmosphere\", a Done button, a row of circular weather icons (stars, rain, cloud, sun, moon, lightning), and three background thumbnails.\n\n## Motion spec\nPattern: full-screen weather scene transition driven by an icon toggle.\n- Tap a weather icon: the tapped icon fills with its active treatment (scale 1 -> 1.15 with spring ~400/15, fill wipes in 200ms) while the previous icon deflates.\n- The sky transitions over 1.2s: the current scene's clouds drift off with increasing speed (accelerating translate) as the new scene's clouds roll in from the opposite edge; the base gradient crossfades between palettes (sunset mauve -> storm slate -> night navy).\n- Particles fade in per scene: rain streaks or snow specks spawn over 600ms after the clouds arrive, falling at constant velocity with slight horizontal drift; they fade out over 400ms when switching away.\n- The tapped scene's thumbnail in the sheet gets a white selection ring (200ms).\n- The sheet itself never moves - only the sky and the icon states change.\n\n## Calibration\n- Scene swaps always complete: a tap mid-transition retargets the running transition to the new scene, never restarts from zero.\n- Keep exactly one particle system alive at a time.\n\n## Reduced motion\nSky crossfades (600ms) with static clouds and no particles.\n\n## Don't miss\n- Clouds have parallax: two layers moving at different speeds, the far layer at 60% speed and 70% opacity.\n- The status bar time stays legible - the sky dims behind it if needed."</script>
+</body></html>

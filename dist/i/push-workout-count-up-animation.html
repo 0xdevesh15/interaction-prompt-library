@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Push Workout Count Up Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Push Workout Count Up Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/push-workout-count-up-animation"><b>Push</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/push-workout-count-up-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/push-workout-count-up-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Push&#x27;s rep counter - a giant centered number counts up (45 -&gt; 50) with a vertical rolling-drum motion: the new value rises in from below while the old one sinks and ghosts into a fading trail, over a minimal session bar and a &quot;tracking is paused&quot; notice.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2cdeaf18be3eb6e1fa064/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e2cdeaf18be3eb6e1fa064/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-push-workout-count-up-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Push&#x27;s rep counter - a giant centered number counts up (45 -&gt; 50) with a vertical rolling-drum motion: the new value rises in from below while the old one sinks and ghosts into a fading trail, over a minimal session bar and a &quot;tracking is paused&quot; notice.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: &quot;SET 1&quot; eyebrow, the huge rep number center, a bottom bar (moon icon, TOTAL count, running session timer, pause glyph, red X end button), and a top toast (&quot;tracking is paused - looking for your face: under low light, consider switching to light mode&quot;).
+
+## Motion spec
+Pattern: rolling-drum count-up with ghost trail.
+- Each rep: the current number drops ~60px while fading to a blurred ghost (200ms) and the new number rises from below into place (spring ~380/22, ~350ms) - overlap makes a vertical roll.
+- The ghost lingers faintly under the new number (~15% opacity, blurred) and fades fully over ~800ms - at speed, a soft trail of past digits is visible.
+- TOTAL and the session timer in the bottom bar tick with their own small roll (100ms) - no bounce, just digit swap.
+- The toast slides down from the top when tracking pauses (spring ~300/24, ~350ms) and retracts the same way when it resumes.
+- The red X pulses once (scale 1 -&gt; 1.1 -&gt; 1) when a set milestone (e.g. 50) lands.
+
+## Calibration
+- The number is huge and center-anchored; the roll happens along one vertical axis with no horizontal drift.
+- Blur on the ghost is essential - sharp ghosts read as overlapping text, not a trail.
+
+## Reduced motion
+Numbers crossfade; no ghosts or rolls.
+
+## Don&#x27;t miss
+- The session timer keeps running during every count animation - chrome is independent.
+- The toast is informational only; it never blocks the counter area.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">rolling-drum count-up with ghost trail.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/push-workout-count-up-animation">original interaction</a> by Push. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Push's rep counter - a giant centered number counts up (45 -> 50) with a vertical rolling-drum motion: the new value rises in from below while the old one sinks and ghosts into a fading trail, over a minimal session bar and a \"tracking is paused\" notice.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: \"SET 1\" eyebrow, the huge rep number center, a bottom bar (moon icon, TOTAL count, running session timer, pause glyph, red X end button), and a top toast (\"tracking is paused - looking for your face: under low light, consider switching to light mode\").\n\n## Motion spec\nPattern: rolling-drum count-up with ghost trail.\n- Each rep: the current number drops ~60px while fading to a blurred ghost (200ms) and the new number rises from below into place (spring ~380/22, ~350ms) - overlap makes a vertical roll.\n- The ghost lingers faintly under the new number (~15% opacity, blurred) and fades fully over ~800ms - at speed, a soft trail of past digits is visible.\n- TOTAL and the session timer in the bottom bar tick with their own small roll (100ms) - no bounce, just digit swap.\n- The toast slides down from the top when tracking pauses (spring ~300/24, ~350ms) and retracts the same way when it resumes.\n- The red X pulses once (scale 1 -> 1.1 -> 1) when a set milestone (e.g. 50) lands.\n\n## Calibration\n- The number is huge and center-anchored; the roll happens along one vertical axis with no horizontal drift.\n- Blur on the ghost is essential - sharp ghosts read as overlapping text, not a trail.\n\n## Reduced motion\nNumbers crossfade; no ghosts or rolls.\n\n## Don't miss\n- The session timer keeps running during every count animation - chrome is independent.\n- The toast is informational only; it never blocks the counter area."</script>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waterllama Goal Streak - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Waterllama Goal Streak</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/waterllama-goal-streak"><b>Waterllama</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waterllama-goal-streak">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waterllama-goal-streak">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Waterllama&#x27;s streak badge flip - tap the circular streak badge and it card-flips with a spring to reveal your average hydration percentage on its back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7ade9490d9b41ee5700e4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7ade9490d9b41ee5700e4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-waterllama-goal-streak.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Waterllama&#x27;s streak badge flip - tap the circular streak badge and it card-flips with a spring to reveal your average hydration percentage on its back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A stats screen: a large teal circle badge (&quot;1 / DAY STREAK&quot;) above a segmented control (&quot;Day&quot;), a &quot;Last 7 days&quot; bar chart with a single tall teal bar, and an August calendar grid with one filled day dot.
+
+## Motion spec
+Pattern: springy 3D card-flip badge.
+- Tap the badge: it flips around its vertical axis (rotateY 0 to 180deg, spring ~320/18, 500ms total with a slight overshoot past 180 that settles back) with a light haptic at tap.
+- At the 90deg edge-on moment the face swaps: front (&quot;1 DAY STREAK&quot; with the teal disc) hands off to back (&quot;103% AVERAGE COMPLETION&quot; on the same teal disc, mirrored content corrected).
+- The flip carries a soft moving highlight across the disc (gradient sweep synced to rotateY) so the surface reads glossy, not flat.
+- While flipping, the badge&#x27;s drop shadow swings to match the rotation direction (shadow offset tweens with the angle).
+- Tap again (or 4s idle): flips back along the same spring.
+- The surrounding stats (bar chart, calendar) stay rock still - the badge is the only toy on the screen.
+
+## Calibration
+- Both faces use identical layout so the swap at 90deg is invisible; only the numbers differ.
+- Perspective must be subtle (m34 ~ -1/800); too deep a perspective makes the disc look warped.
+
+## Reduced motion
+Faces crossfade; no rotation.
+
+## Don&#x27;t miss
+- The badge content is centered two-line type both ways (big number over small caps label).
+- The flip is on tap, not on entering the screen - it&#x27;s a discovery, not an entrance.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy 3D card-flip badge.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/waterllama-goal-streak">original interaction</a> by Waterllama. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Waterllama's streak badge flip - tap the circular streak badge and it card-flips with a spring to reveal your average hydration percentage on its back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA stats screen: a large teal circle badge (\"1 / DAY STREAK\") above a segmented control (\"Day\"), a \"Last 7 days\" bar chart with a single tall teal bar, and an August calendar grid with one filled day dot.\n\n## Motion spec\nPattern: springy 3D card-flip badge.\n- Tap the badge: it flips around its vertical axis (rotateY 0 to 180deg, spring ~320/18, 500ms total with a slight overshoot past 180 that settles back) with a light haptic at tap.\n- At the 90deg edge-on moment the face swaps: front (\"1 DAY STREAK\" with the teal disc) hands off to back (\"103% AVERAGE COMPLETION\" on the same teal disc, mirrored content corrected).\n- The flip carries a soft moving highlight across the disc (gradient sweep synced to rotateY) so the surface reads glossy, not flat.\n- While flipping, the badge's drop shadow swings to match the rotation direction (shadow offset tweens with the angle).\n- Tap again (or 4s idle): flips back along the same spring.\n- The surrounding stats (bar chart, calendar) stay rock still - the badge is the only toy on the screen.\n\n## Calibration\n- Both faces use identical layout so the swap at 90deg is invisible; only the numbers differ.\n- Perspective must be subtle (m34 ~ -1/800); too deep a perspective makes the disc look warped.\n\n## Reduced motion\nFaces crossfade; no rotation.\n\n## Don't miss\n- The badge content is centered two-line type both ways (big number over small caps label).\n- The flip is on tap, not on entering the screen - it's a discovery, not an entrance."</script>
+</body></html>

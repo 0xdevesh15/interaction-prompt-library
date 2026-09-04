@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neuecast Snap Scroll Convert to Mini Player Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Neuecast Snap Scroll Convert to Mini Player Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/neuecast-snap-scroll-convert-to-mini-player-interaction"><b>Neuecast</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/neuecast-snap-scroll-convert-to-mini-player-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/neuecast-snap-scroll-convert-to-mini-player-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Neuecast&#x27;s collapsing player - scrolling the episode notes snaps the full-screen player into a sticky mini-player pinned to the top (artwork thumb, title, live progress), and scrolling back re-expands it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd4c720203cbdd98fa/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67dc00dd4c720203cbdd98fa/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-neuecast-snap-scroll-convert-to-mini-player-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Neuecast&#x27;s collapsing player - scrolling the episode notes snaps the full-screen player into a sticky mini-player pinned to the top (artwork thumb, title, live progress), and scrolling back re-expands it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark podcast player: &quot;Today, Explained&quot; over the episode title &quot;The messiest Oscars category&quot;, a progress bar with times, transport controls (skip back, pause, skip forward), and &quot;Episode Notes&quot; filling the scroll area below. Scrolled state: a slim mini-player bar at the very top (yellow artwork thumb, episode title, thin progress line, skip controls) with notes scrolling beneath.
+
+## Motion spec
+Pattern: scroll-driven player collapse with a snap.
+- Scrolling notes up: the hero region (show title, episode title, big progress bar, transports) collapses continuously with scroll - titles fade and slide up first (0-60pt of scroll), controls shrink and fade next (60-140pt).
+- Past the snap threshold (~140pt scroll or a downward flick): the player completes the collapse with a spring (spring ~320/22) into the mini-player bar: artwork thumb pops in at left (scale 0.6 -&gt; 1, spring ~340/16), title slides in from the left (200ms), the thin progress line draws under them.
+- The mini-player&#x27;s progress line advances in real time with playback.
+- Scrolling back to the top reverses: the mini-bar stretches, titles and controls fade/scale back in (same thresholds, spring ~320/22) - fully reversible, interruptible mid-motion.
+- The notes content scrolls under the mini-player; the bar has a blur background once content passes beneath it.
+
+## Calibration
+- The snap is the soul: near the threshold, release decides expanded vs collapsed - no in-between resting state.
+- Pause state must be identical in both forms (icon swap synced).
+
+## Reduced motion
+Collapse crossfades at the threshold (250ms); no continuous shrink.
+
+## Don&#x27;t miss
+- The yellow artwork thumb is the through-line: it exists in both states and anchors the morph.
+- Progress never jumps: the big bar and the mini line show identical playback position through the transition.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-driven player collapse with a snap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/neuecast-snap-scroll-convert-to-mini-player-interaction">original interaction</a> by Neuecast. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Neuecast's collapsing player - scrolling the episode notes snaps the full-screen player into a sticky mini-player pinned to the top (artwork thumb, title, live progress), and scrolling back re-expands it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark podcast player: \"Today, Explained\" over the episode title \"The messiest Oscars category\", a progress bar with times, transport controls (skip back, pause, skip forward), and \"Episode Notes\" filling the scroll area below. Scrolled state: a slim mini-player bar at the very top (yellow artwork thumb, episode title, thin progress line, skip controls) with notes scrolling beneath.\n\n## Motion spec\nPattern: scroll-driven player collapse with a snap.\n- Scrolling notes up: the hero region (show title, episode title, big progress bar, transports) collapses continuously with scroll - titles fade and slide up first (0-60pt of scroll), controls shrink and fade next (60-140pt).\n- Past the snap threshold (~140pt scroll or a downward flick): the player completes the collapse with a spring (spring ~320/22) into the mini-player bar: artwork thumb pops in at left (scale 0.6 -> 1, spring ~340/16), title slides in from the left (200ms), the thin progress line draws under them.\n- The mini-player's progress line advances in real time with playback.\n- Scrolling back to the top reverses: the mini-bar stretches, titles and controls fade/scale back in (same thresholds, spring ~320/22) - fully reversible, interruptible mid-motion.\n- The notes content scrolls under the mini-player; the bar has a blur background once content passes beneath it.\n\n## Calibration\n- The snap is the soul: near the threshold, release decides expanded vs collapsed - no in-between resting state.\n- Pause state must be identical in both forms (icon swap synced).\n\n## Reduced motion\nCollapse crossfades at the threshold (250ms); no continuous shrink.\n\n## Don't miss\n- The yellow artwork thumb is the through-line: it exists in both states and anchors the morph.\n- Progress never jumps: the big bar and the mini line show identical playback position through the transition."</script>
+</body></html>

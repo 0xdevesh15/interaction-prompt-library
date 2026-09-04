@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brilliant Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Brilliant Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/brilliant-onboarding"><b>Brilliant</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/brilliant-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Brilliant&#x27;s onboarding quiz - a step-by-step personalization flow with sliding question cards, a filling green progress bar, and mascot interstitials.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb44cee4a1d9df6452b83/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb44cee4a1d9df6452b83/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-brilliant-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Brilliant&#x27;s onboarding quiz - a step-by-step personalization flow with sliding question cards, a filling green progress bar, and mascot interstitials.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A multi-step questionnaire: &quot;Which describes you best?&quot; (Student, Professional, Parent, Lifelong Learner, Teacher, Other), &quot;Which are you most interested in?&quot;, a &quot;You&#x27;re in the right place&quot; interstitial with floating sticker cards, a daily-goal picker (Casual 5 min/day to Intense 20 min/day), a notification-permission ask with the green mascot, a &quot;Learn 6x more effectively&quot; stat page, and a closing &quot;You&#x27;re on your way!&quot; quote.
+
+## Motion spec
+Pattern: stepped questionnaire with slide transitions.
+- Screens slide horizontally (1:1 swipe-able, snap spring ~340/26); forward motion enters from the right, back from the left.
+- The top progress bar fills green toward the right with each answered step (300ms ease-out per increment); it never regresses on back-navigation, only pauses.
+- Option rows stagger in on each question screen (translateY 14px to 0, 200ms, 50ms apart). Tapping a row selects it: a soft gray fill sweeps left to right (150ms) and the whole card auto-advances after 250ms.
+- Interstitial pages: sticker illustration cards float in on individual lazy arcs (translate from off-screen with rotation +-8 degrees settling to 0, spring ~300/20, 100ms stagger) and idle with a slow bob (+-4px, 2s sine, phase-offset per card).
+- The mascot pages pop the character with a squash-and-stretch (scaleY 0.8 to 1.05 to 1, 400ms) before the headline fades up.
+- Notification ask: the system-style dialog slides down from the top (spring ~360/24) over the dimmed mascot page.
+
+## Calibration
+- Auto-advance after selection is fast (250ms) but cancelable: a second tap elsewhere before the slide starts aborts it.
+- Interstitials break the question rhythm - no progress increment on those screens.
+
+## Reduced motion
+Screens crossfade; cards and mascot set without stagger or bob.
+
+## Don&#x27;t miss
+- The progress bar is thin, top-anchored, and Brilliant green; everything else is grayscale plus the mascot&#x27;s green.
+- &quot;You&#x27;re in the right place&quot; shows floating mini-cards of course content, not a single hero image.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stepped questionnaire with slide transitions.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/brilliant-onboarding">original interaction</a> by Brilliant. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Brilliant's onboarding quiz - a step-by-step personalization flow with sliding question cards, a filling green progress bar, and mascot interstitials.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA multi-step questionnaire: \"Which describes you best?\" (Student, Professional, Parent, Lifelong Learner, Teacher, Other), \"Which are you most interested in?\", a \"You're in the right place\" interstitial with floating sticker cards, a daily-goal picker (Casual 5 min/day to Intense 20 min/day), a notification-permission ask with the green mascot, a \"Learn 6x more effectively\" stat page, and a closing \"You're on your way!\" quote.\n\n## Motion spec\nPattern: stepped questionnaire with slide transitions.\n- Screens slide horizontally (1:1 swipe-able, snap spring ~340/26); forward motion enters from the right, back from the left.\n- The top progress bar fills green toward the right with each answered step (300ms ease-out per increment); it never regresses on back-navigation, only pauses.\n- Option rows stagger in on each question screen (translateY 14px to 0, 200ms, 50ms apart). Tapping a row selects it: a soft gray fill sweeps left to right (150ms) and the whole card auto-advances after 250ms.\n- Interstitial pages: sticker illustration cards float in on individual lazy arcs (translate from off-screen with rotation +-8 degrees settling to 0, spring ~300/20, 100ms stagger) and idle with a slow bob (+-4px, 2s sine, phase-offset per card).\n- The mascot pages pop the character with a squash-and-stretch (scaleY 0.8 to 1.05 to 1, 400ms) before the headline fades up.\n- Notification ask: the system-style dialog slides down from the top (spring ~360/24) over the dimmed mascot page.\n\n## Calibration\n- Auto-advance after selection is fast (250ms) but cancelable: a second tap elsewhere before the slide starts aborts it.\n- Interstitials break the question rhythm - no progress increment on those screens.\n\n## Reduced motion\nScreens crossfade; cards and mascot set without stagger or bob.\n\n## Don't miss\n- The progress bar is thin, top-anchored, and Brilliant green; everything else is grayscale plus the mascot's green.\n- \"You're in the right place\" shows floating mini-cards of course content, not a single hero image."</script>
+</body></html>

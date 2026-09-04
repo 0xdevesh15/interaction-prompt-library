@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-slider"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airbnb&#x27;s trip-length circular slider - a magenta arc that grows around a ring as you drag, with the month count snapping in the center.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc225b7b88f78c7547/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc225b7b88f78c7547/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airbnb&#x27;s trip-length circular slider - a magenta arc that grows around a ring as you drag, with the month count snapping in the center.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White &quot;When&#x27;s your trip?&quot; screen (Dates / Months / Flexible tabs, Months active). Center: a large circular slider - light gray track ring, a white knob, and a magenta progress arc that thickens as it grows. Inside the ring: a big numeral with &quot;month(s)&quot; beneath. Below the ring: the computed date range. Reset and Next buttons at the bottom.
+
+## Motion spec
+Pattern: radial drag arc with stepping readout.
+- Drag the knob along the ring (1:1 angular tracking): the magenta arc sweeps behind it from the 12 o&#x27;clock origin, thickening slightly and deepening in saturation as the value grows (thin pale pink at 1 month, thick vivid magenta at 11+).
+- The center numeral snaps to the new month the instant the knob crosses a step threshold (30 degrees per month): digits flip with a quick vertical roll (150ms, ease-out); &quot;month&quot; / &quot;months&quot; pluralization swaps with a 100ms crossfade.
+- The date range line below retypes on each step (old value slides down and fades, new slides up, 180ms).
+- Release: the knob springs to the exact step angle (~380/24), the arc easing into place behind it.
+- The knob has a soft shadow and a subtle scale-up (1.15x) while touched.
+
+## Calibration
+- Angular snapping is absolute - the knob can never rest between month steps.
+- Arc thickness/saturation interpolation is continuous even though the value is discrete.
+
+## Reduced motion
+Numeral crossfades; arc draws without thickness animation.
+
+## Don&#x27;t miss
+- The arc always starts at 12 o&#x27;clock and grows clockwise only.
+- The magenta is Airbnb&#x27;s Rausch pink; the track stays a whisper-light gray.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">radial drag arc with stepping readout.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-slider">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airbnb's trip-length circular slider - a magenta arc that grows around a ring as you drag, with the month count snapping in the center.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite \"When's your trip?\" screen (Dates / Months / Flexible tabs, Months active). Center: a large circular slider - light gray track ring, a white knob, and a magenta progress arc that thickens as it grows. Inside the ring: a big numeral with \"month(s)\" beneath. Below the ring: the computed date range. Reset and Next buttons at the bottom.\n\n## Motion spec\nPattern: radial drag arc with stepping readout.\n- Drag the knob along the ring (1:1 angular tracking): the magenta arc sweeps behind it from the 12 o'clock origin, thickening slightly and deepening in saturation as the value grows (thin pale pink at 1 month, thick vivid magenta at 11+).\n- The center numeral snaps to the new month the instant the knob crosses a step threshold (30 degrees per month): digits flip with a quick vertical roll (150ms, ease-out); \"month\" / \"months\" pluralization swaps with a 100ms crossfade.\n- The date range line below retypes on each step (old value slides down and fades, new slides up, 180ms).\n- Release: the knob springs to the exact step angle (~380/24), the arc easing into place behind it.\n- The knob has a soft shadow and a subtle scale-up (1.15x) while touched.\n\n## Calibration\n- Angular snapping is absolute - the knob can never rest between month steps.\n- Arc thickness/saturation interpolation is continuous even though the value is discrete.\n\n## Reduced motion\nNumeral crossfades; arc draws without thickness animation.\n\n## Don't miss\n- The arc always starts at 12 o'clock and grows clockwise only.\n- The magenta is Airbnb's Rausch pink; the track stays a whisper-light gray."</script>
+</body></html>

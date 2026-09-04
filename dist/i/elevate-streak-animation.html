@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elevate Streak Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Elevate Streak Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/elevate-streak-animation"><b>Elevate</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-streak-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/elevate-streak-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Elevate&#x27;s streak reveal - a teal full-screen flash gives way to a white sheet where a hexagon check badge (&quot;Nice Job!&quot;) hands off to a counting streak numeral that ignites into an orange flame illustration (&quot;1 Day Streak&quot;).</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db3392ed3abd3165923e91/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db3392ed3abd3165923e91/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-elevate-streak-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Elevate&#x27;s streak reveal - a teal full-screen flash gives way to a white sheet where a hexagon check badge (&quot;Nice Job!&quot;) hands off to a counting streak numeral that ignites into an orange flame illustration (&quot;1 Day Streak&quot;).
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Sequence on white: teal hexagon badge with white check and &quot;Nice Job!&quot;; then a large outlined &quot;0&quot; with &quot;Day Streak&quot; beneath and a small flame icon below; the numeral becomes 1 and an orange-red flame illustration grows behind it; closing line &quot;Today is the first day of your new streak. See you tomorrow!&quot; and a teal Continue bar.
+
+## Motion spec
+Pattern: badge-to-flame celebration handoff.
+- The teal flash wipes away like a receding wave (bottom-up, 450ms) revealing white.
+- The hex badge pops in (scale 0 -&gt; 1, spring ~400/18) with &quot;Nice Job!&quot; fading up; it holds ~900ms, then shrinks and drops (scale -&gt; 0.8, falls 40px, fades, 300ms).
+- The &quot;0&quot; draws in as an outline (stroke trim, 300ms); the digit rolls 0 -&gt; 1 (200ms) and the flame illustration builds behind it - base flame first, inner flame and sparks staggering in (60ms apart, scale springs ~420/20).
+- The flame flickers alive (scale 1 &lt;-&gt; 1.03 with slight skew, ~800ms loop); the closing line fades up; the Continue bar slides up and lights teal.
+
+## Calibration
+- Exactly one digit handoff: 0 -&gt; 1 - the count-up is a single satisfying tick.
+- Flame is illustration, not emoji - layered orange/red shapes with two spark dots.
+
+## Reduced motion
+Simple crossfades between badge, numeral, and flame states.
+
+## Don&#x27;t miss
+- The teal wave recedes downward, like a curtain dropping away.
+- &quot;Day Streak&quot; stays constant while the numeral and flame change around it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">badge-to-flame celebration handoff.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/elevate-streak-animation">original interaction</a> by Elevate. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Elevate's streak reveal - a teal full-screen flash gives way to a white sheet where a hexagon check badge (\"Nice Job!\") hands off to a counting streak numeral that ignites into an orange flame illustration (\"1 Day Streak\").\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSequence on white: teal hexagon badge with white check and \"Nice Job!\"; then a large outlined \"0\" with \"Day Streak\" beneath and a small flame icon below; the numeral becomes 1 and an orange-red flame illustration grows behind it; closing line \"Today is the first day of your new streak. See you tomorrow!\" and a teal Continue bar.\n\n## Motion spec\nPattern: badge-to-flame celebration handoff.\n- The teal flash wipes away like a receding wave (bottom-up, 450ms) revealing white.\n- The hex badge pops in (scale 0 -> 1, spring ~400/18) with \"Nice Job!\" fading up; it holds ~900ms, then shrinks and drops (scale -> 0.8, falls 40px, fades, 300ms).\n- The \"0\" draws in as an outline (stroke trim, 300ms); the digit rolls 0 -> 1 (200ms) and the flame illustration builds behind it - base flame first, inner flame and sparks staggering in (60ms apart, scale springs ~420/20).\n- The flame flickers alive (scale 1 <-> 1.03 with slight skew, ~800ms loop); the closing line fades up; the Continue bar slides up and lights teal.\n\n## Calibration\n- Exactly one digit handoff: 0 -> 1 - the count-up is a single satisfying tick.\n- Flame is illustration, not emoji - layered orange/red shapes with two spark dots.\n\n## Reduced motion\nSimple crossfades between badge, numeral, and flame states.\n\n## Don't miss\n- The teal wave recedes downward, like a curtain dropping away.\n- \"Day Streak\" stays constant while the numeral and flame change around it."</script>
+</body></html>

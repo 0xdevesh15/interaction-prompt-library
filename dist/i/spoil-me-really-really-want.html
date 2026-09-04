@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spoil Me Really Really Want - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spoil Me Really Really Want</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spoil-me-really-really-want"><b>Spoil Me</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spoil-me-really-really-want">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spoil-me-really-really-want">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Spoil Me&#x27;s wish creation flow - a warm, editorial multi-step sheet where each answer morphs the input into the next question, ending in a staggered photo grid pick.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cbee4a1d9df6453ab6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cbee4a1d9df6453ab6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spoil-me-really-really-want.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Spoil Me&#x27;s wish creation flow - a warm, editorial multi-step sheet where each answer morphs the input into the next question, ending in a staggered photo grid pick.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A cream sheet: serif headline &quot;Nice! Now tell us what you really really want&quot; (&quot;Nice!&quot; in italic), a pill text input, and a hint. Steps: name the wish (keyboard), price it (numeric keypad + quick-amount chips $5-$250), publish-as choice (Private / Crowdfunding), then a photo grid (camera product shots) with a &quot;Looks good&quot; confirm. Top bar shows &quot;1 wish, add more&quot; and Done.
+
+## Motion spec
+Pattern: morphing input steps.
+- Each answer commits with return/continue: the input pill&#x27;s text lifts out of the pill and settles as a summary line above (translateY -24px + scale 0.9, 300ms), while the pill clears and morphs its placeholder to the next question (crossfade 200ms) - the pill itself never jumps position.
+- The &quot;How much is it?&quot; secondary pill slides in from beneath the main input (translateY 20px + fade, 250ms) once the name is set.
+- The keypad swap: alpha keyboard slides down as the numeric pad slides up (250ms, matched) and the quick-amount chips stagger in (scale 0.8 to 1, spring ~420/20, 40ms apart).
+- Publish-as toggle slides its pill highlight (200ms spring).
+- Photo step: the grid images load staggered (fade + scale 0.92 to 1, 250ms, 60ms apart, row by row); tapping one checks it (badge scales in, spring ~400/18) and lifts it (shadow deepens, 150ms).
+- &quot;Looks good&quot; confirms with a checkmark draw (stroke-dash, 300ms) and the sheet settles to the wishes list.
+
+## Calibration
+- One question owns the screen at a time; answered steps collapse into compact summary lines.
+- The headline stays pinned; only the input region reconfigures.
+
+## Reduced motion
+Steps crossfade; grid appears without stagger.
+
+## Don&#x27;t miss
+- The cream background and serif type are the whole brand - no saturated buttons; the confirm is black text with a drawn check.
+- The keyboard is part of the choreography: inputs stay above it at all times.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">morphing input steps.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spoil-me-really-really-want">original interaction</a> by Spoil Me. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Spoil Me's wish creation flow - a warm, editorial multi-step sheet where each answer morphs the input into the next question, ending in a staggered photo grid pick.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA cream sheet: serif headline \"Nice! Now tell us what you really really want\" (\"Nice!\" in italic), a pill text input, and a hint. Steps: name the wish (keyboard), price it (numeric keypad + quick-amount chips $5-$250), publish-as choice (Private / Crowdfunding), then a photo grid (camera product shots) with a \"Looks good\" confirm. Top bar shows \"1 wish, add more\" and Done.\n\n## Motion spec\nPattern: morphing input steps.\n- Each answer commits with return/continue: the input pill's text lifts out of the pill and settles as a summary line above (translateY -24px + scale 0.9, 300ms), while the pill clears and morphs its placeholder to the next question (crossfade 200ms) - the pill itself never jumps position.\n- The \"How much is it?\" secondary pill slides in from beneath the main input (translateY 20px + fade, 250ms) once the name is set.\n- The keypad swap: alpha keyboard slides down as the numeric pad slides up (250ms, matched) and the quick-amount chips stagger in (scale 0.8 to 1, spring ~420/20, 40ms apart).\n- Publish-as toggle slides its pill highlight (200ms spring).\n- Photo step: the grid images load staggered (fade + scale 0.92 to 1, 250ms, 60ms apart, row by row); tapping one checks it (badge scales in, spring ~400/18) and lifts it (shadow deepens, 150ms).\n- \"Looks good\" confirms with a checkmark draw (stroke-dash, 300ms) and the sheet settles to the wishes list.\n\n## Calibration\n- One question owns the screen at a time; answered steps collapse into compact summary lines.\n- The headline stays pinned; only the input region reconfigures.\n\n## Reduced motion\nSteps crossfade; grid appears without stagger.\n\n## Don't miss\n- The cream background and serif type are the whole brand - no saturated buttons; the confirm is black text with a drawn check.\n- The keyboard is part of the choreography: inputs stay above it at all times."</script>
+</body></html>

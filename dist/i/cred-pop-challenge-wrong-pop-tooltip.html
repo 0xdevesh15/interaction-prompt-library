@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Pop Challenge Wrong Pop Tooltip - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Pop Challenge Wrong Pop Tooltip</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-pop-challenge-wrong-pop-tooltip"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-pop-challenge-wrong-pop-tooltip">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-pop-challenge-wrong-pop-tooltip">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED Pop Challenge&#x27;s wrong-pop coaching - after a &quot;PERFECT&quot; hit flash, when the player taps the wrong object, the game dims, a cream tooltip slides down explaining &quot;if you pop other objects, it won&#x27;t boost your score&quot;, and a hand cursor indicates the correct target until the player acknowledges with &quot;understood&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509738e7e8e499ed161e7a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509738e7e8e499ed161e7a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-pop-challenge-wrong-pop-tooltip.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED Pop Challenge&#x27;s wrong-pop coaching - after a &quot;PERFECT&quot; hit flash, when the player taps the wrong object, the game dims, a cream tooltip slides down explaining &quot;if you pop other objects, it won&#x27;t boost your score&quot;, and a hand cursor indicates the correct target until the player acknowledges with &quot;understood&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pop Challenge game screen mid-run (score &quot;50&quot; top-left, purple perspective track). A correct pop flashes a yellow &quot;PERFECT&quot; stamp. On the mistake: the whole game field dims to ~40%, the tooltip appears at the top with an &quot;understood &gt;&quot; action, and the white hand cursor points at the right object.
+
+## Motion spec
+Pattern: negative-feedback dim + coach tooltip.
+- Correct pop (setup): the target bursts and a bold &quot;PERFECT&quot; stamp scales in (0.5 -&gt; 1.1 -&gt; 1, spring ~340/18, ~300ms) and drifts up-fading (~500ms).
+- Wrong pop: gameplay pauses; a black scrim fades over the field (to ~60% opacity, 250ms).
+- Tooltip slides down from the top (350ms, ease-out) carrying the warning and an &quot;understood &gt;&quot; button.
+- The hand cursor bounces on the correct object through the dim (same 700ms press loop) to re-teach the target.
+- Tap &quot;understood&quot;: tooltip slides up, scrim fades out (250ms), play resumes.
+
+## Calibration
+- Dim applies to the playfield only - score pill and tooltip stay full brightness.
+- No penalty animation on the wrong object itself; the teaching layer carries the feedback.
+
+## Reduced motion
+Scrim and tooltip crossfade (200ms); stamp fades without spring.
+
+## Don&#x27;t miss
+- The tooltip for the wrong pop differs from the intro tooltip: warning copy + explicit &quot;understood&quot; acknowledgment.
+- Gameplay is truly paused under the scrim - objects stop moving.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">negative-feedback dim + coach tooltip.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-pop-challenge-wrong-pop-tooltip">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED Pop Challenge's wrong-pop coaching - after a \"PERFECT\" hit flash, when the player taps the wrong object, the game dims, a cream tooltip slides down explaining \"if you pop other objects, it won't boost your score\", and a hand cursor indicates the correct target until the player acknowledges with \"understood\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPop Challenge game screen mid-run (score \"50\" top-left, purple perspective track). A correct pop flashes a yellow \"PERFECT\" stamp. On the mistake: the whole game field dims to ~40%, the tooltip appears at the top with an \"understood >\" action, and the white hand cursor points at the right object.\n\n## Motion spec\nPattern: negative-feedback dim + coach tooltip.\n- Correct pop (setup): the target bursts and a bold \"PERFECT\" stamp scales in (0.5 -> 1.1 -> 1, spring ~340/18, ~300ms) and drifts up-fading (~500ms).\n- Wrong pop: gameplay pauses; a black scrim fades over the field (to ~60% opacity, 250ms).\n- Tooltip slides down from the top (350ms, ease-out) carrying the warning and an \"understood >\" button.\n- The hand cursor bounces on the correct object through the dim (same 700ms press loop) to re-teach the target.\n- Tap \"understood\": tooltip slides up, scrim fades out (250ms), play resumes.\n\n## Calibration\n- Dim applies to the playfield only - score pill and tooltip stay full brightness.\n- No penalty animation on the wrong object itself; the teaching layer carries the feedback.\n\n## Reduced motion\nScrim and tooltip crossfade (200ms); stamp fades without spring.\n\n## Don't miss\n- The tooltip for the wrong pop differs from the intro tooltip: warning copy + explicit \"understood\" acknowledgment.\n- Gameplay is truly paused under the scrim - objects stop moving."</script>
+</body></html>

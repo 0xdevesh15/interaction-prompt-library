@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Canopi Date Picker - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Canopi Date Picker</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/canopi-date-picker"><b>Canopi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/canopi-date-picker">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/canopi-date-picker">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Canopi&#x27;s collection date picker - One Day / Multi-day / Recurring tabs morph a schedule form, with a calendar sheet, big-date readout, and wheel time pickers.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd02371d29849d7bda10/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd02371d29849d7bda10/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-canopi-date-picker.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Canopi&#x27;s collection date picker - One Day / Multi-day / Recurring tabs morph a schedule form, with a calendar sheet, big-date readout, and wheel time pickers.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A &quot;New Collection&quot; form (title field, description) with a segmented control: One Day, Multi-day, Recurring. Below it a schedule area: Start Date with a big &quot;08 Aug&quot; readout, Start/End Time rows with &quot;+ Add Time&quot;, and a black Done button. Tapping fields opens bottom sheets - a month calendar, an hour/minute wheel, a weekday chooser.
+
+## Motion spec
+Pattern: morphing tab content + bottom-sheet pickers.
+- Tab switch: the active pill slides under the selected tab (spring ~420/26) while the schedule area crossfades and subtly slides (translateX +-20px, 250ms) - One Day shows one date, Multi-day shows &quot;08 -&gt; 16 Aug&quot; with the arrow drawing in, Recurring shows &quot;Every Monday&quot; with the weekday name morphing letter-by-letter when changed.
+- Big date readout: digits flip like a split-flap (top half hinges down, 250ms per digit) when the date changes; the red month label crossfades.
+- Calendar sheet: slides up over a dimmed form (spring ~380/26, drag-to-dismiss with velocity); the selected day stamps with a circle that draws (stroke, 200ms) then fills.
+- Time wheel sheet: columns spin with momentum and detent-snap (friction ~0.94/frame, snap spring ~500/30); the settled value flashes once (opacity 1 to 0.5 to 1, 200ms).
+- Pickers commit on sheet dismiss: the form row&#x27;s value rolls in vertically (180ms) and Done enables (fills black, 150ms).
+
+## Calibration
+- Only one sheet at a time; switching fields mid-sheet swaps content inside the same sheet (250ms crossfade) instead of stacking.
+- Multi-day end date can&#x27;t precede start: earlier days dim to 30% opacity and ignore taps.
+
+## Reduced motion
+Sheets fade in; digits set without flip.
+
+## Don&#x27;t miss
+- The big-date treatment (huge day numeral, small red month) is the form&#x27;s signature - keep it, not a plain text field.
+- Recurring rows show times with small red clock icons; the red accent appears nowhere else.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">morphing tab content + bottom-sheet pickers.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/canopi-date-picker">original interaction</a> by Canopi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Canopi's collection date picker - One Day / Multi-day / Recurring tabs morph a schedule form, with a calendar sheet, big-date readout, and wheel time pickers.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA \"New Collection\" form (title field, description) with a segmented control: One Day, Multi-day, Recurring. Below it a schedule area: Start Date with a big \"08 Aug\" readout, Start/End Time rows with \"+ Add Time\", and a black Done button. Tapping fields opens bottom sheets - a month calendar, an hour/minute wheel, a weekday chooser.\n\n## Motion spec\nPattern: morphing tab content + bottom-sheet pickers.\n- Tab switch: the active pill slides under the selected tab (spring ~420/26) while the schedule area crossfades and subtly slides (translateX +-20px, 250ms) - One Day shows one date, Multi-day shows \"08 -> 16 Aug\" with the arrow drawing in, Recurring shows \"Every Monday\" with the weekday name morphing letter-by-letter when changed.\n- Big date readout: digits flip like a split-flap (top half hinges down, 250ms per digit) when the date changes; the red month label crossfades.\n- Calendar sheet: slides up over a dimmed form (spring ~380/26, drag-to-dismiss with velocity); the selected day stamps with a circle that draws (stroke, 200ms) then fills.\n- Time wheel sheet: columns spin with momentum and detent-snap (friction ~0.94/frame, snap spring ~500/30); the settled value flashes once (opacity 1 to 0.5 to 1, 200ms).\n- Pickers commit on sheet dismiss: the form row's value rolls in vertically (180ms) and Done enables (fills black, 150ms).\n\n## Calibration\n- Only one sheet at a time; switching fields mid-sheet swaps content inside the same sheet (250ms crossfade) instead of stacking.\n- Multi-day end date can't precede start: earlier days dim to 30% opacity and ignore taps.\n\n## Reduced motion\nSheets fade in; digits set without flip.\n\n## Don't miss\n- The big-date treatment (huge day numeral, small red month) is the form's signature - keep it, not a plain text field.\n- Recurring rows show times with small red clock icons; the red accent appears nowhere else."</script>
+</body></html>

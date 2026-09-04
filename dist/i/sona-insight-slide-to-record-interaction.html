@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sona Insight Slide to Record Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sona Insight Slide to Record Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sona-insight-slide-to-record-interaction"><b>Sona</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sona-insight-slide-to-record-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sona-insight-slide-to-record-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Sona Insight&#x27;s slide-to-record - the grey &quot;Slide to start&quot; pill in the bottom bar morphs into a live recording state: black bar, red stop square, running timer, and a waveform, then hands off to a transcription-progress view.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9b273f4706c690db72c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736b9b273f4706c690db72c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sona-insight-slide-to-record-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Sona Insight&#x27;s slide-to-record - the grey &quot;Slide to start&quot; pill in the bottom bar morphs into a live recording state: black bar, red stop square, running timer, and a waveform, then hands off to a transcription-progress view.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white screen (&quot;Hi rishi, Good Morning&quot;, &quot;Ready to record and transcribe your conversations?&quot;) with a dark bottom bar holding the grey &quot;Slide to start&quot; pill. The recording state replaces the pill&#x27;s contents with a timer (00:00:00) and a red stop square. The end state is a &quot;Transcription in progress&quot; page (Uploading Audio, Processing Transcription steps).
+
+## Motion spec
+Pattern: slide-gesture state morph.
+- The idle pill shows a mic glyph and &quot;Slide to start&quot; with a subtle shine sweep across the label (every 2.5s).
+- Drag right: a thumb follows the finger 1:1 across the pill while the label fades and the fill tracks the drag; the pill&#x27;s background shifts grey -&gt; black.
+- Cross the 80% threshold and release: the pill completes the morph (spring ~380/22, 250ms) - the thumb becomes the red stop square at the right edge, the timer appears at center and starts counting, and a small waveform animates at the left (bars pulsing with mic level).
+- Mic permission: the system dialog overlays mid-flow if needed - the morph pauses behind it.
+- Stop: the bar contracts (300ms) and the view slides to &quot;Transcription in progress&quot; (push up, 300ms) with step rows checking off.
+
+## Calibration
+- The morph is one continuous transformation - no cut between idle and recording UI.
+- The timer starts exactly at morph completion, not at drag start.
+
+## Reduced motion
+Tap toggles states with a crossfade.
+
+## Don&#x27;t miss
+- Sliding back left before the threshold cancels - the thumb springs home (spring ~420/20).
+- The red stop square is rounded, matching the pill&#x27;s corner language.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slide-gesture state morph.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sona-insight-slide-to-record-interaction">original interaction</a> by Sona. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Sona Insight's slide-to-record - the grey \"Slide to start\" pill in the bottom bar morphs into a live recording state: black bar, red stop square, running timer, and a waveform, then hands off to a transcription-progress view.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white screen (\"Hi rishi, Good Morning\", \"Ready to record and transcribe your conversations?\") with a dark bottom bar holding the grey \"Slide to start\" pill. The recording state replaces the pill's contents with a timer (00:00:00) and a red stop square. The end state is a \"Transcription in progress\" page (Uploading Audio, Processing Transcription steps).\n\n## Motion spec\nPattern: slide-gesture state morph.\n- The idle pill shows a mic glyph and \"Slide to start\" with a subtle shine sweep across the label (every 2.5s).\n- Drag right: a thumb follows the finger 1:1 across the pill while the label fades and the fill tracks the drag; the pill's background shifts grey -> black.\n- Cross the 80% threshold and release: the pill completes the morph (spring ~380/22, 250ms) - the thumb becomes the red stop square at the right edge, the timer appears at center and starts counting, and a small waveform animates at the left (bars pulsing with mic level).\n- Mic permission: the system dialog overlays mid-flow if needed - the morph pauses behind it.\n- Stop: the bar contracts (300ms) and the view slides to \"Transcription in progress\" (push up, 300ms) with step rows checking off.\n\n## Calibration\n- The morph is one continuous transformation - no cut between idle and recording UI.\n- The timer starts exactly at morph completion, not at drag start.\n\n## Reduced motion\nTap toggles states with a crossfade.\n\n## Don't miss\n- Sliding back left before the threshold cancels - the thumb springs home (spring ~420/20).\n- The red stop square is rounded, matching the pill's corner language."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Buy Timer Boost Sheet Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Buy Timer Boost Sheet Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-buy-timer-boost-sheet-interaction"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-buy-timer-boost-sheet-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-buy-timer-boost-sheet-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s Timer Boost purchase - a bottom sheet offers the boost for 450 gems over the dark shop, buying triggers a gem-counter decrement with a flying gem, then a starburst success overlay blooms with the Timer Boost icon and &quot;+1&quot; before a BACK TO SHOP button returns.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868e9862f7f889f3d1ced1e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6868e9862f7f889f3d1ced1e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-buy-timer-boost-sheet-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s Timer Boost purchase - a bottom sheet offers the boost for 450 gems over the dark shop, buying triggers a gem-counter decrement with a flying gem, then a starburst success overlay blooms with the Timer Boost icon and &quot;+1&quot; before a BACK TO SHOP button returns.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark shop screen (Night Owl Chest, Timer Boost section with Single / 5 pack POPULAR / 15 pack options, gem balance top-right). The purchase sheet: purple Timer Boost icon, copy &quot;Get 1 Timer Boost for an extra minute in timed challenges!&quot;, blue &quot;BUY FOR 450&quot; button with gem icon, NO THANKS link. Success state: radial starburst background, large glowing boost icon, &quot;Timer Boost / +1&quot;, blue BACK TO SHOP button.
+
+## Motion spec
+Pattern: purchase sheet with currency debit and reward burst.
+- The sheet slides up over a dimmed shop (280ms ease-out, scrim 40%).
+- BUY tap: button compresses (scale 0.95, 100ms); a gem flies from the button to the top-right counter (400ms arc, ease-in) and the counter decrements 450 with a downward digit roll (250ms) and a brief red flash.
+- The sheet dissolves into a radial starburst that blooms from center (scale 0 -&gt; 1, 350ms, ease-out, rays rotating slowly 8deg/s).
+- The boost icon pops in at center (scale 0.5 -&gt; 1.15 -&gt; 1.0, spring ~320/16) with a purple glow; &quot;Timer Boost&quot; and &quot;+1&quot; fade up staggered (150ms apart).
+- BACK TO SHOP slides up (250ms ease-out); the boost mini-icon settles into the top bar.
+
+## Calibration
+- The debit happens before the celebration - gems leave, then joy.
+- The starburst keeps rotating slowly behind the icon; it is ambient, not a one-shot.
+
+## Reduced motion
+Sheet fades in, counter crossfades to the new value, success overlay fades in without burst; no flights.
+
+## Don&#x27;t miss
+- The counter animates DOWN with a red flash - spending must feel different from earning.
+- The &quot;+1&quot; sits directly under the item name, smaller and quieter than the icon.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">purchase sheet with currency debit and reward burst.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-buy-timer-boost-sheet-interaction">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's Timer Boost purchase - a bottom sheet offers the boost for 450 gems over the dark shop, buying triggers a gem-counter decrement with a flying gem, then a starburst success overlay blooms with the Timer Boost icon and \"+1\" before a BACK TO SHOP button returns.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark shop screen (Night Owl Chest, Timer Boost section with Single / 5 pack POPULAR / 15 pack options, gem balance top-right). The purchase sheet: purple Timer Boost icon, copy \"Get 1 Timer Boost for an extra minute in timed challenges!\", blue \"BUY FOR 450\" button with gem icon, NO THANKS link. Success state: radial starburst background, large glowing boost icon, \"Timer Boost / +1\", blue BACK TO SHOP button.\n\n## Motion spec\nPattern: purchase sheet with currency debit and reward burst.\n- The sheet slides up over a dimmed shop (280ms ease-out, scrim 40%).\n- BUY tap: button compresses (scale 0.95, 100ms); a gem flies from the button to the top-right counter (400ms arc, ease-in) and the counter decrements 450 with a downward digit roll (250ms) and a brief red flash.\n- The sheet dissolves into a radial starburst that blooms from center (scale 0 -> 1, 350ms, ease-out, rays rotating slowly 8deg/s).\n- The boost icon pops in at center (scale 0.5 -> 1.15 -> 1.0, spring ~320/16) with a purple glow; \"Timer Boost\" and \"+1\" fade up staggered (150ms apart).\n- BACK TO SHOP slides up (250ms ease-out); the boost mini-icon settles into the top bar.\n\n## Calibration\n- The debit happens before the celebration - gems leave, then joy.\n- The starburst keeps rotating slowly behind the icon; it is ambient, not a one-shot.\n\n## Reduced motion\nSheet fades in, counter crossfades to the new value, success overlay fades in without burst; no flights.\n\n## Don't miss\n- The counter animates DOWN with a red flash - spending must feel different from earning.\n- The \"+1\" sits directly under the item name, smaller and quieter than the icon."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queue Subscribe Button Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Queue Subscribe Button Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/queue-subscribe-button-animation"><b>Queue</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-subscribe-button-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-subscribe-button-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Queue&#x27;s podcast subscribe toggle - tapping the yellow Subscribe pill springs it into the neutral Subscribed state (and back), the whole button bouncing like it was squeezed.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a78b35592db07ea4633b50/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a78b35592db07ea4633b50/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-queue-subscribe-button-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Queue&#x27;s podcast subscribe toggle - tapping the yellow Subscribe pill springs it into the neutral Subscribed state (and back), the whole button bouncing like it was squeezed.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Podcast detail page: artwork, title, description, then a row with the Subscribe pill and a small download icon. Episode list below.
+
+## Motion spec
+Pattern: spring squash toggle, ~600ms.
+- Tap Subscribe: the pill squashes (scale 1 -&gt; 0.88, 80ms, ease-in) then rebounds past its size (spring ~500/15) while its fill slides yellow -&gt; light gray and the label crossfades Subscribe -&gt; Subscribed (150ms).
+- The rebound overshoots ~6% in both axes with one visible wobble before settling.
+- Tap Subscribed to undo: identical squash-rebound, colors and labels reverse.
+- The adjacent download icon does not move; only the pill deforms.
+- State persists - the button lands exactly on its new resting size, no residual scale.
+
+## Calibration
+- One squash, one overshoot, one settle. A double wobble reads as jello.
+- The label crossfade happens during the rebound, hidden by the motion.
+
+## Reduced motion
+Color and label crossfade only (200ms); no squash.
+
+## Don&#x27;t miss
+- The pill&#x27;s corner radius stays proportional during squash - squashing a fixed-radius pill kinks the shape.
+- Hit target stays the full pill at every frame, including mid-squash.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring squash toggle, ~600ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/queue-subscribe-button-animation">original interaction</a> by Queue. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Queue's podcast subscribe toggle - tapping the yellow Subscribe pill springs it into the neutral Subscribed state (and back), the whole button bouncing like it was squeezed.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPodcast detail page: artwork, title, description, then a row with the Subscribe pill and a small download icon. Episode list below.\n\n## Motion spec\nPattern: spring squash toggle, ~600ms.\n- Tap Subscribe: the pill squashes (scale 1 -> 0.88, 80ms, ease-in) then rebounds past its size (spring ~500/15) while its fill slides yellow -> light gray and the label crossfades Subscribe -> Subscribed (150ms).\n- The rebound overshoots ~6% in both axes with one visible wobble before settling.\n- Tap Subscribed to undo: identical squash-rebound, colors and labels reverse.\n- The adjacent download icon does not move; only the pill deforms.\n- State persists - the button lands exactly on its new resting size, no residual scale.\n\n## Calibration\n- One squash, one overshoot, one settle. A double wobble reads as jello.\n- The label crossfade happens during the rebound, hidden by the motion.\n\n## Reduced motion\nColor and label crossfade only (200ms); no squash.\n\n## Don't miss\n- The pill's corner radius stays proportional during squash - squashing a fixed-radius pill kinks the shape.\n- Hit target stays the full pill at every frame, including mid-squash."</script>
+</body></html>

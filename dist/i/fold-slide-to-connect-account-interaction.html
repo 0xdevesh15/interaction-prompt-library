@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fold Slide to Connect Account Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fold Slide to Connect Account Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fold-slide-to-connect-account-interaction"><b>Fold</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-slide-to-connect-account-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-slide-to-connect-account-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Fold&#x27;s slide-to-connect rows - each discovered bank account (HDFC Bank, ICICI Bank) carries a slide slider; dragging the thumb right fills the track with a bright green gradient, and releasing early snaps the thumb back with a spring.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38c267d61b8c650367e3c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38c267d61b8c650367e3c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fold-slide-to-connect-account-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Fold&#x27;s slide-to-connect rows - each discovered bank account (HDFC Bank, ICICI Bank) carries a slide slider; dragging the thumb right fills the track with a bright green gradient, and releasing early snaps the thumb back with a spring.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Discovered 3 bank accounts&quot; header with subcopy, then a stack of account cards: bank logo, name, masked account number, and a full-width slider track (light gray, rounded) with a bank-logo thumb at its left end and a chevron hint at the right.
+
+## Motion spec
+Pattern: slide-to-confirm slider with gradient fill and spring snap-back.
+- Grab the thumb: the track&#x27;s hint chevrons fade (150ms); the thumb follows the finger 1:1, clamped to the track.
+- A green gradient fill grows behind the thumb, tied to drag progress - the track literally fills with commitment; a soft glow blooms under the thumb past 50%.
+- Release before 90%: the fill drains and the thumb springs home (spring ~300/14 - a lively double-bounce, ~350ms settle) - rejection feels physical.
+- Cross 90%: the thumb accelerates to the end (120ms), the fill flashes full-green, the thumb morphs into a check (icon swap, 200ms), and the card&#x27;s state tint shifts - connected.
+- Other cards&#x27; sliders stay independent - each account connects on its own slide.
+
+## Calibration
+- The threshold is 90% - the last 10% is free, so completion never feels fiddly.
+- The gradient is the progress readout - no percentage label needed.
+
+## Reduced motion
+Thumb jumps to states with a 200ms fade on the fill; no bounce.
+
+## Don&#x27;t miss
+- Snap-back must overshoot slightly - a damped return reads as broken, a springy one reads as &quot;not yet.&quot;
+- The thumb carries the bank&#x27;s own logo - you&#x27;re sliding the bank into Fold.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slide-to-confirm slider with gradient fill and spring snap-back.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fold-slide-to-connect-account-interaction">original interaction</a> by Fold. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Fold's slide-to-connect rows - each discovered bank account (HDFC Bank, ICICI Bank) carries a slide slider; dragging the thumb right fills the track with a bright green gradient, and releasing early snaps the thumb back with a spring.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Discovered 3 bank accounts\" header with subcopy, then a stack of account cards: bank logo, name, masked account number, and a full-width slider track (light gray, rounded) with a bank-logo thumb at its left end and a chevron hint at the right.\n\n## Motion spec\nPattern: slide-to-confirm slider with gradient fill and spring snap-back.\n- Grab the thumb: the track's hint chevrons fade (150ms); the thumb follows the finger 1:1, clamped to the track.\n- A green gradient fill grows behind the thumb, tied to drag progress - the track literally fills with commitment; a soft glow blooms under the thumb past 50%.\n- Release before 90%: the fill drains and the thumb springs home (spring ~300/14 - a lively double-bounce, ~350ms settle) - rejection feels physical.\n- Cross 90%: the thumb accelerates to the end (120ms), the fill flashes full-green, the thumb morphs into a check (icon swap, 200ms), and the card's state tint shifts - connected.\n- Other cards' sliders stay independent - each account connects on its own slide.\n\n## Calibration\n- The threshold is 90% - the last 10% is free, so completion never feels fiddly.\n- The gradient is the progress readout - no percentage label needed.\n\n## Reduced motion\nThumb jumps to states with a 200ms fade on the fill; no bounce.\n\n## Don't miss\n- Snap-back must overshoot slightly - a damped return reads as broken, a springy one reads as \"not yet.\"\n- The thumb carries the bank's own logo - you're sliding the bank into Fold."</script>
+</body></html>

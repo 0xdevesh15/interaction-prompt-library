@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fuse Delete Wallet Sheet Checkbox Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fuse Delete Wallet Sheet Checkbox Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fuse-delete-wallet-sheet-checkbox-interaction"><b>Fuse</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fuse-delete-wallet-sheet-checkbox-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fuse-delete-wallet-sheet-checkbox-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Fuse&#x27;s delete-wallet confirmation - a bottom sheet with a red wallet card where the Continue button stays disabled until every consent checkbox in the scrolling warning list is ticked, then it arms in red.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d97befe20b134bc7050/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d97befe20b134bc7050/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fuse-delete-wallet-sheet-checkbox-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Fuse&#x27;s delete-wallet confirmation - a bottom sheet with a red wallet card where the Continue button stays disabled until every consent checkbox in the scrolling warning list is ticked, then it arms in red.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dimmed wallet screen with a &quot;Delete Wallet&quot; sheet: a red wallet card graphic, scrollable consent copy with checkboxes (&quot;I understand that by confirming this action, I will lose access to my wallet&quot;, &quot;I understand that any assets I have in the wallet will be lost and irretrievable after deletion of the wallet&quot;, &quot;I understand that Fuse does not hold or have any access to my wallet...&quot;, &quot;I agree to the terms by checking this box&quot;), and a Back / Continue footer.
+
+## Motion spec
+Pattern: gated destructive confirmation, state-driven.
+- Entry: the sheet slides up (350ms, ease-out) over the dimmed wallet (scrim fades to 60%, 300ms); the wallet card tilts in slightly (rotateX 8deg -&gt; 0, 300ms).
+- Check: tapping a row ticks its checkbox with a pop (scale 0.8 -&gt; 1.15 -&gt; 1, spring ~420/22, 200ms) and a 150ms haptic tick.
+- Arm: when the last box ticks, Continue fills from grey-pink to solid red (250ms) with a subtle scale pulse (1 -&gt; 1.03 -&gt; 1); before that, taps on it shake the button (translateX +-6px, 2 cycles, 250ms).
+- Confirm: tapping armed Continue fades the sheet content to a final state (250ms).
+
+## Calibration
+- The gating is per-checkbox: every listed consent must be checked, order-free.
+- Disabled Continue is visibly muted (pink-grey), never hidden.
+
+## Reduced motion
+Sheet fades up (250ms); checkbox and button states switch without springs.
+
+## Don&#x27;t miss
+- The consent list scrolls independently of the sheet; the footer stays pinned.
+- The red wallet card at the top of the sheet is the thing being deleted - it stays in view as a reminder.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gated destructive confirmation, state-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fuse-delete-wallet-sheet-checkbox-interaction">original interaction</a> by Fuse. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Fuse's delete-wallet confirmation - a bottom sheet with a red wallet card where the Continue button stays disabled until every consent checkbox in the scrolling warning list is ticked, then it arms in red.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDimmed wallet screen with a \"Delete Wallet\" sheet: a red wallet card graphic, scrollable consent copy with checkboxes (\"I understand that by confirming this action, I will lose access to my wallet\", \"I understand that any assets I have in the wallet will be lost and irretrievable after deletion of the wallet\", \"I understand that Fuse does not hold or have any access to my wallet...\", \"I agree to the terms by checking this box\"), and a Back / Continue footer.\n\n## Motion spec\nPattern: gated destructive confirmation, state-driven.\n- Entry: the sheet slides up (350ms, ease-out) over the dimmed wallet (scrim fades to 60%, 300ms); the wallet card tilts in slightly (rotateX 8deg -> 0, 300ms).\n- Check: tapping a row ticks its checkbox with a pop (scale 0.8 -> 1.15 -> 1, spring ~420/22, 200ms) and a 150ms haptic tick.\n- Arm: when the last box ticks, Continue fills from grey-pink to solid red (250ms) with a subtle scale pulse (1 -> 1.03 -> 1); before that, taps on it shake the button (translateX +-6px, 2 cycles, 250ms).\n- Confirm: tapping armed Continue fades the sheet content to a final state (250ms).\n\n## Calibration\n- The gating is per-checkbox: every listed consent must be checked, order-free.\n- Disabled Continue is visibly muted (pink-grey), never hidden.\n\n## Reduced motion\nSheet fades up (250ms); checkbox and button states switch without springs.\n\n## Don't miss\n- The consent list scrolls independently of the sheet; the footer stays pinned.\n- The red wallet card at the top of the sheet is the thing being deleted - it stays in view as a reminder."</script>
+</body></html>

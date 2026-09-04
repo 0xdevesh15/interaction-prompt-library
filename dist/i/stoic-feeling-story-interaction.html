@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stoic Feeling Story Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Stoic Feeling Story Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/stoic-feeling-story-interaction"><b>Stoic</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stoic-feeling-story-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stoic-feeling-story-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Stoic&#x27;s feeling-descriptor flow - pick a mood face, and the two-column word grid beneath it staggers into a matching vocabulary set; tapped words fill black.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb6f371d29849d7bce7d/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb6f371d29849d7bce7d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-stoic-feeling-story-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Stoic&#x27;s feeling-descriptor flow - pick a mood face, and the two-column word grid beneath it staggers into a matching vocabulary set; tapped words fill black.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A light sheet asking &quot;How would you describe how you&#x27;re feeling?&quot; Top: a row of five minimal mood faces (arc mouths from sad to smiling) - the selected one is a large solid black circle, the rest thin outline strokes. Below: a 2-column grid of rounded word pills (Brave, Confident, Creative, Excited, Free, Happy, Love, Proud, Respected for the brightest face; darker sets like Angry, Anxious, Fearful for the sad ones). A black circular FAB floats bottom-right.
+
+## Motion spec
+Pattern: face-morphing vocabulary grid.
+- Tap a face: the tapped face&#x27;s outline fills into the big black disc (scale 0.7 to 1, spring ~380/20) while the previous disc deflates back to an outline (reverse, 250ms); a soft haptic lands with the fill.
+- The word grid transitions as a staggered wipe: old pills fade and shrink (scale to 0.92, 150ms, cascading top-left to bottom-right at 25ms steps), then the new set staggers in (fade + translateY 8px, 200ms, same cascade).
+- Tap a word: the pill fills black with white text (background + color, 150ms) and pops (scale 1 to 1.06 to 1, spring ~440/22); tapping again deselects with the reverse.
+- Multiple words can be selected; each selection pulses the FAB (scale 1.05, 120ms) to signal readiness.
+- The sheet itself entered with a bottom-slide spring (~360/28) over a dimmed backdrop.
+
+## Calibration
+- The face row and grid must stay visually linked: grid transition starts the same frame the face fill starts.
+- Word pills are white with hairline borders; only selection turns them black - no other accent color exists.
+
+## Reduced motion
+Grid crossfades; selection is an instant fill.
+
+## Don&#x27;t miss
+- The mood faces are pure arcs and dots (no full emoji faces) - keep the line-art restraint.
+- Word sets get darker in vocabulary as you move left through the faces; the grid content IS the mood scale.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">face-morphing vocabulary grid.</div></div><div><div class="k">Content type</div><div class="v">interactive gesture</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/stoic-feeling-story-interaction">original interaction</a> by Stoic. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Stoic's feeling-descriptor flow - pick a mood face, and the two-column word grid beneath it staggers into a matching vocabulary set; tapped words fill black.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA light sheet asking \"How would you describe how you're feeling?\" Top: a row of five minimal mood faces (arc mouths from sad to smiling) - the selected one is a large solid black circle, the rest thin outline strokes. Below: a 2-column grid of rounded word pills (Brave, Confident, Creative, Excited, Free, Happy, Love, Proud, Respected for the brightest face; darker sets like Angry, Anxious, Fearful for the sad ones). A black circular FAB floats bottom-right.\n\n## Motion spec\nPattern: face-morphing vocabulary grid.\n- Tap a face: the tapped face's outline fills into the big black disc (scale 0.7 to 1, spring ~380/20) while the previous disc deflates back to an outline (reverse, 250ms); a soft haptic lands with the fill.\n- The word grid transitions as a staggered wipe: old pills fade and shrink (scale to 0.92, 150ms, cascading top-left to bottom-right at 25ms steps), then the new set staggers in (fade + translateY 8px, 200ms, same cascade).\n- Tap a word: the pill fills black with white text (background + color, 150ms) and pops (scale 1 to 1.06 to 1, spring ~440/22); tapping again deselects with the reverse.\n- Multiple words can be selected; each selection pulses the FAB (scale 1.05, 120ms) to signal readiness.\n- The sheet itself entered with a bottom-slide spring (~360/28) over a dimmed backdrop.\n\n## Calibration\n- The face row and grid must stay visually linked: grid transition starts the same frame the face fill starts.\n- Word pills are white with hairline borders; only selection turns them black - no other accent color exists.\n\n## Reduced motion\nGrid crossfades; selection is an instant fill.\n\n## Don't miss\n- The mood faces are pure arcs and dots (no full emoji faces) - keep the line-art restraint.\n- Word sets get darker in vocabulary as you move left through the faces; the grid content IS the mood scale."</script>
+</body></html>

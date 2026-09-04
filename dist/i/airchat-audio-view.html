@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airchat Audio View - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airchat Audio View</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airchat-audio-view"><b>Airchat</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airchat-audio-view">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airchat-audio-view">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airchat&#x27;s immersive audio view - playing a voice post morphs the feed card into a full-screen player where the blurred background shifts color with the content, a waveform tracks progress, and the transcript auto-scrolls with the audio.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd29672bd0f1452cb68/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd29672bd0f1452cb68/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airchat-audio-view.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airchat&#x27;s immersive audio view - playing a voice post morphs the feed card into a full-screen player where the blurred background shifts color with the content, a waveform tracks progress, and the transcript auto-scrolls with the audio.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark feed of voice posts (avatar, name, transcript preview, play button). Player: full-screen takeover - heavily blurred backdrop photo whose tint shifts (blue to purple to teal) as the post plays, a thin waveform progress line near the top, the transcript auto-scrolling with the current line emphasized, the speaker&#x27;s avatar and name pinned, and a control column: 2x speed toggle, expand, pause.
+
+## Motion spec
+Pattern: feed-to-player morph with reactive backdrop.
+- The tapped card expands to full screen (bounds animation, 350ms, ease-in-out); the transcript text carries over as a shared element.
+- The backdrop samples the speaker&#x27;s imagery and crossfades between color tints as playback progresses (1s color transitions, heavily blurred so only hue reads).
+- The waveform fills left to right in sync with playback position; the fill is a hard edge, not a gradient.
+- The transcript scrolls to keep the current sentence centered (smooth scroll, 300ms easing per line change); the active line is full opacity, others dimmed to ~50%.
+- Controls fade in after the morph lands (200ms); pause collapses the player back into the feed card (reverse 300ms).
+
+## Calibration
+- Text legibility over the shifting backdrop is the constraint: backdrop blur and a dark scrim must keep contrast constant as hues change.
+- The morph, not a push, is the identity of this flow - never cut to a separate player screen.
+
+## Reduced motion
+Player opens with a 200ms crossfade; backdrop holds one tint; transcript jumps without smooth scroll.
+
+## Don&#x27;t miss
+- The 2x toggle lives in the player, and playback position is preserved across the morph in both directions.
+- The waveform is a real progress control - it reflects position, not a decorative loop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">feed-to-player morph with reactive backdrop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airchat-audio-view">original interaction</a> by Airchat. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airchat's immersive audio view - playing a voice post morphs the feed card into a full-screen player where the blurred background shifts color with the content, a waveform tracks progress, and the transcript auto-scrolls with the audio.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark feed of voice posts (avatar, name, transcript preview, play button). Player: full-screen takeover - heavily blurred backdrop photo whose tint shifts (blue to purple to teal) as the post plays, a thin waveform progress line near the top, the transcript auto-scrolling with the current line emphasized, the speaker's avatar and name pinned, and a control column: 2x speed toggle, expand, pause.\n\n## Motion spec\nPattern: feed-to-player morph with reactive backdrop.\n- The tapped card expands to full screen (bounds animation, 350ms, ease-in-out); the transcript text carries over as a shared element.\n- The backdrop samples the speaker's imagery and crossfades between color tints as playback progresses (1s color transitions, heavily blurred so only hue reads).\n- The waveform fills left to right in sync with playback position; the fill is a hard edge, not a gradient.\n- The transcript scrolls to keep the current sentence centered (smooth scroll, 300ms easing per line change); the active line is full opacity, others dimmed to ~50%.\n- Controls fade in after the morph lands (200ms); pause collapses the player back into the feed card (reverse 300ms).\n\n## Calibration\n- Text legibility over the shifting backdrop is the constraint: backdrop blur and a dark scrim must keep contrast constant as hues change.\n- The morph, not a push, is the identity of this flow - never cut to a separate player screen.\n\n## Reduced motion\nPlayer opens with a 200ms crossfade; backdrop holds one tint; transcript jumps without smooth scroll.\n\n## Don't miss\n- The 2x toggle lives in the player, and playback position is preserved across the morph in both directions.\n- The waveform is a real progress control - it reflects position, not a decorative loop."</script>
+</body></html>

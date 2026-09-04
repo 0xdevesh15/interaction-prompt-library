@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grok Voice Gradient Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Grok Voice Gradient Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/grok-voice-gradient-animation"><b>Grok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-voice-gradient-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-voice-gradient-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Grok&#x27;s voice-listening bar - when voice mode activates, the input bar fills with a smooth gradient glow that slowly pans and pulses between purple, blue, and teal while &quot;Listening&quot; sits above the field.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f249f16a95954e2c456/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67c92f249f16a95954e2c456/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-grok-voice-gradient-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Grok&#x27;s voice-listening bar - when voice mode activates, the input bar fills with a smooth gradient glow that slowly pans and pulses between purple, blue, and teal while &quot;Listening&quot; sits above the field.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark Grok chat screen: Grok logo watermark center, suggestion chips (&quot;Silver haired samurai&quot;, &quot;Top video games of 2025&quot;, &quot;Recommend the best comedy show&quot;), and the bottom input bar (+ button, DeepSearch and Think pills, mic). In listening state: the bar&#x27;s background becomes a flowing gradient (purple -&gt; blue -&gt; teal -&gt; green, left to right), &quot;Listening&quot; appears in small text above the field, and the mic button becomes a white-filled circle with a dark dot (stop).
+
+## Motion spec
+Pattern: panning multi-stop gradient pulse.
+- Activation: the gradient washes into the bar from the left (opacity 0 -&gt; 1 over a left-to-right wipe, 350ms); &quot;Listening&quot; fades in above (200ms); mic morphs to the stop dot (crossfade + scale 0.8 -&gt; 1, 200ms).
+- Idle listening: the gradient pans continuously - color stops drift left to right (one full cycle ~3s, linear), so purple yields to blue, teal, green and back; a soft brightness pulse rides the pan (peak luminance +-15%, 1.5s sine).
+- The glow slightly bleeds past the bar&#x27;s edges as a blurred halo (10pt blur, opacity 0.35) that breathes with the pulse.
+- Deactivation: gradient fades out right-to-left (300ms), the bar returns to flat dark gray.
+
+## Calibration
+- The pan is slow and liquid - no banding, no visible stops; blend at least four color anchors.
+- The halo must stay soft; hard glow edges read as a border, not a glow.
+
+## Reduced motion
+The bar shows a static blended gradient (no pan); the pulse and halo are removed.
+
+## Don&#x27;t miss
+- The gradient lives only inside the bar - chips, logo, and background stay flat dark.
+- The stop-dot button is solid white with a dark center, the inverse of the mic.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">panning multi-stop gradient pulse.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/grok-voice-gradient-animation">original interaction</a> by Grok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Grok's voice-listening bar - when voice mode activates, the input bar fills with a smooth gradient glow that slowly pans and pulses between purple, blue, and teal while \"Listening\" sits above the field.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark Grok chat screen: Grok logo watermark center, suggestion chips (\"Silver haired samurai\", \"Top video games of 2025\", \"Recommend the best comedy show\"), and the bottom input bar (+ button, DeepSearch and Think pills, mic). In listening state: the bar's background becomes a flowing gradient (purple -> blue -> teal -> green, left to right), \"Listening\" appears in small text above the field, and the mic button becomes a white-filled circle with a dark dot (stop).\n\n## Motion spec\nPattern: panning multi-stop gradient pulse.\n- Activation: the gradient washes into the bar from the left (opacity 0 -> 1 over a left-to-right wipe, 350ms); \"Listening\" fades in above (200ms); mic morphs to the stop dot (crossfade + scale 0.8 -> 1, 200ms).\n- Idle listening: the gradient pans continuously - color stops drift left to right (one full cycle ~3s, linear), so purple yields to blue, teal, green and back; a soft brightness pulse rides the pan (peak luminance +-15%, 1.5s sine).\n- The glow slightly bleeds past the bar's edges as a blurred halo (10pt blur, opacity 0.35) that breathes with the pulse.\n- Deactivation: gradient fades out right-to-left (300ms), the bar returns to flat dark gray.\n\n## Calibration\n- The pan is slow and liquid - no banding, no visible stops; blend at least four color anchors.\n- The halo must stay soft; hard glow edges read as a border, not a glow.\n\n## Reduced motion\nThe bar shows a static blended gradient (no pan); the pulse and halo are removed.\n\n## Don't miss\n- The gradient lives only inside the bar - chips, logo, and background stay flat dark.\n- The stop-dot button is solid white with a dark center, the inverse of the mic."</script>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rise Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Rise Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/rise-splash"><b>Rise</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/rise-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/rise-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Rise&#x27;s onboarding - a single continuous glowing line that morphs between scenes: wrapping the logo, forming a pill icon, drawing down through a benefits list, and becoming a sleep waveform.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f2ae225b7b88f794b786/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f2ae225b7b88f794b786/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-rise-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Rise&#x27;s onboarding - a single continuous glowing line that morphs between scenes: wrapping the logo, forming a pill icon, drawing down through a benefits list, and becoming a sleep waveform.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screens with violet-blue line art and dim periwinkle text. Sequence: &quot;RISE&quot; wordmark with a line arc over it; a line-drawn pill icon with radiating dashes (&quot;Imagine I told you there was a drug that gave you...&quot;, purple NEXT button); a scrolling benefits list (&quot;Improved cognitive skills&quot;, &quot;increased focus, creativity...&quot;, &quot;Reduced anxiety and depression&quot;...) with the line running down the margin; the line becoming a waveform; &quot;That drug is Sleep.&quot;; &quot;RISE tailors solutions to your biology, lifestyle and needs.&quot;
+
+## Motion spec
+Pattern: continuous morphing line through scene transitions.
+- The line never breaks between scenes: it slides, bends, and redraws from one formation into the next (~800ms morphs, ease-in-out).
+- Logo scene: the line draws the arc over &quot;RISE&quot; (600ms draw-on).
+- Pill scene: the line reshapes into the capsule outline; dashes radiate outward with a slow pulse (opacity 0.4 to 1.0, 2s).
+- List scene: the line anchors at the left margin and extends downward as each benefit fades in line by line (150ms stagger); on scroll it flexes like a plucked string then settles.
+- Waveform scene: the line undulates into a sleep-graph wave, a slow traveling pulse moving along it (3s loop).
+- The NEXT button rises and fills (250ms) whenever a scene completes its draw.
+
+## Calibration
+- One line. Everything it forms is the same stroke - weight and glow stay constant across morphs.
+- Text stays dim and secondary; the line is the brightest thing on every screen.
+
+## Reduced motion
+Scenes crossfade; line formations appear pre-drawn.
+
+## Don&#x27;t miss
+- The morph path matters: the line travels visibly between formations rather than fading out and in.
+- The palette is black, one violet-blue line color, and periwinkle text - no other hues.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous morphing line through scene transitions.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/rise-splash">original interaction</a> by Rise. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Rise's onboarding - a single continuous glowing line that morphs between scenes: wrapping the logo, forming a pill icon, drawing down through a benefits list, and becoming a sleep waveform.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screens with violet-blue line art and dim periwinkle text. Sequence: \"RISE\" wordmark with a line arc over it; a line-drawn pill icon with radiating dashes (\"Imagine I told you there was a drug that gave you...\", purple NEXT button); a scrolling benefits list (\"Improved cognitive skills\", \"increased focus, creativity...\", \"Reduced anxiety and depression\"...) with the line running down the margin; the line becoming a waveform; \"That drug is Sleep.\"; \"RISE tailors solutions to your biology, lifestyle and needs.\"\n\n## Motion spec\nPattern: continuous morphing line through scene transitions.\n- The line never breaks between scenes: it slides, bends, and redraws from one formation into the next (~800ms morphs, ease-in-out).\n- Logo scene: the line draws the arc over \"RISE\" (600ms draw-on).\n- Pill scene: the line reshapes into the capsule outline; dashes radiate outward with a slow pulse (opacity 0.4 to 1.0, 2s).\n- List scene: the line anchors at the left margin and extends downward as each benefit fades in line by line (150ms stagger); on scroll it flexes like a plucked string then settles.\n- Waveform scene: the line undulates into a sleep-graph wave, a slow traveling pulse moving along it (3s loop).\n- The NEXT button rises and fills (250ms) whenever a scene completes its draw.\n\n## Calibration\n- One line. Everything it forms is the same stroke - weight and glow stay constant across morphs.\n- Text stays dim and secondary; the line is the brightest thing on every screen.\n\n## Reduced motion\nScenes crossfade; line formations appear pre-drawn.\n\n## Don't miss\n- The morph path matters: the line travels visibly between formations rather than fading out and in.\n- The palette is black, one violet-blue line color, and periwinkle text - no other hues."</script>
+</body></html>

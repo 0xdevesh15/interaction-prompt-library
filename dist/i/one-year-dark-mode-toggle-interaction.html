@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One Year Dark Mode Toggle Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>One Year Dark Mode Toggle Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/one-year-dark-mode-toggle-interaction"><b>One</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/one-year-dark-mode-toggle-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/one-year-dark-mode-toggle-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: One Year&#x27;s dark mode toggle - a full-screen, unhurried crossfade that carries the dotted-grid calendar, the purple illustration band, and every label from light to dark and back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a787ee843da4aad01355a4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a787ee843da4aad01355a4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-one-year-dark-mode-toggle-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: One Year&#x27;s dark mode toggle - a full-screen, unhurried crossfade that carries the dotted-grid calendar, the purple illustration band, and every label from light to dark and back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A tall screen on light gray: faint dotted grid, a horizontal band of purple hand-drawn doodles across the upper third, sparse typography, and a small theme toggle at the bottom.
+
+## Motion spec
+Pattern: full-screen theme crossfade, ~600ms.
+- Tap the toggle: the knob slides to its other detent (spring ~400/22, 200ms).
+- The background crossfades light gray -&gt; near-black over 450ms, ease-in-out; grid dots dim to ~20% alpha but never vanish.
+- The illustration band crossfades to its dark-mode palette (same artwork, adjusted inks) over the same 450ms - the doodles never move, only their colors.
+- Text and icons crossfade to their dark-theme colors simultaneously; nothing slides, pops, or reflows.
+- Toggling back is the exact reverse with identical timing.
+
+## Calibration
+- Every element transitions on the same 450ms clock; staggered theming looks like the page is tearing.
+- Near-black, not pure black - the dotted grid needs contrast headroom.
+
+## Reduced motion
+Same crossfade shortened to 250ms; the design already avoids motion, so keep it.
+
+## Don&#x27;t miss
+- The illustration band must have a real dark palette - simply dimming the light artwork muddies the purples.
+- The toggle knob is the only thing that moves position; the calm is the point.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">full-screen theme crossfade, ~600ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/one-year-dark-mode-toggle-interaction">original interaction</a> by One. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: One Year's dark mode toggle - a full-screen, unhurried crossfade that carries the dotted-grid calendar, the purple illustration band, and every label from light to dark and back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA tall screen on light gray: faint dotted grid, a horizontal band of purple hand-drawn doodles across the upper third, sparse typography, and a small theme toggle at the bottom.\n\n## Motion spec\nPattern: full-screen theme crossfade, ~600ms.\n- Tap the toggle: the knob slides to its other detent (spring ~400/22, 200ms).\n- The background crossfades light gray -> near-black over 450ms, ease-in-out; grid dots dim to ~20% alpha but never vanish.\n- The illustration band crossfades to its dark-mode palette (same artwork, adjusted inks) over the same 450ms - the doodles never move, only their colors.\n- Text and icons crossfade to their dark-theme colors simultaneously; nothing slides, pops, or reflows.\n- Toggling back is the exact reverse with identical timing.\n\n## Calibration\n- Every element transitions on the same 450ms clock; staggered theming looks like the page is tearing.\n- Near-black, not pure black - the dotted grid needs contrast headroom.\n\n## Reduced motion\nSame crossfade shortened to 250ms; the design already avoids motion, so keep it.\n\n## Don't miss\n- The illustration band must have a real dark palette - simply dimming the light artwork muddies the purples.\n- The toggle knob is the only thing that moves position; the calm is the point."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X Swipe to Like and Bookmark Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>X Swipe to Like and Bookmark Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/x-swipe-to-like-and-bookmark-interaction"><b>X</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-swipe-to-like-and-bookmark-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/x-swipe-to-like-and-bookmark-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: X&#x27;s swipe-to-act on a post - dragging a tweet card left reveals quick actions that scale up as they&#x27;re armed; releasing on the bookmark action confirms it and drops a &quot;Post added to your Bookmarks&quot; toast from the top.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91bc84c6b7e105cdf44/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91bc84c6b7e105cdf44/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-x-swipe-to-like-and-bookmark-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: X&#x27;s swipe-to-act on a post - dragging a tweet card left reveals quick actions that scale up as they&#x27;re armed; releasing on the bookmark action confirms it and drops a &quot;Post added to your Bookmarks&quot; toast from the top.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The dark X feed (60fps posts with media cards). Swiping a post left uncovers action affordances in the revealed trailing gutter (bookmark, repost-style glyphs). The confirmation is a dark toast sliding down from the top: &quot;Post added to your Bookmarks&quot; with a blue &quot;Add to Folder&quot; button.
+
+## Motion spec
+Pattern: swipe-reveal with armed-action scaling.
+- Drag left: the card tracks the finger 1:1; in the revealed gutter the action icons fade in and scale with progress (0.5 -&gt; 1 at their arm thresholds, staggered outward from the card edge).
+- The icon under the current drag position scales larger (up to 1.25) and fills with its accent - it &quot;arms&quot; as the finger crosses it; its siblings scale back down.
+- Release on the armed bookmark icon: the card springs home (spring ~420/22, 280ms), the icon does a confirm pop, and the toast slides down from under the status bar (spring ~380/20, 350ms).
+- The toast holds ~2.5s, then slides back up; &quot;Add to Folder&quot; inside it is tappable while visible.
+- Release short: the card springs home and the icons fade away with it.
+
+## Calibration
+- Arm thresholds are distance-based; the scaling IS the targeting UI.
+- Vertical scroll claims the touch outside a ~10deg horizontal cone.
+
+## Reduced motion
+Icons fade in armed/unarmed states; toast appears without slide.
+
+## Don&#x27;t miss
+- The toast sits below the status bar with rounded corners - it overlays the feed, not pushes it.
+- The armed icon&#x27;s accent fill is instant (no fade) so targeting feels crisp.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-reveal with armed-action scaling.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/x-swipe-to-like-and-bookmark-interaction">original interaction</a> by X. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: X's swipe-to-act on a post - dragging a tweet card left reveals quick actions that scale up as they're armed; releasing on the bookmark action confirms it and drops a \"Post added to your Bookmarks\" toast from the top.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe dark X feed (60fps posts with media cards). Swiping a post left uncovers action affordances in the revealed trailing gutter (bookmark, repost-style glyphs). The confirmation is a dark toast sliding down from the top: \"Post added to your Bookmarks\" with a blue \"Add to Folder\" button.\n\n## Motion spec\nPattern: swipe-reveal with armed-action scaling.\n- Drag left: the card tracks the finger 1:1; in the revealed gutter the action icons fade in and scale with progress (0.5 -> 1 at their arm thresholds, staggered outward from the card edge).\n- The icon under the current drag position scales larger (up to 1.25) and fills with its accent - it \"arms\" as the finger crosses it; its siblings scale back down.\n- Release on the armed bookmark icon: the card springs home (spring ~420/22, 280ms), the icon does a confirm pop, and the toast slides down from under the status bar (spring ~380/20, 350ms).\n- The toast holds ~2.5s, then slides back up; \"Add to Folder\" inside it is tappable while visible.\n- Release short: the card springs home and the icons fade away with it.\n\n## Calibration\n- Arm thresholds are distance-based; the scaling IS the targeting UI.\n- Vertical scroll claims the touch outside a ~10deg horizontal cone.\n\n## Reduced motion\nIcons fade in armed/unarmed states; toast appears without slide.\n\n## Don't miss\n- The toast sits below the status bar with rounded corners - it overlays the feed, not pushes it.\n- The armed icon's accent fill is instant (no fade) so targeting feels crisp."</script>
+</body></html>

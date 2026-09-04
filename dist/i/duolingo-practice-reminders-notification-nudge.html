@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Practice Reminders Notification Nudge - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Practice Reminders Notification Nudge</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-practice-reminders-notification-nudge"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-practice-reminders-notification-nudge">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-practice-reminders-notification-nudge">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s practice-reminders nudge - under &quot;Build a stronger habit with practice reminders&quot;, a mock iOS notification card (&quot;Hey, it&#x27;s Duo! I&#x27;m ready to practice English. How about you?&quot; with Duo&#x27;s icon) springs up and fades in over a soft blue blob, demoing what the reminder will look like.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177d0522bbba81c9f814/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177d0522bbba81c9f814/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-practice-reminders-notification-nudge.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s practice-reminders nudge - under &quot;Build a stronger habit with practice reminders&quot;, a mock iOS notification card (&quot;Hey, it&#x27;s Duo! I&#x27;m ready to practice English. How about you?&quot; with Duo&#x27;s icon) springs up and fades in over a soft blue blob, demoing what the reminder will look like.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: two-line headline, a soft blue rounded blob in the middle acting as a stage, and the mock notification banner (Duo icon, &quot;Hey, it&#x27;s Duo!&quot; bold title, preview text) that materializes over it.
+
+## Motion spec
+Pattern: mock-notification spring reveal.
+- The blue blob fades in first (300ms) at low opacity.
+- The notification card springs up from behind/inside the blob (scale 0.7 -&gt; 1.05 -&gt; 1, spring ~300/16, 450ms) while fading in.
+- The card settles and gives a small repeat nudge every ~4s (translateY -4px and back, 300ms) as if re-arriving.
+- The headline stays static throughout.
+
+## Calibration
+- The notification is a faithful iOS banner - rounded rect, app icon left, title bold, body gray.
+- The blob is a backdrop, not a container - the card overflows it.
+
+## Reduced motion
+Card fades in at final size (250ms); no repeat nudge.
+
+## Don&#x27;t miss
+- The card&#x27;s text is Duo&#x27;s voice in first person - the nudge is the product, not a generic bell icon.
+- The repeat nudge is small - a reminder of the reminder.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">mock-notification spring reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-practice-reminders-notification-nudge">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's practice-reminders nudge - under \"Build a stronger habit with practice reminders\", a mock iOS notification card (\"Hey, it's Duo! I'm ready to practice English. How about you?\" with Duo's icon) springs up and fades in over a soft blue blob, demoing what the reminder will look like.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: two-line headline, a soft blue rounded blob in the middle acting as a stage, and the mock notification banner (Duo icon, \"Hey, it's Duo!\" bold title, preview text) that materializes over it.\n\n## Motion spec\nPattern: mock-notification spring reveal.\n- The blue blob fades in first (300ms) at low opacity.\n- The notification card springs up from behind/inside the blob (scale 0.7 -> 1.05 -> 1, spring ~300/16, 450ms) while fading in.\n- The card settles and gives a small repeat nudge every ~4s (translateY -4px and back, 300ms) as if re-arriving.\n- The headline stays static throughout.\n\n## Calibration\n- The notification is a faithful iOS banner - rounded rect, app icon left, title bold, body gray.\n- The blob is a backdrop, not a container - the card overflows it.\n\n## Reduced motion\nCard fades in at final size (250ms); no repeat nudge.\n\n## Don't miss\n- The card's text is Duo's voice in first person - the nudge is the product, not a generic bell icon.\n- The repeat nudge is small - a reminder of the reminder."</script>
+</body></html>

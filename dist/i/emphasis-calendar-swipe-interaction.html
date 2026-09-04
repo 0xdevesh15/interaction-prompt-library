@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Emphasis Calendar Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Emphasis Calendar Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/emphasis-calendar-swipe-interaction"><b>Emphasis</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/emphasis-calendar-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/emphasis-calendar-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Emphasis&#x27;s calendar navigation - a springy horizontal swipe moves between months in a dark-themed month grid (October, November, August...), and tapping a day highlights it with a soft circle while the activity list below stays put.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a863bf3ce1dd7e362d18/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6712a863bf3ce1dd7e362d18/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-emphasis-calendar-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Emphasis&#x27;s calendar navigation - a springy horizontal swipe moves between months in a dark-themed month grid (October, November, August...), and tapping a day highlights it with a soft circle while the activity list below stays put.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Near-black screen: year (&quot;2024&quot;) and month name (&quot;October&quot;) top-left with a total timer top-right, a weekday-labeled month grid, and a bottom list of tracked activities (&quot;Reading&quot;, &quot;Walk&quot;) with durations and colored progress bars.
+
+## Motion spec
+Pattern: paged month swipe with tap selection.
+- Horizontal swipe: the month grid follows the finger 1:1; the next/prev month peeks in from the edge.
+- Release: the grid springs to the nearest month page (spring ~380/24, ~350ms, slight overshoot); the month name cross-fades/slides with it (the old name slides out in the swipe direction, the new one in, 200ms).
+- Fast swipes chain: consecutive flings page through multiple months with momentum decay.
+- Day tap: the tapped day gets a filled circle highlight (scale 0.6 -&gt; 1, spring ~420/24, 180ms); the previous selection clears instantly.
+- The bottom activity list stays fixed - only the calendar region pages.
+
+## Calibration
+- The grid is the only paged element; header totals and the activity list are stable anchors.
+- Overshoot is subtle - a few pixels past the page edge before settling.
+
+## Reduced motion
+Months cross-fade (200ms) instead of sliding; selection appears without the scale spring.
+
+## Don&#x27;t miss
+- The month name animation is tied to the swipe direction - never slides the wrong way.
+- Day circles are the only color accent in the grid; the rest is monochrome.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">paged month swipe with tap selection.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/emphasis-calendar-swipe-interaction">original interaction</a> by Emphasis. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Emphasis's calendar navigation - a springy horizontal swipe moves between months in a dark-themed month grid (October, November, August...), and tapping a day highlights it with a soft circle while the activity list below stays put.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nNear-black screen: year (\"2024\") and month name (\"October\") top-left with a total timer top-right, a weekday-labeled month grid, and a bottom list of tracked activities (\"Reading\", \"Walk\") with durations and colored progress bars.\n\n## Motion spec\nPattern: paged month swipe with tap selection.\n- Horizontal swipe: the month grid follows the finger 1:1; the next/prev month peeks in from the edge.\n- Release: the grid springs to the nearest month page (spring ~380/24, ~350ms, slight overshoot); the month name cross-fades/slides with it (the old name slides out in the swipe direction, the new one in, 200ms).\n- Fast swipes chain: consecutive flings page through multiple months with momentum decay.\n- Day tap: the tapped day gets a filled circle highlight (scale 0.6 -> 1, spring ~420/24, 180ms); the previous selection clears instantly.\n- The bottom activity list stays fixed - only the calendar region pages.\n\n## Calibration\n- The grid is the only paged element; header totals and the activity list are stable anchors.\n- Overshoot is subtle - a few pixels past the page edge before settling.\n\n## Reduced motion\nMonths cross-fade (200ms) instead of sliding; selection appears without the scale spring.\n\n## Don't miss\n- The month name animation is tied to the swipe direction - never slides the wrong way.\n- Day circles are the only color accent in the grid; the rest is monochrome."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Activity Recap Distance - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Activity Recap Distance</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-activity-recap-distance"><b>Gentler</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-activity-recap-distance">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-activity-recap-distance">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Gentler Streak&#x27;s distance recap - a running-track graphic draws its lanes sequentially while the total ticks up, and a sticker-style stat grid slides in to close the story.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ffeba4ee6c592aad54285/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ffeba4ee6c592aad54285/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-activity-recap-distance.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Gentler Streak&#x27;s distance recap - a running-track graphic draws its lanes sequentially while the total ticks up, and a sticker-style stat grid slides in to close the story.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Recap screen: &quot;YOU REALLY WENT THE DISTANCE&quot; kicker, a huge &quot;101 km&quot;, a stadium-track oval graphic with lane markings, an orange lower band with &quot;LONGEST DISTANCE ACTIVITY - 15.07 km&quot;, then a peach screen with a &quot;Here&#x27;s how you got there&quot; sticker banner and a grid of per-activity distances.
+
+## Motion spec
+Pattern: sequential track draw with sticker reveal, ~2.5s.
+- The background bands slide in (white top, orange bottom, 300ms each) and the kicker and total fade up (300ms).
+- The track oval draws itself lane by lane: each lane&#x27;s stroke reveals around the loop (400ms per lane, ease-in-out, 120ms stagger), the runner dot riding the final lane.
+- The orange band&#x27;s stat line fades in as the last lane completes (250ms).
+- Transition: a black &quot;Here&#x27;s how you got there&quot; sticker peels in from the left edge (spring stiffness 300 damping 18, slight rotation), the background crossfading to peach.
+- The activity grid pops in cell by cell (scale 0.6 to 1, stiffness 380 damping 15, 60ms stagger, row by row).
+
+## Calibration
+- Lanes draw in order from outermost inward - the stagger is the rhythm of the piece.
+- The sticker tilt (about -6deg) is part of the charm; do not straighten it.
+
+## Reduced motion
+Elements fade in assembled.
+
+## Don&#x27;t miss
+- The runner dot travels the track as the lanes draw - it is a participant, not a static icon.
+- The grid&#x27;s numbers are the per-activity distances; they pop, they do not count.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential track draw with sticker reveal, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-activity-recap-distance">original interaction</a> by Gentler. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Gentler Streak's distance recap - a running-track graphic draws its lanes sequentially while the total ticks up, and a sticker-style stat grid slides in to close the story.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRecap screen: \"YOU REALLY WENT THE DISTANCE\" kicker, a huge \"101 km\", a stadium-track oval graphic with lane markings, an orange lower band with \"LONGEST DISTANCE ACTIVITY - 15.07 km\", then a peach screen with a \"Here's how you got there\" sticker banner and a grid of per-activity distances.\n\n## Motion spec\nPattern: sequential track draw with sticker reveal, ~2.5s.\n- The background bands slide in (white top, orange bottom, 300ms each) and the kicker and total fade up (300ms).\n- The track oval draws itself lane by lane: each lane's stroke reveals around the loop (400ms per lane, ease-in-out, 120ms stagger), the runner dot riding the final lane.\n- The orange band's stat line fades in as the last lane completes (250ms).\n- Transition: a black \"Here's how you got there\" sticker peels in from the left edge (spring stiffness 300 damping 18, slight rotation), the background crossfading to peach.\n- The activity grid pops in cell by cell (scale 0.6 to 1, stiffness 380 damping 15, 60ms stagger, row by row).\n\n## Calibration\n- Lanes draw in order from outermost inward - the stagger is the rhythm of the piece.\n- The sticker tilt (about -6deg) is part of the charm; do not straighten it.\n\n## Reduced motion\nElements fade in assembled.\n\n## Don't miss\n- The runner dot travels the track as the lanes draw - it is a participant, not a static icon.\n- The grid's numbers are the per-activity distances; they pop, they do not count."</script>
+</body></html>

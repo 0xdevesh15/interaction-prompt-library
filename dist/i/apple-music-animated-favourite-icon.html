@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Music Animated Favourite Icon - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Music Animated Favourite Icon</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-music-animated-favourite-icon"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-music-animated-favourite-icon">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-music-animated-favourite-icon">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Music&#x27;s favorite micro-interaction on Now Playing - tapping the hollow star beside the title pops it into a filled white star with a springy overshoot and a tiny burst of star particles.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cdcaee1459f47df56fb4a6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cdcaee1459f47df56fb4a6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-music-animated-favourite-icon.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Music&#x27;s favorite micro-interaction on Now Playing - tapping the hollow star beside the title pops it into a filled white star with a springy overshoot and a tiny burst of star particles.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark Now Playing screen: full-bleed artwork, song title and artists, a row beside the title with the favorite star and a &quot;...&quot; menu, scrubber, and transport controls below.
+
+## Motion spec
+Pattern: springy star fill with particle burst.
+- Tap: the hollow star scales down to 0.8 (80ms, press feel), then springs to filled at scale 1.25 -&gt; 1 (spring ~450/16, visible overshoot) while its fill wipes in center-out.
+- At the overshoot peak, 5-7 tiny star/spark particles eject radially (~40px travel, 450ms, ease-out, fading to 0) with slight rotation each.
+- The star settles into its filled resting state with a soft glow that decays over 600ms.
+- Un-favoriting reverses quietly: fill fades, scale dips 0.9 -&gt; 1, no particles.
+
+## Calibration
+- The whole celebration is under 700ms - a wink, not a fanfare.
+- Particles inherit the artwork&#x27;s accent tones (white/pink here), never confetti-random.
+
+## Reduced motion
+Star crossfades to filled; no particles or overshoot.
+
+## Don&#x27;t miss
+- The press-down dip BEFORE the pop is what makes it tactile - skip it and the spring reads as janky.
+- The star sits inline with the title row, small - the animation must read at 22px.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy star fill with particle burst.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-music-animated-favourite-icon">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Music's favorite micro-interaction on Now Playing - tapping the hollow star beside the title pops it into a filled white star with a springy overshoot and a tiny burst of star particles.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark Now Playing screen: full-bleed artwork, song title and artists, a row beside the title with the favorite star and a \"...\" menu, scrubber, and transport controls below.\n\n## Motion spec\nPattern: springy star fill with particle burst.\n- Tap: the hollow star scales down to 0.8 (80ms, press feel), then springs to filled at scale 1.25 -> 1 (spring ~450/16, visible overshoot) while its fill wipes in center-out.\n- At the overshoot peak, 5-7 tiny star/spark particles eject radially (~40px travel, 450ms, ease-out, fading to 0) with slight rotation each.\n- The star settles into its filled resting state with a soft glow that decays over 600ms.\n- Un-favoriting reverses quietly: fill fades, scale dips 0.9 -> 1, no particles.\n\n## Calibration\n- The whole celebration is under 700ms - a wink, not a fanfare.\n- Particles inherit the artwork's accent tones (white/pink here), never confetti-random.\n\n## Reduced motion\nStar crossfades to filled; no particles or overshoot.\n\n## Don't miss\n- The press-down dip BEFORE the pop is what makes it tactile - skip it and the spring reads as janky.\n- The star sits inline with the title row, small - the animation must read at 22px."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tilt Permission Popup - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tilt Permission Popup</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tilt-permission-popup"><b>Tilt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tilt-permission-popup">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tilt-permission-popup">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Tilt&#x27;s permissions onboarding - permission rows appear in sequence with responsive toggle switches, and granting them all triggers a playful 3D floating-heart reward.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bdca5039387d21645578b2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bdca5039387d21645578b2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tilt-permission-popup.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Tilt&#x27;s permissions onboarding - permission rows appear in sequence with responsive toggle switches, and granting them all triggers a playful 3D floating-heart reward.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A clean permissions sheet: a short explainer line, then a stack of permission rows (Notifications, Contacts, Location...), each with an icon, label, and toggle switch. Granting the final permission conjures a glossy 3D heart that floats up with particle accents, then the Continue button activates.
+
+## Motion spec
+Pattern: sequential row reveal + toggle physics + 3D heart reward.
+- Rows enter one at a time (slide up 16px + fade, 220ms each, 90ms stagger) - the list builds sequentially, not all at once.
+- Toggling: the knob slides with an overshoot spring (stiffness ~500, damping ~24), the track fills with accent color chasing the knob (180ms), and the row&#x27;s icon does a small happy hop (translateY -4px and back, spring ~400/20).
+- If a system dialog is involved, the toggle animates only after the system grant returns - pending state is a subtle track shimmer.
+- All granted: a 3D heart scales in from below center (spring ~300/20 with rotation settling from -15deg), floats upward ~60px (ease-out, 600ms) while tiny sparkle particles burst around it (8-12 particles, 500ms life), then settles into a gentle bob (translateY +-5px, 2.2s loop).
+- The Continue button fills and springs up (scale 0.95 to 1, spring ~380/22) as the heart settles.
+
+## Calibration
+- Row stagger is quick enough to read as one gesture - total build under ~700ms.
+- The heart is glossy 3D with moving highlight; a flat heart icon would deflate the reward.
+
+## Reduced motion
+Rows fade in together; heart appears static; no particles.
+
+## Don&#x27;t miss
+- Toggles are real state - re-tapping reverses the animation symmetrically, and the reward retracts if a permission is revoked.
+- The heart floats above the rows without covering the toggles; layout shifts down slightly to make room.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential row reveal + toggle physics + 3D heart reward.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tilt-permission-popup">original interaction</a> by Tilt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Tilt's permissions onboarding - permission rows appear in sequence with responsive toggle switches, and granting them all triggers a playful 3D floating-heart reward.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA clean permissions sheet: a short explainer line, then a stack of permission rows (Notifications, Contacts, Location...), each with an icon, label, and toggle switch. Granting the final permission conjures a glossy 3D heart that floats up with particle accents, then the Continue button activates.\n\n## Motion spec\nPattern: sequential row reveal + toggle physics + 3D heart reward.\n- Rows enter one at a time (slide up 16px + fade, 220ms each, 90ms stagger) - the list builds sequentially, not all at once.\n- Toggling: the knob slides with an overshoot spring (stiffness ~500, damping ~24), the track fills with accent color chasing the knob (180ms), and the row's icon does a small happy hop (translateY -4px and back, spring ~400/20).\n- If a system dialog is involved, the toggle animates only after the system grant returns - pending state is a subtle track shimmer.\n- All granted: a 3D heart scales in from below center (spring ~300/20 with rotation settling from -15deg), floats upward ~60px (ease-out, 600ms) while tiny sparkle particles burst around it (8-12 particles, 500ms life), then settles into a gentle bob (translateY +-5px, 2.2s loop).\n- The Continue button fills and springs up (scale 0.95 to 1, spring ~380/22) as the heart settles.\n\n## Calibration\n- Row stagger is quick enough to read as one gesture - total build under ~700ms.\n- The heart is glossy 3D with moving highlight; a flat heart icon would deflate the reward.\n\n## Reduced motion\nRows fade in together; heart appears static; no particles.\n\n## Don't miss\n- Toggles are real state - re-tapping reverses the animation symmetrically, and the reward retracts if a permission is revoked.\n- The heart floats above the rows without covering the toggles; layout shifts down slightly to make room."</script>
+</body></html>

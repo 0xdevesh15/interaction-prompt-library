@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram Add Note - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Instagram Add Note</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/instagram-add-note"><b>Instagram</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-add-note">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/instagram-add-note">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Instagram&#x27;s add-a-note - tapping the note bubble on a post dims the feed and springs a centered note input open with the keyboard; saving pins the typed note bubble onto the post.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb5bfee4a1d9df6453261/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb5bfee4a1d9df6453261/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-instagram-add-note.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Instagram&#x27;s add-a-note - tapping the note bubble on a post dims the feed and springs a centered note input open with the keyboard; saving pins the typed note bubble onto the post.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A feed post (&quot;Top paying companies&quot; graphic) with the author&#x27;s avatar top-left and a small gray thought-bubble note icon. Tapping it fades the post to ~40% and opens the composer: a white rounded bubble input centered on screen (&quot;Share a thought...&quot; style), a live preview bubble above it, and the keyboard below. Saving shows the note bubble (&quot;Nice&quot;) attached near the avatar.
+
+## Motion spec
+Pattern: badge-to-input spring expansion.
+- Tap the note badge: the post dims (200ms) and the bubble input scales up from the badge&#x27;s position to center screen (spring stiffness ~320, damping ~22) - it visibly grows out of the badge.
+- The keyboard rises with the system animation; the input tracks it, keeping ~40px clearance.
+- Typing mirrors into the preview bubble above the field in real time.
+- Save: the composer scales down and fades (200ms) while the note bubble springs onto the post at its anchor point (stiffness ~400, damping ~20, small overshoot).
+- Cancel or tap outside reverses the open animation back into the badge.
+
+## Calibration
+- The origin matters: the input must expand from the badge, not appear from screen center.
+- One spring for the whole open; chaining scale-then-fade loses the pop.
+
+## Reduced motion
+Fade the composer in centered; no origin-based expansion.
+
+## Don&#x27;t miss
+- The note bubble on the post is small, white, and rounded with a pointer tail toward the avatar - not a full-width banner.
+- The dimmed post stays non-interactive under the composer.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">badge-to-input spring expansion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/instagram-add-note">original interaction</a> by Instagram. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Instagram's add-a-note - tapping the note bubble on a post dims the feed and springs a centered note input open with the keyboard; saving pins the typed note bubble onto the post.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA feed post (\"Top paying companies\" graphic) with the author's avatar top-left and a small gray thought-bubble note icon. Tapping it fades the post to ~40% and opens the composer: a white rounded bubble input centered on screen (\"Share a thought...\" style), a live preview bubble above it, and the keyboard below. Saving shows the note bubble (\"Nice\") attached near the avatar.\n\n## Motion spec\nPattern: badge-to-input spring expansion.\n- Tap the note badge: the post dims (200ms) and the bubble input scales up from the badge's position to center screen (spring stiffness ~320, damping ~22) - it visibly grows out of the badge.\n- The keyboard rises with the system animation; the input tracks it, keeping ~40px clearance.\n- Typing mirrors into the preview bubble above the field in real time.\n- Save: the composer scales down and fades (200ms) while the note bubble springs onto the post at its anchor point (stiffness ~400, damping ~20, small overshoot).\n- Cancel or tap outside reverses the open animation back into the badge.\n\n## Calibration\n- The origin matters: the input must expand from the badge, not appear from screen center.\n- One spring for the whole open; chaining scale-then-fade loses the pop.\n\n## Reduced motion\nFade the composer in centered; no origin-based expansion.\n\n## Don't miss\n- The note bubble on the post is small, white, and rounded with a pointer tail toward the avatar - not a full-width banner.\n- The dimmed post stays non-interactive under the composer."</script>
+</body></html>

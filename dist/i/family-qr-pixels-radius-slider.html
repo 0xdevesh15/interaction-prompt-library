@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family QR Pixels Radius Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family QR Pixels Radius Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-qr-pixels-radius-slider"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-qr-pixels-radius-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-qr-pixels-radius-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s QR pixels radius slider - in the &quot;Customize&quot; screen&#x27;s Pixels tab, dragging the slider morphs every QR module&#x27;s corner radius in real time, from sharp squares to fully round dots, with the slider thumb tracking the finger.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91bc84c6b7e105cdf46/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91bc84c6b7e105cdf46/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-qr-pixels-radius-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s QR pixels radius slider - in the &quot;Customize&quot; screen&#x27;s Pixels tab, dragging the slider morphs every QR module&#x27;s corner radius in real time, from sharp squares to fully round dots, with the slider thumb tracking the finger.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black &quot;Customize&quot; screen: large QR code preview, a horizontal slider (single value), customization tabs (Color / Pixels / Logo / Frame), Save button.
+
+## Motion spec
+Pattern: real-time slider-driven shape morph.
+- Drag: the thumb follows the finger 1:1; every QR module&#x27;s corner radius updates per frame (0 = sharp square -&gt; 50% = full circle, direct mapping, no tween).
+- The morph is uniform - all modules, including the finder-square inner dots, take the same radius at the same time; finder-square outer rings keep their structure but round proportionally.
+- Release: the thumb settles with a tiny spring (spring ~480/30, 150ms); the radius stays exactly where dropped.
+- The QR preview scales subtly down (0.97) during the drag and springs back on release (spring ~400/24, 250ms).
+
+## Calibration
+- The update is per-frame across hundreds of modules - batch the re-render; any visible stagger between modules reads as a bug.
+- The code remains scannable at every radius - module centers and sizes never change, only rounding.
+
+## Reduced motion
+No scale-press effect; radius still updates live (functional control).
+
+## Don&#x27;t miss
+- Radius applies to the finder patterns too - leaving them square while modules round is the common miss.
+- The slider is a plain value track, not a stepped control - every intermediate radius is valid.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">real-time slider-driven shape morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-qr-pixels-radius-slider">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's QR pixels radius slider - in the \"Customize\" screen's Pixels tab, dragging the slider morphs every QR module's corner radius in real time, from sharp squares to fully round dots, with the slider thumb tracking the finger.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack \"Customize\" screen: large QR code preview, a horizontal slider (single value), customization tabs (Color / Pixels / Logo / Frame), Save button.\n\n## Motion spec\nPattern: real-time slider-driven shape morph.\n- Drag: the thumb follows the finger 1:1; every QR module's corner radius updates per frame (0 = sharp square -> 50% = full circle, direct mapping, no tween).\n- The morph is uniform - all modules, including the finder-square inner dots, take the same radius at the same time; finder-square outer rings keep their structure but round proportionally.\n- Release: the thumb settles with a tiny spring (spring ~480/30, 150ms); the radius stays exactly where dropped.\n- The QR preview scales subtly down (0.97) during the drag and springs back on release (spring ~400/24, 250ms).\n\n## Calibration\n- The update is per-frame across hundreds of modules - batch the re-render; any visible stagger between modules reads as a bug.\n- The code remains scannable at every radius - module centers and sizes never change, only rounding.\n\n## Reduced motion\nNo scale-press effect; radius still updates live (functional control).\n\n## Don't miss\n- Radius applies to the finder patterns too - leaving them square while modules round is the common miss.\n- The slider is a plain value track, not a stepped control - every intermediate radius is valid."</script>
+</body></html>

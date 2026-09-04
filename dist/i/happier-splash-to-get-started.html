@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happier Splash to Get Started - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Happier Splash to Get Started</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/happier-splash-to-get-started"><b>Happier</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/happier-splash-to-get-started">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/happier-splash-to-get-started">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Happier&#x27;s splash-to-onboarding - on a yellow screen the &quot;HAPPIER&quot; wordmark appears, then a single hand-drawn black line takes off and playfully loops and swoops across the screen as the background melts through pink gradients into a pale onboarding screen where the line settles and &quot;Meditation that meets you where you are.&quot; appears.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3d6624f4744434db45/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3d6624f4744434db45/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-happier-splash-to-get-started.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Happier&#x27;s splash-to-onboarding - on a yellow screen the &quot;HAPPIER&quot; wordmark appears, then a single hand-drawn black line takes off and playfully loops and swoops across the screen as the background melts through pink gradients into a pale onboarding screen where the line settles and &quot;Meditation that meets you where you are.&quot; appears.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Splash: bright yellow field, black &quot;HAPPIER&quot; wordmark whose &quot;A&quot; dot is a smiley. Onboarding: pale cream screen, headline &quot;Meditation that meets you where you are.&quot;, a yellow Get Started button, and the traveling line resting as a small squiggle accent near the top.
+
+## Motion spec
+Pattern: traveling scribble-line transition.
+- Wordmark fades in (300ms); a pink gradient wash rises from the bottom (600ms ease-in-out).
+- A thin black line starts drawing from the wordmark&#x27;s smiley dot and travels freely - loops, S-curves, a big swoop off the top edge - drawing at a constant pen speed (~2.5s total) with slight width wobble (2-3px).
+- As the line travels, the yellow background crossfades to pale cream (800ms), following the line&#x27;s progress rather than a flat wipe.
+- The line settles into a small accent squiggle near the top of the onboarding layout (its last 300ms of travel decelerates).
+- Headline fades + rises 10px (300ms), button fades in 150ms later.
+
+## Calibration
+- The line is one continuous stroke for the whole sequence - it never lifts or jumps.
+- Background color transition is keyed to line progress, so they always feel causally linked.
+
+## Reduced motion
+Line draws once along a simple arc; background crossfades flat.
+
+## Don&#x27;t miss
+- The line originates from the smiley dot in the logo - the brand mark literally launches the doodle.
+- The final squiggle position aligns with the headline block, becoming part of the layout.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">traveling scribble-line transition.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/happier-splash-to-get-started">original interaction</a> by Happier. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Happier's splash-to-onboarding - on a yellow screen the \"HAPPIER\" wordmark appears, then a single hand-drawn black line takes off and playfully loops and swoops across the screen as the background melts through pink gradients into a pale onboarding screen where the line settles and \"Meditation that meets you where you are.\" appears.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSplash: bright yellow field, black \"HAPPIER\" wordmark whose \"A\" dot is a smiley. Onboarding: pale cream screen, headline \"Meditation that meets you where you are.\", a yellow Get Started button, and the traveling line resting as a small squiggle accent near the top.\n\n## Motion spec\nPattern: traveling scribble-line transition.\n- Wordmark fades in (300ms); a pink gradient wash rises from the bottom (600ms ease-in-out).\n- A thin black line starts drawing from the wordmark's smiley dot and travels freely - loops, S-curves, a big swoop off the top edge - drawing at a constant pen speed (~2.5s total) with slight width wobble (2-3px).\n- As the line travels, the yellow background crossfades to pale cream (800ms), following the line's progress rather than a flat wipe.\n- The line settles into a small accent squiggle near the top of the onboarding layout (its last 300ms of travel decelerates).\n- Headline fades + rises 10px (300ms), button fades in 150ms later.\n\n## Calibration\n- The line is one continuous stroke for the whole sequence - it never lifts or jumps.\n- Background color transition is keyed to line progress, so they always feel causally linked.\n\n## Reduced motion\nLine draws once along a simple arc; background crossfades flat.\n\n## Don't miss\n- The line originates from the smiley dot in the logo - the brand mark literally launches the doodle.\n- The final squiggle position aligns with the headline block, becoming part of the layout."</script>
+</body></html>

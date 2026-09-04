@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trading View Stock Graph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Trading View Stock Graph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/trading-view-stock-graph"><b>Trading</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/trading-view-stock-graph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/trading-view-stock-graph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: TradingView&#x27;s mobile chart - scrub the area chart to read any point, and switch time ranges to watch the line fluidly morph and recolor between red and green.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f490225b7b88f794c056/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f490225b7b88f794c056/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-trading-view-stock-graph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: TradingView&#x27;s mobile chart - scrub the area chart to read any point, and switch time ranges to watch the line fluidly morph and recolor between red and green.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A watchlist of instruments with live prices opens into a chart screen: large price readout with change (+254.35 +1.05%), a line/area chart with a soft gradient fill, a time-range row (1D 1W 1M 3M YTD 1Y All), and a black &quot;Buy NIFTY&quot; button pinned above the bottom tabs.
+
+## Motion spec
+Pattern: scrubbing crosshair + morphing range transition.
+- Touch the chart: a vertical crosshair snaps to the finger (tracks 1:1 horizontally) with a dot on the line at the intersection; the header price crossfades to the scrubbed point&#x27;s value and date (150ms); a light haptic ticks at each data-point boundary.
+- The scrubbed values pin in a small floating label near the top of the chart; lifting the finger springs the crosshair off (fade 200ms) and the price settles back to the latest value (count-back tween, 250ms).
+- Range switch: the line morphs point-by-point to the new series (path interpolation, 450ms, ease-in-out), the area fill crossfades color - red when the period is down, green when up (600ms color tween) - and the Y-axis labels slide to the new scale (staggered 40ms).
+- The selected range pill fills black (background tween 150ms); the line draws in with a left-to-right stroke reveal (700ms) on first load.
+- Axis gridlines are hairlines that fade during the morph (to 40%) so the reshaping line is the only moving element.
+
+## Calibration
+- Price typography is tabular; the change pill colors green/red with the sign and animates with the same color tween as the fill.
+- Scrubbing must never hitch: precompute the path, sample nearest point, no layout work per frame.
+
+## Reduced motion
+Range switches crossfade the whole chart; no scrub haptics.
+
+## Don&#x27;t miss
+- The area gradient fades from the line color at 30% opacity to transparent at the baseline.
+- &quot;Buy NIFTY&quot; stays fixed while the chart morphs - the trading action never dances.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scrubbing crosshair + morphing range transition.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/trading-view-stock-graph">original interaction</a> by Trading. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: TradingView's mobile chart - scrub the area chart to read any point, and switch time ranges to watch the line fluidly morph and recolor between red and green.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA watchlist of instruments with live prices opens into a chart screen: large price readout with change (+254.35 +1.05%), a line/area chart with a soft gradient fill, a time-range row (1D 1W 1M 3M YTD 1Y All), and a black \"Buy NIFTY\" button pinned above the bottom tabs.\n\n## Motion spec\nPattern: scrubbing crosshair + morphing range transition.\n- Touch the chart: a vertical crosshair snaps to the finger (tracks 1:1 horizontally) with a dot on the line at the intersection; the header price crossfades to the scrubbed point's value and date (150ms); a light haptic ticks at each data-point boundary.\n- The scrubbed values pin in a small floating label near the top of the chart; lifting the finger springs the crosshair off (fade 200ms) and the price settles back to the latest value (count-back tween, 250ms).\n- Range switch: the line morphs point-by-point to the new series (path interpolation, 450ms, ease-in-out), the area fill crossfades color - red when the period is down, green when up (600ms color tween) - and the Y-axis labels slide to the new scale (staggered 40ms).\n- The selected range pill fills black (background tween 150ms); the line draws in with a left-to-right stroke reveal (700ms) on first load.\n- Axis gridlines are hairlines that fade during the morph (to 40%) so the reshaping line is the only moving element.\n\n## Calibration\n- Price typography is tabular; the change pill colors green/red with the sign and animates with the same color tween as the fill.\n- Scrubbing must never hitch: precompute the path, sample nearest point, no layout work per frame.\n\n## Reduced motion\nRange switches crossfade the whole chart; no scrub haptics.\n\n## Don't miss\n- The area gradient fades from the line color at 30% opacity to transparent at the baseline.\n- \"Buy NIFTY\" stays fixed while the chart morphs - the trading action never dances."</script>
+</body></html>

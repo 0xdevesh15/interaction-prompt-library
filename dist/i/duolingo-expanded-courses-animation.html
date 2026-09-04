@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Expanded Courses Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Expanded Courses Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-expanded-courses-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-expanded-courses-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-expanded-courses-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s expanded-courses onboarding beat - wizard Duo drops down on purple, then bursts into a shower of colorful course icons (music, math, chess, language) that fly outward and rain down into a white phone mock rising from the bottom, landing as the mock&#x27;s course grid under &quot;With expanded courses to help you learn better, faster&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736f80ef82ccc4efafc3c60/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736f80ef82ccc4efafc3c60/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-expanded-courses-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s expanded-courses onboarding beat - wizard Duo drops down on purple, then bursts into a shower of colorful course icons (music, math, chess, language) that fly outward and rain down into a white phone mock rising from the bottom, landing as the mock&#x27;s course grid under &quot;With expanded courses to help you learn better, faster&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Purple screen, headline &quot;A lot has changed on Duolingo&quot; -&gt; &quot;With expanded courses to help you learn better, faster&quot;; wizard Duo; a cascade of round course icons; a white phone mock that fills with a course-icon grid.
+
+## Motion spec
+Pattern: character-to-confetti metamorphosis with a catching container.
+- Duo hangs from the top edge, then drops toward center (spring ~300/18, 450ms).
+- At center Duo pops (scale 1 -&gt; 1.3 -&gt; 0, 250ms) and bursts into ~8 course icons that fly outward on radial paths (500ms, ease-out) with gravity.
+- The white phone mock rises from the bottom (spring ~360/24, 400ms) as the icons arc down toward it.
+- Icons fall into the mock and snap into grid slots (staggered 60ms, spring ~380/26), forming the full course grid; the headline swaps to &quot;With expanded courses to help you learn better, faster&quot; (word slide, 300ms).
+
+## Calibration
+- The icons are circular, brightly colored (red, green, blue, gold) - the palette pops against the purple.
+- Icons that land in the mock shrink slightly (1 -&gt; 0.8) to match grid scale.
+
+## Reduced motion
+Duo fades, icons fade into the grid in place (200ms staggered); mock rises with a simple ease.
+
+## Don&#x27;t miss
+- The icons&#x27; landing is synchronized with the mock&#x27;s rise - they read as caught, not overlaid.
+- The final grid state is a real UI moment, not an illustration - it previews the courses screen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">character-to-confetti metamorphosis with a catching container.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-expanded-courses-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's expanded-courses onboarding beat - wizard Duo drops down on purple, then bursts into a shower of colorful course icons (music, math, chess, language) that fly outward and rain down into a white phone mock rising from the bottom, landing as the mock's course grid under \"With expanded courses to help you learn better, faster\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPurple screen, headline \"A lot has changed on Duolingo\" -> \"With expanded courses to help you learn better, faster\"; wizard Duo; a cascade of round course icons; a white phone mock that fills with a course-icon grid.\n\n## Motion spec\nPattern: character-to-confetti metamorphosis with a catching container.\n- Duo hangs from the top edge, then drops toward center (spring ~300/18, 450ms).\n- At center Duo pops (scale 1 -> 1.3 -> 0, 250ms) and bursts into ~8 course icons that fly outward on radial paths (500ms, ease-out) with gravity.\n- The white phone mock rises from the bottom (spring ~360/24, 400ms) as the icons arc down toward it.\n- Icons fall into the mock and snap into grid slots (staggered 60ms, spring ~380/26), forming the full course grid; the headline swaps to \"With expanded courses to help you learn better, faster\" (word slide, 300ms).\n\n## Calibration\n- The icons are circular, brightly colored (red, green, blue, gold) - the palette pops against the purple.\n- Icons that land in the mock shrink slightly (1 -> 0.8) to match grid scale.\n\n## Reduced motion\nDuo fades, icons fade into the grid in place (200ms staggered); mock rises with a simple ease.\n\n## Don't miss\n- The icons' landing is synchronized with the mock's rise - they read as caught, not overlaid.\n- The final grid state is a real UI moment, not an illustration - it previews the courses screen."</script>
+</body></html>

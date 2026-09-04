@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zomato Intro Card Swipe Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zomato Intro Card Swipe Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zomato-intro-card-swipe-animation"><b>Zomato</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zomato-intro-card-swipe-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zomato-intro-card-swipe-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Zomato&#x27;s intro carousel - illustrated food cards (Sourdough pizza, Protein flex bowl, Chai &amp; Samosa) swipe through with springy snaps while faint food doodles drift across the pink background.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4df91a3a1f8e40ae7443f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4df91a3a1f8e40ae7443f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zomato-intro-card-swipe-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Zomato&#x27;s intro carousel - illustrated food cards (Sourdough pizza, Protein flex bowl, Chai &amp; Samosa) swipe through with springy snaps while faint food doodles drift across the pink background.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Pink onboarding screen: close X, &quot;Order what your friends love&quot; title, a carousel of food cards (friend&#x27;s name + dish illustration + dish name + veg mark), faint background doodles, &quot;Get Started&quot; button and fine print at the bottom.
+
+## Motion spec
+Pattern: auto-advancing card carousel, ~2.5s per card.
+- The front card slides left and off as the next card slides in from the right (spring ~280/20, one soft overshoot on arrival).
+- Each card arrives with its dish illustration popping (scale 0.9 -&gt; 1, spring ~400/18) and its name label fading in 100ms later.
+- Background doodles drift slowly sideways at ~10px/s, independent of the carousel.
+- Auto-advance pauses on touch; a manual swipe flings with momentum and snaps to the nearest card.
+- Title, button, and fine print are fixed.
+
+## Calibration
+- Cards travel edge-to-edge of the visible stage; partial reveals of the next card invite the swipe.
+- Background drift is barely-there; it must never compete with the cards.
+
+## Reduced motion
+Cards crossfade; background stays still.
+
+## Don&#x27;t miss
+- The friend&#x27;s name chip sits on top of each card and moves with it - it is part of the card, not the chrome.
+- The veg mark travels with its dish card.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-advancing card carousel, ~2.5s per card.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zomato-intro-card-swipe-animation">original interaction</a> by Zomato. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Zomato's intro carousel - illustrated food cards (Sourdough pizza, Protein flex bowl, Chai & Samosa) swipe through with springy snaps while faint food doodles drift across the pink background.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPink onboarding screen: close X, \"Order what your friends love\" title, a carousel of food cards (friend's name + dish illustration + dish name + veg mark), faint background doodles, \"Get Started\" button and fine print at the bottom.\n\n## Motion spec\nPattern: auto-advancing card carousel, ~2.5s per card.\n- The front card slides left and off as the next card slides in from the right (spring ~280/20, one soft overshoot on arrival).\n- Each card arrives with its dish illustration popping (scale 0.9 -> 1, spring ~400/18) and its name label fading in 100ms later.\n- Background doodles drift slowly sideways at ~10px/s, independent of the carousel.\n- Auto-advance pauses on touch; a manual swipe flings with momentum and snaps to the nearest card.\n- Title, button, and fine print are fixed.\n\n## Calibration\n- Cards travel edge-to-edge of the visible stage; partial reveals of the next card invite the swipe.\n- Background drift is barely-there; it must never compete with the cards.\n\n## Reduced motion\nCards crossfade; background stays still.\n\n## Don't miss\n- The friend's name chip sits on top of each card and moves with it - it is part of the card, not the chrome.\n- The veg mark travels with its dish card."</script>
+</body></html>

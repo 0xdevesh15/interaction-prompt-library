@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Housewarming! Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Housewarming! Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/housewarming-splash"><b>Housewarming</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/housewarming-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/housewarming-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Housewarming&#x27;s splash - the wordmark gives way to a rapid-fire montage of stylized logo treatments (doodle explosion, painterly pink, floral pattern, concrete stencil, truck graffiti) before landing on the black screen with the white mark, name, and Get started button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7218701fefe1a9aa46df5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7218701fefe1a9aa46df5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-housewarming-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Housewarming&#x27;s splash - the wordmark gives way to a rapid-fire montage of stylized logo treatments (doodle explosion, painterly pink, floral pattern, concrete stencil, truck graffiti) before landing on the black screen with the white mark, name, and Get started button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Sequence of full-bleed frames: white with the small &quot;housewarming&quot; wordmark; teal with a maximalist doodle burst around the mark; black with the white squiggle &quot;h&quot; mark; pink with painterly red strokes; pink floral pattern; dark concrete with a stenciled mark; a green truck side with the mark painted on; final black frame with the white mark, &quot;Housewarming&quot;, and a white &quot;Get started&quot; pill.
+
+## Motion spec
+Pattern: fast-cut brand montage, ~3s total.
+- Cuts: each treatment holds 250-350ms and hard-cuts to the next - no crossfades; the mark jumps scale and style each frame but stays centered.
+- Variance: some frames animate internally - the doodle burst pops outward (scale 0.9 -&gt; 1, 200ms), the floral pattern drifts (translate 10px), the painterly strokes wipe on.
+- Landing: the final black frame fades in (300ms); the mark holds, then &quot;Housewarming&quot; fades below it (250ms, +200ms) and the Get started pill rises (250ms, +150ms).
+
+## Calibration
+- The mark is the constant: every frame restyles it, never moves it off-center.
+- The pace is rhythmic - roughly equal holds, like a flipbook of identities.
+
+## Reduced motion
+Treatments crossfade (300ms each); internal motion removed.
+
+## Don&#x27;t miss
+- The montage cycles distinct art directions (doodle, painterly, floral, stencil, graffiti) - not recolors of one design.
+- The final frame is minimal: mark, name, one button, nothing else.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">fast-cut brand montage, ~3s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/housewarming-splash">original interaction</a> by Housewarming. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Housewarming's splash - the wordmark gives way to a rapid-fire montage of stylized logo treatments (doodle explosion, painterly pink, floral pattern, concrete stencil, truck graffiti) before landing on the black screen with the white mark, name, and Get started button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSequence of full-bleed frames: white with the small \"housewarming\" wordmark; teal with a maximalist doodle burst around the mark; black with the white squiggle \"h\" mark; pink with painterly red strokes; pink floral pattern; dark concrete with a stenciled mark; a green truck side with the mark painted on; final black frame with the white mark, \"Housewarming\", and a white \"Get started\" pill.\n\n## Motion spec\nPattern: fast-cut brand montage, ~3s total.\n- Cuts: each treatment holds 250-350ms and hard-cuts to the next - no crossfades; the mark jumps scale and style each frame but stays centered.\n- Variance: some frames animate internally - the doodle burst pops outward (scale 0.9 -> 1, 200ms), the floral pattern drifts (translate 10px), the painterly strokes wipe on.\n- Landing: the final black frame fades in (300ms); the mark holds, then \"Housewarming\" fades below it (250ms, +200ms) and the Get started pill rises (250ms, +150ms).\n\n## Calibration\n- The mark is the constant: every frame restyles it, never moves it off-center.\n- The pace is rhythmic - roughly equal holds, like a flipbook of identities.\n\n## Reduced motion\nTreatments crossfade (300ms each); internal motion removed.\n\n## Don't miss\n- The montage cycles distinct art directions (doodle, painterly, floral, stencil, graffiti) - not recolors of one design.\n- The final frame is minimal: mark, name, one button, nothing else."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moonlitt Time Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Moonlitt Time Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/moonlitt-time-scroll-interaction"><b>Moonlitt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/moonlitt-time-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/moonlitt-time-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Moonlitt&#x27;s main time scroll - dragging scrubs the clock, sliding the moon along its dotted orbit with a tracking time badge while the sky flows between purple day and dark navy night and the date pill ticks over.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e000158be589b580cfa584/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e000158be589b580cfa584/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-moonlitt-time-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Moonlitt&#x27;s main time scroll - dragging scrubs the clock, sliding the moon along its dotted orbit with a tracking time badge while the sky flows between purple day and dark navy night and the date pill ticks over.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen sky (purple day, deep navy night): the moon rides a dotted elliptical orbit at center, a small secondary body shares the orbit on the far side, floating pills show the date (&quot;Mar 11&quot;, top-left) and the scrubbed time (&quot;14:25&quot;, &quot;07:04&quot;, &quot;21:35&quot;...), tiny planet markers dot the edges, and a bottom status pill reads the phase (&quot;Waxing Gibbous 54.4%&quot;, &quot;Bengaluru&quot;).
+
+## Motion spec
+Pattern: drag-scrubbed orbital clock with day-night sky.
+- Drag horizontally (or vertically): drag maps to time (full width = 24h); the moon travels the orbit 1:1 with the scrub, the time badge riding beside it, text ticking live (tabular numerals).
+- Sky color tweens continuously with the hour: royal purple midday, indigo dusk, near-black navy 23:00-04:00, soft violet dawn - bound to time, not gesture.
+- The moon&#x27;s phase shading and the status pill&#x27;s phase name + percentage update live (pill text crossfades on change, 200ms).
+- Crossing midnight: the date pill rolls its number (old digits slide up, new slide in, 250ms) and a subtle shooting-star streak crosses (1s, once per day change).
+- Release: scrub eases to a stop (deceleration, 300ms), the badge docking beside the moon (spring ~300/20); the secondary body keeps orbiting slowly at all times (1 rev / 60s).
+
+## Calibration
+- Far side of the orbit: moon scales to 0.8 and dims (opacity 0.85) - the ellipse must read as 3D depth.
+- Edge planet markers parallax +-6pt against scrub direction.
+
+## Reduced motion
+Time jumps in 1h steps with a 300ms sky crossfade; moon relocates without travel.
+
+## Don&#x27;t miss
+- The bottom status pill is live data, not decoration - percentage and phase name must match the scrubbed time.
+- The time badge never detaches from the moon by more than its docked offset.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">drag-scrubbed orbital clock with day-night sky.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/moonlitt-time-scroll-interaction">original interaction</a> by Moonlitt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Moonlitt's main time scroll - dragging scrubs the clock, sliding the moon along its dotted orbit with a tracking time badge while the sky flows between purple day and dark navy night and the date pill ticks over.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen sky (purple day, deep navy night): the moon rides a dotted elliptical orbit at center, a small secondary body shares the orbit on the far side, floating pills show the date (\"Mar 11\", top-left) and the scrubbed time (\"14:25\", \"07:04\", \"21:35\"...), tiny planet markers dot the edges, and a bottom status pill reads the phase (\"Waxing Gibbous 54.4%\", \"Bengaluru\").\n\n## Motion spec\nPattern: drag-scrubbed orbital clock with day-night sky.\n- Drag horizontally (or vertically): drag maps to time (full width = 24h); the moon travels the orbit 1:1 with the scrub, the time badge riding beside it, text ticking live (tabular numerals).\n- Sky color tweens continuously with the hour: royal purple midday, indigo dusk, near-black navy 23:00-04:00, soft violet dawn - bound to time, not gesture.\n- The moon's phase shading and the status pill's phase name + percentage update live (pill text crossfades on change, 200ms).\n- Crossing midnight: the date pill rolls its number (old digits slide up, new slide in, 250ms) and a subtle shooting-star streak crosses (1s, once per day change).\n- Release: scrub eases to a stop (deceleration, 300ms), the badge docking beside the moon (spring ~300/20); the secondary body keeps orbiting slowly at all times (1 rev / 60s).\n\n## Calibration\n- Far side of the orbit: moon scales to 0.8 and dims (opacity 0.85) - the ellipse must read as 3D depth.\n- Edge planet markers parallax +-6pt against scrub direction.\n\n## Reduced motion\nTime jumps in 1h steps with a 300ms sky crossfade; moon relocates without travel.\n\n## Don't miss\n- The bottom status pill is live data, not decoration - percentage and phase name must match the scrubbed time.\n- The time badge never detaches from the moon by more than its docked offset."</script>
+</body></html>

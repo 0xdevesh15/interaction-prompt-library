@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stompers Bottom Sheet Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Stompers Bottom Sheet Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/stompers-bottom-sheet-onboarding"><b>Stompers</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stompers-bottom-sheet-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stompers-bottom-sheet-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Stompers&#x27; onboarding bottom sheet slides up over the steps home screen, pages through three illustrated slides with speech-bubble characters, and slides down to reveal the app.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e0002a96aa9b8d652d5662/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e0002a96aa9b8d652d5662/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-stompers-bottom-sheet-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Stompers&#x27; onboarding bottom sheet slides up over the steps home screen, pages through three illustrated slides with speech-bubble characters, and slides down to reveal the app.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Behind: the Stompers home screen (friends row, &quot;Steps today 2522&quot;, tab bar). A white bottom sheet with rounded top corners rises to ~65% height, dimming the home screen. Inside: an illustration band (red-orange zigzag backdrop with stylized runners), a headline, and an orange full-width CTA. Slides: &quot;Welcome to Stompers, rishi!&quot; (NEXT), &quot;Whoever ends the day in 1st wins&quot; (NEXT, blue character with &quot;HA-HA!&quot; bubble), &quot;Pick up power-ups to cause chaos!&quot; (LET&#x27;S GO, two yellow characters with &quot;HEE-HOO!&quot; bubble).
+
+## Motion spec
+Pattern: bottom-sheet onboarding with horizontal carousel and slide-down dismissal.
+- Sheet enters with a spring (~300/26) from off-screen bottom; backdrop dim fades to 40% (250ms).
+- The illustration band is a horizontal carousel: tapping NEXT swipes to the next illustration (spring ~320/28, 20ms/px velocity carry) while the headline crossfades (200ms) and the CTA label swaps (&quot;NEXT&quot; -&gt; &quot;LET&#x27;S GO&quot; on the last slide).
+- Speech bubbles pop in after each illustration settles (scale 0.6 -&gt; 1.1 -&gt; 1, spring ~380/16, 120ms delay).
+- LET&#x27;S GO slides the sheet back down (400ms, ease-in) and lifts the dim (300ms), revealing the home screen with its map card and leaderboard.
+- The sheet is drag-to-dismiss: it tracks the finger 1:1, and releasing past 30% of its height dismisses with velocity.
+
+## Calibration
+- The sheet moves as one unit; illustration, text, and CTA never separate.
+- Carousel paging and bubble pop are separate timelines: page first, pop second.
+
+## Reduced motion
+Sheet fades in/out (200ms); slides crossfade without horizontal travel.
+
+## Don&#x27;t miss
+- The orange CTA is full-width with a heavy corner radius and stays pinned above the home indicator.
+- Illustrations change per slide but keep the same red-orange zigzag backdrop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bottom-sheet onboarding with horizontal carousel and slide-down dismissal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/stompers-bottom-sheet-onboarding">original interaction</a> by Stompers. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Stompers' onboarding bottom sheet slides up over the steps home screen, pages through three illustrated slides with speech-bubble characters, and slides down to reveal the app.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBehind: the Stompers home screen (friends row, \"Steps today 2522\", tab bar). A white bottom sheet with rounded top corners rises to ~65% height, dimming the home screen. Inside: an illustration band (red-orange zigzag backdrop with stylized runners), a headline, and an orange full-width CTA. Slides: \"Welcome to Stompers, rishi!\" (NEXT), \"Whoever ends the day in 1st wins\" (NEXT, blue character with \"HA-HA!\" bubble), \"Pick up power-ups to cause chaos!\" (LET'S GO, two yellow characters with \"HEE-HOO!\" bubble).\n\n## Motion spec\nPattern: bottom-sheet onboarding with horizontal carousel and slide-down dismissal.\n- Sheet enters with a spring (~300/26) from off-screen bottom; backdrop dim fades to 40% (250ms).\n- The illustration band is a horizontal carousel: tapping NEXT swipes to the next illustration (spring ~320/28, 20ms/px velocity carry) while the headline crossfades (200ms) and the CTA label swaps (\"NEXT\" -> \"LET'S GO\" on the last slide).\n- Speech bubbles pop in after each illustration settles (scale 0.6 -> 1.1 -> 1, spring ~380/16, 120ms delay).\n- LET'S GO slides the sheet back down (400ms, ease-in) and lifts the dim (300ms), revealing the home screen with its map card and leaderboard.\n- The sheet is drag-to-dismiss: it tracks the finger 1:1, and releasing past 30% of its height dismisses with velocity.\n\n## Calibration\n- The sheet moves as one unit; illustration, text, and CTA never separate.\n- Carousel paging and bubble pop are separate timelines: page first, pop second.\n\n## Reduced motion\nSheet fades in/out (200ms); slides crossfade without horizontal travel.\n\n## Don't miss\n- The orange CTA is full-width with a heavy corner radius and stays pinned above the home indicator.\n- Illustrations change per slide but keep the same red-orange zigzag backdrop."</script>
+</body></html>

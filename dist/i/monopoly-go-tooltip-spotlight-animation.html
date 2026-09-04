@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Tooltip Spotlight Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Tooltip Spotlight Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-tooltip-spotlight-animation"><b>Monopoly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-tooltip-spotlight-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-tooltip-spotlight-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Monopoly Go&#x27;s reward spotlight - the board dims, the collected reward tile stays lit in a spotlight, and Mr. Monopoly slides in with an encouraging tooltip.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab4ee6c592aacedb2d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1ab4ee6c592aacedb2d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-tooltip-spotlight-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Monopoly Go&#x27;s reward spotlight - the board dims, the collected reward tile stays lit in a spotlight, and Mr. Monopoly slides in with an encouraging tooltip.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Monopoly Go board with a &quot;YOUR REWARDS! MONTE CARLO&quot; banner of question-mark tiles and a ROLL button. One reward tile flips to reveal a cash stack with &quot;322M&quot;, then the whole board dims except a spotlight on that tile, and Mr. Monopoly appears with a tooltip: &quot;You collected a reward! Continue collecting to fill your prizes bar and leave the Bank with your rewards!&quot;
+
+## Motion spec
+Pattern: spotlight dim with mascot tooltip, ~2.5s.
+- A reward tile flips over (rotateY 180, 300ms) revealing the cash stack, its value &quot;322M&quot; popping in (scale 1.3 to 1, 200ms) with a gold glow pulse.
+- The board dims to 40% (350ms) while the revealed tile stays at full brightness inside a soft-edged spotlight mask.
+- Mr. Monopoly slides in from the left (spring stiffness 320 damping 18) as his tooltip bubble pops open (scale 0.8 to 1, stiffness 400 damping 16).
+- The tooltip holds 1.5s, then everything reverses: bubble and mascot exit left (250ms), the board undims (300ms), the revealed tile joining the banner row.
+
+## Calibration
+- The spotlight edge is a soft radial falloff, not a hard cutout.
+- The dim, mascot entrance, and bubble pop overlap in that order - the staging reads as one guided beat.
+
+## Reduced motion
+Elements fade; no spotlight sweep.
+
+## Don&#x27;t miss
+- Only the collected tile is revealed; the other tiles keep their question marks.
+- The tooltip&#x27;s tail points at Mr. Monopoly, positioned left of the spotlight.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spotlight dim with mascot tooltip, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-tooltip-spotlight-animation">original interaction</a> by Monopoly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Monopoly Go's reward spotlight - the board dims, the collected reward tile stays lit in a spotlight, and Mr. Monopoly slides in with an encouraging tooltip.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Monopoly Go board with a \"YOUR REWARDS! MONTE CARLO\" banner of question-mark tiles and a ROLL button. One reward tile flips to reveal a cash stack with \"322M\", then the whole board dims except a spotlight on that tile, and Mr. Monopoly appears with a tooltip: \"You collected a reward! Continue collecting to fill your prizes bar and leave the Bank with your rewards!\"\n\n## Motion spec\nPattern: spotlight dim with mascot tooltip, ~2.5s.\n- A reward tile flips over (rotateY 180, 300ms) revealing the cash stack, its value \"322M\" popping in (scale 1.3 to 1, 200ms) with a gold glow pulse.\n- The board dims to 40% (350ms) while the revealed tile stays at full brightness inside a soft-edged spotlight mask.\n- Mr. Monopoly slides in from the left (spring stiffness 320 damping 18) as his tooltip bubble pops open (scale 0.8 to 1, stiffness 400 damping 16).\n- The tooltip holds 1.5s, then everything reverses: bubble and mascot exit left (250ms), the board undims (300ms), the revealed tile joining the banner row.\n\n## Calibration\n- The spotlight edge is a soft radial falloff, not a hard cutout.\n- The dim, mascot entrance, and bubble pop overlap in that order - the staging reads as one guided beat.\n\n## Reduced motion\nElements fade; no spotlight sweep.\n\n## Don't miss\n- Only the collected tile is revealed; the other tiles keep their question marks.\n- The tooltip's tail points at Mr. Monopoly, positioned left of the spotlight."</script>
+</body></html>

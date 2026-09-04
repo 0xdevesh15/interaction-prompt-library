@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uber One Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Uber One Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/uber-one-splash"><b>Uber</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/uber-one-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/uber-one-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Uber&#x27;s Member Days splash - the gold Uber One arch assembles over the wordmark on black, then the whole splash slides up to reveal the light home screen in staggered springs.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687314120e3615485c3fbd77/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687314120e3615485c3fbd77/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-uber-one-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Uber&#x27;s Member Days splash - the gold Uber One arch assembles over the wordmark on black, then the whole splash slides up to reveal the light home screen in staggered springs.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black splash: the Uber wordmark at center with the Uber One gold arch above it - a half-circle badge with a ribbon tail, small stars, and the membership mark at its center. Home screen behind: &quot;Where to?&quot; search bar with a &quot;Later&quot; chip, a &quot;Member Days&quot; banner (gold arch, car illustration, &quot;Uber One members save extra from May 16-23&quot;, &quot;See offers&quot; button), and saved-place rows (Metro Station Indira Nagar, Suvaii - A Pandiyan Legacy).
+
+## Motion spec
+Pattern: emblem assembly on splash, then slide-up reveal with staggered home entrance.
+- The wordmark fades in (300ms), then the gold arch draws itself above it (arc stroke, 500ms), stars pop in around it (scale 0 -&gt; 1, spring ~400/15, 60ms stagger), and the center badge zooms in (scale 0.5 -&gt; 1.1 -&gt; 1, spring ~280/14).
+- After a 600ms hold, the splash slides up as one sheet (500ms, ease-in-out), revealing the home screen beneath.
+- Home elements stagger in: search bar first (fade + rise 12pt, spring ~320/24), then the Member Days banner (scale 0.95 -&gt; 1, spring ~300/20), then the saved-place rows (fade + rise 10pt, 220ms each, 90ms apart).
+- The banner&#x27;s car illustration rolls in from the right (translate + slight tilt settle, spring ~260/20).
+
+## Calibration
+- The splash is one rigid sheet - wordmark and arch exit together, no parallax between them.
+- Gold is muted champagne, not yellow; the black splash stays pure.
+
+## Reduced motion
+Splash crossfades to home (300ms); home elements fade together.
+
+## Don&#x27;t miss
+- The arch sits directly above the wordmark, centered - it never overlaps the letters.
+- The home reveal is staggered top-to-bottom; the banner is the hero of that entrance.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">emblem assembly on splash, then slide-up reveal with staggered home entrance.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/uber-one-splash">original interaction</a> by Uber. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Uber's Member Days splash - the gold Uber One arch assembles over the wordmark on black, then the whole splash slides up to reveal the light home screen in staggered springs.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack splash: the Uber wordmark at center with the Uber One gold arch above it - a half-circle badge with a ribbon tail, small stars, and the membership mark at its center. Home screen behind: \"Where to?\" search bar with a \"Later\" chip, a \"Member Days\" banner (gold arch, car illustration, \"Uber One members save extra from May 16-23\", \"See offers\" button), and saved-place rows (Metro Station Indira Nagar, Suvaii - A Pandiyan Legacy).\n\n## Motion spec\nPattern: emblem assembly on splash, then slide-up reveal with staggered home entrance.\n- The wordmark fades in (300ms), then the gold arch draws itself above it (arc stroke, 500ms), stars pop in around it (scale 0 -> 1, spring ~400/15, 60ms stagger), and the center badge zooms in (scale 0.5 -> 1.1 -> 1, spring ~280/14).\n- After a 600ms hold, the splash slides up as one sheet (500ms, ease-in-out), revealing the home screen beneath.\n- Home elements stagger in: search bar first (fade + rise 12pt, spring ~320/24), then the Member Days banner (scale 0.95 -> 1, spring ~300/20), then the saved-place rows (fade + rise 10pt, 220ms each, 90ms apart).\n- The banner's car illustration rolls in from the right (translate + slight tilt settle, spring ~260/20).\n\n## Calibration\n- The splash is one rigid sheet - wordmark and arch exit together, no parallax between them.\n- Gold is muted champagne, not yellow; the black splash stays pure.\n\n## Reduced motion\nSplash crossfades to home (300ms); home elements fade together.\n\n## Don't miss\n- The arch sits directly above the wordmark, centered - it never overlaps the letters.\n- The home reveal is staggered top-to-bottom; the banner is the hero of that entrance."</script>
+</body></html>

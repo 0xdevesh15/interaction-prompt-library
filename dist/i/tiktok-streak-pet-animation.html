@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TikTok Streak Pet Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>TikTok Streak Pet Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tiktok-streak-pet-animation"><b>Tiktok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiktok-streak-pet-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiktok-streak-pet-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: TikTok&#x27;s streak pet sheet - inside the &quot;Invite people and chat for 3 days to hatch a Streak Pet&quot; sheet, the yellow egg cracks open, a round chick pet pops out, and idles with wiggles, blinks, and happy squints.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68dd37b347be0324fb7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68dd37b347be0324fb7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tiktok-streak-pet-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: TikTok&#x27;s streak pet sheet - inside the &quot;Invite people and chat for 3 days to hatch a Streak Pet&quot; sheet, the yellow egg cracks open, a round chick pet pops out, and idles with wiggles, blinks, and happy squints.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White bottom sheet over a dimmed video: title, a blue chat-bubble illustration with the egg beside it, a &quot;Select people&quot; search field, and a row of colorful share-target circles (WhatsApp, Messenger, and friends). The egg sits right of the bubble; the pet is a small round yellow chick with glasses-like eyes.
+
+## Motion spec
+Pattern: idle character loop, ~2.4s cycle.
+- Crack: the egg wobbles (+-8deg, 3 cycles, 500ms), a crack line flashes, and the shell pops apart (150ms) as the chick springs out (scale 0.3 -&gt; 1.1 -&gt; 1, spring ~380/16).
+- Idle: the chick bobs (+-3px, 1.2s), wiggles side to side (+-5deg) every ~2s, and blinks (eyes to lines, 120ms) at random 2-4s intervals.
+- Happy: on a squint, the eyes become ^^ arcs and the chick does a quick double-hop (two 120ms hops, 6px).
+- Sheet: the sheet itself raised once with a standard spring (~320/24) before the egg sequence starts.
+
+## Calibration
+- The idle loop runs indefinitely; crack-and-pop plays once per sheet open.
+- The chick never leaves its anchor beside the chat bubble.
+
+## Reduced motion
+Egg crossfades to the chick (250ms); static idle pose.
+
+## Don&#x27;t miss
+- The wiggle is rotational around the bottom edge - the chick pivots, not translates.
+- Blink timing is irregular, not metronomic.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">idle character loop, ~2.4s cycle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tiktok-streak-pet-animation">original interaction</a> by Tiktok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: TikTok's streak pet sheet - inside the \"Invite people and chat for 3 days to hatch a Streak Pet\" sheet, the yellow egg cracks open, a round chick pet pops out, and idles with wiggles, blinks, and happy squints.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite bottom sheet over a dimmed video: title, a blue chat-bubble illustration with the egg beside it, a \"Select people\" search field, and a row of colorful share-target circles (WhatsApp, Messenger, and friends). The egg sits right of the bubble; the pet is a small round yellow chick with glasses-like eyes.\n\n## Motion spec\nPattern: idle character loop, ~2.4s cycle.\n- Crack: the egg wobbles (+-8deg, 3 cycles, 500ms), a crack line flashes, and the shell pops apart (150ms) as the chick springs out (scale 0.3 -> 1.1 -> 1, spring ~380/16).\n- Idle: the chick bobs (+-3px, 1.2s), wiggles side to side (+-5deg) every ~2s, and blinks (eyes to lines, 120ms) at random 2-4s intervals.\n- Happy: on a squint, the eyes become ^^ arcs and the chick does a quick double-hop (two 120ms hops, 6px).\n- Sheet: the sheet itself raised once with a standard spring (~320/24) before the egg sequence starts.\n\n## Calibration\n- The idle loop runs indefinitely; crack-and-pop plays once per sheet open.\n- The chick never leaves its anchor beside the chat bubble.\n\n## Reduced motion\nEgg crossfades to the chick (250ms); static idle pose.\n\n## Don't miss\n- The wiggle is rotational around the bottom edge - the chick pivots, not translates.\n- Blink timing is irregular, not metronomic."</script>
+</body></html>

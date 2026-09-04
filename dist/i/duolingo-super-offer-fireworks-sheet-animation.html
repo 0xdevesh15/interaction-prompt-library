@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Super Offer Fireworks Sheet Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Super Offer Fireworks Sheet Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-super-offer-fireworks-sheet-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-super-offer-fireworks-sheet-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-super-offer-fireworks-sheet-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s Super offer sheet - a dark navy promo sheet with the 60% off pitch while tiny neon firework sparkles pop in a loop around its upper half.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69730c933a475e0dbbfa7ace/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69730c933a475e0dbbfa7ace/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-super-offer-fireworks-sheet-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s Super offer sheet - a dark navy promo sheet with the 60% off pitch while tiny neon firework sparkles pop in a loop around its upper half.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Duolingo promo sheet over the dimmed learning path: SUPER duolingo rainbow logo, &quot;Start 2026 with 60% off!&quot;, &quot;Savings apply to the 12-month plan.&quot; and &quot;Offer ends in 71h 59m&quot; in green, a white &quot;GET 60% OFF&quot; button, and &quot;SKIP OFFER&quot; below. Sparkles: small 4-point starbursts and dots in pink, green, blue, white.
+
+## Motion spec
+Pattern: ambient looping sparkle field on a promo sheet.
+- The sheet slides up on entry (350ms, ease-out) and the backdrop dims (250ms); contents fade in staggered top to bottom (logo, headline, terms, button, skip - 60ms apart, 200ms each).
+- The sparkle loop runs continuously: every ~350ms a starburst pops at a random position in the sheet&#x27;s upper 60% - flash in (scale 0 -&gt; 1, 100ms), hold 150ms, fade-shrink out (250ms).
+- Colors cycle pink -&gt; green -&gt; blue -&gt; white with no immediate repeats; 20% of pops are tiny dots instead of stars.
+- Occasionally (every ~2s) two sparkles pop within 100ms of each other - a double twinkle.
+- The countdown (&quot;71h 59m&quot;) ticks per minute with a soft digit roll (150ms).
+- The button breathes very subtly (opacity 1 -&gt; 0.92 -&gt; 1, 3s) - the sparkles own the energy, not the CTA.
+
+## Calibration
+- Sparkles never land on the headline text or the button - the field is the background layer only.
+- Never more than 3 sparkles alive at once; twinkle, not strobe.
+
+## Reduced motion
+One static sparkle arrangement; countdown swaps digits without rolling.
+
+## Don&#x27;t miss
+- The offer timer is real and minute-accurate.
+- The dimmed path behind the sheet stays fully still - no parallax.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient looping sparkle field on a promo sheet.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-super-offer-fireworks-sheet-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's Super offer sheet - a dark navy promo sheet with the 60% off pitch while tiny neon firework sparkles pop in a loop around its upper half.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDuolingo promo sheet over the dimmed learning path: SUPER duolingo rainbow logo, \"Start 2026 with 60% off!\", \"Savings apply to the 12-month plan.\" and \"Offer ends in 71h 59m\" in green, a white \"GET 60% OFF\" button, and \"SKIP OFFER\" below. Sparkles: small 4-point starbursts and dots in pink, green, blue, white.\n\n## Motion spec\nPattern: ambient looping sparkle field on a promo sheet.\n- The sheet slides up on entry (350ms, ease-out) and the backdrop dims (250ms); contents fade in staggered top to bottom (logo, headline, terms, button, skip - 60ms apart, 200ms each).\n- The sparkle loop runs continuously: every ~350ms a starburst pops at a random position in the sheet's upper 60% - flash in (scale 0 -> 1, 100ms), hold 150ms, fade-shrink out (250ms).\n- Colors cycle pink -> green -> blue -> white with no immediate repeats; 20% of pops are tiny dots instead of stars.\n- Occasionally (every ~2s) two sparkles pop within 100ms of each other - a double twinkle.\n- The countdown (\"71h 59m\") ticks per minute with a soft digit roll (150ms).\n- The button breathes very subtly (opacity 1 -> 0.92 -> 1, 3s) - the sparkles own the energy, not the CTA.\n\n## Calibration\n- Sparkles never land on the headline text or the button - the field is the background layer only.\n- Never more than 3 sparkles alive at once; twinkle, not strobe.\n\n## Reduced motion\nOne static sparkle arrangement; countdown swaps digits without rolling.\n\n## Don't miss\n- The offer timer is real and minute-accurate.\n- The dimmed path behind the sheet stays fully still - no parallax."</script>
+</body></html>

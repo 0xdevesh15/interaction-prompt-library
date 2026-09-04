@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queue Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Queue Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/queue-splash"><b>Queue</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Queue&#x27;s splash - podcast artworks drift in from the edges of the blank white screen and float until they fill it, then everything fades to a soft gradient as the Queue wordmark scales in and the button springs up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734a334ba34cfe064c72251/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734a334ba34cfe064c72251/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-queue-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Queue&#x27;s splash - podcast artworks drift in from the edges of the blank white screen and float until they fill it, then everything fades to a soft gradient as the Queue wordmark scales in and the button springs up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white launch screen. Square podcast artworks (a couple dozen distinct covers) float in loose scatter. The final state: pale blue-green radial gradient, centered Queue logo mark above the bold &quot;Queue&quot; wordmark, a rounded button beneath.
+
+## Motion spec
+Pattern: multi-stage ambient entrance.
+- Stage 1 (0-2.5s): artworks enter from random off-screen edges one at a time (80ms apart), each gliding to a random resting position (ease-out 700ms) with a slight settle rotation (+/-8deg) - no two share a trajectory.
+- Once landed, each artwork idles: slow drift (translate +/-10px on a random 4-7s loop) with a barely-there breathing scale (1 -&gt; 1.02).
+- Stage 2 (2.5-3.2s): the whole field fades out (opacity -&gt; 0, 500ms) while the background crossfades to the pale gradient.
+- Stage 3: the logo mark scales in (0.5 -&gt; 1, spring ~380/17, overshoot visible, 450ms), then the wordmark fades + rises 10px (250ms, 100ms later), then the button springs up from below (translateY 24px -&gt; 0, spring ~320/20, 350ms, 200ms later).
+
+## Calibration
+- The artwork field never overlaps the center - the middle of the screen stays clear for the logo reveal.
+- Total sequence about 4s; skippable on tap.
+
+## Reduced motion
+Single crossfade from white to the logo state.
+
+## Don&#x27;t miss
+- Artworks are slightly different sizes (0.8x-1.2x) - a uniform grid kills the drift feel.
+- The gradient is centered behind the logo - radial, not linear.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">multi-stage ambient entrance.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/queue-splash">original interaction</a> by Queue. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Queue's splash - podcast artworks drift in from the edges of the blank white screen and float until they fill it, then everything fades to a soft gradient as the Queue wordmark scales in and the button springs up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white launch screen. Square podcast artworks (a couple dozen distinct covers) float in loose scatter. The final state: pale blue-green radial gradient, centered Queue logo mark above the bold \"Queue\" wordmark, a rounded button beneath.\n\n## Motion spec\nPattern: multi-stage ambient entrance.\n- Stage 1 (0-2.5s): artworks enter from random off-screen edges one at a time (80ms apart), each gliding to a random resting position (ease-out 700ms) with a slight settle rotation (+/-8deg) - no two share a trajectory.\n- Once landed, each artwork idles: slow drift (translate +/-10px on a random 4-7s loop) with a barely-there breathing scale (1 -> 1.02).\n- Stage 2 (2.5-3.2s): the whole field fades out (opacity -> 0, 500ms) while the background crossfades to the pale gradient.\n- Stage 3: the logo mark scales in (0.5 -> 1, spring ~380/17, overshoot visible, 450ms), then the wordmark fades + rises 10px (250ms, 100ms later), then the button springs up from below (translateY 24px -> 0, spring ~320/20, 350ms, 200ms later).\n\n## Calibration\n- The artwork field never overlaps the center - the middle of the screen stays clear for the logo reveal.\n- Total sequence about 4s; skippable on tap.\n\n## Reduced motion\nSingle crossfade from white to the logo state.\n\n## Don't miss\n- Artworks are slightly different sizes (0.8x-1.2x) - a uniform grid kills the drift feel.\n- The gradient is centered behind the logo - radial, not linear."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LG ThinQ Coachmarks Onboarding Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>LG ThinQ Coachmarks Onboarding Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lg-thinq-coachmarks-onboarding-interaction"><b>Lg</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lg-thinq-coachmarks-onboarding-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lg-thinq-coachmarks-onboarding-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: LG ThinQ&#x27;s coachmarks - a three-step tooltip walkthrough dims the remote UI, highlights each control in turn (voice mic, search bar, touchpad) with an outlined glow, and finishes with a thumbs-up &quot;you&#x27;re ready&quot; card.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e00032586c4a5a5e05bf4d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67e00032586c4a5a5e05bf4d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lg-thinq-coachmarks-onboarding-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: LG ThinQ&#x27;s coachmarks - a three-step tooltip walkthrough dims the remote UI, highlights each control in turn (voice mic, search bar, touchpad) with an outlined glow, and finishes with a thumbs-up &quot;you&#x27;re ready&quot; card.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark TV-remote app. Step 1/3: &quot;Easy control with voice&quot; tooltip with a down arrow pointing at the pulsing mic button. Step 2/3: &quot;Easy to Search&quot; tooltip with an up arrow pointing at the rounded search bar (teal outline). Step 3/3: &quot;Touchpad&quot; tooltip pointing at the touchpad toggle. Finish: centered thumbs-up illustration with &quot;Finish! Now, you&#x27;re ready to use the TV with ThinQ!&quot; and a Get started button. Previous/Next controls below.
+
+## Motion spec
+Pattern: stepped coachmark sequence with glowing target highlights.
+- Each step: the dim scrim (black ~70%) holds; the target control gets a teal rounded outline that draws itself (stroke animates over 400ms) then pulses (opacity 0.6 -&gt; 1, 1.4s loop).
+- The tooltip card enters from the arrow&#x27;s direction (translate 12pt + fade, spring ~300/20, 300ms); its arrow nudges toward the target in a 1s loop (translate 4pt, ease-in-out).
+- Step transitions: the old tooltip slides out and fades (200ms), the old outline undraws (250ms), then the new outline draws and the new tooltip enters - sequential, not simultaneous.
+- The step counter (1/3, 2/3, 3/3) crossfades above each tooltip.
+- Finish step: scrim lightens (~40%), the thumbs-up scales in (0.7 -&gt; 1.05 -&gt; 1, spring ~340/15) and the copy fades up (250ms).
+
+## Calibration
+- Only one highlight lives at a time; the sequence is strictly ordered.
+- Tooltip never covers its target - it docks on the opposite side of the arrow.
+
+## Reduced motion
+Tooltips and outlines fade in place (250ms); no travel or pulse loops.
+
+## Don&#x27;t miss
+- The mic button keeps its own idle pulse even under the scrim.
+- Previous returns one step with reversed motion; there is no skip until the finish card.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">stepped coachmark sequence with glowing target highlights.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lg-thinq-coachmarks-onboarding-interaction">original interaction</a> by Lg. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: LG ThinQ's coachmarks - a three-step tooltip walkthrough dims the remote UI, highlights each control in turn (voice mic, search bar, touchpad) with an outlined glow, and finishes with a thumbs-up \"you're ready\" card.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark TV-remote app. Step 1/3: \"Easy control with voice\" tooltip with a down arrow pointing at the pulsing mic button. Step 2/3: \"Easy to Search\" tooltip with an up arrow pointing at the rounded search bar (teal outline). Step 3/3: \"Touchpad\" tooltip pointing at the touchpad toggle. Finish: centered thumbs-up illustration with \"Finish! Now, you're ready to use the TV with ThinQ!\" and a Get started button. Previous/Next controls below.\n\n## Motion spec\nPattern: stepped coachmark sequence with glowing target highlights.\n- Each step: the dim scrim (black ~70%) holds; the target control gets a teal rounded outline that draws itself (stroke animates over 400ms) then pulses (opacity 0.6 -> 1, 1.4s loop).\n- The tooltip card enters from the arrow's direction (translate 12pt + fade, spring ~300/20, 300ms); its arrow nudges toward the target in a 1s loop (translate 4pt, ease-in-out).\n- Step transitions: the old tooltip slides out and fades (200ms), the old outline undraws (250ms), then the new outline draws and the new tooltip enters - sequential, not simultaneous.\n- The step counter (1/3, 2/3, 3/3) crossfades above each tooltip.\n- Finish step: scrim lightens (~40%), the thumbs-up scales in (0.7 -> 1.05 -> 1, spring ~340/15) and the copy fades up (250ms).\n\n## Calibration\n- Only one highlight lives at a time; the sequence is strictly ordered.\n- Tooltip never covers its target - it docks on the opposite side of the arrow.\n\n## Reduced motion\nTooltips and outlines fade in place (250ms); no travel or pulse loops.\n\n## Don't miss\n- The mic button keeps its own idle pulse even under the scrim.\n- Previous returns one step with reversed motion; there is no skip until the finish card."</script>
+</body></html>

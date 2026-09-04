@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Arcade Splash Logo Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Arcade Splash Logo Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-arcade-splash-logo-animation"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-arcade-splash-logo-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-arcade-splash-logo-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Arcade&#x27;s launch splash - a black screen with the Apple logo gives way to a red gradient stage where blurry, morphing letterforms sharpen and assemble into the white &quot;Apple Arcade&quot; wordmark.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91dc84c6b7e105cdf95/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91dc84c6b7e105cdf95/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-arcade-splash-logo-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Arcade&#x27;s launch splash - a black screen with the Apple logo gives way to a red gradient stage where blurry, morphing letterforms sharpen and assemble into the white &quot;Apple Arcade&quot; wordmark.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen splash. Opens black with a small centered white Apple logo. Then a vertical red gradient (bright red top to deep crimson bottom) fills the screen; the Apple logo shrinks to the left of center as the Arcade glyphs appear beside it.
+
+## Motion spec
+Pattern: brand splash - blur-morph letterform resolve.
+- Black-to-red transition: red gradient wipes/fades in from the edges (~400ms) while the Apple logo slides left to its wordmark position.
+- Each letter of &quot;Arcade&quot; enters as a heavily blurred (~20px), oversized ghost of itself, then resolves: blur -&gt; 0 and scale ~1.4 -&gt; 1 over ~500ms, staggered left to right (~80ms per letter).
+- Early letters show a brief morph through neighboring glyph shapes (an &quot;A&quot; ghost flickers toward &quot;c&quot; before settling) - a 2-3 frame glyph wobble at low blur.
+- Final state holds: white Apple logo + &quot;Arcade&quot; in SF-style rounded bold, perfectly still.
+
+## Calibration
+- Blur does the heavy lifting; opacity stays near 1 throughout - letters smear into focus rather than fade in.
+- Stagger is quick and uniform; the whole resolve finishes in under 1.5s.
+
+## Reduced motion
+Crossfade from black screen to final wordmark on red (300ms), no blur morph.
+
+## Don&#x27;t miss
+- The red is a vertical gradient, not a flat fill.
+- The Apple logo does not appear with the letters - it arrives first (from the black screen) and the letters assemble after it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">brand splash - blur-morph letterform resolve.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-arcade-splash-logo-animation">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Arcade's launch splash - a black screen with the Apple logo gives way to a red gradient stage where blurry, morphing letterforms sharpen and assemble into the white \"Apple Arcade\" wordmark.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen splash. Opens black with a small centered white Apple logo. Then a vertical red gradient (bright red top to deep crimson bottom) fills the screen; the Apple logo shrinks to the left of center as the Arcade glyphs appear beside it.\n\n## Motion spec\nPattern: brand splash - blur-morph letterform resolve.\n- Black-to-red transition: red gradient wipes/fades in from the edges (~400ms) while the Apple logo slides left to its wordmark position.\n- Each letter of \"Arcade\" enters as a heavily blurred (~20px), oversized ghost of itself, then resolves: blur -> 0 and scale ~1.4 -> 1 over ~500ms, staggered left to right (~80ms per letter).\n- Early letters show a brief morph through neighboring glyph shapes (an \"A\" ghost flickers toward \"c\" before settling) - a 2-3 frame glyph wobble at low blur.\n- Final state holds: white Apple logo + \"Arcade\" in SF-style rounded bold, perfectly still.\n\n## Calibration\n- Blur does the heavy lifting; opacity stays near 1 throughout - letters smear into focus rather than fade in.\n- Stagger is quick and uniform; the whole resolve finishes in under 1.5s.\n\n## Reduced motion\nCrossfade from black screen to final wordmark on red (300ms), no blur morph.\n\n## Don't miss\n- The red is a vertical gradient, not a flat fill.\n- The Apple logo does not appear with the letters - it arrives first (from the black screen) and the letters assemble after it."</script>
+</body></html>

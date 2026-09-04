@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yume 3D Book Scale Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Yume 3D Book Scale Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/yume-3d-book-scale-interaction"><b>Yume</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/yume-3d-book-scale-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/yume-3d-book-scale-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Yume&#x27;s editor card - the journal card springs up to a full-screen writing view with the keyboard, and when the keyboard dismisses the card scales back down with a soft 3D tilt into the browse list.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9d2cd4a3cfd549a7f8d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9d2cd4a3cfd549a7f8d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-yume-3d-book-scale-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Yume&#x27;s editor card - the journal card springs up to a full-screen writing view with the keyboard, and when the keyboard dismisses the card scales back down with a soft 3D tilt into the browse list.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark journal app: &quot;Browse your dreams&quot; list with a journal card over the month strip; expanded state is a full-screen editor (&quot;how did your dream start?&quot;) with the keyboard up and a &quot;Capture&quot; action.
+
+## Motion spec
+Pattern: spring card-to-editor scaling keyed to the keyboard, ~400ms.
+- Open: the card scales to full screen (spring ~300/24, 380ms), header and month strip fading (200ms) as the keyboard rises (matches the system curve).
+- Dismiss: the keyboard slides away first; as it leaves, the card tilts slightly (rotateX ~8deg, perspective 1000px) and scales back to its list slot (spring ~340/22, 420ms) while the list chrome fades back in (200ms).
+- The card overshoots its slot by ~3% on the way home and settles.
+- Text content stays legible throughout - it scales with the card, no relayout flash.
+
+## Calibration
+- The keyboard drives the timing: the card&#x27;s return starts as the keyboard&#x27;s dismissal begins, not after it ends.
+- The tilt peaks mid-flight and is zero at both ends.
+
+## Reduced motion
+Plain scale and fade, no tilt or overshoot.
+
+## Don&#x27;t miss
+- The return has a small overshoot - it is a spring, not a linear shrink.
+- The browse chrome returns with the card, not before it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring card-to-editor scaling keyed to the keyboard, ~400ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/yume-3d-book-scale-interaction">original interaction</a> by Yume. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Yume's editor card - the journal card springs up to a full-screen writing view with the keyboard, and when the keyboard dismisses the card scales back down with a soft 3D tilt into the browse list.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark journal app: \"Browse your dreams\" list with a journal card over the month strip; expanded state is a full-screen editor (\"how did your dream start?\") with the keyboard up and a \"Capture\" action.\n\n## Motion spec\nPattern: spring card-to-editor scaling keyed to the keyboard, ~400ms.\n- Open: the card scales to full screen (spring ~300/24, 380ms), header and month strip fading (200ms) as the keyboard rises (matches the system curve).\n- Dismiss: the keyboard slides away first; as it leaves, the card tilts slightly (rotateX ~8deg, perspective 1000px) and scales back to its list slot (spring ~340/22, 420ms) while the list chrome fades back in (200ms).\n- The card overshoots its slot by ~3% on the way home and settles.\n- Text content stays legible throughout - it scales with the card, no relayout flash.\n\n## Calibration\n- The keyboard drives the timing: the card's return starts as the keyboard's dismissal begins, not after it ends.\n- The tilt peaks mid-flight and is zero at both ends.\n\n## Reduced motion\nPlain scale and fade, no tilt or overshoot.\n\n## Don't miss\n- The return has a small overshoot - it is a spring, not a linear shrink.\n- The browse chrome returns with the card, not before it."</script>
+</body></html>

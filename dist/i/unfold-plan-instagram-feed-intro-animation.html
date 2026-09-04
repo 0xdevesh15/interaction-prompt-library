@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unfold Plan Instagram Feed Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Unfold Plan Instagram Feed Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/unfold-plan-instagram-feed-intro-animation"><b>Unfold</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/unfold-plan-instagram-feed-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/unfold-plan-instagram-feed-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Unfold&#x27;s &quot;Plan and organize your Instagram Feed&quot; intro - a scattered, rotated pile of photos animates smoothly into a tidy 3x3 Instagram profile grid under a profile header.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67bdf4786ca0059a95bbcac5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67bdf4786ca0059a95bbcac5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-unfold-plan-instagram-feed-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Unfold&#x27;s &quot;Plan and organize your Instagram Feed&quot; intro - a scattered, rotated pile of photos animates smoothly into a tidy 3x3 Instagram profile grid under a profile header.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light planner screen: top bar (&quot;Plan&quot;, icons, hamburger), a content stage that starts as a chaotic pile of ~9 photos (varied rotations, overlaps) and ends as an Instagram profile mock (avatar, handle, stats row, 3x3 photo grid), headline &quot;Plan and organize your Instagram Feed&quot;, page dots, black &quot;CONNECT YOUR ACCOUNT&quot; button, tab bar.
+
+## Motion spec
+Pattern: chaos-to-grid reorganize, ~2s.
+- The photo pile assembles first: photos fade in at scattered positions and rotations (+-15deg), 400ms, hold 600ms.
+- On cue, every photo tweens simultaneously to its grid slot: position, rotation (-&gt; 0deg), and scale (~1 -&gt; 0.32) over 700ms, ease-in-out, each photo offset by a 30ms stagger from center outward.
+- The profile header (avatar, name, stats) fades in above the grid during the last 300ms.
+- Final grid has even 2px gaps, photos square, no rotation.
+
+## Calibration
+- All photos must move at once; sequential sorting reads as a list animation, not a reorganization.
+- Stagger radiates from the grid&#x27;s center cell outward - edge-first reads as a wipe.
+
+## Reduced motion
+Pile crossfades to the finished grid (400ms); no per-photo travel.
+
+## Don&#x27;t miss
+- Photo order in the grid is fixed (it implies a planned feed) - shuffling destinations breaks the metaphor.
+- During travel, photos scale down gradually; moving at full size then snapping small ruins the effect.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">chaos-to-grid reorganize, ~2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/unfold-plan-instagram-feed-intro-animation">original interaction</a> by Unfold. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Unfold's \"Plan and organize your Instagram Feed\" intro - a scattered, rotated pile of photos animates smoothly into a tidy 3x3 Instagram profile grid under a profile header.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight planner screen: top bar (\"Plan\", icons, hamburger), a content stage that starts as a chaotic pile of ~9 photos (varied rotations, overlaps) and ends as an Instagram profile mock (avatar, handle, stats row, 3x3 photo grid), headline \"Plan and organize your Instagram Feed\", page dots, black \"CONNECT YOUR ACCOUNT\" button, tab bar.\n\n## Motion spec\nPattern: chaos-to-grid reorganize, ~2s.\n- The photo pile assembles first: photos fade in at scattered positions and rotations (+-15deg), 400ms, hold 600ms.\n- On cue, every photo tweens simultaneously to its grid slot: position, rotation (-> 0deg), and scale (~1 -> 0.32) over 700ms, ease-in-out, each photo offset by a 30ms stagger from center outward.\n- The profile header (avatar, name, stats) fades in above the grid during the last 300ms.\n- Final grid has even 2px gaps, photos square, no rotation.\n\n## Calibration\n- All photos must move at once; sequential sorting reads as a list animation, not a reorganization.\n- Stagger radiates from the grid's center cell outward - edge-first reads as a wipe.\n\n## Reduced motion\nPile crossfades to the finished grid (400ms); no per-photo travel.\n\n## Don't miss\n- Photo order in the grid is fixed (it implies a planned feed) - shuffling destinations breaks the metaphor.\n- During travel, photos scale down gradually; moving at full size then snapping small ruins the effect."</script>
+</body></html>

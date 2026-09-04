@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Play Page Settings Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Play Page Settings Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/play-page-settings-slider"><b>Play</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/play-page-settings-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/play-page-settings-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Play&#x27;s page settings - opening settings scales the canvas down and rises a dark bottom-sheet panel of page properties with scrubbable sliders whose value badges float above the thumb.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd299f86c96258d4283/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd299f86c96258d4283/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-play-page-settings-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Play&#x27;s page settings - opening settings scales the canvas down and rises a dark bottom-sheet panel of page properties with scrubbable sliders whose value badges float above the thumb.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The editor: a white page canvas (&quot;Page 1&quot;, pink selection outline) on a near-black workspace. Open state: the canvas scales down and docks to the top half while a dark sheet fills the bottom - rows for Page Title, Status Bar, Prefers... (Auto/Pills toggles), Paging switch, and scrub sliders. While scrubbing, a light floating badge (&quot;SPEED SCALE&quot;, green pill) appears above the slider thumb showing the live value.
+
+## Motion spec
+Pattern: canvas scale-down with sheet rise and live-badge sliders.
+- Tap the settings control: the canvas scales to ~0.55 and slides up (spring stiffness ~280, damping ~28) while the sheet rises from the bottom to meet it (same spring, synced).
+- Sheet rows stagger in top to bottom (40ms apart, 200ms fade+rise).
+- Scrubbing a slider: the thumb tracks 1:1, and a floating badge springs up above the thumb (scale 0.6 to 1.0, spring ~400/24), updating its value live; on release the badge pops away (150ms).
+- Toggles flip with a 150ms slide; segmented options swap highlight with a 200ms slide.
+- Close: the sheet slides down (250ms, ease-in) and the canvas springs back to full size.
+
+## Calibration
+- Canvas and sheet move as one choreographed pair - same spring, same duration, opposite directions.
+- The badge only exists while scrubbing; never leave it lingering.
+
+## Reduced motion
+Canvas crossfades to the docked layout; sliders update without badges.
+
+## Don&#x27;t miss
+- The canvas keeps its pink selection outline while docked - it is still the live page, not a thumbnail.
+- Badge typography is compact caps on a bright pill - readable at a glance mid-drag.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">canvas scale-down with sheet rise and live-badge sliders.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/play-page-settings-slider">original interaction</a> by Play. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Play's page settings - opening settings scales the canvas down and rises a dark bottom-sheet panel of page properties with scrubbable sliders whose value badges float above the thumb.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe editor: a white page canvas (\"Page 1\", pink selection outline) on a near-black workspace. Open state: the canvas scales down and docks to the top half while a dark sheet fills the bottom - rows for Page Title, Status Bar, Prefers... (Auto/Pills toggles), Paging switch, and scrub sliders. While scrubbing, a light floating badge (\"SPEED SCALE\", green pill) appears above the slider thumb showing the live value.\n\n## Motion spec\nPattern: canvas scale-down with sheet rise and live-badge sliders.\n- Tap the settings control: the canvas scales to ~0.55 and slides up (spring stiffness ~280, damping ~28) while the sheet rises from the bottom to meet it (same spring, synced).\n- Sheet rows stagger in top to bottom (40ms apart, 200ms fade+rise).\n- Scrubbing a slider: the thumb tracks 1:1, and a floating badge springs up above the thumb (scale 0.6 to 1.0, spring ~400/24), updating its value live; on release the badge pops away (150ms).\n- Toggles flip with a 150ms slide; segmented options swap highlight with a 200ms slide.\n- Close: the sheet slides down (250ms, ease-in) and the canvas springs back to full size.\n\n## Calibration\n- Canvas and sheet move as one choreographed pair - same spring, same duration, opposite directions.\n- The badge only exists while scrubbing; never leave it lingering.\n\n## Reduced motion\nCanvas crossfades to the docked layout; sliders update without badges.\n\n## Don't miss\n- The canvas keeps its pink selection outline while docked - it is still the live page, not a thumbnail.\n- Badge typography is compact caps on a bright pill - readable at a glance mid-drag."</script>
+</body></html>

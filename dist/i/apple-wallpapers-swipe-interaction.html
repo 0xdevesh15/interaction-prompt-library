@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Wallpapers Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Wallpapers Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-wallpapers-swipe-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-wallpapers-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-wallpapers-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: iOS lock-screen wallpaper gallery swipe - horizontal swipes page between wallpaper cards with a springy snap, the current card sliding off as the next centers itself, with page dots and the Customize button pinned below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67513b38948718dd94189aa6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67513b38948718dd94189aa6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-wallpapers-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: iOS lock-screen wallpaper gallery swipe - horizontal swipes page between wallpaper cards with a springy snap, the current card sliding off as the next centers itself, with page dots and the Customize button pinned below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black wallpaper gallery: centered lock-screen card (9:32 clock, date, Focus button) showing photos (gradient art, Supertree night shot, beach), generous peeks of neighboring cards at both edges, page dots, a &quot;Customize&quot; button, and a blue add button.
+
+## Motion spec
+Pattern: horizontal card pager with spring snap.
+- Drag moves the card strip 1:1; neighboring cards remain visible at the edges through the whole gesture.
+- Release snaps the nearest card to center (spring ~300/26, ~380ms, ~2% overshoot).
+- The centered card holds full scale; off-center cards sit ~5% smaller, interpolated continuously with strip position.
+- Page dots update on settle: active dot becomes a white pill (~16px), others stay gray dots (200ms crossfade/width).
+
+## Calibration
+- The spring settle is the character - quick, single soft overshoot, no wobble.
+- Card scale is position-driven; there is no post-snap scale animation.
+
+## Reduced motion
+Instant page change with 150ms crossfade on swipe; dots update statically.
+
+## Don&#x27;t miss
+- Cards carry live lock-screen furniture (clock, date, Focus pill) - they move with the card.
+- Edge peeks are wide enough to identify the next wallpaper&#x27;s art.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal card pager with spring snap.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-wallpapers-swipe-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: iOS lock-screen wallpaper gallery swipe - horizontal swipes page between wallpaper cards with a springy snap, the current card sliding off as the next centers itself, with page dots and the Customize button pinned below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack wallpaper gallery: centered lock-screen card (9:32 clock, date, Focus button) showing photos (gradient art, Supertree night shot, beach), generous peeks of neighboring cards at both edges, page dots, a \"Customize\" button, and a blue add button.\n\n## Motion spec\nPattern: horizontal card pager with spring snap.\n- Drag moves the card strip 1:1; neighboring cards remain visible at the edges through the whole gesture.\n- Release snaps the nearest card to center (spring ~300/26, ~380ms, ~2% overshoot).\n- The centered card holds full scale; off-center cards sit ~5% smaller, interpolated continuously with strip position.\n- Page dots update on settle: active dot becomes a white pill (~16px), others stay gray dots (200ms crossfade/width).\n\n## Calibration\n- The spring settle is the character - quick, single soft overshoot, no wobble.\n- Card scale is position-driven; there is no post-snap scale animation.\n\n## Reduced motion\nInstant page change with 150ms crossfade on swipe; dots update statically.\n\n## Don't miss\n- Cards carry live lock-screen furniture (clock, date, Focus pill) - they move with the card.\n- Edge peeks are wide enough to identify the next wallpaper's art."</script>
+</body></html>

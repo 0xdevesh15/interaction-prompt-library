@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Threads New Thread Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Threads New Thread Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/threads-new-thread-sheet"><b>Threads</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/threads-new-thread-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/threads-new-thread-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Threads&#x27; new-thread composer - a bottom sheet and keyboard that rise in perfect tandem, with inline poll and tag rows that expand inside the sheet without breaking its layout rhythm.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd2a093f143602feaa3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b8ebd2a093f143602feaa3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-threads-new-thread-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Threads&#x27; new-thread composer - a bottom sheet and keyboard that rise in perfect tandem, with inline poll and tag rows that expand inside the sheet without breaking its layout rhythm.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The feed dims; a dark composer sheet rises from the bottom in lockstep with the keyboard: avatar + &quot;What&#x27;s new?&quot; placeholder, an attach toolbar row, and Cancel/Post header controls. Tapping the poll icon inserts an inline poll block (question field + option rows) inside the composer; tags expand similarly.
+
+## Motion spec
+Pattern: sheet-keyboard tandem rise with inline expansion.
+- Sheet and keyboard animate as one unit: identical spring (stiffness ~340, damping ~32) with zero offset - the sheet&#x27;s bottom edge rides the keyboard&#x27;s top edge.
+- The header (Cancel, &quot;New thread&quot;, Post) fades in 60ms after the rise starts; the text field autofocuses as travel completes.
+- Tapping poll: the poll block expands inline (height 0 to auto, 250ms, ease-out), pushing the toolbar down; option rows stagger in (50ms apart).
+- Tapping tag/topic: a tag row slides open the same way, below the text field.
+- Removing poll/tag: the block collapses (200ms, ease-in) and the toolbar springs back up.
+- Drag the sheet down or tap Cancel: sheet and keyboard fall together, reversing the entrance spring.
+
+## Calibration
+- Sheet and keyboard never separate - if the keyboard lags, drive the sheet from the keyboard frame change, not its own timer.
+- Inline expansions move content, never jump it: neighbors slide, nothing snaps.
+
+## Reduced motion
+Sheet fades in above a static keyboard region; expansions appear without slide.
+
+## Don&#x27;t miss
+- The Post button activates (dim to full white) only once text exists - the state flip is instant, no fade.
+- The toolbar icons stay pinned above the keyboard through every expansion.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet-keyboard tandem rise with inline expansion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/threads-new-thread-sheet">original interaction</a> by Threads. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Threads' new-thread composer - a bottom sheet and keyboard that rise in perfect tandem, with inline poll and tag rows that expand inside the sheet without breaking its layout rhythm.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe feed dims; a dark composer sheet rises from the bottom in lockstep with the keyboard: avatar + \"What's new?\" placeholder, an attach toolbar row, and Cancel/Post header controls. Tapping the poll icon inserts an inline poll block (question field + option rows) inside the composer; tags expand similarly.\n\n## Motion spec\nPattern: sheet-keyboard tandem rise with inline expansion.\n- Sheet and keyboard animate as one unit: identical spring (stiffness ~340, damping ~32) with zero offset - the sheet's bottom edge rides the keyboard's top edge.\n- The header (Cancel, \"New thread\", Post) fades in 60ms after the rise starts; the text field autofocuses as travel completes.\n- Tapping poll: the poll block expands inline (height 0 to auto, 250ms, ease-out), pushing the toolbar down; option rows stagger in (50ms apart).\n- Tapping tag/topic: a tag row slides open the same way, below the text field.\n- Removing poll/tag: the block collapses (200ms, ease-in) and the toolbar springs back up.\n- Drag the sheet down or tap Cancel: sheet and keyboard fall together, reversing the entrance spring.\n\n## Calibration\n- Sheet and keyboard never separate - if the keyboard lags, drive the sheet from the keyboard frame change, not its own timer.\n- Inline expansions move content, never jump it: neighbors slide, nothing snaps.\n\n## Reduced motion\nSheet fades in above a static keyboard region; expansions appear without slide.\n\n## Don't miss\n- The Post button activates (dim to full white) only once text exists - the state flip is instant, no fade.\n- The toolbar icons stay pinned above the keyboard through every expansion."</script>
+</body></html>

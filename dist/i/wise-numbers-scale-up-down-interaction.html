@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wise Numbers Scale Up Down Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Wise Numbers Scale Up Down Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/wise-numbers-scale-up-down-interaction"><b>Wise</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wise-numbers-scale-up-down-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wise-numbers-scale-up-down-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Wise&#x27;s amount input - typed digits scale the amount text down to fit the field as the number grows, and deleting scales it back up, with the converted value updating live.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9d8cd4a3cfd549a7fe8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9d8cd4a3cfd549a7fe8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-wise-numbers-scale-up-down-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Wise&#x27;s amount input - typed digits scale the amount text down to fit the field as the number grows, and deleting scales it back up, with the converted value updating live.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark transfer screen: a large green amount (&quot;0.00&quot;) under the sender row, a smaller grey converted value under the recipient row, a rate banner, and a numeric keypad pinned at the bottom.
+
+## Motion spec
+Pattern: auto-scaling currency input.
+- Typing: each digit appends instantly; the whole amount rescales to fit its line (per-keystroke, 100ms ease-out) - one digit is huge, nine digits shrink to roughly a third of that size.
+- Grouping commas fade in as they appear (150ms) without shifting the baseline.
+- The converted value ticks up with a quick digit roll (150ms) whenever the amount changes.
+- Deleting: digits remove and the text scales back up on the same 100ms ease; crossing the account limit flashes the amount red and bounces it (translateX +-6px, 200ms) with an error line fading in under the sender row.
+- The keypad keys depress on tap (scale 0.94, 100ms) but never move the layout.
+
+## Calibration
+- Scaling is continuous and centered on the amount&#x27;s right edge - the caret position stays put.
+- Rescale happens per keystroke, not after a pause.
+
+## Reduced motion
+Instant rescale without the ease.
+
+## Don&#x27;t miss
+- The limit error is a shake plus recolor, not a modal.
+- The converted value animates on every keystroke too.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-scaling currency input.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/wise-numbers-scale-up-down-interaction">original interaction</a> by Wise. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Wise's amount input - typed digits scale the amount text down to fit the field as the number grows, and deleting scales it back up, with the converted value updating live.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark transfer screen: a large green amount (\"0.00\") under the sender row, a smaller grey converted value under the recipient row, a rate banner, and a numeric keypad pinned at the bottom.\n\n## Motion spec\nPattern: auto-scaling currency input.\n- Typing: each digit appends instantly; the whole amount rescales to fit its line (per-keystroke, 100ms ease-out) - one digit is huge, nine digits shrink to roughly a third of that size.\n- Grouping commas fade in as they appear (150ms) without shifting the baseline.\n- The converted value ticks up with a quick digit roll (150ms) whenever the amount changes.\n- Deleting: digits remove and the text scales back up on the same 100ms ease; crossing the account limit flashes the amount red and bounces it (translateX +-6px, 200ms) with an error line fading in under the sender row.\n- The keypad keys depress on tap (scale 0.94, 100ms) but never move the layout.\n\n## Calibration\n- Scaling is continuous and centered on the amount's right edge - the caret position stays put.\n- Rescale happens per keystroke, not after a pause.\n\n## Reduced motion\nInstant rescale without the ease.\n\n## Don't miss\n- The limit error is a shake plus recolor, not a modal.\n- The converted value animates on every keystroke too."</script>
+</body></html>

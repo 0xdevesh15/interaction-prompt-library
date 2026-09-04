@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Saved in One Blck Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Saved in One Blck Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-saved-in-one-blck-animation"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-saved-in-one-blck-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-saved-in-one-blck-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Swiggy&#x27;s oneBLCK savings ticker - a slot-machine odometer on the home header rolls from 00000 up to ₹5000, then the &quot;saved with oneBLCK already...&quot; caption and the &quot;Even more savings&quot; tease land.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a6f790f211a1d673feb7f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a6f790f211a1d673feb7f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-saved-in-one-blck-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Swiggy&#x27;s oneBLCK savings ticker - a slot-machine odometer on the home header rolls from 00000 up to ₹5000, then the &quot;saved with oneBLCK already...&quot; caption and the &quot;Even more savings&quot; tease land.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Swiggy home with a dark maroon header: location row, search bar, and a mechanical odometer-style counter strip showing &quot;₹5000&quot; in framed digit wheels, with &quot;saved with oneBLCK already...&quot; beneath. Below: the category grid (Food Delivery, Instamart, Dineout, Giftables, Scenes), the HDFC Bank credit card banner, and the tab bar.
+
+## Motion spec
+Pattern: slot-machine odometer rolling up to the savings figure.
+- The odometer starts at 00000; on screen entry each digit wheel spins with a staggered start (leftmost first, 80ms apart) and decelerates onto its final digit (total roll ~1.4s, cubic ease-out per wheel) - the ₹ prefix and the small crown glyph stay static.
+- As the wheels settle, the counter strip gives one mechanical tick bump (translateY 2px, 100ms) like a physical reel locking.
+- &quot;saved with oneBLCK already...&quot; fades in under the strip (250ms) once the last wheel lands.
+- 400ms later the strip crossfades its caption to the tease &quot;Even more savings coming your way!&quot; (300ms) - the digits stay.
+- The rest of the home (search ticker, category grid, banners) runs its own ambient motion and never waits on the odometer.
+
+## Calibration
+- Digit wheels have visible frame edges - the mechanical-reel look is the charm; no flat number count-up.
+- The roll always lands exactly on the real figure - the deceleration is tuned to end dead-center on each digit, never between two.
+
+## Reduced motion
+The figure crossfades from 00000 to ₹5000 (300ms) without wheel spin.
+
+## Don&#x27;t miss
+- The counter lives in the home header, not a modal - it plays inline as the page loads.
+- The caption swap (&quot;already saved&quot; -&gt; &quot;even more coming&quot;) is the second beat - the ticker alone is not the whole animation.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slot-machine odometer rolling up to the savings figure.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-saved-in-one-blck-animation">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Swiggy's oneBLCK savings ticker - a slot-machine odometer on the home header rolls from 00000 up to \u20b95000, then the \"saved with oneBLCK already...\" caption and the \"Even more savings\" tease land.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSwiggy home with a dark maroon header: location row, search bar, and a mechanical odometer-style counter strip showing \"\u20b95000\" in framed digit wheels, with \"saved with oneBLCK already...\" beneath. Below: the category grid (Food Delivery, Instamart, Dineout, Giftables, Scenes), the HDFC Bank credit card banner, and the tab bar.\n\n## Motion spec\nPattern: slot-machine odometer rolling up to the savings figure.\n- The odometer starts at 00000; on screen entry each digit wheel spins with a staggered start (leftmost first, 80ms apart) and decelerates onto its final digit (total roll ~1.4s, cubic ease-out per wheel) - the \u20b9 prefix and the small crown glyph stay static.\n- As the wheels settle, the counter strip gives one mechanical tick bump (translateY 2px, 100ms) like a physical reel locking.\n- \"saved with oneBLCK already...\" fades in under the strip (250ms) once the last wheel lands.\n- 400ms later the strip crossfades its caption to the tease \"Even more savings coming your way!\" (300ms) - the digits stay.\n- The rest of the home (search ticker, category grid, banners) runs its own ambient motion and never waits on the odometer.\n\n## Calibration\n- Digit wheels have visible frame edges - the mechanical-reel look is the charm; no flat number count-up.\n- The roll always lands exactly on the real figure - the deceleration is tuned to end dead-center on each digit, never between two.\n\n## Reduced motion\nThe figure crossfades from 00000 to \u20b95000 (300ms) without wheel spin.\n\n## Don't miss\n- The counter lives in the home header, not a modal - it plays inline as the page loads.\n- The caption swap (\"already saved\" -> \"even more coming\") is the second beat - the ticker alone is not the whole animation."</script>
+</body></html>

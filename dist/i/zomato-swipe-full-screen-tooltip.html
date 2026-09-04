@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zomato Swipe Full Screen Tooltip - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zomato Swipe Full Screen Tooltip</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zomato-swipe-full-screen-tooltip"><b>Zomato</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zomato-swipe-full-screen-tooltip">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zomato-swipe-full-screen-tooltip">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Zomato&#x27;s first-run tooltip - a dim overlay with a &quot;Swipe your way through&quot; tooltip card over the restaurant page; tap Got it and the card slides down and away as the page returns to life.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4df92a3a1f8e40ae7444a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4df92a3a1f8e40ae7444a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zomato-swipe-full-screen-tooltip.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Zomato&#x27;s first-run tooltip - a dim overlay with a &quot;Swipe your way through&quot; tooltip card over the restaurant page; tap Got it and the card slides down and away as the page returns to life.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Restaurant page (hero photo, name, rating, offer rows) frozen under a full-screen dim. Centered above the dim: a tooltip card with swipe-hint illustration, &quot;Swipe your way through&quot; copy, and a pink &quot;Got it&quot; button.
+
+## Motion spec
+Pattern: tooltip dismissal, ~450ms.
+- Entrance (on first open): overlay fades in (250ms), tooltip card slides up from the lower third with a spring (~380/20) and fades in.
+- Tap Got it: the card slides down ~120px while fading out (300ms, ease-in), the dim lifts over the same window.
+- The page beneath is fully interactive the moment the overlay is gone - no residual scrim.
+- One-shot: the tooltip never reappears after dismissal.
+
+## Calibration
+- Card exits downward, the way it came... actually it exits downward regardless - the exit mirrors a sheet being dropped, not raised.
+- Keep the dim at ~60%: the page must stay recognizable behind it.
+
+## Reduced motion
+Crossfade card and overlay out (200ms).
+
+## Don&#x27;t miss
+- The Got it button is the only way out - tapping the dim does nothing, so the hint is always read deliberately.
+- Show the tooltip exactly once per install; re-showing it on every visit trains users to dismiss without reading.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tooltip dismissal, ~450ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zomato-swipe-full-screen-tooltip">original interaction</a> by Zomato. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Zomato's first-run tooltip - a dim overlay with a \"Swipe your way through\" tooltip card over the restaurant page; tap Got it and the card slides down and away as the page returns to life.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nRestaurant page (hero photo, name, rating, offer rows) frozen under a full-screen dim. Centered above the dim: a tooltip card with swipe-hint illustration, \"Swipe your way through\" copy, and a pink \"Got it\" button.\n\n## Motion spec\nPattern: tooltip dismissal, ~450ms.\n- Entrance (on first open): overlay fades in (250ms), tooltip card slides up from the lower third with a spring (~380/20) and fades in.\n- Tap Got it: the card slides down ~120px while fading out (300ms, ease-in), the dim lifts over the same window.\n- The page beneath is fully interactive the moment the overlay is gone - no residual scrim.\n- One-shot: the tooltip never reappears after dismissal.\n\n## Calibration\n- Card exits downward, the way it came... actually it exits downward regardless - the exit mirrors a sheet being dropped, not raised.\n- Keep the dim at ~60%: the page must stay recognizable behind it.\n\n## Reduced motion\nCrossfade card and overlay out (200ms).\n\n## Don't miss\n- The Got it button is the only way out - tapping the dim does nothing, so the hint is always read deliberately.\n- Show the tooltip exactly once per install; re-showing it on every visit trains users to dismiss without reading."</script>
+</body></html>

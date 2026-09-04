@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Badges Showcase Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>GitHub Badges Showcase Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/github-badges-showcase-interaction"><b>Github</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/github-badges-showcase-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/github-badges-showcase-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: GitHub mobile&#x27;s badge showcase - swiping horizontally pages through gamified profile badges (YOLO, Quickdraw, Starstruck, Pair Extraordinaire, Pull Shark), each on a full-bleed colored background that crossfades per badge, with the badge artwork tilting in 3D during the swipe.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb648f8d12020de77ef8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb648f8d12020de77ef8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-github-badges-showcase-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: GitHub mobile&#x27;s badge showcase - swiping horizontally pages through gamified profile badges (YOLO, Quickdraw, Starstruck, Pair Extraordinaire, Pull Shark), each on a full-bleed colored background that crossfades per badge, with the badge artwork tilting in 3D during the swipe.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Full-screen badge detail pushed from the GitHub profile (Gavin Nelson). Per badge page: large circular badge artwork center-top, badge name (YOLO, Quickdraw...), tagline, &quot;Unlocked &lt;date&gt;&quot; line with detail bullets, pager dots, translucent &quot;Share&quot; bar at bottom, close button top-right. Backgrounds: YOLO purple, Quickdraw burnt orange, Starstruck brown, Pair Extraordinaire green, Pull Shark deep blue.
+
+## Motion spec
+Pattern: swipe pager with background color crossfade and 3D card tilt.
+- Horizontal drag pages the carousel; artwork, title, and detail block translate with the finger (1:1), the next page&#x27;s artwork parallaxes slightly slower (0.85x).
+- The full-screen background crossfades between badge colors driven by drag progress (color lerp tied to page offset), not on snap.
+- During drag the badge artwork tilts in 3D: rotateY up to +-12deg toward the drag direction with a subtle perspective (600pt) and a 2deg rotateZ lag; on release it eases back to flat (spring ~260/20).
+- Release: pager snaps to the nearest page (spring ~300/22); pager dot advances with a scale pulse (1 -&gt; 1.3 -&gt; 1, 200ms).
+- The Share bar and close button stay fixed; only artwork + text + background move.
+
+## Calibration
+- Background color is identity - never let two badges share a hue mid-transition without blending.
+- The 3D tilt follows drag velocity: flick = brief tilt, slow drag = held tilt.
+
+## Reduced motion
+Pages crossfade without tilt or parallax; background color still crossfades.
+
+## Don&#x27;t miss
+- The badge art is glossy 3D-rendered - preserve its highlight through rotation (fake with a static sheen layer).
+- &quot;Unlocked&quot; details differ per badge; they slide with the text block, not independently.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe pager with background color crossfade and 3D card tilt.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/github-badges-showcase-interaction">original interaction</a> by Github. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: GitHub mobile's badge showcase - swiping horizontally pages through gamified profile badges (YOLO, Quickdraw, Starstruck, Pair Extraordinaire, Pull Shark), each on a full-bleed colored background that crossfades per badge, with the badge artwork tilting in 3D during the swipe.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen badge detail pushed from the GitHub profile (Gavin Nelson). Per badge page: large circular badge artwork center-top, badge name (YOLO, Quickdraw...), tagline, \"Unlocked <date>\" line with detail bullets, pager dots, translucent \"Share\" bar at bottom, close button top-right. Backgrounds: YOLO purple, Quickdraw burnt orange, Starstruck brown, Pair Extraordinaire green, Pull Shark deep blue.\n\n## Motion spec\nPattern: swipe pager with background color crossfade and 3D card tilt.\n- Horizontal drag pages the carousel; artwork, title, and detail block translate with the finger (1:1), the next page's artwork parallaxes slightly slower (0.85x).\n- The full-screen background crossfades between badge colors driven by drag progress (color lerp tied to page offset), not on snap.\n- During drag the badge artwork tilts in 3D: rotateY up to +-12deg toward the drag direction with a subtle perspective (600pt) and a 2deg rotateZ lag; on release it eases back to flat (spring ~260/20).\n- Release: pager snaps to the nearest page (spring ~300/22); pager dot advances with a scale pulse (1 -> 1.3 -> 1, 200ms).\n- The Share bar and close button stay fixed; only artwork + text + background move.\n\n## Calibration\n- Background color is identity - never let two badges share a hue mid-transition without blending.\n- The 3D tilt follows drag velocity: flick = brief tilt, slow drag = held tilt.\n\n## Reduced motion\nPages crossfade without tilt or parallax; background color still crossfades.\n\n## Don't miss\n- The badge art is glossy 3D-rendered - preserve its highlight through rotation (fake with a static sheen layer).\n- \"Unlocked\" details differ per badge; they slide with the text block, not independently."</script>
+</body></html>

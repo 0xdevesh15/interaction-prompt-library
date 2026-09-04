@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remy AI Chat Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Remy AI Chat Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/remy-ai-chat-interaction"><b>Remy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/remy-ai-chat-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/remy-ai-chat-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Remy AI&#x27;s onboarding chat - messages bubble in from the bottom of an empty dark screen, a typing indicator morphs into the mascot&#x27;s reply, and the mascot&#x27;s eyes appear at the top as the conversation starts.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc389fb87dca19b4d0b85/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc389fb87dca19b4d0b85/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-remy-ai-chat-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Remy AI&#x27;s onboarding chat - messages bubble in from the bottom of an empty dark screen, a typing indicator morphs into the mascot&#x27;s reply, and the mascot&#x27;s eyes appear at the top as the conversation starts.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+An empty dark chat screen. A tiny mascot bubble says &quot;Hey 👋&quot;; a user reply bubble reads &quot;Oi, who&#x27;s there? 😄&quot;. A typing indicator appears, then the mascot&#x27;s two glowing eyes fade in at the top of the screen, and a longer bubble introduces Remy (&quot;My name is Remy! I help people significantly improve their sleep quality forever. And ever.&quot;), followed by another quick reply chip (&quot;How do you do that? 😏&quot;).
+
+## Motion spec
+Pattern: springy chat reveal with morphing typing indicator, ~3.5s.
+- The first bubble pops in from the bottom (scale 0.8 to 1, spring stiffness 400 damping 20).
+- The user reply slides in from the right edge of its bubble anchor (300ms, ease-out) after a 500ms beat.
+- A typing indicator (three dots in a bubble shell) bounces its dots in a 600ms loop for two cycles, then the shell morphs - stretching and fading - into the full reply bubble (300ms).
+- As the reply lands, the mascot&#x27;s eyes fade in at the top (400ms) with a soft glow pulse.
+- The final quick-reply chip pops in at the bottom (spring stiffness 400 damping 20).
+
+## Calibration
+- Each message gets its own beat; nothing overlaps.
+- Bubbles scale from their tail corner, not their center.
+
+## Reduced motion
+Thread appears fully rendered.
+
+## Don&#x27;t miss
+- The eyes belong to the mascot, not the chat - they sit in the header area, separate from the bubbles.
+- The typing indicator and the reply bubble are the same shell shape at different sizes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy chat reveal with morphing typing indicator, ~3.5s.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/remy-ai-chat-interaction">original interaction</a> by Remy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Remy AI's onboarding chat - messages bubble in from the bottom of an empty dark screen, a typing indicator morphs into the mascot's reply, and the mascot's eyes appear at the top as the conversation starts.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAn empty dark chat screen. A tiny mascot bubble says \"Hey \ud83d\udc4b\"; a user reply bubble reads \"Oi, who's there? \ud83d\ude04\". A typing indicator appears, then the mascot's two glowing eyes fade in at the top of the screen, and a longer bubble introduces Remy (\"My name is Remy! I help people significantly improve their sleep quality forever. And ever.\"), followed by another quick reply chip (\"How do you do that? \ud83d\ude0f\").\n\n## Motion spec\nPattern: springy chat reveal with morphing typing indicator, ~3.5s.\n- The first bubble pops in from the bottom (scale 0.8 to 1, spring stiffness 400 damping 20).\n- The user reply slides in from the right edge of its bubble anchor (300ms, ease-out) after a 500ms beat.\n- A typing indicator (three dots in a bubble shell) bounces its dots in a 600ms loop for two cycles, then the shell morphs - stretching and fading - into the full reply bubble (300ms).\n- As the reply lands, the mascot's eyes fade in at the top (400ms) with a soft glow pulse.\n- The final quick-reply chip pops in at the bottom (spring stiffness 400 damping 20).\n\n## Calibration\n- Each message gets its own beat; nothing overlaps.\n- Bubbles scale from their tail corner, not their center.\n\n## Reduced motion\nThread appears fully rendered.\n\n## Don't miss\n- The eyes belong to the mascot, not the chat - they sit in the header area, separate from the bubbles.\n- The typing indicator and the reply bubble are the same shell shape at different sizes."</script>
+</body></html>

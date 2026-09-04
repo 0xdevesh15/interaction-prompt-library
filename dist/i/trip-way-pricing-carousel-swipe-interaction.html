@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trip Way Pricing Carousel Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Trip Way Pricing Carousel Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/trip-way-pricing-carousel-swipe-interaction"><b>Trip</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/trip-way-pricing-carousel-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/trip-way-pricing-carousel-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Trip Way&#x27;s pricing carousel - swiping the &quot;Upgrade to Pro&quot; screen slides between benefit pages (&quot;Unlimited Trips&quot;, &quot;Sync Across Devices&quot;, &quot;Go Pro. Travel Smarter.&quot;) with staggered illustration and text transitions.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d72001fefe1a9ab17688/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7d72001fefe1a9ab17688/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-trip-way-pricing-carousel-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Trip Way&#x27;s pricing carousel - swiping the &quot;Upgrade to Pro&quot; screen slides between benefit pages (&quot;Unlimited Trips&quot;, &quot;Sync Across Devices&quot;, &quot;Go Pro. Travel Smarter.&quot;) with staggered illustration and text transitions.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light purple screen: close X and &quot;Upgrade to Pro&quot; title, a floating illustration per page (boarding-pass and ticket cluster; phone + tablet; feature checklist), a bold page title with subline, page dots, a dark &quot;Start My 7-day Free Trial&quot; button, and a &quot;Restore Purchases&quot; link.
+
+## Motion spec
+Pattern: staggered swipe carousel, ~400ms.
+- Swipe: the illustration slides out in the drag direction 1:1 while fading (to 0 over 80% travel); the incoming illustration slides in from the other side starting at 60px offset (ease-out, 300ms).
+- Stagger: the title follows the illustration +80ms, the subline +140ms - each sliding 24px with fade.
+- Snap: release settles on the nearest page (spring ~340/24); the active dot fills and elongates (200ms).
+- Loop edge: no wrap - the last page resists with rubber-band (0.4x) and springs back.
+
+## Calibration
+- The CTA and dots never slide - only illustration, title, and subline transition.
+- The checklist page enters with its rows cascading (40ms stagger) after the title lands.
+
+## Reduced motion
+Pages crossfade (250ms) without stagger.
+
+## Don&#x27;t miss
+- The stagger order is illustration, title, subline - reversing it breaks the rhythm.
+- The button stays dark and static; it is not part of the carousel.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered swipe carousel, ~400ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/trip-way-pricing-carousel-swipe-interaction">original interaction</a> by Trip. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Trip Way's pricing carousel - swiping the \"Upgrade to Pro\" screen slides between benefit pages (\"Unlimited Trips\", \"Sync Across Devices\", \"Go Pro. Travel Smarter.\") with staggered illustration and text transitions.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight purple screen: close X and \"Upgrade to Pro\" title, a floating illustration per page (boarding-pass and ticket cluster; phone + tablet; feature checklist), a bold page title with subline, page dots, a dark \"Start My 7-day Free Trial\" button, and a \"Restore Purchases\" link.\n\n## Motion spec\nPattern: staggered swipe carousel, ~400ms.\n- Swipe: the illustration slides out in the drag direction 1:1 while fading (to 0 over 80% travel); the incoming illustration slides in from the other side starting at 60px offset (ease-out, 300ms).\n- Stagger: the title follows the illustration +80ms, the subline +140ms - each sliding 24px with fade.\n- Snap: release settles on the nearest page (spring ~340/24); the active dot fills and elongates (200ms).\n- Loop edge: no wrap - the last page resists with rubber-band (0.4x) and springs back.\n\n## Calibration\n- The CTA and dots never slide - only illustration, title, and subline transition.\n- The checklist page enters with its rows cascading (40ms stagger) after the title lands.\n\n## Reduced motion\nPages crossfade (250ms) without stagger.\n\n## Don't miss\n- The stagger order is illustration, title, subline - reversing it breaks the rhythm.\n- The button stays dark and static; it is not part of the carousel."</script>
+</body></html>

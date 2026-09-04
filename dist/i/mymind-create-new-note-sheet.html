@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mymind Create New Note Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Mymind Create New Note Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/mymind-create-new-note-sheet"><b>Mymind</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mymind-create-new-note-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/mymind-create-new-note-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: mymind&#x27;s note composer - tap the persistent &quot;Create a new note&quot; field and a full-screen writing sheet slides up in lockstep with the keyboard.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb2a225b7b88f78c6a15/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb2a225b7b88f78c6a15/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-mymind-create-new-note-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: mymind&#x27;s note composer - tap the persistent &quot;Create a new note&quot; field and a full-screen writing sheet slides up in lockstep with the keyboard.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The mymind home (gradient mesh welcome card, bottom nav) carries a persistent input field at top or bottom (&quot;Create a new note&quot;). Tapping it opens the composer: a clean white full-screen sheet with a close X, the note body (&quot;Start typing here.&quot;), and the keyboard.
+
+## Motion spec
+Pattern: sheet + keyboard synchronized rise.
+- Tap the field: the composer sheet slides up from the bottom edge (spring ~360/30, ~400ms) exactly in step with the keyboard&#x27;s own rise - the sheet&#x27;s bottom padding tracks the keyboard height frame-by-frame so the cursor line never gets covered.
+- The field the user tapped morphs into the composer&#x27;s text area: its text and caret carry over, the field&#x27;s rounded rect expanding to full width (bounds animation, 300ms).
+- The home content behind scales down slightly (scale 0.96) and dims (black 25%) as the sheet covers it.
+- The close X and the send/save button fade in after the sheet lands (150ms, 80ms apart).
+- Dismiss (tap X or drag down): the sheet and keyboard fall together; if the note has text, the sheet collapses back into the persistent field showing a saved-hint state.
+
+## Calibration
+- The sheet and keyboard must move as one unit - no gap ever opens between them.
+- The composer is typographically spare: one text area, no toolbar chrome until typing starts.
+
+## Reduced motion
+Sheet fades in already above the keyboard.
+
+## Don&#x27;t miss
+- The gradient mesh of the welcome card is the brand moment behind the sheet - keep it visible at the edges until the sheet fully covers it.
+- The caret is already blinking when the sheet lands; focus never waits for a second tap.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet + keyboard synchronized rise.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/mymind-create-new-note-sheet">original interaction</a> by Mymind. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: mymind's note composer - tap the persistent \"Create a new note\" field and a full-screen writing sheet slides up in lockstep with the keyboard.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe mymind home (gradient mesh welcome card, bottom nav) carries a persistent input field at top or bottom (\"Create a new note\"). Tapping it opens the composer: a clean white full-screen sheet with a close X, the note body (\"Start typing here.\"), and the keyboard.\n\n## Motion spec\nPattern: sheet + keyboard synchronized rise.\n- Tap the field: the composer sheet slides up from the bottom edge (spring ~360/30, ~400ms) exactly in step with the keyboard's own rise - the sheet's bottom padding tracks the keyboard height frame-by-frame so the cursor line never gets covered.\n- The field the user tapped morphs into the composer's text area: its text and caret carry over, the field's rounded rect expanding to full width (bounds animation, 300ms).\n- The home content behind scales down slightly (scale 0.96) and dims (black 25%) as the sheet covers it.\n- The close X and the send/save button fade in after the sheet lands (150ms, 80ms apart).\n- Dismiss (tap X or drag down): the sheet and keyboard fall together; if the note has text, the sheet collapses back into the persistent field showing a saved-hint state.\n\n## Calibration\n- The sheet and keyboard must move as one unit - no gap ever opens between them.\n- The composer is typographically spare: one text area, no toolbar chrome until typing starts.\n\n## Reduced motion\nSheet fades in already above the keyboard.\n\n## Don't miss\n- The gradient mesh of the welcome card is the brand moment behind the sheet - keep it visible at the edges until the sheet fully covers it.\n- The caret is already blinking when the sheet lands; focus never waits for a second tap."</script>
+</body></html>

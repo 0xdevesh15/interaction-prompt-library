@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blinkit Map Expand - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Blinkit Map Expand</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/blinkit-map-expand"><b>Blinkit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blinkit-map-expand">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blinkit-map-expand">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Blinkit&#x27;s order-tracking map expansion - the small &quot;Arriving in 5 minutes&quot; map card morphs seamlessly into a full-width detailed tracking view with route polyline and rider marker, then collapses back.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e7004a6624f474443dbfb9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e7004a6624f474443dbfb9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-blinkit-map-expand.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Blinkit&#x27;s order-tracking map expansion - the small &quot;Arriving in 5 minutes&quot; map card morphs seamlessly into a full-width detailed tracking view with route polyline and rider marker, then collapses back.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Order status screen: &quot;MONSOON IS HERE&quot; illustrated banner, an &quot;Arriving in 5 minutes&quot; row with a small map thumbnail, delivery-partner chat card, checklist rows. Expanded state: full-width map with a green route polyline, origin/destination pins, and the status header pinned above.
+
+## Motion spec
+Pattern: shared-element map card expansion.
+- Tap the map thumbnail: the thumbnail scales/translates from its card slot to the full-width map slot (spring ~300/26, ~450ms) - corner radius animates 12px -&gt; 0, and the map canvas crossfades from static preview to live detailed tiles mid-transition.
+- The route polyline draws in after landing (500ms, following the path), then the rider marker pulses (ring scale 1 -&gt; 1.6 fade, 1.5s loop).
+- Content below the card (chat card, checklist) slides down out of the way on expand (300ms, matching the spring) and slides back on collapse.
+- Tap collapse/back: reverse morph (400ms), polyline erases quickly (200ms) as the card shrinks.
+- The status header text (&quot;Arriving in 5 minutes&quot;) stays mounted and crossfades position between the two layouts (250ms).
+
+## Calibration
+- The map never jumps or reloads mid-morph - preview and live tiles must align geographically.
+- Header and map travel together; the rest of the screen just gets out of the way.
+
+## Reduced motion
+Expand/collapse crossfades between the two layouts.
+
+## Don&#x27;t miss
+- Green is the tracking accent: header strip, polyline, and rider marker share it.
+- The banner illustration stays put - only the map region morphs.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element map card expansion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/blinkit-map-expand">original interaction</a> by Blinkit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Blinkit's order-tracking map expansion - the small \"Arriving in 5 minutes\" map card morphs seamlessly into a full-width detailed tracking view with route polyline and rider marker, then collapses back.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOrder status screen: \"MONSOON IS HERE\" illustrated banner, an \"Arriving in 5 minutes\" row with a small map thumbnail, delivery-partner chat card, checklist rows. Expanded state: full-width map with a green route polyline, origin/destination pins, and the status header pinned above.\n\n## Motion spec\nPattern: shared-element map card expansion.\n- Tap the map thumbnail: the thumbnail scales/translates from its card slot to the full-width map slot (spring ~300/26, ~450ms) - corner radius animates 12px -> 0, and the map canvas crossfades from static preview to live detailed tiles mid-transition.\n- The route polyline draws in after landing (500ms, following the path), then the rider marker pulses (ring scale 1 -> 1.6 fade, 1.5s loop).\n- Content below the card (chat card, checklist) slides down out of the way on expand (300ms, matching the spring) and slides back on collapse.\n- Tap collapse/back: reverse morph (400ms), polyline erases quickly (200ms) as the card shrinks.\n- The status header text (\"Arriving in 5 minutes\") stays mounted and crossfades position between the two layouts (250ms).\n\n## Calibration\n- The map never jumps or reloads mid-morph - preview and live tiles must align geographically.\n- Header and map travel together; the rest of the screen just gets out of the way.\n\n## Reduced motion\nExpand/collapse crossfades between the two layouts.\n\n## Don't miss\n- Green is the tracking accent: header strip, polyline, and rider marker share it.\n- The banner illustration stays put - only the map region morphs."</script>
+</body></html>

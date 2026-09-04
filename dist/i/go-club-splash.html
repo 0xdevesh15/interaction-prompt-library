@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GO Club Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>GO Club Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/go-club-splash"><b>Go</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/go-club-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/go-club-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: GO Club&#x27;s splash - on solid electric blue, a spinning loading arc winds up and morphs into the GO wordmark with a springy bounce, then holds.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb408f8d12020de77d2b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb408f8d12020de77d2b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-go-club-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: GO Club&#x27;s splash - on solid electric blue, a spinning loading arc winds up and morphs into the GO wordmark with a springy bounce, then holds.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Solid vivid blue screen. Center: the animation. Bottom center: small &quot;GO Steps AI&quot; caption.
+
+## Motion spec
+Pattern: loader-to-logo morph, ~1.8s.
+- A tiny white square pops in center (100ms), then unfolds into a white arc that spins (0 -&gt; 540deg, 700ms, ease-in-out) while growing.
+- The arc closes and its stroke reshapes into the letterforms: the loop becomes the &quot;G&quot; bowl, the tail becomes the &quot;O&quot; - a path morph, not a crossfade (400ms).
+- The assembled &quot;GO&quot; lands with a bounce (scale 1.08 -&gt; 1, spring ~400/16, 250ms).
+- The wordmark holds; caption stays static.
+
+## Calibration
+- Spin decelerates as the morph begins - stopping dead before morphing reads as two clips stitched.
+- The bounce is one damped oscillation; anything more reads as playful in the wrong register for a loading screen.
+
+## Reduced motion
+Arc fades directly into the GO mark (300ms); no spin, no bounce.
+
+## Don&#x27;t miss
+- Background stays flat blue the whole time - no gradient sweep to &quot;enrich&quot; it.
+- The morph keeps stroke weight constant; thinning strokes mid-morph make the letters feel drawn by a different hand.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">loader-to-logo morph, ~1.8s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/go-club-splash">original interaction</a> by Go. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: GO Club's splash - on solid electric blue, a spinning loading arc winds up and morphs into the GO wordmark with a springy bounce, then holds.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSolid vivid blue screen. Center: the animation. Bottom center: small \"GO Steps AI\" caption.\n\n## Motion spec\nPattern: loader-to-logo morph, ~1.8s.\n- A tiny white square pops in center (100ms), then unfolds into a white arc that spins (0 -> 540deg, 700ms, ease-in-out) while growing.\n- The arc closes and its stroke reshapes into the letterforms: the loop becomes the \"G\" bowl, the tail becomes the \"O\" - a path morph, not a crossfade (400ms).\n- The assembled \"GO\" lands with a bounce (scale 1.08 -> 1, spring ~400/16, 250ms).\n- The wordmark holds; caption stays static.\n\n## Calibration\n- Spin decelerates as the morph begins - stopping dead before morphing reads as two clips stitched.\n- The bounce is one damped oscillation; anything more reads as playful in the wrong register for a loading screen.\n\n## Reduced motion\nArc fades directly into the GO mark (300ms); no spin, no bounce.\n\n## Don't miss\n- Background stays flat blue the whole time - no gradient sweep to \"enrich\" it.\n- The morph keeps stroke weight constant; thinning strokes mid-morph make the letters feel drawn by a different hand."</script>
+</body></html>

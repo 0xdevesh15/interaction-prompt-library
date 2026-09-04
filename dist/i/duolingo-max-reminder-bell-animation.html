@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Max Reminder Bell Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Max Reminder Bell Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-max-reminder-bell-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-max-reminder-bell-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-max-reminder-bell-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo Max&#x27;s trial-reminder screen - a dark idle scene where the mascot floats gently beside a purple reminder bell that wiggles on a loop.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b2195ec7d0ca132d5e96e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b2195ec7d0ca132d5e96e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-max-reminder-bell-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo Max&#x27;s trial-reminder screen - a dark idle scene where the mascot floats gently beside a purple reminder bell that wiggles on a loop.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark purple Duolingo Max screen: close X top-left, MAX badge top-right, the copy &quot;We&#x27;ll remind you 2 days before your trial ends&quot;, and a &quot;START MY FREE WEEK&quot; button pinned at the bottom with the small print &quot;Easy to cancel, no penalties or fees&quot;. Center stage, the black-suited Duo mascot floats, holding a speech bubble with a purple bell icon. The bell wiggles periodically; the mascot bobs.
+
+## Motion spec
+Pattern: idle float with bell wiggle, ~3s loop.
+- The mascot floats vertically (plus/minus 8px, 3s period, ease-in-out) with a slight rotation sway (plus/minus 2 degrees).
+- The bell wiggles on its own rhythm: a quick rotation shake (plus/minus 12 degrees, 3 oscillations over 500ms) every 2s, its clapper swinging opposite.
+- The speech bubble follows the mascot&#x27;s float at a slight delay (100ms lag), giving a held-object feel.
+- Button, copy, and chrome stay still; the exit transition wipes a purple streak up the screen (400ms, ease-in).
+
+## Calibration
+- Two rhythms at once: the slow float and the quick bell wiggle never sync up.
+- The bell&#x27;s wiggle is rotation around its top hinge point.
+
+## Reduced motion
+Mascot and bell hold still.
+
+## Don&#x27;t miss
+- The bubble and mascot move as one unit with lag, not independently.
+- The purple streak exit wipe anchors the MAX brand moment.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">idle float with bell wiggle, ~3s loop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-max-reminder-bell-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo Max's trial-reminder screen - a dark idle scene where the mascot floats gently beside a purple reminder bell that wiggles on a loop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark purple Duolingo Max screen: close X top-left, MAX badge top-right, the copy \"We'll remind you 2 days before your trial ends\", and a \"START MY FREE WEEK\" button pinned at the bottom with the small print \"Easy to cancel, no penalties or fees\". Center stage, the black-suited Duo mascot floats, holding a speech bubble with a purple bell icon. The bell wiggles periodically; the mascot bobs.\n\n## Motion spec\nPattern: idle float with bell wiggle, ~3s loop.\n- The mascot floats vertically (plus/minus 8px, 3s period, ease-in-out) with a slight rotation sway (plus/minus 2 degrees).\n- The bell wiggles on its own rhythm: a quick rotation shake (plus/minus 12 degrees, 3 oscillations over 500ms) every 2s, its clapper swinging opposite.\n- The speech bubble follows the mascot's float at a slight delay (100ms lag), giving a held-object feel.\n- Button, copy, and chrome stay still; the exit transition wipes a purple streak up the screen (400ms, ease-in).\n\n## Calibration\n- Two rhythms at once: the slow float and the quick bell wiggle never sync up.\n- The bell's wiggle is rotation around its top hinge point.\n\n## Reduced motion\nMascot and bell hold still.\n\n## Don't miss\n- The bubble and mascot move as one unit with lag, not independently.\n- The purple streak exit wipe anchors the MAX brand moment."</script>
+</body></html>

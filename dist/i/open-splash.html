@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Open Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/open-splash"><b>Open</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/open-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/open-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Open&#x27;s splash - on a pure black screen, faint abstract shapes flicker and resolve into the spaced wordmark &quot;O p e n&quot;, then a small &quot;Begin +1&quot; button rises at the bottom.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b5098a6ede244b0ba71/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b5098a6ede244b0ba71/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-open-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Open&#x27;s splash - on a pure black screen, faint abstract shapes flicker and resolve into the spaced wordmark &quot;O p e n&quot;, then a small &quot;Begin +1&quot; button rises at the bottom.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black full-screen: centered wordmark &quot;O p e n&quot; in thin white letterspaced type, and eventually a small dark pill button &quot;Begin +1&quot; centered near the bottom. Early frames show gray abstract blobs (a comma, a dash, a triangle) that morph away.
+
+## Motion spec
+Pattern: abstract-shapes-to-type resolution.
+- Three soft gray shapes (rounded blob, dash, triangle) fade in scattered (300ms), drift toward each other slowly (1s), and morph/dissolve as the letters &quot;O p e n&quot; materialize in their place (crossfade + slight letter-spacing settle, 600ms).
+- The wordmark holds still, breathing in opacity very subtly (1 -&gt; 0.85 -&gt; 1, 3s loop).
+- After ~2s the &quot;Begin +1&quot; pill rises 16px and fades in (350ms, ease-out).
+- Nothing else ever appears; the black stays absolute.
+
+## Calibration
+- Letterspacing is wide and deliberate (&quot;O p e n&quot;) - the settle animation tightens tracking by ~10%, not more.
+- The whole intro is quiet: no bounces, no springs with visible overshoot.
+
+## Reduced motion
+Shapes crossfade directly to the wordmark; button fades in.
+
+## Don&#x27;t miss
+- The button says &quot;Begin +1&quot; - keep the exact label.
+- Shapes and letters are the only elements; no logo, no imagery.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">abstract-shapes-to-type resolution.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/open-splash">original interaction</a> by Open. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Open's splash - on a pure black screen, faint abstract shapes flicker and resolve into the spaced wordmark \"O p e n\", then a small \"Begin +1\" button rises at the bottom.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack full-screen: centered wordmark \"O p e n\" in thin white letterspaced type, and eventually a small dark pill button \"Begin +1\" centered near the bottom. Early frames show gray abstract blobs (a comma, a dash, a triangle) that morph away.\n\n## Motion spec\nPattern: abstract-shapes-to-type resolution.\n- Three soft gray shapes (rounded blob, dash, triangle) fade in scattered (300ms), drift toward each other slowly (1s), and morph/dissolve as the letters \"O p e n\" materialize in their place (crossfade + slight letter-spacing settle, 600ms).\n- The wordmark holds still, breathing in opacity very subtly (1 -> 0.85 -> 1, 3s loop).\n- After ~2s the \"Begin +1\" pill rises 16px and fades in (350ms, ease-out).\n- Nothing else ever appears; the black stays absolute.\n\n## Calibration\n- Letterspacing is wide and deliberate (\"O p e n\") - the settle animation tightens tracking by ~10%, not more.\n- The whole intro is quiet: no bounces, no springs with visible overshoot.\n\n## Reduced motion\nShapes crossfade directly to the wordmark; button fades in.\n\n## Don't miss\n- The button says \"Begin +1\" - keep the exact label.\n- Shapes and letters are the only elements; no logo, no imagery."</script>
+</body></html>

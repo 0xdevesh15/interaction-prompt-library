@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Event Rewards - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Event Rewards</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-event-rewards"><b>Monopoly Go</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-event-rewards">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-event-rewards">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monopoly Go&#x27;s event rewards - claiming from the leaderboard panel detonates a full-screen confetti-and-cash explosion, a reward card springs in with the amount, and the winnings fly to the top-bar counter.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5bd36371d29849d829982/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5bd36371d29849d829982/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-event-rewards.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monopoly Go&#x27;s event rewards - claiming from the leaderboard panel detonates a full-screen confetti-and-cash explosion, a reward card springs in with the amount, and the winnings fly to the top-bar counter.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Over the dimmed board, a &quot;JAVELIN JOLT&quot; event panel: Mr. Monopoly artwork, ranked leaderboard rows with their reward icons, and a green &quot;REWARDS!&quot; button. Claim state: the screen fills with flying cash bills and confetti, a reward card with the player&#x27;s avatar and &quot;+2,300,000&quot; appears center, and a &quot;COLLECT&quot; pill sits at the bottom.
+
+## Motion spec
+Pattern: claim explosion with card pop and counter flight.
+- Tap REWARDS!: the panel&#x27;s rows collapse (200ms) and the explosion fires - ~60 pieces (green cash bills, purple/yellow confetti) burst outward from center with gravity, rotation, and slight flutter, ~1.5s to settle.
+- The reward card springs in mid-explosion (scale 0.5 to 1.08 to 1.0, stiffness ~380, damping ~16), amount text counting up to the total (600ms).
+- Tap COLLECT (or auto after ~1.2s): the card lifts and shrinks toward the top-bar cash counter (500ms, ease-in arc path), the counter flashing and ticking up as it lands.
+- Confetti thins and fades; the board undims as the flight completes.
+
+## Calibration
+- The explosion is dense but short; lingering confetti past the card flight muddies the payout moment.
+- The flight path targets the actual counter position - a generic upward drift loses the cause and effect.
+
+## Reduced motion
+Card fades in, amount counts up, counter updates; no explosion.
+
+## Don&#x27;t miss
+- Cash bills and confetti are two particle sets with different fall physics - bills flutter, confetti spins.
+- The player&#x27;s avatar sits on the reward card&#x27;s banner, tying the win to the leaderboard rank.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">claim explosion with card pop and counter flight.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-event-rewards">original interaction</a> by Monopoly Go. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monopoly Go's event rewards - claiming from the leaderboard panel detonates a full-screen confetti-and-cash explosion, a reward card springs in with the amount, and the winnings fly to the top-bar counter.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOver the dimmed board, a \"JAVELIN JOLT\" event panel: Mr. Monopoly artwork, ranked leaderboard rows with their reward icons, and a green \"REWARDS!\" button. Claim state: the screen fills with flying cash bills and confetti, a reward card with the player's avatar and \"+2,300,000\" appears center, and a \"COLLECT\" pill sits at the bottom.\n\n## Motion spec\nPattern: claim explosion with card pop and counter flight.\n- Tap REWARDS!: the panel's rows collapse (200ms) and the explosion fires - ~60 pieces (green cash bills, purple/yellow confetti) burst outward from center with gravity, rotation, and slight flutter, ~1.5s to settle.\n- The reward card springs in mid-explosion (scale 0.5 to 1.08 to 1.0, stiffness ~380, damping ~16), amount text counting up to the total (600ms).\n- Tap COLLECT (or auto after ~1.2s): the card lifts and shrinks toward the top-bar cash counter (500ms, ease-in arc path), the counter flashing and ticking up as it lands.\n- Confetti thins and fades; the board undims as the flight completes.\n\n## Calibration\n- The explosion is dense but short; lingering confetti past the card flight muddies the payout moment.\n- The flight path targets the actual counter position - a generic upward drift loses the cause and effect.\n\n## Reduced motion\nCard fades in, amount counts up, counter updates; no explosion.\n\n## Don't miss\n- Cash bills and confetti are two particle sets with different fall physics - bills flutter, confetti spins.\n- The player's avatar sits on the reward card's banner, tying the win to the leaderboard rank."</script>
+</body></html>

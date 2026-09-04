@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Color Wheel Spin - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Color Wheel Spin</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-color-wheel-spin"><b>Monopoly Go</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-color-wheel-spin">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-color-wheel-spin">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Monopoly Go&#x27;s color wheel - a spotlighted prize wheel that scales in over the dimmed board, spins with a long eased deceleration onto the pointer, and pays out in a burst of cascading dice.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5fdae371d29849d84559e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5fdae371d29849d84559e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-color-wheel-spin.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Monopoly Go&#x27;s color wheel - a spotlighted prize wheel that scales in over the dimmed board, spins with a long eased deceleration onto the pointer, and pays out in a burst of cascading dice.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The game board dims to near-black. A spotlight beam drops from the top as the &quot;COLOR WHEEL&quot; logo (flanked by dice) pops in. The wheel: a green-rimmed disc of colored reward segments (cash, dice, packs) around a red center hub, a red pointer at 12 o&#x27;clock. Below: a blue diamond &quot;SPIN&quot; button and &quot;1 spin left&quot; label. Win state: the board returns with white dice cascading across it.
+
+## Motion spec
+Pattern: spin-the-wheel with eased deceleration and dice payout.
+- Entry: spotlight sweeps on (200ms), logo pops (scale 0.8 to 1.1 to 1.0, 300ms), wheel scales in from 0.6 with a soft spring (stiffness ~260, damping ~20).
+- Tap SPIN: the button depresses and the wheel accelerates to full speed (~10 rad/s) in 400ms, holds ~1s, then decelerates over ~2.5s with a strong ease-out - the last two segments crawl past the pointer with tiny back-and-forth ticks.
+- The pointer flicks (rotates ~20deg and springs back) each time a segment boundary passes under it during the final rotation.
+- On stop: the winning segment pulses (brightness flash, 2 pulses) and the wheel assembly scales down and fades (300ms).
+- Payout: the board undims and a burst of ~20 dice showers from the top-center, bouncing once with randomized rotations, then fades.
+
+## Calibration
+- Deceleration curve is the whole game feel: ease-out with a long tail, never linear.
+- Pointer flicks only in the slow phase; flicking at full speed reads as vibration.
+
+## Reduced motion
+Wheel does one fast rotation (600ms) and lands; dice fade in without the shower.
+
+## Don&#x27;t miss
+- The board stays dimmed but visible behind the wheel - this is an overlay, not a new scene.
+- The winning segment must land exactly under the pointer when the wheel stops.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spin-the-wheel with eased deceleration and dice payout.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-color-wheel-spin">original interaction</a> by Monopoly Go. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Monopoly Go's color wheel - a spotlighted prize wheel that scales in over the dimmed board, spins with a long eased deceleration onto the pointer, and pays out in a burst of cascading dice.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe game board dims to near-black. A spotlight beam drops from the top as the \"COLOR WHEEL\" logo (flanked by dice) pops in. The wheel: a green-rimmed disc of colored reward segments (cash, dice, packs) around a red center hub, a red pointer at 12 o'clock. Below: a blue diamond \"SPIN\" button and \"1 spin left\" label. Win state: the board returns with white dice cascading across it.\n\n## Motion spec\nPattern: spin-the-wheel with eased deceleration and dice payout.\n- Entry: spotlight sweeps on (200ms), logo pops (scale 0.8 to 1.1 to 1.0, 300ms), wheel scales in from 0.6 with a soft spring (stiffness ~260, damping ~20).\n- Tap SPIN: the button depresses and the wheel accelerates to full speed (~10 rad/s) in 400ms, holds ~1s, then decelerates over ~2.5s with a strong ease-out - the last two segments crawl past the pointer with tiny back-and-forth ticks.\n- The pointer flicks (rotates ~20deg and springs back) each time a segment boundary passes under it during the final rotation.\n- On stop: the winning segment pulses (brightness flash, 2 pulses) and the wheel assembly scales down and fades (300ms).\n- Payout: the board undims and a burst of ~20 dice showers from the top-center, bouncing once with randomized rotations, then fades.\n\n## Calibration\n- Deceleration curve is the whole game feel: ease-out with a long tail, never linear.\n- Pointer flicks only in the slow phase; flicking at full speed reads as vibration.\n\n## Reduced motion\nWheel does one fast rotation (600ms) and lands; dice fade in without the shower.\n\n## Don't miss\n- The board stays dimmed but visible behind the wheel - this is an overlay, not a new scene.\n- The winning segment must land exactly under the pointer when the wheel stops."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creme Recipe Preview Minimise - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Creme Recipe Preview Minimise</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/creme-recipe-preview-minimise"><b>Creme</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/creme-recipe-preview-minimise">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/creme-recipe-preview-minimise">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Creme&#x27;s inline video preview - a small video thumbnail docked in the corner of the recipe steps list expands seamlessly into a full-screen step player, then minimizes back into its corner slot on dismissal.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d4354158b53292ed78bb84/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d4354158b53292ed78bb84/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-creme-recipe-preview-minimise.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Creme&#x27;s inline video preview - a small video thumbnail docked in the corner of the recipe steps list expands seamlessly into a full-screen step player, then minimizes back into its corner slot on dismissal.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark recipe page: step sections (&quot;Preparing the potato aioli&quot;, &quot;Assembling the garlic bread&quot;) as rounded rows; a small rounded video thumbnail floats bottom-right above the bottom bar (Help / Bite / Ingredients). Expanded: the video fills the screen with the step title (&quot;Peel 1 garlic clove&quot;) bottom-left and a close X top-right.
+
+## Motion spec
+Pattern: shared-element expand/minimize.
+- Tap the thumbnail: the thumbnail&#x27;s bounds animate to full screen - position, size, and corner radius (12 -&gt; 0) interpolate together (spring ~280/24, ~450ms) so the video appears to grow out of its slot; playback never stutters.
+- The step title and controls fade in once the expansion is ~80% done (150ms); the recipe list dims and locks behind.
+- Tap X (or swipe down): the reverse - the player shrinks back into the exact thumbnail slot (same spring), controls fading out first; the slot pulses once on landing.
+- While docked, the thumbnail keeps playing silently with a subtle live border shimmer.
+
+## Calibration
+- One video instance across both states - the morph moves a single player, never swaps two.
+- The thumbnail slot stays reserved in the layout so the return lands exactly.
+
+## Reduced motion
+Crossfade between docked and full-screen states.
+
+## Don&#x27;t miss
+- The corner radius animates with the size - the &quot;card becomes screen&quot; feel lives there.
+- The bottom bar (Help/Bite/Ingredients) persists under both states.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element expand/minimize.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/creme-recipe-preview-minimise">original interaction</a> by Creme. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Creme's inline video preview - a small video thumbnail docked in the corner of the recipe steps list expands seamlessly into a full-screen step player, then minimizes back into its corner slot on dismissal.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark recipe page: step sections (\"Preparing the potato aioli\", \"Assembling the garlic bread\") as rounded rows; a small rounded video thumbnail floats bottom-right above the bottom bar (Help / Bite / Ingredients). Expanded: the video fills the screen with the step title (\"Peel 1 garlic clove\") bottom-left and a close X top-right.\n\n## Motion spec\nPattern: shared-element expand/minimize.\n- Tap the thumbnail: the thumbnail's bounds animate to full screen - position, size, and corner radius (12 -> 0) interpolate together (spring ~280/24, ~450ms) so the video appears to grow out of its slot; playback never stutters.\n- The step title and controls fade in once the expansion is ~80% done (150ms); the recipe list dims and locks behind.\n- Tap X (or swipe down): the reverse - the player shrinks back into the exact thumbnail slot (same spring), controls fading out first; the slot pulses once on landing.\n- While docked, the thumbnail keeps playing silently with a subtle live border shimmer.\n\n## Calibration\n- One video instance across both states - the morph moves a single player, never swaps two.\n- The thumbnail slot stays reserved in the layout so the return lands exactly.\n\n## Reduced motion\nCrossfade between docked and full-screen states.\n\n## Don't miss\n- The corner radius animates with the size - the \"card becomes screen\" feel lives there.\n- The bottom bar (Help/Bite/Ingredients) persists under both states."</script>
+</body></html>

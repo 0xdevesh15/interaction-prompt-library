@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple TV Video Preview Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple TV Video Preview Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-tv-video-preview-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-tv-video-preview-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-tv-video-preview-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple TV+&#x27;s featured carousel - a poster card that expands into an auto-playing video preview with the title treatment overlaying the footage.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcef371d29849d7bd89b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcef371d29849d7bd89b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-tv-video-preview-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple TV+&#x27;s featured carousel - a poster card that expands into an auto-playing video preview with the title treatment overlaying the footage.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The TV+ home tab: a full-bleed featured card at top (poster art with title logo and synopsis), an &quot;Up Next&quot; rail below. The featured card begins as key art, then crossfades into a muted auto-playing trailer that fills the card, the title logo persisting over the video. Swiping slides to the next featured title.
+
+## Motion spec
+Pattern: poster-to-video ambient preview.
+- After ~1s at rest, the poster crossfades into the playing preview (600ms, ease-in-out); the video starts mid-clip, muted, letterboxed to the card&#x27;s aspect.
+- The title logo and synopsis fade down to a smaller persistent lockup over the video&#x27;s lower third (300ms) as playback starts.
+- Swipe horizontally: the card carousel paginates 1:1 with the finger, neighboring cards peeking in from the edge; release snaps to the nearest card (spring ~320/24); the outgoing video pauses and fades back to its poster (300ms) as the new card&#x27;s poster-to-video cycle begins.
+- Paging dots under the card track the position (active dot stretches 6px to 16px, 200ms).
+- The &quot;Up Next&quot; rail and tab bar stay fixed; only the hero region moves.
+- Scrolling the page down collapses the hero height slightly (parallax, video keeps playing until 50% off-screen, then pauses to poster).
+
+## Calibration
+- Video starts muted always; a speaker toggle fades in over the top-right during playback.
+- Poster-to-video crossfade hides the seek to middle - no black first frame ever shows.
+
+## Reduced motion
+Static posters; no auto-play, dots update on swipe only.
+
+## Don&#x27;t miss
+- The title treatment is rendered artwork over the video, not live text - keep it pinned during the crossfade.
+- Card corners stay rounded (~16px) even while the video plays.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">poster-to-video ambient preview.</div></div><div><div class="k">Content type</div><div class="v">interactive gesture</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-tv-video-preview-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple TV+'s featured carousel - a poster card that expands into an auto-playing video preview with the title treatment overlaying the footage.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe TV+ home tab: a full-bleed featured card at top (poster art with title logo and synopsis), an \"Up Next\" rail below. The featured card begins as key art, then crossfades into a muted auto-playing trailer that fills the card, the title logo persisting over the video. Swiping slides to the next featured title.\n\n## Motion spec\nPattern: poster-to-video ambient preview.\n- After ~1s at rest, the poster crossfades into the playing preview (600ms, ease-in-out); the video starts mid-clip, muted, letterboxed to the card's aspect.\n- The title logo and synopsis fade down to a smaller persistent lockup over the video's lower third (300ms) as playback starts.\n- Swipe horizontally: the card carousel paginates 1:1 with the finger, neighboring cards peeking in from the edge; release snaps to the nearest card (spring ~320/24); the outgoing video pauses and fades back to its poster (300ms) as the new card's poster-to-video cycle begins.\n- Paging dots under the card track the position (active dot stretches 6px to 16px, 200ms).\n- The \"Up Next\" rail and tab bar stay fixed; only the hero region moves.\n- Scrolling the page down collapses the hero height slightly (parallax, video keeps playing until 50% off-screen, then pauses to poster).\n\n## Calibration\n- Video starts muted always; a speaker toggle fades in over the top-right during playback.\n- Poster-to-video crossfade hides the seek to middle - no black first frame ever shows.\n\n## Reduced motion\nStatic posters; no auto-play, dots update on swipe only.\n\n## Don't miss\n- The title treatment is rendered artwork over the video, not live text - keep it pinned during the crossfade.\n- Card corners stay rounded (~16px) even while the video plays."</script>
+</body></html>

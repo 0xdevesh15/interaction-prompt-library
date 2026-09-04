@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Boring Camera Dial Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Not Boring Camera Dial Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/not-boring-camera-dial-swipe-interaction"><b>Not</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-camera-dial-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-camera-dial-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Not Boring Camera&#x27;s tactile control dials - swiping the on-screen controls scrubs shutter speed, zoom, and capture styles with springy detents, live value readouts, and a pink waveform shutter ring.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68412d36ed94500acc2f08dd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68412d36ed94500acc2f08dd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-not-boring-camera-dial-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Not Boring Camera&#x27;s tactile control dials - swiping the on-screen controls scrubs shutter speed, zoom, and capture styles with springy detents, live value readouts, and a pink waveform shutter ring.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black camera interface over a dark grid viewfinder: purple film door at top, a big white shutter button with a yellow grip pill beside it, small round toggles (S / M, 5x) at the edges, and a center readout that surfaces what is being scrubbed (&quot;SHUTTER SPEED 1/250&quot;, &quot;STYLE Spring&quot;, &quot;Expired&quot;). A pink jagged waveform ring blooms around the focus point on capture.
+
+## Motion spec
+Pattern: swipe-scrubbed control dials with springy detents and live readouts.
+- Swiping vertically on a control scrubs its value 1:1 with rubber-band at the ends (0.4x past limits); values tick through detents with a soft haptic tick each.
+- The readout label crossfades in on first touch (150ms), updates live (tabular numerals), and fades 500ms after release.
+- The S/M auto-manual toggle flips with a small flip-scale animation (scaleX 1 -&gt; 0 -&gt; 1, 200ms), the letter swapping at the midpoint.
+- The zoom pill (5x) steps through levels on tap with a pop (scale 1 -&gt; 1.15 -&gt; 1, spring ~340/14) and the viewfinder grid scales to match.
+- On capture: the pink waveform ring erupts from the focus point (scale 0.3 -&gt; 1.4, fade, 500ms, ease-out) with a springy shutter squash (scale 1 -&gt; 0.85 -&gt; 1, spring ~380/16).
+- The yellow grip idles with a subtle sheen sweep every 6s.
+
+## Calibration
+- Detents feel mechanical: one tick per stop, no glide-through on slow swipes.
+- Rubber-band resistance increases with overscroll distance.
+
+## Reduced motion
+Scrubbing keeps 1:1 mapping but kills the waveform bloom and shutter squash.
+
+## Don&#x27;t miss
+- The readout only exists while scrubbing - the resting UI is clean.
+- The purple film door, yellow grip, and white shutter are brand-fixed; controls float around them.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-scrubbed control dials with springy detents and live readouts.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/not-boring-camera-dial-swipe-interaction">original interaction</a> by Not. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Not Boring Camera's tactile control dials - swiping the on-screen controls scrubs shutter speed, zoom, and capture styles with springy detents, live value readouts, and a pink waveform shutter ring.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack camera interface over a dark grid viewfinder: purple film door at top, a big white shutter button with a yellow grip pill beside it, small round toggles (S / M, 5x) at the edges, and a center readout that surfaces what is being scrubbed (\"SHUTTER SPEED 1/250\", \"STYLE Spring\", \"Expired\"). A pink jagged waveform ring blooms around the focus point on capture.\n\n## Motion spec\nPattern: swipe-scrubbed control dials with springy detents and live readouts.\n- Swiping vertically on a control scrubs its value 1:1 with rubber-band at the ends (0.4x past limits); values tick through detents with a soft haptic tick each.\n- The readout label crossfades in on first touch (150ms), updates live (tabular numerals), and fades 500ms after release.\n- The S/M auto-manual toggle flips with a small flip-scale animation (scaleX 1 -> 0 -> 1, 200ms), the letter swapping at the midpoint.\n- The zoom pill (5x) steps through levels on tap with a pop (scale 1 -> 1.15 -> 1, spring ~340/14) and the viewfinder grid scales to match.\n- On capture: the pink waveform ring erupts from the focus point (scale 0.3 -> 1.4, fade, 500ms, ease-out) with a springy shutter squash (scale 1 -> 0.85 -> 1, spring ~380/16).\n- The yellow grip idles with a subtle sheen sweep every 6s.\n\n## Calibration\n- Detents feel mechanical: one tick per stop, no glide-through on slow swipes.\n- Rubber-band resistance increases with overscroll distance.\n\n## Reduced motion\nScrubbing keeps 1:1 mapping but kills the waveform bloom and shutter squash.\n\n## Don't miss\n- The readout only exists while scrubbing - the resting UI is clean.\n- The purple film door, yellow grip, and white shutter are brand-fixed; controls float around them."</script>
+</body></html>

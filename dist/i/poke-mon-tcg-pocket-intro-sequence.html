@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pokémon TCG Pocket Intro Sequence - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Pokémon TCG Pocket Intro Sequence</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/poke-mon-tcg-pocket-intro-sequence"><b>Poke</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/poke-mon-tcg-pocket-intro-sequence">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/poke-mon-tcg-pocket-intro-sequence">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Pokemon TCG Pocket&#x27;s intro - on a dark starfield, a card back flips to reveal Pikachu ex, more cards fly in and stack edge-on, fan out showing their art, then the camera dives inside a card&#x27;s artwork (Moltres over a burning sky, Pikachu in a forest) before pulling back to the full collection grid.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6755274c5222d1a7afd148a7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6755274c5222d1a7afd148a7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-poke-mon-tcg-pocket-intro-sequence.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Pokemon TCG Pocket&#x27;s intro - on a dark starfield, a card back flips to reveal Pikachu ex, more cards fly in and stack edge-on, fan out showing their art, then the camera dives inside a card&#x27;s artwork (Moltres over a burning sky, Pikachu in a forest) before pulling back to the full collection grid.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A black starfield (drifting bokeh dust). Cards appear as full 3D objects: the classic blue card back, Pikachu ex, Venonat and Charmander full-arts, trainer cards, Moltres ex. The sequence ends on the dense card-dex grid filling the screen.
+
+## Motion spec
+Pattern: cinematic card choreography with camera moves.
+- A lone card back floats center, slowly rotating; it flips (rotateY 180 -&gt; 0, 600ms, ease-in-out) to reveal Pikachu ex as a sparkle burst plays across the art.
+- More cards fly in from off-screen edges (arcs with rotation, staggered 150ms) and gather into an edge-on deck - the camera orbits to show the stack&#x27;s thickness.
+- The deck fans out (cards spread on arcs, 500ms, ease-out) showing different arts, each with its own holo shimmer.
+- The camera dives toward one card: the card frame dissolves and the artwork expands to full-bleed (FOV push-in, 700ms, ease-in) - you are inside the illustration with layered parallax (foreground Pikachu, mid trees, far sky drifting at different rates).
+- Pull back: the artwork shrinks into its cell as the whole collection grid assembles around it (cells fade/scale in outward from the dive point, 600ms).
+
+## Calibration
+- The sequence is one continuous camera journey (~6-8s) - no cuts.
+- Cards keep subtle float motion whenever on screen - nothing is ever fully static.
+
+## Reduced motion
+Sequence plays as simple crossfades between key tableaux.
+
+## Don&#x27;t miss
+- The starfield dust drifts throughout, including during the dive - it is the scene&#x27;s connective tissue.
+- Inside the artwork, the layers move with a slight gyro-style sway even after the camera stops.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cinematic card choreography with camera moves.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/poke-mon-tcg-pocket-intro-sequence">original interaction</a> by Poke. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Pokemon TCG Pocket's intro - on a dark starfield, a card back flips to reveal Pikachu ex, more cards fly in and stack edge-on, fan out showing their art, then the camera dives inside a card's artwork (Moltres over a burning sky, Pikachu in a forest) before pulling back to the full collection grid.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA black starfield (drifting bokeh dust). Cards appear as full 3D objects: the classic blue card back, Pikachu ex, Venonat and Charmander full-arts, trainer cards, Moltres ex. The sequence ends on the dense card-dex grid filling the screen.\n\n## Motion spec\nPattern: cinematic card choreography with camera moves.\n- A lone card back floats center, slowly rotating; it flips (rotateY 180 -> 0, 600ms, ease-in-out) to reveal Pikachu ex as a sparkle burst plays across the art.\n- More cards fly in from off-screen edges (arcs with rotation, staggered 150ms) and gather into an edge-on deck - the camera orbits to show the stack's thickness.\n- The deck fans out (cards spread on arcs, 500ms, ease-out) showing different arts, each with its own holo shimmer.\n- The camera dives toward one card: the card frame dissolves and the artwork expands to full-bleed (FOV push-in, 700ms, ease-in) - you are inside the illustration with layered parallax (foreground Pikachu, mid trees, far sky drifting at different rates).\n- Pull back: the artwork shrinks into its cell as the whole collection grid assembles around it (cells fade/scale in outward from the dive point, 600ms).\n\n## Calibration\n- The sequence is one continuous camera journey (~6-8s) - no cuts.\n- Cards keep subtle float motion whenever on screen - nothing is ever fully static.\n\n## Reduced motion\nSequence plays as simple crossfades between key tableaux.\n\n## Don't miss\n- The starfield dust drifts throughout, including during the dive - it is the scene's connective tissue.\n- Inside the artwork, the layers move with a slight gyro-style sway even after the camera stops."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Deal Unlocked Card Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Deal Unlocked Card Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-deal-unlocked-card-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-deal-unlocked-card-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-deal-unlocked-card-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s deal-of-the-day unlock - the orange deal card flips into a glowing green orb portal, &quot;DEAL UNLOCKED&quot; lands, the percentage morphs upward, and a limited-time-deal sheet slides up with the orb still burning behind it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5313a549438044fd597/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e5313a549438044fd597/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-deal-unlocked-card-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s deal-of-the-day unlock - the orange deal card flips into a glowing green orb portal, &quot;DEAL UNLOCKED&quot; lands, the percentage morphs upward, and a limited-time-deal sheet slides up with the orb still burning behind it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED store, dark: &quot;DEAL OF THE DAY&quot; header over an orange deal card (Rs 1,000), &quot;2%&quot; with a gift icon, a gold UNLOCK button, and a sponsored row (Flipkart, Uber) at the bottom. Unlocked state: a luminous green orb card with concentric rings, &quot;DEAL UNLOCKED&quot; and the climbing percentage; final state: a white &quot;limited time deal&quot; sheet with the orb, price (Rs 970), and a Buy Now button.
+
+## Motion spec
+Pattern: card-to-portal flip with escalating percentage morph.
+- The orange card flips on rotateY (0 -&gt; 180 degrees, 500ms, ease-in-out) revealing the green orb card, which blooms (radial glow 0 -&gt; full, 300ms) as it faces forward.
+- &quot;DEAL UNLOCKED&quot; letterspaces in (tracking tightens, opacity 0 -&gt; 1, 300ms); the orb&#x27;s rings ripple outward on loop (scale 1 -&gt; 1.2 fade, 1.6s).
+- The percentage morphs: &quot;2%&quot; -&gt; &quot;2% + 1%&quot; -&gt; &quot;3%&quot; (each swap a vertical roll, 250ms, 400ms apart) while the orb brightens a step per morph.
+- Then the deal sheet slides up (spring ~300/18) covering the lower half; the orb shrinks into the sheet&#x27;s header (shared-element scale + translate, 400ms) and keeps a slow glow pulse (opacity 0.85 -&gt; 1, 1.4s).
+
+## Calibration
+- Green means unlocked - nothing green appears before the flip completes.
+- The orb is luminous, not flat: layered radial gradients and one slow ring ripple.
+
+## Reduced motion
+Card crossfades to the orb card (250ms); percentage swaps without roll; sheet fades up.
+
+## Don&#x27;t miss
+- The gold UNLOCK button dims and stays visible until the sheet covers it - no disappearing chrome mid-sequence.
+- The sponsored row at the bottom never animates; it&#x27;s context, not celebration.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">card-to-portal flip with escalating percentage morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-deal-unlocked-card-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's deal-of-the-day unlock - the orange deal card flips into a glowing green orb portal, \"DEAL UNLOCKED\" lands, the percentage morphs upward, and a limited-time-deal sheet slides up with the orb still burning behind it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED store, dark: \"DEAL OF THE DAY\" header over an orange deal card (Rs 1,000), \"2%\" with a gift icon, a gold UNLOCK button, and a sponsored row (Flipkart, Uber) at the bottom. Unlocked state: a luminous green orb card with concentric rings, \"DEAL UNLOCKED\" and the climbing percentage; final state: a white \"limited time deal\" sheet with the orb, price (Rs 970), and a Buy Now button.\n\n## Motion spec\nPattern: card-to-portal flip with escalating percentage morph.\n- The orange card flips on rotateY (0 -> 180 degrees, 500ms, ease-in-out) revealing the green orb card, which blooms (radial glow 0 -> full, 300ms) as it faces forward.\n- \"DEAL UNLOCKED\" letterspaces in (tracking tightens, opacity 0 -> 1, 300ms); the orb's rings ripple outward on loop (scale 1 -> 1.2 fade, 1.6s).\n- The percentage morphs: \"2%\" -> \"2% + 1%\" -> \"3%\" (each swap a vertical roll, 250ms, 400ms apart) while the orb brightens a step per morph.\n- Then the deal sheet slides up (spring ~300/18) covering the lower half; the orb shrinks into the sheet's header (shared-element scale + translate, 400ms) and keeps a slow glow pulse (opacity 0.85 -> 1, 1.4s).\n\n## Calibration\n- Green means unlocked - nothing green appears before the flip completes.\n- The orb is luminous, not flat: layered radial gradients and one slow ring ripple.\n\n## Reduced motion\nCard crossfades to the orb card (250ms); percentage swaps without roll; sheet fades up.\n\n## Don't miss\n- The gold UNLOCK button dims and stays visible until the sheet covers it - no disappearing chrome mid-sequence.\n- The sponsored row at the bottom never animates; it's context, not celebration."</script>
+</body></html>

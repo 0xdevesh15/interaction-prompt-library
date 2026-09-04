@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Must Leaderboard Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Must Leaderboard Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/must-leaderboard-sheet"><b>Must</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/must-leaderboard-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/must-leaderboard-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Must&#x27;s leaderboard profile sheet - tap a leaderboard row and a profile bottom sheet slides up, spinning briefly before its content staggers in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb2361d73e2622b3463d/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb2361d73e2622b3463d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-must-leaderboard-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Must&#x27;s leaderboard profile sheet - tap a leaderboard row and a profile bottom sheet slides up, spinning briefly before its content staggers in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A leaderboard screen: a top-3 podium block (ranked rows with medal indicators) above an &quot;All users&quot; list of avatar rows with names, handles, and scores. Tapping any row opens that user&#x27;s profile as a bottom sheet.
+
+## Motion spec
+Pattern: bottom sheet with loading-to-content reveal.
+- Tap a row: the row flashes a pressed state (background to gray-100, 100ms) and the sheet rises from the bottom (spring ~380/28, ~450ms travel) to three-quarter height, scrimming the leaderboard behind it (black 0 to 40%, 250ms).
+- While the profile loads, the sheet shows a centered spinner (rotating ring, 1 rev per 800ms) for up to ~600ms.
+- Content reveal: the spinner fades out (150ms) and the profile sections stagger in top-down - header (avatar + name) first (translateY 14px + fade, 250ms), then stats row (200ms, 80ms later), then list content (80ms later again).
+- The sheet is draggable: it tracks the finger 1:1 downward, the scrim fading proportionally; release past 40% dismisses (accelerating slide-out, 300ms), otherwise it springs back up.
+- The leaderboard behind parallaxes up slightly (translateY -8px) while the sheet is open, returning on dismiss.
+
+## Calibration
+- The spinner-to-content swap must be a crossfade, never a layout jump - reserve the content&#x27;s vertical space during loading.
+- Sheet corner radius stays 16px throughout the drag.
+
+## Reduced motion
+Sheet fades in at full height; content appears without stagger.
+
+## Don&#x27;t miss
+- The tapped row is the context: keep the scrim translucent enough that the leaderboard stays legible behind it.
+- Scores and handles in the list are right-aligned in a lighter gray - hierarchy matters more than density.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">bottom sheet with loading-to-content reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/must-leaderboard-sheet">original interaction</a> by Must. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Must's leaderboard profile sheet - tap a leaderboard row and a profile bottom sheet slides up, spinning briefly before its content staggers in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA leaderboard screen: a top-3 podium block (ranked rows with medal indicators) above an \"All users\" list of avatar rows with names, handles, and scores. Tapping any row opens that user's profile as a bottom sheet.\n\n## Motion spec\nPattern: bottom sheet with loading-to-content reveal.\n- Tap a row: the row flashes a pressed state (background to gray-100, 100ms) and the sheet rises from the bottom (spring ~380/28, ~450ms travel) to three-quarter height, scrimming the leaderboard behind it (black 0 to 40%, 250ms).\n- While the profile loads, the sheet shows a centered spinner (rotating ring, 1 rev per 800ms) for up to ~600ms.\n- Content reveal: the spinner fades out (150ms) and the profile sections stagger in top-down - header (avatar + name) first (translateY 14px + fade, 250ms), then stats row (200ms, 80ms later), then list content (80ms later again).\n- The sheet is draggable: it tracks the finger 1:1 downward, the scrim fading proportionally; release past 40% dismisses (accelerating slide-out, 300ms), otherwise it springs back up.\n- The leaderboard behind parallaxes up slightly (translateY -8px) while the sheet is open, returning on dismiss.\n\n## Calibration\n- The spinner-to-content swap must be a crossfade, never a layout jump - reserve the content's vertical space during loading.\n- Sheet corner radius stays 16px throughout the drag.\n\n## Reduced motion\nSheet fades in at full height; content appears without stagger.\n\n## Don't miss\n- The tapped row is the context: keep the scrim translucent enough that the leaderboard stays legible behind it.\n- Scores and handles in the list are right-aligned in a lighter gray - hierarchy matters more than density."</script>
+</body></html>

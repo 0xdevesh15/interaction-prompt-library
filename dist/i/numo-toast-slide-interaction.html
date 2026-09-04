@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Numo Toast Slide Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Numo Toast Slide Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/numo-toast-slide-interaction"><b>Numo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/numo-toast-slide-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/numo-toast-slide-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Numo&#x27;s reward toast - an orange pill slides down from the top bezel over the lesson screen announcing XP points, holds, then retracts to reveal the dashed progress bar again.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb5cc2f97ed1fe791ad7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb5cc2f97ed1fe791ad7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-numo-toast-slide-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Numo&#x27;s reward toast - an orange pill slides down from the top bezel over the lesson screen announcing XP points, holds, then retracts to reveal the dashed progress bar again.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light lesson screen: back arrow, a segmented dashed progress bar across the top, center content (a colorful sticker-style star illustration, bold &quot;Awesome!!&quot; headline). The toast: an orange pill with a &quot;+10 XP&quot;-style label and subtext &quot;Correct answer&quot;.
+
+## Motion spec
+Pattern: toast drop-in / auto-dismiss, ~3s total.
+- Toast slides down from behind the top edge (translateY -120% -&gt; 0, 350ms, spring ~300/20 with a slight overshoot bounce).
+- It overlaps and covers the progress bar region while visible.
+- Holds for ~2s with a subtle shadow.
+- Retracts upward (translateY -&gt; -120%, 300ms, ease-in), revealing the progress bar; the bar&#x27;s new segment fills in as the toast clears (300ms).
+- Center content never moves.
+
+## Calibration
+- Entry has a small spring bounce; exit is a clean ease-in - symmetrical springs make dismissal feel hesitant.
+- The toast sits below the status bar, hugging the bezel like a system notification.
+
+## Reduced motion
+Toast fades in/out in place (250ms) without travel.
+
+## Don&#x27;t miss
+- The toast covers the progress bar while visible, so the bar&#x27;s fill update only shows after retract - the sequencing is the storytelling.
+- Exactly one toast at a time; a second reward queues, never stacks.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">toast drop-in / auto-dismiss, ~3s total.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/numo-toast-slide-interaction">original interaction</a> by Numo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Numo's reward toast - an orange pill slides down from the top bezel over the lesson screen announcing XP points, holds, then retracts to reveal the dashed progress bar again.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight lesson screen: back arrow, a segmented dashed progress bar across the top, center content (a colorful sticker-style star illustration, bold \"Awesome!!\" headline). The toast: an orange pill with a \"+10 XP\"-style label and subtext \"Correct answer\".\n\n## Motion spec\nPattern: toast drop-in / auto-dismiss, ~3s total.\n- Toast slides down from behind the top edge (translateY -120% -> 0, 350ms, spring ~300/20 with a slight overshoot bounce).\n- It overlaps and covers the progress bar region while visible.\n- Holds for ~2s with a subtle shadow.\n- Retracts upward (translateY -> -120%, 300ms, ease-in), revealing the progress bar; the bar's new segment fills in as the toast clears (300ms).\n- Center content never moves.\n\n## Calibration\n- Entry has a small spring bounce; exit is a clean ease-in - symmetrical springs make dismissal feel hesitant.\n- The toast sits below the status bar, hugging the bezel like a system notification.\n\n## Reduced motion\nToast fades in/out in place (250ms) without travel.\n\n## Don't miss\n- The toast covers the progress bar while visible, so the bar's fill update only shows after retract - the sequencing is the storytelling.\n- Exactly one toast at a time; a second reward queues, never stacks."</script>
+</body></html>

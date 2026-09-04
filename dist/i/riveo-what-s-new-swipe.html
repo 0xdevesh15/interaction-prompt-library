@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Riveo What&#x27;s New Swipe - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Riveo What&#x27;s New Swipe</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/riveo-what-s-new-swipe"><b>Riveo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/riveo-what-s-new-swipe">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/riveo-what-s-new-swipe">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Riveo&#x27;s What&#x27;s New showcase - swiping between feature slides (Time Range Selection, Beat Edits, Animate Styles, Select Multiple Overlays, Resizable Canvas) triggers a 3D holographic page-peel: the current page&#x27;s corner lifts with a rainbow-foil sheen and peels diagonally off to reveal the next.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d12dab44f5c916c1233976/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66d12dab44f5c916c1233976/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-riveo-what-s-new-swipe.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Riveo&#x27;s What&#x27;s New showcase - swiping between feature slides (Time Range Selection, Beat Edits, Animate Styles, Select Multiple Overlays, Resizable Canvas) triggers a 3D holographic page-peel: the current page&#x27;s corner lifts with a rainbow-foil sheen and peels diagonally off to reveal the next.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark showcase: each slide has a small rainbow &quot;What&#x27;s New&quot; tag, a bold title, a centered screenshot of the video-editor feature (timeline, grid picker, WOAH title styles, color overlays), a caption line, page dots, and prev/next arrows.
+
+## Motion spec
+Pattern: holographic page-peel carousel.
+- Swipe: the current slide&#x27;s far corner lifts and curls with the drag - the peel follows the finger diagonally, the page bending like film stock; the underside of the peel shows a shifting rainbow holographic foil that shimmers with the peel angle.
+- The next slide is revealed underneath as the peel exposes it - it scales up slightly (0.97 -&gt; 1) as more of it shows.
+- Release past ~40%: the peel flies off with momentum (600ms, ease-out, curl tightening) and the new slide settles flat; below threshold the page uncurls back flat (spring ~280/22).
+- Page dots slide their fill on commit; the caption crossfades with the title.
+
+## Calibration
+- The holographic foil appears ONLY on the curling underside - flat pages are matte.
+- Peel direction is constant (top-right corner, peeling toward bottom-left) regardless of swipe direction sign.
+
+## Reduced motion
+Slides crossfade with a slight scale; no peel.
+
+## Don&#x27;t miss
+- The curl is 3D: the page surface deforms, with soft shadow under the lifted region.
+- Each slide&#x27;s screenshot is the feature mid-use - real editor chrome, not marketing art.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">holographic page-peel carousel.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/riveo-what-s-new-swipe">original interaction</a> by Riveo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Riveo's What's New showcase - swiping between feature slides (Time Range Selection, Beat Edits, Animate Styles, Select Multiple Overlays, Resizable Canvas) triggers a 3D holographic page-peel: the current page's corner lifts with a rainbow-foil sheen and peels diagonally off to reveal the next.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark showcase: each slide has a small rainbow \"What's New\" tag, a bold title, a centered screenshot of the video-editor feature (timeline, grid picker, WOAH title styles, color overlays), a caption line, page dots, and prev/next arrows.\n\n## Motion spec\nPattern: holographic page-peel carousel.\n- Swipe: the current slide's far corner lifts and curls with the drag - the peel follows the finger diagonally, the page bending like film stock; the underside of the peel shows a shifting rainbow holographic foil that shimmers with the peel angle.\n- The next slide is revealed underneath as the peel exposes it - it scales up slightly (0.97 -> 1) as more of it shows.\n- Release past ~40%: the peel flies off with momentum (600ms, ease-out, curl tightening) and the new slide settles flat; below threshold the page uncurls back flat (spring ~280/22).\n- Page dots slide their fill on commit; the caption crossfades with the title.\n\n## Calibration\n- The holographic foil appears ONLY on the curling underside - flat pages are matte.\n- Peel direction is constant (top-right corner, peeling toward bottom-left) regardless of swipe direction sign.\n\n## Reduced motion\nSlides crossfade with a slight scale; no peel.\n\n## Don't miss\n- The curl is 3D: the page surface deforms, with soft shadow under the lifted region.\n- Each slide's screenshot is the feature mid-use - real editor chrome, not marketing art."</script>
+</body></html>

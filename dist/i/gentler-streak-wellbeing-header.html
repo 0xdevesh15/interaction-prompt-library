@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Wellbeing Header - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Wellbeing Header</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-wellbeing-header"><b>Gentler Streak</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-wellbeing-header">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-wellbeing-header">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Gentler Streak&#x27;s wellbeing header - a green gradient blooms down from behind the mascot face while its closed-eyes smile wiggles, flooding the top of the metrics screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1d225b7b88f78c79e5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1d225b7b88f78c79e5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-wellbeing-header.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Gentler Streak&#x27;s wellbeing header - a green gradient blooms down from behind the mascot face while its closed-eyes smile wiggles, flooding the top of the metrics screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The top of the wellbeing screen: a large mascot face (closed curved eyes, gentle smile - just two strokes and a curve) above &quot;Your Metrics Are in Check&quot; and the Health Metrics list. On entry (or status change to good), a vibrant green gradient sweeps in behind the face.
+
+## Motion spec
+Pattern: gradient bloom + mascot wiggle.
+- Bloom: the green radial gradient expands from a point behind the mascot&#x27;s crown (radius 0 to ~140% of header width, 900ms, ease-out), feathering into the white background at its edge; the face&#x27;s strokes stay dark on top of the green.
+- Wiggle: as the bloom passes 60%, the face does a happy wiggle - eyes squeeze (stroke arcs flatten, scaleY 0.7, 150ms) while the whole face tilts +-4deg twice (300ms) and the smile widens (arc radius +15%, 200ms), settling back with a soft spring (~420/22).
+- Content below (&quot;Your Metrics Are in Check&quot; header, metric rows) staggers up underneath (translateY 14px, 250ms, 70ms apart) after the bloom starts.
+- On status change to a worse state, the green drains back upward (600ms) and the face morphs to the concerned variant (mouth curve flattens) - the bloom is the status indicator.
+
+## Calibration
+- The gradient is radial and top-weighted; it must never become a full-bleed fill - the metrics area stays white.
+- The wiggle happens once per bloom, not on a loop.
+
+## Reduced motion
+Gradient fades in statically; face swaps without wiggle.
+
+## Don&#x27;t miss
+- The face is three strokes total - the charm is in their deformation, not in added features.
+- Bloom origin sits behind the face center-top, so green reads as radiating from the mascot.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gradient bloom + mascot wiggle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-wellbeing-header">original interaction</a> by Gentler Streak. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Gentler Streak's wellbeing header - a green gradient blooms down from behind the mascot face while its closed-eyes smile wiggles, flooding the top of the metrics screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe top of the wellbeing screen: a large mascot face (closed curved eyes, gentle smile - just two strokes and a curve) above \"Your Metrics Are in Check\" and the Health Metrics list. On entry (or status change to good), a vibrant green gradient sweeps in behind the face.\n\n## Motion spec\nPattern: gradient bloom + mascot wiggle.\n- Bloom: the green radial gradient expands from a point behind the mascot's crown (radius 0 to ~140% of header width, 900ms, ease-out), feathering into the white background at its edge; the face's strokes stay dark on top of the green.\n- Wiggle: as the bloom passes 60%, the face does a happy wiggle - eyes squeeze (stroke arcs flatten, scaleY 0.7, 150ms) while the whole face tilts +-4deg twice (300ms) and the smile widens (arc radius +15%, 200ms), settling back with a soft spring (~420/22).\n- Content below (\"Your Metrics Are in Check\" header, metric rows) staggers up underneath (translateY 14px, 250ms, 70ms apart) after the bloom starts.\n- On status change to a worse state, the green drains back upward (600ms) and the face morphs to the concerned variant (mouth curve flattens) - the bloom is the status indicator.\n\n## Calibration\n- The gradient is radial and top-weighted; it must never become a full-bleed fill - the metrics area stays white.\n- The wiggle happens once per bloom, not on a loop.\n\n## Reduced motion\nGradient fades in statically; face swaps without wiggle.\n\n## Don't miss\n- The face is three strokes total - the charm is in their deformation, not in added features.\n- Bloom origin sits behind the face center-top, so green reads as radiating from the mascot."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Changelog Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Changelog Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-changelog-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-changelog-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-changelog-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s returning-user changelog - a mascot-driven story sequence: &quot;Welcome back to learning!&quot; over Duo, then paged cards on purple (&quot;A lot has changed on Duolingo&quot;, &quot;better, faster&quot;, &quot;and grammar tips&quot;, &quot;to help you speak, listen, read, and write&quot;, &quot;Ready for a plot twist?&quot;, &quot;Fun, bite-sized tales for quick learning anytime&quot;) with Duo and friends acting out each beat, ending on &quot;Congrats on coming back!&quot; with orbiting icons.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736f74fe962df23014454a7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6736f74fe962df23014454a7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-changelog-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s returning-user changelog - a mascot-driven story sequence: &quot;Welcome back to learning!&quot; over Duo, then paged cards on purple (&quot;A lot has changed on Duolingo&quot;, &quot;better, faster&quot;, &quot;and grammar tips&quot;, &quot;to help you speak, listen, read, and write&quot;, &quot;Ready for a plot twist?&quot;, &quot;Fun, bite-sized tales for quick learning anytime&quot;) with Duo and friends acting out each beat, ending on &quot;Congrats on coming back!&quot; with orbiting icons.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Story-style sequence: an orange intro card, then purple pages with a top headline, a central phone/illustration mock that Duo (in a wizard hat) and other characters interact with, close (x) top-left and a mute icon top-right. Finale: Duo surrounded by a swirling ring of feature icons.
+
+## Motion spec
+Pattern: auto-advancing story pages with character choreography.
+- Intro: &quot;Welcome back to learning!&quot; wipes in over Duo peeking from the bottom (translateY spring ~320/20).
+- Page turns: content slides up-and-out / in (like stories, ~350ms, ease-in-out); the headline types in word by word (~60ms per word).
+- Per page, the illustration animates: icons pop into the phone mock (scale springs, staggered 100ms), Duo slides along the top edge of the mock, characters trade places.
+- &quot;Ready for a plot twist?&quot;: Duo swings in from the right edge (rotate + translate, spring ~280/18) hanging off the mock&#x27;s side.
+- Finale: feature icons orbit Duo on a circular path (~6s/rev) while &quot;Congrats on coming back!&quot; scales in (spring ~340/20).
+
+## Calibration
+- Headlines complete their type-in before the illustration motion starts - text leads, art follows.
+- Purple is the constant; illustration accents change per page.
+
+## Reduced motion
+Pages crossfade (200ms); headlines appear complete; no orbiting.
+
+## Don&#x27;t miss
+- The sequence is tappable (tap right = next page) but auto-advances after each page&#x27;s animation completes.
+- Duo&#x27;s wizard hat persists across pages - it is the through-line costume.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-advancing story pages with character choreography.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-changelog-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's returning-user changelog - a mascot-driven story sequence: \"Welcome back to learning!\" over Duo, then paged cards on purple (\"A lot has changed on Duolingo\", \"better, faster\", \"and grammar tips\", \"to help you speak, listen, read, and write\", \"Ready for a plot twist?\", \"Fun, bite-sized tales for quick learning anytime\") with Duo and friends acting out each beat, ending on \"Congrats on coming back!\" with orbiting icons.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nStory-style sequence: an orange intro card, then purple pages with a top headline, a central phone/illustration mock that Duo (in a wizard hat) and other characters interact with, close (x) top-left and a mute icon top-right. Finale: Duo surrounded by a swirling ring of feature icons.\n\n## Motion spec\nPattern: auto-advancing story pages with character choreography.\n- Intro: \"Welcome back to learning!\" wipes in over Duo peeking from the bottom (translateY spring ~320/20).\n- Page turns: content slides up-and-out / in (like stories, ~350ms, ease-in-out); the headline types in word by word (~60ms per word).\n- Per page, the illustration animates: icons pop into the phone mock (scale springs, staggered 100ms), Duo slides along the top edge of the mock, characters trade places.\n- \"Ready for a plot twist?\": Duo swings in from the right edge (rotate + translate, spring ~280/18) hanging off the mock's side.\n- Finale: feature icons orbit Duo on a circular path (~6s/rev) while \"Congrats on coming back!\" scales in (spring ~340/20).\n\n## Calibration\n- Headlines complete their type-in before the illustration motion starts - text leads, art follows.\n- Purple is the constant; illustration accents change per page.\n\n## Reduced motion\nPages crossfade (200ms); headlines appear complete; no orbiting.\n\n## Don't miss\n- The sequence is tappable (tap right = next page) but auto-advances after each page's animation completes.\n- Duo's wizard hat persists across pages - it is the through-line costume."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Walk the World Purchase Steps Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Walk the World Purchase Steps Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/walk-the-world-purchase-steps-interaction"><b>Walk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/walk-the-world-purchase-steps-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/walk-the-world-purchase-steps-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Walk the World&#x27;s step purchase - confirming &#x27;Purchase &quot;US City Walks&quot; for 25,000 steps?&#x27; rolls the balance pill down from 26,219 to 1,219 digit by digit while the unlocked walk cards slide up into the collection.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e71a334d658cce804c7fd0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e71a334d658cce804c7fd0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-walk-the-world-purchase-steps-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Walk the World&#x27;s step purchase - confirming &#x27;Purchase &quot;US City Walks&quot; for 25,000 steps?&#x27; rolls the balance pill down from 26,219 to 1,219 digit by digit while the unlocked walk cards slide up into the collection.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Passport screen: country flags and stats, a &quot;US City Walks&quot; card with unlock options (&quot;₹499&quot; blue button, &quot;or 25,000 steps&quot; outline), a locked Brooklyn Bridge card, and a green bottom pill showing the balance &quot;26,219&quot; with a bolt. A center confirmation sheet offers Cancel / Purchase. After purchase the collection shows unlocked cards: Brooklyn Bridge, The High Line, Golden Gate Bridge.
+
+## Motion spec
+Pattern: ticker deduction with card cascade, ~1.2s.
+- Confirm: the sheet scales in (0.9 -&gt; 1, spring ~360/20, 250ms) over a 40% scrim.
+- Purchase: the sheet dismisses down (200ms) and the balance pill&#x27;s digits roll down like an odometer - each digit spins through its intermediate values, right to left, landing at 1,219 (700ms total).
+- Unlock: the &quot;US City Walks&quot; header flips to owned (lock badge fades, 200ms) and the walk cards slide up staggered (60ms apart, 300ms each, ease-out) revealing their artwork.
+- Haptic: success pulse when the ticker lands.
+
+## Calibration
+- The deduction is exactly the price: 26,219 - 25,000 = 1,219.
+- The pill stays pinned at the bottom; only its digits move.
+
+## Reduced motion
+The balance crossfades to the new value (300ms); cards fade in staggered.
+
+## Don&#x27;t miss
+- The odometer roll is per digit, not a whole-number count-up - neighboring digits turn at different speeds.
+- Cards that were locked show their artwork only after the cascade.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ticker deduction with card cascade, ~1.2s.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/walk-the-world-purchase-steps-interaction">original interaction</a> by Walk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Walk the World's step purchase - confirming 'Purchase \"US City Walks\" for 25,000 steps?' rolls the balance pill down from 26,219 to 1,219 digit by digit while the unlocked walk cards slide up into the collection.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPassport screen: country flags and stats, a \"US City Walks\" card with unlock options (\"\u20b9499\" blue button, \"or 25,000 steps\" outline), a locked Brooklyn Bridge card, and a green bottom pill showing the balance \"26,219\" with a bolt. A center confirmation sheet offers Cancel / Purchase. After purchase the collection shows unlocked cards: Brooklyn Bridge, The High Line, Golden Gate Bridge.\n\n## Motion spec\nPattern: ticker deduction with card cascade, ~1.2s.\n- Confirm: the sheet scales in (0.9 -> 1, spring ~360/20, 250ms) over a 40% scrim.\n- Purchase: the sheet dismisses down (200ms) and the balance pill's digits roll down like an odometer - each digit spins through its intermediate values, right to left, landing at 1,219 (700ms total).\n- Unlock: the \"US City Walks\" header flips to owned (lock badge fades, 200ms) and the walk cards slide up staggered (60ms apart, 300ms each, ease-out) revealing their artwork.\n- Haptic: success pulse when the ticker lands.\n\n## Calibration\n- The deduction is exactly the price: 26,219 - 25,000 = 1,219.\n- The pill stays pinned at the bottom; only its digits move.\n\n## Reduced motion\nThe balance crossfades to the new value (300ms); cards fade in staggered.\n\n## Don't miss\n- The odometer roll is per digit, not a whole-number count-up - neighboring digits turn at different speeds.\n- Cards that were locked show their artwork only after the cascade."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nike Run Club Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Nike Run Club Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/nike-run-club-splash"><b>Nike Run Club</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-run-club-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-run-club-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Nike Run Club&#x27;s splash - a black screen with the white swoosh + NRC lockup, then a looping video montage of runners fades in behind the static logo before the login options rise.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb3e225b7b88f78c6b40/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb3e225b7b88f78c6b40/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-nike-run-club-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Nike Run Club&#x27;s splash - a black screen with the white swoosh + NRC lockup, then a looping video montage of runners fades in behind the static logo before the login options rise.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen, centered white Nike swoosh above &quot;NRC&quot;. Behind it, a full-bleed video montage of runners (city races, finish-line moments) fades up and loops. Login options (Join Us / Sign In style buttons) eventually rise from the bottom.
+
+## Motion spec
+Pattern: logo hold + video fade-behind.
+- Phase 1 (0-700ms): pure black with the white lockup at center, no motion.
+- Phase 2 (700-1500ms): the video montage fades in behind the logo (opacity 0 to 1, 800ms) - the logo never moves, scales, or changes; the footage crossfades between clips every ~2.5s (500ms crossfade), always full-bleed with a slight slow zoom (scale 1 to 1.06 per clip).
+- A subtle dark gradient at the bottom (black 0 to 55%) fades in with the video to keep the coming buttons legible.
+- Phase 3 (1500ms+): the two auth buttons slide up into the bottom safe area (translateY 40px to 0 + fade, 350ms, staggered 80ms); the primary is solid white with black text, the secondary is outlined.
+- The montage keeps looping behind the buttons indefinitely.
+
+## Calibration
+- The logo is the anchor: absolutely static through every phase - all energy comes from the footage.
+- Clips crossfade, never hard-cut.
+
+## Reduced motion
+Static hero image behind the logo; buttons fade in.
+
+## Don&#x27;t miss
+- White logo on whatever the footage shows - add no background pill or shadow behind it.
+- The montage is aspirational (races, finish lines, groups) - not product UI screenshots.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo hold + video fade-behind.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/nike-run-club-splash">original interaction</a> by Nike Run Club. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Nike Run Club's splash - a black screen with the white swoosh + NRC lockup, then a looping video montage of runners fades in behind the static logo before the login options rise.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen, centered white Nike swoosh above \"NRC\". Behind it, a full-bleed video montage of runners (city races, finish-line moments) fades up and loops. Login options (Join Us / Sign In style buttons) eventually rise from the bottom.\n\n## Motion spec\nPattern: logo hold + video fade-behind.\n- Phase 1 (0-700ms): pure black with the white lockup at center, no motion.\n- Phase 2 (700-1500ms): the video montage fades in behind the logo (opacity 0 to 1, 800ms) - the logo never moves, scales, or changes; the footage crossfades between clips every ~2.5s (500ms crossfade), always full-bleed with a slight slow zoom (scale 1 to 1.06 per clip).\n- A subtle dark gradient at the bottom (black 0 to 55%) fades in with the video to keep the coming buttons legible.\n- Phase 3 (1500ms+): the two auth buttons slide up into the bottom safe area (translateY 40px to 0 + fade, 350ms, staggered 80ms); the primary is solid white with black text, the secondary is outlined.\n- The montage keeps looping behind the buttons indefinitely.\n\n## Calibration\n- The logo is the anchor: absolutely static through every phase - all energy comes from the footage.\n- Clips crossfade, never hard-cut.\n\n## Reduced motion\nStatic hero image behind the logo; buttons fade in.\n\n## Don't miss\n- White logo on whatever the footage shows - add no background pill or shadow behind it.\n- The montage is aspirational (races, finish lines, groups) - not product UI screenshots."</script>
+</body></html>

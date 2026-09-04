@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tide Guide Pricing Sheet Value Prop Slide Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tide Guide Pricing Sheet Value Prop Slide Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tide-guide-pricing-sheet-value-prop-slide-interaction"><b>Tide</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tide-guide-pricing-sheet-value-prop-slide-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tide-guide-pricing-sheet-value-prop-slide-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Tide Guide&#x27;s premium onboarding carousel - feature slides (tide tables, Watch complications, widgets, Live Activities, weather charts) slide across while the whole background hue morphs per slide, above a fixed pricing footer.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68b82a35d333b2a7f187dc74/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68b82a35d333b2a7f187dc74/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tide-guide-pricing-sheet-value-prop-slide-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Tide Guide&#x27;s premium onboarding carousel - feature slides (tide tables, Watch complications, widgets, Live Activities, weather charts) slide across while the whole background hue morphs per slide, above a fixed pricing footer.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark paywall carousel: each slide pairs device screenshots (iPhone tide tables, Apple Watch faces, home-screen widgets, Live Activities, weekly weather charts) with a title (&quot;Yearly Tide Tables&quot;, &quot;Watch Complications&quot;, &quot;Perfect for Apple Watch&quot;, &quot;Powerful Widgets&quot;, &quot;Live Activities&quot;, &quot;Weekly Weather Charts&quot;), two laurel badges, and a 4.8-star quote. Fixed footer: plan pills (Monthly / Annual / Lifetime), a blue Continue button, Restore.
+
+## Motion spec
+Pattern: carousel with background color morph, ~500ms per slide.
+- Slide: screenshots and title slide horizontally (350ms, ease-out), the new title rising 14px with a fade (250ms).
+- Background: the full-screen tint morphs hue per slide (navy -&gt; blue -&gt; purple -&gt; magenta, 500ms, ease-in-out) behind the content.
+- Screenshots: each slide&#x27;s devices settle with a small scale (0.95 -&gt; 1, spring ~320/22).
+- Footer: static across slides; selecting a plan pill animates its fill (200ms).
+
+## Calibration
+- The hue morph spans the whole background, not a card behind the screenshot.
+- Laurel badges and the star quote are identical on every slide - they do not re-animate.
+
+## Reduced motion
+Slides crossfade (300ms); the background color steps without the hue sweep.
+
+## Don&#x27;t miss
+- The background keeps morphing even on the settled slide (very slow drift, 20s).
+- The pricing footer never slides with the carousel.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">carousel with background color morph, ~500ms per slide.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tide-guide-pricing-sheet-value-prop-slide-interaction">original interaction</a> by Tide. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Tide Guide's premium onboarding carousel - feature slides (tide tables, Watch complications, widgets, Live Activities, weather charts) slide across while the whole background hue morphs per slide, above a fixed pricing footer.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark paywall carousel: each slide pairs device screenshots (iPhone tide tables, Apple Watch faces, home-screen widgets, Live Activities, weekly weather charts) with a title (\"Yearly Tide Tables\", \"Watch Complications\", \"Perfect for Apple Watch\", \"Powerful Widgets\", \"Live Activities\", \"Weekly Weather Charts\"), two laurel badges, and a 4.8-star quote. Fixed footer: plan pills (Monthly / Annual / Lifetime), a blue Continue button, Restore.\n\n## Motion spec\nPattern: carousel with background color morph, ~500ms per slide.\n- Slide: screenshots and title slide horizontally (350ms, ease-out), the new title rising 14px with a fade (250ms).\n- Background: the full-screen tint morphs hue per slide (navy -> blue -> purple -> magenta, 500ms, ease-in-out) behind the content.\n- Screenshots: each slide's devices settle with a small scale (0.95 -> 1, spring ~320/22).\n- Footer: static across slides; selecting a plan pill animates its fill (200ms).\n\n## Calibration\n- The hue morph spans the whole background, not a card behind the screenshot.\n- Laurel badges and the star quote are identical on every slide - they do not re-animate.\n\n## Reduced motion\nSlides crossfade (300ms); the background color steps without the hue sweep.\n\n## Don't miss\n- The background keeps morphing even on the settled slide (very slow drift, 20s).\n- The pricing footer never slides with the carousel."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tesseract 3D Swirl Scroll Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tesseract 3D Swirl Scroll Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tesseract-3d-swirl-scroll-interaction"><b>Tesseract</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tesseract-3d-swirl-scroll-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tesseract-3d-swirl-scroll-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Tesseract&#x27;s swirl menu - a fanned stack of tall menu cards rotates through a 3D staircase spiral as you scroll, each card&#x27;s label set sideways along its edge.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6942314f9c03c66ee7d9d2f2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6942314f9c03c66ee7d9d2f2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tesseract-3d-swirl-scroll-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Tesseract&#x27;s swirl menu - a fanned stack of tall menu cards rotates through a 3D staircase spiral as you scroll, each card&#x27;s label set sideways along its edge.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A near-black screen holding a tall fanned spiral of slim menu cards (light gray sheets, each labeled vertically - &quot;We work with Agile&quot;, &quot;Lean UX&quot;, &quot;Scrum&quot; and more), arranged as a diagonal staircase sweeping from top-left to bottom-right. One card (peach-tinted) is the active focus. A minimal tab bar sits at the bottom.
+
+## Motion spec
+Pattern: scroll-driven 3D rotation of a fanned card spiral.
+- Scrolling advances the spiral: each card rotates on its vertical axis (rotateY up to 70deg) while translating along the staircase path - cards near the front are wide and bright, cards receding narrow into thin edges and dim to mid-gray.
+- The motion is scrubbed to the scroll position 1:1 (no momentum decoupling): one full card per ~120pt of scroll, with perspective ~900px so the fan reads as depth, not a flat carousel.
+- On release, the spiral snaps to the nearest card (spring ~280/22, ~350ms settle); the focused card warms to its peach tint over 250ms while the previous one cools to gray.
+- The focused card&#x27;s label brightens and tracks a slight 2px rise; all other labels sit at 60% opacity.
+- Cards carry a soft ambient sway when idle (+/-1deg rotateY over 3s, offset per card) so the stack never looks frozen.
+
+## Calibration
+- Perspective is the whole effect - keep a single shared vanishing point; cards must never look individually flat-rotated.
+- The staircase keeps constant diagonal spacing; cards overlap by ~70% of their width.
+
+## Reduced motion
+Cards fade/slide horizontally through the fan positions without rotateY or perspective.
+
+## Don&#x27;t miss
+- Labels read bottom-to-top along each card&#x27;s left edge - rotated 90deg, small caps.
+- The active card&#x27;s tint is a warm paper peach against the cool gray stack - the only color on screen besides the tab bar.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-driven 3D rotation of a fanned card spiral.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tesseract-3d-swirl-scroll-interaction">original interaction</a> by Tesseract. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Tesseract's swirl menu - a fanned stack of tall menu cards rotates through a 3D staircase spiral as you scroll, each card's label set sideways along its edge.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA near-black screen holding a tall fanned spiral of slim menu cards (light gray sheets, each labeled vertically - \"We work with Agile\", \"Lean UX\", \"Scrum\" and more), arranged as a diagonal staircase sweeping from top-left to bottom-right. One card (peach-tinted) is the active focus. A minimal tab bar sits at the bottom.\n\n## Motion spec\nPattern: scroll-driven 3D rotation of a fanned card spiral.\n- Scrolling advances the spiral: each card rotates on its vertical axis (rotateY up to 70deg) while translating along the staircase path - cards near the front are wide and bright, cards receding narrow into thin edges and dim to mid-gray.\n- The motion is scrubbed to the scroll position 1:1 (no momentum decoupling): one full card per ~120pt of scroll, with perspective ~900px so the fan reads as depth, not a flat carousel.\n- On release, the spiral snaps to the nearest card (spring ~280/22, ~350ms settle); the focused card warms to its peach tint over 250ms while the previous one cools to gray.\n- The focused card's label brightens and tracks a slight 2px rise; all other labels sit at 60% opacity.\n- Cards carry a soft ambient sway when idle (+/-1deg rotateY over 3s, offset per card) so the stack never looks frozen.\n\n## Calibration\n- Perspective is the whole effect - keep a single shared vanishing point; cards must never look individually flat-rotated.\n- The staircase keeps constant diagonal spacing; cards overlap by ~70% of their width.\n\n## Reduced motion\nCards fade/slide horizontally through the fan positions without rotateY or perspective.\n\n## Don't miss\n- Labels read bottom-to-top along each card's left edge - rotated 90deg, small caps.\n- The active card's tint is a warm paper peach against the cool gray stack - the only color on screen besides the tab bar."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retro Get Started - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Retro Get Started</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/retro-get-started"><b>Retro</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/retro-get-started">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/retro-get-started">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Retro&#x27;s get-started slideshow - an auto-advancing pitch where the 3D &quot;R&quot; logo slides and bounces between screen positions as the value-prop copy swaps beneath the wordmark.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f9f761d73e2622bbb38f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f9f761d73e2622bbb38f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-retro-get-started.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Retro&#x27;s get-started slideshow - an auto-advancing pitch where the 3D &quot;R&quot; logo slides and bounces between screen positions as the value-prop copy swaps beneath the wordmark.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen. Serif &quot;Retro&quot; wordmark center-top with a rotating subtitle (&quot;Recap Your Life&quot;, &quot;Week to Week&quot;, &quot;Ad-Free Social&quot;, &quot;Friends Only&quot;). The 3D logo - a chunky &quot;R&quot; built from a photo stack (red default, colorful photo edges) - appears at different spots: beside the wordmark, near the bottom button, center. Fixed black &quot;Let&#x27;s go&quot; pill at the bottom over a terms line.
+
+## Motion spec
+Pattern: auto-advancing slides with a traveling mascot logo.
+- Every ~1.8s the slide advances automatically: the subtitle crossfades with a small rise (translateY 8px to 0, 300ms).
+- The 3D logo travels to its new position per slide: it slides along a curved path with a spring (stiffness ~200, damping ~16) - one clear bounce on landing - while rotating slightly in 3D (rotateY +-15deg) to show the photo-stack depth.
+- The logo scales with its position: larger center stage (~120px), smaller near the button (~48px).
+- The sequence loops until &quot;Let&#x27;s go&quot; is tapped; the wordmark and button never move.
+- The logo casts a soft contact shadow that tracks its landing spot.
+
+## Calibration
+- One bounce on landing - the charm is a single confident hop, not wobble.
+- Auto-advance timing stays brisk; the user can tap Let&#x27;s go at any point without a state mismatch.
+
+## Reduced motion
+Logo crossfades between positions; subtitles fade in place.
+
+## Don&#x27;t miss
+- The R is a stack of photos - its edges show layered prints, not a flat extrusion.
+- Subtitle and logo position change as a pair; each value prop owns its logo placement.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-advancing slides with a traveling mascot logo.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/retro-get-started">original interaction</a> by Retro. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Retro's get-started slideshow - an auto-advancing pitch where the 3D \"R\" logo slides and bounces between screen positions as the value-prop copy swaps beneath the wordmark.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen. Serif \"Retro\" wordmark center-top with a rotating subtitle (\"Recap Your Life\", \"Week to Week\", \"Ad-Free Social\", \"Friends Only\"). The 3D logo - a chunky \"R\" built from a photo stack (red default, colorful photo edges) - appears at different spots: beside the wordmark, near the bottom button, center. Fixed black \"Let's go\" pill at the bottom over a terms line.\n\n## Motion spec\nPattern: auto-advancing slides with a traveling mascot logo.\n- Every ~1.8s the slide advances automatically: the subtitle crossfades with a small rise (translateY 8px to 0, 300ms).\n- The 3D logo travels to its new position per slide: it slides along a curved path with a spring (stiffness ~200, damping ~16) - one clear bounce on landing - while rotating slightly in 3D (rotateY +-15deg) to show the photo-stack depth.\n- The logo scales with its position: larger center stage (~120px), smaller near the button (~48px).\n- The sequence loops until \"Let's go\" is tapped; the wordmark and button never move.\n- The logo casts a soft contact shadow that tracks its landing spot.\n\n## Calibration\n- One bounce on landing - the charm is a single confident hop, not wobble.\n- Auto-advance timing stays brisk; the user can tap Let's go at any point without a state mismatch.\n\n## Reduced motion\nLogo crossfades between positions; subtitles fade in place.\n\n## Don't miss\n- The R is a stack of photos - its edges show layered prints, not a flat extrusion.\n- Subtitle and logo position change as a pair; each value prop owns its logo placement."</script>
+</body></html>

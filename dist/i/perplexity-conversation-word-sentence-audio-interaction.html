@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perplexity Conversation Word Sentence Audio Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Perplexity Conversation Word Sentence Audio Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/perplexity-conversation-word-sentence-audio-interaction"><b>Perplexity</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-conversation-word-sentence-audio-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-conversation-word-sentence-audio-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Perplexity&#x27;s language conversation playback - sentences appear one at a time (&quot;Bonjour&quot;, &quot;Comment ca va?&quot;, &quot;Je vais bien, merci&quot;) with phonetic subtitles, and as audio plays each word highlights in teal in sync while the play button state tracks playback.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f332d26b5c1015ac010e8d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f332d26b5c1015ac010e8d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-perplexity-conversation-word-sentence-audio-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Perplexity&#x27;s language conversation playback - sentences appear one at a time (&quot;Bonjour&quot;, &quot;Comment ca va?&quot;, &quot;Je vais bien, merci&quot;) with phonetic subtitles, and as audio plays each word highlights in teal in sync while the play button state tracks playback.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light off-white screen: close and speaker icons top-right, a vertical stream of conversation sentences - English gloss small and gray, the French sentence large and black, phonetic spelling in gray below (&quot;bohn-zhoor&quot;). Bottom bar: rewind/skip pill buttons and a round black play button.
+
+## Motion spec
+Pattern: audio-synced word highlighting, speech-paced.
+- Reveal: each sentence block fades + rises in (300ms, ease-out) before its audio starts.
+- Highlight: while audio plays, the current word fills teal and the spoken words behind it stay teal at full weight; upcoming words are gray (transition 120ms per word).
+- Advance: on sentence end, a 400ms pause, then the next block reveals and plays.
+- Transport: the play button morphs to pause on play (200ms icon crossfade); rewind jumps the highlight back to the sentence start (200ms).
+
+## Calibration
+- The highlight is per-word, not per-character, and lands on the exact spoken word.
+- Phonetics never highlight - only the main sentence.
+
+## Reduced motion
+Words change color without timing animation; sentences appear without rise.
+
+## Don&#x27;t miss
+- The teal highlight persists on already-spoken words within the sentence - it accumulates.
+- The English gloss sits above the sentence, phonetics below, in that exact stack.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">audio-synced word highlighting, speech-paced.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/perplexity-conversation-word-sentence-audio-interaction">original interaction</a> by Perplexity. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Perplexity's language conversation playback - sentences appear one at a time (\"Bonjour\", \"Comment ca va?\", \"Je vais bien, merci\") with phonetic subtitles, and as audio plays each word highlights in teal in sync while the play button state tracks playback.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight off-white screen: close and speaker icons top-right, a vertical stream of conversation sentences - English gloss small and gray, the French sentence large and black, phonetic spelling in gray below (\"bohn-zhoor\"). Bottom bar: rewind/skip pill buttons and a round black play button.\n\n## Motion spec\nPattern: audio-synced word highlighting, speech-paced.\n- Reveal: each sentence block fades + rises in (300ms, ease-out) before its audio starts.\n- Highlight: while audio plays, the current word fills teal and the spoken words behind it stay teal at full weight; upcoming words are gray (transition 120ms per word).\n- Advance: on sentence end, a 400ms pause, then the next block reveals and plays.\n- Transport: the play button morphs to pause on play (200ms icon crossfade); rewind jumps the highlight back to the sentence start (200ms).\n\n## Calibration\n- The highlight is per-word, not per-character, and lands on the exact spoken word.\n- Phonetics never highlight - only the main sentence.\n\n## Reduced motion\nWords change color without timing animation; sentences appear without rise.\n\n## Don't miss\n- The teal highlight persists on already-spoken words within the sentence - it accumulates.\n- The English gloss sits above the sentence, phonetics below, in that exact stack."</script>
+</body></html>

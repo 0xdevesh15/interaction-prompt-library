@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Spin the Wheel Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Spin the Wheel Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-spin-the-wheel-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-spin-the-wheel-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-spin-the-wheel-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s spin-the-wheel game - a neon prize wheel on a dark jackpot screen that spins with finger-flick velocity, decelerates with realistic friction, lands on a wedge with a glowing win state, and deals a sliding reward ticket.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a27193df23ac84ab0a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6877a7a27193df23ac84ab0a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-spin-the-wheel-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s spin-the-wheel game - a neon prize wheel on a dark jackpot screen that spins with finger-flick velocity, decelerates with realistic friction, lands on a wedge with a glowing win state, and deals a sliding reward ticket.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark CRED jackpots screen (game icons row on top, JACKPOTS header, ticket carousel below). Center: a circular prize wheel divided into colored wedges (purple, green, magenta, teal) with small prize icons, ringed by light bulbs, with a pointer at top, a yellow SPIN button beneath, and &quot;spin the wheel!&quot; script lettering above. Win state: a black circular reward card with a brand logo and offer text (&quot;extra Rs 500 off on Rs 2,4..&quot;) replaces the wheel face, then a green ticket stub slides up from below.
+
+## Motion spec
+Pattern: flick-to-spin prize wheel with friction deceleration and win reveal.
+- Tap SPIN (or flick): the wheel accelerates to ~720deg/s over 200ms, then decelerates with exponential friction over ~3.5s.
+- Rim bulbs chase clockwise throughout the spin (100ms per step) and freeze when the wheel stops.
+- As the wheel slows past 60deg/s, the pointer ticks against each passing peg (rotate -12deg and snap back, 40ms per tick).
+- Landing: the wheel settles with a small elastic recoil (rotate back ~4deg, spring ~300/18); the winning wedge&#x27;s bulb cluster glows.
+- Win reveal: the wheel face iris-transitions to the black reward card (scale 0.9 -&gt; 1.0 + crossfade, 300ms) with a radial glow pulse behind it; green light rays sweep behind the card (rotating 20deg, 1.2s loop).
+- The reward ticket slides up from below the card (300ms ease-out, spring settle ~280/22).
+
+## Calibration
+- Deceleration curve is the whole game - long smooth slowdown, ticking near the end, no linear braking.
+- The pointer ticks must sync to peg positions, accelerating and slowing with the wheel.
+
+## Reduced motion
+One 1.2s ease-out spin of ~360deg; no bulb chase, no tick; win card and ticket fade in over 200ms.
+
+## Don&#x27;t miss
+- The reward card keeps the wheel&#x27;s circular frame - the win happens inside the wheel, not on a new screen.
+- Bulb glow persists on the winning wedge after landing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">flick-to-spin prize wheel with friction deceleration and win reveal.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-spin-the-wheel-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's spin-the-wheel game - a neon prize wheel on a dark jackpot screen that spins with finger-flick velocity, decelerates with realistic friction, lands on a wedge with a glowing win state, and deals a sliding reward ticket.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark CRED jackpots screen (game icons row on top, JACKPOTS header, ticket carousel below). Center: a circular prize wheel divided into colored wedges (purple, green, magenta, teal) with small prize icons, ringed by light bulbs, with a pointer at top, a yellow SPIN button beneath, and \"spin the wheel!\" script lettering above. Win state: a black circular reward card with a brand logo and offer text (\"extra Rs 500 off on Rs 2,4..\") replaces the wheel face, then a green ticket stub slides up from below.\n\n## Motion spec\nPattern: flick-to-spin prize wheel with friction deceleration and win reveal.\n- Tap SPIN (or flick): the wheel accelerates to ~720deg/s over 200ms, then decelerates with exponential friction over ~3.5s.\n- Rim bulbs chase clockwise throughout the spin (100ms per step) and freeze when the wheel stops.\n- As the wheel slows past 60deg/s, the pointer ticks against each passing peg (rotate -12deg and snap back, 40ms per tick).\n- Landing: the wheel settles with a small elastic recoil (rotate back ~4deg, spring ~300/18); the winning wedge's bulb cluster glows.\n- Win reveal: the wheel face iris-transitions to the black reward card (scale 0.9 -> 1.0 + crossfade, 300ms) with a radial glow pulse behind it; green light rays sweep behind the card (rotating 20deg, 1.2s loop).\n- The reward ticket slides up from below the card (300ms ease-out, spring settle ~280/22).\n\n## Calibration\n- Deceleration curve is the whole game - long smooth slowdown, ticking near the end, no linear braking.\n- The pointer ticks must sync to peg positions, accelerating and slowing with the wheel.\n\n## Reduced motion\nOne 1.2s ease-out spin of ~360deg; no bulb chase, no tick; win card and ticket fade in over 200ms.\n\n## Don't miss\n- The reward card keeps the wheel's circular frame - the win happens inside the wheel, not on a new screen.\n- Bulb glow persists on the winning wedge after landing."</script>
+</body></html>

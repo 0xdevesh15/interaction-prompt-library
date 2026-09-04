@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Trivia Game Category Picker Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Trivia Game Category Picker Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-trivia-game-category-picker-morph-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-trivia-game-category-picker-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-trivia-game-category-picker-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s trivia category morph - the game picker sheet morphs into a category list, the pick collapses into a status toast at the top, and rounds play out on the purple board with springy answer reveals.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af4c00d01d537450a7d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541af4c00d01d537450a7d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-trivia-game-category-picker-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s trivia category morph - the game picker sheet morphs into a category list, the pick collapses into a status toast at the top, and rounds play out on the purple board with springy answer reveals.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Green lobby with a dark game-picker sheet (Tic-Tac-Toe, Trivia, Word Race, Honk, Video, Pool Party icons). Tapping Trivia morphs the sheet into a &quot;Pick a Category&quot; list (Any Category, Animals, Anime &amp; Manga, Art, Board Games, Books). The pick collapses into a small toast at the top (&quot;Total Requested&quot;), and the board shifts to purple: two avatars with score badges, &quot;Round 1 of 5&quot;, a question card (&quot;Which of these are the name of a famous marker brand?&quot;) over answer rows (Cello, Copic, Dopln, Marx).
+
+## Motion spec
+Pattern: sheet-to-list morph with toast collapse and answer reveal springs.
+- Tap Trivia: the picker grid&#x27;s icons scatter-fade (100ms stagger) while the sheet container morphs (height + corner radius over 300ms, spring ~300/24) into the category list, rows staggering in from below (40ms each).
+- Tap a category: the list rows collapse upward into the selected row (each row slides up and fades, 30ms stagger), which itself shrinks into a compact toast pill pinned under the status bar (scale + position morph, 300ms, spring ~320/20).
+- Board transition: background wipes green -&gt; purple (300ms); avatars pop in (scale 0.8 -&gt; 1, spring ~340/14, 60ms apart); the question card slides up (spring ~300/22) followed by answer rows (40ms stagger).
+- Answering: the tapped row flashes and both players&#x27; picks reveal - each chosen row turns white with the player&#x27;s avatar sliding in from the left (spring ~340/16); verdict text (&quot;Wrong!&quot; / &quot;You got it!&quot;) replaces the round label with a slide-fade (200ms) plus a small emoji popping beside it.
+- Score badges increment with a pop (scale 1 -&gt; 1.35 -&gt; 1, spring ~340/13); the next round&#x27;s question card slides in from the right (300ms).
+
+## Calibration
+- The morph chain is one continuous transformation: picker -&gt; list -&gt; toast, never separate modals.
+- Wrong and right verdicts differ in motion: wrong adds a small horizontal shake (+-8pt, 3 cycles) on the picked row; right adds a scale pulse.
+
+## Reduced motion
+Picker crossfades to list; toast appears without morph; verdicts fade in.
+
+## Don&#x27;t miss
+- Player avatars appear ON the answer rows they picked - the social proof is the point.
+- Round counter and score badges stay pinned; only the question region changes between rounds.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet-to-list morph with toast collapse and answer reveal springs.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-trivia-game-category-picker-morph-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's trivia category morph - the game picker sheet morphs into a category list, the pick collapses into a status toast at the top, and rounds play out on the purple board with springy answer reveals.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nGreen lobby with a dark game-picker sheet (Tic-Tac-Toe, Trivia, Word Race, Honk, Video, Pool Party icons). Tapping Trivia morphs the sheet into a \"Pick a Category\" list (Any Category, Animals, Anime & Manga, Art, Board Games, Books). The pick collapses into a small toast at the top (\"Total Requested\"), and the board shifts to purple: two avatars with score badges, \"Round 1 of 5\", a question card (\"Which of these are the name of a famous marker brand?\") over answer rows (Cello, Copic, Dopln, Marx).\n\n## Motion spec\nPattern: sheet-to-list morph with toast collapse and answer reveal springs.\n- Tap Trivia: the picker grid's icons scatter-fade (100ms stagger) while the sheet container morphs (height + corner radius over 300ms, spring ~300/24) into the category list, rows staggering in from below (40ms each).\n- Tap a category: the list rows collapse upward into the selected row (each row slides up and fades, 30ms stagger), which itself shrinks into a compact toast pill pinned under the status bar (scale + position morph, 300ms, spring ~320/20).\n- Board transition: background wipes green -> purple (300ms); avatars pop in (scale 0.8 -> 1, spring ~340/14, 60ms apart); the question card slides up (spring ~300/22) followed by answer rows (40ms stagger).\n- Answering: the tapped row flashes and both players' picks reveal - each chosen row turns white with the player's avatar sliding in from the left (spring ~340/16); verdict text (\"Wrong!\" / \"You got it!\") replaces the round label with a slide-fade (200ms) plus a small emoji popping beside it.\n- Score badges increment with a pop (scale 1 -> 1.35 -> 1, spring ~340/13); the next round's question card slides in from the right (300ms).\n\n## Calibration\n- The morph chain is one continuous transformation: picker -> list -> toast, never separate modals.\n- Wrong and right verdicts differ in motion: wrong adds a small horizontal shake (+-8pt, 3 cycles) on the picked row; right adds a scale pulse.\n\n## Reduced motion\nPicker crossfades to list; toast appears without morph; verdicts fade in.\n\n## Don't miss\n- Player avatars appear ON the answer rows they picked - the social proof is the point.\n- Round counter and score badges stay pinned; only the question region changes between rounds."</script>
+</body></html>

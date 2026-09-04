@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cosmos 3D Pebbles Intro Spin Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Cosmos 3D Pebbles Intro Spin Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cosmos-3d-pebbles-intro-spin-animation"><b>Cosmos</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cosmos-3d-pebbles-intro-spin-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cosmos-3d-pebbles-intro-spin-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Cosmos&#x27; intro - a ring of textured 3D pebbles rotates slowly on a black screen above the COSMOS wordmark and Sign Up / Log In buttons.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdbffc582b7d20c0d8a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdbffc582b7d20c0d8a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cosmos-3d-pebbles-intro-spin-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Cosmos&#x27; intro - a ring of textured 3D pebbles rotates slowly on a black screen above the COSMOS wordmark and Sign Up / Log In buttons.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cosmos onboarding, pure black: &quot;COSMOS&quot; letterspaced at top; center stage a loose ring of ~8 small spheres - planet-like pebbles with stone, metallic, and glass textures (blues, golds, greys); bottom a white &quot;Sign Up&quot; pill and a &quot;Log In&quot; text link.
+
+## Motion spec
+Pattern: continuous rotating ring of 3D pebbles.
+- The ring rotates around the vertical axis at a constant ~12s per revolution (linear) - pebbles at the front are larger and brighter, pebbles at the back shrink and dim (scale 0.6, opacity 0.5) with true z-ordering.
+- Each pebble also self-rotates slowly (own axis, 8-20s per turn, varied per pebble) so textures catch the light differently.
+- Pebbles bob individually on the ring (translateY +/-6px, 3-5s sine, phases spread evenly) - the ring breathes rather than marching.
+- On screen entry the ring fades in and scales from 0.8 -&gt; 1 (600ms ease-out), then the loop runs indefinitely.
+- A soft radial vignette behind the ring brightens and dims with the slowest bob cycle (opacity 0.12 -&gt; 0.2).
+
+## Calibration
+- Depth cueing is essential: front/back scale, brightness, and overlap order must be physically consistent through the full rotation.
+- Textures are matte stone and brushed metal - no plastic speculars; one pebble may be glassy blue.
+
+## Reduced motion
+Static ring, evenly spaced, at mid-rotation.
+
+## Don&#x27;t miss
+- The ring is slightly tilted (~10deg) so the orbit reads as an ellipse, not a flat carousel.
+- UI chrome (wordmark, buttons) is dead still - all motion lives in the ring.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous rotating ring of 3D pebbles.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cosmos-3d-pebbles-intro-spin-animation">original interaction</a> by Cosmos. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Cosmos' intro - a ring of textured 3D pebbles rotates slowly on a black screen above the COSMOS wordmark and Sign Up / Log In buttons.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCosmos onboarding, pure black: \"COSMOS\" letterspaced at top; center stage a loose ring of ~8 small spheres - planet-like pebbles with stone, metallic, and glass textures (blues, golds, greys); bottom a white \"Sign Up\" pill and a \"Log In\" text link.\n\n## Motion spec\nPattern: continuous rotating ring of 3D pebbles.\n- The ring rotates around the vertical axis at a constant ~12s per revolution (linear) - pebbles at the front are larger and brighter, pebbles at the back shrink and dim (scale 0.6, opacity 0.5) with true z-ordering.\n- Each pebble also self-rotates slowly (own axis, 8-20s per turn, varied per pebble) so textures catch the light differently.\n- Pebbles bob individually on the ring (translateY +/-6px, 3-5s sine, phases spread evenly) - the ring breathes rather than marching.\n- On screen entry the ring fades in and scales from 0.8 -> 1 (600ms ease-out), then the loop runs indefinitely.\n- A soft radial vignette behind the ring brightens and dims with the slowest bob cycle (opacity 0.12 -> 0.2).\n\n## Calibration\n- Depth cueing is essential: front/back scale, brightness, and overlap order must be physically consistent through the full rotation.\n- Textures are matte stone and brushed metal - no plastic speculars; one pebble may be glassy blue.\n\n## Reduced motion\nStatic ring, evenly spaced, at mid-rotation.\n\n## Don't miss\n- The ring is slightly tilted (~10deg) so the orbit reads as an ellipse, not a flat carousel.\n- UI chrome (wordmark, buttons) is dead still - all motion lives in the ring."</script>
+</body></html>

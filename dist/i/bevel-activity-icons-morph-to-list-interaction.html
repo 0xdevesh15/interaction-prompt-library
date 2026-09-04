@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bevel Activity Icons Morph to List Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bevel Activity Icons Morph to List Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bevel-activity-icons-morph-to-list-interaction"><b>Bevel</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bevel-activity-icons-morph-to-list-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bevel-activity-icons-morph-to-list-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Bevel&#x27;s Activity Status sheet - a 2x2 grid of colorful status icons (Active, Sick, Injured, On A Break) that morphs into a vertical radio list when the user taps Continue.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710deb7ac8e3f14180c04/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/692710deb7ac8e3f14180c04/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bevel-activity-icons-morph-to-list-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Bevel&#x27;s Activity Status sheet - a 2x2 grid of colorful status icons (Active, Sick, Injured, On A Break) that morphs into a vertical radio list when the user taps Continue.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Bottom sheet over a dimmed health dashboard. State A (&quot;Activity Status&quot;): a 2x2 grid of large rounded-square icons - green runner (Active), red pill (Sick), coral bandage (Injured), blue pause (On A Break) - above a description paragraph and a black Continue button. State B: the same four options as full-width list rows (icon left, name + one-line description, radio dot right), a &quot;Keep status&quot; footer row, and an Update button; a back chevron appears top-left.
+
+## Motion spec
+Pattern: shared-element morph from grid to list, ~500ms.
+- Icon flight: each grid icon travels to its row&#x27;s leading slot (spring ~320/22, 40ms stagger top-to-bottom), shrinking from ~56px to ~28px as it lands.
+- Row reveal: each row&#x27;s text and radio fade/slide in from the right as its icon lands (200ms, ease-out).
+- Sheet resize: the sheet height grows from grid state to list state (spring ~300/24), header cross-fades, Continue morphs into Update (label cross-fade 150ms).
+- Reverse: tapping back flies the icons home to the grid (same springs, reversed stagger).
+
+## Calibration
+- The icons are the shared element - text must never travel, only fade.
+- Keep the stagger tight; a slow cascade turns one tap into a slideshow.
+
+## Reduced motion
+Cross-fade between grid and list states (250ms); sheet height animates without icon flight.
+
+## Don&#x27;t miss
+- Row order in the list matches the grid reading order: Active, Sick, Injured, On A Break.
+- The selected radio (Active, pre-selected) keeps its dot through the morph.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element morph from grid to list, ~500ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bevel-activity-icons-morph-to-list-interaction">original interaction</a> by Bevel. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Bevel's Activity Status sheet - a 2x2 grid of colorful status icons (Active, Sick, Injured, On A Break) that morphs into a vertical radio list when the user taps Continue.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBottom sheet over a dimmed health dashboard. State A (\"Activity Status\"): a 2x2 grid of large rounded-square icons - green runner (Active), red pill (Sick), coral bandage (Injured), blue pause (On A Break) - above a description paragraph and a black Continue button. State B: the same four options as full-width list rows (icon left, name + one-line description, radio dot right), a \"Keep status\" footer row, and an Update button; a back chevron appears top-left.\n\n## Motion spec\nPattern: shared-element morph from grid to list, ~500ms.\n- Icon flight: each grid icon travels to its row's leading slot (spring ~320/22, 40ms stagger top-to-bottom), shrinking from ~56px to ~28px as it lands.\n- Row reveal: each row's text and radio fade/slide in from the right as its icon lands (200ms, ease-out).\n- Sheet resize: the sheet height grows from grid state to list state (spring ~300/24), header cross-fades, Continue morphs into Update (label cross-fade 150ms).\n- Reverse: tapping back flies the icons home to the grid (same springs, reversed stagger).\n\n## Calibration\n- The icons are the shared element - text must never travel, only fade.\n- Keep the stagger tight; a slow cascade turns one tap into a slideshow.\n\n## Reduced motion\nCross-fade between grid and list states (250ms); sheet height animates without icon flight.\n\n## Don't miss\n- Row order in the list matches the grid reading order: Active, Sick, Injured, On A Break.\n- The selected radio (Active, pre-selected) keeps its dot through the morph."</script>
+</body></html>

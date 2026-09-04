@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asana Animated Emoji in Comments - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Asana Animated Emoji in Comments</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/asana-animated-emoji-in-comments"><b>Asana</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/asana-animated-emoji-in-comments">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/asana-animated-emoji-in-comments">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Asana&#x27;s comment sticker picker - a bottom sheet of looping 3D animated illustrations (celebrating cats, party cones, clapping hands, gem hearts, rainbows) that page horizontally, each playing its idle loop live in the grid.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c96af75a8333cd209cc074/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c96af75a8333cd209cc074/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-asana-animated-emoji-in-comments.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Asana&#x27;s comment sticker picker - a bottom sheet of looping 3D animated illustrations (celebrating cats, party cones, clapping hands, gem hearts, rainbows) that page horizontally, each playing its idle loop live in the grid.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A task detail (&quot;Next milestone: 500 videos&quot;) with a comment composer; opening the picker raises a bottom sheet: a toolbar row (GIF, emoji, sticker tabs) and a paged grid (4 columns x 2 rows visible) of glossy 3D stickers on white.
+
+## Motion spec
+Pattern: live-looping sticker grid.
+- The sheet rises with a spring (~320/24) over a 40% dim.
+- Every sticker in the grid plays its own short 3D loop continuously (each ~1.5-2.5s, seamless): the check bounces, the party cone pops streamers, the hands clap, the heart gem twinkles - loops are phase-offset per cell so the grid shimmers instead of pulsing in unison.
+- Horizontal paging snaps page-by-page (spring ~350/22); stickers entering from the edge are already mid-loop.
+- Tapping a sticker: it scales down 0.9 and pops back (spring ~420/18) as it inserts into the composer.
+
+## Calibration
+- Loops never restart on scroll - playback is per-asset, continuous.
+- Keep simultaneous animated cells under ~12; off-page cells pause.
+
+## Reduced motion
+Static first frames; animate only the tapped sticker.
+
+## Don&#x27;t miss
+- The phase offsets are the difference between &quot;alive&quot; and &quot;slot machine&quot; - randomize start times on sheet open.
+- Stickers sit on transparent white - no card chrome around them.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">live-looping sticker grid.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/asana-animated-emoji-in-comments">original interaction</a> by Asana. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Asana's comment sticker picker - a bottom sheet of looping 3D animated illustrations (celebrating cats, party cones, clapping hands, gem hearts, rainbows) that page horizontally, each playing its idle loop live in the grid.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA task detail (\"Next milestone: 500 videos\") with a comment composer; opening the picker raises a bottom sheet: a toolbar row (GIF, emoji, sticker tabs) and a paged grid (4 columns x 2 rows visible) of glossy 3D stickers on white.\n\n## Motion spec\nPattern: live-looping sticker grid.\n- The sheet rises with a spring (~320/24) over a 40% dim.\n- Every sticker in the grid plays its own short 3D loop continuously (each ~1.5-2.5s, seamless): the check bounces, the party cone pops streamers, the hands clap, the heart gem twinkles - loops are phase-offset per cell so the grid shimmers instead of pulsing in unison.\n- Horizontal paging snaps page-by-page (spring ~350/22); stickers entering from the edge are already mid-loop.\n- Tapping a sticker: it scales down 0.9 and pops back (spring ~420/18) as it inserts into the composer.\n\n## Calibration\n- Loops never restart on scroll - playback is per-asset, continuous.\n- Keep simultaneous animated cells under ~12; off-page cells pause.\n\n## Reduced motion\nStatic first frames; animate only the tapped sticker.\n\n## Don't miss\n- The phase offsets are the difference between \"alive\" and \"slot machine\" - randomize start times on sheet open.\n- Stickers sit on transparent white - no card chrome around them."</script>
+</body></html>

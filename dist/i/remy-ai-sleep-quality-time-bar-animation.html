@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remy AI Sleep Quality Time Bar Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Remy AI Sleep Quality Time Bar Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/remy-ai-sleep-quality-time-bar-animation"><b>Remy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/remy-ai-sleep-quality-time-bar-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/remy-ai-sleep-quality-time-bar-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Remy AI&#x27;s sleep-quality breakdown - after a Preparing beat, metric rows stack in one by one, each progress bar sliding to its value before the sleep score fades in at top.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc3c25c466f600fe84477/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc3c25c466f600fe84477/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-remy-ai-sleep-quality-time-bar-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Remy AI&#x27;s sleep-quality breakdown - after a Preparing beat, metric rows stack in one by one, each progress bar sliding to its value before the sleep score fades in at top.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark analysis sheet: &quot;Preparing...&quot; label, then rows of sleep metrics (Total Sleep Time, Deep Sleep, REM Sleep, Time to Fall Asleep, Awakenings, Bedtime) each with a thin progress bar, an end dot, and a value (7h 33m, 3h 19m, 5h 5m, 53min, 00:07). Finally the &quot;87 Sleep quality&quot; score with a delta chip at top.
+
+## Motion spec
+Pattern: staggered bar fill with score reveal, ~3s.
+- &quot;Preparing...&quot; holds 600ms, then the row labels fade in together (300ms) with empty bar tracks.
+- Each bar fills left to right in sequence (top to bottom, 350ms per bar, ease-out, 120ms stagger), its end dot riding the fill&#x27;s leading edge.
+- As each bar completes, its value label pops in at the dot (scale 0.8 to 1, 150ms).
+- After the last bar, the score fades up at the top (400ms): large &quot;87&quot; with &quot;Sleep quality&quot; and a small delta chip.
+- The sheet&#x27;s grabber and close button are static throughout.
+
+## Calibration
+- Bars fill strictly in order - the sequence is the storytelling.
+- Values appear only when their bar lands; no early numbers.
+
+## Reduced motion
+Bars appear filled; score fades in.
+
+## Don&#x27;t miss
+- The bars are thin with rounded caps and a brighter end dot.
+- The score appears last and above everything - the conclusion after the evidence.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered bar fill with score reveal, ~3s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/remy-ai-sleep-quality-time-bar-animation">original interaction</a> by Remy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Remy AI's sleep-quality breakdown - after a Preparing beat, metric rows stack in one by one, each progress bar sliding to its value before the sleep score fades in at top.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark analysis sheet: \"Preparing...\" label, then rows of sleep metrics (Total Sleep Time, Deep Sleep, REM Sleep, Time to Fall Asleep, Awakenings, Bedtime) each with a thin progress bar, an end dot, and a value (7h 33m, 3h 19m, 5h 5m, 53min, 00:07). Finally the \"87 Sleep quality\" score with a delta chip at top.\n\n## Motion spec\nPattern: staggered bar fill with score reveal, ~3s.\n- \"Preparing...\" holds 600ms, then the row labels fade in together (300ms) with empty bar tracks.\n- Each bar fills left to right in sequence (top to bottom, 350ms per bar, ease-out, 120ms stagger), its end dot riding the fill's leading edge.\n- As each bar completes, its value label pops in at the dot (scale 0.8 to 1, 150ms).\n- After the last bar, the score fades up at the top (400ms): large \"87\" with \"Sleep quality\" and a small delta chip.\n- The sheet's grabber and close button are static throughout.\n\n## Calibration\n- Bars fill strictly in order - the sequence is the storytelling.\n- Values appear only when their bar lands; no early numbers.\n\n## Reduced motion\nBars appear filled; score fades in.\n\n## Don't miss\n- The bars are thin with rounded caps and a brighter end dot.\n- The score appears last and above everything - the conclusion after the evidence."</script>
+</body></html>

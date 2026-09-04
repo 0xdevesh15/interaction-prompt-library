@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lemo FM Payment Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lemo FM Payment Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lemo-fm-payment-slider"><b>Lemo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lemo-fm-payment-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lemo-fm-payment-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Lemo FM&#x27;s paywall price slider - a &quot;Lifetime&quot; tier row with a draggable slider that scrubs the checkout amount between Rs 599.00 and Rs 1299.00, the price digits rolling as you drag, the slider fill and Continue button shifting from mint to amber as the amount climbs.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554ff6ea50ecbbceca07/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554ff6ea50ecbbceca07/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lemo-fm-payment-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Lemo FM&#x27;s paywall price slider - a &quot;Lifetime&quot; tier row with a draggable slider that scrubs the checkout amount between Rs 599.00 and Rs 1299.00, the price digits rolling as you drag, the slider fill and Continue button shifting from mint to amber as the amount climbs.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark paywall: &quot;LEMO FM PLUS&quot; header, feature icon grid, then a highlighted &quot;Lifetime - Pay what you want&quot; row showing the live price above a slider track, a dimmer standard price row below, and a full-width Continue button.
+
+## Motion spec
+Pattern: price-scrubbing slider.
+- Drag the thumb: the price updates continuously (mapped linearly across the track, rounded to whole rupees), digits rolling vertically as they change (old digit slides up, new from below, 150ms per change).
+- The slider fill grows with the thumb (mint at the low end, hue-rotating to amber/gold past ~60% - a continuous color interpolation, not a threshold).
+- The tier badge (&quot;POPULAR&quot;/&quot;BEST VALUE&quot;) and the Continue button&#x27;s fill follow the same mint -&gt; amber shift.
+- Release: the thumb settles with a soft spring (stiffness ~380, damping ~24, 250ms) - no snap to preset values, it is truly continuous.
+- Haptic tick at each Rs 100 boundary crossed.
+
+## Calibration
+- Price, fill, badge, and button are all driven by one progress value - they can never disagree.
+- The dimmer fixed-price row below stays static, giving the slider row its contrast.
+
+## Reduced motion
+Price changes without digit roll; colors crossfade.
+
+## Don&#x27;t miss
+- The rupee price uses tabular numerals so the width never jitters while scrubbing.
+- The mint-to-amber shift is the emotional cue: green = deal, gold = generous.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">price-scrubbing slider.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lemo-fm-payment-slider">original interaction</a> by Lemo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Lemo FM's paywall price slider - a \"Lifetime\" tier row with a draggable slider that scrubs the checkout amount between Rs 599.00 and Rs 1299.00, the price digits rolling as you drag, the slider fill and Continue button shifting from mint to amber as the amount climbs.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark paywall: \"LEMO FM PLUS\" header, feature icon grid, then a highlighted \"Lifetime - Pay what you want\" row showing the live price above a slider track, a dimmer standard price row below, and a full-width Continue button.\n\n## Motion spec\nPattern: price-scrubbing slider.\n- Drag the thumb: the price updates continuously (mapped linearly across the track, rounded to whole rupees), digits rolling vertically as they change (old digit slides up, new from below, 150ms per change).\n- The slider fill grows with the thumb (mint at the low end, hue-rotating to amber/gold past ~60% - a continuous color interpolation, not a threshold).\n- The tier badge (\"POPULAR\"/\"BEST VALUE\") and the Continue button's fill follow the same mint -> amber shift.\n- Release: the thumb settles with a soft spring (stiffness ~380, damping ~24, 250ms) - no snap to preset values, it is truly continuous.\n- Haptic tick at each Rs 100 boundary crossed.\n\n## Calibration\n- Price, fill, badge, and button are all driven by one progress value - they can never disagree.\n- The dimmer fixed-price row below stays static, giving the slider row its contrast.\n\n## Reduced motion\nPrice changes without digit roll; colors crossfade.\n\n## Don't miss\n- The rupee price uses tabular numerals so the width never jitters while scrubbing.\n- The mint-to-amber shift is the emotional cue: green = deal, gold = generous."</script>
+</body></html>

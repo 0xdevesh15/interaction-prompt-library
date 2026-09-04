@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Investment Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Investment Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-investment-slider"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-investment-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-investment-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s investment slider - drag to change the principal and watch the projected value tick rapidly while a 3D glass bar re-renders its return segment in real time.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd0d61d73e2622b35521/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd0d61d73e2622b35521/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-investment-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s investment slider - drag to change the principal and watch the projected value tick rapidly while a 3D glass bar re-renders its return segment in real time.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark investing screen: &quot;TOTAL PROJECTED VALUE&quot; with a large rupee figure on top, a central 3D glass bar showing principal (dark) and returns (pink-to-cream gradient cap) with a green &quot;9.5%&quot; rate tag, &quot;RETURNS&quot; and &quot;INVESTED&quot; sub-values, and a slider at the bottom setting the investment amount, above a Continue button.
+
+## Motion spec
+Pattern: slider-synced live number ticking + 3D visualization.
+- Dragging the slider updates the invested amount 1:1 (snapping to 50,000 steps with soft detents, spring ~600/35 on release).
+- The projected-value figure ticks through intermediate values digit-by-digit (odometer roll, each digit settling in 120ms, rightmost fastest) - ticking continues briefly after release as the value settles to the final projection.
+- The 3D glass bar animates with the slider: the pink return cap grows/shrinks with the same spring as the slider thumb, with subtle refraction shimmer on its faces as it moves; the bar tilts a few degrees toward the drag direction (+-3deg) and rights itself on release.
+- Sub-values (returns, invested) crossfade-update on settle, not per-frame.
+- Haptic tick on each 50,000 step passed; a soft rising tick sound pitch-tracks the value while dragging.
+
+## Calibration
+- The big number never lags the slider by more than ~300ms - ticking speed scales with drag distance.
+- The return cap&#x27;s share of the bar equals returns/projected exactly at rest.
+
+## Reduced motion
+Values snap without odometer roll; bar resizes without tilt.
+
+## Don&#x27;t miss
+- The 3D bar is translucent glass with a gradient cap, not a flat chart bar.
+- The 9.5% tag stays pinned to the cap&#x27;s top edge as the bar grows.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slider-synced live number ticking + 3D visualization.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-investment-slider">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's investment slider - drag to change the principal and watch the projected value tick rapidly while a 3D glass bar re-renders its return segment in real time.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark investing screen: \"TOTAL PROJECTED VALUE\" with a large rupee figure on top, a central 3D glass bar showing principal (dark) and returns (pink-to-cream gradient cap) with a green \"9.5%\" rate tag, \"RETURNS\" and \"INVESTED\" sub-values, and a slider at the bottom setting the investment amount, above a Continue button.\n\n## Motion spec\nPattern: slider-synced live number ticking + 3D visualization.\n- Dragging the slider updates the invested amount 1:1 (snapping to 50,000 steps with soft detents, spring ~600/35 on release).\n- The projected-value figure ticks through intermediate values digit-by-digit (odometer roll, each digit settling in 120ms, rightmost fastest) - ticking continues briefly after release as the value settles to the final projection.\n- The 3D glass bar animates with the slider: the pink return cap grows/shrinks with the same spring as the slider thumb, with subtle refraction shimmer on its faces as it moves; the bar tilts a few degrees toward the drag direction (+-3deg) and rights itself on release.\n- Sub-values (returns, invested) crossfade-update on settle, not per-frame.\n- Haptic tick on each 50,000 step passed; a soft rising tick sound pitch-tracks the value while dragging.\n\n## Calibration\n- The big number never lags the slider by more than ~300ms - ticking speed scales with drag distance.\n- The return cap's share of the bar equals returns/projected exactly at rest.\n\n## Reduced motion\nValues snap without odometer roll; bar resizes without tilt.\n\n## Don't miss\n- The 3D bar is translucent glass with a gradient cap, not a flat chart bar.\n- The 9.5% tag stays pinned to the cap's top edge as the bar grows."</script>
+</body></html>

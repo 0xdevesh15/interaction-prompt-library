@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happn Daily Feature Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Happn Daily Feature Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/happn-daily-feature-intro-animation"><b>Happn</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/happn-daily-feature-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/happn-daily-feature-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Happn&#x27;s Daily feature intro - a &quot;Daily&quot; serif title scales in over a cloudy sky, profile photo cards orbit and drift around the center with heart overlays, and a countdown timer ticks below &quot;Your first Daily will be available tomorrow!&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67bdf4794d0a34254a95641e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67bdf4794d0a34254a95641e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-happn-daily-feature-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Happn&#x27;s Daily feature intro - a &quot;Daily&quot; serif title scales in over a cloudy sky, profile photo cards orbit and drift around the center with heart overlays, and a countdown timer ticks below &quot;Your first Daily will be available tomorrow!&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light sky-blue background with soft drifting clouds (a hot air balloon floats by early). Center stage: the word &quot;Daily&quot; in a large black display serif, subcopy &quot;Stand-out profiles selected just for you, every day&quot;. Then 4-6 rounded profile photo cards float and orbit the center; some carry a white heart badge on pink. Bottom block: &quot;Your first Daily will be available tomorrow!&quot; with a live countdown &quot;Daily available in 19:53:47&quot;. Standard tab bar at the very bottom.
+
+## Motion spec
+Pattern: orbiting profile cards with countdown.
+- Intro: clouds drift in continuously (slow linear pan, 30s per pass, looped); the balloon crosses once (translateX across, 12s).
+- &quot;Daily&quot; scales from 0.7 with fade (spring ~280/18, 450ms) with a slight rotate (-4deg -&gt; 0); subcopy fades in below (250ms, 100ms later).
+- Cards enter from screen edges (translate from off-screen + scale 0.6, 400ms, 80ms stagger) and settle onto loose orbital paths around the center: each card drifts on a slow ellipse (6-9s per loop, phase-offset), bobbing rotate +-3deg.
+- Heart-badge cards pulse the heart gently (scale 1 -&gt; 1.15 -&gt; 1, 1.2s sine).
+- The bottom block slides up (translateY 20pt, 300ms); the countdown ticks live every second with a subtle digit roll on change (100ms).
+
+## Calibration
+- Cards overlap the title zone slightly but never fully cover &quot;Daily&quot;.
+- Motion is airy and slow - nothing snappy.
+
+## Reduced motion
+Cards fade in at fixed scattered positions; only the countdown keeps ticking.
+
+## Don&#x27;t miss
+- The countdown is real time (HH:MM:SS) - it must actually tick down.
+- The tab bar stays put; motion is contained above it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orbiting profile cards with countdown.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/happn-daily-feature-intro-animation">original interaction</a> by Happn. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Happn's Daily feature intro - a \"Daily\" serif title scales in over a cloudy sky, profile photo cards orbit and drift around the center with heart overlays, and a countdown timer ticks below \"Your first Daily will be available tomorrow!\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight sky-blue background with soft drifting clouds (a hot air balloon floats by early). Center stage: the word \"Daily\" in a large black display serif, subcopy \"Stand-out profiles selected just for you, every day\". Then 4-6 rounded profile photo cards float and orbit the center; some carry a white heart badge on pink. Bottom block: \"Your first Daily will be available tomorrow!\" with a live countdown \"Daily available in 19:53:47\". Standard tab bar at the very bottom.\n\n## Motion spec\nPattern: orbiting profile cards with countdown.\n- Intro: clouds drift in continuously (slow linear pan, 30s per pass, looped); the balloon crosses once (translateX across, 12s).\n- \"Daily\" scales from 0.7 with fade (spring ~280/18, 450ms) with a slight rotate (-4deg -> 0); subcopy fades in below (250ms, 100ms later).\n- Cards enter from screen edges (translate from off-screen + scale 0.6, 400ms, 80ms stagger) and settle onto loose orbital paths around the center: each card drifts on a slow ellipse (6-9s per loop, phase-offset), bobbing rotate +-3deg.\n- Heart-badge cards pulse the heart gently (scale 1 -> 1.15 -> 1, 1.2s sine).\n- The bottom block slides up (translateY 20pt, 300ms); the countdown ticks live every second with a subtle digit roll on change (100ms).\n\n## Calibration\n- Cards overlap the title zone slightly but never fully cover \"Daily\".\n- Motion is airy and slow - nothing snappy.\n\n## Reduced motion\nCards fade in at fixed scattered positions; only the countdown keeps ticking.\n\n## Don't miss\n- The countdown is real time (HH:MM:SS) - it must actually tick down.\n- The tab bar stays put; motion is contained above it."</script>
+</body></html>

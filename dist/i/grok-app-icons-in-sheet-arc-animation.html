@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grok App Icons in Sheet Arc Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Grok App Icons in Sheet Arc Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/grok-app-icons-in-sheet-arc-animation"><b>Grok</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-app-icons-in-sheet-arc-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/grok-app-icons-in-sheet-arc-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Grok&#x27;s connector sheet arc - app icons (Gmail, Notion, Drive, GitHub, OneDrive) orbit in a continuous arc across the top of the onboarding sheet, front icons sharp and receding icons melting into depth-of-field blur.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5aa2314e1a9997cd0b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6a12cb5aa2314e1a9997cd0b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-grok-app-icons-in-sheet-arc-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Grok&#x27;s connector sheet arc - app icons (Gmail, Notion, Drive, GitHub, OneDrive) orbit in a continuous arc across the top of the onboarding sheet, front icons sharp and receding icons melting into depth-of-field blur.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light onboarding sheet over a dimmed Grok chat: close X top-left, the icon arc stage across the upper third, &quot;Bring your tools to Grok&quot; headline with subcopy, connector rows (Gmail, Google Drive, Notion) with Connect buttons, and an Add Connectors button.
+
+## Motion spec
+Pattern: orbital icon arc with depth-of-field falloff.
+- Icons travel a shallow arc (like a wide ellipse seen edge-on), one full loop ~7s, linear and continuous.
+- Center-front icon: scale 1.0, sharp, full opacity. Icons toward the edges shrink (~0.65), blur progressively (up to 6px), and fade to ~40%.
+- Icons pass behind the center position with a z-crossing swap - no hard pop when order changes.
+- The arc runs above static copy and rows; it is ambient, never interactive.
+
+## Calibration
+- Blur is the signature - edge icons should be soft ghosts, center icon crisp.
+- Spacing on the arc stays even; no clumping as icons cross.
+
+## Reduced motion
+Icons hold a static arc arrangement with the depth treatment but no orbit.
+
+## Don&#x27;t miss
+- Icons stay upright through the orbit - only position, scale, blur change.
+- The sheet&#x27;s grabber and close X stay above the arc, untouched.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orbital icon arc with depth-of-field falloff.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/grok-app-icons-in-sheet-arc-animation">original interaction</a> by Grok. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Grok's connector sheet arc - app icons (Gmail, Notion, Drive, GitHub, OneDrive) orbit in a continuous arc across the top of the onboarding sheet, front icons sharp and receding icons melting into depth-of-field blur.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight onboarding sheet over a dimmed Grok chat: close X top-left, the icon arc stage across the upper third, \"Bring your tools to Grok\" headline with subcopy, connector rows (Gmail, Google Drive, Notion) with Connect buttons, and an Add Connectors button.\n\n## Motion spec\nPattern: orbital icon arc with depth-of-field falloff.\n- Icons travel a shallow arc (like a wide ellipse seen edge-on), one full loop ~7s, linear and continuous.\n- Center-front icon: scale 1.0, sharp, full opacity. Icons toward the edges shrink (~0.65), blur progressively (up to 6px), and fade to ~40%.\n- Icons pass behind the center position with a z-crossing swap - no hard pop when order changes.\n- The arc runs above static copy and rows; it is ambient, never interactive.\n\n## Calibration\n- Blur is the signature - edge icons should be soft ghosts, center icon crisp.\n- Spacing on the arc stays even; no clumping as icons cross.\n\n## Reduced motion\nIcons hold a static arc arrangement with the depth treatment but no orbit.\n\n## Don't miss\n- Icons stay upright through the orbit - only position, scale, blur change.\n- The sheet's grabber and close X stay above the arc, untouched."</script>
+</body></html>

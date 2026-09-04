@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clear Swipe Right to Check Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Clear Swipe Right to Check Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/clear-swipe-right-to-check-interaction"><b>Clear</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clear-swipe-right-to-check-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clear-swipe-right-to-check-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Clear&#x27;s swipe-to-complete - swiping a heat-gradient row right floods it green, it flies to the bottom of the list dimmed with a strikethrough, and every row above the gap slides up one slot.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf5093a8ec7d01f57bf3e9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf5093a8ec7d01f57bf3e9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-clear-swipe-right-to-check-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Clear&#x27;s swipe-to-complete - swiping a heat-gradient row right floods it green, it flies to the bottom of the list dimmed with a strikethrough, and every row above the gap slides up one slot.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Clear tutorial list: red-to-orange rows (&quot;This is an example list&quot;, &quot;Swipe right to check this off&quot;, &quot;Check this off too!&quot;, ...), black surround, a small status pill bottom-right (&quot;Cleared 1 item / Check off 2 items&quot;).
+
+## Motion spec
+Pattern: swipe-flood green, then gravity drop.
+- Swipe right: the row tracks 1:1 while a green flood wipes across it from the left edge, chasing the finger; the title gains a strikethrough as the flood passes it.
+- Release past ~45%: the row completes its green fill (150ms), then slides down THROUGH the list to the bottom slot (350ms, ease-in-out), dimming to ~35% opacity as it travels; every row between its old and new position slides up one slot with the same timing, each re-coloring one gradient step up (300ms).
+- The status pill updates its counts with a quick digit pop (scale 1 -&gt; 1.2 -&gt; 1, 200ms).
+- Release early: the green drains back left and the row springs home (~300/20).
+
+## Calibration
+- Completed rows live at the bottom in reverse completion order, always dimmed.
+- The re-color cascade must land on all rows in one synchronized crossfade - no per-row delay.
+
+## Reduced motion
+Row fades to its bottom slot; no flood wipe.
+
+## Don&#x27;t miss
+- The green flood is a wipe, not a tint - it visibly chases the finger.
+- The row passes OVER its siblings while dropping (slight scale 1.03 + shadow), never through them flat.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-flood green, then gravity drop.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/clear-swipe-right-to-check-interaction">original interaction</a> by Clear. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Clear's swipe-to-complete - swiping a heat-gradient row right floods it green, it flies to the bottom of the list dimmed with a strikethrough, and every row above the gap slides up one slot.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Clear tutorial list: red-to-orange rows (\"This is an example list\", \"Swipe right to check this off\", \"Check this off too!\", ...), black surround, a small status pill bottom-right (\"Cleared 1 item / Check off 2 items\").\n\n## Motion spec\nPattern: swipe-flood green, then gravity drop.\n- Swipe right: the row tracks 1:1 while a green flood wipes across it from the left edge, chasing the finger; the title gains a strikethrough as the flood passes it.\n- Release past ~45%: the row completes its green fill (150ms), then slides down THROUGH the list to the bottom slot (350ms, ease-in-out), dimming to ~35% opacity as it travels; every row between its old and new position slides up one slot with the same timing, each re-coloring one gradient step up (300ms).\n- The status pill updates its counts with a quick digit pop (scale 1 -> 1.2 -> 1, 200ms).\n- Release early: the green drains back left and the row springs home (~300/20).\n\n## Calibration\n- Completed rows live at the bottom in reverse completion order, always dimmed.\n- The re-color cascade must land on all rows in one synchronized crossfade - no per-row delay.\n\n## Reduced motion\nRow fades to its bottom slot; no flood wipe.\n\n## Don't miss\n- The green flood is a wipe, not a tint - it visibly chases the finger.\n- The row passes OVER its siblings while dropping (slight scale 1.03 + shadow), never through them flat."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bump Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bump Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bump-splash"><b>Bump</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bump-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bump-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Bump&#x27;s splash - one continuous 3D zoom from a Planet Earth view down through New York City and Brooklyn to street level, location labels and friend pins updating along the way, landing on a pulsating blue Bump logo.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be46cc39387d216457d46f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be46cc39387d216457d46f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bump-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Bump&#x27;s splash - one continuous 3D zoom from a Planet Earth view down through New York City and Brooklyn to street level, location labels and friend pins updating along the way, landing on a pulsating blue Bump logo.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Satellite-style 3D map filling the screen, a blue &quot;Tap to go&quot; pill fixed at the bottom. The zoom starts on the globe labeled &quot;Planet Earth&quot;, dives through &quot;New York City&quot;, tilts into an angled 3D &quot;Brooklyn&quot; view with friend avatar pins, emoji clusters (heart, ghost, rocket), distance chips (0.1mi, 2.6mi, 1.5mi) and online counts (42, 35, 20), sweeps past &quot;Manhattan&quot;, then flares into a dark blue screen where a liquid blue blob pulses behind the black &quot;Bump&quot; wordmark.
+
+## Motion spec
+Pattern: continuous camera dive with staged label and pin reveals.
+- The camera zooms nonstop (exponential scale over ~4s, slight ease at the end); the map tilts from top-down to ~45deg during the Brooklyn leg.
+- Location labels crossfade as their tier becomes current (Planet Earth to New York City to Brooklyn to Manhattan, ~200ms each).
+- Pins, emoji clusters, and distance chips pop in with springs (stiffness ~350, damping ~20, staggered 80ms) as the street level arrives.
+- The dive ends in a blue flash that resolves to the logo screen; the blob behind &quot;Bump&quot; breathes (scale 1.0 to 1.06, 1.5s sine) continuously.
+
+## Calibration
+- The zoom must feel like one unbroken fall - no cuts between city tiers.
+- Keep exactly one location label on screen at a time; overlapping labels read as clutter.
+
+## Reduced motion
+Three discrete steps (globe, city, street) crossfaded, then the logo screen fades in.
+
+## Don&#x27;t miss
+- The emoji clusters float above pins with a tiny bob (translateY +-3px, 1.2s) - they are alive, not markers.
+- The final logo screen is the only non-map frame; the flare transition into it should be fast (~250ms).</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous camera dive with staged label and pin reveals.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bump-splash">original interaction</a> by Bump. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Bump's splash - one continuous 3D zoom from a Planet Earth view down through New York City and Brooklyn to street level, location labels and friend pins updating along the way, landing on a pulsating blue Bump logo.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSatellite-style 3D map filling the screen, a blue \"Tap to go\" pill fixed at the bottom. The zoom starts on the globe labeled \"Planet Earth\", dives through \"New York City\", tilts into an angled 3D \"Brooklyn\" view with friend avatar pins, emoji clusters (heart, ghost, rocket), distance chips (0.1mi, 2.6mi, 1.5mi) and online counts (42, 35, 20), sweeps past \"Manhattan\", then flares into a dark blue screen where a liquid blue blob pulses behind the black \"Bump\" wordmark.\n\n## Motion spec\nPattern: continuous camera dive with staged label and pin reveals.\n- The camera zooms nonstop (exponential scale over ~4s, slight ease at the end); the map tilts from top-down to ~45deg during the Brooklyn leg.\n- Location labels crossfade as their tier becomes current (Planet Earth to New York City to Brooklyn to Manhattan, ~200ms each).\n- Pins, emoji clusters, and distance chips pop in with springs (stiffness ~350, damping ~20, staggered 80ms) as the street level arrives.\n- The dive ends in a blue flash that resolves to the logo screen; the blob behind \"Bump\" breathes (scale 1.0 to 1.06, 1.5s sine) continuously.\n\n## Calibration\n- The zoom must feel like one unbroken fall - no cuts between city tiers.\n- Keep exactly one location label on screen at a time; overlapping labels read as clutter.\n\n## Reduced motion\nThree discrete steps (globe, city, street) crossfaded, then the logo screen fades in.\n\n## Don't miss\n- The emoji clusters float above pins with a tiny bob (translateY +-3px, 1.2s) - they are alive, not markers.\n- The final logo screen is the only non-map frame; the flare transition into it should be fast (~250ms)."</script>
+</body></html>

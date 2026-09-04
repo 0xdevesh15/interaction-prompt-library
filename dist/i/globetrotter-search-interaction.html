@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Globetrotter Search Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Globetrotter Search Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/globetrotter-search-interaction"><b>Globetrotter</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/globetrotter-search-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/globetrotter-search-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Globetrotter&#x27;s map search - the circular search icon morphs into a full-width input bar while the keyboard rises to meet it and the map recedes.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1e371d29849d7bdc53/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1e371d29849d7bdc53/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-globetrotter-search-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Globetrotter&#x27;s map search - the circular search icon morphs into a full-width input bar while the keyboard rises to meet it and the map recedes.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A full-screen stylized world map (blue oceans, green land) with floating circular icon buttons top-left and top-right. Tapping search morphs that circle into a rounded blue input bar with clear/cancel, as the keyboard slides up and the map dims.
+
+## Motion spec
+Pattern: icon-to-bar morph.
+- Tap the search circle: it expands horizontally into the input bar (width spring ~380/24 over 250ms) while its background fills blue and the magnifier glyph morphs into the text caret; a clear &quot;x&quot; and divider fade in (150ms, delayed 100ms).
+- Simultaneously: the keyboard slides up from the bottom (matching the morph&#x27;s timing so bar and keyboard arrive together), the map scales back subtly (1 to 0.97) and dims 15%, and the other floating buttons fade to 40% and drift outward 8px.
+- Typing: each character pops in (scale 1.2 to 1, 100ms); the clear button enables with a quick fill sweep.
+- Cancel/clear: the bar contracts back into the circle (reverse morph, 250ms) as the keyboard drops; the map restores brightness and scale; neighboring buttons fade back.
+- Suggestion rows, when present, stagger in under the bar (translateY 8px + fade, 40ms apart), sliding with the keyboard&#x27;s top edge.
+
+## Calibration
+- The morph must be geometrically continuous: the circle&#x27;s left edge is the bar&#x27;s left edge; it grows rightward only.
+- Bar and keyboard finish on the same frame - a lagging keyboard breaks the illusion.
+
+## Reduced motion
+Circle crossfades to bar; keyboard slides at default speed.
+
+## Don&#x27;t miss
+- The bar is blue (brand) with white text - it reads as a search field only once expanded; before that it&#x27;s purely an icon.
+- The map stays interactive underneath only after cancel; while searching it is inert backdrop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">icon-to-bar morph.</div></div><div><div class="k">Content type</div><div class="v">interactive gesture</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/globetrotter-search-interaction">original interaction</a> by Globetrotter. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Globetrotter's map search - the circular search icon morphs into a full-width input bar while the keyboard rises to meet it and the map recedes.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA full-screen stylized world map (blue oceans, green land) with floating circular icon buttons top-left and top-right. Tapping search morphs that circle into a rounded blue input bar with clear/cancel, as the keyboard slides up and the map dims.\n\n## Motion spec\nPattern: icon-to-bar morph.\n- Tap the search circle: it expands horizontally into the input bar (width spring ~380/24 over 250ms) while its background fills blue and the magnifier glyph morphs into the text caret; a clear \"x\" and divider fade in (150ms, delayed 100ms).\n- Simultaneously: the keyboard slides up from the bottom (matching the morph's timing so bar and keyboard arrive together), the map scales back subtly (1 to 0.97) and dims 15%, and the other floating buttons fade to 40% and drift outward 8px.\n- Typing: each character pops in (scale 1.2 to 1, 100ms); the clear button enables with a quick fill sweep.\n- Cancel/clear: the bar contracts back into the circle (reverse morph, 250ms) as the keyboard drops; the map restores brightness and scale; neighboring buttons fade back.\n- Suggestion rows, when present, stagger in under the bar (translateY 8px + fade, 40ms apart), sliding with the keyboard's top edge.\n\n## Calibration\n- The morph must be geometrically continuous: the circle's left edge is the bar's left edge; it grows rightward only.\n- Bar and keyboard finish on the same frame - a lagging keyboard breaks the illusion.\n\n## Reduced motion\nCircle crossfades to bar; keyboard slides at default speed.\n\n## Don't miss\n- The bar is blue (brand) with white text - it reads as a search field only once expanded; before that it's purely an icon.\n- The map stays interactive underneath only after cancel; while searching it is inert backdrop."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revolut Welcome Plane Globe Orbit Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Revolut Welcome Plane Globe Orbit Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/revolut-welcome-plane-globe-orbit-animation"><b>Revolut</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-welcome-plane-globe-orbit-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/revolut-welcome-plane-globe-orbit-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Revolut&#x27;s plane and globe loop - on the dark &quot;SEND NEAR, FAR, WHEREVER THEY ARE&quot; screen, a paper airplane orbits a slowly rotating blue globe, dipping behind it and emerging on the other side.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756da9dd60f7be9e276b857/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6756da9dd60f7be9e276b857/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-revolut-welcome-plane-globe-orbit-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Revolut&#x27;s plane and globe loop - on the dark &quot;SEND NEAR, FAR, WHEREVER THEY ARE&quot; screen, a paper airplane orbits a slowly rotating blue globe, dipping behind it and emerging on the other side.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A black screen: &quot;Welcome to Revolut&quot; eyebrow, bold headline &quot;SEND NEAR, FAR, WHEREVER THEY ARE&quot; with a &quot;Limits, fees, and T&amp;Cs apply&quot; caption, then the hero - a deep blue 3D globe with visible continents - and &quot;Log in&quot; / &quot;Sign up&quot; pills below.
+
+## Motion spec
+Pattern: orbit loop with depth occlusion.
+- The globe rotates slowly around its vertical axis (one turn ~20s, linear), lit from the upper right - continents drift through the light.
+- A white paper airplane flies an elliptical orbit tilted about 20deg: it passes in front of the globe (scaled up, ~1.1x) at the near side and shrinks (0.75x) as it rounds the back, where the globe occludes it.
+- One orbit takes ~5s, linear and smooth; the plane banks slightly into its turns (roll +/-15deg) and its nose follows the tangent of the path.
+- A faint dotted trail follows the plane on the near arc only, fading after 1s.
+
+## Calibration
+- Occlusion is the depth cue - the plane must genuinely disappear behind the globe&#x27;s limb.
+- The globe is dim (30-40% brightness) - the white plane is the brightest element.
+
+## Reduced motion
+Static globe with the plane parked at the near-side arc.
+
+## Don&#x27;t miss
+- The plane emerges from behind the globe&#x27;s edge, not from off-screen - the orbit is a closed loop.
+- The globe&#x27;s night-side limb has a faint blue rim light.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orbit loop with depth occlusion.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/revolut-welcome-plane-globe-orbit-animation">original interaction</a> by Revolut. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Revolut's plane and globe loop - on the dark \"SEND NEAR, FAR, WHEREVER THEY ARE\" screen, a paper airplane orbits a slowly rotating blue globe, dipping behind it and emerging on the other side.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA black screen: \"Welcome to Revolut\" eyebrow, bold headline \"SEND NEAR, FAR, WHEREVER THEY ARE\" with a \"Limits, fees, and T&Cs apply\" caption, then the hero - a deep blue 3D globe with visible continents - and \"Log in\" / \"Sign up\" pills below.\n\n## Motion spec\nPattern: orbit loop with depth occlusion.\n- The globe rotates slowly around its vertical axis (one turn ~20s, linear), lit from the upper right - continents drift through the light.\n- A white paper airplane flies an elliptical orbit tilted about 20deg: it passes in front of the globe (scaled up, ~1.1x) at the near side and shrinks (0.75x) as it rounds the back, where the globe occludes it.\n- One orbit takes ~5s, linear and smooth; the plane banks slightly into its turns (roll +/-15deg) and its nose follows the tangent of the path.\n- A faint dotted trail follows the plane on the near arc only, fading after 1s.\n\n## Calibration\n- Occlusion is the depth cue - the plane must genuinely disappear behind the globe's limb.\n- The globe is dim (30-40% brightness) - the white plane is the brightest element.\n\n## Reduced motion\nStatic globe with the plane parked at the near-side arc.\n\n## Don't miss\n- The plane emerges from behind the globe's edge, not from off-screen - the orbit is a closed loop.\n- The globe's night-side limb has a faint blue rim light."</script>
+</body></html>

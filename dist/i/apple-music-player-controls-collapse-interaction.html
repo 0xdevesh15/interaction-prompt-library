@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Music Player Controls Collapse Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Music Player Controls Collapse Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-music-player-controls-collapse-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-music-player-controls-collapse-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-music-player-controls-collapse-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Music&#x27;s scroll-coupled mini player - as the track list scrolls up, the now-playing bar sheds its controls and slims to a thin strip, and scrolling back down expands it again.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff3c3d879bf57303c5b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69f8cff3c3d879bf57303c5b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-music-player-controls-collapse-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Music&#x27;s scroll-coupled mini player - as the track list scrolls up, the now-playing bar sheds its controls and slims to a thin strip, and scrolling back down expands it again.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark magenta playlist screen (&quot;Sapphire&quot;, Ed Sheeran) with action chips and a &quot;Continue Playing&quot; track list; a now-playing bar pinned above the tab bar with artwork thumbnail, track title, and skip-back / pause / skip-forward controls.
+
+## Motion spec
+Pattern: scroll-direction-driven collapse of a pinned playback bar.
+- Scrolling up (content away): controls fade and slide outward (150ms, skip buttons drift +/-12px, pause scales 0.9) while the bar&#x27;s height shrinks ~40% (height animation follows scroll offset 1:1 up to its cap), the artwork thumbnail shrinks and docks left, and the progress hairline appears along the bar&#x27;s top edge.
+- Scrolling down: everything reverses on the same 1:1 coupling - controls fade back in, bar regrows, thumbnail returns to full size.
+- The title marquee keeps scrolling throughout, independent of the collapse.
+- The collapse never fully hides the bar - a slim playing strip with artwork and progress always remains.
+
+## Calibration
+- Coupling is 1:1 with scroll offset over ~120px of travel; beyond that the bar rests in its collapsed state.
+- The progress hairline only exists in the collapsed state - it fades as controls return.
+
+## Reduced motion
+Bar height animates in two discrete states (150ms crossfade) on scroll-direction change instead of continuous coupling.
+
+## Don&#x27;t miss
+- Controls leave by sliding away from center, not just fading - the pause button collapses toward the artwork.
+- The tab bar beneath never moves; only the player bar morphs.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-direction-driven collapse of a pinned playback bar.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-music-player-controls-collapse-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Music's scroll-coupled mini player - as the track list scrolls up, the now-playing bar sheds its controls and slims to a thin strip, and scrolling back down expands it again.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark magenta playlist screen (\"Sapphire\", Ed Sheeran) with action chips and a \"Continue Playing\" track list; a now-playing bar pinned above the tab bar with artwork thumbnail, track title, and skip-back / pause / skip-forward controls.\n\n## Motion spec\nPattern: scroll-direction-driven collapse of a pinned playback bar.\n- Scrolling up (content away): controls fade and slide outward (150ms, skip buttons drift +/-12px, pause scales 0.9) while the bar's height shrinks ~40% (height animation follows scroll offset 1:1 up to its cap), the artwork thumbnail shrinks and docks left, and the progress hairline appears along the bar's top edge.\n- Scrolling down: everything reverses on the same 1:1 coupling - controls fade back in, bar regrows, thumbnail returns to full size.\n- The title marquee keeps scrolling throughout, independent of the collapse.\n- The collapse never fully hides the bar - a slim playing strip with artwork and progress always remains.\n\n## Calibration\n- Coupling is 1:1 with scroll offset over ~120px of travel; beyond that the bar rests in its collapsed state.\n- The progress hairline only exists in the collapsed state - it fades as controls return.\n\n## Reduced motion\nBar height animates in two discrete states (150ms crossfade) on scroll-direction change instead of continuous coupling.\n\n## Don't miss\n- Controls leave by sliding away from center, not just fading - the pause button collapses toward the artwork.\n- The tab bar beneath never moves; only the player bar morphs."</script>
+</body></html>

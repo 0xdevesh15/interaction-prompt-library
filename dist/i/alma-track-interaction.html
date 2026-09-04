@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alma Track Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Alma Track Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/alma-track-interaction"><b>Alma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alma-track-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alma-track-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Alma&#x27;s food-tracking input - tapping the green plus button slides the prompt screen up into a suggestions sheet where meal ticker chips stagger in above the keyboard and the input field takes focus.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f0d704befe20b134c14511/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f0d704befe20b134c14511/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-alma-track-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Alma&#x27;s food-tracking input - tapping the green plus button slides the prompt screen up into a suggestions sheet where meal ticker chips stagger in above the keyboard and the input field takes focus.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream screen: back chevron and Skip link, prompt &quot;Let&#x27;s try tracking some food. What&#x27;s the last thing you ate?&quot;, a warm orange gradient glow low on the screen, and a dark green circular + button. Destination: a &quot;Suggestions&quot; sheet with a close X, rows of meal suggestion chips (&quot;For dinner, I had a spinach paneer&quot;, &quot;For lunch, I had dal fry with bhindi sabzi&quot;, &quot;For dinner, I had 4 dosa...&quot;, &quot;For lunch, I had tuna...&quot;), an input field (&quot;I&#x27;ll track what you ate&quot;) with attach, camera and mic icons, and the keyboard raised.
+
+## Motion spec
+Pattern: sheet transition with staggered ticker, ~600ms.
+- Open: tapping + slides the sheet up over the prompt screen (400ms, ease-out), the prompt content lifting away; the keyboard rises with it (matching 400ms).
+- Chips: suggestion rows stagger in from the right (60ms apart, 300ms ease-out, 12px slide), each a tinted pill with a small icon.
+- Ticker: the suggestion rows then scroll slowly like a ticker (translateX, ~20s loop, alternate direction per row).
+- Focus: the input field highlights (border darkens, 150ms) and the cursor blinks; the + button cross-fades into the sheet&#x27;s close affordance (200ms).
+
+## Calibration
+- Sheet and keyboard move as one unit - no gap opening between them.
+- The ticker never stops; it idles at reading speed, not marquee speed.
+
+## Reduced motion
+Sheet fades up (250ms); chips appear without stagger; ticker static.
+
+## Don&#x27;t miss
+- The warm gradient glow carries over from the prompt screen into the sheet header.
+- The input accessory row (attach, camera, mic) sits above the keyboard at all times.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet transition with staggered ticker, ~600ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/alma-track-interaction">original interaction</a> by Alma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Alma's food-tracking input - tapping the green plus button slides the prompt screen up into a suggestions sheet where meal ticker chips stagger in above the keyboard and the input field takes focus.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream screen: back chevron and Skip link, prompt \"Let's try tracking some food. What's the last thing you ate?\", a warm orange gradient glow low on the screen, and a dark green circular + button. Destination: a \"Suggestions\" sheet with a close X, rows of meal suggestion chips (\"For dinner, I had a spinach paneer\", \"For lunch, I had dal fry with bhindi sabzi\", \"For dinner, I had 4 dosa...\", \"For lunch, I had tuna...\"), an input field (\"I'll track what you ate\") with attach, camera and mic icons, and the keyboard raised.\n\n## Motion spec\nPattern: sheet transition with staggered ticker, ~600ms.\n- Open: tapping + slides the sheet up over the prompt screen (400ms, ease-out), the prompt content lifting away; the keyboard rises with it (matching 400ms).\n- Chips: suggestion rows stagger in from the right (60ms apart, 300ms ease-out, 12px slide), each a tinted pill with a small icon.\n- Ticker: the suggestion rows then scroll slowly like a ticker (translateX, ~20s loop, alternate direction per row).\n- Focus: the input field highlights (border darkens, 150ms) and the cursor blinks; the + button cross-fades into the sheet's close affordance (200ms).\n\n## Calibration\n- Sheet and keyboard move as one unit - no gap opening between them.\n- The ticker never stops; it idles at reading speed, not marquee speed.\n\n## Reduced motion\nSheet fades up (250ms); chips appear without stagger; ticker static.\n\n## Don't miss\n- The warm gradient glow carries over from the prompt screen into the sheet header.\n- The input accessory row (attach, camera, mic) sits above the keyboard at all times."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zerocam Permissions - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zerocam Permissions</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zerocam-permissions"><b>Zerocam</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zerocam-permissions">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zerocam-permissions">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Zerocam&#x27;s permissions screen - a white 3D wireframe iPhone rotates in one continuous slow tumble beneath plain statement text on pure black.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7a73c61d73e2622c3a31f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7a73c61d73e2622c3a31f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zerocam-permissions.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Zerocam&#x27;s permissions screen - a white 3D wireframe iPhone rotates in one continuous slow tumble beneath plain statement text on pure black.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A black screen: lowercase white text (&quot;zerocam needs read-only camera and gallery access&quot;) top-left, a wireframe iPhone (body outline plus camera-cluster detail) tumbling in 3D at center, and a yellow &quot;next&quot; with a long arrow line bottom-left.
+
+## Motion spec
+Pattern: continuous 3D wireframe tumble.
+- The phone rotates on a slow compound tumble: primarily around Y (1rev/9s) with a gentle X wobble (+-20deg, 5s period) and a slight Z drift - it never stops, never repeats exactly, and never faces fully away for long.
+- The wireframe is thin white strokes (1px) with a faint glow; the camera cluster (lens circles) gets slightly brighter strokes so the back of the phone reads clearly as it passes.
+- A soft groundless float accompanies the tumble (translateY +-8px, 4s) so the phone feels suspended, not axis-locked.
+- &quot;next&quot; and its arrow idle with a hairline shimmer (the arrow line&#x27;s dash slides slowly rightward, 2s loop); tapping next presses the text (opacity dip, 100ms) and the phone accelerates into a half-spin (extra 180deg, 400ms ease-in) as the screen transitions.
+- The text never animates - it was there before you looked.
+
+## Calibration
+- The wireframe must stay elegant at all angles: hide back-facing strokes or fade them to 30% so the shape never turns to spaghetti.
+- One yellow on the whole screen (the next link); everything else white on black.
+
+## Reduced motion
+Phone holds a slow back-and-forth sway (+-15deg, 4s) instead of full tumble.
+
+## Don&#x27;t miss
+- The tumble is CONTINUOUS - no easing in and out, no pause at a hero angle.
+- The camera cluster is on the phone&#x27;s back; the rotation deliberately shows it off.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous 3D wireframe tumble.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zerocam-permissions">original interaction</a> by Zerocam. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Zerocam's permissions screen - a white 3D wireframe iPhone rotates in one continuous slow tumble beneath plain statement text on pure black.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA black screen: lowercase white text (\"zerocam needs read-only camera and gallery access\") top-left, a wireframe iPhone (body outline plus camera-cluster detail) tumbling in 3D at center, and a yellow \"next\" with a long arrow line bottom-left.\n\n## Motion spec\nPattern: continuous 3D wireframe tumble.\n- The phone rotates on a slow compound tumble: primarily around Y (1rev/9s) with a gentle X wobble (+-20deg, 5s period) and a slight Z drift - it never stops, never repeats exactly, and never faces fully away for long.\n- The wireframe is thin white strokes (1px) with a faint glow; the camera cluster (lens circles) gets slightly brighter strokes so the back of the phone reads clearly as it passes.\n- A soft groundless float accompanies the tumble (translateY +-8px, 4s) so the phone feels suspended, not axis-locked.\n- \"next\" and its arrow idle with a hairline shimmer (the arrow line's dash slides slowly rightward, 2s loop); tapping next presses the text (opacity dip, 100ms) and the phone accelerates into a half-spin (extra 180deg, 400ms ease-in) as the screen transitions.\n- The text never animates - it was there before you looked.\n\n## Calibration\n- The wireframe must stay elegant at all angles: hide back-facing strokes or fade them to 30% so the shape never turns to spaghetti.\n- One yellow on the whole screen (the next link); everything else white on black.\n\n## Reduced motion\nPhone holds a slow back-and-forth sway (+-15deg, 4s) instead of full tumble.\n\n## Don't miss\n- The tumble is CONTINUOUS - no easing in and out, no pause at a hero angle.\n- The camera cluster is on the phone's back; the rotation deliberately shows it off."</script>
+</body></html>

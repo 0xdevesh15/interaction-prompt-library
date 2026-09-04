@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Top Navigation Icon Morph Between Screens - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Top Navigation Icon Morph Between Screens</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-top-navigation-icon-morph-between-screens"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-top-navigation-icon-morph-between-screens">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-top-navigation-icon-morph-between-screens">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s nav icon morph - pushing from &quot;Choose Wallet Group&quot; to &quot;Name Your Wallet&quot; morphs the top-left close X into a back chevron, and popping back morphs it into the X again, the two glyphs interpolating as the screens slide.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d16410daa283ff12f2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686894d16410daa283ff12f2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-top-navigation-icon-morph-between-screens.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s nav icon morph - pushing from &quot;Choose Wallet Group&quot; to &quot;Name Your Wallet&quot; morphs the top-left close X into a back chevron, and popping back morphs it into the X again, the two glyphs interpolating as the screens slide.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light onboarding screens. Screen 1: &quot;Choose Wallet Group&quot; - X close top-left, group rows (Wallet Group 1/3/6 with avatar clusters, blue radio check), New Group, blue Continue. Screen 2: &quot;Name Your Wallet&quot; - back chevron top-left, &quot;Choose a nickname for your wallet&quot; subhead, text field (&quot;Test&quot;), blue Continue, keyboard up. The top-left icon is a circle-backed glyph on both screens.
+
+## Motion spec
+Pattern: close-to-back glyph morph during push/pop.
+- Tap Continue: the push begins (screens slide left, 300ms, ease-in-out); the X&#x27;s two strokes rotate and translate - one stroke shortening into the chevron&#x27;s upper arm, the other into its lower arm (stroke interpolation, 300ms, synchronized with the slide) - while the circle backing stays constant.
+- Mid-transition the glyph passes through a genuine in-between shape (a rotated partial cross), never a crossfade between two icons.
+- The new screen&#x27;s title and field stagger in (50ms apart) as the keyboard rises (250ms).
+- Pop back: the chevron&#x27;s arms extend and rotate back into the X (reverse interpolation, 300ms) as the screens slide right and the keyboard drops (200ms).
+
+## Calibration
+- Stroke width (2pt), circle diameter, and color stay identical - only stroke geometry animates.
+- The morph finishes exactly when the slide finishes.
+
+## Reduced motion
+The glyphs crossfade (150ms) within the static circle.
+
+## Don&#x27;t miss
+- The morph runs on both push and pop - it is fully reversible.
+- The circle backing never scales or moves; it anchors the morph.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">close-to-back glyph morph during push/pop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-top-navigation-icon-morph-between-screens">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's nav icon morph - pushing from \"Choose Wallet Group\" to \"Name Your Wallet\" morphs the top-left close X into a back chevron, and popping back morphs it into the X again, the two glyphs interpolating as the screens slide.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight onboarding screens. Screen 1: \"Choose Wallet Group\" - X close top-left, group rows (Wallet Group 1/3/6 with avatar clusters, blue radio check), New Group, blue Continue. Screen 2: \"Name Your Wallet\" - back chevron top-left, \"Choose a nickname for your wallet\" subhead, text field (\"Test\"), blue Continue, keyboard up. The top-left icon is a circle-backed glyph on both screens.\n\n## Motion spec\nPattern: close-to-back glyph morph during push/pop.\n- Tap Continue: the push begins (screens slide left, 300ms, ease-in-out); the X's two strokes rotate and translate - one stroke shortening into the chevron's upper arm, the other into its lower arm (stroke interpolation, 300ms, synchronized with the slide) - while the circle backing stays constant.\n- Mid-transition the glyph passes through a genuine in-between shape (a rotated partial cross), never a crossfade between two icons.\n- The new screen's title and field stagger in (50ms apart) as the keyboard rises (250ms).\n- Pop back: the chevron's arms extend and rotate back into the X (reverse interpolation, 300ms) as the screens slide right and the keyboard drops (200ms).\n\n## Calibration\n- Stroke width (2pt), circle diameter, and color stay identical - only stroke geometry animates.\n- The morph finishes exactly when the slide finishes.\n\n## Reduced motion\nThe glyphs crossfade (150ms) within the static circle.\n\n## Don't miss\n- The morph runs on both push and pop - it is fully reversible.\n- The circle backing never scales or moves; it anchors the morph."</script>
+</body></html>

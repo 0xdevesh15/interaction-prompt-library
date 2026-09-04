@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spoil Me Streak - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spoil Me Streak</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spoil-me-streak"><b>Spoil Me</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spoil-me-streak">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spoil-me-streak">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Spoil Me&#x27;s streak screen - a calm gray streak card where the current day dot in the week row bounces springily as it lands on today.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cb816b171436fe4c5c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66bcb7cb816b171436fe4c5c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spoil-me-streak.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Spoil Me&#x27;s streak screen - a calm gray streak card where the current day dot in the week row bounces springily as it lands on today.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light gray screen. Top: a &quot;STREAK FREEZE 2x&quot; chip. Message: &quot;What a great start to your day, Rishi! See you back here this evening.&quot; Center: a large white circle holding &quot;1&quot; over &quot;day streak&quot;. Below: a row of seven day dots for the week - past days filled gray, today an accent dot, future days outlined. Bottom: a solid yellow CTA pill.
+
+## Motion spec
+Pattern: calendar-day bounce landing.
+- On screen entry, elements cascade: message fades in (300ms), the streak circle scales from 0.9 to 1.0 (spring ~280/22), the day row fades up (250ms).
+- The today indicator animates across the row: starting from the last filled day, the accent dot hops to today&#x27;s position - a small arc (translateX to the slot, translateY up ~10px mid-flight) landing with a springy bounce (stiffness ~400, damping ~18, one visible overshoot).
+- On landing, the dot pulses once (scale 1.0 to 1.3 to 1.0, 300ms) and the streak number ticks up with a flip (rotateX 90deg swap, 250ms).
+- Idle: today&#x27;s dot breathes gently (scale 1.0 to 1.06, 2s sine).
+
+## Calibration
+- The hop arc is small and quick (~400ms); a big jump turns a reward into a cartoon.
+- Only today gets the accent color - the rest of the row stays grayscale.
+
+## Reduced motion
+Dot fades into today&#x27;s slot; number swaps without flip.
+
+## Don&#x27;t miss
+- The week row mixes three states (filled past, accent today, outlined future) - the contrast carries the progress story.
+- The yellow CTA is the only saturated element besides today&#x27;s dot.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">calendar-day bounce landing.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spoil-me-streak">original interaction</a> by Spoil Me. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Spoil Me's streak screen - a calm gray streak card where the current day dot in the week row bounces springily as it lands on today.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight gray screen. Top: a \"STREAK FREEZE 2x\" chip. Message: \"What a great start to your day, Rishi! See you back here this evening.\" Center: a large white circle holding \"1\" over \"day streak\". Below: a row of seven day dots for the week - past days filled gray, today an accent dot, future days outlined. Bottom: a solid yellow CTA pill.\n\n## Motion spec\nPattern: calendar-day bounce landing.\n- On screen entry, elements cascade: message fades in (300ms), the streak circle scales from 0.9 to 1.0 (spring ~280/22), the day row fades up (250ms).\n- The today indicator animates across the row: starting from the last filled day, the accent dot hops to today's position - a small arc (translateX to the slot, translateY up ~10px mid-flight) landing with a springy bounce (stiffness ~400, damping ~18, one visible overshoot).\n- On landing, the dot pulses once (scale 1.0 to 1.3 to 1.0, 300ms) and the streak number ticks up with a flip (rotateX 90deg swap, 250ms).\n- Idle: today's dot breathes gently (scale 1.0 to 1.06, 2s sine).\n\n## Calibration\n- The hop arc is small and quick (~400ms); a big jump turns a reward into a cartoon.\n- Only today gets the accent color - the rest of the row stays grayscale.\n\n## Reduced motion\nDot fades into today's slot; number swaps without flip.\n\n## Don't miss\n- The week row mixes three states (filled past, accent today, outlined future) - the contrast carries the progress story.\n- The yellow CTA is the only saturated element besides today's dot."</script>
+</body></html>

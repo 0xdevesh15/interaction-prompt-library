@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World Clock Master Time Change on Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>World Clock Master Time Change on Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/world-clock-master-time-change-on-swipe-interaction"><b>World</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/world-clock-master-time-change-on-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/world-clock-master-time-change-on-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: World Clock Master&#x27;s time travel - swiping horizontally on a city row scrubs global time: every city&#x27;s clock, its day/night row gradient, and the world map&#x27;s shadow all move together.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686412cb6ff282d894a83976/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/686412cb6ff282d894a83976/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-world-clock-master-time-change-on-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: World Clock Master&#x27;s time travel - swiping horizontally on a city row scrubs global time: every city&#x27;s clock, its day/night row gradient, and the world map&#x27;s shadow all move together.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark world-clock list: rows for Bengaluru, San Francisco, New York City, London, Beijing, Sydney - each with city name, date line, and a large time. Each row&#x27;s background is a live gradient of that city&#x27;s sky (bright blue for day, near-black for night, warm bands at dawn/dusk). A faint world map sits behind the list with a day/night terminator shadow. Bottom bar shows the offset chip (&quot;-17h 41m&quot;, &quot;+20h 27m&quot;...).
+
+## Motion spec
+Pattern: horizontal time scrub with synchronized per-city sky theming.
+- Swiping horizontally on any row scrubs time 1:1 (~2h per screen width); all city times tick together (minutes crossfade per change, 120ms).
+- Each row&#x27;s sky gradient shifts with its own local time: blue day slides to dusk orange to night black and back (continuous, keyed to the row&#x27;s hour).
+- The map&#x27;s terminator shadow sweeps across the world in sync (same scrub angle, no lag).
+- The offset chip counts total travel from now, flipping sign and color (yellow for past, green for future) at zero (150ms swap).
+- Release decays with momentum (friction ~0.93/frame); a tap on the chip snaps back to the present (spring ~240/18) as all rows and the shadow glide home.
+
+## Calibration
+- Times, row gradients, and the map shadow are computed from one shared clock offset - they can never disagree by a frame.
+- Rows differ from each other: when Bengaluru is noon-blue, San Francisco is night-black.
+
+## Reduced motion
+Time steps discretely; gradients swap between day/dusk/night presets (200ms crossfade).
+
+## Don&#x27;t miss
+- The scrub works on the row, not a slider - the whole list is the control surface.
+- The date line under each city rolls over (&quot;Mon, Jan 6&quot; -&gt; &quot;Tue, Jan 7&quot;) exactly at its local midnight.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal time scrub with synchronized per-city sky theming.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/world-clock-master-time-change-on-swipe-interaction">original interaction</a> by World. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: World Clock Master's time travel - swiping horizontally on a city row scrubs global time: every city's clock, its day/night row gradient, and the world map's shadow all move together.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark world-clock list: rows for Bengaluru, San Francisco, New York City, London, Beijing, Sydney - each with city name, date line, and a large time. Each row's background is a live gradient of that city's sky (bright blue for day, near-black for night, warm bands at dawn/dusk). A faint world map sits behind the list with a day/night terminator shadow. Bottom bar shows the offset chip (\"-17h 41m\", \"+20h 27m\"...).\n\n## Motion spec\nPattern: horizontal time scrub with synchronized per-city sky theming.\n- Swiping horizontally on any row scrubs time 1:1 (~2h per screen width); all city times tick together (minutes crossfade per change, 120ms).\n- Each row's sky gradient shifts with its own local time: blue day slides to dusk orange to night black and back (continuous, keyed to the row's hour).\n- The map's terminator shadow sweeps across the world in sync (same scrub angle, no lag).\n- The offset chip counts total travel from now, flipping sign and color (yellow for past, green for future) at zero (150ms swap).\n- Release decays with momentum (friction ~0.93/frame); a tap on the chip snaps back to the present (spring ~240/18) as all rows and the shadow glide home.\n\n## Calibration\n- Times, row gradients, and the map shadow are computed from one shared clock offset - they can never disagree by a frame.\n- Rows differ from each other: when Bengaluru is noon-blue, San Francisco is night-black.\n\n## Reduced motion\nTime steps discretely; gradients swap between day/dusk/night presets (200ms crossfade).\n\n## Don't miss\n- The scrub works on the row, not a slider - the whole list is the control surface.\n- The date line under each city rolls over (\"Mon, Jan 6\" -> \"Tue, Jan 7\") exactly at its local midnight."</script>
+</body></html>

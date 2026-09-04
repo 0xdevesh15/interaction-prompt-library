@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amie Actions - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Amie Actions</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/amie-actions"><b>Amie</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/amie-actions">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/amie-actions">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Amie&#x27;s action menu - the bottom &quot;Todos&quot; pill morphs into three colorful action buttons (Event, Email, Todo) with a springy stagger while the calendar dims behind.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc225b7b88f78c7543/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc225b7b88f78c7543/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-amie-actions.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Amie&#x27;s action menu - the bottom &quot;Todos&quot; pill morphs into three colorful action buttons (Event, Email, Todo) with a springy stagger while the calendar dims behind.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Amie&#x27;s calendar day view (hour rows, a red now-line). Docked at bottom center: a black pill labeled &quot;Todos&quot; with icons. On tap, the calendar dims to gray and the pill expands into a black action bar with three buttons: Event (pink/red icon), Email (blue icon), Todo (gray icon).
+
+## Motion spec
+Pattern: pill-to-bar morph with staggered button pop.
+- Tap the pill: the background dims to 50% gray over 250ms (ease-out); simultaneously the pill stretches horizontally into the wider action bar (width and corner-radius morph over 300ms, spring ~350/26, no layout jump - it is the same view).
+- The three action buttons emerge inside the expanding bar: each icon pops from scale 0.4 to 1 with overshoot (spring ~500/20), staggered 50ms left to right (Event, Email, Todo), labels fading in 80ms after their icon.
+- The bar&#x27;s top edge keeps the small &quot;VIEW&quot; handle area visible above it throughout.
+- Tap the dimmed background or drag the bar down: the sequence reverses - buttons collapse inward (40ms stagger, right to left), the bar shrinks back to the pill (280ms), and the dim lifts (250ms).
+- Each button press gives a color flash: the icon&#x27;s tint fills the button momentarily (150ms) before the action sheet opens.
+
+## Calibration
+- The morph is one continuous transform - never a crossfade between two separate views.
+- Stagger reads left to right on open, right to left on close.
+
+## Reduced motion
+Pill and bar crossfade; buttons fade without pop.
+
+## Don&#x27;t miss
+- The dim only covers the calendar, not the action bar - the bar stays full-contrast.
+- Icon colors are the identity: pink Event, blue Email, neutral Todo.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">pill-to-bar morph with staggered button pop.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/amie-actions">original interaction</a> by Amie. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Amie's action menu - the bottom \"Todos\" pill morphs into three colorful action buttons (Event, Email, Todo) with a springy stagger while the calendar dims behind.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAmie's calendar day view (hour rows, a red now-line). Docked at bottom center: a black pill labeled \"Todos\" with icons. On tap, the calendar dims to gray and the pill expands into a black action bar with three buttons: Event (pink/red icon), Email (blue icon), Todo (gray icon).\n\n## Motion spec\nPattern: pill-to-bar morph with staggered button pop.\n- Tap the pill: the background dims to 50% gray over 250ms (ease-out); simultaneously the pill stretches horizontally into the wider action bar (width and corner-radius morph over 300ms, spring ~350/26, no layout jump - it is the same view).\n- The three action buttons emerge inside the expanding bar: each icon pops from scale 0.4 to 1 with overshoot (spring ~500/20), staggered 50ms left to right (Event, Email, Todo), labels fading in 80ms after their icon.\n- The bar's top edge keeps the small \"VIEW\" handle area visible above it throughout.\n- Tap the dimmed background or drag the bar down: the sequence reverses - buttons collapse inward (40ms stagger, right to left), the bar shrinks back to the pill (280ms), and the dim lifts (250ms).\n- Each button press gives a color flash: the icon's tint fills the button momentarily (150ms) before the action sheet opens.\n\n## Calibration\n- The morph is one continuous transform - never a crossfade between two separate views.\n- Stagger reads left to right on open, right to left on close.\n\n## Reduced motion\nPill and bar crossfade; buttons fade without pop.\n\n## Don't miss\n- The dim only covers the calendar, not the action bar - the bar stays full-contrast.\n- Icon colors are the identity: pink Event, blue Email, neutral Todo."</script>
+</body></html>

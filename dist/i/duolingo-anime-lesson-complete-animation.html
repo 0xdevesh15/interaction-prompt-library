@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Anime Lesson Complete Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Anime Lesson Complete Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-anime-lesson-complete-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-anime-lesson-complete-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-anime-lesson-complete-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s anime lesson-complete celebration - an anime-style green-haired character springs in on a green brush backdrop, &quot;Lesson complete!&quot; bounces in below, and reward cards (XP, accuracy, time) pop in one by one above the Claim XP button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d35befe20b134bc693f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68f09d35befe20b134bc693f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-anime-lesson-complete-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s anime lesson-complete celebration - an anime-style green-haired character springs in on a green brush backdrop, &quot;Lesson complete!&quot; bounces in below, and reward cards (XP, accuracy, time) pop in one by one above the Claim XP button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: a square anime illustration (green-skinned character with magenta hair, dynamic pose) on a light green brush-stroke card, yellow &quot;Lesson complete!&quot; title, a row of three reward cards (XP +21 on yellow, +44% on green, 2:33 timer on blue), and a blue CLAIM XP pill. Small sparkle shapes orbit the character.
+
+## Motion spec
+Pattern: sequential celebration build, ~2.5s.
+- Art: the brush card wipes in (diagonal reveal, 350ms) as the character springs in (scale 0.5 -&gt; 1.08 -&gt; 1, spring ~320/16, 500ms) with sparkles popping around it (scale 0 -&gt; 1 -&gt; 0, 400ms, staggered random).
+- Title: &quot;Lesson complete!&quot; bounces up (translateY 16px -&gt; 0, spring ~300/18) in yellow.
+- Rewards: the three cards pop in left to right (scale 0.6 -&gt; 1.05 -&gt; 1, spring ~360/20, 100ms stagger); a dotted ring spins briefly where the first card lands.
+- Button: CLAIM XP slides up and fades in (250ms, +100ms), then holds.
+
+## Calibration
+- The character art keeps its anime linework crisp - no blur during the spring.
+- Reward cards land in value order: XP, accuracy, time.
+
+## Reduced motion
+All elements fade in place (200ms, staggered 80ms); no springs.
+
+## Don&#x27;t miss
+- Sparkles are sparse (5-8 shapes) and die out; they never loop.
+- The green brush card has an irregular hand-painted edge, not a clean rectangle.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sequential celebration build, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-anime-lesson-complete-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's anime lesson-complete celebration - an anime-style green-haired character springs in on a green brush backdrop, \"Lesson complete!\" bounces in below, and reward cards (XP, accuracy, time) pop in one by one above the Claim XP button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: a square anime illustration (green-skinned character with magenta hair, dynamic pose) on a light green brush-stroke card, yellow \"Lesson complete!\" title, a row of three reward cards (XP +21 on yellow, +44% on green, 2:33 timer on blue), and a blue CLAIM XP pill. Small sparkle shapes orbit the character.\n\n## Motion spec\nPattern: sequential celebration build, ~2.5s.\n- Art: the brush card wipes in (diagonal reveal, 350ms) as the character springs in (scale 0.5 -> 1.08 -> 1, spring ~320/16, 500ms) with sparkles popping around it (scale 0 -> 1 -> 0, 400ms, staggered random).\n- Title: \"Lesson complete!\" bounces up (translateY 16px -> 0, spring ~300/18) in yellow.\n- Rewards: the three cards pop in left to right (scale 0.6 -> 1.05 -> 1, spring ~360/20, 100ms stagger); a dotted ring spins briefly where the first card lands.\n- Button: CLAIM XP slides up and fades in (250ms, +100ms), then holds.\n\n## Calibration\n- The character art keeps its anime linework crisp - no blur during the spring.\n- Reward cards land in value order: XP, accuracy, time.\n\n## Reduced motion\nAll elements fade in place (200ms, staggered 80ms); no springs.\n\n## Don't miss\n- Sparkles are sparse (5-8 shapes) and die out; they never loop.\n- The green brush card has an irregular hand-painted edge, not a clean rectangle."</script>
+</body></html>

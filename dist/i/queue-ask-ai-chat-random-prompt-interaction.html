@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queue Ask AI Chat Random Prompt Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Queue Ask AI Chat Random Prompt Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/queue-ask-ai-chat-random-prompt-interaction"><b>Queue</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-ask-ai-chat-random-prompt-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-ask-ai-chat-random-prompt-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Queue&#x27;s Ask AI random prompt - tapping the dice inserts a random prompt into the chat composer; sending it shows a 3D spinning cluster of mini posters as the thinking state, then a recommendation card slides into the thread.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e32b33c1c8577c04d2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e32b33c1c8577c04d2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-queue-ask-ai-chat-random-prompt-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Queue&#x27;s Ask AI random prompt - tapping the dice inserts a random prompt into the chat composer; sending it shows a 3D spinning cluster of mini posters as the thinking state, then a recommendation card slides into the thread.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Purple &quot;Ask AI&quot; chat: assistant message bubbles with poster cards, a suggestion chip row, a composer with dice button and send, keyboard up. Loading state: a sphere-like cluster of small movie posters rotating in 3D where the reply will land. Reply: a recommendation card with poster, title, synopsis, and &quot;+ Queue&quot;/&quot;Seen it&quot; buttons.
+
+## Motion spec
+Pattern: random-fill composer with 3D loader, ~1.5s.
+- Dice: tapping it cycles candidate prompts rapidly in the composer text (slot-machine shuffle, 50ms per swap, 600ms) easing onto the final prompt; the dice icon spins once (360deg, 400ms).
+- Send: the bubble slides up into the thread (250ms, spring) and the keyboard dismisses.
+- Loader: the poster cluster rotates continuously (1 rev/2.4s), posters billboarding toward the viewer, scaling in from 0.6 (300ms).
+- Reply: the cluster scatters (posters fly out 60px and fade, 250ms) as the recommendation card slides up into its place (spring ~340/24, 350ms).
+
+## Calibration
+- The cluster is built from real poster thumbnails, not placeholders.
+- One loader per pending reply; sending again stacks another.
+
+## Reduced motion
+The loader is a static grid of posters pulsing opacity (1s); the reply fades in.
+
+## Don&#x27;t miss
+- The slot-machine text shuffle sells the dice - do not insert the prompt instantly.
+- The cluster scatters before the card enters, never overlapping it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">random-fill composer with 3D loader, ~1.5s.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/queue-ask-ai-chat-random-prompt-interaction">original interaction</a> by Queue. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Queue's Ask AI random prompt - tapping the dice inserts a random prompt into the chat composer; sending it shows a 3D spinning cluster of mini posters as the thinking state, then a recommendation card slides into the thread.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPurple \"Ask AI\" chat: assistant message bubbles with poster cards, a suggestion chip row, a composer with dice button and send, keyboard up. Loading state: a sphere-like cluster of small movie posters rotating in 3D where the reply will land. Reply: a recommendation card with poster, title, synopsis, and \"+ Queue\"/\"Seen it\" buttons.\n\n## Motion spec\nPattern: random-fill composer with 3D loader, ~1.5s.\n- Dice: tapping it cycles candidate prompts rapidly in the composer text (slot-machine shuffle, 50ms per swap, 600ms) easing onto the final prompt; the dice icon spins once (360deg, 400ms).\n- Send: the bubble slides up into the thread (250ms, spring) and the keyboard dismisses.\n- Loader: the poster cluster rotates continuously (1 rev/2.4s), posters billboarding toward the viewer, scaling in from 0.6 (300ms).\n- Reply: the cluster scatters (posters fly out 60px and fade, 250ms) as the recommendation card slides up into its place (spring ~340/24, 350ms).\n\n## Calibration\n- The cluster is built from real poster thumbnails, not placeholders.\n- One loader per pending reply; sending again stacks another.\n\n## Reduced motion\nThe loader is a static grid of posters pulsing opacity (1s); the reply fades in.\n\n## Don't miss\n- The slot-machine text shuffle sells the dice - do not insert the prompt instantly.\n- The cluster scatters before the card enters, never overlapping it."</script>
+</body></html>

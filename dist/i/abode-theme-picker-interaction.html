@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abode Theme Picker Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Abode Theme Picker Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/abode-theme-picker-interaction"><b>Abode</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/abode-theme-picker-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/abode-theme-picker-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Abode&#x27;s &quot;Choose your theme&quot; picker - five color theme pills (Bloom blue, Milo red, Zoke green, Boomy orange, Lulu magenta) float loose on the screen, and tapping one expands it into a selected blob shape with an animated mascot while the Next button instantly recolors to the theme.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8f2dcb2a6516988e9c93/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8f2dcb2a6516988e9c93/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-abode-theme-picker-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Abode&#x27;s &quot;Choose your theme&quot; picker - five color theme pills (Bloom blue, Milo red, Zoke green, Boomy orange, Lulu magenta) float loose on the screen, and tapping one expands it into a selected blob shape with an animated mascot while the Next button instantly recolors to the theme.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: &quot;Choose your theme&quot; headline, subcopy about picking a color scheme. Five pills in a loose two-column scatter, each a tinted pill with a theme name and tiny dot mascot: Bloom (blue), Milo (red), Zoke (green), Boomy (orange), Lulu (magenta). Bottom: a full-width Next button that takes on the selected theme&#x27;s color.
+
+## Motion spec
+Pattern: expanding selection pill with mascot reveal and live button recolor.
+- Idle: pills drift gently (translateY +/-4pt, 3.5s sine, phase-offset).
+- Tap a pill: it expands into an organic blob outline (scale 1 -&gt; 1.25, border radius morphs 20pt -&gt; blob path, spring ~300/16) in its theme color, and its mascot character pops out of the dot (scale 0 -&gt; 1.15 -&gt; 1.0, spring ~320/15) with a wiggle.
+- The previously selected pill deflates back to its resting pill shape (200ms ease-in) as the new one expands.
+- The Next button recolors immediately on selection (color crossfade 150ms) with a quick pulse (scale 1 -&gt; 1.03 -&gt; 1).
+- The selected mascot idles with a bob (translateY +/-3pt, 2s sine) while selected.
+
+## Calibration
+- Only one pill is expanded at a time; the swap is a deflate-then-expand, overlapping by ~100ms.
+- The button recolor is instant-feeling - it never waits for the pill animation to finish.
+
+## Reduced motion
+Selection swaps with a 200ms crossfade; button recolors without the pulse.
+
+## Don&#x27;t miss
+- The blob shape is organic and asymmetric - not a rounded rect with a bigger radius.
+- Each theme&#x27;s mascot is a different little character matching its color.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">expanding selection pill with mascot reveal and live button recolor.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/abode-theme-picker-interaction">original interaction</a> by Abode. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Abode's \"Choose your theme\" picker - five color theme pills (Bloom blue, Milo red, Zoke green, Boomy orange, Lulu magenta) float loose on the screen, and tapping one expands it into a selected blob shape with an animated mascot while the Next button instantly recolors to the theme.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: \"Choose your theme\" headline, subcopy about picking a color scheme. Five pills in a loose two-column scatter, each a tinted pill with a theme name and tiny dot mascot: Bloom (blue), Milo (red), Zoke (green), Boomy (orange), Lulu (magenta). Bottom: a full-width Next button that takes on the selected theme's color.\n\n## Motion spec\nPattern: expanding selection pill with mascot reveal and live button recolor.\n- Idle: pills drift gently (translateY +/-4pt, 3.5s sine, phase-offset).\n- Tap a pill: it expands into an organic blob outline (scale 1 -> 1.25, border radius morphs 20pt -> blob path, spring ~300/16) in its theme color, and its mascot character pops out of the dot (scale 0 -> 1.15 -> 1.0, spring ~320/15) with a wiggle.\n- The previously selected pill deflates back to its resting pill shape (200ms ease-in) as the new one expands.\n- The Next button recolors immediately on selection (color crossfade 150ms) with a quick pulse (scale 1 -> 1.03 -> 1).\n- The selected mascot idles with a bob (translateY +/-3pt, 2s sine) while selected.\n\n## Calibration\n- Only one pill is expanded at a time; the swap is a deflate-then-expand, overlapping by ~100ms.\n- The button recolor is instant-feeling - it never waits for the pill animation to finish.\n\n## Reduced motion\nSelection swaps with a 200ms crossfade; button recolors without the pulse.\n\n## Don't miss\n- The blob shape is organic and asymmetric - not a rounded rect with a bigger radius.\n- Each theme's mascot is a different little character matching its color."</script>
+</body></html>

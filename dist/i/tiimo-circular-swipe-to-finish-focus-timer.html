@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tiimo Circular Swipe to Finish Focus Timer - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tiimo Circular Swipe to Finish Focus Timer</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tiimo-circular-swipe-to-finish-focus-timer"><b>Tiimo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiimo-circular-swipe-to-finish-focus-timer">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tiimo-circular-swipe-to-finish-focus-timer">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Tiimo&#x27;s circular swipe-to-finish - dragging around the focus timer&#x27;s ring fills it with a purple progress arc, and completing the circle melts the timer into the task summary screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675724575222d1a7afdf6ff0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675724575222d1a7afdf6ff0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tiimo-circular-swipe-to-finish-focus-timer.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Tiimo&#x27;s circular swipe-to-finish - dragging around the focus timer&#x27;s ring fills it with a purple progress arc, and completing the circle melts the timer into the task summary screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Tiimo&#x27;s &quot;5 min focus&quot; timer: session label and time range up top, a large circular ring at center (a pale lavender disc inside a light track ring), the &quot;04:46&quot; countdown beneath it, and &quot;+1 min&quot; and pause controls below. Dragging around the ring fills a thick purple arc; when the arc completes the full circle with a checkmark at the top, the timer UI dissolves into the summary: &quot;You have 3 tasks planned&quot; with a button.
+
+## Motion spec
+Pattern: circular drag-to-complete, gesture-driven.
+- The drag maps angle to progress 1:1: the purple arc sweeps clockwise from the top, its end cap rounded, tracking the finger around the ring.
+- A floating label chip rides the arc&#x27;s tip; crossing ~90 percent, the ring pulses (scale 1.03, 200ms) as a preview of completion.
+- At full circle, a checkmark appears at the top of the ring (spring stiffness 400 damping 20), the ring flashes solid purple, then the whole timer scales down and fades (300ms) while the summary content rises in (350ms, ease-out, 80ms stagger per element).
+- Releasing mid-drag springs the arc back to zero (spring stiffness 300 damping 25), the ring draining as it unwinds.
+
+## Calibration
+- The arc is thick and saturated against the pale track - progress is unmistakable.
+- The countdown digits keep ticking during the drag; only the ring responds.
+
+## Reduced motion
+A Fill button replaces the drag; screens crossfade.
+
+## Don&#x27;t miss
+- Completion requires the full circle - no shortcut at 95 percent.
+- The unwind-on-release animates backward along the same path.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">circular drag-to-complete, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tiimo-circular-swipe-to-finish-focus-timer">original interaction</a> by Tiimo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Tiimo's circular swipe-to-finish - dragging around the focus timer's ring fills it with a purple progress arc, and completing the circle melts the timer into the task summary screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nTiimo's \"5 min focus\" timer: session label and time range up top, a large circular ring at center (a pale lavender disc inside a light track ring), the \"04:46\" countdown beneath it, and \"+1 min\" and pause controls below. Dragging around the ring fills a thick purple arc; when the arc completes the full circle with a checkmark at the top, the timer UI dissolves into the summary: \"You have 3 tasks planned\" with a button.\n\n## Motion spec\nPattern: circular drag-to-complete, gesture-driven.\n- The drag maps angle to progress 1:1: the purple arc sweeps clockwise from the top, its end cap rounded, tracking the finger around the ring.\n- A floating label chip rides the arc's tip; crossing ~90 percent, the ring pulses (scale 1.03, 200ms) as a preview of completion.\n- At full circle, a checkmark appears at the top of the ring (spring stiffness 400 damping 20), the ring flashes solid purple, then the whole timer scales down and fades (300ms) while the summary content rises in (350ms, ease-out, 80ms stagger per element).\n- Releasing mid-drag springs the arc back to zero (spring stiffness 300 damping 25), the ring draining as it unwinds.\n\n## Calibration\n- The arc is thick and saturated against the pale track - progress is unmistakable.\n- The countdown digits keep ticking during the drag; only the ring responds.\n\n## Reduced motion\nA Fill button replaces the drag; screens crossfade.\n\n## Don't miss\n- Completion requires the full circle - no shortcut at 95 percent.\n- The unwind-on-release animates backward along the same path."</script>
+</body></html>

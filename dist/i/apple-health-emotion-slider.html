@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Health Emotion Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Health Emotion Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-health-emotion-slider"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-health-emotion-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-health-emotion-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Health&#x27;s emotion slider - scrubbing morphs a layered organic shape through geometries and colors while the whole background gradient follows the feeling.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bceb61d73e2622b352cd/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bceb61d73e2622b352cd/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-health-emotion-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Health&#x27;s emotion slider - scrubbing morphs a layered organic shape through geometries and colors while the whole background gradient follows the feeling.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+&quot;Choose how you&#x27;re feeling right now&quot; screen. Center: a large layered translucent shape - smooth concentric rings at Neutral, a spiky crystalline star at Very Unpleasant, a soft petaled flower at Very Pleasant. Below: the emotion label, a slider with end captions, and a Next button. The background is a full-screen gradient tinted to the current emotion.
+
+## Motion spec
+Pattern: continuous morph drive by a single scrub value.
+- Drag the slider thumb (1:1): the shape morphs continuously - petal count, spikiness, and rotation interpolate between keyframe geometries (Neutral rings, Slightly/Unpleasant stars, Pleasant flowers) with no snapping; the shape also rotates slowly with scrub (+-30 degrees end to end).
+- Color is a full-scene interpolation: shape hue, background gradient, label color, and Next button all slide through the same palette (teal Neutral, blue Slightly Unpleasant, purple Very Unpleasant, green Slightly Pleasant, yellow Pleasant, orange/red Very Pleasant) over the exact scrub position.
+- The shape breathes at idle: layers scale +-3% in counter-phase (5s loop), and it keeps breathing while scrubbing.
+- The emotion label rolls to the new word at each band boundary (vertical roll 200ms, ease-out).
+- Release: the thumb settles anywhere (continuous, no detents) and the shape eases to rest (spring ~200/24) at the chosen blend.
+
+## Calibration
+- The morph is a single continuous parameter - position 0.37 is a real, stable in-between shape, not a transition midpoint.
+- Background gradient is radial, centered on the shape, and always matches it exactly.
+
+## Reduced motion
+Shape crossfades between the 6 keyframe states; colors crossfade.
+
+## Don&#x27;t miss
+- Layer translucency (multiply/screen blends between petals) is what makes it feel glassy-organic - flat fills go muddy.
+- Unpleasant shapes are sharp and cool; pleasant are round and warm - never invert the mapping.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous morph drive by a single scrub value.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-health-emotion-slider">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Health's emotion slider - scrubbing morphs a layered organic shape through geometries and colors while the whole background gradient follows the feeling.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\n\"Choose how you're feeling right now\" screen. Center: a large layered translucent shape - smooth concentric rings at Neutral, a spiky crystalline star at Very Unpleasant, a soft petaled flower at Very Pleasant. Below: the emotion label, a slider with end captions, and a Next button. The background is a full-screen gradient tinted to the current emotion.\n\n## Motion spec\nPattern: continuous morph drive by a single scrub value.\n- Drag the slider thumb (1:1): the shape morphs continuously - petal count, spikiness, and rotation interpolate between keyframe geometries (Neutral rings, Slightly/Unpleasant stars, Pleasant flowers) with no snapping; the shape also rotates slowly with scrub (+-30 degrees end to end).\n- Color is a full-scene interpolation: shape hue, background gradient, label color, and Next button all slide through the same palette (teal Neutral, blue Slightly Unpleasant, purple Very Unpleasant, green Slightly Pleasant, yellow Pleasant, orange/red Very Pleasant) over the exact scrub position.\n- The shape breathes at idle: layers scale +-3% in counter-phase (5s loop), and it keeps breathing while scrubbing.\n- The emotion label rolls to the new word at each band boundary (vertical roll 200ms, ease-out).\n- Release: the thumb settles anywhere (continuous, no detents) and the shape eases to rest (spring ~200/24) at the chosen blend.\n\n## Calibration\n- The morph is a single continuous parameter - position 0.37 is a real, stable in-between shape, not a transition midpoint.\n- Background gradient is radial, centered on the shape, and always matches it exactly.\n\n## Reduced motion\nShape crossfades between the 6 keyframe states; colors crossfade.\n\n## Don't miss\n- Layer translucency (multiply/screen blends between petals) is what makes it feel glassy-organic - flat fills go muddy.\n- Unpleasant shapes are sharp and cool; pleasant are round and warm - never invert the mapping."</script>
+</body></html>

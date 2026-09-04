@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spotify 2025 Wrapped Highlights Transition Text Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spotify 2025 Wrapped Highlights Transition Text Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spotify-2025-wrapped-highlights-transition-text-animation"><b>Spotify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-2025-wrapped-highlights-transition-text-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-2025-wrapped-highlights-transition-text-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Spotify Wrapped&#x27;s highlights run - &quot;You&#x27;re in great company&quot; club stats, the victory-lap title card, the springy highlight-card carousel, and the file-drawer scene, all cut on bold graphic patterns.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934008e491e9c48bfad0b7b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934008e491e9c48bfad0b7b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spotify-2025-wrapped-highlights-transition-text-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Spotify Wrapped&#x27;s highlights run - &quot;You&#x27;re in great company&quot; club stats, the victory-lap title card, the springy highlight-card carousel, and the file-drawer scene, all cut on bold graphic patterns.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A Wrapped story sequence: &quot;You&#x27;re in great company. 16%&quot; with a grid of club-favorite artist thumbs on black; a cream wipe; &quot;Time for your victory lap.&quot; over the giant red 2025; a recap card (portrait, top artists, top songs, minutes 4,229, top genre Electronica, Share button) sliding in a card carousel; &quot;We pulled some of your files, just in case.&quot; with a sketch file drawer labeled 2025; &quot;Take a look at more 2025 highlights&quot; with small cards (&quot;Most Nostalgic Day - JUN 21&quot;); and a green/black warped-stripe interstitial.
+
+## Motion spec
+Pattern: high-energy story transitions - staggered text, spring carousel, graphic interstitials.
+- Headlines stamp in word by word (80ms per word, slight 12px rise each) - never a whole-line fade.
+- The club grid pops its thumbs in a scatter order (scale 0.8 -&gt; 1, spring ~380/15, 50ms apart) under the 16% figure, which rolls up like a counter (600ms).
+- Transitions between scenes are graphic: a warped-stripe pattern wipes across (diagonal slide, 400ms, ease-in-out) carrying the cut - the pattern is the transition.
+- The highlight carousel springs sideways: the active card scales 0.92 -&gt; 1 while neighbors peek at the edges; swiping throws the next card in with momentum (spring ~300/16).
+- The file drawer scene: the drawer slides open (translateY, 350ms) and folders stagger up out of it (60ms apart) before the copy lands.
+
+## Calibration
+- Every scene carries one bold graphic system (stripes, dots, sketch lines) and one ink color - restraint in palette, excess in motion.
+- The carousel&#x27;s spring must overshoot visibly - soft snaps read as broken here.
+
+## Reduced motion
+Scenes crossfade (300ms); carousel scrolls without spring; grids fade in complete.
+
+## Don&#x27;t miss
+- &quot;Time for your victory lap.&quot; sets up the recap card - the card must feel like the lap, not a settings page.
+- The 2025 drawer is a sketch, not a render - the hand-drawn lines keep it playful.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">high-energy story transitions - staggered text, spring carousel, graphic interstitials.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spotify-2025-wrapped-highlights-transition-text-animation">original interaction</a> by Spotify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Spotify Wrapped's highlights run - \"You're in great company\" club stats, the victory-lap title card, the springy highlight-card carousel, and the file-drawer scene, all cut on bold graphic patterns.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA Wrapped story sequence: \"You're in great company. 16%\" with a grid of club-favorite artist thumbs on black; a cream wipe; \"Time for your victory lap.\" over the giant red 2025; a recap card (portrait, top artists, top songs, minutes 4,229, top genre Electronica, Share button) sliding in a card carousel; \"We pulled some of your files, just in case.\" with a sketch file drawer labeled 2025; \"Take a look at more 2025 highlights\" with small cards (\"Most Nostalgic Day - JUN 21\"); and a green/black warped-stripe interstitial.\n\n## Motion spec\nPattern: high-energy story transitions - staggered text, spring carousel, graphic interstitials.\n- Headlines stamp in word by word (80ms per word, slight 12px rise each) - never a whole-line fade.\n- The club grid pops its thumbs in a scatter order (scale 0.8 -> 1, spring ~380/15, 50ms apart) under the 16% figure, which rolls up like a counter (600ms).\n- Transitions between scenes are graphic: a warped-stripe pattern wipes across (diagonal slide, 400ms, ease-in-out) carrying the cut - the pattern is the transition.\n- The highlight carousel springs sideways: the active card scales 0.92 -> 1 while neighbors peek at the edges; swiping throws the next card in with momentum (spring ~300/16).\n- The file drawer scene: the drawer slides open (translateY, 350ms) and folders stagger up out of it (60ms apart) before the copy lands.\n\n## Calibration\n- Every scene carries one bold graphic system (stripes, dots, sketch lines) and one ink color - restraint in palette, excess in motion.\n- The carousel's spring must overshoot visibly - soft snaps read as broken here.\n\n## Reduced motion\nScenes crossfade (300ms); carousel scrolls without spring; grids fade in complete.\n\n## Don't miss\n- \"Time for your victory lap.\" sets up the recap card - the card must feel like the lap, not a settings page.\n- The 2025 drawer is a sketch, not a render - the hand-drawn lines keep it playful."</script>
+</body></html>

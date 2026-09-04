@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flighty Aircraft Stats Page - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flighty Aircraft Stats Page</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flighty-aircraft-stats-page"><b>Flighty</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-aircraft-stats-page">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flighty-aircraft-stats-page">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Flighty&#x27;s Aircraft Stats - a blue aviation dashboard where tab switches spring-swap 3D aircraft illustrations over a blueprint backdrop, with stat trios up top and scrolling white cards holding animated type bars, drawing donut charts, frequent-tail rows, and aircraft age.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad3553c6551dedd1d61f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c1ad3553c6551dedd1d61f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flighty-aircraft-stats-page.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Flighty&#x27;s Aircraft Stats - a blue aviation dashboard where tab switches spring-swap 3D aircraft illustrations over a blueprint backdrop, with stat trios up top and scrolling white cards holding animated type bars, drawing donut charts, frequent-tail rows, and aircraft age.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Blue &quot;Aircraft Stats&quot; page: a stat trio (Total aircraft 9 / Newest 6 months / Oldest 11 years), then &quot;Most flown aircraft A320&quot; with a large 3D plane render over a blueprint-style line-drawing background (seat map schematics, registration details &quot;9V-SHT&quot;, a favorite-seat diagram). Scrolling reveals white cards: &quot;Aircraft Types 9 total aircraft&quot; horizontal bars, &quot;Class and Seat&quot; donut chart with legend, &quot;Most Frequent Tails 9V-SHT&quot; rows with tail-fin thumbnails, &quot;Aircraft Age 11 years old&quot;.
+
+## Motion spec
+Pattern: springy illustration swap + drawing charts.
+- Tab switch: the current plane springs out (scale 1 -&gt; 0.85 + 30px lateral slide, fade, spring ~340/16 with a hint of overshoot on exit) while the new plane springs in from the opposite side (spring ~320/14 - a lively, toy-like swap); the blueprint backdrop crossfades (300ms) and the stat trio re-rolls (digit roll 500ms).
+- On scroll-reveal, each white card rises 20px and fades in (spring ~340/20).
+- Type bars grow from zero width (400ms ease-out, 60ms stagger); the donut chart draws its ring stroke-on (700ms, clockwise from top) as the legend rows stagger in (150ms, 60ms apart).
+- The plane idles with a slow bob (4px, 4s sine) - a parked aircraft with a pulse.
+
+## Calibration
+- The plane swap is springy, not linear - it should feel like trading cards snapping in.
+- Donut draws once per reveal; re-scrolling does not redraw.
+
+## Reduced motion
+Planes crossfade in place; charts appear complete; no idle bob.
+
+## Don&#x27;t miss
+- The blueprint backdrop - technical drawings behind the hero plane give the page its aviation-nerd soul.
+- Tail-fin thumbnails in the frequent-tails list - tiny aircraft identity, not generic icons.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy illustration swap + drawing charts.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flighty-aircraft-stats-page">original interaction</a> by Flighty. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Flighty's Aircraft Stats - a blue aviation dashboard where tab switches spring-swap 3D aircraft illustrations over a blueprint backdrop, with stat trios up top and scrolling white cards holding animated type bars, drawing donut charts, frequent-tail rows, and aircraft age.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlue \"Aircraft Stats\" page: a stat trio (Total aircraft 9 / Newest 6 months / Oldest 11 years), then \"Most flown aircraft A320\" with a large 3D plane render over a blueprint-style line-drawing background (seat map schematics, registration details \"9V-SHT\", a favorite-seat diagram). Scrolling reveals white cards: \"Aircraft Types 9 total aircraft\" horizontal bars, \"Class and Seat\" donut chart with legend, \"Most Frequent Tails 9V-SHT\" rows with tail-fin thumbnails, \"Aircraft Age 11 years old\".\n\n## Motion spec\nPattern: springy illustration swap + drawing charts.\n- Tab switch: the current plane springs out (scale 1 -> 0.85 + 30px lateral slide, fade, spring ~340/16 with a hint of overshoot on exit) while the new plane springs in from the opposite side (spring ~320/14 - a lively, toy-like swap); the blueprint backdrop crossfades (300ms) and the stat trio re-rolls (digit roll 500ms).\n- On scroll-reveal, each white card rises 20px and fades in (spring ~340/20).\n- Type bars grow from zero width (400ms ease-out, 60ms stagger); the donut chart draws its ring stroke-on (700ms, clockwise from top) as the legend rows stagger in (150ms, 60ms apart).\n- The plane idles with a slow bob (4px, 4s sine) - a parked aircraft with a pulse.\n\n## Calibration\n- The plane swap is springy, not linear - it should feel like trading cards snapping in.\n- Donut draws once per reveal; re-scrolling does not redraw.\n\n## Reduced motion\nPlanes crossfade in place; charts appear complete; no idle bob.\n\n## Don't miss\n- The blueprint backdrop - technical drawings behind the hero plane give the page its aviation-nerd soul.\n- Tail-fin thumbnails in the frequent-tails list - tiny aircraft identity, not generic icons."</script>
+</body></html>

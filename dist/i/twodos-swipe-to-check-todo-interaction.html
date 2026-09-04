@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Twodos Swipe to Check Todo Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Twodos Swipe to Check Todo Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/twodos-swipe-to-check-todo-interaction"><b>Twodos</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/twodos-swipe-to-check-todo-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/twodos-swipe-to-check-todo-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Twodos&#x27; swipe-to-complete - swiping a to-do row right checks it with a satisfying pop, the row collapses out of the list, and the section&#x27;s count badge ticks down with a springy bounce.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cffe7f3f9ae8767d916503/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cffe7f3f9ae8767d916503/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-twodos-swipe-to-check-todo-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Twodos&#x27; swipe-to-complete - swiping a to-do row right checks it with a satisfying pop, the row collapses out of the list, and the section&#x27;s count badge ticks down with a springy bounce.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Minimal pale-lavender list: a &quot;Later&quot; section header with a count badge and expand icon, two rows (each: empty circle checkbox, title, chevron), a bottom bar with settings, big +, trash.
+
+## Motion spec
+Pattern: swipe-check with badge tick-down.
+- Swipe right on a row: the row tracks the finger 1:1; a checkmark fades in inside the circle as the swipe passes ~60px, scaling 0.5 -&gt; 1 with a spring (~320/18).
+- Release past ~40% of row width: the row slides out right (200ms, ease-in) while its height collapses to 0 (250ms, ease-in-out) and the rows below slide up into the gap.
+- Simultaneously the header badge flips 2 -&gt; 1: the digit pops out (scale 1 -&gt; 0.6) and the new digit pops in with overshoot (spring ~400/16, scale 0.6 -&gt; 1.15 -&gt; 1).
+- Release below threshold: the row springs back flat (~300/20) and the check fades.
+
+## Calibration
+- The whole gesture resolves in under 600ms - completion must feel instant.
+- The badge bounce is the reward; keep the overshoot visible.
+
+## Reduced motion
+Row fades out and collapses; badge swaps without overshoot.
+
+## Don&#x27;t miss
+- The checkmark appears progressively WITH the swipe, not only on release - live feedback sells the gesture.
+- Empty rows leave generous whitespace; nothing reflows abruptly after the collapse.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-check with badge tick-down.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/twodos-swipe-to-check-todo-interaction">original interaction</a> by Twodos. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Twodos' swipe-to-complete - swiping a to-do row right checks it with a satisfying pop, the row collapses out of the list, and the section's count badge ticks down with a springy bounce.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMinimal pale-lavender list: a \"Later\" section header with a count badge and expand icon, two rows (each: empty circle checkbox, title, chevron), a bottom bar with settings, big +, trash.\n\n## Motion spec\nPattern: swipe-check with badge tick-down.\n- Swipe right on a row: the row tracks the finger 1:1; a checkmark fades in inside the circle as the swipe passes ~60px, scaling 0.5 -> 1 with a spring (~320/18).\n- Release past ~40% of row width: the row slides out right (200ms, ease-in) while its height collapses to 0 (250ms, ease-in-out) and the rows below slide up into the gap.\n- Simultaneously the header badge flips 2 -> 1: the digit pops out (scale 1 -> 0.6) and the new digit pops in with overshoot (spring ~400/16, scale 0.6 -> 1.15 -> 1).\n- Release below threshold: the row springs back flat (~300/20) and the check fades.\n\n## Calibration\n- The whole gesture resolves in under 600ms - completion must feel instant.\n- The badge bounce is the reward; keep the overshoot visible.\n\n## Reduced motion\nRow fades out and collapses; badge swaps without overshoot.\n\n## Don't miss\n- The checkmark appears progressively WITH the swipe, not only on release - live feedback sells the gesture.\n- Empty rows leave generous whitespace; nothing reflows abruptly after the collapse."</script>
+</body></html>

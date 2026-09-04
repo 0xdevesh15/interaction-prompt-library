@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Whistle Value Prop Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Whistle Value Prop Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/whistle-value-prop-animation"><b>Whistle</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/whistle-value-prop-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/whistle-value-prop-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Whistle&#x27;s Ultra paywall carousel - a centered phone mockup auto-cycles feature pages (&quot;Workouts made just for you&quot;, &quot;Adjust workouts with ease&quot;, &quot;Create personal workout routines&quot;, &quot;Templates that save time&quot;, &quot;Plan with the weather&quot;) above a fixed Pro/Ultra plan panel.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cf3943b21a129d111e47/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cf3943b21a129d111e47/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-whistle-value-prop-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Whistle&#x27;s Ultra paywall carousel - a centered phone mockup auto-cycles feature pages (&quot;Workouts made just for you&quot;, &quot;Adjust workouts with ease&quot;, &quot;Create personal workout routines&quot;, &quot;Templates that save time&quot;, &quot;Plan with the weather&quot;) above a fixed Pro/Ultra plan panel.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Purple gradient paywall: &quot;Whistle ULTRA&quot; wordmark with X, page dots, a large headline, a phone mockup showing the feature screenshot, and a bottom panel: Pro/Ultra segmented pill, &quot;Try three days for free&quot; checkbox, &quot;1 Year - ₹ 4,999/year&quot; row, and a purple &quot;Try it Free&quot; button.
+
+## Motion spec
+Pattern: auto-play mockup carousel, ~3s per page.
+- Cycle: every 3s the headline crossfades (250ms) and the mockup&#x27;s inner screenshot slides horizontally to the next page (350ms, ease-out), the next page peeking in from the right.
+- Advance: the active dot fills left-to-right over the 3s as a progress bar, then swaps.
+- Settle-in: the screenshot&#x27;s content animates once per arrival (subtle rise 8px, 250ms) while the phone frame stays still.
+- Interrupt: a manual swipe switches pages with drag tracking and restarts the 3s timer.
+
+## Calibration
+- Only the mockup content and headline change; the plan panel is fixed.
+- The dot progress resets per page - it is a timer, not a position indicator.
+
+## Reduced motion
+Pages crossfade without slide (300ms); the auto-advance stops after the first pass.
+
+## Don&#x27;t miss
+- The phone frame never moves - the animation lives inside its screen.
+- Page order is fixed; the last page loops back to the first without reversing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">auto-play mockup carousel, ~3s per page.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/whistle-value-prop-animation">original interaction</a> by Whistle. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Whistle's Ultra paywall carousel - a centered phone mockup auto-cycles feature pages (\"Workouts made just for you\", \"Adjust workouts with ease\", \"Create personal workout routines\", \"Templates that save time\", \"Plan with the weather\") above a fixed Pro/Ultra plan panel.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nPurple gradient paywall: \"Whistle ULTRA\" wordmark with X, page dots, a large headline, a phone mockup showing the feature screenshot, and a bottom panel: Pro/Ultra segmented pill, \"Try three days for free\" checkbox, \"1 Year - \u20b9 4,999/year\" row, and a purple \"Try it Free\" button.\n\n## Motion spec\nPattern: auto-play mockup carousel, ~3s per page.\n- Cycle: every 3s the headline crossfades (250ms) and the mockup's inner screenshot slides horizontally to the next page (350ms, ease-out), the next page peeking in from the right.\n- Advance: the active dot fills left-to-right over the 3s as a progress bar, then swaps.\n- Settle-in: the screenshot's content animates once per arrival (subtle rise 8px, 250ms) while the phone frame stays still.\n- Interrupt: a manual swipe switches pages with drag tracking and restarts the 3s timer.\n\n## Calibration\n- Only the mockup content and headline change; the plan panel is fixed.\n- The dot progress resets per page - it is a timer, not a position indicator.\n\n## Reduced motion\nPages crossfade without slide (300ms); the auto-advance stops after the first pass.\n\n## Don't miss\n- The phone frame never moves - the animation lives inside its screen.\n- Page order is fixed; the last page loops back to the first without reversing."</script>
+</body></html>

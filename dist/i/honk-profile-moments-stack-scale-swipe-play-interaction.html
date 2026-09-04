@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honk Profile Moments Stack Scale Swipe Play Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Honk Profile Moments Stack Scale Swipe Play Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/honk-profile-moments-stack-scale-swipe-play-interaction"><b>Honk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-profile-moments-stack-scale-swipe-play-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/honk-profile-moments-stack-scale-swipe-play-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Honk&#x27;s profile Moments - tapping the stacked Moments card on a profile expands it into a full-screen swipeable carousel with a thumbnail strip, and an audio moment expands further into a full player with an animated waveform.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b9cc00d01d537451286/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68541b9cc00d01d537451286/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-honk-profile-moments-stack-scale-swipe-play-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Honk&#x27;s profile Moments - tapping the stacked Moments card on a profile expands it into a full-screen swipeable carousel with a thumbnail strip, and an audio moment expands further into a full player with an animated waveform.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Profile of Alex (avatar, action buttons, settings list) with a &quot;Moments&quot; card showing a stack of moment images and a &quot;View&quot; label. The Moments viewer: full-screen white, &quot;Moments&quot; header with X, a horizontal carousel of large rounded moment cards (abstract art, landscapes), a thumbnail strip at the bottom. An audio moment (teal card with play button) expands into a full-screen teal player with a live waveform and a scrub bar.
+
+## Motion spec
+Pattern: shared-element stack expansion with carousel and nested player.
+- Tap the stack: the top card morphs from its small profile slot to the full-screen carousel position (shared-element: position + size + corner radius over 350ms, spring ~300/22); the remaining stack cards fade/slide into the thumbnail strip (stagger 40ms).
+- Carousel: horizontal swipe pages cards 1:1 with the finger, snapping between moments (spring ~300/22); the thumbnail strip scrolls in sync, active thumbnail scaling up (1 -&gt; 1.2) with a white ring.
+- Audio moment: tap play - the card expands to full-screen (same shared-element morph, 350ms), the play glyph morphs to pause, the waveform animates (bars oscillating with the audio, amplitude randomized per frame), and the scrub bar fills left to right in real time.
+- Dismiss: X or swipe-down reverses the morph back into the profile stack (350ms).
+
+## Calibration
+- The morph keeps the image content aligned at all times - no crossfade between small and large.
+- Carousel neighbors peek at the edges (~12% visible) to advertise swiping.
+
+## Reduced motion
+Viewer crossfades open (250ms); swipe paging without physics; static waveform.
+
+## Don&#x27;t miss
+- The waveform is audio-reactive, not a static image; bars dance while playing.
+- The thumbnail strip mirrors carousel position exactly - highlight and scroll stay in sync.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element stack expansion with carousel and nested player.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/honk-profile-moments-stack-scale-swipe-play-interaction">original interaction</a> by Honk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Honk's profile Moments - tapping the stacked Moments card on a profile expands it into a full-screen swipeable carousel with a thumbnail strip, and an audio moment expands further into a full player with an animated waveform.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nProfile of Alex (avatar, action buttons, settings list) with a \"Moments\" card showing a stack of moment images and a \"View\" label. The Moments viewer: full-screen white, \"Moments\" header with X, a horizontal carousel of large rounded moment cards (abstract art, landscapes), a thumbnail strip at the bottom. An audio moment (teal card with play button) expands into a full-screen teal player with a live waveform and a scrub bar.\n\n## Motion spec\nPattern: shared-element stack expansion with carousel and nested player.\n- Tap the stack: the top card morphs from its small profile slot to the full-screen carousel position (shared-element: position + size + corner radius over 350ms, spring ~300/22); the remaining stack cards fade/slide into the thumbnail strip (stagger 40ms).\n- Carousel: horizontal swipe pages cards 1:1 with the finger, snapping between moments (spring ~300/22); the thumbnail strip scrolls in sync, active thumbnail scaling up (1 -> 1.2) with a white ring.\n- Audio moment: tap play - the card expands to full-screen (same shared-element morph, 350ms), the play glyph morphs to pause, the waveform animates (bars oscillating with the audio, amplitude randomized per frame), and the scrub bar fills left to right in real time.\n- Dismiss: X or swipe-down reverses the morph back into the profile stack (350ms).\n\n## Calibration\n- The morph keeps the image content aligned at all times - no crossfade between small and large.\n- Carousel neighbors peek at the edges (~12% visible) to advertise swiping.\n\n## Reduced motion\nViewer crossfades open (250ms); swipe paging without physics; static waveform.\n\n## Don't miss\n- The waveform is audio-reactive, not a static image; bars dance while playing.\n- The thumbnail strip mirrors carousel position exactly - highlight and scroll stay in sync."</script>
+</body></html>

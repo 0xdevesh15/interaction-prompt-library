@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YouTube Shots Like Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>YouTube Shots Like Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/youtube-shots-like-animation"><b>Youtube</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/youtube-shots-like-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/youtube-shots-like-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: YouTube Shorts&#x27; like burst - tapping the thumbs-up in the Shorts action rail fires a big springy thumbs-up badge at screen center with radiating red particle sparks, while the rail icon fills.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177dad85c0894404b409/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177dad85c0894404b409/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-youtube-shots-like-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: YouTube Shorts&#x27; like burst - tapping the thumbs-up in the Shorts action rail fires a big springy thumbs-up badge at screen center with radiating red particle sparks, while the rail icon fills.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The dark Shorts player (full-bleed vertical video, right action rail: like with count, dislike, comments, share, remix; title and channel rows at bottom-left). On like, a large white thumbs-up glyph appears center-screen over the video with red spark shards around it.
+
+## Motion spec
+Pattern: celebratory center burst + rail fill.
+- Tap like: the rail thumb pops (scale 1 -&gt; 1.3 -&gt; 1, spring ~500/18) and fills solid; the count ticks.
+- Simultaneously the center badge spawns: the white thumbs-up scales in from 0 with a hard spring (~520/16, pronounced overshoot, 350ms) and a slight rotate (-8deg -&gt; 0).
+- Red spark shards (8-10 small strokes/dots) burst outward radially from the badge (translate 60-90pt, fade, 400ms, slight per-shard stagger).
+- The badge holds ~500ms, then shrinks away (scale -&gt; 0.6 with fade, 200ms, ease-in) while the sparks finish dissipating.
+- Unlike: only the rail pop runs (smaller, 1 -&gt; 0.85 -&gt; 1) and the fill clears - no center burst.
+
+## Calibration
+- The center burst is fast and gone inside a second - celebration, not interruption; the video never pauses.
+- The rail icon and center badge fire on the same tap frame - one cause, two effects.
+
+## Reduced motion
+Rail fill with a crossfade only; no center badge or sparks.
+
+## Don&#x27;t miss
+- The sparks are red on-brand strokes, not generic confetti.
+- The badge casts no shadow - it floats flat over the video like a sticker.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">celebratory center burst + rail fill.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/youtube-shots-like-animation">original interaction</a> by Youtube. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: YouTube Shorts' like burst - tapping the thumbs-up in the Shorts action rail fires a big springy thumbs-up badge at screen center with radiating red particle sparks, while the rail icon fills.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe dark Shorts player (full-bleed vertical video, right action rail: like with count, dislike, comments, share, remix; title and channel rows at bottom-left). On like, a large white thumbs-up glyph appears center-screen over the video with red spark shards around it.\n\n## Motion spec\nPattern: celebratory center burst + rail fill.\n- Tap like: the rail thumb pops (scale 1 -> 1.3 -> 1, spring ~500/18) and fills solid; the count ticks.\n- Simultaneously the center badge spawns: the white thumbs-up scales in from 0 with a hard spring (~520/16, pronounced overshoot, 350ms) and a slight rotate (-8deg -> 0).\n- Red spark shards (8-10 small strokes/dots) burst outward radially from the badge (translate 60-90pt, fade, 400ms, slight per-shard stagger).\n- The badge holds ~500ms, then shrinks away (scale -> 0.6 with fade, 200ms, ease-in) while the sparks finish dissipating.\n- Unlike: only the rail pop runs (smaller, 1 -> 0.85 -> 1) and the fill clears - no center burst.\n\n## Calibration\n- The center burst is fast and gone inside a second - celebration, not interruption; the video never pauses.\n- The rail icon and center badge fire on the same tap frame - one cause, two effects.\n\n## Reduced motion\nRail fill with a crossfade only; no center badge or sparks.\n\n## Don't miss\n- The sparks are red on-brand strokes, not generic confetti.\n- The badge casts no shadow - it floats flat over the video like a sticker."</script>
+</body></html>

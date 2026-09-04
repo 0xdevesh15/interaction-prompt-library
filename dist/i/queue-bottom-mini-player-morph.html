@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queue Bottom Mini Player Morph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Queue Bottom Mini Player Morph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/queue-bottom-mini-player-morph"><b>Queue</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-bottom-mini-player-morph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-bottom-mini-player-morph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Queue&#x27;s mini-player morph - on the light podcast episode page, tapping Play on the floating bottom pill makes it spring and expand into a mini-player bar (green episode thumb, skip, queue, pause), while a small queue icon floats up out of the button and fades away.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734c16cba34cfe064c7b227/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6734c16cba34cfe064c7b227/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-queue-bottom-mini-player-morph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Queue&#x27;s mini-player morph - on the light podcast episode page, tapping Play on the floating bottom pill makes it spring and expand into a mini-player bar (green episode thumb, skip, queue, pause), while a small queue icon floats up out of the button and fades away.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A soft lavender-white podcast page: &quot;464: AI Grab Bag&quot; header with a Play/Pause toggle and duration, &quot;Recent Episodes&quot; link, and at the bottom a floating white pill (Play + duration) resting above the home indicator. The expanded state is a wider floating bar: green square artwork thumb, skip-back, queue icon, pause icon.
+
+## Motion spec
+Pattern: pill-to-player morph with icon release.
+- Tap Play: the pill compresses (scale 0.92, 80ms) then springs wider (width expands to the full bar, spring ~380/20, ~400ms) - one continuous container morph, rounded corners animating with it.
+- Inside the morph: the &quot;Play&quot; label and duration fade out (150ms) as the green artwork thumb pops in at the left (scale 0.5 -&gt; 1, spring, 250ms) and the control icons fade in staggered left to right (60ms apart).
+- On the queue action, a small queue icon releases from the button: it floats upward (translateY -40px, 600ms, ease-out), scaling down (1 -&gt; 0.6) and fading out - a tiny confirmation puff.
+- The bar then holds a subtle float (translateY +/-2px, 3s loop) above the home indicator.
+- Pause: the bar contracts back to the pill on the same spring, icons reversing out.
+
+## Calibration
+- The morph is driven by one spring - width, height, and corner radius stay in the same curve.
+- The released queue icon is decorative feedback - it never blocks input.
+
+## Reduced motion
+Pill crossfades to the bar; no floating icon.
+
+## Don&#x27;t miss
+- The artwork thumb is a saturated green square - the one strong color on the pale page.
+- The floating bar casts a soft shadow that grows slightly as it expands.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">pill-to-player morph with icon release.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/queue-bottom-mini-player-morph">original interaction</a> by Queue. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Queue's mini-player morph - on the light podcast episode page, tapping Play on the floating bottom pill makes it spring and expand into a mini-player bar (green episode thumb, skip, queue, pause), while a small queue icon floats up out of the button and fades away.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA soft lavender-white podcast page: \"464: AI Grab Bag\" header with a Play/Pause toggle and duration, \"Recent Episodes\" link, and at the bottom a floating white pill (Play + duration) resting above the home indicator. The expanded state is a wider floating bar: green square artwork thumb, skip-back, queue icon, pause icon.\n\n## Motion spec\nPattern: pill-to-player morph with icon release.\n- Tap Play: the pill compresses (scale 0.92, 80ms) then springs wider (width expands to the full bar, spring ~380/20, ~400ms) - one continuous container morph, rounded corners animating with it.\n- Inside the morph: the \"Play\" label and duration fade out (150ms) as the green artwork thumb pops in at the left (scale 0.5 -> 1, spring, 250ms) and the control icons fade in staggered left to right (60ms apart).\n- On the queue action, a small queue icon releases from the button: it floats upward (translateY -40px, 600ms, ease-out), scaling down (1 -> 0.6) and fading out - a tiny confirmation puff.\n- The bar then holds a subtle float (translateY +/-2px, 3s loop) above the home indicator.\n- Pause: the bar contracts back to the pill on the same spring, icons reversing out.\n\n## Calibration\n- The morph is driven by one spring - width, height, and corner radius stay in the same curve.\n- The released queue icon is decorative feedback - it never blocks input.\n\n## Reduced motion\nPill crossfades to the bar; no floating icon.\n\n## Don't miss\n- The artwork thumb is a saturated green square - the one strong color on the pale page.\n- The floating bar casts a soft shadow that grows slightly as it expands."</script>
+</body></html>

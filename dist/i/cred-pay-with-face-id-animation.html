@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Pay with Face ID Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Pay with Face ID Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-pay-with-face-id-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-pay-with-face-id-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-pay-with-face-id-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s Face ID activation - golden light rays sweep across the dark scanner backdrop while the Face ID glyph loops its scan brackets, then resolves to a green check inside the activation card.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69ee166280df8787f2df3fd9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69ee166280df8787f2df3fd9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-pay-with-face-id-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s Face ID activation - golden light rays sweep across the dark scanner backdrop while the Face ID glyph loops its scan brackets, then resolves to a green check inside the activation card.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED scan-pay screen, near-black: fine vertical line texture with diagonal golden light bands drifting across the top half; a dark rounded card holds the Face ID glyph, &quot;pay with a glance using Face ID&quot;, and a white &quot;Activate&quot; pill; a search field sits at the bottom.
+
+## Motion spec
+Pattern: ambient light-ray shimmer behind a glyph scan loop that resolves to a check.
+- Golden light bands sweep diagonally across the upper texture continuously (one pass ~3.5s, linear, slight intensity falloff), like light leaking through blinds.
+- The Face ID glyph animates: corner brackets draw in around the face (400ms), a scan line sweeps down the face (600ms), pause, repeat.
+- On activation, the brackets contract to the glyph&#x27;s center (250ms, ease-in), the glyph flips to a green check in a ring (scale 0.6 -&gt; 1, spring ~400/14), and the card&#x27;s border picks up a faint green tint.
+- The search field&#x27;s placeholder swaps from &quot;phone number&quot; to &quot;UPI ID&quot; with a 200ms vertical roll.
+
+## Calibration
+- The light is warm gold on near-black, never white - it should feel like scanning a laser, not a flash.
+- Rays stay behind the card; nothing in the card is lit by them.
+
+## Reduced motion
+Rays hold static at low intensity; glyph swaps bracket scan for a single draw-in; check fades in.
+
+## Don&#x27;t miss
+- The scan line inside the glyph runs at a different rhythm than the background rays - two independent loops.
+- The check ring is thin and green, not filled.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ambient light-ray shimmer behind a glyph scan loop that resolves to a check.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-pay-with-face-id-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's Face ID activation - golden light rays sweep across the dark scanner backdrop while the Face ID glyph loops its scan brackets, then resolves to a green check inside the activation card.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED scan-pay screen, near-black: fine vertical line texture with diagonal golden light bands drifting across the top half; a dark rounded card holds the Face ID glyph, \"pay with a glance using Face ID\", and a white \"Activate\" pill; a search field sits at the bottom.\n\n## Motion spec\nPattern: ambient light-ray shimmer behind a glyph scan loop that resolves to a check.\n- Golden light bands sweep diagonally across the upper texture continuously (one pass ~3.5s, linear, slight intensity falloff), like light leaking through blinds.\n- The Face ID glyph animates: corner brackets draw in around the face (400ms), a scan line sweeps down the face (600ms), pause, repeat.\n- On activation, the brackets contract to the glyph's center (250ms, ease-in), the glyph flips to a green check in a ring (scale 0.6 -> 1, spring ~400/14), and the card's border picks up a faint green tint.\n- The search field's placeholder swaps from \"phone number\" to \"UPI ID\" with a 200ms vertical roll.\n\n## Calibration\n- The light is warm gold on near-black, never white - it should feel like scanning a laser, not a flash.\n- Rays stay behind the card; nothing in the card is lit by them.\n\n## Reduced motion\nRays hold static at low intensity; glyph swaps bracket scan for a single draw-in; check fades in.\n\n## Don't miss\n- The scan line inside the glyph runs at a different rhythm than the background rays - two independent loops.\n- The check ring is thin and green, not filled."</script>
+</body></html>

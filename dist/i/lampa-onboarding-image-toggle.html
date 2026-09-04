@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lampa Onboarding Image Toggle - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Lampa Onboarding Image Toggle</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/lampa-onboarding-image-toggle"><b>Lampa</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lampa-onboarding-image-toggle">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/lampa-onboarding-image-toggle">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Lampa&#x27;s onboarding comparison - a pill toggle on the photo switches between the Lampa and Phone camera states, sliding the active label across as the image crossfades.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775733e78796e577ca46dc2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6775733e78796e577ca46dc2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-lampa-onboarding-image-toggle.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Lampa&#x27;s onboarding comparison - a pill toggle on the photo switches between the Lampa and Phone camera states, sliding the active label across as the image crossfades.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black onboarding screen: &quot;True-to-life optical image&quot; headline with subcopy, a large rounded photo card (a person seated on grass), a small pill toggle floating at the card&#x27;s top edge with &quot;Lampa&quot; and &quot;Phone camera&quot; labels, and a dot pager plus arrow button at the bottom.
+
+## Motion spec
+Pattern: sliding-pill toggle with image crossfade, ~500ms.
+- Tap the toggle (or swipe the card): the pill&#x27;s active backing slides from one label to the other (spring stiffness 340 damping 22), stretching slightly in transit.
+- Simultaneously the photo crossfades to the other camera&#x27;s render (350ms) - the Lampa side is graded and rich, the Phone camera side flatter and brighter.
+- The switch can also be driven by dragging across the photo: the crossfade tracks the drag fraction 1:1 and completes or springs back on release.
+- The toggle&#x27;s inactive label sits at 60% opacity; it animates to full as the backing arrives.
+- The headline and pager never move.
+
+## Calibration
+- The crossfade is blend-only - no slide or zoom on the photo, which would read as a carousel.
+- The pill&#x27;s stretch is subtle (scaleX to 1.15 max) and only while traveling.
+
+## Reduced motion
+Photo and pill state change with a simple fade.
+
+## Don&#x27;t miss
+- The toggle floats on the photo&#x27;s top edge, half-overlapping it - it belongs to the image, not the page header.
+- The two photos are the identical composition with different processing - the crossfade must align pixel-perfectly or the subject jumps.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sliding-pill toggle with image crossfade, ~500ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/lampa-onboarding-image-toggle">original interaction</a> by Lampa. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Lampa's onboarding comparison - a pill toggle on the photo switches between the Lampa and Phone camera states, sliding the active label across as the image crossfades.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack onboarding screen: \"True-to-life optical image\" headline with subcopy, a large rounded photo card (a person seated on grass), a small pill toggle floating at the card's top edge with \"Lampa\" and \"Phone camera\" labels, and a dot pager plus arrow button at the bottom.\n\n## Motion spec\nPattern: sliding-pill toggle with image crossfade, ~500ms.\n- Tap the toggle (or swipe the card): the pill's active backing slides from one label to the other (spring stiffness 340 damping 22), stretching slightly in transit.\n- Simultaneously the photo crossfades to the other camera's render (350ms) - the Lampa side is graded and rich, the Phone camera side flatter and brighter.\n- The switch can also be driven by dragging across the photo: the crossfade tracks the drag fraction 1:1 and completes or springs back on release.\n- The toggle's inactive label sits at 60% opacity; it animates to full as the backing arrives.\n- The headline and pager never move.\n\n## Calibration\n- The crossfade is blend-only - no slide or zoom on the photo, which would read as a carousel.\n- The pill's stretch is subtle (scaleX to 1.15 max) and only while traveling.\n\n## Reduced motion\nPhoto and pill state change with a simple fade.\n\n## Don't miss\n- The toggle floats on the photo's top edge, half-overlapping it - it belongs to the image, not the page header.\n- The two photos are the identical composition with different processing - the crossfade must align pixel-perfectly or the subject jumps."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CapWords Onboarding Capture Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CapWords Onboarding Capture Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/capwords-onboarding-capture-interaction"><b>Capwords</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/capwords-onboarding-capture-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/capwords-onboarding-capture-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CapWords&#x27; four-step onboarding - photo cutouts (burger, dog, ice cream, banana, traffic cone, city) assemble into a loose collage that rearranges as each step&#x27;s headline cycles (&quot;Capture Your World&quot;, &quot;Identify &amp; Extract&quot;, &quot;Connect Words to Memory&quot;, &quot;Build Your Personal Vocabulary&quot;), with word labels attaching to the cutouts in the memory step.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8866cb2a6516988e6d0b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67fe8866cb2a6516988e6d0b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-capwords-onboarding-capture-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CapWords&#x27; four-step onboarding - photo cutouts (burger, dog, ice cream, banana, traffic cone, city) assemble into a loose collage that rearranges as each step&#x27;s headline cycles (&quot;Capture Your World&quot;, &quot;Identify &amp; Extract&quot;, &quot;Connect Words to Memory&quot;, &quot;Build Your Personal Vocabulary&quot;), with word labels attaching to the cutouts in the memory step.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White onboarding screens with a back chevron and &quot;Tap to Continue&quot; at the bottom. Step 1: &quot;Capture Your World&quot; with photo cutouts scattered mid-screen. Step 2: &quot;Identify &amp; Extract&quot; - cutouts rearranged. Step 3: &quot;Connect Words to Memory&quot; - each cutout gains a label (New York City, Perro, Banana, Traffic Cone, Japanese words). Step 4: &quot;Build Your Personal Vocabulary&quot; - a two-column grid of labeled cutouts.
+
+## Motion spec
+Pattern: step-cycled collage with morphing cutout layout and staggered labels.
+- Step entry: cutouts fly in from off-screen edges (translate 80pt -&gt; rest, spring ~280/18, 60ms stagger) at slight random rotations (+/-6deg).
+- Step transition: headline crossfades (250ms) while the cutouts travel to their new layout positions (400ms ease-in-out, each on its own slight arc).
+- Step 3: labels pop in under each cutout (scale 0.6 -&gt; 1, spring ~320/16, 80ms stagger) in mixed languages.
+- Step 4: the collage snaps into the tidy grid (350ms ease-in-out), rotations settling to 0.
+- &quot;Tap to Continue&quot; pulses softly (opacity 0.6 -&gt; 1, 1.5s) throughout.
+
+## Calibration
+- Cutouts are paper-like photos with white borders and drop shadows - they should feel placed, not rendered.
+- Each transition keeps at least two cutouts on screen the whole time - continuity matters.
+
+## Reduced motion
+Steps crossfade; cutouts appear in their new layout without travel.
+
+## Don&#x27;t miss
+- Labels include non-English words - the multilingual mix is the product&#x27;s point.
+- The final grid is orderly after the playful scatter - a clear before/after.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">step-cycled collage with morphing cutout layout and staggered labels.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/capwords-onboarding-capture-interaction">original interaction</a> by Capwords. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CapWords' four-step onboarding - photo cutouts (burger, dog, ice cream, banana, traffic cone, city) assemble into a loose collage that rearranges as each step's headline cycles (\"Capture Your World\", \"Identify & Extract\", \"Connect Words to Memory\", \"Build Your Personal Vocabulary\"), with word labels attaching to the cutouts in the memory step.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite onboarding screens with a back chevron and \"Tap to Continue\" at the bottom. Step 1: \"Capture Your World\" with photo cutouts scattered mid-screen. Step 2: \"Identify & Extract\" - cutouts rearranged. Step 3: \"Connect Words to Memory\" - each cutout gains a label (New York City, Perro, Banana, Traffic Cone, Japanese words). Step 4: \"Build Your Personal Vocabulary\" - a two-column grid of labeled cutouts.\n\n## Motion spec\nPattern: step-cycled collage with morphing cutout layout and staggered labels.\n- Step entry: cutouts fly in from off-screen edges (translate 80pt -> rest, spring ~280/18, 60ms stagger) at slight random rotations (+/-6deg).\n- Step transition: headline crossfades (250ms) while the cutouts travel to their new layout positions (400ms ease-in-out, each on its own slight arc).\n- Step 3: labels pop in under each cutout (scale 0.6 -> 1, spring ~320/16, 80ms stagger) in mixed languages.\n- Step 4: the collage snaps into the tidy grid (350ms ease-in-out), rotations settling to 0.\n- \"Tap to Continue\" pulses softly (opacity 0.6 -> 1, 1.5s) throughout.\n\n## Calibration\n- Cutouts are paper-like photos with white borders and drop shadows - they should feel placed, not rendered.\n- Each transition keeps at least two cutouts on screen the whole time - continuity matters.\n\n## Reduced motion\nSteps crossfade; cutouts appear in their new layout without travel.\n\n## Don't miss\n- Labels include non-English words - the multilingual mix is the product's point.\n- The final grid is orderly after the playful scatter - a clear before/after."</script>
+</body></html>

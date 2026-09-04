@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flipboard Page Flip Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flipboard Page Flip Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flipboard-page-flip-interaction"><b>Flipboard</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flipboard-page-flip-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flipboard-page-flip-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Flipboard&#x27;s page flip - a horizontal drag curls the article card over its horizontal midline like a magazine page, revealing the next story underneath, with a springy settle on release.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678e3c2b961c534fdba93088/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678e3c2b961c534fdba93088/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flipboard-page-flip-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Flipboard&#x27;s page flip - a horizontal drag curls the article card over its horizontal midline like a magazine page, revealing the next story underneath, with a springy settle on release.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Article feed: a full-bleed story card (hero image, headline, source row) above a &quot;FOR YOU&quot; tab bar. Beneath the top card lives the next story, exposed as the flip proceeds.
+
+## Motion spec
+Pattern: skeuomorphic page flip, drag + settle.
+- A vertical drag rotates the card&#x27;s top half around the horizontal center axis, tracked 1:1 to the finger: the panel tips back in 3D (0 to 180deg), its face shading as it turns away.
+- Past the midline, the card&#x27;s back face (a dimmed mirrored tint) shows; the next story sits statically underneath from the start.
+- Release past ~45deg (or with flick velocity) flips the page over with a spring (stiffness 200 damping 20) and the next story becomes the new top card; releasing early springs the page back flat.
+- The tab bar and status bar never move.
+
+## Calibration
+- The fold stays perfectly horizontal at mid-height - a drifting fold line breaks the magazine illusion.
+- Shading follows the rotation angle: the face darkens as it turns, the back brightens as it lands.
+
+## Reduced motion
+Stories crossfade on swipe, no 3D fold.
+
+## Don&#x27;t miss
+- The underside is a muted mirror of the front, not blank white.
+- The spring finish has a small settle wobble (+-2deg) - the paper coming to rest is the signature.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">skeuomorphic page flip, drag + settle.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flipboard-page-flip-interaction">original interaction</a> by Flipboard. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Flipboard's page flip - a horizontal drag curls the article card over its horizontal midline like a magazine page, revealing the next story underneath, with a springy settle on release.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nArticle feed: a full-bleed story card (hero image, headline, source row) above a \"FOR YOU\" tab bar. Beneath the top card lives the next story, exposed as the flip proceeds.\n\n## Motion spec\nPattern: skeuomorphic page flip, drag + settle.\n- A vertical drag rotates the card's top half around the horizontal center axis, tracked 1:1 to the finger: the panel tips back in 3D (0 to 180deg), its face shading as it turns away.\n- Past the midline, the card's back face (a dimmed mirrored tint) shows; the next story sits statically underneath from the start.\n- Release past ~45deg (or with flick velocity) flips the page over with a spring (stiffness 200 damping 20) and the next story becomes the new top card; releasing early springs the page back flat.\n- The tab bar and status bar never move.\n\n## Calibration\n- The fold stays perfectly horizontal at mid-height - a drifting fold line breaks the magazine illusion.\n- Shading follows the rotation angle: the face darkens as it turns, the back brightens as it lands.\n\n## Reduced motion\nStories crossfade on swipe, no 3D fold.\n\n## Don't miss\n- The underside is a muted mirror of the front, not blank white.\n- The spring finish has a small settle wobble (+-2deg) - the paper coming to rest is the signature."</script>
+</body></html>

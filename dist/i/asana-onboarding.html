@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asana Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Asana Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/asana-onboarding"><b>Asana</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/asana-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/asana-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Asana&#x27;s mobile onboarding carousel - playful slides (&quot;Get organized&quot;, &quot;Stay on top of your work&quot;, &quot;Visit web to do even more&quot;) where a phone mockup shows app screens, a unicorn swoops through, list rows stagger in, and the phone morphs into a wide desktop window for the web slide, with Sign up / Log in pinned below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38ff953c6551dedd751de/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c38ff953c6551dedd751de/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-asana-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Asana&#x27;s mobile onboarding carousel - playful slides (&quot;Get organized&quot;, &quot;Stay on top of your work&quot;, &quot;Visit web to do even more&quot;) where a phone mockup shows app screens, a unicorn swoops through, list rows stagger in, and the phone morphs into a wide desktop window for the web slide, with Sign up / Log in pinned below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light gray backdrop with flat color shapes (blue circle, yellow rectangles, green check). Center: a phone mockup displaying Asana UI. Headline above, page dots, and two stacked buttons (purple Sign up, outlined Log in) fixed at bottom. Final slide: the device is a wide desktop browser window showing boards.
+
+## Motion spec
+Pattern: carousel with device-morph finale.
+- Slide change (auto ~4s or swipe): the current device slides out left with a slight rotate (-4deg) while the next slides in (spring ~320/22); headline crossfades 100ms into the move; page dot stretches to the active position (width spring ~380/20).
+- Slide 2: the unicorn swoops across the phone&#x27;s screen (1.2s arc, rainbow trail fading behind it), then list rows stagger into the mockup (fade + 14px, 40ms apart).
+- Slide 3: the phone&#x27;s frame expands horizontally - corners, bezels, and screen all stretching (spring ~300/20, 600ms) - into a desktop browser window, the mobile UI reflowing into the web layout live during the morph; a cursor dot appears and clicks a card (dip 120ms).
+- Buttons stay pinned through every slide - only the stage above them performs.
+
+## Calibration
+- The device morph is the signature: same content, new form factor, one continuous reshape.
+- Auto-advance pauses on touch and resumes after 3s idle.
+
+## Reduced motion
+Slides crossfade; device swap is a fade, not a morph.
+
+## Don&#x27;t miss
+- The morph carries the content WITH it - no cut to a pre-rendered desktop image.
+- Color shapes in the backdrop drift a few px per slide - parallax keeps the gray alive.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">carousel with device-morph finale.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/asana-onboarding">original interaction</a> by Asana. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Asana's mobile onboarding carousel - playful slides (\"Get organized\", \"Stay on top of your work\", \"Visit web to do even more\") where a phone mockup shows app screens, a unicorn swoops through, list rows stagger in, and the phone morphs into a wide desktop window for the web slide, with Sign up / Log in pinned below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight gray backdrop with flat color shapes (blue circle, yellow rectangles, green check). Center: a phone mockup displaying Asana UI. Headline above, page dots, and two stacked buttons (purple Sign up, outlined Log in) fixed at bottom. Final slide: the device is a wide desktop browser window showing boards.\n\n## Motion spec\nPattern: carousel with device-morph finale.\n- Slide change (auto ~4s or swipe): the current device slides out left with a slight rotate (-4deg) while the next slides in (spring ~320/22); headline crossfades 100ms into the move; page dot stretches to the active position (width spring ~380/20).\n- Slide 2: the unicorn swoops across the phone's screen (1.2s arc, rainbow trail fading behind it), then list rows stagger into the mockup (fade + 14px, 40ms apart).\n- Slide 3: the phone's frame expands horizontally - corners, bezels, and screen all stretching (spring ~300/20, 600ms) - into a desktop browser window, the mobile UI reflowing into the web layout live during the morph; a cursor dot appears and clicks a card (dip 120ms).\n- Buttons stay pinned through every slide - only the stage above them performs.\n\n## Calibration\n- The device morph is the signature: same content, new form factor, one continuous reshape.\n- Auto-advance pauses on touch and resumes after 3s idle.\n\n## Reduced motion\nSlides crossfade; device swap is a fade, not a morph.\n\n## Don't miss\n- The morph carries the content WITH it - no cut to a pre-rendered desktop image.\n- Color shapes in the backdrop drift a few px per slide - parallax keeps the gray alive."</script>
+</body></html>

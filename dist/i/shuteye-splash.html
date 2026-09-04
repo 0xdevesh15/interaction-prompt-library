@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShutEye Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>ShutEye Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/shuteye-splash"><b>Shuteye</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuteye-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/shuteye-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: ShutEye&#x27;s splash sequence - a starfield fades up, &quot;Welcome to ShutEye&quot; and &quot;#1 Sleep App for everyone&quot; crossfade through, a laurel 4.8-rating badge glows in, and a sunlit Earth rises from the bottom under the stats and CTA.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc388fb87dca19b4d0b5c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676bc388fb87dca19b4d0b5c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-shuteye-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: ShutEye&#x27;s splash sequence - a starfield fades up, &quot;Welcome to ShutEye&quot; and &quot;#1 Sleep App for everyone&quot; crossfade through, a laurel 4.8-rating badge glows in, and a sunlit Earth rises from the bottom under the stats and CTA.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A near-black starfield. Text beats play in sequence: &quot;Welcome to ShutEye&quot;, then &quot;#1 Sleep App for everyone&quot; with an &quot;App Store, 2023&quot; style sub-line, then a laurel-wreath badge &quot;4.8 High-Rated App 2024&quot; with a glowing horizon rising below it, then stat laurels (&quot;1 Billion+ nights tracked&quot;, &quot;10 Million users&#x27; choices&quot;), the line &quot;It&#x27;s time to upgrade your sleep!&quot;, and a glowing Earth cresting the bottom edge with a blue button.
+
+## Motion spec
+Pattern: timed splash sequence, ~6s.
+- Stars twinkle in over 1s (scattered opacity pulses), then hold as the constant backdrop.
+- &quot;Welcome to ShutEye&quot; fades up and out (600ms in, 800ms hold, 400ms out); &quot;#1 Sleep App for everyone&quot; crossfades into its place with the same timing.
+- The laurel badge scales in (0.85 to 1, 400ms, ease-out) with a warm glow bloom behind it while a bright horizon line rises from the bottom (800ms, ease-in-out).
+- The stat laurels replace the badge with a crossfade (400ms), the tagline fading up beneath them.
+- Earth rises into frame (1s, ease-out), its day-night glow settling, and the blue button pops in (scale 0.8 to 1, spring stiffness 380 damping 18).
+
+## Calibration
+- One element on stage at a time until the final composition - this is a sequence, not a pile-up.
+- The horizon glow precedes the Earth; the planet should feel expected when it arrives.
+
+## Reduced motion
+Skip to the final composition, fading in once.
+
+## Don&#x27;t miss
+- The starfield never moves - only fades and twinkles.
+- The Earth&#x27;s glow spills slightly over the button zone, unifying the final frame.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">timed splash sequence, ~6s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/shuteye-splash">original interaction</a> by Shuteye. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: ShutEye's splash sequence - a starfield fades up, \"Welcome to ShutEye\" and \"#1 Sleep App for everyone\" crossfade through, a laurel 4.8-rating badge glows in, and a sunlit Earth rises from the bottom under the stats and CTA.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA near-black starfield. Text beats play in sequence: \"Welcome to ShutEye\", then \"#1 Sleep App for everyone\" with an \"App Store, 2023\" style sub-line, then a laurel-wreath badge \"4.8 High-Rated App 2024\" with a glowing horizon rising below it, then stat laurels (\"1 Billion+ nights tracked\", \"10 Million users' choices\"), the line \"It's time to upgrade your sleep!\", and a glowing Earth cresting the bottom edge with a blue button.\n\n## Motion spec\nPattern: timed splash sequence, ~6s.\n- Stars twinkle in over 1s (scattered opacity pulses), then hold as the constant backdrop.\n- \"Welcome to ShutEye\" fades up and out (600ms in, 800ms hold, 400ms out); \"#1 Sleep App for everyone\" crossfades into its place with the same timing.\n- The laurel badge scales in (0.85 to 1, 400ms, ease-out) with a warm glow bloom behind it while a bright horizon line rises from the bottom (800ms, ease-in-out).\n- The stat laurels replace the badge with a crossfade (400ms), the tagline fading up beneath them.\n- Earth rises into frame (1s, ease-out), its day-night glow settling, and the blue button pops in (scale 0.8 to 1, spring stiffness 380 damping 18).\n\n## Calibration\n- One element on stage at a time until the final composition - this is a sequence, not a pile-up.\n- The horizon glow precedes the Earth; the planet should feel expected when it arrives.\n\n## Reduced motion\nSkip to the final composition, fading in once.\n\n## Don't miss\n- The starfield never moves - only fades and twinkles.\n- The Earth's glow spills slightly over the button zone, unifying the final frame."</script>
+</body></html>

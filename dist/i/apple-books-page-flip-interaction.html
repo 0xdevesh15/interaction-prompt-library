@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Books Page Flip Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Books Page Flip Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-books-page-flip-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-books-page-flip-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-books-page-flip-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Books&#x27; page-flip - a skeuomorphic 3D page curl that tracks a horizontal drag across a two-page spread, the turning page lifting at the spine, curling with a soft shadow, and settling onto the opposite side.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509738948718dd94147dbb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509738948718dd94147dbb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-books-page-flip-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Books&#x27; page-flip - a skeuomorphic 3D page curl that tracks a horizontal drag across a two-page spread, the turning page lifting at the spine, curling with a soft shadow, and settling onto the opposite side.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark reading view showing a book spread: sepia-toned page with two justified text columns (book text, chapter header &quot;Book II - The Sound and the Fury&quot; style). The page has a subtle paper gradient, a center-spine shadow, and small page furniture (header/title at top).
+
+## Motion spec
+Pattern: gesture-driven 3D page curl.
+- Drag from the right edge grabs the page corner; the page rotates around the vertical spine axis 1:1 with the finger (rotateY 0 -&gt; -180deg mapped across the drag width).
+- The lifting page curls: the free edge leads, the paper bends with a gradient shading (highlight on the curl&#x27;s crown, shadow beneath it), and the page&#x27;s back face shows the next page&#x27;s content mirrored-dimmed.
+- A soft drop shadow from the turning page sweeps across the static page underneath, tracking the curl position.
+- Release past ~40% completes the flip (spring ~200/20, ~300ms); before 40% it springs back to flat.
+- The newly revealed spread settles with the spine shadow re-centering.
+
+## Calibration
+- The curl is position-driven, never time-driven - the finger owns the page until release.
+- Shadow and shading move with the geometry; a static shadow under a moving page breaks the illusion.
+
+## Reduced motion
+Instant crossfade between spreads (150ms) on tap/swipe, no curl.
+
+## Don&#x27;t miss
+- The turning page&#x27;s back face shows real content (the following page), not a blank or solid color.
+- The spine shadow is always present, even at rest - it is part of the spread, not the animation.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gesture-driven 3D page curl.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-books-page-flip-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Books' page-flip - a skeuomorphic 3D page curl that tracks a horizontal drag across a two-page spread, the turning page lifting at the spine, curling with a soft shadow, and settling onto the opposite side.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark reading view showing a book spread: sepia-toned page with two justified text columns (book text, chapter header \"Book II - The Sound and the Fury\" style). The page has a subtle paper gradient, a center-spine shadow, and small page furniture (header/title at top).\n\n## Motion spec\nPattern: gesture-driven 3D page curl.\n- Drag from the right edge grabs the page corner; the page rotates around the vertical spine axis 1:1 with the finger (rotateY 0 -> -180deg mapped across the drag width).\n- The lifting page curls: the free edge leads, the paper bends with a gradient shading (highlight on the curl's crown, shadow beneath it), and the page's back face shows the next page's content mirrored-dimmed.\n- A soft drop shadow from the turning page sweeps across the static page underneath, tracking the curl position.\n- Release past ~40% completes the flip (spring ~200/20, ~300ms); before 40% it springs back to flat.\n- The newly revealed spread settles with the spine shadow re-centering.\n\n## Calibration\n- The curl is position-driven, never time-driven - the finger owns the page until release.\n- Shadow and shading move with the geometry; a static shadow under a moving page breaks the illusion.\n\n## Reduced motion\nInstant crossfade between spreads (150ms) on tap/swipe, no curl.\n\n## Don't miss\n- The turning page's back face shows real content (the following page), not a blank or solid color.\n- The spine shadow is always present, even at rest - it is part of the spread, not the animation."</script>
+</body></html>

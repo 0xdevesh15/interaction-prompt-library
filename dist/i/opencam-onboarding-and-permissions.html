@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenCam Onboarding and Permissions - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>OpenCam Onboarding and Permissions</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opencam-onboarding-and-permissions"><b>Opencam</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opencam-onboarding-and-permissions">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opencam-onboarding-and-permissions">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this flow 1:1: OpenCam&#x27;s onboarding - swipe-up feature pages with a live video comparison and dial demos, ending in a sequential permission-granting screen where each access row unlocks in turn.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313c90e3615485c3fbbd6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313c90e3615485c3fbbd6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opencam-onboarding-and-permissions.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this flow 1:1: OpenCam&#x27;s onboarding - swipe-up feature pages with a live video comparison and dial demos, ending in a sequential permission-granting screen where each access row unlocks in turn.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark onboarding over black: page 1 &quot;Capture the full scene&quot; with a landscape video and a Default/OpenCam aspect toggle; page 2 &quot;Pro-level controls, designed for everyone&quot; with the control-dial pods and &quot;Double-tap any dial to reset it&quot;; page 3 &quot;Instant access from your lock screen&quot; with a cyan lock-screen widget mock and a Continue button; page 4 &quot;OpenCam needs access to these permissions&quot; listing Camera, Microphone, and Photos Library rows (icon, name, one-line reason, Continue button each) above a &quot;Please Grant Permissions&quot; bar. Every page carries a &quot;Swipe up to continue&quot; hint with a chevron.
+
+## Motion spec
+Pattern: swipe-up paged onboarding with interactive demos and sequential permissions.
+- Swipe up advances pages: current page slides up and fades, next rises (spring ~300/22); the hint chevron bobs (translateY 0 -&gt; -6pt, 1.4s loop).
+- Page 1: the comparison video crossfades between Default (cropped) and OpenCam (full scene) on toggle tap (300ms), the toggle pill sliding its indicator (spring ~320/20).
+- Page 2: dial pods stagger in (40ms apart, spring ~320/18); double-tapping a pod resets its value: the dial spins back to center (spring ~280/16) with the readout ticking through intermediate values.
+- Page 4: permission rows enter dimmed (40% opacity); the top row brightens and its Continue pulses (scale 1 -&gt; 1.04, 1.6s loop); tapping presents the system alert (scale 0.9 -&gt; 1 spring ~340/18 with scrim fade 200ms); on grant the row&#x27;s button swaps to a checkmark (crossfade 150ms), the row dims to done-state, and the next row activates (250ms stagger).
+- &quot;Please Grant Permissions&quot; stays disabled (30% opacity) until all rows are done, then lights up with a single glow pulse.
+
+## Calibration
+- Only one permission row is actionable at a time - order is enforced visually.
+- Page transitions are gesture-driven 1:1 while dragging, spring-completed on release.
+
+## Reduced motion
+Pages crossfade (250ms); the comparison toggle crossfades; no chevron bob.
+
+## Don&#x27;t miss
+- The video comparison is the hook: it must play inline, not as a static frame.
+- Keep the orange accent consistent: record dot, active toggles, granted checkmarks.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-up paged onboarding with interactive demos and sequential permissions.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opencam-onboarding-and-permissions">original interaction</a> by Opencam. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this flow 1:1: OpenCam's onboarding - swipe-up feature pages with a live video comparison and dial demos, ending in a sequential permission-granting screen where each access row unlocks in turn.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark onboarding over black: page 1 \"Capture the full scene\" with a landscape video and a Default/OpenCam aspect toggle; page 2 \"Pro-level controls, designed for everyone\" with the control-dial pods and \"Double-tap any dial to reset it\"; page 3 \"Instant access from your lock screen\" with a cyan lock-screen widget mock and a Continue button; page 4 \"OpenCam needs access to these permissions\" listing Camera, Microphone, and Photos Library rows (icon, name, one-line reason, Continue button each) above a \"Please Grant Permissions\" bar. Every page carries a \"Swipe up to continue\" hint with a chevron.\n\n## Motion spec\nPattern: swipe-up paged onboarding with interactive demos and sequential permissions.\n- Swipe up advances pages: current page slides up and fades, next rises (spring ~300/22); the hint chevron bobs (translateY 0 -> -6pt, 1.4s loop).\n- Page 1: the comparison video crossfades between Default (cropped) and OpenCam (full scene) on toggle tap (300ms), the toggle pill sliding its indicator (spring ~320/20).\n- Page 2: dial pods stagger in (40ms apart, spring ~320/18); double-tapping a pod resets its value: the dial spins back to center (spring ~280/16) with the readout ticking through intermediate values.\n- Page 4: permission rows enter dimmed (40% opacity); the top row brightens and its Continue pulses (scale 1 -> 1.04, 1.6s loop); tapping presents the system alert (scale 0.9 -> 1 spring ~340/18 with scrim fade 200ms); on grant the row's button swaps to a checkmark (crossfade 150ms), the row dims to done-state, and the next row activates (250ms stagger).\n- \"Please Grant Permissions\" stays disabled (30% opacity) until all rows are done, then lights up with a single glow pulse.\n\n## Calibration\n- Only one permission row is actionable at a time - order is enforced visually.\n- Page transitions are gesture-driven 1:1 while dragging, spring-completed on release.\n\n## Reduced motion\nPages crossfade (250ms); the comparison toggle crossfades; no chevron bob.\n\n## Don't miss\n- The video comparison is the hook: it must play inline, not as a static frame.\n- Keep the orange accent consistent: record dot, active toggles, granted checkmarks."</script>
+</body></html>

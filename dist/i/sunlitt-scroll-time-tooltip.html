@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunlitt Scroll Time Tooltip - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sunlitt Scroll Time Tooltip</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sunlitt-scroll-time-tooltip"><b>Sunlitt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sunlitt-scroll-time-tooltip">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sunlitt-scroll-time-tooltip">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Sunlitt&#x27;s time scrubber - dragging a vertical slider rotates the sun around the 3D monolith while the whole background transitions through the colors of the day, a time tooltip tracking the sun.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5a277371d29849d81f2b3/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5a277371d29849d81f2b3/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sunlitt-scroll-time-tooltip.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Sunlitt&#x27;s time scrubber - dragging a vertical slider rotates the sun around the 3D monolith while the whole background transitions through the colors of the day, a time tooltip tracking the sun.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A 3D monolith center-screen with a sun dot on its orbit arc and a tooltip chip showing the time (&quot;06:09 AM&quot;, &quot;06:43 PM&quot;). The background is the sky: yellow midday, pale morning, orange sunset, deep navy night, purple dusk. Bottom toast carries the onboarding copy. A vertical slider sits at the screen edge.
+
+## Motion spec
+Pattern: scrub-driven sun path with sky color grading.
+- Drag the slider (or scrub vertically anywhere): the sun dot travels its orbit 1:1 with the drag - bottom of slider is night, top is noon.
+- The background crossfades continuously through the sky palette keyed to sun altitude: navy (night) to pale blue (morning) to saturated yellow (midday) to orange (sunset) to purple (dusk) - an interpolated gradient, never stepped.
+- The tooltip chip rides beside the sun dot, updating its time text live; it flips side when near screen edges.
+- The monolith&#x27;s shadow sweeps and lengthens with sun position in real time.
+- Release: the sun holds its scrubbed position (no snap); the scene settles with a 200ms ease on any residual velocity.
+
+## Calibration
+- Color interpolation must be smooth per-frame - banding between sky states breaks the illusion.
+- Night states dim the monolith to a silhouette; keep it visible, not black-on-black.
+
+## Reduced motion
+Sun moves with the drag; sky changes via discrete fades at scene boundaries.
+
+## Don&#x27;t miss
+- The tooltip is anchored to the sun, not the slider thumb - the sun is the object of truth.
+- The sun dips below the &quot;horizon&quot; at night rather than clamping at the edge.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scrub-driven sun path with sky color grading.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sunlitt-scroll-time-tooltip">original interaction</a> by Sunlitt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Sunlitt's time scrubber - dragging a vertical slider rotates the sun around the 3D monolith while the whole background transitions through the colors of the day, a time tooltip tracking the sun.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA 3D monolith center-screen with a sun dot on its orbit arc and a tooltip chip showing the time (\"06:09 AM\", \"06:43 PM\"). The background is the sky: yellow midday, pale morning, orange sunset, deep navy night, purple dusk. Bottom toast carries the onboarding copy. A vertical slider sits at the screen edge.\n\n## Motion spec\nPattern: scrub-driven sun path with sky color grading.\n- Drag the slider (or scrub vertically anywhere): the sun dot travels its orbit 1:1 with the drag - bottom of slider is night, top is noon.\n- The background crossfades continuously through the sky palette keyed to sun altitude: navy (night) to pale blue (morning) to saturated yellow (midday) to orange (sunset) to purple (dusk) - an interpolated gradient, never stepped.\n- The tooltip chip rides beside the sun dot, updating its time text live; it flips side when near screen edges.\n- The monolith's shadow sweeps and lengthens with sun position in real time.\n- Release: the sun holds its scrubbed position (no snap); the scene settles with a 200ms ease on any residual velocity.\n\n## Calibration\n- Color interpolation must be smooth per-frame - banding between sky states breaks the illusion.\n- Night states dim the monolith to a silhouette; keep it visible, not black-on-black.\n\n## Reduced motion\nSun moves with the drag; sky changes via discrete fades at scene boundaries.\n\n## Don't miss\n- The tooltip is anchored to the sun, not the slider thumb - the sun is the object of truth.\n- The sun dips below the \"horizon\" at night rather than clamping at the edge."</script>
+</body></html>

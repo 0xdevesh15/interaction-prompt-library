@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WallpaperZ 3D Circular Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>WallpaperZ 3D Circular Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/wallpaperz-3d-circular-slider-interaction"><b>Wallpaperz</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wallpaperz-3d-circular-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wallpaperz-3d-circular-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: WallpaperZ&#x27;s 3D circular slider - wallpaper cards ride a horizontal 3D carousel (center card faces you, neighbors rotate away in perspective), scrubbed by a tick-mark dial, snapping to each card with a spring.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554fab61e82eeb215884/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/670e554fab61e82eeb215884/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-wallpaperz-3d-circular-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: WallpaperZ&#x27;s 3D circular slider - wallpaper cards ride a horizontal 3D carousel (center card faces you, neighbors rotate away in perspective), scrubbed by a tick-mark dial, snapping to each card with a spring.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark browsing screen: month label above (&quot;Oct 2024&quot; / &quot;Sep 2024&quot;), the carousel center-stage (center wallpaper card upright with a lock icon top-right; flanking cards rotated ~45deg and receding in perspective, edges curving away), a row of vertical dial ticks under the carousel with a position marker, and a red bottom bar (home, search, heart). The focused card shows its title (&quot;Autumn Aura&quot;) and author (&quot;Zahra Vosi&quot;).
+
+## Motion spec
+Pattern: coverflow carousel + dial scrubber.
+- Drag horizontally (on the cards or the dial): the carousel rotates 1:1 - cards swing around the cylinder, the center card rotating away as the neighbor rotates in; side cards dim and shrink slightly with depth.
+- The tick dial scrolls in sync, ticks passing the center marker (a slightly longer highlighted tick).
+- Release: the carousel snaps to the nearest card (spring ~380/22, 300ms) with haptic-style tick feedback as positions pass.
+- On settle: the month label crossfades if the period changed, and the focused card&#x27;s title/author fade up over its bottom (200ms).
+- Fling carries momentum across multiple cards before snapping.
+
+## Calibration
+- Rotation angle per card ~45deg with strong perspective (~900px) - side cards must read as curved away, not flat.
+- The dial and carousel are the same value - never desync them.
+
+## Reduced motion
+Cards crossfade between positions; dial steps without scrolling.
+
+## Don&#x27;t miss
+- The lock icon on locked wallpapers rides the card through the rotation.
+- Edge cards clip at the screen bounds - the cylinder implies more content offscreen.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">coverflow carousel + dial scrubber.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/wallpaperz-3d-circular-slider-interaction">original interaction</a> by Wallpaperz. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: WallpaperZ's 3D circular slider - wallpaper cards ride a horizontal 3D carousel (center card faces you, neighbors rotate away in perspective), scrubbed by a tick-mark dial, snapping to each card with a spring.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark browsing screen: month label above (\"Oct 2024\" / \"Sep 2024\"), the carousel center-stage (center wallpaper card upright with a lock icon top-right; flanking cards rotated ~45deg and receding in perspective, edges curving away), a row of vertical dial ticks under the carousel with a position marker, and a red bottom bar (home, search, heart). The focused card shows its title (\"Autumn Aura\") and author (\"Zahra Vosi\").\n\n## Motion spec\nPattern: coverflow carousel + dial scrubber.\n- Drag horizontally (on the cards or the dial): the carousel rotates 1:1 - cards swing around the cylinder, the center card rotating away as the neighbor rotates in; side cards dim and shrink slightly with depth.\n- The tick dial scrolls in sync, ticks passing the center marker (a slightly longer highlighted tick).\n- Release: the carousel snaps to the nearest card (spring ~380/22, 300ms) with haptic-style tick feedback as positions pass.\n- On settle: the month label crossfades if the period changed, and the focused card's title/author fade up over its bottom (200ms).\n- Fling carries momentum across multiple cards before snapping.\n\n## Calibration\n- Rotation angle per card ~45deg with strong perspective (~900px) - side cards must read as curved away, not flat.\n- The dial and carousel are the same value - never desync them.\n\n## Reduced motion\nCards crossfade between positions; dial steps without scrolling.\n\n## Don't miss\n- The lock icon on locked wallpapers rides the card through the rotation.\n- Edge cards clip at the screen bounds - the cylinder implies more content offscreen."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Daily Quest Complete Trail Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Daily Quest Complete Trail Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-daily-quest-complete-trail-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-daily-quest-complete-trail-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-daily-quest-complete-trail-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s Daily Quest reward trail - the quest card&#x27;s progress bar fills, then a stream of blue gems arcs out of the chest icon and flies up to the gem counter in the top-right, which ticks up as they land.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6719d4c1c180cd70acd5c23b/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6719d4c1c180cd70acd5c23b/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-daily-quest-complete-trail-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s Daily Quest reward trail - the quest card&#x27;s progress bar fills, then a stream of blue gems arcs out of the chest icon and flies up to the gem counter in the top-right, which ticks up as they land.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen: &quot;Daily Quest complete!&quot; headline over a quest card (purple badge icon, &quot;Complete your next 1 lesson&quot;, progress bar &quot;1/1&quot;, chest icon at the right end). A gem counter sits top-right in the status bar area.
+
+## Motion spec
+Pattern: currency fly-to-counter trail.
+- The progress bar fills left to right (600ms, ease-out) with a yellow glow at its leading edge.
+- On fill, the chest icon pops (scale 1 -&gt; 1.3 -&gt; 1, 250ms) and emits gems one by one (~90ms apart, ~7 gems).
+- Each gem flies along an arched path (up and right, slight parabolic curve, ~700ms) from the chest to the top-right counter, shrinking (1 -&gt; 0.6) as it travels; paths vary slightly per gem (~20px jitter).
+- Each landing ticks the counter (+1 per gem, rolling digits, ~100ms) with a tiny scale pop on the counter icon.
+
+## Calibration
+- Gems are the standard blue Duolingo gem shape; they fade out on landing, not on launch.
+- The trail overlaps - multiple gems are in flight at once, forming a visible stream.
+
+## Reduced motion
+Bar fills, then the counter steps to the new total with a fade; no flying gems.
+
+## Don&#x27;t miss
+- The arc goes from bottom-center card to top-right - a long diagonal across the screen.
+- The counter&#x27;s final value equals the starting value plus exactly the gems shown flying.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">currency fly-to-counter trail.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-daily-quest-complete-trail-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's Daily Quest reward trail - the quest card's progress bar fills, then a stream of blue gems arcs out of the chest icon and flies up to the gem counter in the top-right, which ticks up as they land.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen: \"Daily Quest complete!\" headline over a quest card (purple badge icon, \"Complete your next 1 lesson\", progress bar \"1/1\", chest icon at the right end). A gem counter sits top-right in the status bar area.\n\n## Motion spec\nPattern: currency fly-to-counter trail.\n- The progress bar fills left to right (600ms, ease-out) with a yellow glow at its leading edge.\n- On fill, the chest icon pops (scale 1 -> 1.3 -> 1, 250ms) and emits gems one by one (~90ms apart, ~7 gems).\n- Each gem flies along an arched path (up and right, slight parabolic curve, ~700ms) from the chest to the top-right counter, shrinking (1 -> 0.6) as it travels; paths vary slightly per gem (~20px jitter).\n- Each landing ticks the counter (+1 per gem, rolling digits, ~100ms) with a tiny scale pop on the counter icon.\n\n## Calibration\n- Gems are the standard blue Duolingo gem shape; they fade out on landing, not on launch.\n- The trail overlaps - multiple gems are in flight at once, forming a visible stream.\n\n## Reduced motion\nBar fills, then the counter steps to the new total with a fade; no flying gems.\n\n## Don't miss\n- The arc goes from bottom-center card to top-right - a long diagonal across the screen.\n- The counter's final value equals the starting value plus exactly the gems shown flying."</script>
+</body></html>

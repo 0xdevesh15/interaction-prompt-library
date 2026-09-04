@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waterllama Add Water Picker to Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Waterllama Add Water Picker to Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/waterllama-add-water-picker-to-slider"><b>Waterllama</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waterllama-add-water-picker-to-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/waterllama-add-water-picker-to-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Waterllama&#x27;s amount picker - scroll the horizontal value strip and the container illustration morphs between vessels (glass, bottle, jug) while its teal liquid level tracks the amount.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7af23490d9b41ee5705b0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b7af23490d9b41ee5705b0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-waterllama-add-water-picker-to-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Waterllama&#x27;s amount picker - scroll the horizontal value strip and the container illustration morphs between vessels (glass, bottle, jug) while its teal liquid level tracks the amount.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white screen: a large outlined vessel at center (small glass, tall bottle, wide cup) filled with teal liquid, the amount below it (&quot;250ml&quot;), flanked by dimmed neighbor values peeking at the edges (&quot;100ml&quot;, &quot;2000ml&quot;). A teal &quot;+ WATER&quot; pill sits beneath.
+
+## Motion spec
+Pattern: value-scrubbed vessel morph.
+- Horizontal drag: values scrub continuously (the strip moves 1:1), neighbor amounts sliding through the center spotlight; the centered value is large and black, neighbors small and gray (scale + opacity tween by distance from center).
+- The vessel morphs with the value: crossing preset boundaries crossfades/stretches the container shape (glass to bottle to jug, 250ms path morph), its outline staying a constant light gray.
+- The liquid fill tracks the amount live: the teal surface rises/falls with the scrub (1:1 with value change), sloshing on release (surface tilts +-4deg, settles via spring ~300/14 over 600ms) with a tiny bubble or two drifting up.
+- Release: the strip snaps to the nearest preset (spring ~380/24) with a haptic tick; the vessel completes its morph on snap.
+- Fast flicks skip through vessels with momentum (decay ~0.94/frame), each passed preset ticking lightly.
+- + WATER presses (scale 0.95, 100ms) and the liquid pulses once (fill brightness flash, 200ms) on add.
+
+## Calibration
+- Liquid level is proportional to each vessel&#x27;s own capacity, not a fixed pixel height - a full glass and full bottle both read full.
+- The vessel never clips during morphs; shapes interpolate inside a fixed bounding box.
+
+## Reduced motion
+Vessels crossfade; liquid snaps without slosh.
+
+## Don&#x27;t miss
+- The strip values and the vessel are ONE control - never let the number move without the fill moving.
+- The vessel outline is barely-there gray; the teal liquid carries the visual weight.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">value-scrubbed vessel morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/waterllama-add-water-picker-to-slider">original interaction</a> by Waterllama. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Waterllama's amount picker - scroll the horizontal value strip and the container illustration morphs between vessels (glass, bottle, jug) while its teal liquid level tracks the amount.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white screen: a large outlined vessel at center (small glass, tall bottle, wide cup) filled with teal liquid, the amount below it (\"250ml\"), flanked by dimmed neighbor values peeking at the edges (\"100ml\", \"2000ml\"). A teal \"+ WATER\" pill sits beneath.\n\n## Motion spec\nPattern: value-scrubbed vessel morph.\n- Horizontal drag: values scrub continuously (the strip moves 1:1), neighbor amounts sliding through the center spotlight; the centered value is large and black, neighbors small and gray (scale + opacity tween by distance from center).\n- The vessel morphs with the value: crossing preset boundaries crossfades/stretches the container shape (glass to bottle to jug, 250ms path morph), its outline staying a constant light gray.\n- The liquid fill tracks the amount live: the teal surface rises/falls with the scrub (1:1 with value change), sloshing on release (surface tilts +-4deg, settles via spring ~300/14 over 600ms) with a tiny bubble or two drifting up.\n- Release: the strip snaps to the nearest preset (spring ~380/24) with a haptic tick; the vessel completes its morph on snap.\n- Fast flicks skip through vessels with momentum (decay ~0.94/frame), each passed preset ticking lightly.\n- + WATER presses (scale 0.95, 100ms) and the liquid pulses once (fill brightness flash, 200ms) on add.\n\n## Calibration\n- Liquid level is proportional to each vessel's own capacity, not a fixed pixel height - a full glass and full bottle both read full.\n- The vessel never clips during morphs; shapes interpolate inside a fixed bounding box.\n\n## Reduced motion\nVessels crossfade; liquid snaps without slosh.\n\n## Don't miss\n- The strip values and the vessel are ONE control - never let the number move without the fill moving.\n- The vessel outline is barely-there gray; the teal liquid carries the visual weight."</script>
+</body></html>

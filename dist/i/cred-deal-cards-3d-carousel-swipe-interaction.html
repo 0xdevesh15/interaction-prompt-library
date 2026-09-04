@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Deal Cards 3D Carousel Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Deal Cards 3D Carousel Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-deal-cards-3d-carousel-swipe-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-deal-cards-3d-carousel-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-deal-cards-3d-carousel-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s &quot;Deal of the Day&quot; 3D carousel - a swipeable deck of brand offer cards on a dark screen where the front card faces the viewer and adjacent cards rotate away in 3D perspective, scaling down and dimming as they recede.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6873a6b10e3615485c4301b1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6873a6b10e3615485c4301b1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-deal-cards-3d-carousel-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s &quot;Deal of the Day&quot; 3D carousel - a swipeable deck of brand offer cards on a dark screen where the front card faces the viewer and adjacent cards rotate away in 3D perspective, scaling down and dimming as they recede.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark near-black screen. Top bar with back chevron and a coin balance pill. Header &quot;DEAL OF THE DAY&quot; in small spaced caps. Center: a horizontal 3D carousel of rectangular brand deal cards (each showing brand name, offer, and a rupee amount like Rs 1,000 / Rs 1,499 / Rs 500 on saturated brand colors - pink, blue, green). Below the carousel: a discount line (&quot;3.5% +&quot; with an emoji) that updates per card, a yellow UNLOCK button, and a static row of brand logos (Jockey, Uber).
+
+## Motion spec
+Pattern: gesture-driven 3D cover-flow carousel.
+- Idle: front card flat at scale 1.0, full opacity; neighbors peek from both edges, rotated ~45deg around the Y axis away from center, scale ~0.8, opacity ~0.6.
+- Drag: the deck tracks the finger horizontally; each card&#x27;s Y-rotation, scale, and opacity interpolate continuously with its distance from center (rotation 0 at center to ~50deg at the edges).
+- Release: snap the nearest card to center (spring ~260/26, ~350ms settle, no overshoot bounce).
+- The discount value and emoji under the carousel crossfade (150ms) to the centered card&#x27;s values once a new card passes 50% of the way in.
+- UNLOCK button and brand row stay fixed; only the card deck and the discount line move.
+
+## Calibration
+- The 3D rotation is the star - cards must visibly tilt around the vertical axis with perspective, not just slide and shrink.
+- Perspective depth: side cards sit slightly behind the front card (z-offset ~40pt) so the front card overlaps them.
+- Snap is firm and quiet; one settle.
+
+## Reduced motion
+Swipe moves the deck with a 200ms ease-out slide; no Y-rotation, cards only scale to 0.9 and fade to 0.5 at the edges.
+
+## Don&#x27;t miss
+- Both left and right neighbors are visible and mirrored - the deck reads as a circular 3D ring, not a flat strip.
+- The discount line under the carousel swaps with the card, keeping text and emoji paired to the centered deal.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gesture-driven 3D cover-flow carousel.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-deal-cards-3d-carousel-swipe-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's \"Deal of the Day\" 3D carousel - a swipeable deck of brand offer cards on a dark screen where the front card faces the viewer and adjacent cards rotate away in 3D perspective, scaling down and dimming as they recede.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark near-black screen. Top bar with back chevron and a coin balance pill. Header \"DEAL OF THE DAY\" in small spaced caps. Center: a horizontal 3D carousel of rectangular brand deal cards (each showing brand name, offer, and a rupee amount like Rs 1,000 / Rs 1,499 / Rs 500 on saturated brand colors - pink, blue, green). Below the carousel: a discount line (\"3.5% +\" with an emoji) that updates per card, a yellow UNLOCK button, and a static row of brand logos (Jockey, Uber).\n\n## Motion spec\nPattern: gesture-driven 3D cover-flow carousel.\n- Idle: front card flat at scale 1.0, full opacity; neighbors peek from both edges, rotated ~45deg around the Y axis away from center, scale ~0.8, opacity ~0.6.\n- Drag: the deck tracks the finger horizontally; each card's Y-rotation, scale, and opacity interpolate continuously with its distance from center (rotation 0 at center to ~50deg at the edges).\n- Release: snap the nearest card to center (spring ~260/26, ~350ms settle, no overshoot bounce).\n- The discount value and emoji under the carousel crossfade (150ms) to the centered card's values once a new card passes 50% of the way in.\n- UNLOCK button and brand row stay fixed; only the card deck and the discount line move.\n\n## Calibration\n- The 3D rotation is the star - cards must visibly tilt around the vertical axis with perspective, not just slide and shrink.\n- Perspective depth: side cards sit slightly behind the front card (z-offset ~40pt) so the front card overlaps them.\n- Snap is firm and quiet; one settle.\n\n## Reduced motion\nSwipe moves the deck with a 200ms ease-out slide; no Y-rotation, cards only scale to 0.9 and fade to 0.5 at the edges.\n\n## Don't miss\n- Both left and right neighbors are visible and mirrored - the deck reads as a circular 3D ring, not a flat strip.\n- The discount line under the carousel swaps with the card, keeping text and emoji paired to the centered deal."</script>
+</body></html>

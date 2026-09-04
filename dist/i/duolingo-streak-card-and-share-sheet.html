@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Streak Card and Share Sheet - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Streak Card and Share Sheet</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-streak-card-and-share-sheet"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-streak-card-and-share-sheet">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-streak-card-and-share-sheet">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s streak share flow - from the orange 3-day-streak screen, a bottom sheet springs up titled &quot;SHARE YOUR STREAK&quot; with app targets (WhatsApp, Messages, Instagram, X) and a Download/More row, while the streak card (phoenix Duo over &quot;I&#x27;m on a 3 day learning streak!&quot;) previews above the sheet; dismissing slides it back down.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177fad85c0894404b43f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177fad85c0894404b43f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-streak-card-and-share-sheet.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s streak share flow - from the orange 3-day-streak screen, a bottom sheet springs up titled &quot;SHARE YOUR STREAK&quot; with app targets (WhatsApp, Messages, Instagram, X) and a Download/More row, while the streak card (phoenix Duo over &quot;I&#x27;m on a 3 day learning streak!&quot;) previews above the sheet; dismissing slides it back down.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Orange streak screen (phoenix Duo, big &quot;3&quot;, &quot;day streak!&quot;, week strip, share button). The share sheet: streak card preview pinned above it, &quot;SHARE YOUR STREAK&quot; title with X, a row of circular share-target icons, and a Download / More row.
+
+## Motion spec
+Pattern: spring bottom sheet with pinned preview card.
+- The sheet rises from the bottom (spring ~380/26, 380ms) over a dimmed streak screen (opacity 0.5).
+- The streak card preview sits above the sheet&#x27;s top edge and rises with it, slightly leading (2-frame head start) so it reads as attached.
+- Sheet content staggers in: title row, then share icons (60ms apart, 12px rise + fade), then the Download/More row.
+- Dismiss (X, swipe down, or tap the dim): the sheet slides down (spring ~380/28) and the screen undims, returning to the streak screen.
+
+## Calibration
+- The preview card keeps the orange streak design inside a white rounded frame - a snapshot of what gets shared.
+- The dim is heavy enough that the sheet owns focus, but the orange still reads through.
+
+## Reduced motion
+Sheet fades in at final position (250ms); no content stagger.
+
+## Don&#x27;t miss
+- The preview card travels with the sheet - it is part of the sheet&#x27;s geometry, not the background.
+- Share targets are real app glyphs in circles, not generic icons.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">spring bottom sheet with pinned preview card.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-streak-card-and-share-sheet">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's streak share flow - from the orange 3-day-streak screen, a bottom sheet springs up titled \"SHARE YOUR STREAK\" with app targets (WhatsApp, Messages, Instagram, X) and a Download/More row, while the streak card (phoenix Duo over \"I'm on a 3 day learning streak!\") previews above the sheet; dismissing slides it back down.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOrange streak screen (phoenix Duo, big \"3\", \"day streak!\", week strip, share button). The share sheet: streak card preview pinned above it, \"SHARE YOUR STREAK\" title with X, a row of circular share-target icons, and a Download / More row.\n\n## Motion spec\nPattern: spring bottom sheet with pinned preview card.\n- The sheet rises from the bottom (spring ~380/26, 380ms) over a dimmed streak screen (opacity 0.5).\n- The streak card preview sits above the sheet's top edge and rises with it, slightly leading (2-frame head start) so it reads as attached.\n- Sheet content staggers in: title row, then share icons (60ms apart, 12px rise + fade), then the Download/More row.\n- Dismiss (X, swipe down, or tap the dim): the sheet slides down (spring ~380/28) and the screen undims, returning to the streak screen.\n\n## Calibration\n- The preview card keeps the orange streak design inside a white rounded frame - a snapshot of what gets shared.\n- The dim is heavy enough that the sheet owns focus, but the orange still reads through.\n\n## Reduced motion\nSheet fades in at final position (250ms); no content stagger.\n\n## Don't miss\n- The preview card travels with the sheet - it is part of the sheet's geometry, not the background.\n- Share targets are real app glyphs in circles, not generic icons."</script>
+</body></html>

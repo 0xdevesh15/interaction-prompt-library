@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spotify 2025 Wrapped Badge Reveal Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spotify 2025 Wrapped Badge Reveal Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spotify-2025-wrapped-badge-reveal-animation"><b>Spotify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-2025-wrapped-badge-reveal-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-2025-wrapped-badge-reveal-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Spotify Wrapped&#x27;s club badge reveal - a hand-drawn line squiggle gives way to the badge blooming amid pulsing concentric rings, then a blue name card slides up to claim it.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934008e491e9c48bfad0b77/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934008e491e9c48bfad0b77/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spotify-2025-wrapped-badge-reveal-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Spotify Wrapped&#x27;s club badge reveal - a hand-drawn line squiggle gives way to the badge blooming amid pulsing concentric rings, then a blue name card slides up to claim it.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A black Wrapped scene. A thin white hand-drawn squiggle drifts across, then the badge: a circular emblem (purple flower over green leaves) center screen, ringed by expanding concentric white circles. A blue card slides up from the bottom carrying the club name &quot;Cloud State Society&quot; and its one-line description, a fresh squiggle trailing beneath.
+
+## Motion spec
+Pattern: badge reveal - line draw, springy scale, concentric ripples, sliding name card.
+- The squiggle draws itself on (stroke reveal, 800ms, a loose looping line that ends near center screen), then fades as it finishes.
+- The badge pops in at the squiggle&#x27;s end point: scale 0 -&gt; 1.15 -&gt; 1 (spring ~360/12, visible bounce), rotating ~15deg to 0 as it lands.
+- Concentric rings pulse outward from the badge (scale 1 -&gt; 2.4, opacity 0.8 -&gt; 0, 1.4s each, staggered 350ms, 3-4 rings cycling) - a sonar bloom that keeps breathing while the badge holds.
+- The blue name card slides up from the bottom (translateY 100% -&gt; 0, spring ~300/18, ~400ms), name first, description fading in 150ms later.
+- A second squiggle draws beneath the card (600ms) as the scene settles.
+
+## Calibration
+- The rings are pure outline circles - no gradient, no glow; the flatness is the Wrapped print look.
+- The badge stays crisp and still while the rings move - never let the emblem itself pulse.
+
+## Reduced motion
+Badge fades in with the card (300ms); no ripples.
+
+## Don&#x27;t miss
+- The club name sits on a solid blue band - the one saturated color block in the scene.
+- The squiggles bookend the reveal - opening flourish and closing signature.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">badge reveal - line draw, springy scale, concentric ripples, sliding name card.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spotify-2025-wrapped-badge-reveal-animation">original interaction</a> by Spotify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Spotify Wrapped's club badge reveal - a hand-drawn line squiggle gives way to the badge blooming amid pulsing concentric rings, then a blue name card slides up to claim it.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA black Wrapped scene. A thin white hand-drawn squiggle drifts across, then the badge: a circular emblem (purple flower over green leaves) center screen, ringed by expanding concentric white circles. A blue card slides up from the bottom carrying the club name \"Cloud State Society\" and its one-line description, a fresh squiggle trailing beneath.\n\n## Motion spec\nPattern: badge reveal - line draw, springy scale, concentric ripples, sliding name card.\n- The squiggle draws itself on (stroke reveal, 800ms, a loose looping line that ends near center screen), then fades as it finishes.\n- The badge pops in at the squiggle's end point: scale 0 -> 1.15 -> 1 (spring ~360/12, visible bounce), rotating ~15deg to 0 as it lands.\n- Concentric rings pulse outward from the badge (scale 1 -> 2.4, opacity 0.8 -> 0, 1.4s each, staggered 350ms, 3-4 rings cycling) - a sonar bloom that keeps breathing while the badge holds.\n- The blue name card slides up from the bottom (translateY 100% -> 0, spring ~300/18, ~400ms), name first, description fading in 150ms later.\n- A second squiggle draws beneath the card (600ms) as the scene settles.\n\n## Calibration\n- The rings are pure outline circles - no gradient, no glow; the flatness is the Wrapped print look.\n- The badge stays crisp and still while the rings move - never let the emblem itself pulse.\n\n## Reduced motion\nBadge fades in with the card (300ms); no ripples.\n\n## Don't miss\n- The club name sits on a solid blue band - the one saturated color block in the scene.\n- The squiggles bookend the reveal - opening flourish and closing signature."</script>
+</body></html>

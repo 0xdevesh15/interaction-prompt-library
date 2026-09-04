@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flashback Swipe to Tear Image Delete Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flashback Swipe to Tear Image Delete Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flashback-swipe-to-tear-image-delete-interaction"><b>Flashback</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flashback-swipe-to-tear-image-delete-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flashback-swipe-to-tear-image-delete-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Flashback&#x27;s tear-to-delete - swiping across the photo tears it into two jagged halves that peel apart and fly off, deleting the memory.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69874825924a60df4b1c8eff/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69874825924a60df4b1c8eff/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flashback-swipe-to-tear-image-delete-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Flashback&#x27;s tear-to-delete - swiping across the photo tears it into two jagged halves that peel apart and fly off, deleting the memory.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Flashback &quot;Selected Day&quot; screen, white: a polaroid-style photo card (image with a date caption &quot;02/07/2026&quot; on the white border) centered, small chevron below. The tear: the card splits along a jagged diagonal, the two halves separating.
+
+## Motion spec
+Pattern: swipe-driven paper tear with separating halves.
+- Swipe down (or sideways) on the card: for the first ~40% of the gesture the card tilts and stretches toward the drag (rotateZ +/-4 degrees, slight scale 1.02) - resistance.
+- Past the threshold the tear starts: a jagged white split line appears at the tear origin and propagates along the drag direction (tip tracking the finger), the two halves beginning to separate 1:1 with the drag.
+- Each half follows physics: they rotate away from each other (rotateZ +/-8 -&gt; 15 degrees) and translate with the drag, the inner torn edges showing the white paper fiber texture.
+- On release after committing: both halves fling off in opposite directions (translate + rotate, 400ms, ease-in with gravity droop) fading out over the last 150ms.
+- The screen&#x27;s remaining chrome (caption, chevron) fades out (250ms) leaving the empty day state; release below threshold snaps the card back whole (spring ~300/18, tear line healing closed).
+
+## Calibration
+- The jagged tear path is irregular but follows the swipe&#x27;s angle - it should feel like the paper gave where you pulled.
+- Keep the halves&#x27; motion weighty - paper drifts, it doesn&#x27;t rocket.
+
+## Reduced motion
+Card fades out on commit (300ms); snap-back without tilt.
+
+## Don&#x27;t miss
+- The white fiber edge on both torn sides - that&#x27;s what sells paper over plastic.
+- The caption stays attached to whichever half carries it through the tear.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipe-driven paper tear with separating halves.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flashback-swipe-to-tear-image-delete-interaction">original interaction</a> by Flashback. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Flashback's tear-to-delete - swiping across the photo tears it into two jagged halves that peel apart and fly off, deleting the memory.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFlashback \"Selected Day\" screen, white: a polaroid-style photo card (image with a date caption \"02/07/2026\" on the white border) centered, small chevron below. The tear: the card splits along a jagged diagonal, the two halves separating.\n\n## Motion spec\nPattern: swipe-driven paper tear with separating halves.\n- Swipe down (or sideways) on the card: for the first ~40% of the gesture the card tilts and stretches toward the drag (rotateZ +/-4 degrees, slight scale 1.02) - resistance.\n- Past the threshold the tear starts: a jagged white split line appears at the tear origin and propagates along the drag direction (tip tracking the finger), the two halves beginning to separate 1:1 with the drag.\n- Each half follows physics: they rotate away from each other (rotateZ +/-8 -> 15 degrees) and translate with the drag, the inner torn edges showing the white paper fiber texture.\n- On release after committing: both halves fling off in opposite directions (translate + rotate, 400ms, ease-in with gravity droop) fading out over the last 150ms.\n- The screen's remaining chrome (caption, chevron) fades out (250ms) leaving the empty day state; release below threshold snaps the card back whole (spring ~300/18, tear line healing closed).\n\n## Calibration\n- The jagged tear path is irregular but follows the swipe's angle - it should feel like the paper gave where you pulled.\n- Keep the halves' motion weighty - paper drifts, it doesn't rocket.\n\n## Reduced motion\nCard fades out on commit (300ms); snap-back without tilt.\n\n## Don't miss\n- The white fiber edge on both torn sides - that's what sells paper over plastic.\n- The caption stays attached to whichever half carries it through the tear."</script>
+</body></html>

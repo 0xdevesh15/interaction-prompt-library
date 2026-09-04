@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Quality Seal Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Quality Seal Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-quality-seal-animation"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-quality-seal-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-quality-seal-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Airbnb&#x27;s quality seal moment - a bottom sheet slides up over the Explore feed, and a 3D golden sphere drops in, melts and spreads into a skeuomorphic wax seal stamped with the Airbnb logo, above &quot;Experiences on Airbnb are vetted for quality&quot; and a black &quot;Explore experiences&quot; button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23dd7ce6c42e74b4963/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682dd23dd7ce6c42e74b4963/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-quality-seal-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Airbnb&#x27;s quality seal moment - a bottom sheet slides up over the Explore feed, and a 3D golden sphere drops in, melts and spreads into a skeuomorphic wax seal stamped with the Airbnb logo, above &quot;Experiences on Airbnb are vetted for quality&quot; and a black &quot;Explore experiences&quot; button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Explore feed (Airbnb Originals, Happening today cards) dimmed under a scrim. A white bottom sheet: centered gold wax seal badge, headline &quot;Experiences on Airbnb are vetted for quality&quot;, subcopy &quot;Experiences are evaluated for expertise, reputation, and authenticity.&quot;, a full-width black &quot;Explore experiences&quot; button, and a close X top-right.
+
+## Motion spec
+Pattern: 3D sphere-to-wax-seal morph.
+- The sheet slides up over the dimmed feed (300ms ease-out, scrim 45%).
+- A glossy golden sphere drops from above the sheet (fall 350ms ease-in) and lands at center with a squash (scale 1 -&gt; 0.8Y, 80ms).
+- The sphere melts: it spreads outward into a wax blob (scale X 1 -&gt; 1.4, edges becoming irregular, 300ms ease-out) with gold ripples traveling across its surface.
+- The seal stamps: a subtle press (scale 1.05 -&gt; 1.0, 120ms) reveals the embossed Airbnb logo ring and inner emblem as highlights shift from sphere-gloss to matte wax.
+- Headline, subcopy, and button fade up staggered (200ms each, 80ms apart) after the stamp settles.
+- Idle: the seal has a faint metallic gleam sweep every 4s.
+
+## Calibration
+- The morph is one continuous motion: drop, squash, spread, stamp - no pauses between.
+- The wax edge is irregular like real wax, not a perfect circle.
+
+## Reduced motion
+Sheet fades in with the finished seal already in place; copy fades in after.
+
+## Don&#x27;t miss
+- The sphere is reflective gold before the melt and matte wax after - the material change sells the morph.
+- The Airbnb logo is embossed into the seal, lit by the same light as the wax.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D sphere-to-wax-seal morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-quality-seal-animation">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Airbnb's quality seal moment - a bottom sheet slides up over the Explore feed, and a 3D golden sphere drops in, melts and spreads into a skeuomorphic wax seal stamped with the Airbnb logo, above \"Experiences on Airbnb are vetted for quality\" and a black \"Explore experiences\" button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nExplore feed (Airbnb Originals, Happening today cards) dimmed under a scrim. A white bottom sheet: centered gold wax seal badge, headline \"Experiences on Airbnb are vetted for quality\", subcopy \"Experiences are evaluated for expertise, reputation, and authenticity.\", a full-width black \"Explore experiences\" button, and a close X top-right.\n\n## Motion spec\nPattern: 3D sphere-to-wax-seal morph.\n- The sheet slides up over the dimmed feed (300ms ease-out, scrim 45%).\n- A glossy golden sphere drops from above the sheet (fall 350ms ease-in) and lands at center with a squash (scale 1 -> 0.8Y, 80ms).\n- The sphere melts: it spreads outward into a wax blob (scale X 1 -> 1.4, edges becoming irregular, 300ms ease-out) with gold ripples traveling across its surface.\n- The seal stamps: a subtle press (scale 1.05 -> 1.0, 120ms) reveals the embossed Airbnb logo ring and inner emblem as highlights shift from sphere-gloss to matte wax.\n- Headline, subcopy, and button fade up staggered (200ms each, 80ms apart) after the stamp settles.\n- Idle: the seal has a faint metallic gleam sweep every 4s.\n\n## Calibration\n- The morph is one continuous motion: drop, squash, spread, stamp - no pauses between.\n- The wax edge is irregular like real wax, not a perfect circle.\n\n## Reduced motion\nSheet fades in with the finished seal already in place; copy fades in after.\n\n## Don't miss\n- The sphere is reflective gold before the melt and matte wax after - the material change sells the morph.\n- The Airbnb logo is embossed into the seal, lit by the same light as the wax."</script>
+</body></html>

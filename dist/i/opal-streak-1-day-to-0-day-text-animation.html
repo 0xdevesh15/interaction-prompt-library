@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opal Streak 1 Day to 0 Day Text Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Opal Streak 1 Day to 0 Day Text Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opal-streak-1-day-to-0-day-text-animation"><b>Opal</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-streak-1-day-to-0-day-text-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opal-streak-1-day-to-0-day-text-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Opal&#x27;s streak break - the glowing yellow flame badge &quot;1 DAY STREAK&quot; drains to a gray circle &quot;0 DAY STREAK&quot; after tapping Break Streak, over a dark moon backdrop.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc712b33c1c85777a7e5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d0cc712b33c1c85777a7e5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opal-streak-1-day-to-0-day-text-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Opal&#x27;s streak break - the glowing yellow flame badge &quot;1 DAY STREAK&quot; drains to a gray circle &quot;0 DAY STREAK&quot; after tapping Break Streak, over a dark moon backdrop.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen with a large moon photo. Bottom card: flame icon, &quot;1 DAY STREAK&quot; label, copy (&quot;If you stop you may lose your streak. Why don&#x27;t you take a break instead?&quot;), a white &quot;Take 15m Break&quot; button, and a pink &quot;Break Streak&quot; link. After: a gray hollow circle icon with &quot;0 DAY STREAK&quot;.
+
+## Motion spec
+Pattern: badge drain, ~700ms.
+- Flame: the yellow flame flickers out - its glow collapses (150ms), the flame shape shrinks and desaturates to gray (300ms), morphing into the hollow circle (200ms, spring ~380/22).
+- Digit: &quot;1&quot; rolls down to &quot;0&quot; (odometer, 250ms) as the label&#x27;s color fades yellow -&gt; gray.
+- Copy: the &quot;Break Streak&quot; link fades out (200ms); the rest of the card holds position.
+- Moon: unchanged - only the badge area animates.
+
+## Calibration
+- The morph is flame-to-circle, one shape becoming the other - not a crossfade of two icons.
+- Color drains from the badge first, then the label, 80ms apart.
+
+## Reduced motion
+The badge crossfades to the 0-day state (300ms); no morph.
+
+## Don&#x27;t miss
+- The transition is a loss, not a celebration - no confetti, no bounce on landing.
+- The &quot;Take 15m Break&quot; button survives the transition unchanged.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">badge drain, ~700ms.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opal-streak-1-day-to-0-day-text-animation">original interaction</a> by Opal. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Opal's streak break - the glowing yellow flame badge \"1 DAY STREAK\" drains to a gray circle \"0 DAY STREAK\" after tapping Break Streak, over a dark moon backdrop.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen with a large moon photo. Bottom card: flame icon, \"1 DAY STREAK\" label, copy (\"If you stop you may lose your streak. Why don't you take a break instead?\"), a white \"Take 15m Break\" button, and a pink \"Break Streak\" link. After: a gray hollow circle icon with \"0 DAY STREAK\".\n\n## Motion spec\nPattern: badge drain, ~700ms.\n- Flame: the yellow flame flickers out - its glow collapses (150ms), the flame shape shrinks and desaturates to gray (300ms), morphing into the hollow circle (200ms, spring ~380/22).\n- Digit: \"1\" rolls down to \"0\" (odometer, 250ms) as the label's color fades yellow -> gray.\n- Copy: the \"Break Streak\" link fades out (200ms); the rest of the card holds position.\n- Moon: unchanged - only the badge area animates.\n\n## Calibration\n- The morph is flame-to-circle, one shape becoming the other - not a crossfade of two icons.\n- Color drains from the badge first, then the label, 80ms apart.\n\n## Reduced motion\nThe badge crossfades to the 0-day state (300ms); no morph.\n\n## Don't miss\n- The transition is a loss, not a celebration - no confetti, no bounce on landing.\n- The \"Take 15m Break\" button survives the transition unchanged."</script>
+</body></html>

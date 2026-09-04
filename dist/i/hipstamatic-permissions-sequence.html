@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hipstamatic Permissions Sequence - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Hipstamatic Permissions Sequence</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/hipstamatic-permissions-sequence"><b>Hipstamatic</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/hipstamatic-permissions-sequence">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/hipstamatic-permissions-sequence">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Hipstamatic&#x27;s permissions onboarding - a fully 3D skeuomorphic film camera assembles itself part by part on black, each stage representing a system permission (lens, film canister, shutter button), with orange retro type and a CONTINUE button under each.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e3ce946624f47444310cc4/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e3ce946624f47444310cc4/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-hipstamatic-permissions-sequence.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Hipstamatic&#x27;s permissions onboarding - a fully 3D skeuomorphic film camera assembles itself part by part on black, each stage representing a system permission (lens, film canister, shutter button), with orange retro type and a CONTINUE button under each.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black stage: orange retro type (&quot;WELCOME TO THE Hipstamatic CAMERA CLUB&quot;), a 3D leather-and-metal rangefinder camera that builds itself - lens barrel screws on, film canister loads into the body, top plate and yellow shutter button attach. Each stage pairs with orange permission copy and an outlined CONTINUE pill.
+
+## Motion spec
+Pattern: staged 3D product assembly.
+- Welcome: the complete camera fades in slowly (600ms), floating with a subtle idle sway (rotate ±2deg, 4s loop).
+- Per stage: the camera rotates on its Y axis (~180deg, 900ms ease-in-out) to face the assembly point; the new part flies in from off-screen (translate + rotate, spring ~220/20, ~700ms) and seats with a tiny impact bounce (2px settle) plus a soft metallic tick.
+- The lens screws on with a visible rotation (2 full turns, ease-out); the film canister drops in from above (gravity ease-in, then 1 bounce); the shutter button pops on with a spring (~400/18).
+- Copy block crossfades per stage (300ms); CONTINUE pulses gently (opacity 0.7 -&gt; 1, 1.5s loop).
+- Lighting is a single soft key from upper-left; parts cast real-time shadows on the body.
+
+## Calibration
+- The camera never cuts between stages - rotation and assembly are continuous shots.
+- Orange (#E8572A-ish) is the only accent against black and metal.
+
+## Reduced motion
+Stage crossfades between pre-assembled states, no flying parts.
+
+## Don&#x27;t miss
+- The yellow shutter button and film-canister orange label are deliberate color pops.
+- Each permission screen&#x27;s copy sits low, leaving the camera the hero.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staged 3D product assembly.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/hipstamatic-permissions-sequence">original interaction</a> by Hipstamatic. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Hipstamatic's permissions onboarding - a fully 3D skeuomorphic film camera assembles itself part by part on black, each stage representing a system permission (lens, film canister, shutter button), with orange retro type and a CONTINUE button under each.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack stage: orange retro type (\"WELCOME TO THE Hipstamatic CAMERA CLUB\"), a 3D leather-and-metal rangefinder camera that builds itself - lens barrel screws on, film canister loads into the body, top plate and yellow shutter button attach. Each stage pairs with orange permission copy and an outlined CONTINUE pill.\n\n## Motion spec\nPattern: staged 3D product assembly.\n- Welcome: the complete camera fades in slowly (600ms), floating with a subtle idle sway (rotate \u00b12deg, 4s loop).\n- Per stage: the camera rotates on its Y axis (~180deg, 900ms ease-in-out) to face the assembly point; the new part flies in from off-screen (translate + rotate, spring ~220/20, ~700ms) and seats with a tiny impact bounce (2px settle) plus a soft metallic tick.\n- The lens screws on with a visible rotation (2 full turns, ease-out); the film canister drops in from above (gravity ease-in, then 1 bounce); the shutter button pops on with a spring (~400/18).\n- Copy block crossfades per stage (300ms); CONTINUE pulses gently (opacity 0.7 -> 1, 1.5s loop).\n- Lighting is a single soft key from upper-left; parts cast real-time shadows on the body.\n\n## Calibration\n- The camera never cuts between stages - rotation and assembly are continuous shots.\n- Orange (#E8572A-ish) is the only accent against black and metal.\n\n## Reduced motion\nStage crossfades between pre-assembled states, no flying parts.\n\n## Don't miss\n- The yellow shutter button and film-canister orange label are deliberate color pops.\n- Each permission screen's copy sits low, leaving the camera the hero."</script>
+</body></html>

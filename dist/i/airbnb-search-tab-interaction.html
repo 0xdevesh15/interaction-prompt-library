@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Search Tab Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Search Tab Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-search-tab-interaction"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-search-tab-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-search-tab-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airbnb&#x27;s search overlay - tapping the search pill expands a full search sheet where the Homes / Experiences / Services tabs switch with springy 3D icons, the &quot;Where?&quot; input morphs between collapsed and expanded states, and recent searches plus When / Who cards adapt per tab.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abf1d58c48a3ebad13371/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abf1d58c48a3ebad13371/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-search-tab-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airbnb&#x27;s search overlay - tapping the search pill expands a full search sheet where the Homes / Experiences / Services tabs switch with springy 3D icons, the &quot;Where?&quot; input morphs between collapsed and expanded states, and recent searches plus When / Who cards adapt per tab.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Home feed with a &quot;Start your search&quot; pill. Search overlay: tab strip with 3D icons (Homes house, Experiences balloon, Services bell) and a close X; a large &quot;Where?&quot; card with a &quot;Search destinations&quot; input; &quot;Recent searches&quot; rows (Puducherry, Los Angeles); collapsed &quot;When / Add dates&quot; and &quot;Who / Add guests&quot; (or &quot;What / Add service&quot; on Services) cards below.
+
+## Motion spec
+Pattern: expanding search overlay with springy tab switch and morphing field cards.
+- Tap the pill: it morphs into the overlay - the pill&#x27;s bounds grow to the full sheet (300ms ease-in-out) while the feed dims and blurs behind.
+- Tab strip drops in from the top (spring ~280/18, 60ms stagger per tab); the active tab&#x27;s icon is raised and tinted, the inactive ones recede.
+- Tab switch: the outgoing icon settles down and grays (200ms) as the incoming icon pops up (scale 1 -&gt; 1.15 -&gt; 1, spring ~320/16); the cards below crossfade to the tab&#x27;s variant (250ms) - Services swaps &quot;Who / Add guests&quot; for &quot;What / Add service&quot;.
+- &quot;Where?&quot; card expands when focused (height grows, spring ~300/20) revealing recent searches; collapses back (250ms) when another card is tapped.
+- The When and Who cards lift with the same spring when expanded, pushing siblings down.
+
+## Calibration
+- The pill-to-sheet morph is seamless - the input text stays pinned through the expansion.
+- Only one card is expanded at a time; expanding one collapses the other.
+
+## Reduced motion
+Overlay fades in; tab switch and card expansion crossfade (200ms).
+
+## Don&#x27;t miss
+- The 3D tab icons match the tab-bar set - same assets, same lighting.
+- Recent searches carry small 3D destination thumbnails, not flat icons.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">expanding search overlay with springy tab switch and morphing field cards.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-search-tab-interaction">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airbnb's search overlay - tapping the search pill expands a full search sheet where the Homes / Experiences / Services tabs switch with springy 3D icons, the \"Where?\" input morphs between collapsed and expanded states, and recent searches plus When / Who cards adapt per tab.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nHome feed with a \"Start your search\" pill. Search overlay: tab strip with 3D icons (Homes house, Experiences balloon, Services bell) and a close X; a large \"Where?\" card with a \"Search destinations\" input; \"Recent searches\" rows (Puducherry, Los Angeles); collapsed \"When / Add dates\" and \"Who / Add guests\" (or \"What / Add service\" on Services) cards below.\n\n## Motion spec\nPattern: expanding search overlay with springy tab switch and morphing field cards.\n- Tap the pill: it morphs into the overlay - the pill's bounds grow to the full sheet (300ms ease-in-out) while the feed dims and blurs behind.\n- Tab strip drops in from the top (spring ~280/18, 60ms stagger per tab); the active tab's icon is raised and tinted, the inactive ones recede.\n- Tab switch: the outgoing icon settles down and grays (200ms) as the incoming icon pops up (scale 1 -> 1.15 -> 1, spring ~320/16); the cards below crossfade to the tab's variant (250ms) - Services swaps \"Who / Add guests\" for \"What / Add service\".\n- \"Where?\" card expands when focused (height grows, spring ~300/20) revealing recent searches; collapses back (250ms) when another card is tapped.\n- The When and Who cards lift with the same spring when expanded, pushing siblings down.\n\n## Calibration\n- The pill-to-sheet morph is seamless - the input text stays pinned through the expansion.\n- Only one card is expanded at a time; expanding one collapses the other.\n\n## Reduced motion\nOverlay fades in; tab switch and card expansion crossfade (200ms).\n\n## Don't miss\n- The 3D tab icons match the tab-bar set - same assets, same lighting.\n- Recent searches carry small 3D destination thumbnails, not flat icons."</script>
+</body></html>

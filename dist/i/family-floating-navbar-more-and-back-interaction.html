@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Floating Navbar More and Back Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Family Floating Navbar More and Back Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/family-floating-navbar-more-and-back-interaction"><b>Family</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-floating-navbar-more-and-back-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/family-floating-navbar-more-and-back-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Family&#x27;s floating tab bar morph - tapping &quot;More&quot; on the floating 3-item pill tab bar (Wallet / Star / More) swaps its contents to a Back-leading set (Back plus alternate actions), each icon-label pair crossfading with a springy nudge; tapping Back morphs it back to the default set.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91b080b60408ca18a9d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745f91b080b60408ca18a9d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-family-floating-navbar-more-and-back-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Family&#x27;s floating tab bar morph - tapping &quot;More&quot; on the floating 3-item pill tab bar (Wallet / Star / More) swaps its contents to a Back-leading set (Back plus alternate actions), each icon-label pair crossfading with a springy nudge; tapping Back morphs it back to the default set.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light wallet screen (&quot;There&#x27;s nothing here, yet&quot; empty state or &quot;Receive&quot; page) with a floating rounded pill tab bar at the bottom holding three icon+label items. Two bar states: default (Wallet, Star, More) and detail (Back, ..., alternate action).
+
+## Motion spec
+Pattern: in-place tab-bar content morph.
+- Tap More: the bar&#x27;s items crossfade - each icon shrinks slightly and fades (120ms) while its replacement scales up from 0.8 (spring ~460/26, 220ms) and fades in; the label text swaps with a 60ms lag behind its icon.
+- The swaps ripple left to right across the bar (40ms between items).
+- The bar&#x27;s container never moves or resizes - only its contents morph.
+- Tap Back: the reverse morph plays (default set ripples back in, same timing).
+- The bar floats above content with a soft shadow throughout - no background dim.
+
+## Calibration
+- The morph is a crossfade with scale, not a slide - items change where they stand.
+- Ripple stagger is tight (40ms) - one gesture, not three separate pops.
+
+## Reduced motion
+Items crossfade without scale or ripple (150ms).
+
+## Don&#x27;t miss
+- Back always lands in the left slot - the return affordance stays in a consistent position.
+- Icon and label swap together per item; a mismatched pair (new icon, old label) is the tell of a wrong implementation.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">in-place tab-bar content morph.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/family-floating-navbar-more-and-back-interaction">original interaction</a> by Family. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Family's floating tab bar morph - tapping \"More\" on the floating 3-item pill tab bar (Wallet / Star / More) swaps its contents to a Back-leading set (Back plus alternate actions), each icon-label pair crossfading with a springy nudge; tapping Back morphs it back to the default set.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight wallet screen (\"There's nothing here, yet\" empty state or \"Receive\" page) with a floating rounded pill tab bar at the bottom holding three icon+label items. Two bar states: default (Wallet, Star, More) and detail (Back, ..., alternate action).\n\n## Motion spec\nPattern: in-place tab-bar content morph.\n- Tap More: the bar's items crossfade - each icon shrinks slightly and fades (120ms) while its replacement scales up from 0.8 (spring ~460/26, 220ms) and fades in; the label text swaps with a 60ms lag behind its icon.\n- The swaps ripple left to right across the bar (40ms between items).\n- The bar's container never moves or resizes - only its contents morph.\n- Tap Back: the reverse morph plays (default set ripples back in, same timing).\n- The bar floats above content with a soft shadow throughout - no background dim.\n\n## Calibration\n- The morph is a crossfade with scale, not a slide - items change where they stand.\n- Ripple stagger is tight (40ms) - one gesture, not three separate pops.\n\n## Reduced motion\nItems crossfade without scale or ripple (150ms).\n\n## Don't miss\n- Back always lands in the left slot - the return affordance stays in a consistent position.\n- Icon and label swap together per item; a mismatched pair (new icon, old label) is the tell of a wrong implementation."</script>
+</body></html>

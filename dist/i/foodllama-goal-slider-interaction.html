@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Foodllama Goal Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Foodllama Goal Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/foodllama-goal-slider-interaction"><b>Foodllama</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/foodllama-goal-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/foodllama-goal-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Foodllama&#x27;s goal slider - dragging along a rainbow slider changes the weekly weight goal, the emoji markers, and the result badge&#x27;s text and color in real time.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a88cf8cd4a3cfd54b6f344/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a88cf8cd4a3cfd54b6f344/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-foodllama-goal-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Foodllama&#x27;s goal slider - dragging along a rainbow slider changes the weekly weight goal, the emoji markers, and the result badge&#x27;s text and color in real time.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White onboarding screen &quot;How soon do you want to reach your goal?&quot;: a large value (&quot;0.5 kg&quot; over &quot;per week&quot;), a horizontal rainbow-gradient slider with three emoji markers (Slow, Recommended, Fast), a result badge (&quot;You&#x27;ll reach your goal in &lt;month&gt;&quot;) with supporting text, and a circular next-arrow button.
+
+## Motion spec
+Pattern: gesture-driven slider with live readouts.
+- Drag: the thumb tracks 1:1; the value updates per 0.1 kg step with a quick digit slide (100ms) and a small scale tick (1 -&gt; 1.06 -&gt; 1, 150ms).
+- Track: the gradient fill follows the thumb; the nearest emoji marker grows (scale 1.3, spring ~420/18) and the others shrink back.
+- Badge: as the thumb crosses zone boundaries the badge crossfades its text (200ms) and tints to the zone color (blue slow -&gt; green recommended -&gt; yellow -&gt; pink fast, 200ms).
+- Release: the thumb snaps to the nearest 0.1 step (spring ~380/22, 200ms).
+
+## Calibration
+- Value, fill, emoji emphasis, and badge color are all continuous functions of thumb position - nothing waits for release except the step snap.
+- The value stays centered; only its digits move.
+
+## Reduced motion
+Keep 1:1 tracking; remove the scale ticks.
+
+## Don&#x27;t miss
+- The badge color and text change mid-drag, not on drop.
+- The emoji markers are part of the track, not labels under it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gesture-driven slider with live readouts.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/foodllama-goal-slider-interaction">original interaction</a> by Foodllama. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Foodllama's goal slider - dragging along a rainbow slider changes the weekly weight goal, the emoji markers, and the result badge's text and color in real time.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite onboarding screen \"How soon do you want to reach your goal?\": a large value (\"0.5 kg\" over \"per week\"), a horizontal rainbow-gradient slider with three emoji markers (Slow, Recommended, Fast), a result badge (\"You'll reach your goal in <month>\") with supporting text, and a circular next-arrow button.\n\n## Motion spec\nPattern: gesture-driven slider with live readouts.\n- Drag: the thumb tracks 1:1; the value updates per 0.1 kg step with a quick digit slide (100ms) and a small scale tick (1 -> 1.06 -> 1, 150ms).\n- Track: the gradient fill follows the thumb; the nearest emoji marker grows (scale 1.3, spring ~420/18) and the others shrink back.\n- Badge: as the thumb crosses zone boundaries the badge crossfades its text (200ms) and tints to the zone color (blue slow -> green recommended -> yellow -> pink fast, 200ms).\n- Release: the thumb snaps to the nearest 0.1 step (spring ~380/22, 200ms).\n\n## Calibration\n- Value, fill, emoji emphasis, and badge color are all continuous functions of thumb position - nothing waits for release except the step snap.\n- The value stays centered; only its digits move.\n\n## Reduced motion\nKeep 1:1 tracking; remove the scale ticks.\n\n## Don't miss\n- The badge color and text change mid-drag, not on drop.\n- The emoji markers are part of the track, not labels under it."</script>
+</body></html>

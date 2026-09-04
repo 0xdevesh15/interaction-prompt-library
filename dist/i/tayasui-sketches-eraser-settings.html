@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tayasui Sketches Eraser Settings - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tayasui Sketches Eraser Settings</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tayasui-sketches-eraser-settings"><b>Tayasui</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tayasui-sketches-eraser-settings">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tayasui-sketches-eraser-settings">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Tayasui Sketches&#x27; eraser settings - a floating panel where dragging Size and Opacity sliders rescales and re-shades a live preview circle in real time, showing the exact brush stamp before you touch the canvas.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c818b6c338cf7a85e2f459/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66c818b6c338cf7a85e2f459/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tayasui-sketches-eraser-settings.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Tayasui Sketches&#x27; eraser settings - a floating panel where dragging Size and Opacity sliders rescales and re-shades a live preview circle in real time, showing the exact brush stamp before you touch the canvas.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Canvas above a tool dock. The eraser settings panel (floating white card): &quot;Eraser&quot; title, a large black preview circle centered, a vertical &quot;Opacity&quot; slider on the right with a live % label, a horizontal &quot;Size&quot; slider below with a live numeric label.
+
+## Motion spec
+Pattern: live-preview dual sliders.
+- Panel entry: rises from the dock (spring ~340/22), preview circle popping in slightly late (scale 0.8 -&gt; 1, spring ~400/20).
+- Size drag: the preview circle scales 1:1 with the slider value, clamped with 50ms smoothing so it never strobes; the numeric label (e.g. &quot;212.3&quot;) updates every frame.
+- Opacity drag: the circle&#x27;s fill fades between solid black and pale gray (real alpha), its % label updating live; at low opacity the circle reads as a ghost stamp.
+- Releasing either slider: the thumb settles with a tiny spring (~500/25) and the preview holds - no snap-back.
+- Panel exit (tap outside): drops back into the dock (250ms, ease-in), the eraser icon in the dock reflecting the new size via its own stroke weight.
+
+## Calibration
+- Preview circle max ~30% of panel width; min stays visible at 8px - never vanishes.
+- Label typography is small (11px) gray - data, not decoration.
+
+## Reduced motion
+Panel crossfades; preview updates without entry pop.
+
+## Don&#x27;t miss
+- The preview is a real render of the brush (size AND alpha), not a static icon - it must match the first canvas stroke exactly.
+- Sliders are orthogonal and independent: opacity is vertical, size horizontal - easy to grab one without nudging the other.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">live-preview dual sliders.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tayasui-sketches-eraser-settings">original interaction</a> by Tayasui. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Tayasui Sketches' eraser settings - a floating panel where dragging Size and Opacity sliders rescales and re-shades a live preview circle in real time, showing the exact brush stamp before you touch the canvas.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCanvas above a tool dock. The eraser settings panel (floating white card): \"Eraser\" title, a large black preview circle centered, a vertical \"Opacity\" slider on the right with a live % label, a horizontal \"Size\" slider below with a live numeric label.\n\n## Motion spec\nPattern: live-preview dual sliders.\n- Panel entry: rises from the dock (spring ~340/22), preview circle popping in slightly late (scale 0.8 -> 1, spring ~400/20).\n- Size drag: the preview circle scales 1:1 with the slider value, clamped with 50ms smoothing so it never strobes; the numeric label (e.g. \"212.3\") updates every frame.\n- Opacity drag: the circle's fill fades between solid black and pale gray (real alpha), its % label updating live; at low opacity the circle reads as a ghost stamp.\n- Releasing either slider: the thumb settles with a tiny spring (~500/25) and the preview holds - no snap-back.\n- Panel exit (tap outside): drops back into the dock (250ms, ease-in), the eraser icon in the dock reflecting the new size via its own stroke weight.\n\n## Calibration\n- Preview circle max ~30% of panel width; min stays visible at 8px - never vanishes.\n- Label typography is small (11px) gray - data, not decoration.\n\n## Reduced motion\nPanel crossfades; preview updates without entry pop.\n\n## Don't miss\n- The preview is a real render of the brush (size AND alpha), not a static icon - it must match the first canvas stroke exactly.\n- Sliders are orthogonal and independent: opacity is vertical, size horizontal - easy to grab one without nudging the other."</script>
+</body></html>

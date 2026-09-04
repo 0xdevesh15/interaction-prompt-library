@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wolt Timer Sheet to Map Zoom Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Wolt Timer Sheet to Map Zoom Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/wolt-timer-sheet-to-map-zoom-interaction"><b>Wolt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wolt-timer-sheet-to-map-zoom-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/wolt-timer-sheet-to-map-zoom-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Wolt&#x27;s timer-to-map transition - the delivery timer sheet expands into a full-screen 3D map as the camera zooms out and tilts, following the courier between pins.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68858d5f73359ab611580633/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68858d5f73359ab611580633/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-wolt-timer-sheet-to-map-zoom-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Wolt&#x27;s timer-to-map transition - the delivery timer sheet expands into a full-screen 3D map as the camera zooms out and tilts, following the courier between pins.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A Wolt order screen: a Berlin map behind a bottom sheet holding the circular green delivery timer (&quot;16 minutes until delivered&quot;). Expanded state: full-screen map with a top banner (&quot;The courier is currently delivering earlier orders&quot;), a courier marker, the destination pin, and a &quot;Back to order status&quot; button.
+
+## Motion spec
+Pattern: sheet-to-fullscreen map zoom with camera tilt, ~700ms.
+- Trigger: tapping the map (or its expand affordance) slides the timer sheet down and off (spring ~340/26, 400ms) while the map expands to full-bleed under it - the map is visible throughout, no cut.
+- Camera: the map camera eases to a wider zoom (about 2 zoom levels) with a pitch tilt toward ~45deg (600ms, ease-in-out), both animated together so the city tips into perspective.
+- Follow: the camera then drifts between the courier marker and destination pin (1.2s pans, ease-in-out) keeping both in frame.
+- Controls: the banner and Back button fade in over the map (250ms) after the camera settles.
+- Back: reverses - camera returns to the sheet framing as the sheet springs back up.
+
+## Calibration
+- Sheet dismissal and camera move overlap; neither waits for the other.
+- Tilt and zoom are coupled - never zoom flat then tilt.
+
+## Reduced motion
+Fade between states; camera jumps to final framing.
+
+## Don&#x27;t miss
+- The map never reloads or tiles-pop during the transition - it is the same map instance.
+- The timer ring keeps counting while the sheet is visible.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">sheet-to-fullscreen map zoom with camera tilt, ~700ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/wolt-timer-sheet-to-map-zoom-interaction">original interaction</a> by Wolt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Wolt's timer-to-map transition - the delivery timer sheet expands into a full-screen 3D map as the camera zooms out and tilts, following the courier between pins.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA Wolt order screen: a Berlin map behind a bottom sheet holding the circular green delivery timer (\"16 minutes until delivered\"). Expanded state: full-screen map with a top banner (\"The courier is currently delivering earlier orders\"), a courier marker, the destination pin, and a \"Back to order status\" button.\n\n## Motion spec\nPattern: sheet-to-fullscreen map zoom with camera tilt, ~700ms.\n- Trigger: tapping the map (or its expand affordance) slides the timer sheet down and off (spring ~340/26, 400ms) while the map expands to full-bleed under it - the map is visible throughout, no cut.\n- Camera: the map camera eases to a wider zoom (about 2 zoom levels) with a pitch tilt toward ~45deg (600ms, ease-in-out), both animated together so the city tips into perspective.\n- Follow: the camera then drifts between the courier marker and destination pin (1.2s pans, ease-in-out) keeping both in frame.\n- Controls: the banner and Back button fade in over the map (250ms) after the camera settles.\n- Back: reverses - camera returns to the sheet framing as the sheet springs back up.\n\n## Calibration\n- Sheet dismissal and camera move overlap; neither waits for the other.\n- Tilt and zoom are coupled - never zoom flat then tilt.\n\n## Reduced motion\nFade between states; camera jumps to final framing.\n\n## Don't miss\n- The map never reloads or tiles-pop during the transition - it is the same map instance.\n- The timer ring keeps counting while the sheet is visible."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uber Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Uber Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/uber-splash"><b>Uber</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/uber-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/uber-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Uber&#x27;s splash - the wordmark holds on black, then a vertical white road line draws down center-screen and splits open, expanding horizontally to reveal the white home UI.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb7b371d29849d7bcf2f/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb7b371d29849d7bcf2f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-uber-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Uber&#x27;s splash - the wordmark holds on black, then a vertical white road line draws down center-screen and splits open, expanding horizontally to reveal the white home UI.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A black splash with the white &quot;Uber&quot; wordmark. A thin white vertical line (a stylized road with a center dash) draws from top to bottom, then the road&#x27;s two edges split apart left and right, widening a white corridor that becomes the home screen: &quot;Uber&quot; header, &quot;Where to?&quot; search bar, skeleton suggestion cards, and the tab bar.
+
+## Motion spec
+Pattern: road-split reveal.
+- The wordmark holds 600ms, then fades slightly (to 70%) as the road line draws down (stroke reveal, 350ms, ease-in).
+- The split: the road&#x27;s edges part horizontally (cubic-bezier(0.7,0,0.2,1), 550ms), each edge carrying a slice of white that stretches into the full background - the black peels away to the sides like opening doors.
+- Inside the widening corridor the home UI fades in (300ms, starting 200ms into the split): search bar first, then skeleton cards staggering downward (60ms apart, fade + translateY 8px).
+- The wordmark crossfades into the small &quot;Uber&quot; header text - same position band, so the logo never jumps.
+- The tab bar slides up last (translateY 100% to 0, 250ms) as the split completes; skeleton cards shimmer (a light sweep, 1.2s loop) until content loads.
+
+## Calibration
+- Strictly black and white until the home UI arrives - no gray in the transition itself.
+- The road line is 2 strokes (edges) + center dashes; the dashes scroll subtly while the line draws (road-moving feel).
+
+## Reduced motion
+Simple crossfade from splash to home.
+
+## Don&#x27;t miss
+- The reveal is centered and symmetrical - both halves open together at the same rate.
+- The corridor&#x27;s leading edges are hard vertical lines; no curves, no wipes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">road-split reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/uber-splash">original interaction</a> by Uber. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Uber's splash - the wordmark holds on black, then a vertical white road line draws down center-screen and splits open, expanding horizontally to reveal the white home UI.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA black splash with the white \"Uber\" wordmark. A thin white vertical line (a stylized road with a center dash) draws from top to bottom, then the road's two edges split apart left and right, widening a white corridor that becomes the home screen: \"Uber\" header, \"Where to?\" search bar, skeleton suggestion cards, and the tab bar.\n\n## Motion spec\nPattern: road-split reveal.\n- The wordmark holds 600ms, then fades slightly (to 70%) as the road line draws down (stroke reveal, 350ms, ease-in).\n- The split: the road's edges part horizontally (cubic-bezier(0.7,0,0.2,1), 550ms), each edge carrying a slice of white that stretches into the full background - the black peels away to the sides like opening doors.\n- Inside the widening corridor the home UI fades in (300ms, starting 200ms into the split): search bar first, then skeleton cards staggering downward (60ms apart, fade + translateY 8px).\n- The wordmark crossfades into the small \"Uber\" header text - same position band, so the logo never jumps.\n- The tab bar slides up last (translateY 100% to 0, 250ms) as the split completes; skeleton cards shimmer (a light sweep, 1.2s loop) until content loads.\n\n## Calibration\n- Strictly black and white until the home UI arrives - no gray in the transition itself.\n- The road line is 2 strokes (edges) + center dashes; the dashes scroll subtly while the line draws (road-moving feel).\n\n## Reduced motion\nSimple crossfade from splash to home.\n\n## Don't miss\n- The reveal is centered and symmetrical - both halves open together at the same rate.\n- The corridor's leading edges are hard vertical lines; no curves, no wipes."</script>
+</body></html>

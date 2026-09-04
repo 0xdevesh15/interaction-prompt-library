@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Breathwrk Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Breathwrk Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/breathwrk-onboarding"><b>Breathwrk</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/breathwrk-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/breathwrk-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Breathwrk&#x27;s guided-breath onboarding - typewriter welcome copy (&quot;Welcome to Breathwrk! Let&#x27;s quickly teach you the basics in less than 90 seconds.&quot;) with a Start button, then a pulsing concentric-circle breath guide with Inhale/Exhale cues.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3d6624f4744434db4d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e47b3d6624f4744434db4d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-breathwrk-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Breathwrk&#x27;s guided-breath onboarding - typewriter welcome copy (&quot;Welcome to Breathwrk! Let&#x27;s quickly teach you the basics in less than 90 seconds.&quot;) with a Start button, then a pulsing concentric-circle breath guide with Inhale/Exhale cues.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark green-black screens: streak/points header, typewriter paragraph, white Start circle flanked by small icons. Breath stage: concentric gray rings around a center circle labeled &quot;Inhale&quot;/&quot;Exhale&quot;, caption below (&quot;Inhale through your nose&quot; / &quot;Exhale slowly through your mouth&quot;).
+
+## Motion spec
+Pattern: typewriter intro + breath-pacing rings.
+- Welcome text types in (~35ms per character) with a block cursor; Start circle pulses gently (scale 1 -&gt; 1.05, 1.6s loop) once typing finishes.
+- Tap Start: text fades (250ms), rings fade in from center (400ms).
+- Inhale phase (~4s): rings expand outward (scale 1 -&gt; 1.35, ease-in-out), center label crossfades to &quot;Inhale&quot;, caption &quot;Inhale through your nose&quot; fades up.
+- Exhale phase (~4s): rings contract back (scale 1.35 -&gt; 1, ease-in-out), label swaps to &quot;Exhale&quot;, caption changes.
+- The cycle loops; a faint glow on the outer ring brightens at full inhale and dims at full exhale.
+
+## Calibration
+- Ring expansion and breath phase timing are identical - the visual IS the pacer, no independent timing.
+- Label swaps happen at the extremes, never mid-phase.
+
+## Reduced motion
+Rings hold at mid-scale; phase changes shown by label + caption only.
+
+## Don&#x27;t miss
+- The center circle is the only solid element; rings are translucent washes.
+- Captions are instructional and change with phase - keep nose/mouth wording distinct.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">typewriter intro + breath-pacing rings.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/breathwrk-onboarding">original interaction</a> by Breathwrk. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Breathwrk's guided-breath onboarding - typewriter welcome copy (\"Welcome to Breathwrk! Let's quickly teach you the basics in less than 90 seconds.\") with a Start button, then a pulsing concentric-circle breath guide with Inhale/Exhale cues.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark green-black screens: streak/points header, typewriter paragraph, white Start circle flanked by small icons. Breath stage: concentric gray rings around a center circle labeled \"Inhale\"/\"Exhale\", caption below (\"Inhale through your nose\" / \"Exhale slowly through your mouth\").\n\n## Motion spec\nPattern: typewriter intro + breath-pacing rings.\n- Welcome text types in (~35ms per character) with a block cursor; Start circle pulses gently (scale 1 -> 1.05, 1.6s loop) once typing finishes.\n- Tap Start: text fades (250ms), rings fade in from center (400ms).\n- Inhale phase (~4s): rings expand outward (scale 1 -> 1.35, ease-in-out), center label crossfades to \"Inhale\", caption \"Inhale through your nose\" fades up.\n- Exhale phase (~4s): rings contract back (scale 1.35 -> 1, ease-in-out), label swaps to \"Exhale\", caption changes.\n- The cycle loops; a faint glow on the outer ring brightens at full inhale and dims at full exhale.\n\n## Calibration\n- Ring expansion and breath phase timing are identical - the visual IS the pacer, no independent timing.\n- Label swaps happen at the extremes, never mid-phase.\n\n## Reduced motion\nRings hold at mid-scale; phase changes shown by label + caption only.\n\n## Don't miss\n- The center circle is the only solid element; rings are translucent washes.\n- Captions are instructional and change with phase - keep nose/mouth wording distinct."</script>
+</body></html>

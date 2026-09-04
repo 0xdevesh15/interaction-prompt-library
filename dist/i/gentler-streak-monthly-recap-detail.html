@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gentler Streak Monthly Recap Detail - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Gentler Streak Monthly Recap Detail</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/gentler-streak-monthly-recap-detail"><b>Gentler Streak</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-monthly-recap-detail">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/gentler-streak-monthly-recap-detail">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Gentler Streak&#x27;s monthly recap - a scroll-driven story where each stat section staggers in: active-days area chart, activity dot grid, duration stack, mascot illustration, calorie donut, food-emoji wall, and distance bars.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1961d73e2622b35624/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd1961d73e2622b35624/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-gentler-streak-monthly-recap-detail.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Gentler Streak&#x27;s monthly recap - a scroll-driven story where each stat section staggers in: active-days area chart, activity dot grid, duration stack, mascot illustration, calorie donut, food-emoji wall, and distance bars.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The &quot;July 2024&quot; recap detail (from Insights &gt; My Activity Recaps): stacked full-width sections - &quot;21 days&quot; with a green dotted area chart and running mascot, &quot;34 activities&quot; with a dot grid, &quot;23h 6m&quot; with stacked duration bars, a mascot-riding illustration with &quot;Strength Training&quot;, &quot;9,718 kcal&quot; with a donut, a red &quot;food you&#x27;ve burned&quot; wall of burger/emoji rows, and &quot;27.22 km&quot; with horizontal distance bars.
+
+## Motion spec
+Pattern: scroll-triggered staggered section reveals.
+- Each section enters when ~20% visible: its background block slides up (translateY 30px to 0, 350ms, ease-out) while the big number ticks up from zero (600ms, ease-out) and the label fades after (150ms delay).
+- Charts animate on entry, once: the dotted area chart draws left to right (stroke, 800ms) with dots popping (scale 0 to 1, spring ~460/22, 20ms apart along the path); the activity dot grid fills in random order (30ms per dot); the donut sweeps to its arcs (700ms, ease-in-out); distance bars grow width-wise with 80ms stagger.
+- The mascot illustrations bob gently (translateY +-5px, 2.2s sine) after entering.
+- The food wall: emoji rows slide in alternating from left and right (250ms each row, 60ms stagger) on the red background.
+- Header (&quot;July 2024&quot; + Share) stays pinned; sections pass beneath it.
+
+## Calibration
+- Every animation is enter-once; scrolling back up never replays or reverses.
+- Numbers tick with tabular alignment - no layout wobble as digits grow.
+
+## Reduced motion
+Sections fade in; numbers set instantly.
+
+## Don&#x27;t miss
+- Each section owns its background color (green, white, red/pink) - the color blocks are full-bleed.
+- The donut&#x27;s legend values tick up in sync with the sweep, not after it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">scroll-triggered staggered section reveals.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/gentler-streak-monthly-recap-detail">original interaction</a> by Gentler Streak. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Gentler Streak's monthly recap - a scroll-driven story where each stat section staggers in: active-days area chart, activity dot grid, duration stack, mascot illustration, calorie donut, food-emoji wall, and distance bars.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe \"July 2024\" recap detail (from Insights > My Activity Recaps): stacked full-width sections - \"21 days\" with a green dotted area chart and running mascot, \"34 activities\" with a dot grid, \"23h 6m\" with stacked duration bars, a mascot-riding illustration with \"Strength Training\", \"9,718 kcal\" with a donut, a red \"food you've burned\" wall of burger/emoji rows, and \"27.22 km\" with horizontal distance bars.\n\n## Motion spec\nPattern: scroll-triggered staggered section reveals.\n- Each section enters when ~20% visible: its background block slides up (translateY 30px to 0, 350ms, ease-out) while the big number ticks up from zero (600ms, ease-out) and the label fades after (150ms delay).\n- Charts animate on entry, once: the dotted area chart draws left to right (stroke, 800ms) with dots popping (scale 0 to 1, spring ~460/22, 20ms apart along the path); the activity dot grid fills in random order (30ms per dot); the donut sweeps to its arcs (700ms, ease-in-out); distance bars grow width-wise with 80ms stagger.\n- The mascot illustrations bob gently (translateY +-5px, 2.2s sine) after entering.\n- The food wall: emoji rows slide in alternating from left and right (250ms each row, 60ms stagger) on the red background.\n- Header (\"July 2024\" + Share) stays pinned; sections pass beneath it.\n\n## Calibration\n- Every animation is enter-once; scrolling back up never replays or reverses.\n- Numbers tick with tabular alignment - no layout wobble as digits grow.\n\n## Reduced motion\nSections fade in; numbers set instantly.\n\n## Don't miss\n- Each section owns its background color (green, white, red/pink) - the color blocks are full-bleed.\n- The donut's legend values tick up in sync with the sweep, not after it."</script>
+</body></html>

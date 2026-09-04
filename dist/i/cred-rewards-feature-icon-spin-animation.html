@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Rewards Feature Icon Spin Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Rewards Feature Icon Spin Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-rewards-feature-icon-spin-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-rewards-feature-icon-spin-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-rewards-feature-icon-spin-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: CRED&#x27;s rewards teaser - the rewards icon in the home list periodically spins like slot-machine reels, lands on 7-7-7, and settles back, while the rest of the screen stays still.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9b119535c52efbc812d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68a5f9b119535c52efbc812d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-rewards-feature-icon-spin-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: CRED&#x27;s rewards teaser - the rewards icon in the home list periodically spins like slot-machine reels, lands on 7-7-7, and settles back, while the rest of the screen stays still.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED home (light theme): greeting header, card banner, rewards list rows with small circular icons, &quot;Daily Rewards&quot; cards near the bottom, and the tab bar; one rewards row carries the spinning slot element.
+
+## Motion spec
+Pattern: idle slot-machine spin, ~1.6s cycle.
+- Idle: the icon rests as the plain rewards glyph for ~4s.
+- Spin: three mini reels inside the icon blur into a vertical spin - each reel starts 80ms apart (top to bottom) and spins fast (symbols streaking, ~10 symbols/s).
+- Stop: reels land one at a time (top, middle, bottom, 120ms apart) with a small bounce (spring ~460/16) on 7-7-7 in green.
+- Hold: the 7-7-7 result holds 800ms, then the icon flips back to the resting glyph (250ms crossfade).
+- Everything else on screen is static - the animation is confined to the icon.
+
+## Calibration
+- The spin lives entirely inside the icon&#x27;s bounds - no layout shift.
+- Reels decelerate into their stops; none snaps.
+
+## Reduced motion
+Static icon; no spin cycle.
+
+## Don&#x27;t miss
+- The staggered reel stops - top settles first, bottom last.
+- The result is always 7-7-7 in green; this is a teaser, not a game.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">idle slot-machine spin, ~1.6s cycle.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-rewards-feature-icon-spin-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: CRED's rewards teaser - the rewards icon in the home list periodically spins like slot-machine reels, lands on 7-7-7, and settles back, while the rest of the screen stays still.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED home (light theme): greeting header, card banner, rewards list rows with small circular icons, \"Daily Rewards\" cards near the bottom, and the tab bar; one rewards row carries the spinning slot element.\n\n## Motion spec\nPattern: idle slot-machine spin, ~1.6s cycle.\n- Idle: the icon rests as the plain rewards glyph for ~4s.\n- Spin: three mini reels inside the icon blur into a vertical spin - each reel starts 80ms apart (top to bottom) and spins fast (symbols streaking, ~10 symbols/s).\n- Stop: reels land one at a time (top, middle, bottom, 120ms apart) with a small bounce (spring ~460/16) on 7-7-7 in green.\n- Hold: the 7-7-7 result holds 800ms, then the icon flips back to the resting glyph (250ms crossfade).\n- Everything else on screen is static - the animation is confined to the icon.\n\n## Calibration\n- The spin lives entirely inside the icon's bounds - no layout shift.\n- Reels decelerate into their stops; none snaps.\n\n## Reduced motion\nStatic icon; no spin cycle.\n\n## Don't miss\n- The staggered reel stops - top settles first, bottom last.\n- The result is always 7-7-7 in green; this is a teaser, not a game."</script>
+</body></html>

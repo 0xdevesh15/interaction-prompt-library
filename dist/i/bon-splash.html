@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BON Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BON Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bon-splash"><b>Bon</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bon-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bon-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BON&#x27;s splash - a small white circle holding the black flower logo scales up until the flower fills the screen inverted, then wipes to the white home screen with the BON wordmark.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3de8accd819e8e5b1def/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694a3de8accd819e8e5b1def/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bon-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BON&#x27;s splash - a small white circle holding the black flower logo scales up until the flower fills the screen inverted, then wipes to the white home screen with the BON wordmark.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Stage 1: a black screen with a small white circle at center containing the black five-petal flower mark. Mid-transition: the circle grows until the flower itself is the full-screen graphic (black flower on white). Stage 2: a clean white screen with the centered &quot;BON&quot; wordmark in black and the status bar visible.
+
+## Motion spec
+Pattern: logo circle scale-up reveal from black splash to white home.
+- The white circle fades in at center (scale 0.8 -&gt; 1, 300ms) on the black field and holds for ~600ms.
+- The circle then scales up aggressively (scale 1 -&gt; 3.2, 500ms, ease-in) so the flower grows past the frame edges - at peak the screen reads as a giant black flower on white (the inversion happens inside the growing circle, not as a color flip).
+- As the flower&#x27;s petals reach the screen edges, the black outside the circle wipes away in one quick radial sweep (250ms), settling the white background.
+- The &quot;BON&quot; wordmark fades in at center (opacity 0 -&gt; 1 with a 6px rise, 300ms) as the sweep finishes; the status bar fades in with it (200ms).
+- Total sequence ~2s, then it holds - no looping.
+
+## Calibration
+- The flower is solid black with five rounded petals and a small center dot - keep it geometric, no gradients.
+- The scale-up accelerates (ease-in) - the snap into the full-screen flower is the payoff.
+
+## Reduced motion
+Simple 300ms crossfade from the black logo splash to the white BON screen.
+
+## Don&#x27;t miss
+- The transition inverts the mark: white-circle-with-black-flower becomes black-flower-on-white - both directions of the figure-ground must read cleanly.
+- The home screen is stark: white field, centered black BON, nothing else.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">logo circle scale-up reveal from black splash to white home.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bon-splash">original interaction</a> by Bon. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BON's splash - a small white circle holding the black flower logo scales up until the flower fills the screen inverted, then wipes to the white home screen with the BON wordmark.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nStage 1: a black screen with a small white circle at center containing the black five-petal flower mark. Mid-transition: the circle grows until the flower itself is the full-screen graphic (black flower on white). Stage 2: a clean white screen with the centered \"BON\" wordmark in black and the status bar visible.\n\n## Motion spec\nPattern: logo circle scale-up reveal from black splash to white home.\n- The white circle fades in at center (scale 0.8 -> 1, 300ms) on the black field and holds for ~600ms.\n- The circle then scales up aggressively (scale 1 -> 3.2, 500ms, ease-in) so the flower grows past the frame edges - at peak the screen reads as a giant black flower on white (the inversion happens inside the growing circle, not as a color flip).\n- As the flower's petals reach the screen edges, the black outside the circle wipes away in one quick radial sweep (250ms), settling the white background.\n- The \"BON\" wordmark fades in at center (opacity 0 -> 1 with a 6px rise, 300ms) as the sweep finishes; the status bar fades in with it (200ms).\n- Total sequence ~2s, then it holds - no looping.\n\n## Calibration\n- The flower is solid black with five rounded petals and a small center dot - keep it geometric, no gradients.\n- The scale-up accelerates (ease-in) - the snap into the full-screen flower is the payoff.\n\n## Reduced motion\nSimple 300ms crossfade from the black logo splash to the white BON screen.\n\n## Don't miss\n- The transition inverts the mark: white-circle-with-black-flower becomes black-flower-on-white - both directions of the figure-ground must read cleanly.\n- The home screen is stark: white field, centered black BON, nothing else."</script>
+</body></html>

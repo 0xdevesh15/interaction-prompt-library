@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Compass Target Score Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Compass Target Score Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-compass-target-score-slider-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-compass-target-score-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-compass-target-score-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s target score slider - on a light &quot;set a target score&quot; screen, dragging along a 3D arc around the big score number scrubs the value (765 to 806 and back), a green gradient glow intensifying with the score, a floating badge tracking the arc position, and the number springing to rest when released.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67bff687ec1f99cb1ce853bc/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67bff687ec1f99cb1ce853bc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-compass-target-score-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s target score slider - on a light &quot;set a target score&quot; screen, dragging along a 3D arc around the big score number scrubs the value (765 to 806 and back), a green gradient glow intensifying with the score, a floating badge tracking the arc position, and the number springing to rest when released.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light screen with &quot;set a target score&quot; header. Center: a huge score number (range shown 765-806) wrapped by a circular arc track; a green gradient segment fills the arc up to the current value with a glow at its tip. A small floating badge rides the arc. Below: explainer text and a dark &quot;Set target&quot; button.
+
+## Motion spec
+Pattern: arc drag with spring settle and reactive glow.
+- Drag on the arc: the value tracks the touch angle (full arc maps the score range), the number ticking live with digit roll.
+- The green segment extends/retracts with the value, its tip glowing brighter at higher scores (glow radius 8 -&gt; 20pt, hue shifting lime -&gt; emerald).
+- The floating badge follows the arc tip with a spring lag (~380/20), bobbing as it catches up.
+- Release: the value snaps to the nearest whole number (spring ~340/18) with a subtle haptic-like tick at each detent.
+- The arc has 3D depth: the track tilts slightly toward the viewer (rotateX ~8deg) and the glow casts on it.
+
+## Calibration
+- The number is always legible - the arc never passes under the digits.
+- The glow is the emotional readout: low scores barely glow, 800+ shines.
+
+## Reduced motion
+Value changes by tap on +/- regions with a 200ms digit fade; no glow animation.
+
+## Don&#x27;t miss
+- The badge never overlaps the number - it rides outside the arc.
+- The arc ends have rounded caps and the track shows faint tick marks.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">arc drag with spring settle and reactive glow.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-compass-target-score-slider-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's target score slider - on a light \"set a target score\" screen, dragging along a 3D arc around the big score number scrubs the value (765 to 806 and back), a green gradient glow intensifying with the score, a floating badge tracking the arc position, and the number springing to rest when released.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight screen with \"set a target score\" header. Center: a huge score number (range shown 765-806) wrapped by a circular arc track; a green gradient segment fills the arc up to the current value with a glow at its tip. A small floating badge rides the arc. Below: explainer text and a dark \"Set target\" button.\n\n## Motion spec\nPattern: arc drag with spring settle and reactive glow.\n- Drag on the arc: the value tracks the touch angle (full arc maps the score range), the number ticking live with digit roll.\n- The green segment extends/retracts with the value, its tip glowing brighter at higher scores (glow radius 8 -> 20pt, hue shifting lime -> emerald).\n- The floating badge follows the arc tip with a spring lag (~380/20), bobbing as it catches up.\n- Release: the value snaps to the nearest whole number (spring ~340/18) with a subtle haptic-like tick at each detent.\n- The arc has 3D depth: the track tilts slightly toward the viewer (rotateX ~8deg) and the glow casts on it.\n\n## Calibration\n- The number is always legible - the arc never passes under the digits.\n- The glow is the emotional readout: low scores barely glow, 800+ shines.\n\n## Reduced motion\nValue changes by tap on +/- regions with a 200ms digit fade; no glow animation.\n\n## Don't miss\n- The badge never overlaps the number - it rides outside the arc.\n- The arc ends have rounded caps and the track shows faint tick marks."</script>
+</body></html>

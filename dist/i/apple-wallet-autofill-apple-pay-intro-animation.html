@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Wallet Autofill Apple Pay Intro Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Wallet Autofill Apple Pay Intro Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-wallet-autofill-apple-pay-intro-animation"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-wallet-autofill-apple-pay-intro-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-wallet-autofill-apple-pay-intro-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Apple Wallet&#x27;s AutoFill intro - three mini payment cards appear, stack together, morph into the colorful Wallet card-stack icon, then resolve into a blue checkmark.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdbffc582b7d20c0d90/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6980cbdbffc582b7d20c0d90/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-wallet-autofill-apple-pay-intro-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Apple Wallet&#x27;s AutoFill intro - three mini payment cards appear, stack together, morph into the colorful Wallet card-stack icon, then resolve into a blue checkmark.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Apple Wallet sheet, light grey: animation stage on top, &quot;Use AutoFill Cards with Apple Pay&quot; + explainer copy below. The stage plays: three small cards (blue •••• 4369, yellow •••• 6106, red •••• 6933), then a merged stack icon (blue/yellow/red rounded layers), then a blue ring with a checkmark.
+
+## Motion spec
+Pattern: cards stack, morph into the Wallet icon, then resolve to a checkmark.
+- The three mini cards fade/slide in staggered (translateY 12 -&gt; 0, 250ms each, 120ms apart) and hover slightly offset.
+- They converge into a vertical stack (translate to center, 350ms ease-in-out), overlapping with ~10px offsets - a neat deck.
+- The deck morphs: the three cards squash vertically and their shapes melt into the Wallet icon&#x27;s layered silhouette (blue top, yellow middle, red bottom with the rounded tab cut) - a continuous shape interpolation over 400ms, colors preserved per layer.
+- The icon holds 500ms, then its layers collapse upward (scaleY -&gt; 0.1, 250ms) as a blue ring draws on (stroke, 300ms) and the check draws inside it (stroke, 250ms, 100ms later).
+- The completed check does one soft pulse (scale 1 -&gt; 1.08 -&gt; 1, 300ms) and rests.
+
+## Calibration
+- Layer colors stay pure Apple blue/yellow/red through the morph - no muddy in-betweens.
+- The number chips (•••• xxxx) on the mini cards fade out during the converge, before the melt.
+
+## Reduced motion
+The three states crossfade (300ms each) without shape morphing.
+
+## Don&#x27;t miss
+- The melt is the signature move - cards must read as becoming the icon, not being replaced by it.
+- The check&#x27;s ring and stroke draw in the same blue; the whole sequence loops back to the three cards after a 1s hold.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cards stack, morph into the Wallet icon, then resolve to a checkmark.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-wallet-autofill-apple-pay-intro-animation">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Apple Wallet's AutoFill intro - three mini payment cards appear, stack together, morph into the colorful Wallet card-stack icon, then resolve into a blue checkmark.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nApple Wallet sheet, light grey: animation stage on top, \"Use AutoFill Cards with Apple Pay\" + explainer copy below. The stage plays: three small cards (blue \u2022\u2022\u2022\u2022 4369, yellow \u2022\u2022\u2022\u2022 6106, red \u2022\u2022\u2022\u2022 6933), then a merged stack icon (blue/yellow/red rounded layers), then a blue ring with a checkmark.\n\n## Motion spec\nPattern: cards stack, morph into the Wallet icon, then resolve to a checkmark.\n- The three mini cards fade/slide in staggered (translateY 12 -> 0, 250ms each, 120ms apart) and hover slightly offset.\n- They converge into a vertical stack (translate to center, 350ms ease-in-out), overlapping with ~10px offsets - a neat deck.\n- The deck morphs: the three cards squash vertically and their shapes melt into the Wallet icon's layered silhouette (blue top, yellow middle, red bottom with the rounded tab cut) - a continuous shape interpolation over 400ms, colors preserved per layer.\n- The icon holds 500ms, then its layers collapse upward (scaleY -> 0.1, 250ms) as a blue ring draws on (stroke, 300ms) and the check draws inside it (stroke, 250ms, 100ms later).\n- The completed check does one soft pulse (scale 1 -> 1.08 -> 1, 300ms) and rests.\n\n## Calibration\n- Layer colors stay pure Apple blue/yellow/red through the morph - no muddy in-betweens.\n- The number chips (\u2022\u2022\u2022\u2022 xxxx) on the mini cards fade out during the converge, before the melt.\n\n## Reduced motion\nThe three states crossfade (300ms each) without shape morphing.\n\n## Don't miss\n- The melt is the signature move - cards must read as becoming the icon, not being replaced by it.\n- The check's ring and stroke draw in the same blue; the whole sequence loops back to the three cards after a 1s hold."</script>
+</body></html>

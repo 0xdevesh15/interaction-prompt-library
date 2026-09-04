@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Boring Habits Onboarding - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Not Boring Habits Onboarding</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/not-boring-habits-onboarding"><b>Not Boring</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-habits-onboarding">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-habits-onboarding">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Not Boring Habits&#x27; onboarding - a story-driven sequence of bold all-caps statements that shove each other off screen, with confetti particles and a giant &quot;66&quot; centerpiece.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b785a3371d29849d8bb2a7/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b785a3371d29849d8bb2a7/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-not-boring-habits-onboarding.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Not Boring Habits&#x27; onboarding - a story-driven sequence of bold all-caps statements that shove each other off screen, with confetti particles and a giant &quot;66&quot; centerpiece.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black background, centered bold condensed white caps text. The story beats: &quot;WANT TO KNOW THE SECRET TO BUILDING BETTER HABITS...?&quot; / &quot;IT DOESN&#x27;T HAVE TO BE MISERABLE.&quot; / &quot;IT SIMPLY COMES DOWN TO REPETITION.&quot; / a giant outlined &quot;66&quot; with study copy wrapped around it / &quot;WE&#x27;RE YOUR GUIDE...&quot; with a white check disc / &quot;...REACH YOUR 66 REPETITIONS&quot; / &quot;UNTIL YOU&#x27;RE A MASTER OF YOUR NEW HABIT.&quot; / &quot;WHAT SMALL THING COULD YOU DO EVERY DAY TO IMPROVE YOUR LIFE?&quot;
+
+## Motion spec
+Pattern: typographic story cards with 3D shove transitions.
+- Each statement holds ~1.8s, then the next shoves it away: the outgoing text rotates in 3D (rotateX -40deg) and falls/slides off while the incoming text swings in from the opposite side (rotateX 40deg to 0, 450ms, spring ~300/20) - like panels being swapped by hand.
+- Key words punctuate with a scale pop (scale 0.9 to 1.05 to 1, spring ~420/18) as they land.
+- On the &quot;REPETITION&quot; beat: yellow confetti particles burst from the text (20-30 pieces, gravity + drift, 1.2s) and a few linger falling into the next beat.
+- The &quot;66&quot; beat: the numeral scales in huge from 0.6 (spring ~280/16, overshoot), rendered as an outline stroke; copy lines stagger around it (translateY 10px, 200ms, 100ms apart).
+- The check-disc beat: a white circle scales in (spring ~380/20) and the black check draws itself (stroke-dash, 300ms).
+- A small &quot;TAP TO CONTINUE&quot; prompt pulses at the bottom (opacity 0.3 to 0.7, 1.2s); taps fast-forward to the next beat with the same shove.
+
+## Calibration
+- Text is always centered, always caps, always high contrast - the type IS the UI.
+- One idea per screen; never stack two statements.
+
+## Reduced motion
+Statements crossfade; no particles.
+
+## Don&#x27;t miss
+- The &quot;66&quot; is the hero beat - give it the biggest scale and the only numeral treatment.
+- Confetti is sparse and yellow only.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">typographic story cards with 3D shove transitions.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/not-boring-habits-onboarding">original interaction</a> by Not Boring. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Not Boring Habits' onboarding - a story-driven sequence of bold all-caps statements that shove each other off screen, with confetti particles and a giant \"66\" centerpiece.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack background, centered bold condensed white caps text. The story beats: \"WANT TO KNOW THE SECRET TO BUILDING BETTER HABITS...?\" / \"IT DOESN'T HAVE TO BE MISERABLE.\" / \"IT SIMPLY COMES DOWN TO REPETITION.\" / a giant outlined \"66\" with study copy wrapped around it / \"WE'RE YOUR GUIDE...\" with a white check disc / \"...REACH YOUR 66 REPETITIONS\" / \"UNTIL YOU'RE A MASTER OF YOUR NEW HABIT.\" / \"WHAT SMALL THING COULD YOU DO EVERY DAY TO IMPROVE YOUR LIFE?\"\n\n## Motion spec\nPattern: typographic story cards with 3D shove transitions.\n- Each statement holds ~1.8s, then the next shoves it away: the outgoing text rotates in 3D (rotateX -40deg) and falls/slides off while the incoming text swings in from the opposite side (rotateX 40deg to 0, 450ms, spring ~300/20) - like panels being swapped by hand.\n- Key words punctuate with a scale pop (scale 0.9 to 1.05 to 1, spring ~420/18) as they land.\n- On the \"REPETITION\" beat: yellow confetti particles burst from the text (20-30 pieces, gravity + drift, 1.2s) and a few linger falling into the next beat.\n- The \"66\" beat: the numeral scales in huge from 0.6 (spring ~280/16, overshoot), rendered as an outline stroke; copy lines stagger around it (translateY 10px, 200ms, 100ms apart).\n- The check-disc beat: a white circle scales in (spring ~380/20) and the black check draws itself (stroke-dash, 300ms).\n- A small \"TAP TO CONTINUE\" prompt pulses at the bottom (opacity 0.3 to 0.7, 1.2s); taps fast-forward to the next beat with the same shove.\n\n## Calibration\n- Text is always centered, always caps, always high contrast - the type IS the UI.\n- One idea per screen; never stack two statements.\n\n## Reduced motion\nStatements crossfade; no particles.\n\n## Don't miss\n- The \"66\" is the hero beat - give it the biggest scale and the only numeral treatment.\n- Confetti is sparse and yellow only."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sortd Intro Logo Vacuum Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Sortd Intro Logo Vacuum Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/sortd-intro-logo-vacuum-animation"><b>Sortd</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sortd-intro-logo-vacuum-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/sortd-intro-logo-vacuum-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Sortd&#x27;s intro - floating content cards get vacuumed into the bookmark logo, the logo tumbles, then app icons settle into orbit around it while the tagline types.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb03cf9807bdad9fb0796/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678cb03cf9807bdad9fb0796/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-sortd-intro-logo-vacuum-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Sortd&#x27;s intro - floating content cards get vacuumed into the bookmark logo, the logo tumbles, then app icons settle into orbit around it while the tagline types.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light intro screen: &quot;Sortd.&quot; wordmark, a typing tagline, a Get Started button, and a center stage where the bookmark logo plays out the sequence.
+
+## Motion spec
+Pattern: vacuum gather into orbit, ~5s sequence.
+- Content cards (photos, pages) hover near the stage top, then get sucked one by one into the bookmark&#x27;s top slit: each accelerates toward it, shrinking and tilting as it vanishes (300ms, ease-in).
+- After the last card, the bookmark tumbles forward once (360deg, 600ms, spring stiffness 200 damping 14) and lands with a small bounce.
+- App icons (social, browser, messaging) pop in around the logo (spring stiffness 320 damping 15, 70ms stagger) and settle onto a circular orbit, drifting slowly (~12s per revolution) with a +-4px bob.
+- Meanwhile the tagline types itself character by character (see typewriter pattern).
+
+## Calibration
+- The vacuum is an acceleration, not a constant glide - cards must visibly speed up as they fall in.
+- The tumble is one full rotation, then stillness; repeated spinning reads as a loader.
+
+## Reduced motion
+Cards fade into the logo; icons fade into orbit positions; tagline sets instantly.
+
+## Don&#x27;t miss
+- Icons orbit at different radii but a shared angular speed, so the constellation holds its shape.
+- The bookmark stays the visual center; the orbit drifts around it, never through it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vacuum gather into orbit, ~5s sequence.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/sortd-intro-logo-vacuum-animation">original interaction</a> by Sortd. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Sortd's intro - floating content cards get vacuumed into the bookmark logo, the logo tumbles, then app icons settle into orbit around it while the tagline types.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight intro screen: \"Sortd.\" wordmark, a typing tagline, a Get Started button, and a center stage where the bookmark logo plays out the sequence.\n\n## Motion spec\nPattern: vacuum gather into orbit, ~5s sequence.\n- Content cards (photos, pages) hover near the stage top, then get sucked one by one into the bookmark's top slit: each accelerates toward it, shrinking and tilting as it vanishes (300ms, ease-in).\n- After the last card, the bookmark tumbles forward once (360deg, 600ms, spring stiffness 200 damping 14) and lands with a small bounce.\n- App icons (social, browser, messaging) pop in around the logo (spring stiffness 320 damping 15, 70ms stagger) and settle onto a circular orbit, drifting slowly (~12s per revolution) with a +-4px bob.\n- Meanwhile the tagline types itself character by character (see typewriter pattern).\n\n## Calibration\n- The vacuum is an acceleration, not a constant glide - cards must visibly speed up as they fall in.\n- The tumble is one full rotation, then stillness; repeated spinning reads as a loader.\n\n## Reduced motion\nCards fade into the logo; icons fade into orbit positions; tagline sets instantly.\n\n## Don't miss\n- Icons orbit at different radii but a shared angular speed, so the constellation holds its shape.\n- The bookmark stays the visual center; the orbit drifts around it, never through it."</script>
+</body></html>

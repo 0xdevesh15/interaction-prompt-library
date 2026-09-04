@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clear Back Screen Morph - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Clear Back Screen Morph</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/clear-back-screen-morph"><b>Clear</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clear-back-screen-morph">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clear-back-screen-morph">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Clear&#x27;s pinch-out navigation - pinching a list zooms straight through it into the list-of-lists view, and pinching again lands on the main menu, each level scaling continuously through the last.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf5136a8ec7d01f57bf618/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66cf5136a8ec7d01f57bf618/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-clear-back-screen-morph.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Clear&#x27;s pinch-out navigation - pinching a list zooms straight through it into the list-of-lists view, and pinching again lands on the main menu, each level scaling continuously through the last.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Three zoom levels sharing one canvas: the item list (red-to-orange heat rows), &quot;My Lists&quot; (blue-gradient rows of lists), and the main menu (dark gray, big type: Clear, My Lists, Personalize, Rewards, Shop, Archive).
+
+## Motion spec
+Pattern: continuous pinch-zoom level morph.
+- Pinch out: the current level&#x27;s rows scale up and spread as the pinch opens (1:1 with pinch scale); row labels grow past their bounds and fade, like zooming into the paper grain.
+- As the pinch passes a level threshold, the parent level resolves underneath: its rows scale from ~1.3 down to 1 with a soft spring (~300/22) and fade in, so the transition feels like falling upward through the stack.
+- Reverse pinch in dives back down the same path - the child level scales up from small, fully reversible at any point mid-gesture.
+- Each level keeps its own accent palette (heat red / list blue / menu gray), which crossfades with the zoom.
+
+## Calibration
+- The gesture is scrubbable: no animation commits until the pinch clearly passes the midpoint between levels.
+- Text stays razor sharp through scaling - render at the final size and let transforms handle the zoom.
+
+## Reduced motion
+Levels crossfade with a modest scale (1.1 -&gt; 1).
+
+## Don&#x27;t miss
+- Mid-gesture you can see BOTH levels at once, one growing through the other - never a hard cut.
+- The menu level&#x27;s oversized type slides in with a slight stagger after landing.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous pinch-zoom level morph.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/clear-back-screen-morph">original interaction</a> by Clear. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Clear's pinch-out navigation - pinching a list zooms straight through it into the list-of-lists view, and pinching again lands on the main menu, each level scaling continuously through the last.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThree zoom levels sharing one canvas: the item list (red-to-orange heat rows), \"My Lists\" (blue-gradient rows of lists), and the main menu (dark gray, big type: Clear, My Lists, Personalize, Rewards, Shop, Archive).\n\n## Motion spec\nPattern: continuous pinch-zoom level morph.\n- Pinch out: the current level's rows scale up and spread as the pinch opens (1:1 with pinch scale); row labels grow past their bounds and fade, like zooming into the paper grain.\n- As the pinch passes a level threshold, the parent level resolves underneath: its rows scale from ~1.3 down to 1 with a soft spring (~300/22) and fade in, so the transition feels like falling upward through the stack.\n- Reverse pinch in dives back down the same path - the child level scales up from small, fully reversible at any point mid-gesture.\n- Each level keeps its own accent palette (heat red / list blue / menu gray), which crossfades with the zoom.\n\n## Calibration\n- The gesture is scrubbable: no animation commits until the pinch clearly passes the midpoint between levels.\n- Text stays razor sharp through scaling - render at the final size and let transforms handle the zoom.\n\n## Reduced motion\nLevels crossfade with a modest scale (1.1 -> 1).\n\n## Don't miss\n- Mid-gesture you can see BOTH levels at once, one growing through the other - never a hard cut.\n- The menu level's oversized type slides in with a slight stagger after landing."</script>
+</body></html>

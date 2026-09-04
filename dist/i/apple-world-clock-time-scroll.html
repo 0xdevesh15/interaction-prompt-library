@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple World Clock Time Scroll - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple World Clock Time Scroll</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-world-clock-time-scroll"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-world-clock-time-scroll">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-world-clock-time-scroll">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Watch World Clock time scroll - turning the crown scrubs through the hours while the whole face responds: sky gradient shifts through day/dusk/night, the dotted world map&#x27;s terminator line slides, and the big time readout rolls.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e4710698a6ede244b09b34/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66e4710698a6ede244b09b34/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-world-clock-time-scroll.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Watch World Clock time scroll - turning the crown scrubs through the hours while the whole face responds: sky gradient shifts through day/dusk/night, the dotted world map&#x27;s terminator line slides, and the big time readout rolls.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Watch face: X button top-left, small current time top-right, scrubbed time in yellow, a dotted world map band with the day/night terminator curve, &quot;Current Location&quot;/&quot;Bengaluru&quot; label, large time readout, &quot;Today&quot; sublabel.
+
+## Motion spec
+Pattern: crown-scrubbed time travel.
+- Scrub: the big time rolls digit-wheel style (each digit translates vertically, ~150ms per step) tracking the crown with no lag; minutes tick in 15-min steps with haptic detents.
+- The background sky gradient cross-fades continuously through keyed stops: bright blue (morning), pale cyan (midday), orange-magenta (dusk ~6:30PM), deep navy (night) - interpolated per scrubbed hour, not snapped.
+- The terminator curve on the map translates horizontally with the scrubbed hour (24h = full map width) and its soft edge breathes slightly (blur 2-6px) near dawn/dusk.
+- City dots on the map twinkle brighter during night hours (opacity 0.4 -&gt; 1).
+- Location label swaps (&quot;Current Location&quot; -&gt; &quot;Bengaluru&quot;) with a 200ms crossfade when context changes.
+- Idle 2s: the readout gently settles back toward real time (500ms ease).
+
+## Calibration
+- Every visual (sky, terminator, dots) derives from the same scrubbed hour value - they never disagree.
+- Dusk and dawn stops must hit at plausible hours; the orange band is narrow (~1h wide).
+
+## Reduced motion
+Sky snaps per stop instead of interpolating; digit roll becomes a crossfade.
+
+## Don&#x27;t miss
+- The map is rendered in dots (dotted-matrix style), not solid continents.
+- Yellow is reserved for the scrubbed time; the real time stays small and white top-right.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">crown-scrubbed time travel.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-world-clock-time-scroll">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Watch World Clock time scroll - turning the crown scrubs through the hours while the whole face responds: sky gradient shifts through day/dusk/night, the dotted world map's terminator line slides, and the big time readout rolls.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWatch face: X button top-left, small current time top-right, scrubbed time in yellow, a dotted world map band with the day/night terminator curve, \"Current Location\"/\"Bengaluru\" label, large time readout, \"Today\" sublabel.\n\n## Motion spec\nPattern: crown-scrubbed time travel.\n- Scrub: the big time rolls digit-wheel style (each digit translates vertically, ~150ms per step) tracking the crown with no lag; minutes tick in 15-min steps with haptic detents.\n- The background sky gradient cross-fades continuously through keyed stops: bright blue (morning), pale cyan (midday), orange-magenta (dusk ~6:30PM), deep navy (night) - interpolated per scrubbed hour, not snapped.\n- The terminator curve on the map translates horizontally with the scrubbed hour (24h = full map width) and its soft edge breathes slightly (blur 2-6px) near dawn/dusk.\n- City dots on the map twinkle brighter during night hours (opacity 0.4 -> 1).\n- Location label swaps (\"Current Location\" -> \"Bengaluru\") with a 200ms crossfade when context changes.\n- Idle 2s: the readout gently settles back toward real time (500ms ease).\n\n## Calibration\n- Every visual (sky, terminator, dots) derives from the same scrubbed hour value - they never disagree.\n- Dusk and dawn stops must hit at plausible hours; the orange band is narrow (~1h wide).\n\n## Reduced motion\nSky snaps per stop instead of interpolating; digit roll becomes a crossfade.\n\n## Don't miss\n- The map is rendered in dots (dotted-matrix style), not solid continents.\n- Yellow is reserved for the scrubbed time; the real time stays small and white top-right."</script>
+</body></html>

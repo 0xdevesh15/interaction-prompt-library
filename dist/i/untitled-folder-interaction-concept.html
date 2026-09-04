@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[untitled] Folder Interaction Concept - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>[untitled] Folder Interaction Concept</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/untitled-folder-interaction-concept"><b>Untitled</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-folder-interaction-concept">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/untitled-folder-interaction-concept">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: [untitled]&#x27;s drag-to-merge grid - long-press a project card, drag it onto another card, and the two spring into a single folder card while the grid reflows around them.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd15225b7b88f78c7911/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bd15225b7b88f78c7911/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-untitled-folder-interaction-concept.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: [untitled]&#x27;s drag-to-merge grid - long-press a project card, drag it onto another card, and the two spring into a single folder card while the grid reflows around them.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A light-gray grid of project cards (artwork thumbnails, titles like &quot;drag n drop&quot;, &quot;untitled project&quot;) under an &quot;[untitled]&quot; header, with a dark mini-player pill docked above the home indicator. Cards sit on a 2-column layout.
+
+## Motion spec
+Pattern: springy drag-and-drop card merge.
+- Long-press: the card lifts - scale 1 to 1.06, shadow deepens (250ms, spring ~360/20) - with a medium haptic; neighboring cards stay put.
+- Drag: the card tracks the finger 1:1 with slight rotation lag (+-3deg against drag direction); cards it passes over shift aside with layout springs (~380/26) previewing the reorder.
+- Hover over another card: the target card highlights (border ring + slight scale 1.03) and a dark &quot;Add to folder&quot; pill slides in beneath it (translateY + fade, 180ms).
+- Drop on the target: both cards fly toward the target slot and collapse into one folder card (bounds spring ~340/22, 350ms, success haptic); the folder card shows stacked thumbnail corners and lands with a soft overshoot bounce.
+- Drop on empty grid: the card slots into the gap; every displaced card reflows with the same spring, staggered by 20ms in reading order.
+- Cancel (drag out + release): the card glides back to its origin (spring ~360/24).
+
+## Calibration
+- Everything is springs - no linear slides; overshoot is subtle (damping never below ~18).
+- The dragged card renders above all siblings with the deepest shadow; the mini-player never moves.
+
+## Reduced motion
+Cards fade between positions; drop merge is a quick crossfade.
+
+## Don&#x27;t miss
+- The &quot;Add to folder&quot; pill only exists while hovering a valid target - it&#x27;s the merge affordance, not a button.
+- Folder cards are distinguishable only by their stacked-corner thumbnails, not chrome or badges.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy drag-and-drop card merge.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/untitled-folder-interaction-concept">original interaction</a> by Untitled. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: [untitled]'s drag-to-merge grid - long-press a project card, drag it onto another card, and the two spring into a single folder card while the grid reflows around them.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA light-gray grid of project cards (artwork thumbnails, titles like \"drag n drop\", \"untitled project\") under an \"[untitled]\" header, with a dark mini-player pill docked above the home indicator. Cards sit on a 2-column layout.\n\n## Motion spec\nPattern: springy drag-and-drop card merge.\n- Long-press: the card lifts - scale 1 to 1.06, shadow deepens (250ms, spring ~360/20) - with a medium haptic; neighboring cards stay put.\n- Drag: the card tracks the finger 1:1 with slight rotation lag (+-3deg against drag direction); cards it passes over shift aside with layout springs (~380/26) previewing the reorder.\n- Hover over another card: the target card highlights (border ring + slight scale 1.03) and a dark \"Add to folder\" pill slides in beneath it (translateY + fade, 180ms).\n- Drop on the target: both cards fly toward the target slot and collapse into one folder card (bounds spring ~340/22, 350ms, success haptic); the folder card shows stacked thumbnail corners and lands with a soft overshoot bounce.\n- Drop on empty grid: the card slots into the gap; every displaced card reflows with the same spring, staggered by 20ms in reading order.\n- Cancel (drag out + release): the card glides back to its origin (spring ~360/24).\n\n## Calibration\n- Everything is springs - no linear slides; overshoot is subtle (damping never below ~18).\n- The dragged card renders above all siblings with the deepest shadow; the mini-player never moves.\n\n## Reduced motion\nCards fade between positions; drop merge is a quick crossfade.\n\n## Don't miss\n- The \"Add to folder\" pill only exists while hovering a valid target - it's the merge affordance, not a button.\n- Folder cards are distinguishable only by their stacked-corner thumbnails, not chrome or badges."</script>
+</body></html>

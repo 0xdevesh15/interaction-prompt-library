@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Swipe Unlock BG Scale Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Swipe Unlock BG Scale Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-swipe-unlock-bg-scale-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-swipe-unlock-bg-scale-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-swipe-unlock-bg-scale-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s swipe-to-unlock intro - dragging the green unlock slider across the bottom sheet pushes the camera into the 3D marble temple behind, the copy fades, and the architecture fills the screen.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d46933794a0c8c37e1/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d46933794a0c8c37e1/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-swipe-unlock-bg-scale-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s swipe-to-unlock intro - dragging the green unlock slider across the bottom sheet pushes the camera into the 3D marble temple behind, the copy fades, and the architecture fills the screen.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+CRED intro screen: a soft-lit 3D render of a classical marble temple (columns, pediment, arched doorway) behind a white bottom sheet carrying &quot;all done. we&#x27;ve set...&quot; copy, a thin progress underline, and a &quot;swipe to unlock&quot; slider - a pale track with a green knob.
+
+## Motion spec
+Pattern: gesture-coupled unlock - slider drag drives a camera push-in on the background.
+- The slider is 1:1 with the drag: the knob tracks the finger, the track fills green up to the knob, and the fill&#x27;s glow brightens toward the end.
+- The background scales with drag progress: temple scale 1 -&gt; 1.6 mapped to drag 0 -&gt; 100%, so the architecture approaches as you swipe (a dolly-in, no parallax shift).
+- The bottom sheet&#x27;s copy fades out progressively (opacity 1 -&gt; 0 over drag 40% -&gt; 90%).
+- On release past ~70%: the knob snaps to the end (spring ~500/25), the fill completes, and the camera continues pushing through the archway (scale -&gt; 2.2, 600ms, ease-in) as the sheet slides down and away (translateY, 500ms).
+- On release below threshold: knob and fill spring back (spring ~300/18), background returns to scale 1.
+
+## Calibration
+- Every visual (scale, fill, fade) is scrubbed by the same drag progress - nothing runs on its own clock until the commit.
+- The temple render is soft and desaturated; the green slider is the only saturated element.
+
+## Reduced motion
+Slider fills on tap; background crossfades to the zoomed state (400ms).
+
+## Don&#x27;t miss
+- The push-in must feel like entering the doorway - center the zoom on the arch, not the image center.
+- The sheet&#x27;s shadow over the background shrinks as the sheet drops during the commit.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gesture-coupled unlock - slider drag drives a camera push-in on the background.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-swipe-unlock-bg-scale-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's swipe-to-unlock intro - dragging the green unlock slider across the bottom sheet pushes the camera into the 3D marble temple behind, the copy fades, and the architecture fills the screen.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCRED intro screen: a soft-lit 3D render of a classical marble temple (columns, pediment, arched doorway) behind a white bottom sheet carrying \"all done. we've set...\" copy, a thin progress underline, and a \"swipe to unlock\" slider - a pale track with a green knob.\n\n## Motion spec\nPattern: gesture-coupled unlock - slider drag drives a camera push-in on the background.\n- The slider is 1:1 with the drag: the knob tracks the finger, the track fills green up to the knob, and the fill's glow brightens toward the end.\n- The background scales with drag progress: temple scale 1 -> 1.6 mapped to drag 0 -> 100%, so the architecture approaches as you swipe (a dolly-in, no parallax shift).\n- The bottom sheet's copy fades out progressively (opacity 1 -> 0 over drag 40% -> 90%).\n- On release past ~70%: the knob snaps to the end (spring ~500/25), the fill completes, and the camera continues pushing through the archway (scale -> 2.2, 600ms, ease-in) as the sheet slides down and away (translateY, 500ms).\n- On release below threshold: knob and fill spring back (spring ~300/18), background returns to scale 1.\n\n## Calibration\n- Every visual (scale, fill, fade) is scrubbed by the same drag progress - nothing runs on its own clock until the commit.\n- The temple render is soft and desaturated; the green slider is the only saturated element.\n\n## Reduced motion\nSlider fills on tap; background crossfades to the zoomed state (400ms).\n\n## Don't miss\n- The push-in must feel like entering the doorway - center the zoom on the arch, not the image center.\n- The sheet's shadow over the background shrinks as the sheet drops during the commit."</script>
+</body></html>

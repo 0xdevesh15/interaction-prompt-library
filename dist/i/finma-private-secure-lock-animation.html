@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finma Private Secure Lock Onboarding Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Finma Private Secure Lock Onboarding Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/finma-private-secure-lock-animation"><b>Finma</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-private-secure-lock-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/finma-private-secure-lock-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Finma&#x27;s 100% Private onboarding - the transaction list (Mc Donalds, Amazon, Emirates Flight, Apple, KFC) assembles, then shrinks, blurs, and morphs into a padlock illustration, the data visibly sealed inside the lock.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f482c4f1c2fce4fa6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abe5f482c4f1c2fce4fa6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-finma-private-secure-lock-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Finma&#x27;s 100% Private onboarding - the transaction list (Mc Donalds, Amazon, Emirates Flight, Apple, KFC) assembles, then shrinks, blurs, and morphs into a padlock illustration, the data visibly sealed inside the lock.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark &quot;100% Private&quot; page: &quot;All financial data is stored locally on device, it never even leaves your device&quot; subcopy, pager, back chevron, gradient Continue pill. The stage: a transaction list with merchant logos (Mc Donalds, Amazon, Emirates Flight, Apple, KFC) that condenses into a padlock - the lock&#x27;s body forming around the blurred list, shackle drawing closed on top.
+
+## Motion spec
+Pattern: list-to-lock morph with blur seal.
+- Entrance: the transaction rows stagger in (translateY 12pt -&gt; 0, 60ms apart, 250ms each) with their logos popping (scale 0.7 -&gt; 1).
+- Seal: the list scales down (1 -&gt; 0.55, 500ms, ease-in-out) toward center while blurring (0 -&gt; 12pt) - the data becoming unreadable as it shrinks.
+- The padlock body draws around the blurred core (stroke trim, 400ms), the shackle arcs closed last (stroke trim, 300ms, ease-in) with a small lock-settle bounce (scale 1 -&gt; 1.04 -&gt; 1, spring ~340/14) and a faint glow pulse (opacity 0.3 -&gt; 0.6 -&gt; 0.3, 400ms).
+- The blurred transactions remain dimly visible inside the lock body - sealed, not deleted.
+- The cycle holds (1s), then can loop: shackle opens (250ms), list unblurs and regrows (400ms).
+
+## Calibration
+- Blur is the privacy metaphor&#x27;s core - the list must be illegible before the shackle closes.
+- The lock is a dark line illustration; the only color inside it is the merchant logos&#x27; muted blur.
+
+## Reduced motion
+The list fades into the lock illustration (300ms) without scaling or blur animation.
+
+## Don&#x27;t miss
+- The shackle closes after the body - the sequence is gather, blur, body, shackle.
+- The Continue pill stays put through the whole morph.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">list-to-lock morph with blur seal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/finma-private-secure-lock-animation">original interaction</a> by Finma. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Finma's 100% Private onboarding - the transaction list (Mc Donalds, Amazon, Emirates Flight, Apple, KFC) assembles, then shrinks, blurs, and morphs into a padlock illustration, the data visibly sealed inside the lock.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark \"100% Private\" page: \"All financial data is stored locally on device, it never even leaves your device\" subcopy, pager, back chevron, gradient Continue pill. The stage: a transaction list with merchant logos (Mc Donalds, Amazon, Emirates Flight, Apple, KFC) that condenses into a padlock - the lock's body forming around the blurred list, shackle drawing closed on top.\n\n## Motion spec\nPattern: list-to-lock morph with blur seal.\n- Entrance: the transaction rows stagger in (translateY 12pt -> 0, 60ms apart, 250ms each) with their logos popping (scale 0.7 -> 1).\n- Seal: the list scales down (1 -> 0.55, 500ms, ease-in-out) toward center while blurring (0 -> 12pt) - the data becoming unreadable as it shrinks.\n- The padlock body draws around the blurred core (stroke trim, 400ms), the shackle arcs closed last (stroke trim, 300ms, ease-in) with a small lock-settle bounce (scale 1 -> 1.04 -> 1, spring ~340/14) and a faint glow pulse (opacity 0.3 -> 0.6 -> 0.3, 400ms).\n- The blurred transactions remain dimly visible inside the lock body - sealed, not deleted.\n- The cycle holds (1s), then can loop: shackle opens (250ms), list unblurs and regrows (400ms).\n\n## Calibration\n- Blur is the privacy metaphor's core - the list must be illegible before the shackle closes.\n- The lock is a dark line illustration; the only color inside it is the merchant logos' muted blur.\n\n## Reduced motion\nThe list fades into the lock illustration (300ms) without scaling or blur animation.\n\n## Don't miss\n- The shackle closes after the body - the sequence is gather, blur, body, shackle.\n- The Continue pill stays put through the whole morph."</script>
+</body></html>

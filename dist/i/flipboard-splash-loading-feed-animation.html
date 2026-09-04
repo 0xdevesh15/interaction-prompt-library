@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flipboard Splash Loading Feed Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Flipboard Splash Loading Feed Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/flipboard-splash-loading-feed-animation"><b>Flipboard</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flipboard-splash-loading-feed-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/flipboard-splash-loading-feed-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Flipboard&#x27;s personalization splash - topic hashtags cycle at the bottom of a black screen, then the last tag morphs into the feed&#x27;s tab header as the content grid slides up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678e3c2b961c534fdba93086/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678e3c2b961c534fdba93086/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-flipboard-splash-loading-feed-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Flipboard&#x27;s personalization splash - topic hashtags cycle at the bottom of a black screen, then the last tag morphs into the feed&#x27;s tab header as the content grid slides up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black loading screen: &quot;HOLD ON WHILE WE PERSONALIZE YOUR EXPERIENCE...&quot; top-left, and a hashtag at bottom-left that cycles. The end state is the feed: FOR YOU / DAILY EDITION / COMMUNITY tabs over a grid of story cards.
+
+## Motion spec
+Pattern: hashtag cycler into header morph, ~4s total.
+- Hashtags (#GADGETS, #TECHNOLOGY, #SCIENCE, ...) swap at bottom-left every ~600ms: the old tag slides down and out, the new one slides in from above (250ms each, ease-in-out).
+- On the last tag, the swap targets the top of the screen: the tag travels up and docks into the tab bar position (400ms, ease-in-out), shrinking to header size as the tab labels materialize beside it.
+- Simultaneously the story grid slides up from the bottom (450ms, ease-out, 100ms behind the tag), filling the screen as the loading text fades.
+- The grid settles into a static feed; tabs are immediately tappable.
+
+## Calibration
+- The tag&#x27;s travel is one continuous motion from bottom-left to tab bar - no fade mid-path.
+- The grid follows the tag, never leads it; the header lands first.
+
+## Reduced motion
+Loading screen crossfades to the assembled feed.
+
+## Don&#x27;t miss
+- The loading text and tag never animate together - the text is stone-still, the tag is the only motion until the handoff.
+- The final tag must be one of the cycled topics; the morph promises personalization and has to keep it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">hashtag cycler into header morph, ~4s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/flipboard-splash-loading-feed-animation">original interaction</a> by Flipboard. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Flipboard's personalization splash - topic hashtags cycle at the bottom of a black screen, then the last tag morphs into the feed's tab header as the content grid slides up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack loading screen: \"HOLD ON WHILE WE PERSONALIZE YOUR EXPERIENCE...\" top-left, and a hashtag at bottom-left that cycles. The end state is the feed: FOR YOU / DAILY EDITION / COMMUNITY tabs over a grid of story cards.\n\n## Motion spec\nPattern: hashtag cycler into header morph, ~4s total.\n- Hashtags (#GADGETS, #TECHNOLOGY, #SCIENCE, ...) swap at bottom-left every ~600ms: the old tag slides down and out, the new one slides in from above (250ms each, ease-in-out).\n- On the last tag, the swap targets the top of the screen: the tag travels up and docks into the tab bar position (400ms, ease-in-out), shrinking to header size as the tab labels materialize beside it.\n- Simultaneously the story grid slides up from the bottom (450ms, ease-out, 100ms behind the tag), filling the screen as the loading text fades.\n- The grid settles into a static feed; tabs are immediately tappable.\n\n## Calibration\n- The tag's travel is one continuous motion from bottom-left to tab bar - no fade mid-path.\n- The grid follows the tag, never leads it; the header lands first.\n\n## Reduced motion\nLoading screen crossfades to the assembled feed.\n\n## Don't miss\n- The loading text and tag never animate together - the text is stone-still, the tag is the only motion until the handoff.\n- The final tag must be one of the cycled topics; the morph promises personalization and has to keep it."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uber Green CO2 - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Uber Green CO2</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/uber-green-co2"><b>Uber</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/uber-green-co2">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/uber-green-co2">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Uber Green&#x27;s CO2 reveal - a vortex of green leaves swirls inward and dissolves into the eco-impact screen, which then scrolls vertically through your savings stats.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb7a61d73e2622b349dc/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb7a61d73e2622b349dc/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-uber-green-co2.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Uber Green&#x27;s CO2 reveal - a vortex of green leaves swirls inward and dissolves into the eco-impact screen, which then scrolls vertically through your savings stats.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A white screen erupts into a swirling tunnel of green leaves that spirals toward center and pulls the viewer through, landing on the impact screen: a green header with a black pill (&quot;8,462 g Estimated CO2 saved&quot;), &quot;Your eco-friendly rides&quot; rows (Uber Green with per-ride savings), and &quot;Your positive impact&quot; equivalence rows (gallons of gas, miles driven, pounds of coal) with small illustrations. Deep scroll ends on a wide illustration of a white car on green hills.
+
+## Motion spec
+Pattern: particle vortex transition into scrollable stats.
+- The vortex: 60-80 leaves spawn at screen edges and spiral inward along tightening arcs (1.2s, each leaf scaling 1 to 0.3 as it approaches the vanishing point), with slight per-leaf rotation and staggered start (8ms apart) - the tunnel reads as depth, not a flat swirl.
+- As the last leaves converge, the stats screen crossfades in (300ms) from the vortex&#x27;s center point (scale 0.94 to 1), the header pill popping with a count-up of the grams (0 to 8,462, 900ms, ease-out).
+- Scroll: the green header shrinks into a compact bar (height tween tied to scroll offset) while rows flow beneath; equivalence illustrations parallax slightly slower than their text rows (0.9x) for depth.
+- Section headers (&quot;Your eco-friendly rides&quot;, &quot;Your positive impact&quot;) pin briefly then release with the scroll.
+- The final car illustration rises with a gentle settle (spring ~300/20) the first time it enters the viewport.
+
+## Calibration
+- Leaves use 3-4 flat greens; no photoreal assets - the vortex is graphic, not organic-simulation.
+- The count-up lands exactly on the pill&#x27;s final value and never overshoots the digits.
+
+## Reduced motion
+Skip the vortex; fade directly into the stats screen with the count-up intact.
+
+## Don&#x27;t miss
+- The vortex is a TRANSITION, not a looping background - it plays once and is gone.
+- The black pill on the green header is the single strongest contrast on screen; keep it crisp.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">particle vortex transition into scrollable stats.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/uber-green-co2">original interaction</a> by Uber. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Uber Green's CO2 reveal - a vortex of green leaves swirls inward and dissolves into the eco-impact screen, which then scrolls vertically through your savings stats.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA white screen erupts into a swirling tunnel of green leaves that spirals toward center and pulls the viewer through, landing on the impact screen: a green header with a black pill (\"8,462 g Estimated CO2 saved\"), \"Your eco-friendly rides\" rows (Uber Green with per-ride savings), and \"Your positive impact\" equivalence rows (gallons of gas, miles driven, pounds of coal) with small illustrations. Deep scroll ends on a wide illustration of a white car on green hills.\n\n## Motion spec\nPattern: particle vortex transition into scrollable stats.\n- The vortex: 60-80 leaves spawn at screen edges and spiral inward along tightening arcs (1.2s, each leaf scaling 1 to 0.3 as it approaches the vanishing point), with slight per-leaf rotation and staggered start (8ms apart) - the tunnel reads as depth, not a flat swirl.\n- As the last leaves converge, the stats screen crossfades in (300ms) from the vortex's center point (scale 0.94 to 1), the header pill popping with a count-up of the grams (0 to 8,462, 900ms, ease-out).\n- Scroll: the green header shrinks into a compact bar (height tween tied to scroll offset) while rows flow beneath; equivalence illustrations parallax slightly slower than their text rows (0.9x) for depth.\n- Section headers (\"Your eco-friendly rides\", \"Your positive impact\") pin briefly then release with the scroll.\n- The final car illustration rises with a gentle settle (spring ~300/20) the first time it enters the viewport.\n\n## Calibration\n- Leaves use 3-4 flat greens; no photoreal assets - the vortex is graphic, not organic-simulation.\n- The count-up lands exactly on the pill's final value and never overshoots the digits.\n\n## Reduced motion\nSkip the vortex; fade directly into the stats screen with the count-up intact.\n\n## Don't miss\n- The vortex is a TRANSITION, not a looping background - it plays once and is gone.\n- The black pill on the green header is the single strongest contrast on screen; keep it crisp."</script>
+</body></html>

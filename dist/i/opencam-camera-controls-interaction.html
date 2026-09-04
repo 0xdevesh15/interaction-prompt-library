@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenCam Camera Controls Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>OpenCam Camera Controls Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/opencam-camera-controls-interaction"><b>Opencam</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opencam-camera-controls-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/opencam-camera-controls-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: OpenCam&#x27;s manual control deck - springy staggered control pods (Zoom, Exposure, Warmth, Shutter, ISO, Focus) that expand into scrubbable dials and a 2D shutter/ISO grid, all over a live dark viewfinder.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313ca0e3615485c3fbbdb/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/687313ca0e3615485c3fbbdb/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-opencam-camera-controls-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: OpenCam&#x27;s manual control deck - springy staggered control pods (Zoom, Exposure, Warmth, Shutter, ISO, Focus) that expand into scrubbable dials and a 2D shutter/ISO grid, all over a live dark viewfinder.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black viewfinder with corner brackets and focal-length markers (13, 24, 77) at top. A control deck above the big orange record button: pods for Zoom (1.0x), Exposure (+0.0), Warmth (3200K), Shutter (1/3000), ISO (200), Focus (0.80), each with an A/M auto toggle (orange A); a chevron button expands/collapses the deck.
+
+## Motion spec
+Pattern: springy staggered control pods with scrub dials and a 2D grid pad.
+- Tapping the chevron expands the deck: pods stagger in left-to-right (40ms apart, spring ~320/18, from translateY 16pt + scale 0.9); collapsing reverses the stagger.
+- Dragging a pod vertically scrubs its value 1:1; the pod&#x27;s value readout updates live (tabular numerals) and its fill level tracks (orange indicator line).
+- The Exposure pod expands into a 2D pad: a dotted grid where dragging X scrubs shutter speed (1/100 - 1/3000) and Y scrubs ISO (50 - 3200), the active cell glowing orange; the pad springs open (scale 0.7 -&gt; 1, spring ~300/16).
+- Tapping an A/M pill toggles auto: the pill flips (scaleX 1 -&gt; 0 -&gt; 1, 180ms), swapping A and M in orange/gray, and the pod dims 40% in auto.
+- The focal markers (13/24/77) highlight the active lens (orange, 150ms crossfade) as Zoom crosses its range.
+- The record button presses with a squash (scale 1 -&gt; 0.88 -&gt; 1, spring ~380/16).
+
+## Calibration
+- Pods are dense but legible: value under label, tick marks on the pod face.
+- Deck expansion never covers the viewfinder&#x27;s center - pods live in the bottom third.
+
+## Reduced motion
+Deck fades in fully formed (200ms); the 2D pad fades instead of springing.
+
+## Don&#x27;t miss
+- The orange accent (auto pills, active values, record button) is the only color besides grayscale.
+- Scrubbing any pod stays live even mid-expansion animation.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy staggered control pods with scrub dials and a 2D grid pad.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/opencam-camera-controls-interaction">original interaction</a> by Opencam. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: OpenCam's manual control deck - springy staggered control pods (Zoom, Exposure, Warmth, Shutter, ISO, Focus) that expand into scrubbable dials and a 2D shutter/ISO grid, all over a live dark viewfinder.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack viewfinder with corner brackets and focal-length markers (13, 24, 77) at top. A control deck above the big orange record button: pods for Zoom (1.0x), Exposure (+0.0), Warmth (3200K), Shutter (1/3000), ISO (200), Focus (0.80), each with an A/M auto toggle (orange A); a chevron button expands/collapses the deck.\n\n## Motion spec\nPattern: springy staggered control pods with scrub dials and a 2D grid pad.\n- Tapping the chevron expands the deck: pods stagger in left-to-right (40ms apart, spring ~320/18, from translateY 16pt + scale 0.9); collapsing reverses the stagger.\n- Dragging a pod vertically scrubs its value 1:1; the pod's value readout updates live (tabular numerals) and its fill level tracks (orange indicator line).\n- The Exposure pod expands into a 2D pad: a dotted grid where dragging X scrubs shutter speed (1/100 - 1/3000) and Y scrubs ISO (50 - 3200), the active cell glowing orange; the pad springs open (scale 0.7 -> 1, spring ~300/16).\n- Tapping an A/M pill toggles auto: the pill flips (scaleX 1 -> 0 -> 1, 180ms), swapping A and M in orange/gray, and the pod dims 40% in auto.\n- The focal markers (13/24/77) highlight the active lens (orange, 150ms crossfade) as Zoom crosses its range.\n- The record button presses with a squash (scale 1 -> 0.88 -> 1, spring ~380/16).\n\n## Calibration\n- Pods are dense but legible: value under label, tick marks on the pod face.\n- Deck expansion never covers the viewfinder's center - pods live in the bottom third.\n\n## Reduced motion\nDeck fades in fully formed (200ms); the 2D pad fades instead of springing.\n\n## Don't miss\n- The orange accent (auto pills, active values, record button) is the only color besides grayscale.\n- Scrubbing any pod stays live even mid-expansion animation."</script>
+</body></html>

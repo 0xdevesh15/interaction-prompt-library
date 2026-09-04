@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Claw Rewards Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Claw Rewards Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-claw-rewards-interaction"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-claw-rewards-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-claw-rewards-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s claw machine - a dark arcade cabinet with a swipeable prize shelf; drop the claw on your pick and it descends, grabs the prize, and the scene cuts to a 3D reward reveal.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e5963dde702a6fe3c133/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e5963dde702a6fe3c133/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-claw-rewards-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s claw machine - a dark arcade cabinet with a swipeable prize shelf; drop the claw on your pick and it descends, grabs the prize, and the scene cuts to a 3D reward reveal.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark skeuomorphic claw machine: marquee text scrolling on top, a mechanical claw on a rail, a shelf of prize cards (socks, cans, collectibles) as a horizontal carousel, yellow &quot;Drop it&quot; button and a moves counter below. Then a black reveal stage: 3D prize rotating under a radial shine, &quot;you won&quot; copy, &quot;Claim giveaway&quot; button.
+
+## Motion spec
+Pattern: arcade claw sequence -&gt; reward reveal, ~4s.
+- Swipe the shelf: prize cards page left/right with momentum and snap (spring ~250/20); the centered card glows as the claw&#x27;s target.
+- Tap Drop it: the claw rail centers over the target (300ms), the claw descends on its cable (600ms, ease-in), jaws clamp shut (150ms), and it rises with the prize hanging (500ms, slight sway).
+- Screen flashes dark; the reveal stage fades in: the prize rendered in 3D rotates slowly (~12s per turn) under a sweeping radial light, a curved floor reflection beneath.
+- &quot;you won&quot; + prize name fade in, then the Claim button slides up (spring ~350/22).
+
+## Calibration
+- The claw&#x27;s clamp happens exactly on contact - early clamping reads as scripted, late as broken.
+- The prize sways on the cable during the lift; rigid carrying kills the physics.
+
+## Reduced motion
+Claw lowers and lifts without sway; cut directly to the static reveal (fade 300ms).
+
+## Don&#x27;t miss
+- The reveal prize must match the targeted card - the machine honoring your pick is the entire game.
+- The marquee ticker never stops scrolling, even mid-drop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">arcade claw sequence -&gt; reward reveal, ~4s.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-claw-rewards-interaction">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's claw machine - a dark arcade cabinet with a swipeable prize shelf; drop the claw on your pick and it descends, grabs the prize, and the scene cuts to a 3D reward reveal.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark skeuomorphic claw machine: marquee text scrolling on top, a mechanical claw on a rail, a shelf of prize cards (socks, cans, collectibles) as a horizontal carousel, yellow \"Drop it\" button and a moves counter below. Then a black reveal stage: 3D prize rotating under a radial shine, \"you won\" copy, \"Claim giveaway\" button.\n\n## Motion spec\nPattern: arcade claw sequence -> reward reveal, ~4s.\n- Swipe the shelf: prize cards page left/right with momentum and snap (spring ~250/20); the centered card glows as the claw's target.\n- Tap Drop it: the claw rail centers over the target (300ms), the claw descends on its cable (600ms, ease-in), jaws clamp shut (150ms), and it rises with the prize hanging (500ms, slight sway).\n- Screen flashes dark; the reveal stage fades in: the prize rendered in 3D rotates slowly (~12s per turn) under a sweeping radial light, a curved floor reflection beneath.\n- \"you won\" + prize name fade in, then the Claim button slides up (spring ~350/22).\n\n## Calibration\n- The claw's clamp happens exactly on contact - early clamping reads as scripted, late as broken.\n- The prize sways on the cable during the lift; rigid carrying kills the physics.\n\n## Reduced motion\nClaw lowers and lifts without sway; cut directly to the static reveal (fade 300ms).\n\n## Don't miss\n- The reveal prize must match the targeted card - the machine honoring your pick is the entire game.\n- The marquee ticker never stops scrolling, even mid-drop."</script>
+</body></html>

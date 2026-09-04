@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dropset Onboarding Scroll Picker - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Dropset Onboarding Scroll Picker</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/dropset-onboarding-scroll-picker"><b>Dropset</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dropset-onboarding-scroll-picker">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dropset-onboarding-scroll-picker">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Dropset&#x27;s onboarding scroll picker - dark single-question screens (&quot;How tall are you?&quot;, &quot;What&#x27;s your current weight?&quot;, &quot;What&#x27;s your age?&quot;) where a huge numeral is picked by vertical scroll, neighboring values ghosting above and below, with a small Continue pill.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db3a4fed3abd31659260a5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db3a4fed3abd31659260a5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-dropset-onboarding-scroll-picker.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Dropset&#x27;s onboarding scroll picker - dark single-question screens (&quot;How tall are you?&quot;, &quot;What&#x27;s your current weight?&quot;, &quot;What&#x27;s your age?&quot;) where a huge numeral is picked by vertical scroll, neighboring values ghosting above and below, with a small Continue pill.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screens, back chevron + progress bar top: bold question, a small gray unit label (&quot;Centimeters&quot; / &quot;Kilos&quot; / &quot;Age&quot;), then the picker - a giant white value (&quot;180 .0&quot;) with the previous/next values visible above and below, heavily dimmed and smaller. Continue pill bottom.
+
+## Motion spec
+Pattern: vertical drum picker with scale/fade falloff.
+- Scroll the numeral column: values glide vertically 1:1 with the drag; the centered value is full white at full size, values one step away scale to ~60% and fade to ~25%, two steps away nearly vanish.
+- Release: snaps to the nearest whole value (spring ~340/24, ~300ms) with a soft haptic tick per passed value.
+- The decimal part (&quot;.0&quot;) stays pinned at a fixed size beside the integer, not scaling with it.
+- On snap: the settled value pops slightly (scale 1 -&gt; 1.04 -&gt; 1, spring ~420/20).
+- Continue fades from gray to white once the value changes from its default.
+
+## Calibration
+- The ghosted neighbors are always visible - the drum never hides its neighbors behind a mask.
+- Question and unit label never move; only the numeral column scrolls.
+
+## Reduced motion
+Drum scrolls without scale/fade falloff; values snap without pop.
+
+## Don&#x27;t miss
+- The units differ per question (cm, kg, years) and the label swaps with the question via a 200ms crossfade.
+- The picker&#x27;s resting position centers a default (180 cm / 80 kg / 25) - not zero.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">vertical drum picker with scale/fade falloff.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/dropset-onboarding-scroll-picker">original interaction</a> by Dropset. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Dropset's onboarding scroll picker - dark single-question screens (\"How tall are you?\", \"What's your current weight?\", \"What's your age?\") where a huge numeral is picked by vertical scroll, neighboring values ghosting above and below, with a small Continue pill.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screens, back chevron + progress bar top: bold question, a small gray unit label (\"Centimeters\" / \"Kilos\" / \"Age\"), then the picker - a giant white value (\"180 .0\") with the previous/next values visible above and below, heavily dimmed and smaller. Continue pill bottom.\n\n## Motion spec\nPattern: vertical drum picker with scale/fade falloff.\n- Scroll the numeral column: values glide vertically 1:1 with the drag; the centered value is full white at full size, values one step away scale to ~60% and fade to ~25%, two steps away nearly vanish.\n- Release: snaps to the nearest whole value (spring ~340/24, ~300ms) with a soft haptic tick per passed value.\n- The decimal part (\".0\") stays pinned at a fixed size beside the integer, not scaling with it.\n- On snap: the settled value pops slightly (scale 1 -> 1.04 -> 1, spring ~420/20).\n- Continue fades from gray to white once the value changes from its default.\n\n## Calibration\n- The ghosted neighbors are always visible - the drum never hides its neighbors behind a mask.\n- Question and unit label never move; only the numeral column scrolls.\n\n## Reduced motion\nDrum scrolls without scale/fade falloff; values snap without pop.\n\n## Don't miss\n- The units differ per question (cm, kg, years) and the label swaps with the question via a 200ms crossfade.\n- The picker's resting position centers a default (180 cm / 80 kg / 25) - not zero."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>‎AliExpress Mystery Box Open Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>‎AliExpress Mystery Box Open Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/aliexpress-mystery-box-open-animation"><b>Aliexpress</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/aliexpress-mystery-box-open-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/aliexpress-mystery-box-open-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: AliExpress&#x27;s mystery box opening - on the game screen, tapping Open dims the page while the 3D treasure chest zooms center, shakes, pops its lid with a light burst, then a &quot;Congrats!&quot; modal reveals the gem reward (+80/+100) and the gem counter counts up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68c5fadcafc186e5e81/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68c5fadcafc186e5e81/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-aliexpress-mystery-box-open-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: AliExpress&#x27;s mystery box opening - on the game screen, tapping Open dims the page while the 3D treasure chest zooms center, shakes, pops its lid with a light burst, then a &quot;Congrats!&quot; modal reveals the gem reward (+80/+100) and the gem counter counts up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Colorful blue game screen: &quot;MYSTERY BOXES&quot; header, progress bar with tier milestones, a 3D golden chest on a platform ringed by item cards, a pink &quot;Open&quot; button, and bottom nav. The reveal modal is dark with &quot;Congrats!&quot;, a &quot;You&#x27;ve got +80&quot; gem line, reward item slots, and a &quot;Claim now&quot; gradient button.
+
+## Motion spec
+Pattern: 3D box-open ritual + reward modal + count-up, ~2.5s.
+- Anticipation: tapping Open dims the background (black 60%, 250ms); the chest zooms to center (scale 1 -&gt; 1.6, 400ms, ease-out) and shakes with building intensity (rotation -4deg -&gt; 4deg, 3 rounds, tightening).
+- Pop: the lid flips open with a spring (~280/16), golden light rays burst from inside (scale 0 -&gt; 1.3 fade, 400ms), and a glow ring expands past the chest.
+- Reveal: the &quot;Congrats!&quot; modal slides up and scales in (spring ~340/22, 350ms); the gem icon drops in with a bounce (spring ~300/15).
+- Count-up: the header gem counter rolls to the new total (600ms, ease-out) after claim, with a sparkle on landing.
+
+## Calibration
+- The shake ramps - slow wobble to fast jitter over ~900ms, never constant.
+- The chest stays 3D-lit throughout; the light burst comes from inside the box.
+
+## Reduced motion
+Chest cross-fades to open; modal and counter appear with 250ms fades.
+
+## Don&#x27;t miss
+- The Claim button is a pink-to-purple gradient pill, matching the Open button.
+- The reward amount varies (+80 vs +100) - the counter animates the actual delta.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">3D box-open ritual + reward modal + count-up, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/aliexpress-mystery-box-open-animation">original interaction</a> by Aliexpress. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: AliExpress's mystery box opening - on the game screen, tapping Open dims the page while the 3D treasure chest zooms center, shakes, pops its lid with a light burst, then a \"Congrats!\" modal reveals the gem reward (+80/+100) and the gem counter counts up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nColorful blue game screen: \"MYSTERY BOXES\" header, progress bar with tier milestones, a 3D golden chest on a platform ringed by item cards, a pink \"Open\" button, and bottom nav. The reveal modal is dark with \"Congrats!\", a \"You've got +80\" gem line, reward item slots, and a \"Claim now\" gradient button.\n\n## Motion spec\nPattern: 3D box-open ritual + reward modal + count-up, ~2.5s.\n- Anticipation: tapping Open dims the background (black 60%, 250ms); the chest zooms to center (scale 1 -> 1.6, 400ms, ease-out) and shakes with building intensity (rotation -4deg -> 4deg, 3 rounds, tightening).\n- Pop: the lid flips open with a spring (~280/16), golden light rays burst from inside (scale 0 -> 1.3 fade, 400ms), and a glow ring expands past the chest.\n- Reveal: the \"Congrats!\" modal slides up and scales in (spring ~340/22, 350ms); the gem icon drops in with a bounce (spring ~300/15).\n- Count-up: the header gem counter rolls to the new total (600ms, ease-out) after claim, with a sparkle on landing.\n\n## Calibration\n- The shake ramps - slow wobble to fast jitter over ~900ms, never constant.\n- The chest stays 3D-lit throughout; the light burst comes from inside the box.\n\n## Reduced motion\nChest cross-fades to open; modal and counter appear with 250ms fades.\n\n## Don't miss\n- The Claim button is a pink-to-purple gradient pill, matching the Open button.\n- The reward amount varies (+80 vs +100) - the counter animates the actual delta."</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fold Successful Payment Check Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Fold Successful Payment Check Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/fold-successful-payment-check-animation"><b>Fold</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-successful-payment-check-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/fold-successful-payment-check-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Fold&#x27;s payment success moment - a green dot blooms into a circle, a checkmark draws inside it as particles burst outward, and the &quot;+₹2.5&quot; amount, success copy, and updated card tile stagger into place.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b21b970407b199f347d10/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/675b21b970407b199f347d10/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-fold-successful-payment-check-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Fold&#x27;s payment success moment - a green dot blooms into a circle, a checkmark draws inside it as particles burst outward, and the &quot;+₹2.5&quot; amount, success copy, and updated card tile stagger into place.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Fold&#x27;s light payment-confirmation screen. At top center, the celebration: a solid green circle with a white checkmark, ringed by small green particles. Below it, the reward amount &quot;+₹2.5&quot;, the green success copy &quot;Successfully added payment towards your ICICI Amazon Pay Credit Card.&quot;, and a white card tile - VISA logo, masked number, and &quot;₹40,378.6 New outstanding&quot;.
+
+## Motion spec
+Pattern: checkmark bloom with particle burst, ~2s total.
+- A small green dot drops into position and expands into the full circle (spring stiffness 320 damping 20).
+- As it lands, the white checkmark draws itself on inside (stroke-on, 300ms) and a ring of small green particles bursts outward from the circle&#x27;s edge (~12 pieces, 500ms, decelerating with distance).
+- The &quot;+₹2.5&quot; amount pops in below the circle (spring stiffness 400 damping 22), then the success copy fades up (250ms), then the card tile rises into place (350ms, ease-out) - a clear three-beat stagger.
+- The card tile settles last; its &quot;New outstanding&quot; value reads as already updated.
+
+## Calibration
+- One green, one circle - the burst particles stay small and few; the checkmark draw is the hero moment.
+- The stagger order is fixed: amount, copy, card.
+
+## Reduced motion
+Circle and check fade in; no particle burst.
+
+## Don&#x27;t miss
+- Particles are the same green as the circle - a confetti moment, not multicolor.
+- The checkmark draws after the circle has fully bloomed, never during the scale-in.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">checkmark bloom with particle burst, ~2s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/fold-successful-payment-check-animation">original interaction</a> by Fold. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Fold's payment success moment - a green dot blooms into a circle, a checkmark draws inside it as particles burst outward, and the \"+\u20b92.5\" amount, success copy, and updated card tile stagger into place.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFold's light payment-confirmation screen. At top center, the celebration: a solid green circle with a white checkmark, ringed by small green particles. Below it, the reward amount \"+\u20b92.5\", the green success copy \"Successfully added payment towards your ICICI Amazon Pay Credit Card.\", and a white card tile - VISA logo, masked number, and \"\u20b940,378.6 New outstanding\".\n\n## Motion spec\nPattern: checkmark bloom with particle burst, ~2s total.\n- A small green dot drops into position and expands into the full circle (spring stiffness 320 damping 20).\n- As it lands, the white checkmark draws itself on inside (stroke-on, 300ms) and a ring of small green particles bursts outward from the circle's edge (~12 pieces, 500ms, decelerating with distance).\n- The \"+\u20b92.5\" amount pops in below the circle (spring stiffness 400 damping 22), then the success copy fades up (250ms), then the card tile rises into place (350ms, ease-out) - a clear three-beat stagger.\n- The card tile settles last; its \"New outstanding\" value reads as already updated.\n\n## Calibration\n- One green, one circle - the burst particles stay small and few; the checkmark draw is the hero moment.\n- The stagger order is fixed: amount, copy, card.\n\n## Reduced motion\nCircle and check fade in; no particle burst.\n\n## Don't miss\n- Particles are the same green as the circle - a confetti moment, not multicolor.\n- The checkmark draws after the circle has fully bloomed, never during the scale-in."</script>
+</body></html>

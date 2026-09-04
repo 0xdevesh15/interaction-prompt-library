@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stompers Pack Tear and Pick Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Stompers Pack Tear and Pick Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/stompers-pack-tear-and-pick-interaction"><b>Stompers</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stompers-pack-tear-and-pick-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/stompers-pack-tear-and-pick-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Stompers&#x27; pack opening - from the step-counter home, &quot;PICK A PACK&quot; launches a full-screen vertical slot machine of item icons that spins, decelerates, and stops on a line before dealing a &quot;Pick a card&quot; choice list.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb42c2f97ed1fe791982/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb42c2f97ed1fe791982/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-stompers-pack-tear-and-pick-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Stompers&#x27; pack opening - from the step-counter home, &quot;PICK A PACK&quot; launches a full-screen vertical slot machine of item icons that spins, decelerates, and stops on a line before dealing a &quot;Pick a card&quot; choice list.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Home: friends row, &quot;Steps today 8012&quot; counter, a sneaker character on a walking trail, pack shelf. Overlay: near-black screen, &quot;PICK A PACK&quot; graffiti-green wordmark top, close X, a vertical track of colorful circular item icons (hats, necklaces, accessories) streaming past a thin center line. End state: &quot;Pick a card&quot; sheet with 3 item cards (name, rarity chip, illustration).
+
+## Motion spec
+Pattern: slot-machine spin -&gt; deal, ~3.5s.
+- Overlay slides up from the bottom (350ms, ease-out).
+- The icon track starts spinning fast (translateY, ~1200px/s, linear) with slight motion blur on the icons.
+- After ~1.5s it decelerates (ease-out cubic) and locks so one icon sits exactly on the center line (spring ~300/20, 200ms) with a tick haptic.
+- The winning icon pulses (scale 1 -&gt; 1.2 -&gt; 1, 250ms).
+- The &quot;Pick a card&quot; sheet slides up over the track (400ms), its 3 cards staggering in bottom-to-top (100ms apart, spring ~350/20).
+
+## Calibration
+- The spin must be fast enough to blur at peak; a readable spin kills the anticipation.
+- Deceleration is one smooth ease-out into the snap - no stepped slow-downs.
+
+## Reduced motion
+Skip the spin: overlay fades in directly to the dealt cards (300ms).
+
+## Don&#x27;t miss
+- The center line is the judge: the stopped icon sits exactly on it, not near it.
+- Cards deal after the lock, never during the spin - the sequence is the suspense curve.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">slot-machine spin -&gt; deal, ~3.5s.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/stompers-pack-tear-and-pick-interaction">original interaction</a> by Stompers. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Stompers' pack opening - from the step-counter home, \"PICK A PACK\" launches a full-screen vertical slot machine of item icons that spins, decelerates, and stops on a line before dealing a \"Pick a card\" choice list.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nHome: friends row, \"Steps today 8012\" counter, a sneaker character on a walking trail, pack shelf. Overlay: near-black screen, \"PICK A PACK\" graffiti-green wordmark top, close X, a vertical track of colorful circular item icons (hats, necklaces, accessories) streaming past a thin center line. End state: \"Pick a card\" sheet with 3 item cards (name, rarity chip, illustration).\n\n## Motion spec\nPattern: slot-machine spin -> deal, ~3.5s.\n- Overlay slides up from the bottom (350ms, ease-out).\n- The icon track starts spinning fast (translateY, ~1200px/s, linear) with slight motion blur on the icons.\n- After ~1.5s it decelerates (ease-out cubic) and locks so one icon sits exactly on the center line (spring ~300/20, 200ms) with a tick haptic.\n- The winning icon pulses (scale 1 -> 1.2 -> 1, 250ms).\n- The \"Pick a card\" sheet slides up over the track (400ms), its 3 cards staggering in bottom-to-top (100ms apart, spring ~350/20).\n\n## Calibration\n- The spin must be fast enough to blur at peak; a readable spin kills the anticipation.\n- Deceleration is one smooth ease-out into the snap - no stepped slow-downs.\n\n## Reduced motion\nSkip the spin: overlay fades in directly to the dealt cards (300ms).\n\n## Don't miss\n- The center line is the judge: the stopped icon sits exactly on it, not near it.\n- Cards deal after the lock, never during the spin - the sequence is the suspense curve."</script>
+</body></html>

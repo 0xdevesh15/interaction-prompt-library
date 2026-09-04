@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bevel Energy Bank Indicator - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Bevel Energy Bank Indicator</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/bevel-energy-bank-indicator"><b>Bevel</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bevel-energy-bank-indicator">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/bevel-energy-bank-indicator">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Bevel&#x27;s Energy Bank - a skeleton loading state that resolves into a glowing green battery readout with staggered stat cards.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcfe371d29849d7bd9a9/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcfe371d29849d7bd9a9/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-bevel-energy-bank-indicator.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Bevel&#x27;s Energy Bank - a skeleton loading state that resolves into a glowing green battery readout with staggered stat cards.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The &quot;Energy Bank&quot; detail screen: a large battery-shaped indicator, a status card, &quot;Total Charged&quot; and &quot;Total Drained&quot; stat cards, a Coaching insight card, and a dated energy-level footer. It opens as gray skeletons with a spinner and &quot;Loading data... This might take a few minutes. Please do not close the app during this time.&quot;
+
+## Motion spec
+Pattern: skeleton-to-content reveal.
+- Loading phase: all regions render as gray shimmer blocks (a 1.2s left-to-right highlight sweep loops) with a centered spinner in the status card.
+- Resolve: skeletons fade out top-to-bottom (120ms stagger per region). The battery indicator arrives last: its green gradient fill sweeps left to right (600ms, ease-out) while the percentage counts up to 69% (same 600ms), ending with a soft glow pulse (shadow opacity 0 to 0.4 to 0.25, 300ms).
+- Stat cards pop in below: &quot;+38% Total Charged&quot; (green) then &quot;-10% Total Drained&quot; (red), scale 0.92 to 1 with spring ~380/24, 100ms apart.
+- The Coaching card slides up last (translateY 16px to 0, 300ms) with its body text fading in 100ms later.
+- &quot;Last charged to 76% at 09:18&quot; fades in under the battery after the count finishes.
+
+## Calibration
+- Total resolve ~1.5s after data ready; the battery fill is the hero - everything else defers to it.
+- The green fill uses a vertical gradient (light top to saturated bottom) with rounded ends inside the battery shell.
+
+## Reduced motion
+Skeletons crossfade to final content; the count sets instantly.
+
+## Don&#x27;t miss
+- The battery shell outline stays visible during loading - only its fill animates in.
+- Charged is green, Drained is red; the signs (+/-) are part of the value text.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">skeleton-to-content reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/bevel-energy-bank-indicator">original interaction</a> by Bevel. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Bevel's Energy Bank - a skeleton loading state that resolves into a glowing green battery readout with staggered stat cards.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe \"Energy Bank\" detail screen: a large battery-shaped indicator, a status card, \"Total Charged\" and \"Total Drained\" stat cards, a Coaching insight card, and a dated energy-level footer. It opens as gray skeletons with a spinner and \"Loading data... This might take a few minutes. Please do not close the app during this time.\"\n\n## Motion spec\nPattern: skeleton-to-content reveal.\n- Loading phase: all regions render as gray shimmer blocks (a 1.2s left-to-right highlight sweep loops) with a centered spinner in the status card.\n- Resolve: skeletons fade out top-to-bottom (120ms stagger per region). The battery indicator arrives last: its green gradient fill sweeps left to right (600ms, ease-out) while the percentage counts up to 69% (same 600ms), ending with a soft glow pulse (shadow opacity 0 to 0.4 to 0.25, 300ms).\n- Stat cards pop in below: \"+38% Total Charged\" (green) then \"-10% Total Drained\" (red), scale 0.92 to 1 with spring ~380/24, 100ms apart.\n- The Coaching card slides up last (translateY 16px to 0, 300ms) with its body text fading in 100ms later.\n- \"Last charged to 76% at 09:18\" fades in under the battery after the count finishes.\n\n## Calibration\n- Total resolve ~1.5s after data ready; the battery fill is the hero - everything else defers to it.\n- The green fill uses a vertical gradient (light top to saturated bottom) with rounded ends inside the battery shell.\n\n## Reduced motion\nSkeletons crossfade to final content; the count sets instantly.\n\n## Don't miss\n- The battery shell outline stays visible during loading - only its fill animates in.\n- Charged is green, Drained is red; the signs (+/-) are part of the value text."</script>
+</body></html>

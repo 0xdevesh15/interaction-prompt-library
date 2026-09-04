@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rive Create Program Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Rive Create Program Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/rive-create-program-animation"><b>Rive</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/rive-create-program-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/rive-create-program-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: a sleep app&#x27;s &quot;Create Program&quot; loading transition - a morphing gradient 4-point star spins slowly inside a dashed orbital ring with drifting particles, then resolves into a line-drawn icon before the program info sheet slides in.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb4048dc35fae3b8a514/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67b4cb4048dc35fae3b8a514/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-rive-create-program-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: a sleep app&#x27;s &quot;Create Program&quot; loading transition - a morphing gradient 4-point star spins slowly inside a dashed orbital ring with drifting particles, then resolves into a line-drawn icon before the program info sheet slides in.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark full-screen loading stage: &quot;Create Program&quot; title top-center, a soft gradient blob star (green/pink/orange, 4 rounded points) at center inside a dashed circular track, tiny particles orbiting, faint colored edge glows on the screen borders. Ends on a &quot;Program Information&quot; sheet (title, tab chips, description text, Done button).
+
+## Motion spec
+Pattern: generative loading loop -&gt; resolve, ~4s total.
+- The star morphs continuously: points swell and rotate (scale 1 -&gt; 1.15 -&gt; 1, rotate 0 -&gt; 360deg over 6s, linear), gradient hues slowly cycling.
+- The dashed ring rotates opposite the star (0 -&gt; -360deg, 8s, linear).
+- 4-6 particles drift along the ring with staggered phases, opacity twinkling 0.3 -&gt; 1.
+- Screen edge glows (green left, magenta right) breathe at 0.2 -&gt; 0.4 opacity, 3s cycle.
+- Resolve: star collapses (scale -&gt; 0, 250ms, ease-in) and a green line icon draws on (stroke-dashoffset, 400ms); 300ms later the info sheet slides up (translateY 100% -&gt; 0, 350ms, ease-out).
+
+## Calibration
+- Loop motions are linear and continuous; easing on a loading loop makes it feel broken.
+- The resolve must feel earned: hold the loop at least 2 full seconds before collapsing.
+
+## Reduced motion
+Static star at 80% opacity with the dashed ring still; resolve becomes a 300ms crossfade to the sheet.
+
+## Don&#x27;t miss
+- Star and ring rotate in opposite directions - same-direction rotation reads as one rigid disc.
+- The edge glows are ambient, not tied to the star&#x27;s cycle; syncing them looks mechanical.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">generative loading loop -&gt; resolve, ~4s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/rive-create-program-animation">original interaction</a> by Rive. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: a sleep app's \"Create Program\" loading transition - a morphing gradient 4-point star spins slowly inside a dashed orbital ring with drifting particles, then resolves into a line-drawn icon before the program info sheet slides in.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark full-screen loading stage: \"Create Program\" title top-center, a soft gradient blob star (green/pink/orange, 4 rounded points) at center inside a dashed circular track, tiny particles orbiting, faint colored edge glows on the screen borders. Ends on a \"Program Information\" sheet (title, tab chips, description text, Done button).\n\n## Motion spec\nPattern: generative loading loop -> resolve, ~4s total.\n- The star morphs continuously: points swell and rotate (scale 1 -> 1.15 -> 1, rotate 0 -> 360deg over 6s, linear), gradient hues slowly cycling.\n- The dashed ring rotates opposite the star (0 -> -360deg, 8s, linear).\n- 4-6 particles drift along the ring with staggered phases, opacity twinkling 0.3 -> 1.\n- Screen edge glows (green left, magenta right) breathe at 0.2 -> 0.4 opacity, 3s cycle.\n- Resolve: star collapses (scale -> 0, 250ms, ease-in) and a green line icon draws on (stroke-dashoffset, 400ms); 300ms later the info sheet slides up (translateY 100% -> 0, 350ms, ease-out).\n\n## Calibration\n- Loop motions are linear and continuous; easing on a loading loop makes it feel broken.\n- The resolve must feel earned: hold the loop at least 2 full seconds before collapsing.\n\n## Reduced motion\nStatic star at 80% opacity with the dashed ring still; resolve becomes a 300ms crossfade to the sheet.\n\n## Don't miss\n- Star and ring rotate in opposite directions - same-direction rotation reads as one rigid disc.\n- The edge glows are ambient, not tied to the star's cycle; syncing them looks mechanical."</script>
+</body></html>

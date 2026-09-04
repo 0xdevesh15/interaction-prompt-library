@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methods Payout Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Methods Payout Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/methods-payout-slider-interaction"><b>Methods</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/methods-payout-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/methods-payout-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Methods&#x27; payout slider - drag the handle across a waveform bar graph and the monthly goal amount updates live from $100 to $10,000+.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694c0d18f1ad267a0647ebec/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/694c0d18f1ad267a0647ebec/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-methods-payout-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Methods&#x27; payout slider - drag the handle across a waveform bar graph and the monthly goal amount updates live from $100 to $10,000+.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A light onboarding screen: back chevron, slim progress bar, the question &quot;How much do you want to make this month?&quot; with &quot;Set your desired payout amount&quot; beneath, a huge dollar amount centered, a waveform-style slider (many thin vertical bars like an audio wave) with a purple dot handle, and a pink-purple Continue button.
+
+## Motion spec
+Pattern: waveform slider with a scaling bar graph and live amount readout.
+- The waveform bars left of the handle are filled purple; right of it, gray - the fill boundary tracks the handle 1:1 while dragging.
+- Bars near the handle scale up (height +40% easing off over ~6 bars) so the wave bulges around the touch point - the graph feels physical.
+- The big amount updates live with the drag (no lag, no debounce), snapping to round steps ($100 increments under $1,000, larger steps above); at the max it flips to &quot;$10,000+&quot; with a small scale bump (1 -&gt; 1.06 -&gt; 1, 200ms).
+- On release the handle settles with a tiny spring (~380/18) to the nearest step; haptic tick per step while dragging.
+- Continue stays enabled at every value - the slider is a preference, not a gate.
+
+## Calibration
+- The amount&#x27;s font size holds constant across $100 and $10,000+ - the layout never jumps, the text just changes.
+- The wave bulge follows the finger, not the value - moving slowly keeps the bulge under the touch.
+
+## Reduced motion
+Fill boundary updates without the bar bulge; amount updates without the bump.
+
+## Don&#x27;t miss
+- The slider is the waveform itself - there is no separate track line; the bars are the control.
+- $10,000+ is a distinct cap state (the &quot;+&quot;), not just a big number.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">waveform slider with a scaling bar graph and live amount readout.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/methods-payout-slider-interaction">original interaction</a> by Methods. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Methods' payout slider - drag the handle across a waveform bar graph and the monthly goal amount updates live from $100 to $10,000+.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA light onboarding screen: back chevron, slim progress bar, the question \"How much do you want to make this month?\" with \"Set your desired payout amount\" beneath, a huge dollar amount centered, a waveform-style slider (many thin vertical bars like an audio wave) with a purple dot handle, and a pink-purple Continue button.\n\n## Motion spec\nPattern: waveform slider with a scaling bar graph and live amount readout.\n- The waveform bars left of the handle are filled purple; right of it, gray - the fill boundary tracks the handle 1:1 while dragging.\n- Bars near the handle scale up (height +40% easing off over ~6 bars) so the wave bulges around the touch point - the graph feels physical.\n- The big amount updates live with the drag (no lag, no debounce), snapping to round steps ($100 increments under $1,000, larger steps above); at the max it flips to \"$10,000+\" with a small scale bump (1 -> 1.06 -> 1, 200ms).\n- On release the handle settles with a tiny spring (~380/18) to the nearest step; haptic tick per step while dragging.\n- Continue stays enabled at every value - the slider is a preference, not a gate.\n\n## Calibration\n- The amount's font size holds constant across $100 and $10,000+ - the layout never jumps, the text just changes.\n- The wave bulge follows the finger, not the value - moving slowly keeps the bulge under the touch.\n\n## Reduced motion\nFill boundary updates without the bar bulge; amount updates without the bump.\n\n## Don't miss\n- The slider is the waveform itself - there is no separate track line; the bars are the control.\n- $10,000+ is a distinct cap state (the \"+\"), not just a big number."</script>
+</body></html>

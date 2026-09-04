@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo 50 Day Streak Goal Checkpoint Reveal Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo 50 Day Streak Goal Checkpoint Reveal Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-50-day-streak-goal-checkpoint-reveal-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-50-day-streak-goal-checkpoint-reveal-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-50-day-streak-goal-checkpoint-reveal-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s streak goal checkpoint - the day-50 chest on the streak path bursts into a checked flame chest with &quot;+50 gems&quot; while the gem counter ticks up, then the path slides to the next goal with &quot;Can you make it to the next one?&quot;.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adddc0cd4a3cfd5418a2fe/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68adddc0cd4a3cfd5418a2fe/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-50-day-streak-goal-checkpoint-reveal-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s streak goal checkpoint - the day-50 chest on the streak path bursts into a checked flame chest with &quot;+50 gems&quot; while the gem counter ticks up, then the path slides to the next goal with &quot;Can you make it to the next one?&quot;.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White screen: a horizontal streak path with nodes (day 40 chest, day 50 chest, locked day 60), a gem counter top-right, the message &quot;You reached a Streak Goal checkpoint!&quot;, later &quot;Can you make it to the next one?&quot;, and a CONTINUE pill.
+
+## Motion spec
+Pattern: checkpoint reward sequence, ~2.4s.
+- Arrival: the path slides left until the day-50 chest is centered (400ms, ease-out); the copy fades in.
+- Reward: the chest pops open (scale 1 -&gt; 1.2 -&gt; 1, spring ~420/16) swapping to a checked flame variant as &quot;+50 gems&quot; floats up (rise 40px, fade, 700ms).
+- Counter: the gem total ticks up by 50 (rolling digits, 500ms, ease-out).
+- Advance: the path slides again to reveal the locked day-60 node (spring ~300/24, 400ms) as the copy crossfades to &quot;Can you make it to the next one?&quot; (250ms).
+- CONTINUE fades up (250ms) last.
+
+## Calibration
+- The counter ticks exactly with the float - the gems land as the number moves.
+- Locked nodes are grey with padlocks; only the reached node animates.
+
+## Reduced motion
+Chest swaps state with a fade; the path jumps to final position.
+
+## Don&#x27;t miss
+- The chest transformation is in place - it does not slide in.
+- Two distinct path slides: to the checkpoint, then past it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">checkpoint reward sequence, ~2.4s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-50-day-streak-goal-checkpoint-reveal-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's streak goal checkpoint - the day-50 chest on the streak path bursts into a checked flame chest with \"+50 gems\" while the gem counter ticks up, then the path slides to the next goal with \"Can you make it to the next one?\".\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite screen: a horizontal streak path with nodes (day 40 chest, day 50 chest, locked day 60), a gem counter top-right, the message \"You reached a Streak Goal checkpoint!\", later \"Can you make it to the next one?\", and a CONTINUE pill.\n\n## Motion spec\nPattern: checkpoint reward sequence, ~2.4s.\n- Arrival: the path slides left until the day-50 chest is centered (400ms, ease-out); the copy fades in.\n- Reward: the chest pops open (scale 1 -> 1.2 -> 1, spring ~420/16) swapping to a checked flame variant as \"+50 gems\" floats up (rise 40px, fade, 700ms).\n- Counter: the gem total ticks up by 50 (rolling digits, 500ms, ease-out).\n- Advance: the path slides again to reveal the locked day-60 node (spring ~300/24, 400ms) as the copy crossfades to \"Can you make it to the next one?\" (250ms).\n- CONTINUE fades up (250ms) last.\n\n## Calibration\n- The counter ticks exactly with the float - the gems land as the number moves.\n- Locked nodes are grey with padlocks; only the reached node animates.\n\n## Reduced motion\nChest swaps state with a fade; the path jumps to final position.\n\n## Don't miss\n- The chest transformation is in place - it does not slide in.\n- Two distinct path slides: to the checkpoint, then past it."</script>
+</body></html>

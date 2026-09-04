@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airlearn Lessons Bar Fill and XP Text Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airlearn Lessons Bar Fill and XP Text Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airlearn-lessons-bar-fill-and-xp-text-animation"><b>Airlearn</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airlearn-lessons-bar-fill-and-xp-text-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airlearn-lessons-bar-fill-and-xp-text-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airlearn&#x27;s experience-points screen entrance - the XP sheet fades in from blank, the lightning-bolt hero and stats populate, and the &quot;Earned today&quot; counter ticks up while its progress bar fills.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509739ff6640815e7e8646/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67509739ff6640815e7e8646/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airlearn-lessons-bar-fill-and-xp-text-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airlearn&#x27;s experience-points screen entrance - the XP sheet fades in from blank, the lightning-bolt hero and stats populate, and the &quot;Earned today&quot; counter ticks up while its progress bar fills.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Mobile sheet, near-white mint background, close X top-left. Centered green 3D lightning bolt, &quot;Experience points (XP)&quot; title, one-line explainer, two stat columns (&quot;500 Today&quot; with green bolt icon, &quot;1,151 All-time&quot; with blue bolt icon), an &quot;Earned today&quot; block with a green XP number, a progress bar toward &quot;1,000&quot;, and a blue &quot;Start a lesson&quot; button.
+
+## Motion spec
+Pattern: count-up with synchronized progress fill on screen load.
+- Whole sheet content fades in from blank (opacity 0 -&gt; 1, 300ms, ease-out); the bolt settles with a small scale (0.95 -&gt; 1).
+- &quot;Earned today&quot; number counts up from 300 XP to 500 XP (~900ms, ease-out, integer ticks).
+- The progress bar fill animates width in lockstep with the count (same 900ms ease-out), ending ~50% toward the 1,000 goal.
+- Stats columns and the Start a lesson button fade in with the sheet and stay put.
+
+## Calibration
+- Number and bar must be driven by one shared progress value - any drift between them reads as a bug.
+- Keep the count fast (under 1s); this is confirmation, not a celebration.
+
+## Reduced motion
+Sheet fades in (200ms) with final values shown - no count, no bar animation.
+
+## Don&#x27;t miss
+- The green bolt (Today) and blue bolt (All-time) use different colors; do not reuse one icon tint.
+- The bar goal label &quot;1,000&quot; sits at the bar&#x27;s right end with a small bolt icon.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">count-up with synchronized progress fill on screen load.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airlearn-lessons-bar-fill-and-xp-text-animation">original interaction</a> by Airlearn. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airlearn's experience-points screen entrance - the XP sheet fades in from blank, the lightning-bolt hero and stats populate, and the \"Earned today\" counter ticks up while its progress bar fills.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nMobile sheet, near-white mint background, close X top-left. Centered green 3D lightning bolt, \"Experience points (XP)\" title, one-line explainer, two stat columns (\"500 Today\" with green bolt icon, \"1,151 All-time\" with blue bolt icon), an \"Earned today\" block with a green XP number, a progress bar toward \"1,000\", and a blue \"Start a lesson\" button.\n\n## Motion spec\nPattern: count-up with synchronized progress fill on screen load.\n- Whole sheet content fades in from blank (opacity 0 -> 1, 300ms, ease-out); the bolt settles with a small scale (0.95 -> 1).\n- \"Earned today\" number counts up from 300 XP to 500 XP (~900ms, ease-out, integer ticks).\n- The progress bar fill animates width in lockstep with the count (same 900ms ease-out), ending ~50% toward the 1,000 goal.\n- Stats columns and the Start a lesson button fade in with the sheet and stay put.\n\n## Calibration\n- Number and bar must be driven by one shared progress value - any drift between them reads as a bug.\n- Keep the count fast (under 1s); this is confirmation, not a celebration.\n\n## Reduced motion\nSheet fades in (200ms) with final values shown - no count, no bar animation.\n\n## Don't miss\n- The green bolt (Today) and blue bolt (All-time) use different colors; do not reuse one icon tint.\n- The bar goal label \"1,000\" sits at the bar's right end with a small bolt icon."</script>
+</body></html>

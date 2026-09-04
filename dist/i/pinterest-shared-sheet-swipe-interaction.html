@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pinterest Shared Sheet Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Pinterest Shared Sheet Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/pinterest-shared-sheet-swipe-interaction"><b>Pinterest</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pinterest-shared-sheet-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pinterest-shared-sheet-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Pinterest&#x27;s visual-search sheet - swiping horizontally cycles through matched items in the bottom sheet, and the product details and similar-items rail update with each swipe.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676d84f6e52b1079305d162c/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676d84f6e52b1079305d162c/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-pinterest-shared-sheet-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Pinterest&#x27;s visual-search sheet - swiping horizontally cycles through matched items in the bottom sheet, and the product details and similar-items rail update with each swipe.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A pin of colorful handmade buttons fills the top; a white bottom sheet shows the matched item (a gold star bead, then a green butterfly, then a striped star) with title, price line, Visit and Save buttons, and a &quot;Shop similar&quot; rail of thumbnails below.
+
+## Motion spec
+Pattern: horizontal match pager, ~600ms per swipe.
+- On drag, the matched item image follows the finger (translateX 1:1) while the next match slides in from the drag edge, the sheet itself staying pinned.
+- On release, the pager springs to the nearest match (stiffness 300 damping 24), the outgoing image exiting fully.
+- The title and price crossfade to the new match (200ms out, 250ms in) with a slight rise (8px).
+- The &quot;Shop similar&quot; rail below refreshes with a stagger: old thumbnails fade and shrink (150ms), new ones pop in (scale 0.8 to 1, 60ms stagger).
+- The pin behind stays dimmed and static; the sheet&#x27;s grab handle and close button never move.
+
+## Calibration
+- Only the item area pages - the sheet chrome is fixed.
+- The rail refresh trails the pager by 100ms so the match lands first.
+
+## Reduced motion
+Matches crossfade; rail swaps without stagger.
+
+## Don&#x27;t miss
+- The matched item sits on the sheet&#x27;s white background, visually lifted from the pin behind.
+- Visit and Save buttons persist across swipes; only their target changes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">horizontal match pager, ~600ms per swipe.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/pinterest-shared-sheet-swipe-interaction">original interaction</a> by Pinterest. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Pinterest's visual-search sheet - swiping horizontally cycles through matched items in the bottom sheet, and the product details and similar-items rail update with each swipe.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA pin of colorful handmade buttons fills the top; a white bottom sheet shows the matched item (a gold star bead, then a green butterfly, then a striped star) with title, price line, Visit and Save buttons, and a \"Shop similar\" rail of thumbnails below.\n\n## Motion spec\nPattern: horizontal match pager, ~600ms per swipe.\n- On drag, the matched item image follows the finger (translateX 1:1) while the next match slides in from the drag edge, the sheet itself staying pinned.\n- On release, the pager springs to the nearest match (stiffness 300 damping 24), the outgoing image exiting fully.\n- The title and price crossfade to the new match (200ms out, 250ms in) with a slight rise (8px).\n- The \"Shop similar\" rail below refreshes with a stagger: old thumbnails fade and shrink (150ms), new ones pop in (scale 0.8 to 1, 60ms stagger).\n- The pin behind stays dimmed and static; the sheet's grab handle and close button never move.\n\n## Calibration\n- Only the item area pages - the sheet chrome is fixed.\n- The rail refresh trails the pager by 100ms so the match lands first.\n\n## Reduced motion\nMatches crossfade; rail swaps without stagger.\n\n## Don't miss\n- The matched item sits on the sheet's white background, visually lifted from the pin behind.\n- Visit and Save buttons persist across swipes; only their target changes."</script>
+</body></html>

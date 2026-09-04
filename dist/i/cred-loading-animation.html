@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRED Loading Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>CRED Loading Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/cred-loading-animation"><b>CRED</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-loading-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/cred-loading-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: CRED&#x27;s claim-registration loader - on a black screen, an isometric wireframe chat bubble endlessly morphs its three inner marks between dots, equalizer bars, and squares while tiny sparkles drift around the outline.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db3a50ed3abd31659260ac/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66db3a50ed3abd31659260ac/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-cred-loading-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: CRED&#x27;s claim-registration loader - on a black screen, an isometric wireframe chat bubble endlessly morphs its three inner marks between dots, equalizer bars, and squares while tiny sparkles drift around the outline.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Black screen: small caps line &quot;loading questions for your claim registration&quot; top-center; a large isometric wireframe speech bubble centered, drawn in thin gray lines with a 3D extruded look; inside it three small white marks; tiny plus-sign sparkles at the outline&#x27;s corners.
+
+## Motion spec
+Pattern: morphing wireframe loader.
+- The three inner marks cycle shapes every ~900ms: round dots -&gt; vertical equalizer bars (staggered heights, each bar growing 60ms apart) -&gt; solid squares -&gt; back to dots, each morph a shape tween (300ms, ease-in-out).
+- The marks shift color on some cycles: white -&gt; green -&gt; white (200ms crossfade).
+- The wireframe bubble slowly breathes (scale 1 &lt;-&gt; 1.03, 2.4s) and its isometric depth lines subtly shift, keeping the 3D feel alive.
+- Sparkles twinkle at fixed outline points (opacity 0 -&gt; 1 -&gt; 0, 1.2s, offset phases).
+- On load completion: the marks settle into green dots, the bubble outline brightens once, and the whole loader fades out (250ms).
+
+## Calibration
+- Everything is line and geometry - no images, no text changes; the serif claim line stays static.
+- Loop is seamless: last frame matches first.
+
+## Reduced motion
+Static bubble with three pulsing dots (opacity only).
+
+## Don&#x27;t miss
+- The isometric extrusion: the bubble is drawn as a 3D slab, not a flat outline.
+- The three marks never move position - only their shape, height, and color change.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">morphing wireframe loader.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/cred-loading-animation">original interaction</a> by CRED. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: CRED's claim-registration loader - on a black screen, an isometric wireframe chat bubble endlessly morphs its three inner marks between dots, equalizer bars, and squares while tiny sparkles drift around the outline.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nBlack screen: small caps line \"loading questions for your claim registration\" top-center; a large isometric wireframe speech bubble centered, drawn in thin gray lines with a 3D extruded look; inside it three small white marks; tiny plus-sign sparkles at the outline's corners.\n\n## Motion spec\nPattern: morphing wireframe loader.\n- The three inner marks cycle shapes every ~900ms: round dots -> vertical equalizer bars (staggered heights, each bar growing 60ms apart) -> solid squares -> back to dots, each morph a shape tween (300ms, ease-in-out).\n- The marks shift color on some cycles: white -> green -> white (200ms crossfade).\n- The wireframe bubble slowly breathes (scale 1 <-> 1.03, 2.4s) and its isometric depth lines subtly shift, keeping the 3D feel alive.\n- Sparkles twinkle at fixed outline points (opacity 0 -> 1 -> 0, 1.2s, offset phases).\n- On load completion: the marks settle into green dots, the bubble outline brightens once, and the whole loader fades out (250ms).\n\n## Calibration\n- Everything is line and geometry - no images, no text changes; the serif claim line stays static.\n- Loop is seamless: last frame matches first.\n\n## Reduced motion\nStatic bubble with three pulsing dots (opacity only).\n\n## Don't miss\n- The isometric extrusion: the bubble is drawn as a 3D slab, not a flat outline.\n- The three marks never move position - only their shape, height, and color change."</script>
+</body></html>

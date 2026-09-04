@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monopoly Go Cloud Fade Out Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Monopoly Go Cloud Fade Out Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/monopoly-go-cloud-fade-out-animation"><b>Monopoly</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-cloud-fade-out-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/monopoly-go-cloud-fade-out-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Monopoly Go&#x27;s level-map transition - the board fades to black, clouds part over a pastel sky, and the level islands assemble with the new one bouncing into its unlocked state.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1abf936951f1cb7e343/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/676ec1abf936951f1cb7e343/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-monopoly-go-cloud-fade-out-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Monopoly Go&#x27;s level-map transition - the board fades to black, clouds part over a pastel sky, and the level islands assemble with the new one bouncing into its unlocked state.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A 3D board scene fades out to black, then a sky-blue and pink cloudscape fades in with drifting clouds. On it, a vertical path of floating island levels: locked grey islands with padlock badges (&quot;WONDERLAND NIGHTS&quot;, &quot;SYDNEY NIGHTS&quot;) and the completed colorful island (&quot;PARISIAN PLAZA&quot;) below.
+
+## Motion spec
+Pattern: cloud-part reveal with level assembly, ~2.5s.
+- The board scene dims and fades to black (400ms).
+- The pastel sky fades in (400ms) with clouds drifting slowly across (continuous 8s loop).
+- Islands assemble top-down: each island drops in with a soft bounce (spring stiffness 300 damping 15, 200ms stagger), its name ribbon unfurling beneath it (200ms).
+- Cloud wisps pass in front of the islands as they settle, partially veiling them.
+- The newest island (bottom) finishes in its unlocked colorful state with a final celebratory bounce and a sparkle pop (scale 1 to 1.1 and back, 300ms).
+
+## Calibration
+- The sky gradient runs blue at the bottom to pink at the top - flat sky loses the dreamy read.
+- Locked islands are greyscale with gold padlocks; only the completed one is in color.
+
+## Reduced motion
+Sky and islands fade in assembled.
+
+## Don&#x27;t miss
+- Clouds drift in front of and behind islands at different depths - keep the layering.
+- The ribbons unfurl from the island, they do not fade in flat.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">cloud-part reveal with level assembly, ~2.5s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/monopoly-go-cloud-fade-out-animation">original interaction</a> by Monopoly. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Monopoly Go's level-map transition - the board fades to black, clouds part over a pastel sky, and the level islands assemble with the new one bouncing into its unlocked state.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA 3D board scene fades out to black, then a sky-blue and pink cloudscape fades in with drifting clouds. On it, a vertical path of floating island levels: locked grey islands with padlock badges (\"WONDERLAND NIGHTS\", \"SYDNEY NIGHTS\") and the completed colorful island (\"PARISIAN PLAZA\") below.\n\n## Motion spec\nPattern: cloud-part reveal with level assembly, ~2.5s.\n- The board scene dims and fades to black (400ms).\n- The pastel sky fades in (400ms) with clouds drifting slowly across (continuous 8s loop).\n- Islands assemble top-down: each island drops in with a soft bounce (spring stiffness 300 damping 15, 200ms stagger), its name ribbon unfurling beneath it (200ms).\n- Cloud wisps pass in front of the islands as they settle, partially veiling them.\n- The newest island (bottom) finishes in its unlocked colorful state with a final celebratory bounce and a sparkle pop (scale 1 to 1.1 and back, 300ms).\n\n## Calibration\n- The sky gradient runs blue at the bottom to pink at the top - flat sky loses the dreamy read.\n- Locked islands are greyscale with gold padlocks; only the completed one is in color.\n\n## Reduced motion\nSky and islands fade in assembled.\n\n## Don't miss\n- Clouds drift in front of and behind islands at different depths - keep the layering.\n- The ribbons unfurl from the island, they do not fade in flat."</script>
+</body></html>

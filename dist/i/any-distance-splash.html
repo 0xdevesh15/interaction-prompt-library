@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Any Distance Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Any Distance Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/any-distance-splash"><b>Any Distance</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/any-distance-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/any-distance-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Any Distance&#x27;s splash - a glowing 3D capsule logo spins and pulses on black, then fades into the dark map dashboard where a bouncy little astronaut mascot pops up over the Start button.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be478a39387d216457d79e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be478a39387d216457d79e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-any-distance-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Any Distance&#x27;s splash - a glowing 3D capsule logo spins and pulses on black, then fades into the dark map dashboard where a bouncy little astronaut mascot pops up over the Start button.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Splash: pure black, a small capsule-shaped 3D logo at center with an orange glowing mountain mark inside. Dashboard: dark grayscale map filling the screen, &quot;Great to see you!&quot; greeting, a white Start button at the bottom, a thin activity-type bar (Run, search, Ready) above it, and page dots. The mascot: a small cartoon astronaut that appears between the greeting and the Start button.
+
+## Motion spec
+Pattern: pulsing logo splash into a mascot-pop dashboard reveal.
+- The logo rotates slowly (rotationY continuous, ~4s per turn) while its orange glow pulses (glow radius and opacity breathing, 2s sine).
+- After ~1.5s the splash crossfades to the dashboard (400ms); the map fades in slightly zoomed (scale 1.05 to 1.0, 600ms, ease-out).
+- Greeting and Start fade up (translateY 10px to 0, opacity, 250ms, 100ms apart).
+- The mascot pops in last: scale 0 to 1.0 with a bounce (spring stiffness ~320, damping ~16), then idles with a small bob (translateY +-5px, 2s sine).
+
+## Calibration
+- The splash is short - under 2 seconds. The logo glow is the only light on screen; keep everything else black.
+- The mascot pop is the hello; it must come after the UI settles, not during.
+
+## Reduced motion
+Static logo for 800ms, plain crossfade to a fully composed dashboard; no mascot pop.
+
+## Don&#x27;t miss
+- The map is grayscale and dark - the only warm color on the dashboard is the mascot.
+- The Start button is white and pill-shaped, the brightest element; hierarchy is Start over everything.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">pulsing logo splash into a mascot-pop dashboard reveal.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/any-distance-splash">original interaction</a> by Any Distance. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Any Distance's splash - a glowing 3D capsule logo spins and pulses on black, then fades into the dark map dashboard where a bouncy little astronaut mascot pops up over the Start button.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSplash: pure black, a small capsule-shaped 3D logo at center with an orange glowing mountain mark inside. Dashboard: dark grayscale map filling the screen, \"Great to see you!\" greeting, a white Start button at the bottom, a thin activity-type bar (Run, search, Ready) above it, and page dots. The mascot: a small cartoon astronaut that appears between the greeting and the Start button.\n\n## Motion spec\nPattern: pulsing logo splash into a mascot-pop dashboard reveal.\n- The logo rotates slowly (rotationY continuous, ~4s per turn) while its orange glow pulses (glow radius and opacity breathing, 2s sine).\n- After ~1.5s the splash crossfades to the dashboard (400ms); the map fades in slightly zoomed (scale 1.05 to 1.0, 600ms, ease-out).\n- Greeting and Start fade up (translateY 10px to 0, opacity, 250ms, 100ms apart).\n- The mascot pops in last: scale 0 to 1.0 with a bounce (spring stiffness ~320, damping ~16), then idles with a small bob (translateY +-5px, 2s sine).\n\n## Calibration\n- The splash is short - under 2 seconds. The logo glow is the only light on screen; keep everything else black.\n- The mascot pop is the hello; it must come after the UI settles, not during.\n\n## Reduced motion\nStatic logo for 800ms, plain crossfade to a fully composed dashboard; no mascot pop.\n\n## Don't miss\n- The map is grayscale and dark - the only warm color on the dashboard is the mascot.\n- The Start button is white and pill-shaped, the brightest element; hierarchy is Start over everything."</script>
+</body></html>

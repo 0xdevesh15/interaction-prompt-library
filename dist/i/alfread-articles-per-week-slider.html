@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alfread Articles Per Week Slider - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Alfread Articles Per Week Slider</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/alfread-articles-per-week-slider"><b>Alfread</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alfread-articles-per-week-slider">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/alfread-articles-per-week-slider">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Alfread&#x27;s weekly-goal picker - a horizontal reel of large numerals scrolls and snaps under the question &quot;How many articles do you want to read every week?&quot;, with the centered number large and dark while neighbors shrink and fade.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b655ac371d29849d86894f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b655ac371d29849d86894f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-alfread-articles-per-week-slider.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Alfread&#x27;s weekly-goal picker - a horizontal reel of large numerals scrolls and snaps under the question &quot;How many articles do you want to read every week?&quot;, with the centered number large and dark while neighbors shrink and fade.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream (off-white) minimal screen. Top: small step header. Serif headline &quot;How many articles do you want to read every week?&quot; with a small body paragraph. Center: a horizontal reel of numerals (single digits), the selected one large and near-black with an &quot;ARTICLES PER WEEK&quot; micro-caption under it. Bottom: a round dark button with a white check.
+
+## Motion spec
+Pattern: snapping numeral reel with scale-and-fade hierarchy.
+- The reel scrolls 1:1 with the drag; on release it snaps to the nearest number (spring stiffness ~280, damping ~26, ~300ms with a small overshoot).
+- Numbers interpolate continuously with distance from center: scale from 1.0 (center) to ~0.55, opacity from 1.0 to ~0.25 over two positions - no discrete jumps.
+- A short tick mark sits above the reel&#x27;s center as the selection indicator; it stays fixed while numbers flow under it.
+- Each snap fires a subtle haptic-timed bump: the selected number overshoots scale 1.0 to 1.08 and settles (150ms).
+- The check button confirms with a press scale (0.92, 100ms, spring back).
+
+## Calibration
+- The continuous scale/opacity interpolation is the whole effect - snapped styling reads as a segmented control, not a reel.
+- Keep 3 to 4 numbers visible on each side; clipping tighter loses the sense of a wheel.
+
+## Reduced motion
+Reel snaps without the scale bump; distance styling still applies (it is information, not decoration).
+
+## Don&#x27;t miss
+- The caption under the number belongs to the selection, not the reel - it always sits under the center value.
+- Cream background, near-black ink, one accent: keep the palette at two tones.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">snapping numeral reel with scale-and-fade hierarchy.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/alfread-articles-per-week-slider">original interaction</a> by Alfread. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Alfread's weekly-goal picker - a horizontal reel of large numerals scrolls and snaps under the question \"How many articles do you want to read every week?\", with the centered number large and dark while neighbors shrink and fade.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream (off-white) minimal screen. Top: small step header. Serif headline \"How many articles do you want to read every week?\" with a small body paragraph. Center: a horizontal reel of numerals (single digits), the selected one large and near-black with an \"ARTICLES PER WEEK\" micro-caption under it. Bottom: a round dark button with a white check.\n\n## Motion spec\nPattern: snapping numeral reel with scale-and-fade hierarchy.\n- The reel scrolls 1:1 with the drag; on release it snaps to the nearest number (spring stiffness ~280, damping ~26, ~300ms with a small overshoot).\n- Numbers interpolate continuously with distance from center: scale from 1.0 (center) to ~0.55, opacity from 1.0 to ~0.25 over two positions - no discrete jumps.\n- A short tick mark sits above the reel's center as the selection indicator; it stays fixed while numbers flow under it.\n- Each snap fires a subtle haptic-timed bump: the selected number overshoots scale 1.0 to 1.08 and settles (150ms).\n- The check button confirms with a press scale (0.92, 100ms, spring back).\n\n## Calibration\n- The continuous scale/opacity interpolation is the whole effect - snapped styling reads as a segmented control, not a reel.\n- Keep 3 to 4 numbers visible on each side; clipping tighter loses the sense of a wheel.\n\n## Reduced motion\nReel snaps without the scale bump; distance styling still applies (it is information, not decoration).\n\n## Don't miss\n- The caption under the number belongs to the selection, not the reel - it always sits under the center value.\n- Cream background, near-black ink, one accent: keep the palette at two tones."</script>
+</body></html>

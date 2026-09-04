@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swiggy Category Tabs Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Swiggy Category Tabs Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/swiggy-category-tabs-animation"><b>Swiggy</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-category-tabs-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/swiggy-category-tabs-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Swiggy&#x27;s category tabs - a row of claymorphic category icons under the header where switching tabs retints the whole page theme (blue -&gt; pink), re-themes the search hint, and cross-loads content behind a brief branded spinner.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745fb58c84c6b7e105cf9aa/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6745fb58c84c6b7e105cf9aa/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-swiggy-category-tabs-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Swiggy&#x27;s category tabs - a row of claymorphic category icons under the header where switching tabs retints the whole page theme (blue -&gt; pink), re-themes the search hint, and cross-loads content behind a brief branded spinner.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+The Swiggy home: orange header block (Bellandur location row, profile icon), a search bar whose placeholder cycles (&quot;Search for &#x27;Soogi&#x27;&quot;, &quot;&#x27;Coffee&#x27;&quot;, &quot;&#x27;Bottles&#x27;&quot;, &quot;&#x27;Shower Gel&#x27;&quot;, &quot;&#x27;Smartwatch&#x27;&quot;), a horizontal tab row of 3D clay icons (All, Fresh, Grocery, Electronics, Home, Beauty, Kids), and content below - hero banner (&quot;ULTIMATE BINGE FEST&quot;, &quot;Freshest Seasonal Fruits!&quot;, &quot;Stay Warm, Sip Happy!&quot;, &quot;Winter Skincare For Babies!&quot;) plus category tiles.
+
+## Motion spec
+Pattern: theme-morphing tab switch.
+- Tap a tab: the selected clay icon pops (scale 1 -&gt; 1.12 -&gt; 1, spring ~450/20) and the tab row&#x27;s active pill slides under it (spring ~420/24, 250ms).
+- The entire header + background crossfades to the category&#x27;s theme color (300ms) - blue for All, pink for Grocery - including the search bar tint.
+- The search placeholder text swaps with a vertical roll (old text rolls up, new rolls in, 250ms).
+- Content below transitions through a loading state: old content fades out (150ms), a small orange Swiggy &quot;C&quot;-spinner rotates once in the center (400ms), then the new banner and tiles stagger in top-down (80ms per row, fade + translateY 12pt -&gt; 0).
+- The clay icons themselves are glossy renders with highlight shine - they get a subtle idle wobble when their tab is active.
+
+## Calibration
+- The theme color change is the loudest signal - keep it fast (300ms) so repeated tabbing feels instant.
+- The spinner shows only if content isn&#x27;t ready within 100ms - no flashing it on fast switches.
+
+## Reduced motion
+Theme crossfades without motion; content fades in without stagger; icons don&#x27;t pop.
+
+## Don&#x27;t miss
+- The clay icon style: puffy 3D renders with soft shadows, not flat glyphs.
+- The hero banner crossfades with a slight horizontal parallax slide as tabs change.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">theme-morphing tab switch.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/swiggy-category-tabs-animation">original interaction</a> by Swiggy. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Swiggy's category tabs - a row of claymorphic category icons under the header where switching tabs retints the whole page theme (blue -> pink), re-themes the search hint, and cross-loads content behind a brief branded spinner.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nThe Swiggy home: orange header block (Bellandur location row, profile icon), a search bar whose placeholder cycles (\"Search for 'Soogi'\", \"'Coffee'\", \"'Bottles'\", \"'Shower Gel'\", \"'Smartwatch'\"), a horizontal tab row of 3D clay icons (All, Fresh, Grocery, Electronics, Home, Beauty, Kids), and content below - hero banner (\"ULTIMATE BINGE FEST\", \"Freshest Seasonal Fruits!\", \"Stay Warm, Sip Happy!\", \"Winter Skincare For Babies!\") plus category tiles.\n\n## Motion spec\nPattern: theme-morphing tab switch.\n- Tap a tab: the selected clay icon pops (scale 1 -> 1.12 -> 1, spring ~450/20) and the tab row's active pill slides under it (spring ~420/24, 250ms).\n- The entire header + background crossfades to the category's theme color (300ms) - blue for All, pink for Grocery - including the search bar tint.\n- The search placeholder text swaps with a vertical roll (old text rolls up, new rolls in, 250ms).\n- Content below transitions through a loading state: old content fades out (150ms), a small orange Swiggy \"C\"-spinner rotates once in the center (400ms), then the new banner and tiles stagger in top-down (80ms per row, fade + translateY 12pt -> 0).\n- The clay icons themselves are glossy renders with highlight shine - they get a subtle idle wobble when their tab is active.\n\n## Calibration\n- The theme color change is the loudest signal - keep it fast (300ms) so repeated tabbing feels instant.\n- The spinner shows only if content isn't ready within 100ms - no flashing it on fast switches.\n\n## Reduced motion\nTheme crossfades without motion; content fades in without stagger; icons don't pop.\n\n## Don't miss\n- The clay icon style: puffy 3D renders with soft shadows, not flat glyphs.\n- The hero banner crossfades with a slight horizontal parallax slide as tabs change."</script>
+</body></html>

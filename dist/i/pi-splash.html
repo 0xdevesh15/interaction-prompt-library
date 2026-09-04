@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pi Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Pi Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/pi-splash"><b>Pi</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pi-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/pi-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Pi&#x27;s onboarding slideshow - cream pages pairing a floating product photo card with giant serif type (&quot;I&#x27;m Pi&quot;), swiping between editorial beats.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb55225b7b88f78c6c40/download.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bb55225b7b88f78c6c40/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-pi-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Pi&#x27;s onboarding slideshow - cream pages pairing a floating product photo card with giant serif type (&quot;I&#x27;m Pi&quot;), swiping between editorial beats.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Cream pages. The hero page: a rounded photo card (phone on a red table) floating at the top, a small italic &quot;I&#x27;m&quot;, and a giant dark-green serif &quot;Pi&quot; dominating the lower half; pagination dots at the bottom. Later beats (e.g. &quot;Together,&quot;) keep the same editorial type system.
+
+## Motion spec
+Pattern: staggered editorial page reveals + swipe slideshow.
+- Page entry: the photo card drops in from above with a soft bounce (translateY -60px to 0, spring ~300/20, rotate -3deg to 0), then the italic kicker fades in (250ms), then the giant serif word rises (translateY 30px + fade, 400ms, slight spring), then the pagination dots fade (200ms).
+- The photo card idles with a gentle float (translateY +-4px, 4s loop) after landing.
+- Swipe: pages track the finger 1:1; the outgoing page&#x27;s giant word parallaxes faster than the card (word 1.2x, card 0.8x) creating depth; release snaps to the nearest page (spring ~360/24).
+- Page transitions also crossfade the background tint slightly (cream shifts a few percent warmer/cooler per page).
+- Pagination dots: the active dot stretches (width 6px to 16px, 200ms spring) as pages change.
+
+## Calibration
+- The serif word is enormous - roughly a third of screen height; don&#x27;t shrink it to fit copy blocks.
+- Only one idea per page: kicker + one word or short phrase.
+
+## Reduced motion
+Pages crossfade; card doesn&#x27;t float.
+
+## Don&#x27;t miss
+- The palette is cream, dark green, and the photo&#x27;s red - no other colors.
+- The italic kicker (&quot;I&#x27;m&quot;, &quot;Together,&quot;) is small and quiet, deliberately dwarfed by the serif word beneath it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">staggered editorial page reveals + swipe slideshow.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/pi-splash">original interaction</a> by Pi. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Pi's onboarding slideshow - cream pages pairing a floating product photo card with giant serif type (\"I'm Pi\"), swiping between editorial beats.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nCream pages. The hero page: a rounded photo card (phone on a red table) floating at the top, a small italic \"I'm\", and a giant dark-green serif \"Pi\" dominating the lower half; pagination dots at the bottom. Later beats (e.g. \"Together,\") keep the same editorial type system.\n\n## Motion spec\nPattern: staggered editorial page reveals + swipe slideshow.\n- Page entry: the photo card drops in from above with a soft bounce (translateY -60px to 0, spring ~300/20, rotate -3deg to 0), then the italic kicker fades in (250ms), then the giant serif word rises (translateY 30px + fade, 400ms, slight spring), then the pagination dots fade (200ms).\n- The photo card idles with a gentle float (translateY +-4px, 4s loop) after landing.\n- Swipe: pages track the finger 1:1; the outgoing page's giant word parallaxes faster than the card (word 1.2x, card 0.8x) creating depth; release snaps to the nearest page (spring ~360/24).\n- Page transitions also crossfade the background tint slightly (cream shifts a few percent warmer/cooler per page).\n- Pagination dots: the active dot stretches (width 6px to 16px, 200ms spring) as pages change.\n\n## Calibration\n- The serif word is enormous - roughly a third of screen height; don't shrink it to fit copy blocks.\n- Only one idea per page: kicker + one word or short phrase.\n\n## Reduced motion\nPages crossfade; card doesn't float.\n\n## Don't miss\n- The palette is cream, dark green, and the photo's red - no other colors.\n- The italic kicker (\"I'm\", \"Together,\") is small and quiet, deliberately dwarfed by the serif word beneath it."</script>
+</body></html>

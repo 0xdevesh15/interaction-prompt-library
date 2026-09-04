@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clocks Card Screen Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Clocks Card Screen Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/clocks-card-screen-morph-interaction"><b>Clocks</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clocks-card-screen-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/clocks-card-screen-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Clocks&#x27; card-to-screen morph - tapping &quot;Display Clock&quot; expands the selected clock card (a gradient landscape with the time) from the list into a full-screen clock, with the card&#x27;s artwork and time label stretching seamlessly to fill the display.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682ac1d6283a3162ff379be2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682ac1d6283a3162ff379be2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-clocks-card-screen-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Clocks&#x27; card-to-screen morph - tapping &quot;Display Clock&quot; expands the selected clock card (a gradient landscape with the time) from the list into a full-screen clock, with the card&#x27;s artwork and time label stretching seamlessly to fill the display.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White Clocks app. List state: a vertical stack of clock cards (colorful gradient landscapes, each with a time label like 10:02) under the Clocks header. Detail state: the selected card pinned near the top with Background (Ripple Gradient), Layout, and Font option rows below and a black &quot;Display Clock&quot; button. Display state: the card&#x27;s artwork fills the whole screen with the time centered.
+
+## Motion spec
+Pattern: shared-element card expansion (hero morph).
+- Tap a card: the card lifts (scale 1 -&gt; 1.02, shadow deepens, 120ms), then expands toward its detail position while sibling cards slide away vertically (300ms ease-in-out); artwork and time label move as one shared element.
+- Option rows and the Display Clock button fade in after the card lands (200ms, 60ms stagger).
+- Tap &quot;Display Clock&quot;: the button compresses (scale 0.95, 100ms), then the card expands to full screen - its bounds grow to the device edges (350ms ease-in-out), the option rows fade and slide down (200ms), and the artwork scales to cover while the time label re-centers and grows slightly.
+- Back gesture reverses the morph with the same shared element.
+
+## Calibration
+- The artwork and time label never jump - they interpolate continuously between list, detail, and display bounds.
+- Corner radius animates with the expansion (12pt -&gt; 0pt on display, restored on return).
+
+## Reduced motion
+Crossfade between states (250ms) with no traveling element.
+
+## Don&#x27;t miss
+- The morph is the interaction - no intermediate modal or pushed screen.
+- The time keeps updating live through the morph.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">shared-element card expansion (hero morph).</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/clocks-card-screen-morph-interaction">original interaction</a> by Clocks. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Clocks' card-to-screen morph - tapping \"Display Clock\" expands the selected clock card (a gradient landscape with the time) from the list into a full-screen clock, with the card's artwork and time label stretching seamlessly to fill the display.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite Clocks app. List state: a vertical stack of clock cards (colorful gradient landscapes, each with a time label like 10:02) under the Clocks header. Detail state: the selected card pinned near the top with Background (Ripple Gradient), Layout, and Font option rows below and a black \"Display Clock\" button. Display state: the card's artwork fills the whole screen with the time centered.\n\n## Motion spec\nPattern: shared-element card expansion (hero morph).\n- Tap a card: the card lifts (scale 1 -> 1.02, shadow deepens, 120ms), then expands toward its detail position while sibling cards slide away vertically (300ms ease-in-out); artwork and time label move as one shared element.\n- Option rows and the Display Clock button fade in after the card lands (200ms, 60ms stagger).\n- Tap \"Display Clock\": the button compresses (scale 0.95, 100ms), then the card expands to full screen - its bounds grow to the device edges (350ms ease-in-out), the option rows fade and slide down (200ms), and the artwork scales to cover while the time label re-centers and grows slightly.\n- Back gesture reverses the morph with the same shared element.\n\n## Calibration\n- The artwork and time label never jump - they interpolate continuously between list, detail, and display bounds.\n- Corner radius animates with the expansion (12pt -> 0pt on display, restored on return).\n\n## Reduced motion\nCrossfade between states (250ms) with no traveling element.\n\n## Don't miss\n- The morph is the interaction - no intermediate modal or pushed screen.\n- The time keeps updating live through the morph."</script>
+</body></html>

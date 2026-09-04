@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orbit Intro Icons Spin Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Orbit Intro Icons Spin Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/orbit-intro-icons-spin-animation"><b>Orbit</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/orbit-intro-icons-spin-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/orbit-intro-icons-spin-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Orbit&#x27;s onboarding welcome - a ring of colorful subscription icons orbits continuously in the upper half while the Welcome card springs into view below.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/696c8cee05ff587e8d288ea5/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/696c8cee05ff587e8d288ea5/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-orbit-intro-icons-spin-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Orbit&#x27;s onboarding welcome - a ring of colorful subscription icons orbits continuously in the upper half while the Welcome card springs into view below.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Orbit onboarding, dark purple-black: an elliptical ring of brand icons (Google G, Spotify green, Netflix red, iCloud blue, grey and white glyphs) orbiting the upper half. Lower half: the purple Orbit planet logo, &quot;Welcome to Orbit&quot;, the explainer line, and a purple &quot;Start tracking&quot; button.
+
+## Motion spec
+Pattern: continuous brand-icon orbit above a spring-revealed welcome card.
+- The icon ring orbits continuously and indefinitely (one revolution per ~30s, constant speed); glyphs stay upright and dim/shrink slightly at the back of the ellipse.
+- Icons themselves twinkle in on load: each pops at its orbit slot (scale 0 -&gt; 1, spring ~400/20, staggered 60ms around the ring) before the orbit starts.
+- At ~500ms the lower content springs up: the Orbit logo first (scale 0.6 -&gt; 1, spring ~350/18 with a visible overshoot), then &quot;Welcome to Orbit&quot; and the explainer fade-slide up (20px, 300ms, 80ms apart), then the &quot;Start tracking&quot; button (same treatment, 100ms later).
+- The button idles with a slow glow pulse (shadow opacity 0.4 -&gt; 0.7 -&gt; 0.4, 2.5s).
+- The orbit keeps running behind everything - the card reveal never interrupts it.
+
+## Calibration
+- Icon colors are the real brand colors on the dark field - no recoloring, no badges.
+- The ring never collides with the headline: keep a clear gap between the lowest icon and the logo.
+
+## Reduced motion
+Icons fade in at fixed positions; orbit runs at 1/4 speed or stops; the card elements fade without springs.
+
+## Don&#x27;t miss
+- The stagger order is logo -&gt; headline -&gt; explainer -&gt; button - never simultaneous.
+- The orbit is perfectly smooth: constant angular velocity, no easing in the loop.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">continuous brand-icon orbit above a spring-revealed welcome card.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/orbit-intro-icons-spin-animation">original interaction</a> by Orbit. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Orbit's onboarding welcome - a ring of colorful subscription icons orbits continuously in the upper half while the Welcome card springs into view below.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nOrbit onboarding, dark purple-black: an elliptical ring of brand icons (Google G, Spotify green, Netflix red, iCloud blue, grey and white glyphs) orbiting the upper half. Lower half: the purple Orbit planet logo, \"Welcome to Orbit\", the explainer line, and a purple \"Start tracking\" button.\n\n## Motion spec\nPattern: continuous brand-icon orbit above a spring-revealed welcome card.\n- The icon ring orbits continuously and indefinitely (one revolution per ~30s, constant speed); glyphs stay upright and dim/shrink slightly at the back of the ellipse.\n- Icons themselves twinkle in on load: each pops at its orbit slot (scale 0 -> 1, spring ~400/20, staggered 60ms around the ring) before the orbit starts.\n- At ~500ms the lower content springs up: the Orbit logo first (scale 0.6 -> 1, spring ~350/18 with a visible overshoot), then \"Welcome to Orbit\" and the explainer fade-slide up (20px, 300ms, 80ms apart), then the \"Start tracking\" button (same treatment, 100ms later).\n- The button idles with a slow glow pulse (shadow opacity 0.4 -> 0.7 -> 0.4, 2.5s).\n- The orbit keeps running behind everything - the card reveal never interrupts it.\n\n## Calibration\n- Icon colors are the real brand colors on the dark field - no recoloring, no badges.\n- The ring never collides with the headline: keep a clear gap between the lowest icon and the logo.\n\n## Reduced motion\nIcons fade in at fixed positions; orbit runs at 1/4 speed or stops; the card elements fade without springs.\n\n## Don't miss\n- The stagger order is logo -> headline -> explainer -> button - never simultaneous.\n- The orbit is perfectly smooth: constant angular velocity, no easing in the loop."</script>
+</body></html>

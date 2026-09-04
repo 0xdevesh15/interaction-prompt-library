@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apple Calendar Buttons Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Apple Calendar Buttons Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/apple-calendar-buttons-morph-interaction"><b>Apple</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-calendar-buttons-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/apple-calendar-buttons-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Apple Calendar&#x27;s toolbar morph - the month view&#x27;s header buttons (search, view toggle, add) fluidly morph and rearrange as you drill into an event and back, with the event detail pushing in and the toolbar re-forming for each context.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7277de76d5c62e6f78b61/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e7277de76d5c62e6f78b61/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-apple-calendar-buttons-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Apple Calendar&#x27;s toolbar morph - the month view&#x27;s header buttons (search, view toggle, add) fluidly morph and rearrange as you drill into an event and back, with the event detail pushing in and the toolbar re-forming for each context.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Apple Calendar, September month view: &quot;&lt; 2025&quot; back link, year title &quot;September&quot;, day grid with the 21st circled, an event strip (&quot;FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2025 - Race&quot;), and bottom toolbar (Today, view icons). Event detail: full title, red alert banner, Calendar/Alert/Second Alert rows, Notes, &quot;Unsubscribe from This Calendar&quot; in red.
+
+## Motion spec
+Pattern: context-driven control morph, ~350ms.
+- Drill in: tapping the event pushes the detail in from the right (350ms, ease-out) while the month grid slides left and the header title crossfades &quot;&lt; September&quot; (150ms).
+- Morph: header buttons reshape between contexts - the search/view/add cluster collapses into a compact group (buttons slide together, 250ms, liquid-style morph where adjacent pills merge and split) and the bottom toolbar items crossfade to detail actions.
+- Drill out: the reverse - month view slides back, buttons expand and re-separate into their month-view arrangement (250ms).
+- Scroll: within detail, the red alert banner stays pinned while rows scroll under it.
+
+## Calibration
+- Buttons morph by merging geometry - two pills become one capsule and split apart - not by fading in new buttons.
+- The month grid stays interactive after return; the 21st keeps its selection ring.
+
+## Reduced motion
+Standard push/pop transitions with 200ms crossfades on the toolbar.
+
+## Don&#x27;t miss
+- The &quot;&lt; 2025&quot; crumb becomes &quot;&lt; September&quot; in detail - the back target relabels.
+- The red alert banner and red unsubscribe link are the only accent colors; everything else is monochrome.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">context-driven control morph, ~350ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/apple-calendar-buttons-morph-interaction">original interaction</a> by Apple. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Apple Calendar's toolbar morph - the month view's header buttons (search, view toggle, add) fluidly morph and rearrange as you drill into an event and back, with the event detail pushing in and the toolbar re-forming for each context.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nApple Calendar, September month view: \"< 2025\" back link, year title \"September\", day grid with the 21st circled, an event strip (\"FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2025 - Race\"), and bottom toolbar (Today, view icons). Event detail: full title, red alert banner, Calendar/Alert/Second Alert rows, Notes, \"Unsubscribe from This Calendar\" in red.\n\n## Motion spec\nPattern: context-driven control morph, ~350ms.\n- Drill in: tapping the event pushes the detail in from the right (350ms, ease-out) while the month grid slides left and the header title crossfades \"< September\" (150ms).\n- Morph: header buttons reshape between contexts - the search/view/add cluster collapses into a compact group (buttons slide together, 250ms, liquid-style morph where adjacent pills merge and split) and the bottom toolbar items crossfade to detail actions.\n- Drill out: the reverse - month view slides back, buttons expand and re-separate into their month-view arrangement (250ms).\n- Scroll: within detail, the red alert banner stays pinned while rows scroll under it.\n\n## Calibration\n- Buttons morph by merging geometry - two pills become one capsule and split apart - not by fading in new buttons.\n- The month grid stays interactive after return; the 21st keeps its selection ring.\n\n## Reduced motion\nStandard push/pop transitions with 200ms crossfades on the toolbar.\n\n## Don't miss\n- The \"< 2025\" crumb becomes \"< September\" in detail - the back target relabels.\n- The red alert banner and red unsubscribe link are the only accent colors; everything else is monochrome."</script>
+</body></html>

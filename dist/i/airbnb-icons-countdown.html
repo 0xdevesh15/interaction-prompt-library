@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Icons Countdown - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Icons Countdown</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-icons-countdown"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-icons-countdown">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-icons-countdown">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Airbnb&#x27;s Icons countdown - a frosted countdown pill with vertically rolling seconds digits, floating over an auto-advancing listing image carousel.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc61d73e2622b35209/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b4bcdc61d73e2622b35209/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-icons-countdown.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Airbnb&#x27;s Icons countdown - a frosted countdown pill with vertically rolling seconds digits, floating over an auto-advancing listing image carousel.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+An Airbnb listing card (&quot;Train at the X-Mansion&quot;, hosted line, price per guest). The top image area is an auto-scrolling photo carousel with paging dots. Centered over the image: a frosted-glass pill reading &quot;00h 43m 23s&quot;, the seconds ticking down with a rolling digit animation.
+
+## Motion spec
+Pattern: odometer countdown over crossfading carousel.
+- Each second, the seconds digits roll: the outgoing digit slides up and out while the incoming rolls in from below (180ms, ease-in-out), with a slight motion blur mid-roll; the tens digit rolls only when it changes (with the ones digit, 30ms lag).
+- Minutes/hours digits use the same roll when they tick, staggered 40ms from right to left.
+- The pill is frosted: backdrop blur ~20px, white at 65% opacity, dark text; it stays pinned center over the image while the carousel moves behind it.
+- The carousel auto-advances every ~4s: images crossfade with a slow 1.05x Ken Burns zoom (6s per image, alternating zoom in/out); paging dots swap their active pill (width animates 6px to 18px, 250ms).
+- Card content below the image is static; all motion lives in the image band.
+
+## Calibration
+- Digit roll duration stays under 200ms - the tick should read as mechanical, not floaty.
+- Pill never resizes as digits change: use tabular figures.
+
+## Reduced motion
+Digits change instantly; carousel crossfades without zoom.
+
+## Don&#x27;t miss
+- The roll direction is always up-out/down-in regardless of which digit ticks.
+- Keep the countdown pill legible over bright photos - the frost, not a shadow, does the work.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">odometer countdown over crossfading carousel.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-icons-countdown">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Airbnb's Icons countdown - a frosted countdown pill with vertically rolling seconds digits, floating over an auto-advancing listing image carousel.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nAn Airbnb listing card (\"Train at the X-Mansion\", hosted line, price per guest). The top image area is an auto-scrolling photo carousel with paging dots. Centered over the image: a frosted-glass pill reading \"00h 43m 23s\", the seconds ticking down with a rolling digit animation.\n\n## Motion spec\nPattern: odometer countdown over crossfading carousel.\n- Each second, the seconds digits roll: the outgoing digit slides up and out while the incoming rolls in from below (180ms, ease-in-out), with a slight motion blur mid-roll; the tens digit rolls only when it changes (with the ones digit, 30ms lag).\n- Minutes/hours digits use the same roll when they tick, staggered 40ms from right to left.\n- The pill is frosted: backdrop blur ~20px, white at 65% opacity, dark text; it stays pinned center over the image while the carousel moves behind it.\n- The carousel auto-advances every ~4s: images crossfade with a slow 1.05x Ken Burns zoom (6s per image, alternating zoom in/out); paging dots swap their active pill (width animates 6px to 18px, 250ms).\n- Card content below the image is static; all motion lives in the image band.\n\n## Calibration\n- Digit roll duration stays under 200ms - the tick should read as mechanical, not floaty.\n- Pill never resizes as digits change: use tabular figures.\n\n## Reduced motion\nDigits change instantly; carousel crossfades without zoom.\n\n## Don't miss\n- The roll direction is always up-out/down-in regardless of which digit ticks.\n- Keep the countdown pill legible over bright photos - the frost, not a shadow, does the work."</script>
+</body></html>

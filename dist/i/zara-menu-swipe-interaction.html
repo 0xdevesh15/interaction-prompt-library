@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zara Menu Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zara Menu Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zara-menu-swipe-interaction"><b>Zara</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zara-menu-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zara-menu-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Zara&#x27;s department menu - swiping horizontally moves the giant tab strip (WOMAN, MAN, KIDS, PERFUMES...) in lockstep with the content below, which crossfades to the new department.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d46933794a0c8c37d2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/69a6e4d46933794a0c8c37d2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zara-menu-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Zara&#x27;s department menu - swiping horizontally moves the giant tab strip (WOMAN, MAN, KIDS, PERFUMES...) in lockstep with the content below, which crossfades to the new department.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Zara menu, white: an oversized serif tab strip across the top (WOMAN MAN KIDS PERFUMES TRAVEL MODE, active department centered), a feature image card with a &quot;VIEW ALL&quot; label, a two-column list of menu links, and a minimal bottom bar (search, MENU, ACCOUNT, bag).
+
+## Motion spec
+Pattern: gesture-synced tab strip with crossfading department content.
+- The tab strip is draggable 1:1: letters translate with the finger at content speed; the strip is one continuous rail, so neighboring departments peek at the edges.
+- The department nearest center gets the active state (full opacity + a small dot marker); inactive tabs sit at ~40% opacity - states interpolate continuously with position, not snapped.
+- Content below does not slide - it crossfades: current links fade out (150ms) once drag passes 30%, new department&#x27;s content fades up (250ms) when the new tab crosses center.
+- On release: the strip snaps so the nearest department centers (spring ~350/22); the content swap completes with the snap.
+- The feature image card (e.g. the landscape &quot;VIEW ALL&quot; card) slides in from the side with the snap (translateX 24 -&gt; 0, 300ms) rather than fading, giving the page one spatial cue.
+
+## Calibration
+- The type is huge and tight-tracked - the strip should feel like dragging a printed banner.
+- Only one thing slides (the strip) and one thing fades (the content); never both.
+
+## Reduced motion
+Tab tap snaps instantly; content crossfades (250ms).
+
+## Don&#x27;t miss
+- The active dot marker slides under the strip with it and settles under the centered tab.
+- The bottom bar never participates - it stays fixed and still.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">gesture-synced tab strip with crossfading department content.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zara-menu-swipe-interaction">original interaction</a> by Zara. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Zara's department menu - swiping horizontally moves the giant tab strip (WOMAN, MAN, KIDS, PERFUMES...) in lockstep with the content below, which crossfades to the new department.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nZara menu, white: an oversized serif tab strip across the top (WOMAN MAN KIDS PERFUMES TRAVEL MODE, active department centered), a feature image card with a \"VIEW ALL\" label, a two-column list of menu links, and a minimal bottom bar (search, MENU, ACCOUNT, bag).\n\n## Motion spec\nPattern: gesture-synced tab strip with crossfading department content.\n- The tab strip is draggable 1:1: letters translate with the finger at content speed; the strip is one continuous rail, so neighboring departments peek at the edges.\n- The department nearest center gets the active state (full opacity + a small dot marker); inactive tabs sit at ~40% opacity - states interpolate continuously with position, not snapped.\n- Content below does not slide - it crossfades: current links fade out (150ms) once drag passes 30%, new department's content fades up (250ms) when the new tab crosses center.\n- On release: the strip snaps so the nearest department centers (spring ~350/22); the content swap completes with the snap.\n- The feature image card (e.g. the landscape \"VIEW ALL\" card) slides in from the side with the snap (translateX 24 -> 0, 300ms) rather than fading, giving the page one spatial cue.\n\n## Calibration\n- The type is huge and tight-tracked - the strip should feel like dragging a printed banner.\n- Only one thing slides (the strip) and one thing fades (the content); never both.\n\n## Reduced motion\nTab tap snaps instantly; content crossfades (250ms).\n\n## Don't miss\n- The active dot marker slides under the strip with it and settles under the centered tab.\n- The bottom bar never participates - it stays fixed and still."</script>
+</body></html>

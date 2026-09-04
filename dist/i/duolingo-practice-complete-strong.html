@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo Practice Complete Strong - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo Practice Complete Strong</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-practice-complete-strong"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-practice-complete-strong">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-practice-complete-strong">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Duolingo&#x27;s practice-complete &quot;strong&quot; variant - a red-jacketed character flexes beside Duo under popping sparkles, &quot;Practice complete!&quot; below, while the three stat cards (XP, time, accuracy) slide up in stagger and a CLAIM XP button sits at the bottom.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177f0522bbba81c9f86d/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6721177f0522bbba81c9f86d/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-practice-complete-strong.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Duolingo&#x27;s practice-complete &quot;strong&quot; variant - a red-jacketed character flexes beside Duo under popping sparkles, &quot;Practice complete!&quot; below, while the three stat cards (XP, time, accuracy) slide up in stagger and a CLAIM XP button sits at the bottom.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White completion screen: a red-outfitted character striking a strong pose next to Duo, &quot;Practice complete!&quot; headline, three stat cards (yellow XP, blue time, green accuracy), blue CLAIM XP button.
+
+## Motion spec
+Pattern: springy mascot entrance with sparkle accents and staggered cards.
+- The characters spring up from below (spring ~300/18, 450ms, firm overshoot) with star sparkles popping above them (scale 0 -&gt; 1 -&gt; 0, ~400ms each).
+- The character holds a flex pose with a subtle pump (bicep arm scale 1 -&gt; 1.06 -&gt; 1, 800ms loop); Duo bounces beside them.
+- Stat cards slide up in left-to-right stagger (spring ~340/22, 130ms apart), values rolling up on land.
+- Sparkles keep twinkling at random points around the mascots (1.5s loop).
+- CLAIM XP fades in last (250ms).
+
+## Calibration
+- The flex is the character beat - the pose reads strength, matching the &quot;strong&quot; theme.
+- Sparkles are line-burst stars, white and yellow.
+
+## Reduced motion
+Static pose fades in (250ms); cards fade staggered; no sparkles.
+
+## Don&#x27;t miss
+- Duo&#x27;s role is supportive - the red character is the star of this variant.
+- The card stagger, button, and copy match the other completion variants - only the mascot tableau changes.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy mascot entrance with sparkle accents and staggered cards.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-practice-complete-strong">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Duolingo's practice-complete \"strong\" variant - a red-jacketed character flexes beside Duo under popping sparkles, \"Practice complete!\" below, while the three stat cards (XP, time, accuracy) slide up in stagger and a CLAIM XP button sits at the bottom.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite completion screen: a red-outfitted character striking a strong pose next to Duo, \"Practice complete!\" headline, three stat cards (yellow XP, blue time, green accuracy), blue CLAIM XP button.\n\n## Motion spec\nPattern: springy mascot entrance with sparkle accents and staggered cards.\n- The characters spring up from below (spring ~300/18, 450ms, firm overshoot) with star sparkles popping above them (scale 0 -> 1 -> 0, ~400ms each).\n- The character holds a flex pose with a subtle pump (bicep arm scale 1 -> 1.06 -> 1, 800ms loop); Duo bounces beside them.\n- Stat cards slide up in left-to-right stagger (spring ~340/22, 130ms apart), values rolling up on land.\n- Sparkles keep twinkling at random points around the mascots (1.5s loop).\n- CLAIM XP fades in last (250ms).\n\n## Calibration\n- The flex is the character beat - the pose reads strength, matching the \"strong\" theme.\n- Sparkles are line-burst stars, white and yellow.\n\n## Reduced motion\nStatic pose fades in (250ms); cards fade staggered; no sparkles.\n\n## Don't miss\n- Duo's role is supportive - the red character is the star of this variant.\n- The card stagger, button, and copy match the other completion variants - only the mascot tableau changes."</script>
+</body></html>

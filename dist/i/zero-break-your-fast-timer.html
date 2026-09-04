@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zero Break Your Fast Timer - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Zero Break Your Fast Timer</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/zero-break-your-fast-timer"><b>Zero</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zero-break-your-fast-timer">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/zero-break-your-fast-timer">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Zero&#x27;s fast-completion sequence - tap &quot;Break Your Fast&quot; and the timer ring flips into a bright green celebration with a drawn check, then confetti falls as your streak badge is awarded.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b99dd49672bd0f1454ae85/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b99dd49672bd0f1454ae85/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-zero-break-your-fast-timer.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Zero&#x27;s fast-completion sequence - tap &quot;Break Your Fast&quot; and the timer ring flips into a bright green celebration with a drawn check, then confetti falls as your streak badge is awarded.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A dark timer screen: green progress ring around &quot;31:30:00&quot;, week dots up top, a green &quot;Break Your Fast&quot; pill. Celebration: the ring area floods bright green with a huge white circle and check over &quot;34h 32m&quot;. Award: a dark confetti screen (&quot;Fast 6x is done!&quot;) with a glowing red-orange flame badge (&quot;6&quot;), &quot;Collect badge&quot; magenta pill. A rating modal (&quot;Enjoying Zero?&quot;) slides over at the end.
+
+## Motion spec
+Pattern: ring-flip celebration into confetti badge award.
+- Tap Break Your Fast: the pill presses (scale 0.95, 100ms); the ring completes its stroke to 100% (300ms), then the whole card flips to its bright-green face (rotateY 180deg spring ~320/18) as the white circle scales in (spring ~380/20).
+- The check draws itself (stroke reveal, 350ms, ease-out) with a success haptic; the final time fades in beneath.
+- Transition to the award screen: the green card slides up and away (300ms) revealing the dark confetti scene - confetti (green, white, magenta pieces) falls from the top in a continuous gentle rain (3-5s, sway + rotation per piece).
+- The badge drops in from above (translateY -200px, spring ~300/16, landing bounce) with a radial glow pulsing behind it (opacity 0.4-0.8, 2s); &quot;Collect badge&quot; pill slides up (spring ~360/26).
+- Collect: the badge flies toward the top bar (bounds flight, spring ~340/20) and a toast confirms; the rating modal then slides up (spring ~360/28) with stars that fill left-to-right on tap-drag.
+
+## Calibration
+- The green celebration face is the app&#x27;s exact bright green - a full-bleed inversion of the dark theme.
+- Confetti keeps falling behind the badge until collection; density is moderate (no whiteout).
+
+## Reduced motion
+Ring fills without flip; confetti static; badge fades in.
+
+## Don&#x27;t miss
+- The check is a drawn stroke, not an icon pop - the draw timing IS the celebration beat.
+- The badge number (&quot;6&quot;) is a streak count inside a flame/shield shape with a warm gradient.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">ring-flip celebration into confetti badge award.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/zero-break-your-fast-timer">original interaction</a> by Zero. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Zero's fast-completion sequence - tap \"Break Your Fast\" and the timer ring flips into a bright green celebration with a drawn check, then confetti falls as your streak badge is awarded.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA dark timer screen: green progress ring around \"31:30:00\", week dots up top, a green \"Break Your Fast\" pill. Celebration: the ring area floods bright green with a huge white circle and check over \"34h 32m\". Award: a dark confetti screen (\"Fast 6x is done!\") with a glowing red-orange flame badge (\"6\"), \"Collect badge\" magenta pill. A rating modal (\"Enjoying Zero?\") slides over at the end.\n\n## Motion spec\nPattern: ring-flip celebration into confetti badge award.\n- Tap Break Your Fast: the pill presses (scale 0.95, 100ms); the ring completes its stroke to 100% (300ms), then the whole card flips to its bright-green face (rotateY 180deg spring ~320/18) as the white circle scales in (spring ~380/20).\n- The check draws itself (stroke reveal, 350ms, ease-out) with a success haptic; the final time fades in beneath.\n- Transition to the award screen: the green card slides up and away (300ms) revealing the dark confetti scene - confetti (green, white, magenta pieces) falls from the top in a continuous gentle rain (3-5s, sway + rotation per piece).\n- The badge drops in from above (translateY -200px, spring ~300/16, landing bounce) with a radial glow pulsing behind it (opacity 0.4-0.8, 2s); \"Collect badge\" pill slides up (spring ~360/26).\n- Collect: the badge flies toward the top bar (bounds flight, spring ~340/20) and a toast confirms; the rating modal then slides up (spring ~360/28) with stars that fill left-to-right on tap-drag.\n\n## Calibration\n- The green celebration face is the app's exact bright green - a full-bleed inversion of the dark theme.\n- Confetti keeps falling behind the badge until collection; density is moderate (no whiteout).\n\n## Reduced motion\nRing fills without flip; confetti static; badge fades in.\n\n## Don't miss\n- The check is a drawn stroke, not an icon pop - the draw timing IS the celebration beat.\n- The badge number (\"6\") is a streak count inside a flame/shield shape with a warm gradient."</script>
+</body></html>

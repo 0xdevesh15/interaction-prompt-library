@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLKJCK Intro Hit Action Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>BLKJCK Intro Hit Action Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/blkjck-intro-hit-action-animation"><b>Blkjck</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blkjck-intro-hit-action-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/blkjck-intro-hit-action-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: BLKJCK&#x27;s rule tooltip - as the dealt hand updates, a hint line slides and fades in explaining the move (&quot;Hit for more cards.&quot;, &quot;Aces are special...&quot;), tracking the current game state.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f7b8fd64e67f87ff02/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/678c73f7b8fd64e67f87ff02/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-blkjck-intro-hit-action-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: BLKJCK&#x27;s rule tooltip - as the dealt hand updates, a hint line slides and fades in explaining the move (&quot;Hit for more cards.&quot;, &quot;Aces are special...&quot;), tracking the current game state.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Soft pink game table: the dealer&#x27;s cards up top, the player&#x27;s hand below with its running total (10/20), and a red Hit button. Hint text appears mid-screen when the state changes.
+
+## Motion spec
+Pattern: contextual tooltip slide-in, ~400ms per hint.
+- When the hand changes, the current hint slides down and fades out (200ms, ease-in) as the new hint slides up from below and fades in (300ms, ease-out), the two crossing briefly.
+- On a Hit, the new card slides into the hand first (300ms); the hint follows 150ms later, timed to land after the card settles.
+- The hand total counts over to its new value in sync with the hint&#x27;s arrival.
+- Hints queue: a rapid second Hit replaces the entering hint mid-flight without a stutter.
+
+## Calibration
+- The hint is a narrator, not a popup - it never covers the cards or the button.
+- Copy swaps are always paired (old out, new in); a bare fade-to-empty reads as a glitch.
+
+## Reduced motion
+Hints crossfade in place (250ms).
+
+## Don&#x27;t miss
+- The entering hint comes from below every time; alternating directions reads as pagination.
+- The hint&#x27;s timing follows the card, not the tap - it reacts to the game state.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">contextual tooltip slide-in, ~400ms per hint.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/blkjck-intro-hit-action-animation">original interaction</a> by Blkjck. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: BLKJCK's rule tooltip - as the dealt hand updates, a hint line slides and fades in explaining the move (\"Hit for more cards.\", \"Aces are special...\"), tracking the current game state.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nSoft pink game table: the dealer's cards up top, the player's hand below with its running total (10/20), and a red Hit button. Hint text appears mid-screen when the state changes.\n\n## Motion spec\nPattern: contextual tooltip slide-in, ~400ms per hint.\n- When the hand changes, the current hint slides down and fades out (200ms, ease-in) as the new hint slides up from below and fades in (300ms, ease-out), the two crossing briefly.\n- On a Hit, the new card slides into the hand first (300ms); the hint follows 150ms later, timed to land after the card settles.\n- The hand total counts over to its new value in sync with the hint's arrival.\n- Hints queue: a rapid second Hit replaces the entering hint mid-flight without a stutter.\n\n## Calibration\n- The hint is a narrator, not a popup - it never covers the cards or the button.\n- Copy swaps are always paired (old out, new in); a bare fade-to-empty reads as a glitch.\n\n## Reduced motion\nHints crossfade in place (250ms).\n\n## Don't miss\n- The entering hint comes from below every time; alternating directions reads as pagination.\n- The hint's timing follows the card, not the tap - it reacts to the game state."</script>
+</body></html>

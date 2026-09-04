@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Boring Camera Customize Tabs Swipe Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Not Boring Camera Customize Tabs Swipe Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/not-boring-camera-customize-tabs-swipe-interaction"><b>Not</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-camera-customize-tabs-swipe-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/not-boring-camera-customize-tabs-swipe-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Not Boring Camera&#x27;s customize tabs - swiping through the part tab row pans, rotates, and zooms the 3D camera model to spotlight each component while the color-dot grid stays docked.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6841d2f8ed94500acc344950/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6841d2f8ed94500acc344950/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-not-boring-camera-customize-tabs-swipe-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Not Boring Camera&#x27;s customize tabs - swiping through the part tab row pans, rotates, and zooms the 3D camera model to spotlight each component while the color-dot grid stays docked.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark customize screen: a skeuomorphic 3D camera model (teal body, pink lens ring) floats over a faint blueprint backdrop, a part tab strip below it (Body, Top, Lens, Buttons, Dial, Flash, Shutter, Exposure), a grid of color dots beneath that, and a &quot;Done&quot; pill with a change counter between two corner buttons.
+
+## Motion spec
+Pattern: swipeable part tabs driving 3D model focus moves.
+- The tab strip scrolls horizontally with the active tab centered (spring ~300/22); swiping it flings with momentum and snaps to the nearest tab.
+- Each tab switch reframes the model: it pans, rotates, and zooms (spring ~280/20, 500ms) to a stored pose per part - Lens faces the pink ring front-on, Flash rotates the model down to its top plate, Shutter and Exposure zoom into the top dial cluster (+- symbols visible).
+- The reframed part highlights (full material) while other parts dim 35% (200ms).
+- Swiping the model itself also scrubs between tab poses 1:1, then settles onto the nearest tab (the tab strip follows, spring ~300/22).
+- Tapping a color dot recolors the focused part (color tween 200ms) with a dot pop (scale 1 -&gt; 1.3 -&gt; 1, spring ~340/14).
+- The Done counter badge pops (spring ~340/14) whenever a recolor lands.
+
+## Calibration
+- Model poses are consistent anchors: the same tab always lands the model at the same rotation, scale, and screen position.
+- Momentum swipes through multiple tabs interpolate through intermediate poses without teleporting.
+
+## Reduced motion
+Tab switches crossfade the model between poses (250ms); no spin.
+
+## Don&#x27;t miss
+- The blueprint backdrop and dot grid never move - only the model reframes.
+- Keep the pink lens ring and teal body as the model&#x27;s default identity until recolored.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">swipeable part tabs driving 3D model focus moves.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/not-boring-camera-customize-tabs-swipe-interaction">original interaction</a> by Not. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Not Boring Camera's customize tabs - swiping through the part tab row pans, rotates, and zooms the 3D camera model to spotlight each component while the color-dot grid stays docked.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark customize screen: a skeuomorphic 3D camera model (teal body, pink lens ring) floats over a faint blueprint backdrop, a part tab strip below it (Body, Top, Lens, Buttons, Dial, Flash, Shutter, Exposure), a grid of color dots beneath that, and a \"Done\" pill with a change counter between two corner buttons.\n\n## Motion spec\nPattern: swipeable part tabs driving 3D model focus moves.\n- The tab strip scrolls horizontally with the active tab centered (spring ~300/22); swiping it flings with momentum and snaps to the nearest tab.\n- Each tab switch reframes the model: it pans, rotates, and zooms (spring ~280/20, 500ms) to a stored pose per part - Lens faces the pink ring front-on, Flash rotates the model down to its top plate, Shutter and Exposure zoom into the top dial cluster (+- symbols visible).\n- The reframed part highlights (full material) while other parts dim 35% (200ms).\n- Swiping the model itself also scrubs between tab poses 1:1, then settles onto the nearest tab (the tab strip follows, spring ~300/22).\n- Tapping a color dot recolors the focused part (color tween 200ms) with a dot pop (scale 1 -> 1.3 -> 1, spring ~340/14).\n- The Done counter badge pops (spring ~340/14) whenever a recolor lands.\n\n## Calibration\n- Model poses are consistent anchors: the same tab always lands the model at the same rotation, scale, and screen position.\n- Momentum swipes through multiple tabs interpolate through intermediate poses without teleporting.\n\n## Reduced motion\nTab switches crossfade the model between poses (250ms); no spin.\n\n## Don't miss\n- The blueprint backdrop and dot grid never move - only the model reframes.\n- Keep the pink lens ring and teal body as the model's default identity until recolored."</script>
+</body></html>

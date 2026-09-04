@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duolingo 8 Day Streak Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Duolingo 8 Day Streak Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/duolingo-8-day-streak-animation"><b>Duolingo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-8-day-streak-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/duolingo-8-day-streak-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Duolingo&#x27;s 8-day streak milestone - the gray flame silhouette ignites into a glowing yellow flame behind a burst ring and sparkles, the counter rolls 7 to 8, a progress bar fills toward &quot;Perfect Streak&quot;, and a blue CTA slides up.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6874997a0e3615485c49ba41/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6874997a0e3615485c49ba41/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-duolingo-8-day-streak-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Duolingo&#x27;s 8-day streak milestone - the gray flame silhouette ignites into a glowing yellow flame behind a burst ring and sparkles, the counter rolls 7 to 8, a progress bar fills toward &quot;Perfect Streak&quot;, and a blue CTA slides up.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark charcoal screen. Center: streak flame above a large counter and &quot;day streak&quot; label. Below: a rounded progress track with a yellow fill, milestone ticks, and the caption &quot;You&#x27;re halfway to your Perfect Streak!&quot;. Bottom: blue &quot;I CAN DO IT!&quot; button. Opening beat shows the flame as a flat gray silhouette with the previous count (7); a yellow circular burst ring with orbiting dot sparkles erupts behind it as it ignites.
+
+## Motion spec
+Pattern: milestone counter reveal with burst ignition.
+- Ignition: gray flame crossfades to a lit yellow-orange flame (250ms) while a ring burst expands behind it (scale 0.5 -&gt; 1.6, 400ms ease-out, fading out) and 3-4 small spark dots orbit outward.
+- Counter: rolls from 7 to 8 with a vertical digit slide (250ms, ease-out) plus a scale pulse (1.0 -&gt; 1.2 -&gt; 1.0, 300ms).
+- Flame does a small celebratory hop (translateY -12pt and back, spring ~350/16).
+- Progress bar: track fades in (150ms), fill animates from its prior value to the 8-day mark over 700ms (ease-out), caption fades up with it.
+- CTA button slides up from below the safe area (300ms ease-out, 40pt travel) last.
+- End beat: the whole composition compresses into a yellow capsule that scales down (300ms) as a transition out.
+
+## Calibration
+- The ignition burst and the counter roll must land on the same frame - the ring is the exclamation point on the new number.
+- Yellow flame and ring share one hue (#FFC800); background stays flat dark.
+
+## Reduced motion
+Flame swaps gray to lit with a 150ms fade; counter sets to 8 instantly; bar fills over 300ms; button fades in without travel.
+
+## Don&#x27;t miss
+- The gray-to-lit flame crossfade is the ignition - do not just fade the whole flame in.
+- Milestone ticks on the progress track stay visible as the fill sweeps past them.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">milestone counter reveal with burst ignition.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/duolingo-8-day-streak-animation">original interaction</a> by Duolingo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Duolingo's 8-day streak milestone - the gray flame silhouette ignites into a glowing yellow flame behind a burst ring and sparkles, the counter rolls 7 to 8, a progress bar fills toward \"Perfect Streak\", and a blue CTA slides up.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark charcoal screen. Center: streak flame above a large counter and \"day streak\" label. Below: a rounded progress track with a yellow fill, milestone ticks, and the caption \"You're halfway to your Perfect Streak!\". Bottom: blue \"I CAN DO IT!\" button. Opening beat shows the flame as a flat gray silhouette with the previous count (7); a yellow circular burst ring with orbiting dot sparkles erupts behind it as it ignites.\n\n## Motion spec\nPattern: milestone counter reveal with burst ignition.\n- Ignition: gray flame crossfades to a lit yellow-orange flame (250ms) while a ring burst expands behind it (scale 0.5 -> 1.6, 400ms ease-out, fading out) and 3-4 small spark dots orbit outward.\n- Counter: rolls from 7 to 8 with a vertical digit slide (250ms, ease-out) plus a scale pulse (1.0 -> 1.2 -> 1.0, 300ms).\n- Flame does a small celebratory hop (translateY -12pt and back, spring ~350/16).\n- Progress bar: track fades in (150ms), fill animates from its prior value to the 8-day mark over 700ms (ease-out), caption fades up with it.\n- CTA button slides up from below the safe area (300ms ease-out, 40pt travel) last.\n- End beat: the whole composition compresses into a yellow capsule that scales down (300ms) as a transition out.\n\n## Calibration\n- The ignition burst and the counter roll must land on the same frame - the ring is the exclamation point on the new number.\n- Yellow flame and ring share one hue (#FFC800); background stays flat dark.\n\n## Reduced motion\nFlame swaps gray to lit with a 150ms fade; counter sets to 8 instantly; bar fills over 300ms; button fades in without travel.\n\n## Don't miss\n- The gray-to-lit flame crossfade is the ignition - do not just fade the whole flame in.\n- Milestone ticks on the progress track stay visible as the fill sweeps past them."</script>
+</body></html>

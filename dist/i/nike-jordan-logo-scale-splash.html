@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nike Jordan Logo Scale Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Nike Jordan Logo Scale Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/nike-jordan-logo-scale-splash"><b>Nike</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-jordan-logo-scale-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/nike-jordan-logo-scale-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Nike&#x27;s splash - the swoosh and the Jordan jumpman mark alternate on black, then the swoosh scales up to fill the screen and wipes through to the home feed.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68858d5f73359ab61158062e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68858d5f73359ab61158062e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-nike-jordan-logo-scale-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Nike&#x27;s splash - the swoosh and the Jordan jumpman mark alternate on black, then the swoosh scales up to fill the screen and wipes through to the home feed.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A black splash screen with a small centered white logo (Nike swoosh or Jordan jumpman); the end state is the Nike home screen (Shop header, highlight cards, tab bar).
+
+## Motion spec
+Pattern: alternating logo beats into a full-screen scale wipe, ~2.2s total.
+- Beats: the centered logo crossfades between the swoosh and the jumpman mark (each holds ~350ms, 200ms crossfade), roughly three alternations.
+- Scale wipe: the final swoosh scales from 1 to fill the screen (~12x, 450ms, ease-in) until its white covers the frame.
+- Reveal: mid-scale (once the logo covers ~60% of the frame) the home screen fades in beneath it (300ms), so the wipe resolves directly into the feed - no flash of solid white between.
+- The home content is fully static on arrival; the motion ends with the wipe.
+
+## Calibration
+- Logo beats read as a rhythm, evenly timed.
+- The scale-up accelerates (ease-in), so the wipe feels like a punch through.
+
+## Reduced motion
+Single logo fades straight to the home screen (300ms).
+
+## Don&#x27;t miss
+- Only the last appearance scales up - the earlier beats stay small and centered.
+- The home screen is already rendering under the wipe; it does not pop in after.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">alternating logo beats into a full-screen scale wipe, ~2.2s total.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/nike-jordan-logo-scale-splash">original interaction</a> by Nike. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Nike's splash - the swoosh and the Jordan jumpman mark alternate on black, then the swoosh scales up to fill the screen and wipes through to the home feed.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA black splash screen with a small centered white logo (Nike swoosh or Jordan jumpman); the end state is the Nike home screen (Shop header, highlight cards, tab bar).\n\n## Motion spec\nPattern: alternating logo beats into a full-screen scale wipe, ~2.2s total.\n- Beats: the centered logo crossfades between the swoosh and the jumpman mark (each holds ~350ms, 200ms crossfade), roughly three alternations.\n- Scale wipe: the final swoosh scales from 1 to fill the screen (~12x, 450ms, ease-in) until its white covers the frame.\n- Reveal: mid-scale (once the logo covers ~60% of the frame) the home screen fades in beneath it (300ms), so the wipe resolves directly into the feed - no flash of solid white between.\n- The home content is fully static on arrival; the motion ends with the wipe.\n\n## Calibration\n- Logo beats read as a rhythm, evenly timed.\n- The scale-up accelerates (ease-in), so the wipe feels like a punch through.\n\n## Reduced motion\nSingle logo fades straight to the home screen (300ms).\n\n## Don't miss\n- Only the last appearance scales up - the earlier beats stay small and centered.\n- The home screen is already rendering under the wipe; it does not pop in after."</script>
+</body></html>

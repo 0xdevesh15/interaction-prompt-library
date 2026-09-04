@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tilt Notification Gallery - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Tilt Notification Gallery</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/tilt-notification-gallery"><b>Tilt</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tilt-notification-gallery">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/tilt-notification-gallery">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Tilt&#x27;s notification gallery - a dark gallery of artist icons that scatter with springy physics on entry, each tappable into an interactive 3D showcase.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be3d85131e88d4acae030e/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66be3d85131e88d4acae030e/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-tilt-notification-gallery.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Tilt&#x27;s notification gallery - a dark gallery of artist icons that scatter with springy physics on entry, each tappable into an interactive 3D showcase.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark-themed gallery screen. A loose constellation of circular artist icons floats on the canvas, each with a soft glow. Icons drift gently at idle; on entry they scatter outward from center with spring physics. Tapping one lifts it into a 3D-tilting preview.
+
+## Motion spec
+Pattern: springy scatter constellation + 3D tilt preview.
+- Entry: icons spawn at center and scatter outward to their resting positions (spring stiffness ~200, damping ~18, randomized target offsets), slight rotation during travel, glow fading in last.
+- Idle: each icon floats on its own slow orbit (translate +-6px, rotate +-3deg, 4-7s periods, phase-offset).
+- Drag an icon: it follows 1:1 with stretch; release snaps it back with an overshooting spring (stiffness ~300, damping ~16) that wobbles twice before rest; nearby icons get pushed aside briefly (repulsion falloff ~120px).
+- Tap: the icon scales up (~1.6x, spring ~320/24) and tilts in 3D toward the touch point (rotateX/Y up to 15deg) with a specular sweep; the rest of the gallery dims and blurs (200ms).
+- Dismiss: reverse - the icon drops back into its constellation slot, blur lifts.
+
+## Calibration
+- Scatter targets are deterministic per icon (stable layout) - only the paths feel random.
+- The constellation never overlaps the header; resting positions respect a safe frame.
+
+## Reduced motion
+Icons fade into a static grid; tap opens a flat preview.
+
+## Don&#x27;t miss
+- Icons are circular with varied art and ring colors - uniform placeholders kill the gallery feel.
+- The dim/blur behind a preview is what makes the 3D tilt read as depth; don&#x27;t skip it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">springy scatter constellation + 3D tilt preview.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/tilt-notification-gallery">original interaction</a> by Tilt. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Tilt's notification gallery - a dark gallery of artist icons that scatter with springy physics on entry, each tappable into an interactive 3D showcase.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark-themed gallery screen. A loose constellation of circular artist icons floats on the canvas, each with a soft glow. Icons drift gently at idle; on entry they scatter outward from center with spring physics. Tapping one lifts it into a 3D-tilting preview.\n\n## Motion spec\nPattern: springy scatter constellation + 3D tilt preview.\n- Entry: icons spawn at center and scatter outward to their resting positions (spring stiffness ~200, damping ~18, randomized target offsets), slight rotation during travel, glow fading in last.\n- Idle: each icon floats on its own slow orbit (translate +-6px, rotate +-3deg, 4-7s periods, phase-offset).\n- Drag an icon: it follows 1:1 with stretch; release snaps it back with an overshooting spring (stiffness ~300, damping ~16) that wobbles twice before rest; nearby icons get pushed aside briefly (repulsion falloff ~120px).\n- Tap: the icon scales up (~1.6x, spring ~320/24) and tilts in 3D toward the touch point (rotateX/Y up to 15deg) with a specular sweep; the rest of the gallery dims and blurs (200ms).\n- Dismiss: reverse - the icon drops back into its constellation slot, blur lifts.\n\n## Calibration\n- Scatter targets are deterministic per icon (stable layout) - only the paths feel random.\n- The constellation never overlaps the header; resting positions respect a safe frame.\n\n## Reduced motion\nIcons fade into a static grid; tap opens a flat preview.\n\n## Don't miss\n- Icons are circular with varied art and ring colors - uniform placeholders kill the gallery feel.\n- The dim/blur behind a preview is what makes the 3D tilt read as depth; don't skip it."</script>
+</body></html>

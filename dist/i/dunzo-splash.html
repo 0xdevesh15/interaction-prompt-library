@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dunzo Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Dunzo Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/dunzo-splash"><b>Dunzo</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dunzo-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/dunzo-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Dunzo&#x27;s splash - on a dark navy screen the green Dunzo logo pulses at center while white line-drawn grocery icons (milk carton, carrot, croissant, apple) orbit around it on a dashed ring, alternating between tight orbit and an X-shaped scatter.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6830975336540bf132f3105a/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6830975336540bf132f3105a/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-dunzo-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Dunzo&#x27;s splash - on a dark navy screen the green Dunzo logo pulses at center while white line-drawn grocery icons (milk carton, carrot, croissant, apple) orbit around it on a dashed ring, alternating between tight orbit and an X-shaped scatter.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark navy splash. Center: the green rounded-square Dunzo logo (white D with a lightning bolt). Around it: white line-art grocery icons - milk carton, carrot, croissant, apple - arranged on a thin dashed circular ring, periodically flying out to the four corners in an X formation and returning.
+
+## Motion spec
+Pattern: orbiting grocery icons with pulse and scatter.
+- The logo pops in (scale 0.6 -&gt; 1.1 -&gt; 1, spring ~320/16) and idles with a soft pulse (scale 1 -&gt; 1.04, 1.6s sine).
+- The dashed ring fades in (200ms) with the four icons taking compass positions; the ring rotates slowly (14s per turn, linear) while icons stay upright.
+- Every ~3s: the icons scatter outward to the corners (translate to X positions, 400ms ease-out, slight rotation +/-15deg) as the ring fades, hold 500ms, then spring back to the ring (spring ~280/18) as the ring redraws.
+- A small green dot accents the top of the ring, pulsing in sync with the logo.
+
+## Calibration
+- The scatter is the playful beat - snappy out, springy back.
+- Icons are line art; the green logo is the only filled element.
+
+## Reduced motion
+Logo and icons appear statically in the orbit formation.
+
+## Don&#x27;t miss
+- Icons keep upright orientation through both orbit and scatter.
+- The dashed ring breathes (dash offset animates slowly) even when still.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">orbiting grocery icons with pulse and scatter.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/dunzo-splash">original interaction</a> by Dunzo. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Dunzo's splash - on a dark navy screen the green Dunzo logo pulses at center while white line-drawn grocery icons (milk carton, carrot, croissant, apple) orbit around it on a dashed ring, alternating between tight orbit and an X-shaped scatter.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark navy splash. Center: the green rounded-square Dunzo logo (white D with a lightning bolt). Around it: white line-art grocery icons - milk carton, carrot, croissant, apple - arranged on a thin dashed circular ring, periodically flying out to the four corners in an X formation and returning.\n\n## Motion spec\nPattern: orbiting grocery icons with pulse and scatter.\n- The logo pops in (scale 0.6 -> 1.1 -> 1, spring ~320/16) and idles with a soft pulse (scale 1 -> 1.04, 1.6s sine).\n- The dashed ring fades in (200ms) with the four icons taking compass positions; the ring rotates slowly (14s per turn, linear) while icons stay upright.\n- Every ~3s: the icons scatter outward to the corners (translate to X positions, 400ms ease-out, slight rotation +/-15deg) as the ring fades, hold 500ms, then spring back to the ring (spring ~280/18) as the ring redraws.\n- A small green dot accents the top of the ring, pulsing in sync with the logo.\n\n## Calibration\n- The scatter is the playful beat - snappy out, springy back.\n- Icons are line art; the green logo is the only filled element.\n\n## Reduced motion\nLogo and icons appear statically in the orbit formation.\n\n## Don't miss\n- Icons keep upright orientation through both orbit and scatter.\n- The dashed ring breathes (dash offset animates slowly) even when still."</script>
+</body></html>

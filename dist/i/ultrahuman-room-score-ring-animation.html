@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ultrahuman Room Score Ring Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Ultrahuman Room Score Ring Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/ultrahuman-room-score-ring-animation"><b>Ultrahuman</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ultrahuman-room-score-ring-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/ultrahuman-room-score-ring-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Ultrahuman&#x27;s environment score shift - the circular room score drains from a healthy green 91 to an amber 79, and the whole screen&#x27;s ambient tint follows the ring&#x27;s color.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e7fba3a1f8e40ae7902f/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/67a4e7fba3a1f8e40ae7902f/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-ultrahuman-room-score-ring-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Ultrahuman&#x27;s environment score shift - the circular room score drains from a healthy green 91 to an amber 79, and the whole screen&#x27;s ambient tint follows the ring&#x27;s color.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark environment screen: greeting header, large circular score ring with number and status labels, a CO2 line chart below, tab bar at the bottom.
+
+## Motion spec
+Pattern: color-state ring transition, ~1.2s.
+- The number counts down 91 -&gt; 79 (900ms, ease-in-out) while the ring&#x27;s lit arc retracts in lockstep.
+- The ring&#x27;s color sweeps green -&gt; amber around its circumference, following the arc&#x27;s head (gradient morph over the same 900ms).
+- The screen&#x27;s ambient background tint (radial glow behind the ring) crossfades from deep green to burnt amber (1s) - the room itself feels different.
+- The status label swaps to &quot;Unhealthy environment&quot; (150ms crossfade) as the count settles; the chart line and accents shift to the amber palette together.
+- Tab bar and greeting stay constant.
+
+## Calibration
+- Number, arc, and color are one timeline; desync between count and color reads as two competing truths.
+- The background tint moves with the ring, never ahead of it.
+
+## Reduced motion
+Crossfade the ring and tint between the two states (300ms); number swaps directly.
+
+## Don&#x27;t miss
+- The arc retracts as the score drops - dropping the number while the ring stays full contradicts the data.
+- Amber, not red: this is a warning state, and red would misread as alarm.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">color-state ring transition, ~1.2s.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/ultrahuman-room-score-ring-animation">original interaction</a> by Ultrahuman. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Ultrahuman's environment score shift - the circular room score drains from a healthy green 91 to an amber 79, and the whole screen's ambient tint follows the ring's color.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark environment screen: greeting header, large circular score ring with number and status labels, a CO2 line chart below, tab bar at the bottom.\n\n## Motion spec\nPattern: color-state ring transition, ~1.2s.\n- The number counts down 91 -> 79 (900ms, ease-in-out) while the ring's lit arc retracts in lockstep.\n- The ring's color sweeps green -> amber around its circumference, following the arc's head (gradient morph over the same 900ms).\n- The screen's ambient background tint (radial glow behind the ring) crossfades from deep green to burnt amber (1s) - the room itself feels different.\n- The status label swaps to \"Unhealthy environment\" (150ms crossfade) as the count settles; the chart line and accents shift to the amber palette together.\n- Tab bar and greeting stay constant.\n\n## Calibration\n- Number, arc, and color are one timeline; desync between count and color reads as two competing truths.\n- The background tint moves with the ring, never ahead of it.\n\n## Reduced motion\nCrossfade the ring and tint between the two states (300ms); number swaps directly.\n\n## Don't miss\n- The arc retracts as the score drops - dropping the number while the ring stays full contradicts the data.\n- Amber, not red: this is a warning state, and red would misread as alarm."</script>
+</body></html>

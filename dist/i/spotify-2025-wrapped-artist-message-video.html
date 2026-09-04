@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spotify 2025 Wrapped Artist Message Video - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Spotify 2025 Wrapped Artist Message Video</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/spotify-2025-wrapped-artist-message-video"><b>Spotify</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-2025-wrapped-artist-message-video">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/spotify-2025-wrapped-artist-message-video">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Spotify Wrapped&#x27;s artist message - the top-artists list hands off to a full-screen vertical video from your top artist, then returns to the story&#x27;s closing scenes.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934008e7d19d07028262459/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/6934008e7d19d07028262459/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-spotify-2025-wrapped-artist-message-video.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Spotify Wrapped&#x27;s artist message - the top-artists list hands off to a full-screen vertical video from your top artist, then returns to the story&#x27;s closing scenes.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+A black &quot;Your top artists&quot; scene: numbered rows (Parra for Cuva, Ben Böhmer, Flawed Mangoes, Dusk Pulse, ...) with thumbs and a Share pill, wrapped in white stripe graphics. Then a near-black buffer beat with a small loading ring. Then the artist&#x27;s message: a full-screen vertical selfie-style video of the artist speaking, shot handheld in a warm room. Exit scenes: &quot;All of your listening made you part of something bigger.&quot; with thin circle line art, then &quot;Which club do you belong to?&quot; over barcode stripes.
+
+## Motion spec
+Pattern: story card to full-screen video message and back.
+- The artist list builds with a fast stagger (rows up 20px, 60ms apart) and holds until the story timer or a tap.
+- The buffer beat: content fades to black (200ms), a small ring spinner turns center-screen (1.2s loop) - short, honest loading, no skeleton theatrics.
+- The video scales in from 0.94 with a soft spring (~300/20) as it starts playing - the frame fills edge to edge, story chrome (progress pills, close, mute) floating on top.
+- The video plays uncut and letterbox-free; captions/subtitles sit lower-third if provided. A tap toggles mute; the story timer pauses while the video plays.
+- On completion (or skip), the video scales back to 0.96 and fades (300ms) as the closing line fades in (&quot;All of your listening made you part of something bigger.&quot;, 250ms), its circle art drawing on (stroke reveal, 500ms); the club question follows on the stripes wipe.
+
+## Calibration
+- The video is the artist talking to camera - treat it as a person, not content: full-bleed, uncropped, unfiltered.
+- The loading beat must be short and plain - a fancy loader would upstage the message.
+
+## Reduced motion
+Video fades in/out (300ms) without the scale; line art appears complete.
+
+## Don&#x27;t miss
+- The message is personal because of who it comes from - the transition must feel like the artist walked in, not like a video ad.
+- The exit line (&quot;part of something bigger&quot;) bridges artist to community - don&#x27;t cut straight to the club question.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">story card to full-screen video message and back.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/spotify-2025-wrapped-artist-message-video">original interaction</a> by Spotify. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Spotify Wrapped's artist message - the top-artists list hands off to a full-screen vertical video from your top artist, then returns to the story's closing scenes.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nA black \"Your top artists\" scene: numbered rows (Parra for Cuva, Ben B\u00f6hmer, Flawed Mangoes, Dusk Pulse, ...) with thumbs and a Share pill, wrapped in white stripe graphics. Then a near-black buffer beat with a small loading ring. Then the artist's message: a full-screen vertical selfie-style video of the artist speaking, shot handheld in a warm room. Exit scenes: \"All of your listening made you part of something bigger.\" with thin circle line art, then \"Which club do you belong to?\" over barcode stripes.\n\n## Motion spec\nPattern: story card to full-screen video message and back.\n- The artist list builds with a fast stagger (rows up 20px, 60ms apart) and holds until the story timer or a tap.\n- The buffer beat: content fades to black (200ms), a small ring spinner turns center-screen (1.2s loop) - short, honest loading, no skeleton theatrics.\n- The video scales in from 0.94 with a soft spring (~300/20) as it starts playing - the frame fills edge to edge, story chrome (progress pills, close, mute) floating on top.\n- The video plays uncut and letterbox-free; captions/subtitles sit lower-third if provided. A tap toggles mute; the story timer pauses while the video plays.\n- On completion (or skip), the video scales back to 0.96 and fades (300ms) as the closing line fades in (\"All of your listening made you part of something bigger.\", 250ms), its circle art drawing on (stroke reveal, 500ms); the club question follows on the stripes wipe.\n\n## Calibration\n- The video is the artist talking to camera - treat it as a person, not content: full-bleed, uncropped, unfiltered.\n- The loading beat must be short and plain - a fancy loader would upstage the message.\n\n## Reduced motion\nVideo fades in/out (300ms) without the scale; line art appears complete.\n\n## Don't miss\n- The message is personal because of who it comes from - the transition must feel like the artist walked in, not like a video ad.\n- The exit line (\"part of something bigger\") bridges artist to community - don't cut straight to the club question."</script>
+</body></html>

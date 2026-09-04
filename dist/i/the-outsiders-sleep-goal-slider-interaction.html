@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Outsiders Sleep Goal Slider Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>The Outsiders Sleep Goal Slider Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/the-outsiders-sleep-goal-slider-interaction"><b>The</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/the-outsiders-sleep-goal-slider-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/the-outsiders-sleep-goal-slider-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: The Outsiders&#x27; sleep goal slider - dragging the thumb live-updates the big time value while the track gradient and the Done button recolor by range: blue in the middle, purple at high values, teal-green at low values, with a hatched warning fill at the extremes.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e72a5301fefe1a9aa4c1ac/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68e72a5301fefe1a9aa4c1ac/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-the-outsiders-sleep-goal-slider-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: The Outsiders&#x27; sleep goal slider - dragging the thumb live-updates the big time value while the track gradient and the Done button recolor by range: blue in the middle, purple at high values, teal-green at low values, with a hatched warning fill at the extremes.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark &quot;Sleep Goal&quot; sheet over the Today screen: moon icon, title, subline, a huge time readout (&quot;8 00m&quot;), a horizontal slider with a blue-to-purple gradient track, a small moon icon at the left end, and a full-width &quot;Done&quot; button below.
+
+## Motion spec
+Pattern: range-themed slider, gesture-driven.
+- Drag: the thumb tracks 1:1; the readout updates live in 10-minute steps, digits rolling vertically (120ms per change).
+- Theming: the track&#x27;s filled portion and the Done button crossfade through the range palette - teal-green at the low end, blue mid, purple at the high end (color follows thumb position continuously, 150ms catch-up after release).
+- Extremes: past the healthy range the fill gains a hatched/striped warning texture and the thumb glows (200ms in/out).
+- Release: the thumb settles with a soft spring (~400/25) and haptic tick per 10-minute step.
+- Done: the sheet dismisses down (300ms) into the sleep detail (&quot;Fair&quot;) screen.
+
+## Calibration
+- Colors interpolate with position - a mid-drag thumb shows a blended color, not a snapped one.
+- The readout never lags the thumb by more than one step.
+
+## Reduced motion
+Theming still applies; digits change without rolling and no thumb glow.
+
+## Don&#x27;t miss
+- The button recoloring with the slider is the signature - it must track the same palette.
+- The hatched warning texture appears only outside the recommended range.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">range-themed slider, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/the-outsiders-sleep-goal-slider-interaction">original interaction</a> by The. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: The Outsiders' sleep goal slider - dragging the thumb live-updates the big time value while the track gradient and the Done button recolor by range: blue in the middle, purple at high values, teal-green at low values, with a hatched warning fill at the extremes.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark \"Sleep Goal\" sheet over the Today screen: moon icon, title, subline, a huge time readout (\"8 00m\"), a horizontal slider with a blue-to-purple gradient track, a small moon icon at the left end, and a full-width \"Done\" button below.\n\n## Motion spec\nPattern: range-themed slider, gesture-driven.\n- Drag: the thumb tracks 1:1; the readout updates live in 10-minute steps, digits rolling vertically (120ms per change).\n- Theming: the track's filled portion and the Done button crossfade through the range palette - teal-green at the low end, blue mid, purple at the high end (color follows thumb position continuously, 150ms catch-up after release).\n- Extremes: past the healthy range the fill gains a hatched/striped warning texture and the thumb glows (200ms in/out).\n- Release: the thumb settles with a soft spring (~400/25) and haptic tick per 10-minute step.\n- Done: the sheet dismisses down (300ms) into the sleep detail (\"Fair\") screen.\n\n## Calibration\n- Colors interpolate with position - a mid-drag thumb shows a blended color, not a snapped one.\n- The readout never lags the thumb by more than one step.\n\n## Reduced motion\nTheming still applies; digits change without rolling and no thumb glow.\n\n## Don't miss\n- The button recoloring with the slider is the signature - it must track the same palette.\n- The hatched warning texture appears only outside the recommended range."</script>
+</body></html>

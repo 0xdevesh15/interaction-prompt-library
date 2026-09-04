@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perplexity Model Selection Sheet Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Perplexity Model Selection Sheet Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/perplexity-model-selection-sheet-morph-interaction"><b>Perplexity</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-model-selection-sheet-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/perplexity-model-selection-sheet-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Perplexity&#x27;s model sheet morph - the &quot;Choose a mode&quot; sheet (Search, Research, Labs, Incognito) morphs in place into the taller &quot;Models&quot; list (Best, Sonar, Claude Sonnet 4.0, GPT-5, Gemini 2.5 Pro, Thinking variants) and back, flashing the updated row green on return.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e343b21a129d1531e6/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e343b21a129d1531e6/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-perplexity-model-selection-sheet-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Perplexity&#x27;s model sheet morph - the &quot;Choose a mode&quot; sheet (Search, Research, Labs, Incognito) morphs in place into the taller &quot;Models&quot; list (Best, Sonar, Claude Sonnet 4.0, GPT-5, Gemini 2.5 Pro, Thinking variants) and back, flashing the updated row green on return.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Light chat screen under a scrim: a bottom sheet titled &quot;Choose a mode&quot; with rows (Search, Research, Labs, Incognito toggle), the selected mode tinted. The Models sheet: header with X, a scrollable list of models with badges and a checkmark on the active one.
+
+## Motion spec
+Pattern: in-place sheet content morph, ~450ms.
+- Enter: tapping the model row morphs the sheet: its height grows (spring ~360/26, 350ms) while the mode rows fade out (150ms) and the model rows fade in staggered (30ms, 200ms total); the header title crossfades &quot;Choose a mode&quot; -&gt; &quot;Models&quot;.
+- Select: tapping a model moves the check with a pop (scale 0.5 -&gt; 1, spring ~420/18) and highlights the row (150ms).
+- Return: the sheet shrinks back to mode height (spring, 350ms), the mode rows returning staggered, and the just-changed row flashes its tint (0 -&gt; 100% -&gt; 30%, 500ms).
+- Scrim: constant 40% through the whole morph - it never flickers.
+
+## Calibration
+- The sheet&#x27;s bottom edge stays anchored; only the top edge grows.
+- Content swaps inside the same container - the sheet never dismisses between steps.
+
+## Reduced motion
+Height tweens without spring (250ms); contents crossfade together; no flash.
+
+## Don&#x27;t miss
+- The return flash on the changed row is the confirmation cue - do not skip it.
+- The Incognito toggle is part of the mode sheet only; it never appears in the Models list.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">in-place sheet content morph, ~450ms.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/perplexity-model-selection-sheet-morph-interaction">original interaction</a> by Perplexity. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Perplexity's model sheet morph - the \"Choose a mode\" sheet (Search, Research, Labs, Incognito) morphs in place into the taller \"Models\" list (Best, Sonar, Claude Sonnet 4.0, GPT-5, Gemini 2.5 Pro, Thinking variants) and back, flashing the updated row green on return.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nLight chat screen under a scrim: a bottom sheet titled \"Choose a mode\" with rows (Search, Research, Labs, Incognito toggle), the selected mode tinted. The Models sheet: header with X, a scrollable list of models with badges and a checkmark on the active one.\n\n## Motion spec\nPattern: in-place sheet content morph, ~450ms.\n- Enter: tapping the model row morphs the sheet: its height grows (spring ~360/26, 350ms) while the mode rows fade out (150ms) and the model rows fade in staggered (30ms, 200ms total); the header title crossfades \"Choose a mode\" -> \"Models\".\n- Select: tapping a model moves the check with a pop (scale 0.5 -> 1, spring ~420/18) and highlights the row (150ms).\n- Return: the sheet shrinks back to mode height (spring, 350ms), the mode rows returning staggered, and the just-changed row flashes its tint (0 -> 100% -> 30%, 500ms).\n- Scrim: constant 40% through the whole morph - it never flickers.\n\n## Calibration\n- The sheet's bottom edge stays anchored; only the top edge grows.\n- Content swaps inside the same container - the sheet never dismisses between steps.\n\n## Reduced motion\nHeight tweens without spring (250ms); contents crossfade together; no flash.\n\n## Don't miss\n- The return flash on the changed row is the confirmation cue - do not skip it.\n- The Incognito toggle is part of the mode sheet only; it never appears in the Models list."</script>
+</body></html>

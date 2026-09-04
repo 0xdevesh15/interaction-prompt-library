@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queue Swipe Up to Spin Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Queue Swipe Up to Spin Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/queue-swipe-up-to-spin-interaction"><b>Queue</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-swipe-up-to-spin-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/queue-swipe-up-to-spin-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Queue&#x27;s spin wheel - swiping up on the skeuomorphic poster wheel spins it with momentum; when it settles on a title, a video preview card rises above the wheel with the trailer, meta, and &quot;+ Queue&quot; actions.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e339020d76d5623095/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/68d129e339020d76d5623095/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-queue-swipe-up-to-spin-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Queue&#x27;s spin wheel - swiping up on the skeuomorphic poster wheel spins it with momentum; when it settles on a title, a video preview card rises above the wheel with the trailer, meta, and &quot;+ Queue&quot; actions.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+Dark screen: &quot;I&#x27;m Looking For...&quot; and &quot;Custom Spin&quot; pills at top, helper text (&quot;Swipe Up to Spin Again&quot; / &quot;Selecting from I&#x27;m Looking For...&quot;), and a half-visible wheel at the bottom - lit bulbs around its rim, movie posters mounted on its faces, a pointer notch at top-center. Result state: a preview card with video, title, synopsis, and service buttons (Netflix, Apple TV).
+
+## Motion spec
+Pattern: momentum spin-wheel, gesture-driven.
+- Swipe: the wheel rotates with the flick&#x27;s velocity (friction ~0.96/frame), posters traveling around the drum, bulbs chasing a light wave while spinning (100ms cycle).
+- Settle: the wheel eases to rest with the selected poster centered at the pointer (spring ~200/20, one small overshoot and return) with a tick haptic per face.
+- Reveal: the preview card rises from behind the wheel (spring ~340/24, 400ms), its video area fading in (+150ms); the helper text crossfades to the title treatment.
+- Re-spin: swiping up dismisses the card down (250ms) and spins again in one gesture chain.
+
+## Calibration
+- The wheel always stops face-centered, never between posters.
+- The card belongs to the settled poster - no mismatch between wheel and preview.
+
+## Reduced motion
+The wheel fades between faces (200ms each) and settles without overshoot.
+
+## Don&#x27;t miss
+- The bulbs chase only while the wheel moves - a static wheel has steady bulbs.
+- The pointer notch is fixed; the wheel moves under it.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">momentum spin-wheel, gesture-driven.</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/queue-swipe-up-to-spin-interaction">original interaction</a> by Queue. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Queue's spin wheel - swiping up on the skeuomorphic poster wheel spins it with momentum; when it settles on a title, a video preview card rises above the wheel with the trailer, meta, and \"+ Queue\" actions.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nDark screen: \"I'm Looking For...\" and \"Custom Spin\" pills at top, helper text (\"Swipe Up to Spin Again\" / \"Selecting from I'm Looking For...\"), and a half-visible wheel at the bottom - lit bulbs around its rim, movie posters mounted on its faces, a pointer notch at top-center. Result state: a preview card with video, title, synopsis, and service buttons (Netflix, Apple TV).\n\n## Motion spec\nPattern: momentum spin-wheel, gesture-driven.\n- Swipe: the wheel rotates with the flick's velocity (friction ~0.96/frame), posters traveling around the drum, bulbs chasing a light wave while spinning (100ms cycle).\n- Settle: the wheel eases to rest with the selected poster centered at the pointer (spring ~200/20, one small overshoot and return) with a tick haptic per face.\n- Reveal: the preview card rises from behind the wheel (spring ~340/24, 400ms), its video area fading in (+150ms); the helper text crossfades to the title treatment.\n- Re-spin: swiping up dismisses the card down (250ms) and spins again in one gesture chain.\n\n## Calibration\n- The wheel always stops face-centered, never between posters.\n- The card belongs to the settled poster - no mismatch between wheel and preview.\n\n## Reduced motion\nThe wheel fades between faces (200ms each) and settles without overshoot.\n\n## Don't miss\n- The bulbs chase only while the wheel moves - a static wheel has steady bulbs.\n- The pointer notch is fixed; the wheel moves under it."</script>
+</body></html>

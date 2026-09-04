@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Yoga Class Card Carousel Morph Interaction - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Yoga Class Card Carousel Morph Interaction</h1>
+<div class="meta"><span class="cat">Interaction</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-yoga-class-card-carousel-morph-interaction"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-yoga-class-card-carousel-morph-interaction">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-yoga-class-card-carousel-morph-interaction">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this interaction 1:1: Airbnb&#x27;s experience card morph - on the &quot;Yoga and sound bath by Jennifer&quot; screen, tapping a class card expands it into a full-width immersive card, then into a horizontal paged carousel of class cards with photos and details, and closing shrinks it seamlessly back into the list.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abebe283a3162ff378cb8/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abebe283a3162ff378cb8/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-yoga-class-card-carousel-morph-interaction.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this interaction 1:1: Airbnb&#x27;s experience card morph - on the &quot;Yoga and sound bath by Jennifer&quot; screen, tapping a class card expands it into a full-width immersive card, then into a horizontal paged carousel of class cards with photos and details, and closing shrinks it seamlessly back into the list.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White experience screen (&quot;Yoga and sound bath by Jennifer&quot;) listing class cards (Yoga class of choice, Yoga and mimosa brunch, Sunset sound healing) with a pink Reserve button. Expanded state: one class card fills the width with a large photo (yoga poses, sound bath with singing bowls), title, duration, price, and description, with a close X top-right. Carousel state: cards page horizontally, adjacent cards peeking in at the edges.
+
+## Motion spec
+Pattern: inline card to immersive carousel morph (shared element).
+- Tap a card: the list dims and the tapped card expands in place - its photo grows from thumbnail to full-width hero (350ms ease-in-out), title and details reflow below it, and a close X fades in top-right.
+- Drag horizontally: the expanded card becomes a carousel - the current card slides with the finger 1:1, neighbors peek in from the edges (scale 0.95, dimmed 20%).
+- Release: the carousel snaps to the nearest card (spring ~300/22); the new card&#x27;s content fades in (200ms).
+- Tap X: the current card shrinks back into its original list position (350ms ease-in-out), sibling rows fading back in as it docks.
+
+## Calibration
+- The photo is the shared element through every state - it never cuts or crossfades.
+- Peek width on adjacent cards stays constant (~24pt) regardless of drag distance.
+
+## Reduced motion
+Card content crossfades between list and expanded states (250ms); carousel changes pages with a fade.
+
+## Don&#x27;t miss
+- The close X and the Reserve button trade places between states - never both visible mid-morph.
+- The list behind the expanded card stays faintly visible at the top edge (blurred), grounding the morph.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">inline card to immersive carousel morph (shared element).</div></div><div><div class="k">Content type</div><div class="v">interactive</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-yoga-class-card-carousel-morph-interaction">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: Airbnb's experience card morph - on the \"Yoga and sound bath by Jennifer\" screen, tapping a class card expands it into a full-width immersive card, then into a horizontal paged carousel of class cards with photos and details, and closing shrinks it seamlessly back into the list.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite experience screen (\"Yoga and sound bath by Jennifer\") listing class cards (Yoga class of choice, Yoga and mimosa brunch, Sunset sound healing) with a pink Reserve button. Expanded state: one class card fills the width with a large photo (yoga poses, sound bath with singing bowls), title, duration, price, and description, with a close X top-right. Carousel state: cards page horizontally, adjacent cards peeking in at the edges.\n\n## Motion spec\nPattern: inline card to immersive carousel morph (shared element).\n- Tap a card: the list dims and the tapped card expands in place - its photo grows from thumbnail to full-width hero (350ms ease-in-out), title and details reflow below it, and a close X fades in top-right.\n- Drag horizontally: the expanded card becomes a carousel - the current card slides with the finger 1:1, neighbors peek in from the edges (scale 0.95, dimmed 20%).\n- Release: the carousel snaps to the nearest card (spring ~300/22); the new card's content fades in (200ms).\n- Tap X: the current card shrinks back into its original list position (350ms ease-in-out), sibling rows fading back in as it docks.\n\n## Calibration\n- The photo is the shared element through every state - it never cuts or crossfades.\n- Peek width on adjacent cards stays constant (~24pt) regardless of drag distance.\n\n## Reduced motion\nCard content crossfades between list and expanded states (250ms); carousel changes pages with a fade.\n\n## Don't miss\n- The close X and the Reserve button trade places between states - never both visible mid-morph.\n- The list behind the expanded card stays faintly visible at the top edge (blurred), grounding the morph."</script>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airbnb Tab Icon Animation - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Airbnb Tab Icon Animation</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/airbnb-tab-icon-animation"><b>Airbnb</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-tab-icon-animation">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/airbnb-tab-icon-animation">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: Airbnb&#x27;s tab-bar spotlight - the 3D tab icons (Homes house, Experiences hot-air balloon, Services bell) rise into the bar one by one, and the Experiences balloon gently bobs and rotates with a blue &quot;NEW&quot; pill to draw attention to the tab.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abf64482c4f1c2fce54a2/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/682abf64482c4f1c2fce54a2/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-airbnb-tab-icon-animation.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: Airbnb&#x27;s tab-bar spotlight - the 3D tab icons (Homes house, Experiences hot-air balloon, Services bell) rise into the bar one by one, and the Experiences balloon gently bobs and rotates with a blue &quot;NEW&quot; pill to draw attention to the tab.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White Airbnb home feed (search pill on top, &quot;Airbnb Originals&quot; and &quot;Tomorrow in Bengaluru&quot; card rails). At the top under the search bar, a three-item tab strip: Homes (3D house), Experiences (3D hot-air balloon with a blue &quot;NEW&quot; pill), Services (3D bell). The balloon is the animated focus.
+
+## Motion spec
+Pattern: tab-icon entrance with attention loop on the new tab.
+- The three icons drop in from above the strip with a spring (~280/18, 250ms, 100ms stagger left to right); labels fade in under them.
+- The &quot;NEW&quot; pill pops onto the Experiences balloon (scale 0 -&gt; 1.1 -&gt; 1.0, spring ~340/18).
+- Attention loop on the balloon (repeating, 3s cycle): it lifts (translateY 0 -&gt; -5pt), rotates slightly (+/-4deg), and settles; the pill keeps a soft pulse (scale 1.0 -&gt; 1.06 -&gt; 1.0).
+- Homes and Services icons stay static; only the balloon loops.
+- On tab switch, the active icon does a quick squash-stretch (scale 1 -&gt; 0.9 -&gt; 1, 150ms).
+
+## Calibration
+- The balloon&#x27;s bob is small and slow - playful, not jittery.
+- The NEW pill stays attached to the balloon through every motion (no drift).
+
+## Reduced motion
+Icons fade in once; the balloon and pill are static; no loop.
+
+## Don&#x27;t miss
+- The 3D icons have soft shading and tiny shadows - keep the rendered look, no flat glyphs.
+- Only Experiences carries the NEW pill and the motion loop; the other two tabs are quiet.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">tab-icon entrance with attention loop on the new tab.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/airbnb-tab-icon-animation">original interaction</a> by Airbnb. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: Airbnb's tab-bar spotlight - the 3D tab icons (Homes house, Experiences hot-air balloon, Services bell) rise into the bar one by one, and the Experiences balloon gently bobs and rotates with a blue \"NEW\" pill to draw attention to the tab.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite Airbnb home feed (search pill on top, \"Airbnb Originals\" and \"Tomorrow in Bengaluru\" card rails). At the top under the search bar, a three-item tab strip: Homes (3D house), Experiences (3D hot-air balloon with a blue \"NEW\" pill), Services (3D bell). The balloon is the animated focus.\n\n## Motion spec\nPattern: tab-icon entrance with attention loop on the new tab.\n- The three icons drop in from above the strip with a spring (~280/18, 250ms, 100ms stagger left to right); labels fade in under them.\n- The \"NEW\" pill pops onto the Experiences balloon (scale 0 -> 1.1 -> 1.0, spring ~340/18).\n- Attention loop on the balloon (repeating, 3s cycle): it lifts (translateY 0 -> -5pt), rotates slightly (+/-4deg), and settles; the pill keeps a soft pulse (scale 1.0 -> 1.06 -> 1.0).\n- Homes and Services icons stay static; only the balloon loops.\n- On tab switch, the active icon does a quick squash-stretch (scale 1 -> 0.9 -> 1, 150ms).\n\n## Calibration\n- The balloon's bob is small and slow - playful, not jittery.\n- The NEW pill stays attached to the balloon through every motion (no drift).\n\n## Reduced motion\nIcons fade in once; the balloon and pill are static; no loop.\n\n## Don't miss\n- The 3D icons have soft shading and tiny shadows - keep the rendered look, no flat glyphs.\n- Only Experiences carries the NEW pill and the motion loop; the other two tabs are quiet."</script>
+</body></html>

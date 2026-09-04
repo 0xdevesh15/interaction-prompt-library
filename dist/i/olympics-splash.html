@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Olympics Splash - Interaction Prompt Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap">
+<div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
+<h1>Olympics Splash</h1>
+<div class="meta"><span class="cat">Animation</span><span class="sep">&middot;</span><span>by <a href="https://60fps.design/shots/olympics-splash"><b>Olympics</b></a></span><span class="sep">&middot;</span><span>2026-09-04</span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/olympics-splash">60fps page</a></span><span class="sep">&middot;</span><span><a href="https://60fps.design/shots/olympics-splash">original post</a></span></div>
+</div>
+<section><h2>What it is</h2><p class="lede">Rebuild this animation 1:1: the Olympics app&#x27;s Paris 2024 splash - a white screen that loops a seamless crossfade between Olympic and Paralympic branding: gold flame emblem, alternating rings/agitos symbols, and the red Phryge mascots.</p></section>
+<div class="duo">
+<div class="main">
+<section><h2>Media</h2><div class="mrow"><video class="dmedia" src="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f3fd225b7b88f794bcf0/main.mp4" poster="https://video.gumlet.io/66b49d08225b7b88f78b7b44/66b5f3fd225b7b88f794bcf0/thumbnail-1-0.png" autoplay loop muted playsinline controls></video></div></section>
+<section><h2>Frame-by-frame</h2><div class="mrow" style="margin-bottom:20px"><img class="montage" src="../frames/60fps-olympics-splash.jpg" alt=""></div><div class="phases"></div></section>
+</div>
+<div class="rail">
+<section><h2>Build prompt</h2><div class="promptwrap"><pre class="prompt"><button class="copy" onclick="navigator.clipboard.writeText(this.parentElement.dataset.p);this.textContent='Copied'">Copy</button>Rebuild this animation 1:1: the Olympics app&#x27;s Paris 2024 splash - a white screen that loops a seamless crossfade between Olympic and Paralympic branding: gold flame emblem, alternating rings/agitos symbols, and the red Phryge mascots.
+
+## Integration
+Integration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.
+
+## Scene
+White background. Top-center: the gold Paris 2024 flame emblem over &quot;PARIS 2024&quot; in spaced caps. Below: a symbol slot that alternates between the five Olympic rings and the Paralympic agitos. Bottom: the two red Phryge mascot characters with a caption that alternates &quot;Olympic Games&quot; / &quot;Paralympic Games&quot;.
+
+## Motion spec
+Pattern: looping two-state brand crossfade.
+- Elements fade in on load in order: emblem (500ms), wordmark (400ms), symbol slot (400ms), mascots (500ms) - short 100ms staggers.
+- The loop: every ~2.5s the symbol slot crossfades (800ms) between rings and agitos while the caption crossfades in sync.
+- The mascots gently bob (translateY +-4px, 2.4s sine, offset between the two characters) throughout.
+- The emblem and wordmark stay constant - only the symbol and caption alternate.
+- Crossfades overlap slightly at midpoint so neither state fully disappears (no blink to empty).
+
+## Calibration
+- The alternation is the whole point: equal dwell time on Olympic and Paralympic states.
+- Keep motion amplitude tiny - this is a splash, not a celebration.
+
+## Reduced motion
+Hold on the Olympic state; no alternation or bob.
+
+## Don&#x27;t miss
+- The caption swap is part of the crossfade pair - symbol and text must never disagree.
+- Mascots overlap slightly at the base and lean toward each other; keep their composition fixed while they bob.</pre></div></section>
+<section><h2>Mechanics</h2><div class="mech"><div><div class="k">Pattern</div><div class="v">looping two-state brand crossfade.</div></div><div><div class="k">Content type</div><div class="v">passive animation</div></div><div><div class="k">Source</div><div class="v">60fps.design</div></div></div></section>
+</div>
+</div>
+<footer>Source: 60fps.design - <a href="https://60fps.design/shots/olympics-splash">original interaction</a> by Olympics. Teardown snapshot Sep 2026.</footer>
+</div>
+<script>document.querySelector('.prompt').dataset.p="Rebuild this animation 1:1: the Olympics app's Paris 2024 splash - a white screen that loops a seamless crossfade between Olympic and Paralympic branding: gold flame emblem, alternating rings/agitos symbols, and the red Phryge mascots.\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nWhite background. Top-center: the gold Paris 2024 flame emblem over \"PARIS 2024\" in spaced caps. Below: a symbol slot that alternates between the five Olympic rings and the Paralympic agitos. Bottom: the two red Phryge mascot characters with a caption that alternates \"Olympic Games\" / \"Paralympic Games\".\n\n## Motion spec\nPattern: looping two-state brand crossfade.\n- Elements fade in on load in order: emblem (500ms), wordmark (400ms), symbol slot (400ms), mascots (500ms) - short 100ms staggers.\n- The loop: every ~2.5s the symbol slot crossfades (800ms) between rings and agitos while the caption crossfades in sync.\n- The mascots gently bob (translateY +-4px, 2.4s sine, offset between the two characters) throughout.\n- The emblem and wordmark stay constant - only the symbol and caption alternate.\n- Crossfades overlap slightly at midpoint so neither state fully disappears (no blink to empty).\n\n## Calibration\n- The alternation is the whole point: equal dwell time on Olympic and Paralympic states.\n- Keep motion amplitude tiny - this is a splash, not a celebration.\n\n## Reduced motion\nHold on the Olympic state; no alternation or bob.\n\n## Don't miss\n- The caption swap is part of the crossfade pair - symbol and text must never disagree.\n- Mascots overlap slightly at the base and lean toward each other; keep their composition fixed while they bob."</script>
+</body></html>
