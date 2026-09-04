@@ -244,6 +244,13 @@ for r in recs:
             media_html += f'<img class="dmedia" src="{E(m.get("src") or m.get("poster",""))}" alt="">'
     montages = ''.join(f'<img class="montage" src="../{E(m["montage"])}" alt="">' for m in r['media'] if m.get('montage'))
     pub = (r.get('published') or '')[:10]
+    refs = []
+    for m in r['media']:
+        if m.get('montage'):
+            refs.append('https://16ms.vercel.app/' + m['montage'])
+        if m.get('poster'):
+            refs.append(m['poster'])
+    copy_text = (r.get('prompt') or '').rstrip() + "\n\n---\n\nFrame references (image URLs - fetch them for visual frame-by-frame context):\n" + "\n".join('- ' + u for u in refs)
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(r['title'])} - 16ms</title>
 <meta name="description" content="{E(r.get('desc') or r.get('summary') or '')}">
@@ -278,7 +285,7 @@ for r in recs:
 </div>
 <footer>Source: {E(r['source'])}.design - <a href="{E(r['pageUrl'])}">original interaction</a> by {E(r.get('author') or '')}. Teardown snapshot Sep 2026.</footer>
 </div>
-<script>document.querySelector('.prompt').dataset.p={json.dumps(r.get('prompt') or '')}</script>
+<script>document.querySelector('.prompt').dataset.p={json.dumps(copy_text)}</script>
 </body></html>"""
     open(f'{DIST}/i/{r["slug"]}.html','w').write(page)
 
