@@ -139,14 +139,14 @@ index_html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><met
 <meta property="og:title" content="16ms - 2,113 frame-by-frame UI interaction teardowns">
 <meta property="og:description" content="A curated library of 2,113 mobile and web interactions, reverse-engineered frame-by-frame into build-ready prompts.">
 <meta property="og:url" content="https://16ms.vercel.app/">
-<meta property="og:image" content="https://16ms.vercel.app/og-image.jpg">
+<meta property="og:image" content="https://16ms.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="16ms - frame-by-frame interaction teardowns">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="16ms - 2,113 frame-by-frame UI interaction teardowns">
 <meta name="twitter:description" content="A curated library of 2,113 mobile and web interactions, reverse-engineered frame-by-frame into build-ready prompts.">
-<meta name="twitter:image" content="https://16ms.vercel.app/og-image.jpg">
+<meta name="twitter:image" content="https://16ms.vercel.app/og-image.png">
 {FONTS}<link rel="stylesheet" href="assets-style.css"></head><body>
 <div class="wrap"><header class="top">
 <div class="eyebrow">16ms &middot; {len(recs)} interactions &middot; inspora.design + 60fps.design</div>
