@@ -130,27 +130,27 @@ FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="p
 
 lite = [{k:r[k] for k in ('slug','title','category','desc','author','summary','prompt','source')} | {'media':[{'poster':m.get('poster'),'src':m.get('src'),'montage':m.get('montage')} for m in r['media']]} for r in recs]
 index_html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Interaction Prompt Library - 2,113 frame-by-frame UI interaction teardowns</title>
+<title>16ms - 2,113 frame-by-frame UI interaction teardowns</title>
 <meta name="description" content="A curated library of 2,113 mobile and web interactions, reverse-engineered frame-by-frame into build-ready prompts. Sources: inspora.design and 60fps.design.">
-<link rel="canonical" href="https://interactionlibrary.vercel.app/">
+<link rel="canonical" href="https://16ms.vercel.app/">
 <link rel="icon" type="image/png" href="icon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Interaction Prompt Library">
-<meta property="og:title" content="Interaction Prompt Library - 2,113 frame-by-frame UI interaction teardowns">
+<meta property="og:site_name" content="16ms">
+<meta property="og:title" content="16ms - 2,113 frame-by-frame UI interaction teardowns">
 <meta property="og:description" content="A curated library of 2,113 mobile and web interactions, reverse-engineered frame-by-frame into build-ready prompts.">
-<meta property="og:url" content="https://interactionlibrary.vercel.app/">
-<meta property="og:image" content="https://interactionlibrary.vercel.app/og-image.jpg">
+<meta property="og:url" content="https://16ms.vercel.app/">
+<meta property="og:image" content="https://16ms.vercel.app/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A collage of real interaction teardown frames from the Interaction Prompt Library">
+<meta property="og:image:alt" content="16ms - frame-by-frame interaction teardowns">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Interaction Prompt Library - 2,113 frame-by-frame UI interaction teardowns">
+<meta name="twitter:title" content="16ms - 2,113 frame-by-frame UI interaction teardowns">
 <meta name="twitter:description" content="A curated library of 2,113 mobile and web interactions, reverse-engineered frame-by-frame into build-ready prompts.">
-<meta name="twitter:image" content="https://interactionlibrary.vercel.app/og-image.jpg">
+<meta name="twitter:image" content="https://16ms.vercel.app/og-image.jpg">
 {FONTS}<link rel="stylesheet" href="assets-style.css"></head><body>
 <div class="wrap"><header class="top">
-<div class="eyebrow">Prompt Library &middot; {len(recs)} interactions &middot; inspora.design + 60fps.design</div>
-<h1>Interaction Prompt Library</h1>
+<div class="eyebrow">16ms &middot; {len(recs)} interactions &middot; inspora.design + 60fps.design</div>
+<h1>16ms</h1>
 <p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Sources: <a href="https://www.inspora.design/">inspora.design</a> (80) and <a href="https://60fps.design/">60fps.design</a> (2,033 shots, full teardown). Query it from your AI tool via the MCP server.</p>
 <div class="stats"><span><b>{len(recs)}</b> interactions</span><span><b>{sum(len(r['media']) for r in recs)}</b> media teardowns</span><span><b>{len(set(r['category'] for r in recs))}</b> categories</span><span><b>{len(set(r['source'] for r in recs))}</b> sources</span><span><b id="count">{len(recs)}</b> shown</span></div>
 </header>
@@ -176,20 +176,20 @@ for r in recs:
     montages = ''.join(f'<img class="montage" src="../{E(m["montage"])}" alt="">' for m in r['media'] if m.get('montage'))
     pub = (r.get('published') or '')[:10]
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{E(r['title'])} - Interaction Prompt Library</title>
+<title>{E(r['title'])} - 16ms</title>
 <meta name="description" content="{E(r.get('desc') or r.get('summary') or '')}">
-<link rel="canonical" href="https://interactionlibrary.vercel.app/i/{E(r['slug'])}.html">
+<link rel="canonical" href="https://16ms.vercel.app/i/{E(r['slug'])}.html">
 <link rel="icon" type="image/png" href="../icon.png">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Interaction Prompt Library">
-<meta property="og:title" content="{E(r['title'])} - Interaction Prompt Library">
+<meta property="og:site_name" content="16ms">
+<meta property="og:title" content="{E(r['title'])} - 16ms">
 <meta property="og:description" content="{E(r.get('desc') or r.get('summary') or '')}">
-<meta property="og:url" content="https://interactionlibrary.vercel.app/i/{E(r['slug'])}.html">
-<meta property="og:image" content="https://interactionlibrary.vercel.app/{E(r['media'][0].get('montage') or '')}">
+<meta property="og:url" content="https://16ms.vercel.app/i/{E(r['slug'])}.html">
+<meta property="og:image" content="https://16ms.vercel.app/{E(r['media'][0].get('montage') or '')}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{E(r['title'])} - Interaction Prompt Library">
+<meta name="twitter:title" content="{E(r['title'])} - 16ms">
 <meta name="twitter:description" content="{E(r.get('desc') or r.get('summary') or '')}">
-<meta name="twitter:image" content="https://interactionlibrary.vercel.app/{E(r['media'][0].get('montage') or '')}">
+<meta name="twitter:image" content="https://16ms.vercel.app/{E(r['media'][0].get('montage') or '')}">
 {FONTS}<link rel="stylesheet" href="../assets-style.css"></head><body>
 <div class="wrap">
 <div class="dhead"><a class="back" href="../index.html">&larr; All interactions</a>
