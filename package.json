@@ -1,0 +1,11 @@
+{
+  "name": "interaction-prompt-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frame-by-frame interaction teardowns as build-ready prompts, with an MCP server (stdio + hosted streamable HTTP).",
+  "dependencies": {
+    "@modelcontextprotocol/node": "^2.0.0",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "zod": "^4.0.0"
+  }
+}

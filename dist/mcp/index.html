@@ -1,47 +1,132 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MCP server - 16ms</title>
-<meta name="description" content="Query the 16ms interaction library from Cursor, Claude Code, or Claude Desktop via the MCP server.">
+<meta name="description" content="Query all 2113 16ms interaction teardowns from Claude, ChatGPT, Codex, Claude Code, Cursor, or VS Code via one hosted MCP server.">
 <link rel="canonical" href="https://16ms.vercel.app/mcp/">
 <link rel="icon" type="image/png" href="../icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="16ms">
 <meta property="og:title" content="MCP server - 16ms">
-<meta property="og:description" content="Query the 16ms interaction library from your AI tool.">
+<meta property="og:description" content="Query the 16ms interaction library from your AI tool. One hosted MCP server, no API key.">
 <meta property="og:url" content="https://16ms.vercel.app/mcp/">
 <meta property="og:image" content="https://16ms.vercel.app/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://16ms.vercel.app/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
-<div class="wrap"><header class="top">
-<div class="eyebrow">16ms &middot; MCP server</div>
-<h1>Query the library from your AI tool.</h1>
-<p class="sub">The 16ms MCP server exposes all 2113 interaction teardowns - search, browse, and pull full build prompts - directly inside Cursor, Claude Code, or Claude Desktop. It runs locally over stdio: Node 18+, zero dependencies, one file.</p>
-</header>
-<section><h2>1. Get the code</h2>
-<div class="promptwrap"><pre class="prompt">git clone https://github.com/0xdevesh15/interaction-prompt-library.git</pre></div>
-<p class="sub" style="margin-top:14px">The server is <b>mcp/server.js</b>. It reads the bundled dataset (<b>dist/interactions.json</b>) - nothing to install, no API keys.</p></section>
-<section><h2>2. Connect your tool</h2>
-<p class="sub" style="margin-bottom:18px">Replace <b>/ABS/PATH/TO</b> with where you cloned the repo.</p>
-<p class="lede" style="margin-bottom:10px"><b>Cursor</b> - add to <b>~/.cursor/mcp.json</b>:</p>
-<div class="promptwrap"><pre class="prompt">{
-  "mcpServers": {
-    "interaction-prompt-library": {
-      "command": "node",
-      "args": ["/ABS/PATH/TO/interaction-prompt-library/mcp/server.js"]
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css">
+<style>
+body.mcpd{background:#0a0a0a;color:#fafafa}
+.mwrap{max-width:780px;margin:0 auto;padding:72px 24px 110px}
+.mhome{font:500 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:#52525b;text-decoration:none}
+.mhome:hover{color:#a1a1aa}
+.mwrap h1{font-size:52px;font-weight:600;letter-spacing:-.03em;line-height:1.05;margin:64px 0 0;color:#fafafa}
+.mwrap h1 .cli{color:#a1a1aa}
+.msub{color:#a1a1aa;font-size:17px;line-height:1.6;margin:18px 0 0;max-width:560px}
+.mcard{margin-top:48px;background:#141414;border:1px solid #262626;border-radius:20px;overflow:hidden}
+.mtabs{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px;border-bottom:1px solid #262626;flex-wrap:wrap}
+.ctabset{display:flex;gap:2px;flex-wrap:wrap}
+.ctab{padding:7px 14px;border-radius:999px;background:none;border:0;color:#a1a1aa;font:500 13.5px InterVariable,Inter,sans-serif;cursor:pointer}
+.ctab:hover{color:#e4e4e7}
+.ctab.on{background:#fafafa;color:#09090b}
+.mtoggle{display:flex;background:#1f1f1f;border-radius:999px;padding:3px}
+.mtg{padding:5px 13px;border-radius:999px;background:none;border:0;color:#71717a;font:600 11px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em;cursor:pointer}
+.mtg.on{background:#fafafa;color:#09090b}
+.mstep{display:flex;gap:36px;padding:28px 32px;border-top:1px solid #1f1f1f}
+.mstep:first-child{border-top:0}
+.mleft{width:250px;flex:none}
+.mnum{font:500 12px ui-monospace,SFMono-Regular,Menlo,monospace;color:#52525b;margin-bottom:8px}
+.mleft h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin:0 0 6px;color:#fafafa}
+.mleft p{font-size:13.5px;line-height:1.55;color:#a1a1aa;margin:0}
+.mright{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.mbtn{display:inline-block;align-self:flex-start;background:#fafafa;color:#09090b;font:600 14px InterVariable,Inter,sans-serif;padding:11px 20px;border-radius:999px;text-decoration:none}
+.mbtn:hover{background:#e4e4e7}
+.mor{font-size:13px;color:#71717a;margin:18px 0 0}
+.mor b{color:#a1a1aa;font-weight:500}
+.mcopy{display:flex;align-items:flex-start;gap:10px;background:#000;border:1px solid #262626;border-radius:12px;padding:13px 14px 13px 16px;margin-top:14px}
+.mright > .mcopy:first-child{margin-top:0}
+.mcopy code{flex:1;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;color:#d4d4d8;white-space:pre-wrap;word-break:break-all}
+.mcbtn{flex:none;background:none;border:0;color:#52525b;cursor:pointer;padding:2px;margin-top:1px}
+.mcbtn:hover{color:#fafafa}
+.mcbtn.ok{color:#4ade80}
+.mtools{margin-top:64px}
+.mtools h2{font-size:26px;font-weight:600;letter-spacing:-.02em;margin:0 0 20px;color:#fafafa}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mtool{background:#141414;border:1px solid #262626;border-radius:14px;padding:18px}
+.mtool .t{font:600 13px ui-monospace,SFMono-Regular,Menlo,monospace;color:#fafafa;margin-bottom:8px}
+.mtool .d{font-size:13px;line-height:1.55;color:#a1a1aa}
+.mfoot{margin-top:56px;text-align:center;font-size:13px;line-height:1.7;color:#71717a}
+.mfoot a{color:#a1a1aa}
+@media(max-width:680px){.mstep{flex-direction:column;gap:14px;padding:24px 20px}.mleft{width:auto}.mgrid{grid-template-columns:1fr}.mwrap h1{font-size:38px}}
+</style>
+</head><body class="mcpd">
+<div class="mwrap">
+<a class="mhome" href="../">&larr; 16ms</a>
+<h1>Query 2,113 interaction teardowns<br>from <span class="cli" id="cli">Claude</span>.</h1>
+<p class="msub">One hosted MCP server over every frame-by-frame teardown in the library - search, browse, and pull build-ready prompts straight into your AI tool. Read-only, no API key.</p>
+<div class="mcard">
+<div class="mtabs">
+<div class="ctabset"><button class="ctab on" data-c="claude">Claude</button><button class="ctab" data-c="chatgpt">ChatGPT</button><button class="ctab" data-c="codex">Codex</button><button class="ctab" data-c="claude-code">Claude Code</button><button class="ctab" data-c="cursor">Cursor</button><button class="ctab" data-c="vscode">VS Code</button></div>
+<div class="mtoggle"><button class="mtg on" id="mtg-mcp">MCP</button><button class="mtg" id="mtg-prompt">PROMPT</button></div>
+</div>
+<div id="mcp-panes"><div class="cpane" id="cp-claude"><div class="mstep"><div class="mleft"><div class="mnum">01</div><h3>Add the connector</h3><p>Claude &rarr; Settings &rarr; Connectors &rarr; Add custom connector. Custom connectors need a paid Claude plan.</p></div><div class="mright"><div class="mcopy"><code>https://16ms.vercel.app/api/mcp</code><button class="mcbtn" data-copy="https://16ms.vercel.app/api/mcp" aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div><div class="mstep"><div class="mleft"><div class="mnum">02</div><h3>Try it</h3><p>With the server connected, ask your tool:</p></div><div class="mright"><div class="mcopy"><code>Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt.</code><button class="mcbtn" data-copy="Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt." aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div></div><div class="cpane" id="cp-chatgpt" hidden><div class="mstep"><div class="mleft"><div class="mnum">01</div><h3>Add a developer connector</h3><p>ChatGPT &rarr; Settings &rarr; Connectors &rarr; Advanced &rarr; Developer mode (Pro), then create a connector with this URL.</p></div><div class="mright"><div class="mcopy"><code>https://16ms.vercel.app/api/mcp</code><button class="mcbtn" data-copy="https://16ms.vercel.app/api/mcp" aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div><div class="mstep"><div class="mleft"><div class="mnum">02</div><h3>Try it</h3><p>With the server connected, ask your tool:</p></div><div class="mright"><div class="mcopy"><code>Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt.</code><button class="mcbtn" data-copy="Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt." aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div></div><div class="cpane" id="cp-codex" hidden><div class="mstep"><div class="mleft"><div class="mnum">01</div><h3>Add it from the CLI</h3><p>One command:</p></div><div class="mright"><div class="mcopy"><code>codex mcp add interaction-prompt-library --url https://16ms.vercel.app/api/mcp</code><button class="mcbtn" data-copy="codex mcp add interaction-prompt-library --url https://16ms.vercel.app/api/mcp" aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div><div class="mstep"><div class="mleft"><div class="mnum">02</div><h3>Try it</h3><p>With the server connected, ask your tool:</p></div><div class="mright"><div class="mcopy"><code>Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt.</code><button class="mcbtn" data-copy="Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt." aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div></div><div class="cpane" id="cp-claude-code" hidden><div class="mstep"><div class="mleft"><div class="mnum">01</div><h3>Add it from the CLI</h3><p>One command:</p></div><div class="mright"><div class="mcopy"><code>claude mcp add --transport http interaction-prompt-library https://16ms.vercel.app/api/mcp</code><button class="mcbtn" data-copy="claude mcp add --transport http interaction-prompt-library https://16ms.vercel.app/api/mcp" aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div><div class="mstep"><div class="mleft"><div class="mnum">02</div><h3>Try it</h3><p>With the server connected, ask your tool:</p></div><div class="mright"><div class="mcopy"><code>Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt.</code><button class="mcbtn" data-copy="Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt." aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div></div><div class="cpane" id="cp-cursor" hidden><div class="mstep"><div class="mleft"><div class="mnum">01</div><h3>Add it in one click</h3><p>Installs the server into your Cursor MCP config.</p></div><div class="mright"><a class="mbtn" href="cursor://anysphere.cursor-deeplink/mcp/install?name=interaction-prompt-library&config=eyJ1cmwiOiAiaHR0cHM6Ly8xNm1zLnZlcmNlbC5hcHAvYXBpL21jcCJ9">Add to Cursor&nbsp;&nearr;</a><p class="mor">Or add it by hand in <b>~/.cursor/mcp.json</b>:</p><div class="mcopy"><code>{
+  &quot;mcpServers&quot;: {
+    &quot;interaction-prompt-library&quot;: {
+      &quot;url&quot;: &quot;https://16ms.vercel.app/api/mcp&quot;
     }
   }
-}</pre></div>
-<p class="lede" style="margin:22px 0 10px"><b>Claude Code</b> - one command:</p>
-<div class="promptwrap"><pre class="prompt">claude mcp add interaction-prompt-library -- node /ABS/PATH/TO/interaction-prompt-library/mcp/server.js</pre></div>
-<p class="lede" style="margin:22px 0 10px"><b>Claude Desktop</b> - add to <b>claude_desktop_config.json</b> (same JSON as Cursor), then restart the app.</p></section>
-<section><h2>3. Tools you get</h2>
-<div class="phases">
-<div class="phase"><div class="p">search_interactions</div><div class="d">Full-text search over titles, summaries, mechanics, and prompts. "show me toggle switches", "scroll stack", "glass refraction".</div></div>
-<div class="phase"><div class="p">get_interaction_prompt</div><div class="d">The full teardown for one interaction: summary, frame-by-frame phases, mechanics (trigger, timing, easing), and the build-ready prompt.</div></div>
-<div class="phase"><div class="p">list_interactions</div><div class="d">Browse everything, optionally filtered by category (Motion, Product, Web...) or source (inspora, 60fps).</div></div>
-</div></section>
-<section><h2>Try it</h2>
-<p class="lede">Ask your tool: <i>"search the interaction library for a pull to refresh animation and give me the build prompt"</i> - it calls the MCP tools and hands you a prompt you can build from.</p></section>
-<footer>The dataset ships with the repo, so the server works fully offline. Set IPL_DATA=/path/to/interactions.json to point at another copy.</footer>
+}</code><button class="mcbtn" data-copy="{
+  &quot;mcpServers&quot;: {
+    &quot;interaction-prompt-library&quot;: {
+      &quot;url&quot;: &quot;https://16ms.vercel.app/api/mcp&quot;
+    }
+  }
+}" aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div><div class="mstep"><div class="mleft"><div class="mnum">02</div><h3>Try it</h3><p>With the server connected, ask your tool:</p></div><div class="mright"><div class="mcopy"><code>Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt.</code><button class="mcbtn" data-copy="Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt." aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div></div><div class="cpane" id="cp-vscode" hidden><div class="mstep"><div class="mleft"><div class="mnum">01</div><h3>Add it in one click</h3><p>Installs the server into your VS Code MCP config.</p></div><div class="mright"><a class="mbtn" href="vscode:mcp/install?%7B%22name%22%3A%20%22interaction-prompt-library%22%2C%20%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A//16ms.vercel.app/api/mcp%22%7D">Add to VS Code&nbsp;&nearr;</a><p class="mor">Or add it by hand in <b>.vscode/mcp.json</b>:</p><div class="mcopy"><code>{
+  &quot;servers&quot;: {
+    &quot;interaction-prompt-library&quot;: {
+      &quot;type&quot;: &quot;http&quot;,
+      &quot;url&quot;: &quot;https://16ms.vercel.app/api/mcp&quot;
+    }
+  }
+}</code><button class="mcbtn" data-copy="{
+  &quot;servers&quot;: {
+    &quot;interaction-prompt-library&quot;: {
+      &quot;type&quot;: &quot;http&quot;,
+      &quot;url&quot;: &quot;https://16ms.vercel.app/api/mcp&quot;
+    }
+  }
+}" aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div><div class="mstep"><div class="mleft"><div class="mnum">02</div><h3>Try it</h3><p>With the server connected, ask your tool:</p></div><div class="mright"><div class="mcopy"><code>Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt.</code><button class="mcbtn" data-copy="Search the 16ms interaction library for a pull-to-refresh animation and give me the full build prompt." aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div></div>
+<div class="cpane" id="cp-prompt" hidden>
+<div class="mstep"><div class="mleft"><div class="mnum">01</div><h3>Set up in one prompt</h3><p>Paste this into your tool. It adds the server and runs a first search.</p></div>
+<div class="mright"><div class="mcopy"><code>Add an MCP server called &quot;interaction-prompt-library&quot; at https://16ms.vercel.app/api/mcp (streamable HTTP transport, no auth). Then list its tools and search it for a toggle switch interaction.</code><button class="mcbtn" data-copy="Add an MCP server called &quot;interaction-prompt-library&quot; at https://16ms.vercel.app/api/mcp (streamable HTTP transport, no auth). Then list its tools and search it for a toggle switch interaction." aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div></div></div>
 </div>
+</div>
+</div>
+<div class="mtools">
+<h2>Tools you get</h2>
+<div class="mgrid">
+<div class="mtool"><div class="t">search_interactions</div><div class="d">Full-text search over titles, summaries, mechanics, and prompts. "toggle switch", "scroll stack", "glass refraction".</div></div>
+<div class="mtool"><div class="t">get_interaction_prompt</div><div class="d">The full teardown for one interaction: summary, frame-by-frame phases, mechanics, and the build-ready prompt.</div></div>
+<div class="mtool"><div class="t">list_interactions</div><div class="d">Browse everything, filtered by category (Motion, Product, Web...) or source (inspora, 60fps).</div></div>
+</div>
+</div>
+<p class="mfoot">Hosted on Vercel, streamable HTTP, read-only. Prefer running it locally over stdio? <a href="https://github.com/0xdevesh15/interaction-prompt-library#run-the-mcp-server">One file, zero dependencies</a>.</p>
+</div>
+
+<script>
+var tabs=document.querySelectorAll('.ctab'),panes=document.querySelectorAll('.cpane'),
+    mtgM=document.getElementById('mtg-mcp'),mtgP=document.getElementById('mtg-prompt'),
+    promptPane=document.getElementById('cp-prompt'),stepsWrap=document.getElementById('mcp-panes');
+tabs.forEach(function(t){t.onclick=function(){
+  tabs.forEach(function(x){x.classList.toggle('on',x===t)});
+  panes.forEach(function(p){p.hidden=p.id!=='cp-'+t.dataset.c});
+  mtgM.classList.add('on');mtgP.classList.remove('on');
+}});
+mtgM.onclick=function(){mtgM.classList.add('on');mtgP.classList.remove('on');promptPane.hidden=true;
+  panes.forEach(function(p){if(p.id!=='cp-prompt')p.hidden=p.id!=='cp-'+document.querySelector('.ctab.on').dataset.c})};
+mtgP.onclick=function(){mtgP.classList.add('on');mtgM.classList.remove('on');
+  panes.forEach(function(p){p.hidden=p.id!=='cp-prompt'})};
+document.querySelectorAll('.mcbtn').forEach(function(b){b.onclick=function(){
+  navigator.clipboard.writeText(b.dataset.copy);b.classList.add('ok');setTimeout(function(){b.classList.remove('ok')},1200)}});
+var clis=['Claude','ChatGPT','Codex','Claude Code','Cursor','VS Code'],ci=0,cn=document.getElementById('cli');
+setInterval(function(){ci=(ci+1)%clis.length;cn.textContent=clis[ci]},1800);
+</script>
+
 </body></html>
