@@ -150,7 +150,7 @@ index_html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><met
 {FONTS}<link rel="stylesheet" href="assets-style.css"></head><body>
 <div class="wrap"><header class="top">
 <div class="eyebrow">16ms &middot; {len(recs)} interactions &middot; inspora.design + 60fps.design</div>
-<h1>16ms</h1>
+<h1>16<span style="color:#f97316">ms</span></h1>
 <p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Sources: <a href="https://www.inspora.design/">inspora.design</a> (80) and <a href="https://60fps.design/">60fps.design</a> (2,033 shots, full teardown). Query it from your AI tool via the MCP server.</p>
 <div class="stats"><span><b>{len(recs)}</b> interactions</span><span><b>{sum(len(r['media']) for r in recs)}</b> media teardowns</span><span><b>{len(set(r['category'] for r in recs))}</b> categories</span><span><b>{len(set(r['source'] for r in recs))}</b> sources</span><span><b id="count">{len(recs)}</b> shown</span></div>
 </header>
