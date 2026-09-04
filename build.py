@@ -262,7 +262,7 @@ _panes = ''.join('<div class="cpane" id="cp-' + cid + '"' + ('' if i == 0 else '
 MCP_STYLE = """
 <style>
 body.mcpd{background:#fff;color:#09090b}
-.mwrap{max-width:780px;margin:0 auto;padding:72px 24px 110px}
+.mwrap{max-width:860px;margin:0 auto;padding:72px 24px 110px}
 .mhome{font:500 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:#a1a1aa;text-decoration:none}
 .mhome:hover{color:#52525b}
 .mwrap h1{font-size:52px;font-weight:600;letter-spacing:-.03em;line-height:1.05;margin:64px 0 0;color:#09090b}
