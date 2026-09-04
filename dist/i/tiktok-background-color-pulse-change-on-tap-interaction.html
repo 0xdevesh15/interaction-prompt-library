@@ -57,4 +57,177 @@ Background crossfades (300ms) with no radial pulse.
 <footer>Source: 60fps.design - <a href="https://60fps.design/shots/tiktok-background-color-pulse-change-on-tap-interaction">original interaction</a> by Tiktok. Teardown snapshot Sep 2026.</footer>
 </div>
 <script>document.querySelector('.prompt').dataset.p="Rebuild this interaction 1:1: TikTok's QR share background - tapping anywhere on the gradient background behind the QR card sends a soft radial pulse from the tap point and shifts the whole background to the next color (pink-red, orange, green, blue-purple, teal).\n\n## Integration\nIntegration: stack-agnostic spec - springs given as stiffness/damping, timed motions as duration + curve; map every value to your framework and animation library of choice.\n\n## Scene\nFull-screen vertical gradient (top color -> bottom tint) behind a white QR card: app logo, \"60fps.design\", \"@60fps.design\" handle, the QR code with a TikTok logo, and \"Copy link\" / \"Share link\" buttons. A small footer line sits at the bottom. Taps land anywhere outside the card.\n\n## Motion spec\nPattern: tap-ripple gradient shift, ~700ms.\n- Pulse: on tap, a soft radial ring expands from the tap point (0 -> 1.5x screen width, 600ms, ease-out, opacity 0.35 -> 0) in the incoming color.\n- Shift: the background gradient crossfades to the next palette (600ms, ease-in-out), the change radiating outward from the tap point (slight delay ramp, ~80ms across the screen).\n- Cycle: palettes advance in a fixed order: magenta-red -> orange -> green -> indigo-purple -> teal -> back.\n- Card: the white QR card stays perfectly still; only the background moves.\n\n## Calibration\n- The pulse origin is the exact tap coordinate - not screen center.\n- Rapid taps queue: each tap starts a new pulse over the in-flight transition.\n\n## Reduced motion\nBackground crossfades (300ms) with no radial pulse.\n\n## Don't miss\n- The pulse is colored with the incoming palette, so the new color appears to spread from the finger.\n- The gradient is two-stop and vertical in every palette.\n\n---\n\nFrame references (image URLs - fetch them for visual frame-by-frame context):\n- https://16ms.vercel.app/frames/60fps-tiktok-background-color-pulse-change-on-tap-interaction.jpg\n- https://video.gumlet.io/66b49d08225b7b88f78b7b44/6912b68cfc80bd135bd85926/thumbnail-1-0.png"</script>
+<style>
+.ck-overlay{position:fixed;inset:0;z-index:100;background:rgba(9,9,11,.3);backdrop-filter:blur(10px) saturate(1.1);-webkit-backdrop-filter:blur(10px) saturate(1.1);display:flex;justify-content:center;align-items:flex-start;padding:14vh 16px 16px;opacity:0;transition:opacity .18s var(--ease)}
+.ck-overlay.on{opacity:1}
+.ck-modal{width:100%;max-width:580px;background:#fff;border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.22),0 4px 16px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.06);overflow:hidden;transform:translateY(10px) scale(.985);transition:transform .2s var(--ease)}
+.ck-overlay.on .ck-modal{transform:none}
+.ck-inputrow{display:flex;align-items:center;gap:11px;padding:15px 18px;border-bottom:1px solid rgba(0,0,0,.07)}
+.ck-inputrow svg{flex:none;color:var(--mut)}
+.ck-input{flex:1;min-width:0;border:0;outline:none;background:none;font:15px var(--sans);color:var(--txt);letter-spacing:.001em}
+.ck-input::placeholder{color:var(--mut)}
+.ck-esc{flex:none;font:500 11px var(--mono);color:var(--mut);background:var(--fill);border:1px solid var(--line);border-radius:6px;padding:3px 7px}
+.ck-list{max-height:min(400px,52vh);overflow-y:auto;padding:8px;overscroll-behavior:contain}
+.ck-group{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:8px 12px 5px}
+.ck-row{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:10px;cursor:pointer}
+.ck-row.sel{background:var(--fill)}
+.ck-rt{flex:1;min-width:0;font-size:14px;font-weight:500;letter-spacing:-.005em;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ck-rm{flex:none;font:11.5px var(--mono);color:var(--mut)}
+.ck-row.sel .ck-rm{color:var(--sec)}
+.ck-empty{padding:34px 20px;text-align:center;font-size:13.5px;color:var(--mut)}
+.ck-empty b{color:var(--sec);font-weight:500}
+.ck-foot{display:flex;align-items:center;gap:18px;padding:10px 18px;border-top:1px solid rgba(0,0,0,.07);background:var(--well)}
+.ck-hint{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--mut)}
+.ck-hint kbd{font:500 10.5px var(--mono);color:var(--sec);background:#fff;border:1px solid var(--line-strong);border-bottom-width:2px;border-radius:5px;padding:2px 5px;min-width:19px;text-align:center}
+.ck-total{margin-left:auto;font:11px var(--mono);color:var(--mut);font-variant-numeric:tabular-nums}
+@media(max-width:640px){.ck-overlay{padding:10vh 10px 10px}.ck-input{font-size:16px}.ck-hint{display:none}.ck-hint:first-child{display:flex}}
+</style>
+<script>window.__CMDK_PREFIX__="../"</script><script>
+(function(){
+  var PREFIX = window.__CMDK_PREFIX__ || '';
+  var overlay=null, input=null, list=null, totalEl=null;
+  var DATA=null, results=[], sel=0, isOpen=false;
+
+  function loadData(cb){
+    if(DATA){cb();return}
+    if(window.__DATA__){
+      DATA=window.__DATA__.map(function(r){return{slug:r.slug,title:r.title,category:r.category,source:r.source,author:r.author}});
+      cb();return;
+    }
+    fetch(PREFIX+'search-index.json').then(function(r){return r.json()}).then(function(d){DATA=d;cb()}).catch(function(){DATA=[];cb()});
+  }
+
+  function fuzz(q,t){
+    q=q.toLowerCase().replace(/\s+/g,'');t=t.toLowerCase();
+    var qi=0,score=0,last=-2;
+    for(var i=0;i<t.length&&qi<q.length;i++){
+      if(t[i]===q[qi]){
+        score+=(last===i-1?4:1)+((i===0||/[\s\-_\u00b7]/.test(t[i-1]))?3:0);
+        last=i;qi++;
+      }
+    }
+    if(qi<q.length)return -1;
+    return score-Math.min(t.length,200)*0.01;
+  }
+
+  function search(q){
+    if(!DATA)return [];
+    if(!q){
+      return DATA.slice(0,8);
+    }
+    var scored=[];
+    for(var i=0;i<DATA.length;i++){
+      var r=DATA[i];
+      var s=fuzz(q,r.title);
+      if(s<0){var s2=fuzz(q,r.title+' '+(r.category||'')+' '+(r.author||'')+' '+(r.source||''));if(s2>=0)s=s2*0.5;}
+      if(s>=0)scored.push([s,r]);
+    }
+    scored.sort(function(a,b){return b[0]-a[0]});
+    return scored.slice(0,50).map(function(x){return x[1]});
+  }
+
+  function render(){
+    var q=input.value.trim();
+    results=search(q);
+    if(sel>=results.length)sel=0;
+    var h='';
+    if(results.length){
+      h+='<div class="ck-group">'+(q?'Results':'Suggestions')+'</div>';
+      for(var i=0;i<results.length;i++){
+        var r=results[i];
+        h+='<div class="ck-row'+(i===sel?' sel':'')+'" data-i="'+i+'" role="option" aria-selected="'+(i===sel)+'">'
+          +'<span class="ck-rt"></span>'
+          +'<span class="ck-rm"></span></div>';
+      }
+    } else {
+      h='<div class="ck-empty">No results for <b></b></div>';
+    }
+    list.innerHTML=h;
+    var rows=list.querySelectorAll('.ck-row');
+    for(var i=0;i<rows.length;i++){
+      (function(row,i){
+        row.querySelector('.ck-rt').textContent=results[i].title;
+        row.querySelector('.ck-rm').textContent=(results[i].category||'')+(results[i].source?' \u00b7 '+results[i].source:'');
+        row.addEventListener('mouseenter',function(){sel=i;paint()});
+        row.addEventListener('click',function(){openSel()});
+      })(rows[i],i);
+    }
+    if(!results.length){
+      var b=list.querySelector('.ck-empty b');if(b)b.textContent='"'+q+'"';
+    }
+    totalEl.textContent=(q?results.length+' of ':'')+DATA.length.toLocaleString()+' interactions';
+  }
+
+  function paint(){
+    var rows=list.querySelectorAll('.ck-row');
+    for(var i=0;i<rows.length;i++){
+      rows[i].classList.toggle('sel',i===sel);
+      rows[i].setAttribute('aria-selected',i===sel?'true':'false');
+    }
+    var s=list.querySelector('.ck-row.sel');
+    if(s)s.scrollIntoView({block:'nearest'});
+  }
+
+  function openSel(){
+    var r=results[sel];
+    if(r)location.href=PREFIX+'i/'+r.slug+'.html';
+  }
+
+  function build(){
+    overlay=document.createElement('div');
+    overlay.className='ck-overlay';
+    overlay.innerHTML='<div class="ck-modal" role="dialog" aria-modal="true" aria-label="Search interactions">'
+      +'<div class="ck-inputrow">'
+      +'<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.75" stroke="currentColor" stroke-width="1.5"/><path d="m10.75 10.75 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>'
+      +'<input class="ck-input" type="text" placeholder="Search interactions\u2026" aria-label="Search interactions" autocomplete="off" spellcheck="false">'
+      +'<kbd class="ck-esc">esc</kbd></div>'
+      +'<div class="ck-list" role="listbox"></div>'
+      +'<div class="ck-foot">'
+      +'<span class="ck-hint"><kbd>\u2191</kbd><kbd>\u2193</kbd>Navigate</span>'
+      +'<span class="ck-hint"><kbd>\u21b5</kbd>Open</span>'
+      +'<span class="ck-hint"><kbd>esc</kbd>Close</span>'
+      +'<span class="ck-total"></span>'
+      +'</div></div>';
+    document.body.appendChild(overlay);
+    input=overlay.querySelector('.ck-input');
+    list=overlay.querySelector('.ck-list');
+    totalEl=overlay.querySelector('.ck-total');
+    overlay.addEventListener('mousedown',function(e){if(e.target===overlay)close()});
+    input.addEventListener('input',function(){sel=0;render()});
+    input.addEventListener('keydown',function(e){
+      if(e.key==='ArrowDown'){e.preventDefault();sel=Math.min(sel+1,results.length-1);paint()}
+      else if(e.key==='ArrowUp'){e.preventDefault();sel=Math.max(sel-1,0);paint()}
+      else if(e.key==='Enter'){e.preventDefault();openSel()}
+      else if(e.key==='Escape'){e.preventDefault();close()}
+    });
+  }
+
+  function open(){
+    if(isOpen)return;
+    if(!overlay)build();
+    isOpen=true;
+    document.body.style.overflow='hidden';
+    overlay.style.display='flex';
+    requestAnimationFrame(function(){overlay.classList.add('on')});
+    input.value='';sel=0;
+    loadData(render);
+    input.focus();
+  }
+  function close(){
+    if(!isOpen)return;
+    isOpen=false;
+    overlay.classList.remove('on');
+    document.body.style.overflow='';
+    setTimeout(function(){if(!isOpen)overlay.style.display='none'},200);
+  }
+  function toggle(){isOpen?close():open()}
+
+  document.addEventListener('keydown',function(e){
+    if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();toggle()}
+    else if(e.key==='Escape'&&isOpen){close()}
+  });
+
+  window.__cmdk={open:open,close:close,toggle:toggle};
+})();
+</script>
 </body></html>
