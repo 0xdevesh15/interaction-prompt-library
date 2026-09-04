@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MCP server - 16ms</title>
+<meta name="description" content="Query the 16ms interaction library from Cursor, Claude Code, or Claude Desktop via the MCP server.">
+<link rel="canonical" href="https://16ms.vercel.app/mcp/">
+<link rel="icon" type="image/png" href="../icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="16ms">
+<meta property="og:title" content="MCP server - 16ms">
+<meta property="og:description" content="Query the 16ms interaction library from your AI tool.">
+<meta property="og:url" content="https://16ms.vercel.app/mcp/">
+<meta property="og:image" content="https://16ms.vercel.app/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://16ms.vercel.app/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets-style.css"></head><body>
+<div class="wrap"><header class="top">
+<div class="eyebrow">16ms &middot; MCP server</div>
+<h1>Query the library from your AI tool.</h1>
+<p class="sub">The 16ms MCP server exposes all 2113 interaction teardowns - search, browse, and pull full build prompts - directly inside Cursor, Claude Code, or Claude Desktop. It runs locally over stdio: Node 18+, zero dependencies, one file.</p>
+</header>
+<section><h2>1. Get the code</h2>
+<div class="promptwrap"><pre class="prompt">git clone https://github.com/0xdevesh15/interaction-prompt-library.git</pre></div>
+<p class="sub" style="margin-top:14px">The server is <b>mcp/server.js</b>. It reads the bundled dataset (<b>dist/interactions.json</b>) - nothing to install, no API keys.</p></section>
+<section><h2>2. Connect your tool</h2>
+<p class="sub" style="margin-bottom:18px">Replace <b>/ABS/PATH/TO</b> with where you cloned the repo.</p>
+<p class="lede" style="margin-bottom:10px"><b>Cursor</b> - add to <b>~/.cursor/mcp.json</b>:</p>
+<div class="promptwrap"><pre class="prompt">{
+  "mcpServers": {
+    "interaction-prompt-library": {
+      "command": "node",
+      "args": ["/ABS/PATH/TO/interaction-prompt-library/mcp/server.js"]
+    }
+  }
+}</pre></div>
+<p class="lede" style="margin:22px 0 10px"><b>Claude Code</b> - one command:</p>
+<div class="promptwrap"><pre class="prompt">claude mcp add interaction-prompt-library -- node /ABS/PATH/TO/interaction-prompt-library/mcp/server.js</pre></div>
+<p class="lede" style="margin:22px 0 10px"><b>Claude Desktop</b> - add to <b>claude_desktop_config.json</b> (same JSON as Cursor), then restart the app.</p></section>
+<section><h2>3. Tools you get</h2>
+<div class="phases">
+<div class="phase"><div class="p">search_interactions</div><div class="d">Full-text search over titles, summaries, mechanics, and prompts. "show me toggle switches", "scroll stack", "glass refraction".</div></div>
+<div class="phase"><div class="p">get_interaction_prompt</div><div class="d">The full teardown for one interaction: summary, frame-by-frame phases, mechanics (trigger, timing, easing), and the build-ready prompt.</div></div>
+<div class="phase"><div class="p">list_interactions</div><div class="d">Browse everything, optionally filtered by category (Motion, Product, Web...) or source (inspora, 60fps).</div></div>
+</div></section>
+<section><h2>Try it</h2>
+<p class="lede">Ask your tool: <i>"search the interaction library for a pull to refresh animation and give me the build prompt"</i> - it calls the MCP tools and hands you a prompt you can build from.</p></section>
+<footer>The dataset ships with the repo, so the server works fully offline. Set IPL_DATA=/path/to/interactions.json to point at another copy.</footer>
+</div>
+</body></html>
