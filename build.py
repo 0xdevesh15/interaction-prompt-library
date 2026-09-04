@@ -122,7 +122,9 @@ function render(){
     const m=r.media[0]||{};
     const thumb=m.poster||m.src||m.montage||'';
     const a=document.createElement('a');a.className='mcard';a.href='i/'+r.slug+'.html';
-    a.innerHTML=`<img loading="lazy" src="${thumb}" alt="">`+
+    const dim=r.dims;
+    const dimAttr=(dim&&dim[0]&&dim[1])?` width="${dim[0]}" height="${dim[1]}"`:'';
+    a.innerHTML=`<img loading="lazy" src="${thumb}"${dimAttr} alt="">`+
       (r.media.length>1?`<span class="mcount">${LAYERS}${r.media.length}</span>`:'')+
       `<span class="mover"><span class="mt"></span><span class="mm">${r.category} &middot; ${r.author||r.source}</span></span>`;
     a.querySelector('.mt').textContent=r.title;
@@ -132,6 +134,8 @@ function render(){
   document.getElementById('count').textContent=n.toLocaleString();
 }
 q.addEventListener('input',render);
+function onScroll(){document.body.classList.toggle('scrolled',window.scrollY>240)}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
 document.addEventListener('keydown',e=>{
   if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();q.focus();}
   else if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}
@@ -143,10 +147,16 @@ render();
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">'
 
-lite = [{k:r[k] for k in ('slug','title','category','desc','author','summary','prompt','source')} | {'media':[{'poster':m.get('poster'),'src':m.get('src'),'montage':m.get('montage')} for m in r['media']]} for r in recs]
+DIMS = json.load(open('/tmp/insp-site/poster-dims.json')) if os.path.exists('/tmp/insp-site/poster-dims.json') else {}
+lite = []
+for r in recs:
+    m0 = r['media'][0] if r['media'] else {}
+    d = DIMS.get(m0.get('poster') or m0.get('src') or '')
+    lite.append({k:r[k] for k in ('slug','title','category','desc','author','summary','prompt','source')} | {'media':[{'poster':m.get('poster'),'src':m.get('src'),'montage':m.get('montage')} for m in r['media']], 'dims': d})
 BENTO_STYLE = """
 <style>
-.bbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bbar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transform:translateY(-110%);transition:transform .38s var(--ease)}
+body.scrolled .bbar{transform:translateY(0)}
 .bin{max-width:1400px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:24px}
 .bword{font-weight:700;font-size:16.5px;letter-spacing:-.02em;color:var(--txt);text-decoration:none;flex:none}
 .bword:hover{text-decoration:none}
@@ -207,9 +217,10 @@ index_html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><met
 <input id="q" placeholder="Search  &#8984;K">
 </div></div>
 <div class="bwrap">
-<header class="bhero">
-<div class="eyebrow">{len(recs)} interactions &middot; inspora.design + 60fps.design</div>
-<p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Query the library from your AI tool via the <a href="mcp/">MCP server</a>.</p>
+<header class="top" style="padding-bottom:32px">
+<div class="eyebrow">16ms &middot; {len(recs)} interactions &middot; inspora.design + 60fps.design</div>
+<h1>16<span style="color:#f97316">ms</span></h1>
+<p class="sub">Frame-by-frame teardowns of the best interactions on the web, reverse-engineered into build-ready prompts. Sources: <a href="https://www.inspora.design/">inspora.design</a> (80) and <a href="https://60fps.design/">60fps.design</a> (2,033 shots, full teardown). Query it from your AI tool via the <a href="mcp/">MCP server</a>.</p>
 <div class="stats"><span><b>{len(recs)}</b> interactions</span><span><b>{sum(len(r['media']) for r in recs)}</b> media</span><span><b>{len(set(r['category'] for r in recs))}</b> categories</span><span><b>{len(set(r['source'] for r in recs))}</b> sources</span></div>
 </header>
 <div class="bsub"><div class="stabs" id="stabs"></div><span class="shown"><b id="count">{len(recs)}</b> shown</span></div>
