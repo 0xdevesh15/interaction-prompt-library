@@ -31,7 +31,7 @@ const TOOLS = [
   },
   {
     name: 'get_interaction_prompt',
-    description: 'Get the full teardown for one interaction by id or slug: summary, frame-by-frame phases, mechanics (trigger/elements/properties/timing/easing/loop), and the detailed build prompt.',
+    description: 'Get the full teardown for one interaction by id or slug: summary, frame-by-frame phases, mechanics (trigger/elements/properties/timing/easing/loop), the detailed build prompt, and frameImages - image URLs (filmstrip montage + poster frames) to fetch for visual frame-by-frame context.',
     inputSchema: {
       type: 'object',
       properties: { id: { type: 'string', description: 'Interaction id (e.g. "inspora:1-12") or slug (e.g. "1-12", "multi-action-button")' } },
@@ -57,6 +57,15 @@ function score(r, terms) {
   return s;
 }
 
+function frameImages(r) {
+  const urls = [];
+  for (const m of r.media || []) {
+    if (m.montage) urls.push('https://16ms.vercel.app/' + m.montage);
+    if (m.poster) urls.push(m.poster);
+  }
+  return urls;
+}
+
 function callTool(name, args) {
   args = args || {};
   if (name === 'list_interactions') {
@@ -79,7 +88,7 @@ function callTool(name, args) {
   if (name === 'get_interaction_prompt') {
     const r = findRecord(args.id || '');
     if (!r) return { error: `No interaction found for id "${args.id}". Use list_interactions or search_interactions to find ids.` };
-    return r;
+    return { ...r, frameImages: frameImages(r) };
   }
   return { error: `Unknown tool: ${name}` };
 }
